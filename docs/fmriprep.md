@@ -16,22 +16,45 @@ is located here
 An alias has been created as part of the TIC distribution that makes it
 easier to run fmriprep from the command line. The alias is
 
+```console
+>>> fmriprep alias 'fmriprep'
+
+    fmriprep='/usr/local/bin/singularity run  
+    -w -B /cenc -B /gandg -B /bkraft1 $FMRIPREP_SINGULARITY_IMAGE'
+```
+
+
 alias fmriprep='/usr/local/bin/singularity run -w
                 -B /cenc -B /gandg -B /bkraft1
                 $FMRIPREP_SINGULARITY_IMAGE'
 
 ## Examples on how to use fmriprep
 
+```console
 
+nohup time /usr/local/bin/singularity run 
+-w 
+-B /cenc -B /gandg -B /bkraft1 
+$FMRIPREP_SINGULARITY_IMAGE 
+/gandg/bkraft/data/bids_ds001/bids 
+/gandg/bkraft/data/bids_ds001/image_processing/fmriprep participant 
+--write-graph 
+-w /gandg/bkraft/data/bids_ds001/image_processing/.fmriprep_working 
+--nthreads 20 
+--mem_mb 32000 
+--participant_label sub*  
+&> /gandg/bkraft/data/bids_ds001/image_processing/logs/fmriprep_ds001.logs &
+
+
+```
 
 ## fmriprep -h
 
-bids fmriprep -h
-usage: fmriprep [-h] [-v]
+    usage: fmriprep [-h] [-v]
                 [--participant_label PARTICIPANT_LABEL [PARTICIPANT_LABEL ...]]
                 [-t TASK_ID] [--debug] [--nthreads NTHREADS]
                 [--omp-nthreads OMP_NTHREADS] [--mem_mb MEM_MB] [--low-mem]
-                [--use-plugin USE_PLUGIN] [--anat-only]
+                [--use-plugin USE_PLUGIN] [--anat-only]  
                 [--ignore-aroma-denoising-errors]
                 [--ignore {fieldmaps,slicetiming} [{fieldmaps,slicetiming} ...]]
                 [--longitudinal] [--bold2t1w-dof {6,9,12}]
@@ -42,6 +65,8 @@ usage: fmriprep [-h] [-v]
                 [--force-syn] [--no-freesurfer] [--no-submm-recon]
                 [-w WORK_DIR] [--reports-only] [--write-graph]
                 bids_dir output_dir {participant}
+
+
 
 FMRIPREP: fMRI PREProcessing workflows
 
@@ -60,8 +85,9 @@ optional arguments:
 
 **Options for filtering BIDS queries:**
 
-  --participant_label PARTICIPANT_LABEL [PARTICIPANT_LABEL ...], --participant-label PARTICIPANT_LABEL [PARTICIPANT_LABEL ...]
-                        one or more participant identifiers (the sub- prefix can be removed)
+--participant_label PARTICIPANT_LABEL [PARTICIPANT_LABEL ...],
+--participant-label PARTICIPANT_LABEL [PARTICIPANT_LABEL ...] one or
+more participant identifiers (the sub- prefix can be removed)
 
   -t TASK_ID, --task-id TASK_ID
                         select a specific task to be processed
