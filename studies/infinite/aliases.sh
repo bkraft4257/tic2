@@ -42,6 +42,7 @@ alias inf_mriqc_group='mriqc  $INFINITE_BIDS_PATH $INFINITE_MRIQC_PATH group'
 
 alias inf_netprep_gi='${INFINITE_SCRIPTS_PATH}/inf_netprep_gi.sh'
 
+alias cdi='cd $INFINITE_PATH'
 alias cdib='cd $INFINITE_BIDS_PATH'
 alias cdid='cd $INFINITE_PATH/individuals'
 alias cdiia='cd $INFINITE_IMAGE_ANALYSIS_PATH'
