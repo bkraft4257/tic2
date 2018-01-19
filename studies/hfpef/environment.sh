@@ -2,11 +2,12 @@
 
 # Environment variables
 
+export HFPEF_SCRIPTS_PATH=${TIC_PATH}/studies/hfpef/scripts
+
 export HFPEF_PATH=/gandg/hfpef/
 export HFPEF_BIDS_PATH=${HFPEF_PATH}/bids
 export HFPEF_IMAGE_ANALYSIS_PATH=${HFPEF_PATH}/image_analysis
 export HFPEF_IMAGE_PROCESSING_PATH=${HFPEF_PATH}/image_processing
-export HFPEF_SCRIPTS_PATH=${HFPEF_PATH}/scripts
 export HFPEF_MRIQC_PATH=${HFPEF_PATH}/mriqc
 
 export HFPEF_FMRIPREP_PATH=${HFPEF_IMAGE_PROCESSING_PATH}/fmriprep
