@@ -1,0 +1,16 @@
+#!/usr/bin/env bash
+
+export SYNERGY_SCRIPTS_PATH=${TIC_PATH}/studies/synergy/scripts
+
+
+export SYNERGY_PATH=/gandg/synergy/
+export SYNERGY_BIDS_PATH=${SYNERGY_PATH}/bids
+export SYNERGY_IMAGE_ANALYSIS_PATH=${SYNERGY_PATH}/image_analysis
+export SYNERGY_IMAGE_PROCESSING_PATH=${SYNERGY_PATH}/image_processing
+export SYNERGY_MRIQC_PATH=${SYNERGY_PATH}/mriqc
+
+export SYNERGY_FMRIPREP_PATH=${SYNERGY_IMAGE_PROCESSING_PATH}/fmriprep
+export SYNERGY_NETPREP_PATH=${SYNERGY_IMAGE_PROCESSING_PATH}/netprep
+
+export SYNERGY_BIDS_CONFIG_FILE=${SYNERGY_SCRIPTS_PATH}/syn_bids.cfg
+

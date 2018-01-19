@@ -1,19 +1,5 @@
 #!/usr/bin/env bash
 
-export SYNERGY_PATH=/gandg/synergy/
-export SYNERGY_BIDS_PATH=${SYNERGY_PATH}/bids
-export SYNERGY_IMAGE_ANALYSIS_PATH=${SYNERGY_PATH}/image_analysis
-export SYNERGY_IMAGE_PROCESSING_PATH=${SYNERGY_PATH}/image_processing
-export SYNERGY_SCRIPTS_PATH=${SYNERGY_PATH}/scripts
-export SYNERGY_MRIQC_PATH=${SYNERGY_PATH}/mriqc
-
-export SYNERGY_FMRIPREP_PATH=${SYNERGY_IMAGE_PROCESSING_PATH}/fmriprep
-export SYNERGY_NETPREP_PATH=${SYNERGY_IMAGE_PROCESSING_PATH}/netprep
-
-export SYNERGY_BIDS_CONFIG_FILE=${SYNERGY_SCRIPTS_PATH}/syn_bids.cfg
-
-
-
 alias syn_hdc='/cenc/software/heudiconv/python/heudiconv/bin/heudiconv -c dcm2niix -b --minmeta -f $SYNERGY_SCRIPTS_PATH/synergy_protocol_with_angio.py -o $SYNERGY_BIDS_PATH -d "{subject}/2*/*/*.DCM"'
 alias syn_bids='bids-validator $SYNERGY_BIDS_PATH -c $SYNERGY_BIDS_CONFIG_FILE'
 
