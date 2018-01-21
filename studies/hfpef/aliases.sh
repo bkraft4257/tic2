@@ -27,7 +27,6 @@ alias hfpef_gi_netprep_mbepi='/gandg/hfpef/scripts/hfpef_gi_netprep_mbepi.sh'
 alias hfpef_gi_netprep='/gandg/hfpef/scripts/hfpef_gi_netprep.sh'
 alias hfpef_netprep='/gandg/tic/nipype_workflows/netprep.py'
 
-
 alias cdh='cd $HFPEF_PATH'
 alias cdhb='cd $HFPEF_BIDS_PATH'
 alias cdhin='cd $HFPEF_PATH/incoming;echo;pwd;ls -lrt; echo;'
@@ -37,3 +36,4 @@ alias cdhipl='cd $HFPEF_IMAGE_PROCESSING_PATH/fmriprep_logs'
 alias cdhqc='cd $HFPEF_MRIQC_PATH'
 alias cdhs='cd $HFPEF_SCRIPTS_PATH'
 
+alias hfpef_active_study='source $HFPEF_SCRIPTS_PATH/hfpef_set_to_active_study.sh'
