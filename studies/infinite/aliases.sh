@@ -52,7 +52,7 @@ alias cdiq='cd $INFINITE_MRIQC_PATH; lsreport_function'
 alias cdiqc='cd $INFINITE_MRIQC_PATH; lsreport_function'
 alias cdis='cd $INFINITE_SCRIPTS_PATH; lsreport_function'
 
-alias activate_infinite='source $INFINITE_SCRIPTS_PATH/infinite_set_to_active_study.sh'
+alias as_infinite='source $INFINITE_SCRIPTS_PATH/infinite_set_to_active_study.sh'
 
 
 alias inf_get_id='_get_infinite_id'

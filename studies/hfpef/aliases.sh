@@ -36,4 +36,4 @@ alias cdhipl='cd $HFPEF_IMAGE_PROCESSING_PATH/fmriprep_logs; lsreport_function'
 alias cdhqc='cd $HFPEF_MRIQC_PATH; lsreport_function'
 alias cdhs='cd $HFPEF_SCRIPTS_PATH; lsreport_function'
 
-alias activate_hfpef='source $HFPEF_SCRIPTS_PATH/hfpef_set_to_active_study.sh'
+alias as_hfpef='source $HFPEF_SCRIPTS_PATH/hfpef_set_to_active_study.sh'
