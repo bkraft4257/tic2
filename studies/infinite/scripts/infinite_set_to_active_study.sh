@@ -1,6 +1,6 @@
 #!/bin/bash
 
-export ACTIVE_STUDY=hfpef
+export ACTIVE_STUDY=infinite
 export ACTIVE_STUDY_SCRIPTS_PATH=$INFINITE_SCRIPTS_PATH
 
 export ACTIVE_STUDY_PATH=$INFINITE_PATH

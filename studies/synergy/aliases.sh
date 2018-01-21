@@ -28,4 +28,4 @@ alias syn_netprep='netprep.py syn_netprep.yaml'
 
 alias resyn='source $SYNERGY_SCRIPTS_PATH/synergy_aliases.sh'
 
-alias as_synergy='echo previous active_study : $ACTIVE_STUDY; source $SYNERGY_SCRIPTS_PATH/synergy_set_to_active_study.sh; echo current active_study  : $ACTIVE_STUDY;'
+alias as_synergy='echo previous active_study : $ACTIVE_STUDY_PATH; source $SYNERGY_SCRIPTS_PATH/synergy_set_to_active_study.sh; echo current active_study  : $ACTIVE_STUDY_PATH'

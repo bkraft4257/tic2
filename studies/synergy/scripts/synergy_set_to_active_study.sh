@@ -1,6 +1,6 @@
 #!/bin/bash
 
-export ACTIVE_STUDY=hfpef
+export ACTIVE_STUDY=synergy
 export ACTIVE_STUDY_SCRIPTS_PATH=$SYNERGY_SCRIPTS_PATH
 
 export ACTIVE_STUDY_PATH=$SYNERGY_PATH
