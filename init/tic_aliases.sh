@@ -66,3 +66,12 @@ alias fsvall='fslview_all_function'
 
 alias lnflatten='${TIC_PATH}/lnflatten.sh'
 alias cpflatten='${TIC_PATH}/cpflatten.sh'
+
+alias cdsp='cd $ACTIVE_STUDY_PATH'
+alias cdb='cd $ACTIVE_STUDY_BIDS_PATH'
+alias cdin='cd $ACTIVE_STUDY_PATH/incoming;echo;pwd;ls -lrt; echo;'
+alias cdia='cd $ACTIVE_STUDY_IMAGE_ANALYSIS_PATH'
+alias cdip='cd $ACTIVE_STUDY_IMAGE_PROCESSING_PATH'
+alias cdipl='cd $ACTIVE_STUDY_IMAGE_PROCESSING_PATH/fmriprep_logs'
+alias cdqc='cd $ACTIVE_STUDY_MRIQC_PATH'
+alias cds='cd $ACTIVE_STUDY_SCRIPTS_PATH'
