@@ -13,10 +13,10 @@ if [ ! -d $TIC_PATH ]; then
 
 fi
 
-source $TIC_PATH/tic_aliases.sh
+source $TIC_PATH/init/tic_aliases.sh
 
 export HOME_TIC_PATH=$HOME/.tic
-source ${HOME_TIC_PATH}/tic_wake_software_environment.sh
+source ${HOME_TIC_PATH}/tic_wake_aging1a_environment.sh
 
 # TIC NIPYPE Workflows
 
