@@ -42,17 +42,17 @@ alias inf_mriqc_group='mriqc  $INFINITE_BIDS_PATH $INFINITE_MRIQC_PATH group'
 
 alias inf_netprep_gi='${INFINITE_SCRIPTS_PATH}/inf_netprep_gi.sh'
 
-alias cdi='cd $INFINITE_PATH; lsreport_function'
-alias cdib='cd $INFINITE_BIDS_PATH; lsreport_function'
-alias cdid='cd $INFINITE_PATH/individuals; lsreport_function'
-alias cdiia='cd $INFINITE_IMAGE_ANALYSIS_PATH; lsreport_function'
-alias cdiip='cd $INFINITE_IMAGE_PROCESSING_PATH; lsreport_function'
-alias cdiipl='cd $INFINITE_IMAGE_PROCESSING_PATH/fmriprep_logs; lsreport_function'
-alias cdiq='cd $INFINITE_MRIQC_PATH; lsreport_function'
-alias cdiqc='cd $INFINITE_MRIQC_PATH; lsreport_function'
-alias cdis='cd $INFINITE_SCRIPTS_PATH; lsreport_function'
+#alias cdi='cd $INFINITE_PATH; lsreport_function'
+#alias cdib='cd $INFINITE_BIDS_PATH; lsreport_function'
+#alias cdid='cd $INFINITE_PATH/individuals; lsreport_function'
+#alias cdiia='cd $INFINITE_IMAGE_ANALYSIS_PATH; lsreport_function'
+#alias cdiip='cd $INFINITE_IMAGE_PROCESSING_PATH; lsreport_function'
+#alias cdiipl='cd $INFINITE_IMAGE_PROCESSING_PATH/fmriprep_logs; lsreport_function'
+#alias cdiq='cd $INFINITE_MRIQC_PATH; lsreport_function'
+#alias cdiqc='cd $INFINITE_MRIQC_PATH; lsreport_function'
+#alias cdis='cd $INFINITE_SCRIPTS_PATH; lsreport_function'
 
-alias as_infinite='source $INFINITE_SCRIPTS_PATH/infinite_set_to_active_study.sh'
+alias as_infinite='echo previous active_study : $ACTIVE_STUDY; source $INFINITE_SCRIPTS_PATH/infinite_set_to_active_study.sh; echo current active_study  : $ACTIVE_STUDY;'
 
 
 alias inf_get_id='_get_infinite_id'
