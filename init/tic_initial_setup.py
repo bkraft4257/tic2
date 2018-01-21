@@ -58,4 +58,4 @@ if not os.path.isdir(home_tic_path):
     os.makedirs(home_tic_path)
 
 _copy_file(tic_zshrc, _absjoin(home_tic_path, tic_zshrc_filename))
-_copy_file(tic_environment, _absjoin(home_tic_path, tic_environment))
+_copy_file(tic_environment, _absjoin(home_tic_path, tic_environment_filename))
