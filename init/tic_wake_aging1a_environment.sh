@@ -40,15 +40,9 @@ export PATH="$PYTHON3_PATH:$PATH"
      export MRICRON_PATH=/opt/software/mricron
      export PATH=${MRICRON_PATH}:$PATH
 
-# MIMP Configuration
-    export MIMP_PATH=${SOFTWARE_PATH}/MIMP143
-    export RRI_NIFTI_TOOLS_PATH=${SOFTWARE_PATH}/rri_nifti_tools
-
-
 # ITKsnap Configuration
     export ITKSNAP_PATH=/aging1/software/itksnap3
     export PATH=${ITKSNAP_PATH}/bin:$PATH        
-
 
 # FSL Configuration
    export FSL509_DIR=${SOFTWARE_PATH}/fsl5.09
@@ -80,13 +74,6 @@ if [ -t 1 ]; then
 fi
 
 
-# Human Connectome Configuration  
-   export HCP_WORKBENCH_PATH=/aging1/software/workbench/
-   export PATH=${HCP_WORKBENCH_PATH}/bin_rh_linux64:$PATH        
-
-   export HCPPIPEDIR=/aging1/software/hcp/Pipelines-master/
-   export PATH=${HCPPIPEDIR}:$PATH        
-
 
 # MATLAB and third Party Configuration 
 
@@ -100,9 +87,6 @@ fi
    export GRAPHVAR_PATH=${SOFTWARE_PATH}/graphvar/GraphVar_beta_v_06.2
    export JSON_PATH=${SOFTWARE_PATH}/jsonlab/jsonlab-1.2
 
-   export MSK_MVO2_THOMPSON=${SOFTWARE_PATH}/mvo2_thompson/
-   export MSK_NCIGT=${SOFTWARE_PATH}/ncigt_fil_v2.2_20150119_x64_0/
-   export MSK_SHOGE=${SOFTWARE_PATH}/shoge/
 
 # HEUDICONV 
 

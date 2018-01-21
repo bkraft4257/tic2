@@ -27,7 +27,6 @@ def _copy_file(source, target):
 
 
 def _check_shell():
-
     shell = os.getenv('SHELL')
 
     if not (('zsh' in shell) | ('bash' in shell)):
@@ -39,8 +38,8 @@ def _check_shell():
 # --- Grab environment variables and filenames
 
 
-os.environ['TIC_PATH'] = '/gandg/tic/'  # This is done here to facilitate a user setting up their environment.  This
-                                        # environment variable is set properly in tic_zshrc.sh
+# This is done here to facilitate a user setting up their environment.  This
+# environment variable is set properly in tic_zshrc.sh
 
 tic_path = os.getenv('TIC_PATH')
 home_tic_path = _absjoin(os.getenv('HOME'), '.tic2')
@@ -50,7 +49,6 @@ tic_environment_filename = 'tic_wake_aging1a_environment.sh'
 
 tic_zshrc = _absjoin(tic_path, 'init', tic_zshrc_filename)
 tic_environment = _absjoin(tic_path, 'init', tic_environment_filename)
-
 
 # --- Perform setup
 
