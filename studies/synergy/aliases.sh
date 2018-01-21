@@ -29,3 +29,4 @@ alias cdss='cd $SYNERGY_SCRIPTS_PATH'
 
 alias resyn='source $SYNERGY_SCRIPTS_PATH/synergy_aliases.sh'
 
+alias activate_synergy='source $SYNERGY_SCRIPTS_PATH/synergy_set_to_active_study.sh'
