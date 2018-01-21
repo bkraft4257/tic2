@@ -52,7 +52,7 @@ alias inf_netprep_gi='${INFINITE_SCRIPTS_PATH}/inf_netprep_gi.sh'
 #alias cdiqc='cd $INFINITE_MRIQC_PATH; lsreport_function'
 #alias cdis='cd $INFINITE_SCRIPTS_PATH; lsreport_function'
 
-alias as_infinite='echo previous active_study : $ACTIVE_STUDY_PATH; source $INFINITE_SCRIPTS_PATH/infinite_set_to_active_study.sh; echo current active_study  : $ACTIVE_STUDY_PATH'
+alias as_infinite='echo previous active_study : $ACTIVE_STUDY; source $INFINITE_SCRIPTS_PATH/infinite_set_to_active_study.sh; echo current active_study  : $ACTIVE_STUDY'
 
 
 alias inf_get_id='_get_infinite_id'

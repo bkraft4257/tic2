@@ -36,4 +36,4 @@ alias hfpef_netprep='/gandg/tic/nipype_workflows/netprep.py'
 #alias cdhqc='cd $HFPEF_MRIQC_PATH; lsreport_function'
 #alias cdhs='cd $HFPEF_SCRIPTS_PATH; lsreport_function'
 
-alias as_hfpef='echo previous active_study : $ACTIVE_STUDY_PATH; source $HFPEF_SCRIPTS_PATH/hfpef_set_to_active_study.sh; echo current active_study  : $ACTIVE_STUDY_PATH;'
+alias as_hfpef='echo previous active_study : $ACTIVE_STUDY; source $HFPEF_SCRIPTS_PATH/hfpef_set_to_active_study.sh; echo current active_study  : $ACTIVE_STUDY'
