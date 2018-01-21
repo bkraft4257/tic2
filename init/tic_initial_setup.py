@@ -38,7 +38,9 @@ def _check_shell():
 
 # --- Grab environment variables and filenames
 
-os.environ['TIC_PATH'] = '/gandg/tic2/'
+
+os.environ['TIC_PATH'] = '/gandg/tic/'  # This is done here to facilitate a user setting up their environment.  This
+                                        # environment variable is set properly in tic_zshrc.sh
 
 tic_path = os.getenv('TIC_PATH')
 home_tic_path = _absjoin(os.getenv('HOME'), '.tic2')
