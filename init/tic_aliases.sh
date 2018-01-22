@@ -67,4 +67,4 @@ alias fsvall='fslview_all_function'
 alias lnflatten='${TIC_PATH}/lnflatten.sh'
 alias cpflatten='${TIC_PATH}/cpflatten.sh'
 
-source ${TIC_PATH}/init/active/aliases.sh
+source ${TIC_PATH}/studies/active/aliases.sh
