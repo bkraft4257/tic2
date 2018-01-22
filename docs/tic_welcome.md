@@ -8,16 +8,29 @@ software for analyzing their data. Our goal is to make processing data
 faster, easier, and with a broader set of tools among our members then
 individuals could do on their own.
 
+There is currently a torrent of open-source packages for processing
+neuroimaging data. This makes it difficult for any single investigator
+to keep up with all the software packages. Many of these open source
+packages enable users to do sophisticated analyses with minimal setup
+and effort. However, each package still has it's idiosyncrasies and
+quirks. Sharing these quirks among TIC members in the form of
+documentation, wrapper functions, and test code benefits all of us.
 
-Software created by individual investigators is intended to be
-open-source and shared with TIC. Most of the software developed by TIC
-is intended to make processing neuroimaging data easier and use common
-tools. These are the tools we are asking people to share.
+TIC members agree that sharing our knowledge and software is essential
+for processing our data faster and easier. Software created by
+individual investigators is intended to be open-source and shared with
+TIC members. Most of the software developed by TIC members is expected
+to be wrapper functions of other open source software (FreeSurfer, ANTS,
+FSL, etc.). These are the tools we are asking people to share.
 
 **Sharing software tools is completely voluntary.** Investigators may
 develop their own proprietary tools as part of their own research. We
 hope these tools will be shared through collaborations but investigators
-are not obligated to share these toosl.
+are not obligated to share these tools. We believe this will encourage
+collaboration among our members but also provide investigators the
+reassurance that they can protect their research.
+
+##  Sharing Data with BIDS
 
 TIC has adopted the Brain Imaging Data Structure (BIDS) for easy
 collaboration. BIDS provides a common directory structure storing
