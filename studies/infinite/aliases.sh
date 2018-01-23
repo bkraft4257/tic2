@@ -22,7 +22,7 @@ export INFINITE_NETPREP_PATH=${INFINITE_IMAGE_PROCESSING_PATH}/netprep
 
 # Aliases
 
-alias reinf='source $INFINITE_SCRIPTS_PATH/inf_aliases.sh'
+alias reinf='source $INFINITE_SCRIPTS_PATH/aliases.sh'
 
 alias inf_mriqc='mriqc $PWD /gandg/infinite/imaging_data/mriqc participant --participant_label '
 

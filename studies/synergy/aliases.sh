@@ -26,6 +26,6 @@ alias cdsip='cd $SYNERGY_IMAGE_PROCESSING_PATH; lsreport_function'
 alias cdsin='cd $SYNERGY_PATH/incoming; lsreport_function;'
 alias cdss='cd $SYNERGY_SCRIPTS_PATH; lsreport_function'
 
-alias resyn='source $SYNERGY_SCRIPTS_PATH/synergy_aliases.sh'
+alias resyn='source $SYNERGY_SCRIPTS_PATH/aliases.sh'
 
 alias as_synergy='echo previous active_study : $ACTIVE_STUDY; source $SYNERGY_SCRIPTS_PATH/synergy_set_to_active_study.sh; echo current active_study  : $ACTIVE_STUDY'

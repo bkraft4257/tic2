@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 # Aliases
-alias rehfpef='source $HFPEF_SCRIPTS_PATH/hfpef_aliases.sh'
+alias rehfpef='source $HFPEF_SCRIPTS_PATH/aliases.sh'
 alias hfpef_help='firefox https://github.com/theimagingcollective/nipype_workflows/wiki/HFPEF-Image-Processing &'
 
 alias hfpef_bids='bids-validator $HFPEF_BIDS_PATH -c $HFPEF_BIDS_CONFIG_FILE'
