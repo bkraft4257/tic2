@@ -22,7 +22,7 @@ source ${TIC_INIT_PATH}/tic_wake_aging1a_environment.sh
 
 # TIC NIPYPE Workflows
 
-PATH=$TIC_PATH/workflows/:$PATH
+PATH=$TIC_PATH/bin/:$TIC_PATH/workflows:$PATH
 PYTHONDONTWRITEBYTECODE=1
 
 umask 0002
