@@ -24,10 +24,10 @@ echo
 # NOTE: any -B mount points must exist in the container
 #       run "sudo singularity shell -s xx.img"  and create the mount points
 
-act_use='/cenc/software/bids_apps/antsCorticalThickness/bids_antscorticalthickness-2017-10-14-95aa110c26f8.img'
+$ANTS_CORTICAL_THICKNESS_SINGULARITY_IMAGE='/cenc/software/bids_apps/antsCorticalThickness/bids_antscorticalthickness-2017-10-14-95aa110c26f8.img'
 
-echo 'singularity command  = ' $SINGUILARITY_COMMAND
-echo 'act command          = ' $act_use
+echo 'singularity command  = ' $SINGULARITY_COMMAND
+echo 'act command          = ' $ANTS_CORTICAL_THICKNESS_SINGULARITY_IMAGE
 
 
 # https://askubuntu.com/questions/625224/how-to-redirect-stderr-to-a-file
