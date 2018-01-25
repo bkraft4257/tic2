@@ -13,8 +13,8 @@ import sys
 STUDY_CHOICES = ['hfpef', 'synergy', 'infinite']
 DEFAULT_STUDY_CHOICE = 'hfpef'
 
-output_file = 'tic_study_switcher.txt'
-
+output_file = os.path.abspath( os.path.joinpath(os.getenv('TIC_INIT_PATH'),
+                                                'tic_study_switcher.txt'))
 
 def _write_study_switcher_script(active_study):
 
@@ -28,6 +28,8 @@ def _write_study_switcher_script(active_study):
         file.write(f'# =========================\n\n')
         file.write(f'# You should never see this file. It should be created, sourced, and then deleted. \n')
         file.write(f'# If you see it you should just delete it.\n\n')
+
+        file.write(f"echo 'Previous active study' = $ACTIVE_STUDY")
 
         file.write(f'export ACTIVE_STUDY={active_study}\n')
         file.write(f'export ACTIVE_STUDY_SCRIPTS_PATH=${active_study}_SCRIPTS_PATH \n')
@@ -46,7 +48,7 @@ def _write_study_switcher_script(active_study):
         file.write(f'export ACTIVE_STUDY_FMRIPREP_PATH=${active_study}_FMRIPREP_PATH\n')
         file.write(f'export ACTIVE_STUDY_NETPREP_PATH=${active_study}_NETPREP_PATH\n\n')
 
-        file.write(f"echo 'Current active study' = $ACTIVE_STUDY")
+        file.write(f"echo 'Current active study' = $ACTIVE_STUDY\n\n")
 
 
 def _argparse():
@@ -62,20 +64,12 @@ def _argparse():
                         default='hfpef',
                         )
 
-#    parser.add_argument("-d", "--debug", help="Switch to help with debugging.", action="store_true",
-#                        default=False)
-
-
-
     return parser.parse_args()
 
 
 def main():
 
     in_args = _argparse()
-
-    previous_active_study = os.getenv('ACTIVE_STUDY')
-    print(f'Previous active study = {previous_active_study}\n')
 
     _write_study_switcher_script(in_args.active_study)
 
