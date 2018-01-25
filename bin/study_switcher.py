@@ -46,7 +46,7 @@ def _write_study_switcher_script(active_study):
         file.write(f'export ACTIVE_STUDY_FMRIPREP_PATH=${active_study}_FMRIPREP_PATH\n')
         file.write(f'export ACTIVE_STUDY_NETPREP_PATH=${active_study}_NETPREP_PATH\n\n')
 
-        file.write(f"echo 'Current active study = ' ${active_study}")
+        file.write(f"echo 'Current active study' = $ACTIVE_STUDY")
 
 
 def _argparse():
