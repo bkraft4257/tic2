@@ -29,7 +29,7 @@ def _write_study_switcher_script(active_study):
         file.write(f'# You should never see this file. It should be created, sourced, and then deleted. \n')
         file.write(f'# If you see it you should just delete it.\n\n')
 
-        file.write(f'export ACTIVE_STUDY=${active_study}\n')
+        file.write(f'export ACTIVE_STUDY={active_study}\n')
         file.write(f'export ACTIVE_STUDY_SCRIPTS_PATH=${active_study}_SCRIPTS_PATH \n')
         file.write(f'export ACTIVE_STUDY_PATH=${active_study}_PATH\n')
         file.write(f'export ACTIVE_STUDY_BIDS_PATH=${active_study}_BIDS_PATH\n')
