@@ -94,6 +94,18 @@ export DCM2NIIX_PATH=/cenc/software/dcm2niix/build/bin
 export HDC_PATH=/cenc/software/heudiconv/
 export HDC_PYTHONPATH=$HDC_PATH/python/heudiconv/bin
 
+# SINGULARITY
+
+
+export FMRIPREP_PATH=/cenc/software/fmriprep/
+export FMRIPREP_SINGULARITY_IMAGE=$FMRIPREP_PATH/poldracklab_fmriprep_latest-2017-11-10-9ae650872d1e.img
+export MRIQC_SINGULARITY_IMAGE=/cenc/software/mriqc/poldracklab_mriqc_latest-2017-08-30-f54388a6fb57.img
+export HDC_SINGULARITY_IMAGE=/cenc/software/heudiconv/nipy_heudiconv-2017-09-26-6bef64b746f6.img
+
+export ANTS_CORTICAL_THICKNESS_SINGULARITY_IMAGE='/cenc/software/bids_apps/antsCorticalThickness/bids_antscorticalthickness-2017-10-14-95aa110c26f8.img'
+
+export SINGULARITY_COMMAND='/usr/local/bin/singularity run -w -B /cenc -B /gandg -B /bkraft1'
+
 
 PATH=$DCM2NIIX_PATH:$HDC_PATH:$HDC_PYTHONPATH:$PATH
 

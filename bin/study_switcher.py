@@ -30,24 +30,25 @@ def _write_study_switcher_script(active_study):
         file.write(f'# You should never see this file. It should be created, sourced, and then deleted. \n')
         file.write(f'# If you see it you should just delete it.\n\n')
 
-        file.write(f"echo 'Previous active study' = $ACTIVE_STUDY\n\n")
+        file.write(f"echo 'Previous active study' = $ACTIVE_STUDY\n\study_prefix=$(echo "${ACTIVE_STUDY,,}")n")
 
         file.write(f'export ACTIVE_STUDY={active_study}\n')
-        file.write(f'export ACTIVE_STUDY_SCRIPTS_PATH=${active_study}_SCRIPTS_PATH \n')
-        file.write(f'export ACTIVE_STUDY_PATH=${active_study}_PATH\n')
-        file.write(f'export ACTIVE_STUDY_BIDS_PATH=${active_study}_BIDS_PATH\n')
-        file.write(f'export ACTIVE_STUDY_IMAGE_ANALYSIS_PATH=${active_study}_IMAGE_ANALYSIS_PATH\n')
-        file.write(f'export ACTIVE_STUDY_IMAGE_PROCESSING_PATH=${active_study}_IMAGE_PROCESSING_PATH\n')
-        file.write(f'export ACTIVE_STUDY_MRIQC_PATH=${active_study}_MRIQC_PATH\n')
-        file.write(f'export ACTIVE_STUDY_FMRIPREP_PATH=${active_study}_FMRIPREP_PATH\n')
-        file.write(f'export ACTIVE_STUDY_NETPREP_PATH=${active_study}_NETPREP_PATH\n')
+        file.write(f'export ACTIVE_SCRIPTS_PATH=${active_study}_SCRIPTS_PATH \n')
+        file.write(f'export ACTIVE_PATH=${active_study}_PATH\n')
+        file.write(f'export ACTIVE_BIDS_PATH=${active_study}_BIDS_PATH\n')
+        file.write(f'export ACTIVE_IMAGE_ANALYSIS_PATH=${active_study}_IMAGE_ANALYSIS_PATH\n')
+        file.write(f'export ACTIVE_IMAGE_PROCESSING_PATH=${active_study}_IMAGE_PROCESSING_PATH\n')
+        file.write(f'export ACTIVE_IMAGE_PROCESSING_LOG_PATH=${active_study}_IMAGE_PROCESSING_LOG_PATH\n')
+        file.write(f'export ACTIVE_MRIQC_PATH=${active_study}_MRIQC_PATH\n')
+        file.write(f'export ACTIVE_FMRIPREP_PATH=${active_study}_FMRIPREP_PATH\n')
+        file.write(f'export ACTIVE_NETPREP_PATH=${active_study}_NETPREP_PATH\n')
 
-        file.write(f'export ACTIVE_STUDY_BIDS_CONFIG_FILE=${active_study}_BIDS_CONFIG_FILE\n')
+        file.write(f'export ACTIVE_BIDS_CONFIG_FILE=${active_study}_BIDS_CONFIG_FILE\n')
 
         # BIDS APPS output directories
-        file.write(f'export ACTIVE_STUDY_ACT_PATH=${active_study}_ACT_PATH\n')
-        file.write(f'export ACTIVE_STUDY_FMRIPREP_PATH=${active_study}_FMRIPREP_PATH\n')
-        file.write(f'export ACTIVE_STUDY_NETPREP_PATH=${active_study}_NETPREP_PATH\n\n')
+        file.write(f'export ACTIVE_ACT_PATH=${active_study}_ACT_PATH\n')
+        file.write(f'export ACTIVE_FMRIPREP_PATH=${active_study}_FMRIPREP_PATH\n')
+        file.write(f'export ACTIVE_NETPREP_PATH=${active_study}_NETPREP_PATH\n\n')
 
         file.write(f"echo 'Current active study' = $ACTIVE_STUDY\n\n")
 

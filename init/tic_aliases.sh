@@ -22,15 +22,6 @@ alias cda='echo; echo $PWD; cd $(pwd -P); echo $PWD; echo; ls; echo'
 alias retic='source $TIC_PATH/init/tic_aliases.sh'
 alias lstic='echo; echo $TIC_PATH; echo'
 
-FMRIPREP_PATH=/cenc/software/fmriprep/
-FMRIPREP_SINGULARITY_IMAGE_V1=$FMRIPREP_PATH/poldracklab_fmriprep_latest-2017-08-28-8f9c2862d74f.img
-FMRIPREP_SINGULARITY_IMAGE_V2=$FMRIPREP_PATH/poldracklab_fmriprep_latest-2017-11-10-9ae650872d1e.img
-
-FMRIPREP_SINGULARITY_IMAGE=$FMRIPREP_SINGULARITY_IMAGE_V1
-
-MRIQC_SINGULARITY_IMAGE=/cenc/software/mriqc/poldracklab_mriqc_latest-2017-08-30-f54388a6fb57.img
-HDC_SINGULARITY_IMAGE=/cenc/software/heudiconv/nipy_heudiconv-2017-09-26-6bef64b746f6.img
-
 alias fmriprep='/usr/local/bin/singularity run -w -B /cenc -B /gandg -B /bkraft1 $FMRIPREP_SINGULARITY_IMAGE'
 alias mriqc='/usr/local/bin/singularity run -w -B /cenc -B /gandg -B /bkraft1 $MRIQC_SINGULARITY_IMAGE'
 
