@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
 
-alias swh='study_switcher.py hfpef; source $HOME/tic_study_switcher.sh'
-alias swi='study_switcher.py infinite; source $HOME/tic_study_switcher.sh'
-alias sws='study_switcher.py synergy; source $HOME/tic_study_switcher.sh'
+alias swh='study_switcher.py hfpef; source $TIC_INIT_PATH/tic_study_switcher.sh'
+alias swi='study_switcher.py infinite; source $TIC_INIT_PATH/tic_study_switcher.sh'
+alias sws='study_switcher.py synergy; source $TIC_INIT_PATH/tic_study_switcher.sh'
 
 alias catlast='ls -1drt * | tail -1 | xargs cat'
 alias cl='ls -1drt * | tail -1 | xargs cat'
@@ -19,7 +19,7 @@ alias cdsd='cd $SUBJECTS_DIR; lsreport_function'
 
 alias cda='echo; echo $PWD; cd $(pwd -P); echo $PWD; echo; ls; echo'
 
-alias retic='source $TIC_PATH/tic_aliases.sh'
+alias retic='source $TIC_PATH/init/tic_aliases.sh'
 alias lstic='echo; echo $TIC_PATH; echo'
 
 FMRIPREP_PATH=/cenc/software/fmriprep/
