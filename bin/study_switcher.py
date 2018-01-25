@@ -23,7 +23,7 @@ def _write_study_switcher_script(active_study):
 
     with open(output_file, 'w') as file:  # Use file to refer to the file object
 
-        file.write(f'#/bin/env bash\n\n')
+        file.write(f'#!/bin/env bash\n\n')
 
         file.write(f'# TIC Study Switcher Script\n')
         file.write(f'# =========================\n\n')
