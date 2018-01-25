@@ -40,9 +40,15 @@ export PATH="$PYTHON3_PATH:$PATH"
      export MRICRON_PATH=/opt/software/mricron
      export PATH=${MRICRON_PATH}:$PATH
 
+# MIMP Configuration
+    export MIMP_PATH=${SOFTWARE_PATH}/MIMP143
+    export RRI_NIFTI_TOOLS_PATH=${SOFTWARE_PATH}/rri_nifti_tools
+
+
 # ITKsnap Configuration
     export ITKSNAP_PATH=/aging1/software/itksnap3
     export PATH=${ITKSNAP_PATH}/bin:$PATH        
+
 
 # FSL Configuration
    export FSL509_DIR=${SOFTWARE_PATH}/fsl5.09
@@ -74,6 +80,13 @@ if [ -t 1 ]; then
 fi
 
 
+# Human Connectome Configuration  
+   export HCP_WORKBENCH_PATH=/aging1/software/workbench/
+   export PATH=${HCP_WORKBENCH_PATH}/bin_rh_linux64:$PATH        
+
+   export HCPPIPEDIR=/aging1/software/hcp/Pipelines-master/
+   export PATH=${HCPPIPEDIR}:$PATH        
+
 
 # MATLAB and third Party Configuration 
 
@@ -87,6 +100,9 @@ fi
    export GRAPHVAR_PATH=${SOFTWARE_PATH}/graphvar/GraphVar_beta_v_06.2
    export JSON_PATH=${SOFTWARE_PATH}/jsonlab/jsonlab-1.2
 
+   export MSK_MVO2_THOMPSON=${SOFTWARE_PATH}/mvo2_thompson/
+   export MSK_NCIGT=${SOFTWARE_PATH}/ncigt_fil_v2.2_20150119_x64_0/
+   export MSK_SHOGE=${SOFTWARE_PATH}/shoge/
 
 # HEUDICONV 
 
@@ -94,8 +110,7 @@ export DCM2NIIX_PATH=/cenc/software/dcm2niix/build/bin
 export HDC_PATH=/cenc/software/heudiconv/
 export HDC_PYTHONPATH=$HDC_PATH/python/heudiconv/bin
 
-# SINGULARITY
-
+# SINGULARITY IMAGES
 
 export FMRIPREP_PATH=/cenc/software/fmriprep/
 export FMRIPREP_SINGULARITY_IMAGE=$FMRIPREP_PATH/poldracklab_fmriprep_latest-2017-11-10-9ae650872d1e.img
@@ -105,7 +120,6 @@ export HDC_SINGULARITY_IMAGE=/cenc/software/heudiconv/nipy_heudiconv-2017-09-26-
 export ANTS_CORTICAL_THICKNESS_SINGULARITY_IMAGE='/cenc/software/bids_apps/antsCorticalThickness/bids_antscorticalthickness-2017-10-14-95aa110c26f8.img'
 
 export SINGULARITY_COMMAND='/usr/local/bin/singularity run -w -B /cenc -B /gandg -B /bkraft1'
-
 
 PATH=$DCM2NIIX_PATH:$HDC_PATH:$HDC_PYTHONPATH:$PATH
 
