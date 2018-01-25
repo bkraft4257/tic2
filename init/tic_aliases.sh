@@ -1,5 +1,8 @@
 #!/usr/bin/env bash
 
+alias swh='study_switcher.py hfpef; source $HOME/tic_study_switcher.sh'
+alias swi='study_switcher.py infinite; source $HOME/tic_study_switcher.sh'
+alias sws='study_switcher.py synergy; source $HOME/tic_study_switcher.sh'
 
 alias catlast='ls -1drt * | tail -1 | xargs cat'
 alias cl='ls -1drt * | tail -1 | xargs cat'
