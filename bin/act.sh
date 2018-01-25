@@ -15,7 +15,7 @@ study_prefix=$(echo "${ACTIVE_STUDY,,}")
 # create the output and work directories parallel to BIDS hierarchy, not inside it
 
 datetime_stamp=`date '+d%Y%m%d_%H:%M:%S'`
-log_file=${ACTIVE_IMAGE_PROCESSING_LOG_PATH}/${study_prefix}.${datetime_stamp}.log
+log_file=${ACTIVE_IMAGE_PROCESSING_LOG_PATH}/${study_prefix}_act_${datetime_stamp}.log
 
 echo
 echo $log_file
