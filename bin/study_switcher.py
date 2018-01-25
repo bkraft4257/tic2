@@ -67,7 +67,13 @@ def main():
 
     in_args = _argparse()
 
+    previous_active_study = os.getenv('ACTIVE_STUDY')
+    print(f'Previous active study = {previous_active_study}\n')
+
     _write_study_switcher_script(in_args.active_study)
+
+    current_active_study = os.getenv('ACTIVE_STUDY')
+    print(f'Current active study = {current_active_study}\n')
 
     return
 
