@@ -29,8 +29,8 @@ def _write_study_switcher_script(active_study):
         file.write(f'# You should never see this file. It should be created, sourced, and then deleted. \n')
         file.write(f'# If you see it you should just delete it.\n\n')
 
-        file.write(f'export ACTIVE_STUDY_SCRIPTS_PATH=${active_study}_INFINITE_SCRIPTS_PATH \n')
-
+        file.write(f'export ACTIVE_STUDY=${active_study}_STUDY \n')
+        file.write(f'export ACTIVE_STUDY_SCRIPTS_PATH=${active_study}_SCRIPTS_PATH \n')
         file.write(f'export ACTIVE_STUDY_PATH=${active_study}_PATH\n')
         file.write(f'export ACTIVE_STUDY_BIDS_PATH=${active_study}_BIDS_PATH\n')
         file.write(f'export ACTIVE_STUDY_IMAGE_ANALYSIS_PATH=${active_study}_IMAGE_ANALYSIS_PATH\n')
@@ -45,6 +45,8 @@ def _write_study_switcher_script(active_study):
         file.write(f'export ACTIVE_STUDY_ACT_PATH=${active_study}_ACT_PATH\n')
         file.write(f'export ACTIVE_STUDY_FMRIPREP_PATH=${active_study}_FMRIPREP_PATH\n')
         file.write(f'export ACTIVE_STUDY_NETPREP_PATH=${active_study}_NETPREP_PATH\n\n')
+
+        file.write(f"echo 'Current active study = ' ${active_study}")
 
 
 def _argparse():
