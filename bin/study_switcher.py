@@ -77,9 +77,6 @@ def main():
 
     _write_study_switcher_script(in_args.active_study)
 
-    current_active_study = os.getenv('ACTIVE_STUDY')
-    print(f'Current active study = {current_active_study}\n')
-
     return
 
 
