@@ -3,10 +3,10 @@
 ACTIVE_ACT_OUTPUT_PATH=$ACTIVE_IMAGE_PROCESSING_PATH/act
 
 echo
-echo $ACTIVE_STUDY
-echo $ACTIVE_BIDS_PATH
-echo $ACTIVE_IMAGE_PROCESSING_LOG_PATH
-echo $ACTIVE_ACT_OUTPUT_PATH
+echo 'active study = ' $ACTIVE_STUDY
+echo 'bids path    = ' $ACTIVE_BIDS_PATH
+echo 'log path     = ' $ACTIVE_IMAGE_PROCESSING_LOG_PATH
+echo 'output path  = ' $ACTIVE_ACT_OUTPUT_PATH
 echo
 
 # Convert to lower case
@@ -15,7 +15,7 @@ study_prefix=$(echo "${ACTIVE_STUDY,,}")
 # create the output and work directories parallel to BIDS hierarchy, not inside it
 
 datetime_stamp=`date '+d%Y%m%d_%H:%M:%S'`
-log_file=${$ACTIVE_IMAGE_PROCESSING_LOG_PATH}/${study_prefix}.${datetime_stamp}.log
+log_file=${ACTIVE_IMAGE_PROCESSING_LOG_PATH}/${study_prefix}.${datetime_stamp}.log
 
 echo
 echo $log_file
@@ -26,8 +26,8 @@ echo
 
 act_use='/cenc/software/bids_apps/antsCorticalThickness/bids_antscorticalthickness-2017-10-14-95aa110c26f8.img'
 
-echo $singularity_command
-echo $act_use
+echo 'singularity command  = ' $SINGUILARITY_COMMAND
+echo 'act command          = ' $act_use
 
 
 # https://askubuntu.com/questions/625224/how-to-redirect-stderr-to-a-file
