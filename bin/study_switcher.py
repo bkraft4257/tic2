@@ -43,8 +43,8 @@ def _write_study_switcher_script(active_study):
 
         # BIDS APPS output directories
         file.write(f'export ACTIVE_STUDY_ACT_PATH=${active_study}_ACT_PATH\n')
-        file.write(f'export ACTIVE_STUDY_FMRIPREP_PATH =${active_study}_FMRIPREP_PATH\n')
-        file.write(f'export ACTIVE_STUDY_NETPREP_PATH =${active_study}_NETPREP_PATH\n')
+        file.write(f'export ACTIVE_STUDY_FMRIPREP_PATH=${active_study}_FMRIPREP_PATH\n')
+        file.write(f'export ACTIVE_STUDY_NETPREP_PATH=${active_study}_NETPREP_PATH\n\n')
 
 
 def _argparse():
