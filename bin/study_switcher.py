@@ -60,6 +60,11 @@ def _argparse():
                         default='hfpef',
                         )
 
+#    parser.add_argument("-d", "--debug", help="Switch to help with debugging.", action="store_true",
+#                        default=False)
+
+
+
     return parser.parse_args()
 
 

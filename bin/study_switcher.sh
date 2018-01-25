@@ -7,4 +7,4 @@ study_switcher.py $@
 
 source $tic_active_study_bash_script
 
-rm $tic_active_study_bash_script
+#rm $tic_active_study_bash_script
