@@ -13,8 +13,9 @@ import sys
 STUDY_CHOICES = ['hfpef', 'synergy', 'infinite']
 DEFAULT_STUDY_CHOICE = 'hfpef'
 
-output_file = os.path.abspath( os.path.joinpath(os.getenv('TIC_INIT_PATH'),
-                                                'tic_study_switcher.txt'))
+output_file = os.path.abspath(os.path.join(os.getenv('TIC_INIT_PATH'),
+                                           'tic_study_switcher.txt'))
+
 
 def _write_study_switcher_script(active_study):
 
