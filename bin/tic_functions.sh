@@ -1,23 +1,4 @@
-#!/usr/bin/env bash
-
-
-# Functions for transforming from one coordinate system to another using ANTS label CSV file
-
-function ras_to_lps_world() { 
-    awk -F, 'NR==1 {print}; NR > 1 {$1=-$1; $2=-$2; print}' OFS=, $1
-}
-
-function csa_to_ras_image() {
-    awk -F, 'NR==1 {print}; NR > 1 {cMeg=$1; sMeg=$2; aMeg=$3; rFreeView=sMeg; aFreeView=255-cMeg; sFreeView=255-aMeg; $1=rFreeView; $2=aFreeView; $3=sFreeView; print}' OFS=, $1
-}
-
-function csa_to_lps_image() {
-    awk -F, 'NR==1 {print}; NR > 1 {cMeg=$1; sMeg=$2; aMeg=$3;      rFreeView=256-sMeg; aFreeView=cMeg; sFreeView=aMeg;       $1=rFreeView; $2=aFreeView; $3=sFreeView; print}' OFS=, $1
-}
-
-function ras_to_lps_image() {
-    awk -F, 'NR==1 {print}; NR > 1 {l=256-$1; p=256-$2; s=$3;  $1=l; $2=p; $3=s; print}' OFS=, $1
-}
+#!/bin/env bash
 
 
 # A function to launch multiple fslview windows, one per image. This allows one to use fslview for images that do not have 
