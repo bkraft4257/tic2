@@ -141,7 +141,7 @@ print('The next step is to uncomment TIC lines added to your .zshrc/.bashrc file
 print('After commenting out the files please logout and log back in again.')
 print('If you have successfully installed TIC on your aging1a account your when')
 print('when you log back your terminal should look something like this:\n\n')
-print('-------- freesurfer-Linux-centos6_x86_64-stable-pub-v5.3.0 --------')
+print('\t-------- freesurfer-Linux-centos6_x86_64-stable-pub-v5.3.0 --------')
 print('\tSetting up environment for FreeSurfer/FS-FAST (and FSL)')
 print('\tFREESURFER_HOME   /aging1/software//freesurfer')
 print('\tFSFAST_HOME       /aging1/software//freesurfer/fsfast')
