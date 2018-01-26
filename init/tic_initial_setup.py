@@ -26,10 +26,11 @@ def _link_file(source, target):
         print('{0} not found. File was not copied.'.format(source))
 
 
-def _link_studies():
+def _link_studies(tic_path, tic_home_init):
 
     for ii in ['hfpef', 'infinite', 'synergy']:
-        _link_file( _absjoin(tic_path, 'studies', ii, f'{ii}_init.sh'))
+        _link_file( _absjoin(tic_path, 'studies', ii, f'{ii}_init.sh'),
+                    _absjoin(tic_home_init, 'studies', ii, f'{ii}_init.sh'))
 
 
 def _copy_file(source, target):
@@ -59,7 +60,7 @@ def _check_shell():
 # environment variable is set properly in tic_zshrc.sh
 
 tic_path = os.getenv('TIC_PATH')
-home_tic_path = _absjoin(os.getenv('HOME'), '.tic2')
+home_tic_path = _absjoin(os.getenv('HOME'), '.tic')
 
 tic_zshrc_filename = 'tic_zshrc.sh'
 tic_environment_filename = 'tic_wake_aging1a_environment.sh'
@@ -77,4 +78,4 @@ if not os.path.isdir(home_tic_path):
 _copy_file(tic_zshrc, _absjoin(home_tic_path, tic_zshrc_filename))
 _copy_file(tic_environment, _absjoin(home_tic_path, tic_environment_filename))
 
-_link_studies()
+_link_studies(tic_path, home_tic_path)
