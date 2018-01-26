@@ -97,9 +97,9 @@ def main():
 
     in_args = _argparse()
 
-    if in_args.study is not None:
-        output_filename = _select_output_file( in_args.default)
+    output_filename = _select_output_file(in_args.default)
 
+    if in_args.study is not None:
         _write_study_switcher_script(in_args.active_study,
                                      output_filename)
 
