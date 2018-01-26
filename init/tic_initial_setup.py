@@ -12,7 +12,7 @@ import shutil
 
 # --- Helper functions
 def _absjoin(*path):
-    return os.path.abspath(os.path.join(*path))
+    return os.path.abspath(os.path.realpath(os.path.join(*path)))
 
 
 def _link_file(source, target):
