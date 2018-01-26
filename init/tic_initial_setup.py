@@ -17,8 +17,10 @@ def _absjoin(*path):
 
 def _link_file(source, target):
 
+    print()
     print(source)
     print(target)
+    print()
 
     try:
         os.link(source, target)
@@ -34,7 +36,7 @@ def _link_studies(tic_path, tic_home_init):
 
     for ii in ['hfpef', 'infinite', 'synergy']:
         _link_file( _absjoin(tic_path, 'studies', ii, f'{ii}_init.sh'),
-                    _absjoin(tic_home_init, 'studies', ii, f'{ii}_init.sh'))
+                    _absjoin(tic_home_init, f'{ii}_init.sh'))
 
 
 def _copy_file(source, target):
