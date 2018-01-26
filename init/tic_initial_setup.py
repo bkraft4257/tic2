@@ -22,11 +22,6 @@ HOME_TIC_PATH = _absjoin(os.getenv('HOME'), '.tic')
 
 def _link_file(source, target):
 
-    print()
-    print(source)
-    print(target)
-    print()
-
     try:
         os.symlink(source, target)
 
