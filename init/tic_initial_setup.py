@@ -29,7 +29,7 @@ def _link_file(source, target):
 def _link_studies():
 
     for ii in ['hfpef', 'infinite', 'synergy']:
-        _link_file( _absjoin(tic_path, 'studies', ii, f'{ii}_init.sh')
+        _link_file( _absjoin(tic_path, 'studies', ii, f'{ii}_init.sh'))
 
 
 def _copy_file(source, target):
