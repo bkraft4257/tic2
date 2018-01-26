@@ -23,7 +23,7 @@ def _link_file(source, target):
     print()
 
     try:
-        os.link(source, target)
+        os.symlink(source, target)
 
     except FileExistsError:
         print('{0} already exists. File was not copied.'.format(target))
