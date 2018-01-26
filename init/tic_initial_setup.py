@@ -10,6 +10,9 @@ import os
 import shutil
 
 
+
+
+
 # --- Helper functions
 def _absjoin(*path):
     return os.path.abspath(os.path.realpath(os.path.join(*path)))
@@ -59,6 +62,28 @@ def _check_shell():
               ' before continuing.')
 
 
+def _update_shell(in_filename):
+
+    with open(in_filename, 'a') as file:  # Use file to refer to the file object
+
+        file.write(f'\n\n\n')
+        file.write(f'## >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>\n')
+        file.write(f'## TIC Setup\n\n')
+
+        file.write(f'#export TIC_PATH =/gandg/tic/\n')
+        file.write(f'#export TIC_INIT_PATH =$HOME /.tic\n')
+        file.write(f'#source $TIC_INIT_PATH/tic_zshrc.sh\n\n')
+
+        file.write(f'## Add Studies to my environment\n\n')
+
+        file.write(f'#source $TIC_INIT_PATH/hfpef_init.sh\n')
+        file.write(f'#source $TIC_INIT_PATH/synergy_init.sh\n')
+        file.write(f'#source $TIC_INIT_PATH/infinite_init.sh\n')
+        file.write(f'#source $TIC_INIT_PATH/tic_default_study.sh\n\n')
+
+        file.write(f'## <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<\n')
+
+
 # --- Grab environment variables and filenames
 
 
@@ -87,3 +112,7 @@ _copy_file(tic_zshrc, _absjoin(home_tic_path, tic_zshrc_filename))
 _copy_file(tic_environment, _absjoin(home_tic_path, tic_environment_filename))
 
 _link_studies(tic_path, home_tic_path)
+
+
+_update_shell('.zshrc')
+_update_shell('.bashrc')
