@@ -4,9 +4,9 @@ source $TIC_PATH/bin/tic_functions.sh
 
 alias sw='study_switcher.py '
 
-alias swh='study_switcher.py hfpef; source $TIC_INIT_PATH/tic_study_switcher.sh'
-alias swi='study_switcher.py infinite; source $TIC_INIT_PATH/tic_study_switcher.sh'
-alias sws='study_switcher.py synergy; source $TIC_INIT_PATH/tic_study_switcher.sh'
+alias swh='study_switcher.py -s hfpef; source $TIC_INIT_PATH/tic_study_switcher.sh'
+alias swi='study_switcher.py -s infinite; source $TIC_INIT_PATH/tic_study_switcher.sh'
+alias sws='study_switcher.py -s synergy; source $TIC_INIT_PATH/tic_study_switcher.sh'
 
 alias catlast='ls -1drt * | tail -1 | xargs cat'
 alias cl='ls -1drt * | tail -1 | xargs cat'

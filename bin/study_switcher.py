@@ -32,8 +32,6 @@ def _write_study_switcher_script(active_study,
 
         file.write(f'# TIC Study Switcher Script\n')
         file.write(f'# =========================\n\n')
-        file.write(f'# You should never see this file. It should be created, sourced, and then deleted. \n')
-        file.write(f'# If you see it you should just delete it.\n\n')
 
         file.write(f"echo 'Previous active study' = $ACTIVE_STUDY\n\n")
 
@@ -69,14 +67,18 @@ def _argparse():
 
     parser = argparse.ArgumentParser(prog='study_switcher')
 
-    parser.add_argument('active_study',
+    parser.add_argument('-s','study',
                         help='Switch to a different study.',
                         choices=['hfpef', 'synergy', 'infinite'],
                         type=str,
-                        default='hfpef',
+                        default=None,
                         )
 
-    parser.add_argument("-d", "--default", help="Set select study as default.",
+    parser.add_argument("-d", "--default", help="Set selected study as default.",
+                        action="store_true",
+                        default=False)
+
+    parser.add_argument("-v", "--verbose", help="Display contents of study_switcher output_file.",
                         action="store_true",
                         default=False)
 
@@ -99,12 +101,13 @@ def main():
 
     in_args = _argparse()
 
-    output_filename = _select_output_file( in_args.default)
+    if in_args.study is not None:
+        output_filename = _select_output_file( in_args.default)
 
-    _write_study_switcher_script(in_args.active_study,
-                                 output_filename)
+        _write_study_switcher_script(in_args.active_study,
+                                     output_filename)
 
-    if in_args.verbose:
+    if in_args.verbose or in_args.study is None:
 
         print(f'\n\n{output_filename} .... \n\n')
 
