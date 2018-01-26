@@ -16,6 +16,10 @@ def _absjoin(*path):
 
 
 def _link_file(source, target):
+
+    print(source)
+    print(target)
+
     try:
         os.link(source, target)
 
