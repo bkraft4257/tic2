@@ -106,7 +106,7 @@ def main():
 
     if in_args.verbose:
         with open(output_filename, 'r') as file:
-            print(file)
+            print(file.read())
 
     return
 
