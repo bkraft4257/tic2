@@ -82,10 +82,6 @@ def _argparse():
                         action="store_true",
                         default=False)
 
-    parser.add_argument("-v", "--verbose", help="Display contents of study_switcher output_file.",
-                        action="store_true",
-                        default=False)
-
     return parser.parse_args()
 
 def _select_output_file(default_flag):
