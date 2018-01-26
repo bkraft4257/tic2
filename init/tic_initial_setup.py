@@ -97,8 +97,8 @@ def _update_shell(in_filename):
         file.write(f'## >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>\n')
         file.write(f'## TIC Setup\n\n')
 
-        file.write(f'#export TIC_PATH =/gandg/tic/\n')
-        file.write(f'#export TIC_INIT_PATH =$HOME /.tic\n')
+        file.write(f'#export TIC_PATH=/gandg/tic/\n')
+        file.write(f'#export TIC_INIT_PATH =$HOME/.tic\n')
         file.write(f'#source $TIC_INIT_PATH/tic_zshrc.sh\n\n')
 
         file.write(f'## Add Studies to my environment\n\n')
@@ -135,3 +135,23 @@ _link_studies()
 
 _update_shell('.zshrc')
 _update_shell('.bashrc')
+
+print('\nTIC Initial Setup Completed. \n\n')
+print('The next step is to uncomment TIC lines added to your .zshrc/.bashrc file.\n')
+print('After commenting out the files please logout and log back in again.\n')
+print('If you have successfully installed TIC on your aging1a account your when\n')
+print('when you log back your terminal should look something like this:\n\n\n')
+print('-------- freesurfer-Linux-centos6_x86_64-stable-pub-v5.3.0 --------\n')
+print('\tSetting up environment for FreeSurfer/FS-FAST (and FSL)\n')
+print('\tFREESURFER_HOME   /aging1/software//freesurfer\n')
+print('\tFSFAST_HOME       /aging1/software//freesurfer/fsfast\n')
+print('\tFSF_OUTPUT_FORMAT nii.gz\n')
+print('\tSUBJECTS_DIR      /aging1/software//freesurfer/subjects\n')
+print('\tMNI_DIR           /aging1/software//freesurfer/mni\n')
+print('\tFSL_DIR           /aging1/software//fsl5.09\n\n\n')
+print('\tTIC_PATH     : /gandg/tic/\n')
+print('\tSUBJECTS_DIR : /aging1/software/freesurfer/subjects\n')
+print('\tumask        : 002\n\n')
+print('\tCurrent active study = HFPEF\n\n')
+
+
