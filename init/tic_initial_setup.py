@@ -15,6 +15,23 @@ def _absjoin(*path):
     return os.path.abspath(os.path.join(*path))
 
 
+def _link_file(source, target):
+    try:
+        os.link(source, target)
+
+    except FileExistsError:
+        print('{0} already exists. File was not copied.'.format(target))
+
+    except FileNotFoundError:
+        print('{0} not found. File was not copied.'.format(source))
+
+
+def _link_studies():
+
+    for ii in ['hfpef', 'infinite', 'synergy']:
+        _link_file( _absjoin(tic_path, 'studies', ii, f'{ii}_init.sh')
+
+
 def _copy_file(source, target):
     try:
         shutil.copy(source, target)
@@ -59,3 +76,5 @@ if not os.path.isdir(home_tic_path):
 
 _copy_file(tic_zshrc, _absjoin(home_tic_path, tic_zshrc_filename))
 _copy_file(tic_environment, _absjoin(home_tic_path, tic_environment_filename))
+
+_link_studies()
