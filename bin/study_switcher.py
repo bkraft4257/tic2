@@ -13,11 +13,11 @@ import sys
 STUDY_CHOICES = ['hfpef', 'synergy', 'infinite']
 DEFAULT_STUDY_CHOICE = 'hfpef'
 
-output_file = os.path.abspath(os.path.join(os.getenv('TIC_INIT_PATH'),
+STUDY_SWITCHER_OUTPUT_FILENAME = os.path.abspath(os.path.join(os.getenv('TIC_INIT_PATH'),
                                            'tic_study_switcher.sh'))
 
-default_file = os.path.abspath(os.path.join(os.getenv('TIC_INIT_PATH'),
-                                           'tic_default_study.sh'))
+DEFAULT_STUDY_SWITCHER_OUTPUT_FILENAME = os.path.abspath(os.path.join(os.getenv('TIC_INIT_PATH'),
+                                          'tic_default_study.sh'))
 
 
 def _write_study_switcher_script(active_study, out_filename=output_file):
@@ -78,19 +78,33 @@ def _argparse():
                         action="store_true",
                         default=False)
 
+    parser.add_argument("-v", "--verbose", help="Display contents of study_switcher output_file.",
+                        action="store_true",
+                        default=False)
+
     return parser.parse_args()
 
+def _select_output_file(default_flag):
+
+    if default_flag:
+        output_file = DEFAULT_STUDY_SWITCHER_OUTPUT_FILENAME;
+    else:
+        output_file = STUDY_SWITCHER_OUTPUT_FILENAME;
+
+    return output_file
 
 def main():
 
     in_args = _argparse()
 
-    if in_args.default:
-        _write_study_switcher_script(in_args.active_study,
-                                     out_filename=default_file)
-    else:
-        _write_study_switcher_script(in_args.active_study,
-                                     out_filename=output_file)
+    output_filename = _select_output_file( in_args.default)
+
+    _write_study_switcher_script(in_args.active_study,
+                                 output_filename)
+
+    if in_args.verbose:
+        with open(output_filename, 'r') as file:
+            print(file)
 
     return
 
