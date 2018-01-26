@@ -16,8 +16,11 @@ DEFAULT_STUDY_CHOICE = 'hfpef'
 output_file = os.path.abspath(os.path.join(os.getenv('TIC_INIT_PATH'),
                                            'tic_study_switcher.sh'))
 
+default_file = os.path.abspath(os.path.join(os.getenv('TIC_INIT_PATH'),
+                                           'tic_default_study.sh'))
 
-def _write_study_switcher_script(active_study):
+
+def _write_study_switcher_script(active_study, out_filename=output_file):
 
     active_study = active_study.upper()
 
@@ -46,10 +49,14 @@ def _write_study_switcher_script(active_study):
         file.write(f'export ACTIVE_BIDS_CONFIG_FILE=${active_study}_BIDS_CONFIG_FILE\n')
         file.write(f'export ACTIVE_HEUDICONV_PROTOCOL=${active_study}_HEUDICONV_PROTOCOL\n')
 
+        # SUBJECTS_DIR for FreeSurfer
+        file.write(f'export ACTIVE_SUBJECTS_DIR=${active_study}_SUBJECTS_DIR\n')
+        file.write(f'export SUBJECTS_DIR=${active_study}_SUBJECTS_DIR\n\n')
+
         # BIDS APPS output directories
         file.write(f'export ACTIVE_ACT_PATH=${active_study}_ACT_PATH\n')
         file.write(f'export ACTIVE_FMRIPREP_PATH=${active_study}_FMRIPREP_PATH\n')
-        file.write(f'export ACTIVE_NETPREP_PATH=${active_study}_NETPREP_PATH\n\n')
+        file.write(f'export ACTIVE_NETPREP_PATH=${active_study}_NETPREP_PATH\n')
 
         file.write(f"echo 'Current active study' = $ACTIVE_STUDY\n\n")
 
@@ -67,6 +74,10 @@ def _argparse():
                         default='hfpef',
                         )
 
+    parser.add_argument("-d", "--default", help="Set select study as default.",
+                        action="store_true",
+                        default=False)
+
     return parser.parse_args()
 
 
@@ -74,7 +85,12 @@ def main():
 
     in_args = _argparse()
 
-    _write_study_switcher_script(in_args.active_study)
+    if in_args.default:
+        _write_study_switcher_script(in_args.active_study,
+                                     out_filename=default_file)
+    else:
+        _write_study_switcher_script(in_args.active_study,
+                                     out_filename=output_file)
 
     return
 

@@ -1,5 +1,9 @@
 #!/usr/bin/env bash
 
+source $TIC_PATH/bin/tic_functions.sh
+
+alias sw='study_switcher.py '
+
 alias swh='study_switcher.py hfpef; source $TIC_INIT_PATH/tic_study_switcher.sh'
 alias swi='study_switcher.py infinite; source $TIC_INIT_PATH/tic_study_switcher.sh'
 alias sws='study_switcher.py synergy; source $TIC_INIT_PATH/tic_study_switcher.sh'
@@ -8,7 +12,6 @@ alias catlast='ls -1drt * | tail -1 | xargs cat'
 alias cl='ls -1drt * | tail -1 | xargs cat'
 
 alias cdtic='cd $TIC_PATH; lsreport_function'
-alias cdstudies='cd $STUDIES_PATH; lsreport_function'
 alias cdtemplates='cd $TEMPLATES_PATH; lsreport_function'
 
 alias cdixi='cd $TEMPLATE_IXI; lsreport_function'
