@@ -22,3 +22,5 @@ export INFINITE_NETPREP_PATH=${INFINITE_IMAGE_PROCESSING_PATH}/netprep
 
 
 export INFINITE_SCRIPTS_PATH=${TIC_PATH}/studies/infinite/scripts
+
+export INFINITE_HEUDICONV_PROTOCOL=${INFINITE_SCRIPTS_PATH}/infinite_protocol.py

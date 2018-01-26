@@ -44,6 +44,7 @@ def _write_study_switcher_script(active_study):
         file.write(f'export ACTIVE_NETPREP_PATH=${active_study}_NETPREP_PATH\n')
 
         file.write(f'export ACTIVE_BIDS_CONFIG_FILE=${active_study}_BIDS_CONFIG_FILE\n')
+        file.write(f'export ACTIVE_HEUDICONV_PROTOCOL=${active_study}_HEUDICONV_PROTOCOL\n')
 
         # BIDS APPS output directories
         file.write(f'export ACTIVE_ACT_PATH=${active_study}_ACT_PATH\n')

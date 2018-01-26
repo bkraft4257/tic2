@@ -168,8 +168,8 @@ def protocol():
                                 )
 
     sequences['rest_ap'] = criteria(key='sub-{subject}/{session}/func/sub-{subject}_{session}_task-rest_acq-epi_bold.{item:01d}',
-                                series_description='BOLD_resting',  
-                                )
+                                    series_description='BOLD_resting',
+                                   )
 
     sequences['rest_topup_ap'] = criteria(key='sub-{subject}/{session}/fmap/sub-{subject}_{session}_acq-topup_dir-ap_epi.{item:01d}',
                                 series_description='rest_topup_A>>P',  
