@@ -65,7 +65,7 @@ def _check_shell():
 
 def _add_timestamp(in_filename):
 
-    timestamp = time.strftime("_%d_%m_%y_%H:%M:%S")
+    timestamp = time.strftime("%m_%d_%y_%H:%M:%S")
     return f'{in_filename}.{timestamp}'
 
 
