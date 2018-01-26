@@ -67,7 +67,7 @@ def _argparse():
 
     parser = argparse.ArgumentParser(prog='study_switcher')
 
-    parser.add_argument('-s','study',
+    parser.add_argument('-s','--study',
                         help='Switch to a different study.',
                         choices=['hfpef', 'synergy', 'infinite'],
                         type=str,
