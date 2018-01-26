@@ -8,9 +8,7 @@ __version__ = "0.0.0"
 
 import os
 import shutil
-
-
-
+import time
 
 
 # --- Helper functions
@@ -61,8 +59,27 @@ def _check_shell():
               'Setup your Unix environment to run one of these shells \n'
               ' before continuing.')
 
+def _add_timestamp(in_filename):
+
+    timestamp = time.strftime("_%d_%m_%y_%H:%M:%S")
+    return f'{in_filename}.{timestamp}'
+
+
+def _backup_shell(in_filename):
+
+    home_path = os.getenv('HOME')
+
+    source_file = _absjoin(home_path, in_filename)
+    backup_file = _absjoin(home_path, _add_timestamp(in_filename))
+
+    _copy_file(source_file, backup_file)
+
 
 def _update_shell(in_filename):
+
+    _backup_shell(in_filename)
+
+    # Create backup
 
     with open(in_filename, 'a') as file:  # Use file to refer to the file object
 
@@ -112,7 +129,6 @@ _copy_file(tic_zshrc, _absjoin(home_tic_path, tic_zshrc_filename))
 _copy_file(tic_environment, _absjoin(home_tic_path, tic_environment_filename))
 
 _link_studies(tic_path, home_tic_path)
-
 
 _update_shell('.zshrc')
 _update_shell('.bashrc')
