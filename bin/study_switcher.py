@@ -100,7 +100,7 @@ def main():
     output_filename = _select_output_file(in_args.default)
 
     if in_args.study is not None:
-        _write_study_switcher_script(in_args.active_study,
+        _write_study_switcher_script(in_args.study,
                                      output_filename)
 
     if in_args.verbose or in_args.study is None:
