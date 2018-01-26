@@ -91,18 +91,14 @@ def _update_shell(in_filename):
         file.write(f'\n\n\n')
         file.write(f'## >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>\n')
         file.write(f'## TIC Setup\n\n')
-
         file.write(f'#export TIC_PATH=/gandg/tic/\n')
         file.write(f'#export TIC_INIT_PATH =$HOME/.tic\n')
         file.write(f'#source $TIC_INIT_PATH/tic_zshrc.sh\n\n')
-
         file.write(f'## Add Studies to my environment\n\n')
-
         file.write(f'#source $TIC_INIT_PATH/hfpef_init.sh\n')
         file.write(f'#source $TIC_INIT_PATH/synergy_init.sh\n')
         file.write(f'#source $TIC_INIT_PATH/infinite_init.sh\n')
         file.write(f'#source $TIC_INIT_PATH/tic_default_study.sh\n\n')
-
         file.write(f'## <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<\n')
 
 

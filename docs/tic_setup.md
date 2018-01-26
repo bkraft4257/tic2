@@ -5,6 +5,80 @@ However, each individual investigators setup will be different depending
 upon investigators computers. We have a TIC environment setup on aging1a
 and aging2a, which is the easiest way to setup your TIC environment.
 
+## Quick Setup on aging1a/aging2a
+
+I am going to assume that you have a Unix account. I would suggest that
+if you haven't already I would switch my default shell to zsh. To take
+full advantage of TIC with minimal work you must use the bash or zsh.
+
+
+1. Log into aging1a or aging2a with your Unix account.
+
+2. Enter the command below at the command prompt. This will copy files
+   into the directory .tic in your home directory. It will also update
+   your .zshrc and .bashrc files with comments.
+
+
+   ```console
+    >>> TIC_PATH=/gandg/tic/; $TIC_PATH/init/tic_initial_setup.py
+
+    if you ar new to Unix and Unix documentation the >>> is shorthand for
+    your command prompt.  You do not include >>> when you typing the
+    commands above.
+   ```
+3. In order for the TIC enviroment to become active on your Unix account
+   you must uncomment the comments that have been added to the end of
+   your .zshrc and/or .bashrc file. What this means is that you must
+   remove the first # (and only the first # ) because some of the
+   comments added are comments themselves. For example
+
+
+   ```console
+    ## >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+    ## TIC Setup
+
+    #export TIC_PATH=/gandg/tic/
+    ...
+
+    becomes
+
+    # >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+    # TIC Setup
+
+    export TIC_PATH=/gandg/tic/
+    ...
+
+
+    where the ... means more comments
+
+    ```
+4.  Logout and log back into aging1a/aging2a. Your terminal should look
+    like
+
+    ``` console
+    
+    Last login: Fri Jan 26 15:00:59 2018 from 152.11.113.79
+    
+    -------- freesurfer-Linux-centos6_x86_64-stable-pub-v5.3.0 --------
+    Setting up environment for FreeSurfer/FS-FAST (and FSL)
+    FREESURFER_HOME   /aging1/software//freesurfer
+    FSFAST_HOME       /aging1/software//freesurfer/fsfast
+    FSF_OUTPUT_FORMAT nii.gz
+    SUBJECTS_DIR      /aging1/software//freesurfer/subjects
+    MNI_DIR           /aging1/software//freesurfer/mni
+    FSL_DIR           /aging1/software//fsl5.09
+    
+    
+    TIC_PATH     : /gandg/tic/
+    SUBJECTS_DIR : /aging1/software//freesurfer/subjects
+    umask        : 002
+    
+    Current active study = HFPEF
+    ```
+
+## On your own computer
+
+
 ### Setup BASH or ZSH
 
 Set your shell to bash or zsh. These two shells are 99% compatible.
