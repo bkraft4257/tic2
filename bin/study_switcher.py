@@ -106,7 +106,7 @@ def main():
 
     if in_args.verbose:
 
-        print(f'\n\n{output_file} .... \n\n')
+        print(f'\n\n{output_filename} .... \n\n')
 
         with open(output_filename, 'r') as file:
             print(file.read())
