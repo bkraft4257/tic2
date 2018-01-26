@@ -20,11 +20,13 @@ DEFAULT_STUDY_SWITCHER_OUTPUT_FILENAME = os.path.abspath(os.path.join(os.getenv(
                                           'tic_default_study.sh'))
 
 
-def _write_study_switcher_script(active_study, out_filename=output_file):
+def _write_study_switcher_script(active_study,
+                                 out_filename=STUDY_SWITCHER_OUTPUT_FILENAME,
+                                 ):
 
     active_study = active_study.upper()
 
-    with open(output_file, 'w') as file:  # Use file to refer to the file object
+    with open(out_filename, 'w') as file:  # Use file to refer to the file object
 
         file.write(f'#!/bin/env bash\n\n')
 
