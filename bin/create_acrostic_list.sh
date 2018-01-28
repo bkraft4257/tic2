@@ -9,6 +9,11 @@ rev | \
 cut -c 5- | \
 sort > $ACTIVE_BIDS_PATH/acrostic.list
 
+echo
+echo $ACTIVE_BIDS_PATH/acrostic.list
+echo
+cat -n $ACTIVE_BIDS_PATH/acrostic.list
+echo
 
 # 1.  Create a list of the directories in the BIDS directory starting with sub. The find command is used instead of ls
 #     so we can ensure that only directories starting with sub- are listed.
