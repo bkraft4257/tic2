@@ -1,5 +1,8 @@
 #!/usr/bin/env bash
 
+
+alias tic_help='firefox $TIC_PATH/docs/build/html/index.html&'
+
 source $TIC_PATH/bin/tic_functions.sh
 
 alias sw='study_switcher.py '
