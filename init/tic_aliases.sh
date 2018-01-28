@@ -1,6 +1,8 @@
 #!/usr/bin/env bash
 
 
+alias dfgandg='echo; df -h /gandg/; echo'
+
 alias tic_help='firefox $TIC_PATH/docs/build/html/index.html&'
 
 source $TIC_PATH/bin/tic_functions.sh
@@ -62,6 +64,8 @@ alias lls='ls -lrS'
 
 alias frv='freeview'
 alias fsv='fslview'
+alias fse='fsleyes'
+
 alias fsvall='fslview_all_function'
 
 alias lnflatten='${TIC_PATH}/lnflatten.sh'
