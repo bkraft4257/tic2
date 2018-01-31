@@ -14,6 +14,7 @@ Contents:
    tic_welcome.md
    tic_setup.md
    tic_processing.md
+   tic_documentation.rst
 
 
 Indices and tables
