@@ -45,10 +45,9 @@ Here is the layout of the files for a project, using our tic_redcap_link project
 Contents of .gitignore:
 
 .. code-block
-.idea/
-.DS_Store
-__pycache__/
-
+    .idea/
+    .DS_Store
+    __pycache__/
 
 
 Contents of __init__.py:

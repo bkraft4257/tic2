@@ -13,8 +13,7 @@ Contents:
 
    tic_welcome.md
    tic_setup.md
-   other/tic_processing.md
-   other/fmriprep.md
+   tic_processing.md
 
 
 Indices and tables
