@@ -15,7 +15,7 @@ Contents:
    tic_setup.md
    tic_processing.md
    other/tic_documentation.rst
-   studies.md
+   other/studies.md
 
 Other TIC Documents
 -------------------
