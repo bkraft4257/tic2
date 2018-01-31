@@ -16,6 +16,11 @@ Contents:
    tic_processing.md
    other/tic_documentation.rst
 
+Other TIC Documents
+-------------------
+
+* :ref:`ants_cortical_thickness`
+
 
 
 Indices and tables

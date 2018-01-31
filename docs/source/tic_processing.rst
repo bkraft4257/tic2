@@ -31,15 +31,19 @@ TIC Project Structure
 The high level view of the TIC directory structure is
 
     ./bin
+
     ./init
+
     ./docs
         /build
         /source
+
     ./studies
         /active
         /hfpef
         /infinite
-        /synergy    
+        /synergy
+
     ./workflows
 
 **bin** - contains executable Python and Bash scripts. When the TIC
@@ -57,7 +61,9 @@ document and should grow as more people join TIC. Documentation can
 easily be created and added to the TIC HTML page by writing in Markdown
 or Restructed test and adding these documents to the Sphinx Index.
 Additional information will be provided on how one may contribute to the
-TIC documentation. ref::`_tic_documentation-overview`
+TIC documentation.
+
+:ref:`_tic_documentation-overview`
 
 
 TIC Environment
