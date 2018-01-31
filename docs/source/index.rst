@@ -14,6 +14,8 @@ Contents:
    tic_welcome.md
    tic_setup.md
 
+   other/fmriprep.md
+
 
 Indices and tables
 ==================
