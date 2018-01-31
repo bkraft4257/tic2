@@ -17,12 +17,6 @@ Contents:
    other/tic_documentation.rst
    other/studies.md
 
-Other TIC Documents
--------------------
-
-* :ref:`ants_cortical_thickness`
-
-
 
 Indices and tables
 ==================
