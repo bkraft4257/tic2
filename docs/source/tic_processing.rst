@@ -30,7 +30,6 @@ TIC Project Structure
 
 The high level view of the TIC directory structure is
 
-``` console
     ./bin
     ./init
     ./docs
@@ -42,7 +41,6 @@ The high level view of the TIC directory structure is
         /infinite
         /synergy    
     ./workflows
-```
 
 **bin** - contains executable Python and Bash scripts. When the TIC
 environment is setup correctly the $TIC_PATH/bin is added to your
