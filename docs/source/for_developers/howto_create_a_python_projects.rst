@@ -12,6 +12,7 @@ Project: the top level directory containing your package(s), documentation, test
 
 Here is the layout of the files for a project, using our tic_redcap_link project as an example:
 
+
 .. code-block
 
     tic_redcap_link/  [ the Project ]
@@ -42,6 +43,7 @@ Here is the layout of the files for a project, using our tic_redcap_link project
         redcap_link-1.0.0.tar.gz [   tarball for distribution - see   ]
                                  [  HOWTO: distribute Python packages ]
 
+
 Contents of .gitignore:
 
 .. code-block
@@ -50,11 +52,13 @@ Contents of .gitignore:
     __pycache__/
 
 
+
 Contents of __init__.py:
 
 .. code-block
     from redcap_link.redcap_upload import redcap_upload
     from redcap_link.redcap_check import redcap_check
+
 
 (you are importing functions [redcap_upload] from files [redcap_upload.py])
 Importing from this project
@@ -65,3 +69,5 @@ Once you have the project all setup, with its package, here is how to use it in 
     import redcap_link
 
     redcap_link.redcap_upload(...)
+
+
