@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-alias tic_make_docs='cd $TIC_PATH/docs/source/; make clean; make html; cd -; firefox $TIC_PATH/docs/build/html/index.html&'
+alias tic_make_docs='cd $TIC_PATH/docs/; make clean; make html; cd -; firefox $TIC_PATH/docs/build/html/index.html&'
 
 alias dfgandg='echo; df -h /gandg/; echo'
 
