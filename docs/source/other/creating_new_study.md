@@ -57,6 +57,33 @@ $TIC_PATH/studies/<study_new>/
         /logs
 
 
-
 ```
+
+
+Other things you will need to do
+--------------------------------
+
+There are a few other things that you will need to do in order to have a
+fully functioning TICS study.
+
+1. Copy or link the <study_name>_init.sh file to your $HOME/.tic
+   directory.
+
+2. Add the <study_name>_init.sh to your .zshrc file. The easiest way to
+   do this is with this command
+
+   ```
+   source $TIC_INIT_PATH/<study_name>_init.sh
+   ```
+
+3. Create a BIDS protocol. You can see directions on how to do this in
+   the BIDS app heudiconv. <need a link to the documentation here>
+
+4. Add <study_name> to STUDY_CHOICES in $TIC_PATH/bin/study_switcher.py.
+   You will also need to commit this change.
+
+
+
+
+
 

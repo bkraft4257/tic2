@@ -16,7 +16,7 @@ Contents:
    tic_processing.md
    other/tic_documentation.rst
    other/studies.md
-
+   other/creating_new_study.md
 
 Indices and tables
 ==================

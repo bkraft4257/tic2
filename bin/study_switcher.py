@@ -10,7 +10,7 @@ import os
 import argparse
 import sys
 
-STUDY_CHOICES = ['hfpef', 'synergy', 'infinite']
+STUDY_CHOICES = ['hfpef', 'synergy', 'infinite', 'cenc']
 DEFAULT_STUDY_CHOICE = 'hfpef'
 
 STUDY_SWITCHER_OUTPUT_FILENAME = os.path.abspath(os.path.join(os.getenv('TIC_INIT_PATH'),
