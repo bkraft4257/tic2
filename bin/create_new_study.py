@@ -104,7 +104,6 @@ def _create_directories_for_new_study(study_name, study_path):
                    os.path.abspath(os.path.join(study_path, study_name, 'image_analysis')),
                    os.path.abspath(os.path.join(study_path, study_name, 'qc')),
                    os.path.abspath(os.path.join(study_path, study_name, 'qc', 'mriqc')),
-                   os.path.abspath(os.path.join(study_path, study_name, 'scripts')),
                    )
 
     for x in directories:
@@ -158,7 +157,6 @@ def _copy_files_from_newstudy_template(study_name, tic_path):
 
     for ii in _files_to_copy:
         _copy_files(ii[0], ii[1])
-
 
 
 def _replace_text_in_file(filename, find_string, replace_string):
