@@ -102,6 +102,7 @@ def _copy_files(source, destination):
     """
 
     try:
+        logging.debug('cp %s %s', source, destination)
         shutil.copyfile(source, destination)
 
     except FileNotFoundError:
