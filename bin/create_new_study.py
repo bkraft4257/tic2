@@ -13,7 +13,24 @@ import logging
 
 import shutil
 
-logging.basicConfig(filename='create_new_study.log',level=logging.INFO)
+logging.basicConfig(filename='create_new_study.log', level=logging.INFO)
+
+# create logger
+logger = logging.getLogger(__name__)
+logger.setLevel(logging.DEBUG)
+
+# create console handler and set level to debug
+ch = logging.StreamHandler()
+ch.setLevel(logging.DEBUG)
+
+# create formatter
+formatter = logging.Formatter('%(asctime)s - %(name)s - %(levelname)s - %(message)s')
+
+# add formatter to ch
+ch.setFormatter(formatter)
+
+# add ch to logger
+logger.addHandler(ch)
 
 
 def _get_command_line_args():
@@ -39,6 +56,8 @@ def _get_command_line_args():
 
     parser.add_argument('tic_path', help='This is the absolute path of your TIC project.'
                         )
+
+
 
     parser.add_argument("-v", "--verbose", help="Verbose flag", action="store_true", default=False)
 
@@ -133,8 +152,8 @@ def _copy_files_from_newstudy_template(study_name, tic_path):
                       (os.path.join(tic_new_study_template_path, 'environment.sh'),
                        os.path.join(tic_new_study_path, 'environment.sh')),
 
-                      (os.path.join(tic_new_study_template_path, 'newstudy_init.sh',
-                                    os.path.join(tic_new_study_path, f'{study_name}_init.sh'))),
+                      (os.path.join(tic_new_study_template_path, 'newstudy_init.sh'),
+                       os.path.join(tic_new_study_path, f'{study_name}_init.sh')),
                       )
 
     for ii in _files_to_copy:
