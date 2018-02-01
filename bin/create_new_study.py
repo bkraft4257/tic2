@@ -10,7 +10,7 @@ __version__ = "0.0.0"
 import argparse
 import os
 import logging
-
+import fileinput
 import shutil
 
 logging.basicConfig(filename='create_new_study.log', level=logging.INFO)
@@ -160,16 +160,56 @@ def _copy_files_from_newstudy_template(study_name, tic_path):
         _copy_files(ii[0], ii[1])
 
 
+
+
+def _replace_text_in_file(filename, find_string, replace_string):
+    """
+    Replace text in the newstudy templates with new study name.
+
+    :param filename:
+    :param find_string:
+    :param replace_string:
+    :return:
+
+    https://askubuntu.com/questions/747450/how-do-i-call-a-sed-command-in-a-python-script
+    """
+
+    for line in fileinput.input(filename, inplace=True):
+        # inside this loop the STDOUT will be redirected to the file
+        # the comma after each print statement is needed to avoid double line breaks
+        line.replace(find_string, replace_string)
+
+
+def _replace_text_in_newstudy_templates(study_name, tic_path):
+    """
+    Replace text in the newstudy templates with new study name.
+    """
+
+    new_study_path = os.path.abspath(os.path.join(tic_path, 'studies', study_name))
+
+    for ii in ['aliases.sh', 'environment.sh', f'{study_name}_init.sh']:
+        _replace_text_in_file(os.path.join(new_study_path,ii), 'newstudy', study_name.lowercase())
+
+
 def main():
     """ Initializes a new study"""
 
     in_args = _get_command_line_args()
 
-    _create_directories_for_new_study_in_tic(in_args.study_name, in_args.tic_path)
-    _create_directories_for_new_study(in_args.study_name, in_args.study_path)
+    _create_directories_for_new_study_in_tic(in_args.study_name,
+                                             in_args.tic_path,
+                                             )
+
+    _create_directories_for_new_study(in_args.study_name,
+                                      in_args.study_path,
+                                      )
 
     _copy_files_from_newstudy_template(in_args.study_name,
-                                       in_args.tic_path
+                                       in_args.tic_path,
+                                       )
+
+    _replace_text_in_newstudy_templates(in_args.study_name,
+                                        in_args.tic_path,
                                        )
 
     return
