@@ -11,6 +11,8 @@ import argparse
 import os
 import logging
 
+import shutil
+
 
 def _get_command_line_args():
     """
@@ -44,17 +46,23 @@ def _get_command_line_args():
 
 
 def _create_directory(directory):
+    """ Creates a directory
+
+    :param directory:
+    :return:
+    """
+
     try:
         if not os.path.exists(directory):
             os.makedirs(directory)
-    except OSError as e:
+    except OSError:
         logging.debug('%s was not created.', directory)
 
 
-def _create_directories_for_new_study_in_tic( study_name, tic_path):
+def _create_directories_for_new_study_in_tic(study_name, tic_path):
     """Creates directories for new study in TIC"""
 
-    directories = (os.path.abspath( os.path.join( tic_path, 'studies', study_name)),
+    directories = (os.path.abspath(os.path.join(tic_path, 'studies', study_name)),
                    os.path.abspath(os.path.join(tic_path, 'studies', study_name, 'scripts'))
                    )
 
@@ -64,11 +72,11 @@ def _create_directories_for_new_study_in_tic( study_name, tic_path):
     return
 
 
-def _create_directories_for_new_study( study_name, study_path):
+def _create_directories_for_new_study(study_name, study_path):
     """Creates directories for new study in TIC"""
 
     directories = (os.path.abspath(study_path),
-                   os.path.abspath(os.path.join(study_path,  study_name)),
+                   os.path.abspath(os.path.join(study_path, study_name)),
                    os.path.abspath(os.path.join(study_path, study_name, 'bids')),
                    os.path.abspath(os.path.join(study_path, study_name, 'image_processing')),
                    os.path.abspath(os.path.join(study_path, study_name, 'image_processing', 'logs')),
@@ -84,6 +92,52 @@ def _create_directories_for_new_study( study_name, study_path):
     return
 
 
+def _copy_files(source, destination):
+    """
+    Copy files from source to target.
+
+    :param source:
+    :param destination:
+    :return:
+    """
+
+    try:
+        shutil.copyfile(source, destination)
+
+    except FileNotFoundError:
+
+        logging.debug('%s source file not found.', source)
+
+    except FileExistsError:
+        logging.debug('%s target file already exists.', destination)
+
+
+def _copy_files_from_newstudy_template(study_name, tic_path):
+    """
+    Copy files from TIC new study template to new study
+
+    :param study_name:
+    :param tic_path:
+    :return:
+    """
+
+    tic_new_study_path = os.path.abspath(os.path.join(tic_path, 'studies', study_name))
+    tic_new_study_template_path = os.path.abspath(os.path.join(tic_path, 'studies', '_new_study_template'))
+
+    _files_to_copy = ((os.path.join(tic_new_study_template_path, 'aliases.sh'),
+                       os.path.join(tic_new_study_path, 'aliases.sh')),
+
+                      (os.path.join(tic_new_study_template_path, 'environment.sh'),
+                       os.path.join(tic_new_study_path, 'environment.sh')),
+
+                      (os.path.join(tic_new_study_template_path, 'newstudy_init.sh',
+                                    os.path.join(tic_new_study_path, f'{study_name}_init.sh'))),
+                      )
+
+    for ii in _files_to_copy:
+        _copy_files(ii[0], ii[1])
+
+
 def main():
     """ Initializes a new study"""
 
@@ -92,7 +146,12 @@ def main():
     _create_directories_for_new_study_in_tic(in_args.study_name, in_args.tic_path)
     _create_directories_for_new_study(in_args.study_name, in_args.study_path)
 
+    _copy_files_from_newstudy_template(in_args.study_name,
+                                       in_args.tic_path
+                                       )
+
     return
+
 
 # ====================================================================================================================
 
