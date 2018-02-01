@@ -2,9 +2,9 @@
 
 # Environment variables
 
-export NEWSTUDY_SCRIPTS_PATH=${TIC_PATH}/studies/hfpef/scripts
+export NEWSTUDY_SCRIPTS_PATH=${TIC_PATH}/studies/newstudy/scripts
 
-export NEWSTUDY_PATH=/gandg/hfpef/
+export NEWSTUDY_PATH=/gandg/newstudy/
 export NEWSTUDY_BIDS_PATH=${NEWSTUDY_PATH}/bids
 export NEWSTUDY_IMAGE_ANALYSIS_PATH=${NEWSTUDY_PATH}/image_analysis
 export NEWSTUDY_IMAGE_PROCESSING_PATH=${NEWSTUDY_PATH}/image_processing

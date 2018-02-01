@@ -1,9 +1,9 @@
 #!/usr/bin/path
 
 
-# HFPEF Study initialization ====================================================
+# NEWSTUDY Study initialization ====================================================
 
-export NEWSTUDY_PATH=/gandg/new
+export NEWSTUDY_PATH=${TIC_PATH}/studies/newstudy
 
 source ${TIC_PATH}/studies/newstudy/aliases.sh
 source ${TIC_PATH}/studies/newstudy/environment.sh
