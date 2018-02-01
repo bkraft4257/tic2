@@ -1,59 +1,22 @@
-We are in the process of trying to simplify the installing TIC for processing neuroimaging data. Even now I still consider
-the process to complex but it is getting better.  The processing of neuroimaging data has been simplified with the 
-use of Docker and Docker containers that one may pull from various labs.  However,  there is still a fair amount of
-environmental setup that needs to be done.   
-
-The best way to explain the current process is to walk through an example of how to setup a new user to use TIC on aging1a. 
-Once I have described this process.  I will briefly talk about the additional steps needed to install TIC on a brand new.
-
-Getting Started with TIC on aging1a
-
-All of the software that one may need to run TIC both stand alone packages the Docker containers are on aging1a.  Since all
-the software is already installed all you need to do is setup your environment.  The files you need to setup your 
-environment for TIC are located here /gandg/tic. TIC assummes that you will be using either the bash or zsh.  If
-you want to use another shell you will have to modify the scripts for setting up your environment yourself to support
-a different shell.  I personally prefer the zsh, specifically oh-my-zsh, so I have also included my .zshrc as an example.
-It is called bkraft.zshrc
-
-1) In your home directory create a directory called .tic
-
-      >> mkdir $HOME/.tic
-
-2) Copy the files tic_wake_software_environment.sh and tic_zshrc.sh to this directory.  
-
-      >> cp /gandg/tic/tic_wake_software_environment.sh $HOME/.tic
-      >> cp /gandg/tic/tic_zshrc.sh $HOME/.tic
-      >> cp /gandg/tic/studies.sh $HOME/.tic
-
-3) You are going to need to add the following to the end of your own .bashrc or .zshrc files. 
-
-      # Setup TIC environment
-      export TIC_PATH=/gandg/tic/
-
-      source $TIC_PATH/tic_aliases.sh
-      source $HOME/.tic/tic_zshrc.sh
-      source $HOME/.tic/studies.sh
-
-      # TIC NIPYPE Workflows
-      PATH=/gandg/tic/nipype_workflows:$PATH
-      PYTHONDONTWRITEBYTECODE=1
+The full documentation for this project is located in
 
 
-At this point you should be setup to run TIC along with all of the studies associated with TIC. If you are not 
-involved in some of the studies there is no reason to load the studies aliases, functions, and scripts. You can always 
-go into your copy of $HOME/.tic/studies.sh and delete the studies you are not involved in from this script file.  
+./docs/build/html/tic_welcome.html
 
-Now there are some definite philosophical choices with this type of setup. I would also say that there are also 
-philosophical inconsistencies with this type of setup. The goal is to make it as easy as possible for a user to 
-setup their environment. We also wanted users to be as independent as possible with the flexibility of being able to
-setpu their own environments as necessary.  Even going as far as allowing a user to setup their environment for 
-processing data differently for different studies.  The biggest example of this this is starting a study with a 
-particular version of a piece of software.  If the software is upgraded during the study the user has the option
-of setting up thier environment to continue use the old software. The disadvantage of this is that as new functions and 
-aliases are added the user is then stuck using older versions or at the very least having to manually upgrade thier
-scripts.
 
-In order to give users greater flexibility the studies.sh just sources files related to each study.  The idea is that new 
-functions and aliases could be added to a study without really affecting the environment.  
 
-I was trying to strike a happy balance.  
+You can read this documentation on aging1a and aging2a with firefox
+
+firefox $PWD/docs/build/html/tic_setup.html&
+
+
+
+If you want to setup your computer for tic you can follow the
+tic_setup.md here
+
+firefox $PWD/docs/build/html/tic_setup.html&
+
+
+
+where $PWD is the path of the README.md file you are currently reading.
+
