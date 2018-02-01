@@ -177,7 +177,7 @@ def _replace_text_in_file(filename, find_string, replace_string):
     for line in fileinput.input(filename, inplace=True):
         # inside this loop the STDOUT will be redirected to the file
         # the comma after each print statement is needed to avoid double line breaks
-        print(line.replace(find_string, replace_string)),
+        print(line.replace(find_string, replace_string),)
 
 
 def _replace_text_in_newstudy_templates(study_name, tic_path):
