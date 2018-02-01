@@ -188,7 +188,8 @@ def _replace_text_in_newstudy_templates(study_name, tic_path):
     new_study_path = os.path.abspath(os.path.join(tic_path, 'studies', study_name))
 
     for ii in ['aliases.sh', 'environment.sh', f'{study_name}_init.sh']:
-        _replace_text_in_file(os.path.join(new_study_path,ii), 'newstudy', study_name.lowercase())
+        _replace_text_in_file(os.path.join(new_study_path,ii), 'newstudy', study_name.lower())
+        _replace_text_in_file(os.path.join(new_study_path,ii), 'NEWSTUDY', study_name.upper())
 
 
 def main():
