@@ -13,6 +13,8 @@ import logging
 
 import shutil
 
+logging.basicConfig(filename='create_new_study.log',level=logging.INFO)
+
 
 def _get_command_line_args():
     """
@@ -102,7 +104,7 @@ def _copy_files(source, destination):
     """
 
     try:
-        logging.debug('cp %s %s', source, destination)
+        logging.info('cp %s %s', source, destination)
         shutil.copyfile(source, destination)
 
     except FileNotFoundError:
