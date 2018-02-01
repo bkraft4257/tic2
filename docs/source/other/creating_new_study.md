@@ -1,6 +1,9 @@
 Creating a New Study
 ====================
 
+First Steps
+-----------
+
 We are hoping that TIC will explode and that there will be many new
 studies added to the TIC repository. We have created a Python script,
 create_new_study.py, to help adding a new study to the TIC repository.
