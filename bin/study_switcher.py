@@ -69,7 +69,7 @@ def _argparse():
 
     parser.add_argument('-s','--study',
                         help='Switch to a different study.',
-                        choices=['hfpef', 'synergy', 'infinite'],
+                        choices=STUDY_CHOICES,
                         type=str,
                         default=None,
                         )
