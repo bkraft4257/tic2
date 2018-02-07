@@ -34,7 +34,7 @@ alias lstic='echo; echo $TIC_PATH; echo'
 alias fmriprep='/usr/local/bin/singularity run -w -B /cenc -B /gandg -B /bkraft1 $FMRIPREP_SINGULARITY_IMAGE'
 alias mriqc='/usr/local/bin/singularity run -w -B /cenc -B /gandg -B /bkraft1 $MRIQC_SINGULARITY_IMAGE'
 
-alias hdc_convert='/usr/local/bin/singularity run -w -B /cenc -B /gandg -B /bkraft1 -c dcm2niix $HDC_SINGULARITY_IMAGE'
+alias hdc_convert='/usr/local/bin/singularity run -w -B /cenc -B /gandg -B /bkraft1  $HDC_SINGULARITY_IMAGE -c dcm2niix'
 
 alias hdc_find_repeats='find ${session_dir} -name \"*.[2-9].*\"' 
 alias hdc_find_1='find ${session_dir} -name \"*.[2-9].*\"'
