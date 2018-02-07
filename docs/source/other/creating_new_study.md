@@ -16,7 +16,7 @@ specified TIC path.
 To create a new study in TIC you can run the command
 
 ```
-   >>> create_new_study.py <study_name>  <study_path> <tic_path>
+   >>> create_new_study.py <study_name>  <study_data_path> <tic_path>
    
 ```
 
