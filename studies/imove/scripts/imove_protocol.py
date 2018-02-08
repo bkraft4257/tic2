@@ -199,19 +199,21 @@ def infotodict(seqinfo):
     mbep2d_bold = create_key('sub-{subject}/{session}/func/sub-{subject}_{session}_task-rest_acq-mbepi_bold.{item:01d}')
     mbep2d_bold_sbref = create_key('sub-{subject}/{session}/func/sub-{subject}_{session}_task-rest_acq-mbepi_sbref.{item:01d}')
 
+    # NODDI DTI
     noddi_dti_ap = create_key('sub-{subject}/{session}/dwi/sub-{subject}_{session}_acq-apNoddi_run-{item:01d}_dwi')
     noddi_dti_ap_sbref = create_key('sub-{subject}/{session}/dwi/sub-{subject}_{session}_acq-apNoddi_run-{item:01d}_sbref')
 
     noddi_dti_pa_topup = create_key('sub-{subject}/{session}/dwi/sub-{subject}_{session}_acq-paNoddi_run-{item:01d}_dwi')
     noddi_dti_pa_topup_sbref = create_key('sub-{subject}/{session}/dwi/sub-{subject}_{session}_acq-paNoddi_run-{item:01d}_sbref')
 
-    qsm_magnitude = create_key('sub-{subject}/{session}/swi/sub-{subject}_{session}_part-mag_GRE.{item:01d}')
-    qsm_phase = create_key('sub-{subject}/{session}/swi/sub-{subject}_{session}_part-phase_GRE.{item:01d}')
-    qsm_mip = create_key('sub-{subject}/{session}/swi/sub-{subject}_{session}_swi.{item:01d}')
-    qsm_swi = create_key('sub-{subject}/{session}/swi/sub-{subject}_{session}_minIP.{item:01d}')
+    # Quantitative Susceptibility Mapping
+    qsm_magnitude = create_key('sub-{subject}/{session}/swi/sub-{subject}_{session}_part-mag_echo-{echo_index}_GRE.{item:01d}')
+    qsm_phase = create_key('sub-{subject}/{session}/swi/sub-{subject}_{session}_part-phase_echo-{echo_index}_GRE.{item:01d}')
+    qsm_mip = create_key('sub-{subject}/{session}/swi/sub-{subject}_{session}_minIP.{item:01d}')
+    qsm_swi = create_key('sub-{subject}/{session}/swi/sub-{subject}_{session}_echo-{echo_index}_swi.{item:01d}')
 
+    # pseudo Continouous ASL
     pcasl_rl = create_key('sub-{subject}/{session}/func/sub-{subject}_{session}_acq-pcasl_bold.{item:01d}')
-
     pcasl_rl_topup = create_key('sub-{subject}/{session}/fmap/sub-{subject}_{session}_acq-pcasl_dir-rl_epi.{item:01d}')
     pcasl_lr_topup = create_key('sub-{subject}/{session}/fmap/sub-{subject}_{session}_acq-pcasl_dir-lr_epi.{item:01d}')
 
@@ -382,7 +384,7 @@ def infotodict(seqinfo):
         if (('QSM_e6_p2_2mm' in s.series_id) and
                 ('mIP_Images(SW)' in s.series_description) and
                 ('swi3d6r' in s.sequence_name) and
-                (s.dim3 == 384) and
+                (s.dim3 == 342) and
                 (s.dim4 == 1)):
                 info[qsm_mip] = [s.series_id]
 
