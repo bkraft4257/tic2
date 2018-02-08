@@ -121,34 +121,34 @@ def infotodict(seqinfo):
     #             criteria for data conversion. However, this can not happen if the scan is repeated.
     #
 
-    t1 = create_key('sub-{subject}/{session}/anat/sub-{subject}_run-{item:01d}_T1w')
+    t1 = create_key('sub-{subject}/{session}/anat/sub-{subject}_{session}_T1w.{item:01d}')
 
-    t2 = create_key('sub-{subject}/{session}/anat/sub-{subject}_run-{item:01d}_T2w')
+    t2 = create_key('sub-{subject}/{session}/anat/sub-{subject}_{session}_T2w.{item:01d}')
 
-    rest_fmri_ap = create_key('sub-{subject}/{session}/func/sub-{subject}_dir-ap_acq-epi_task-rest_run-{item:01d}_bold')
+    rest_fmri_ap = create_key('sub-{subject}/{session}/func/sub-{subject}_{session}_dir-ap_acq-epi_task-rest_bold.{item:01d}')
 
-    rest_topup_ap = create_key('sub-{subject}/{session}/func/sub-{subject}_dir-ap_run-{item:01d}_bold')
-    rest_topup_pa = create_key('sub-{subject}/{session}/func/sub-{subject}_dir-pa_run-{item:01d}_bold')
+    rest_topup_ap = create_key('sub-{subject}/{session}/fmap/sub-{subject}_{session}_dir-ap_bold.{item:01d}')
+    rest_topup_pa = create_key('sub-{subject}/{session}/fmap/sub-{subject}_{session}_dir-pa_bold.{item:01d}')
 
-    fmap_rest_magnitude1 = create_key('sub-{subject}/{session}/fmap/sub-{subject}_run-{item:01d}_magnitude1')
-    fmap_rest_phasediff = create_key('sub-{subject}/{session}/fmap/sub-{subject}_run-{item:01d}_phasediff')
+    fmap_rest_magnitude1 = create_key('sub-{subject}/{session}/fmap/sub-{subject}_{session}_magnitude1.{item:01d}')
+    fmap_rest_phasediff = create_key('sub-{subject}/{session}/fmap/sub-{subject}_{session}_phasediff.{item:01d}')
 
-    mbep2d_bold = create_key('sub-{subject}/{session}/func/sub-{subject}_dir-lr_acq-mbepi_task-rest_run-{item:01d}_bold')
-    mbep2d_bold_sbref = create_key('sub-{subject}/{session}/func/sub-{subject}_dir-lr_acq-mbepi_task-rest_run-{item:01d}_sbref')
+    mbep2d_bold = create_key('sub-{subject}/{session}/func/sub-{subject}_{session}_dir-lr_acq-mbepi_task-rest_bold.{item:01d}')
+    mbep2d_bold_sbref = create_key('sub-{subject}/{session}/func/sub-{subject}_{session}_dir-lr_acq-mbepi_task-rest_sbref.{item:01d}')
 
-    mbep2d_topup_rl = create_key('sub-{subject}/{session}/fmap/sub-{subject}_dir-rl_acq-mbepi_task-rest_run-{item:01d}_bold')
-    mbep2d_topup_rl_sbref = create_key('sub-{subject}/{session}/fmap/sub-{subject}_dir-rl_acq-mbepi_task-rest_run-{item:01d}_sbref')
+    mbep2d_topup_rl = create_key('sub-{subject}/{session}/fmap/sub-{subject}_{session}_dir-rl_acq-mbepi_task-rest_bold.{item:01d}')
+    mbep2d_topup_rl_sbref = create_key('sub-{subject}/{session}/fmap/sub-{subject}_{session}_dir-rl_acq-mbepi_task-rest_sbref.{item:01d}')
 
-    mbep2d_topup_lr = create_key('sub-{subject}/{session}/fmap/sub-{subject}_dir-lr_acq-mbepi_task-rest_run-{item:01d}_bold')
-    mbep2d_topup_lr_sbref = create_key('sub-{subject}/{session}/fmap/sub-{subject}_dir-lr_acq-mbepi_task-rest_run-{item:01d}_sbref')
+    mbep2d_topup_lr = create_key('sub-{subject}/{session}/fmap/sub-{subject}_{session}_dir-lr_acq-mbepi_task-rest_bold.{item:01d}')
+    mbep2d_topup_lr_sbref = create_key('sub-{subject}/{session}/fmap/sub-{subject}_{session}_dir-lr_acq-mbepi_task-rest_sbref.{item:01d}')
 
-    noddi_dti_ap = create_key('sub-{subject}/{session}/dwi/sub-{subject}_dir-ap_run-{item:01d}_bold')
-    noddi_dti_pa = create_key('sub-{subject}/{session}/dwi/sub-{subject}_dir-pa_run-{item:01d}_bold')
+    noddi_dti_ap = create_key('sub-{subject}/{session}/dwi/sub-{subject}_{session}_dir-ap_bold.{item:01d}')
+    noddi_dti_pa = create_key('sub-{subject}/{session}/dwi/sub-{subject}_{session}_dir-pa_bold.{item:01d}')
 
-    qsm_magnitude = create_key('sub-{subject}/{session}/swi/sub-{subject}_part-mag_run-{item:01d}_GRE')
-    qsm_phase = create_key('sub-{subject}/{session}/swi/sub-{subject}_part-phase_run-{item:01d}_GRE')
-    qsm_mip = create_key('sub-{subject}/{session}/swi/sub-{subject}_run-{item:01d}_swi')
-    qsm_swi = create_key('sub-{subject}/{session}/swi/sub-{subject}_run-{item:01d}_minIP')
+    qsm_magnitude = create_key('sub-{subject}/{session}/swi/sub-{subject}_{session}_part-mag_GRE.{item:01d}')
+    qsm_phase = create_key('sub-{subject}/{session}/swi/sub-{subject}_{session}_part-phase_GRE.{item:01d}')
+    qsm_mip = create_key('sub-{subject}/{session}/swi/sub-{subject}_{session}_swi.{item:01d}')
+    qsm_swi = create_key('sub-{subject}/{session}/swi/sub-{subject}_{session}_minIP.{item:01d}')
 
     # Create an empty dictionary called info for each key
 
