@@ -346,29 +346,29 @@ def infotodict(seqinfo):
         # noddi_dti_topup_ap = create_key('sub-{subject}/{session}/fmap/sub-{subject}_{session}_dir-ap_epi.{item:01d}')
         # noddi_dti_topup_pa = create_key('sub-{subject}/{session}/fmap/sub-{subject}_{session}_dir-pa_epi.{item:01d}')
 
-        # if (('NODDI_DTI_120dir_12b0_AF4_SBRef' in s.series_description) and
-        #         ('epse2d1_128' in s.sequence_name) and
-        #         (s.dim3 == 80) and
-        #         (s.dim4 == 1)):
-        #         info[noddi_dti_ap_sbref] = [s.series_id]
-        #
-        # if (('NODDI_DTI_120dir_12b0_AF4' in s.series_description) and
-        #         ('epse2d1_128' in s.sequence_name) and
-        #         (s.dim3 == 80) and
-        #         (s.dim4 == 1)):
-        #         info[noddi_dti_ap] = [s.series_id]
-        #
-        # if (('NODDI_DTI_120dir_12b0_AF4 P>>A_SBRef' in s.series_description) and
-        #         ('epse2d1_128' in s.sequence_name) and
-        #         (s.dim3 == 80) and
-        #         (s.dim4 == 1)):
-        #         info[noddi_dti_pa_topup_sbref] = [s.series_id]
-        #
-        # if (('NODDI_DTI_120dir_12b0_AF4 P>>A' in s.series_description) and
-        #         ('epse2d1_128' in s.sequence_name) and
-        #         (s.dim3 == 80) and
-        #         (s.dim4 == 1)):
-        #         info[noddi_dti_pa_topup] = [s.series_id]
+        if (('NODDI_DTI_120dir_12b0_AF4_SBRef' in s.series_description) and
+                ('epse2d1_128' in s.sequence_name) and
+                (s.dim3 == 80) and
+                (s.dim4 == 1)):
+                info[noddi_dti_ap_sbref] = [s.series_id]
+
+        if (('NODDI_DTI_120dir_12b0_AF4' in s.series_description) and
+                ('epse2d1_128' in s.sequence_name) and
+                (s.dim3 == 80) and
+                (s.dim4 == 1)):
+                info[noddi_dti_ap] = [s.series_id]
+
+        if (('NODDI_DTI_120dir_12b0_AF4 P>>A_SBRef' in s.series_description) and
+                ('epse2d1_128' in s.sequence_name) and
+                (s.dim3 == 80) and
+                (s.dim4 == 1)):
+                info[noddi_dti_pa_topup_sbref] = [s.series_id]
+
+        if (('NODDI_DTI_120dir_12b0_AF4 P>>A' in s.series_description) and
+                ('epse2d1_128' in s.sequence_name) and
+                (s.dim3 == 80) and
+                (s.dim4 == 1)):
+                info[noddi_dti_pa_topup] = [s.series_id]
 
         # --------------------------------------
         # Quantitative Susceptibility Mapping
