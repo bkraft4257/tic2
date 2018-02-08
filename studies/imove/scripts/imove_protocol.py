@@ -181,8 +181,8 @@ def infotodict(seqinfo):
     t2 = create_key('sub-{subject}/{session}/anat/sub-{subject}_{session}_T2w.{item:01d}')
 
     # BOLD Resting State with TOPUP and Fieldmap
-    rest_fmri_ap_fmap = create_key('sub-{subject}/{session}/func/sub-{subject}_{session}_task-rest_acq-epi_recon-fmap_bold.{item:01d}')
-    rest_fmri_ap_topup = create_key('sub-{subject}/{session}/func/sub-{subject}_{session}_task-rest_acq-epi_recon-topup_bold.{item:01d}')
+    rest_fmri_ap_fmap = create_key('sub-{subject}/{session}/func/sub-{subject}_{session}_task-rest_acq-epi_rec-fmap_bold.{item:01d}')
+    rest_fmri_ap_topup = create_key('sub-{subject}/{session}/func/sub-{subject}_{session}_task-rest_acq-epi_rec-topup_bold.{item:01d}')
 
     rest_topup_ap = create_key('sub-{subject}/{session}/fmap/sub-{subject}_{session}_dir-ap_epi.{item:01d}')
     rest_topup_pa = create_key('sub-{subject}/{session}/fmap/sub-{subject}_{session}_dir-pa_epi.{item:01d}')
@@ -430,4 +430,4 @@ def infotodict(seqinfo):
                 (s.dim4 ==  3)):
                 info[pcasl_lr_topup].append([s.series_id])
 
-    return info
+    return infogit
