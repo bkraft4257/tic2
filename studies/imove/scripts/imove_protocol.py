@@ -207,10 +207,10 @@ def infotodict(seqinfo):
     noddi_dti_pa_topup_sbref = create_key('sub-{subject}/{session}/dwi/sub-{subject}_{session}_acq-paNoddi_run-{item:01d}_sbref')
 
     # Quantitative Susceptibility Mapping
-    qsm_magnitude = create_key('sub-{subject}/{session}/swi/sub-{subject}_{session}_part-mag_echo-{index}_GRE.{item:01d}')
-    qsm_phase = create_key('sub-{subject}/{session}/swi/sub-{subject}_{session}_part-phase_echo-{index}_GRE.{item:01d}')
+    qsm_magnitude = create_key('sub-{subject}/{session}/swi/sub-{subject}_{session}_part-mag_GRE.{item:01d}')
+    qsm_phase = create_key('sub-{subject}/{session}/swi/sub-{subject}_{session}_part-phase_GRE.{item:01d}')
     qsm_mip = create_key('sub-{subject}/{session}/swi/sub-{subject}_{session}_minIP.{item:01d}')
-    qsm_swi = create_key('sub-{subject}/{session}/swi/sub-{subject}_{session}_echo-{index}_swi.{item:01d}')
+    qsm_swi = create_key('sub-{subject}/{session}/swi/sub-{subject}_{session}_swi.{item:01d}')
 
     # pseudo Continouous ASL
     pcasl_rl = create_key('sub-{subject}/{session}/func/sub-{subject}_{session}_acq-pcasl_bold.{item:01d}')
