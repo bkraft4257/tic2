@@ -372,5 +372,33 @@ def infotodict(seqinfo):
 
         # --------------------------------------
         # Quantitative Susceptibility Mapping
+        #
+        #  | 19-QSM_e6_p2_2mm                               | *swi3d6r      | Mag_Images                                       |  416 |  312 |  384 |    1 | 0.051 |  44.15 |               False |      False |
+        #  | 20-QSM_e6_p2_2mm                               | *swi3d6r      | Pha_Images                                       |  416 |  312 |  384 |    1 | 0.051 |  44.15 |               False |      False |
+        #  | 21-QSM_e6_p2_2mm                               | *swi3d6r      | mIP_Images(SW)                                   |  416 |  312 |  342 |    1 | 0.051 |  44.15 |               False |      False |
+        #  | 22-QSM_e6_p2_2mm                               | *swi3d6r      | SWI_Images                                       |  416 |  312 |  384 |    1 | 0.051 |  44.15 |               False |      False |
+        #  |                                                |               |                                                  |      |      |      |      |       |        |                     |            |
+        #
+        # if (('NODDI_DTI_120dir_12b0_AF4 P>>A' in s.series_description) and
+        #         ('epse2d1_128' in s.sequence_name) and
+        #         (s.dim3 == 80) and
+        #         (s.dim4 == 1)):
+        #         info[noddi_dti_pa_topup] = [s.series_id]
+
+        # --------------------------------------
+        # Arterial Spin Labeling
+
+        #  | 23-pcasl_wfu_4_0C R>>L EYES OPEN               | epfid2d1_56   | pcasl_wfu_4_0C R>>L EYES OPEN                    |   70 |   56 |   43 |   81 | 4.000 |  11.00 |               False |      False |
+        #  | 24-pcasl_wfu_4_0C R>>L EYES OPEN               | epfid2d1_56   | Perfusion_Weighted                               |   70 |   56 |   43 |    1 | 4.000 |  11.00 |               False |       True |
+        #  |                                                |               |                                                  |      |      |      |      |       |        |                     |            |
+        #  | 25-pcasl_wfu_4_0C L>>R (COPY SLICES FROM R>>L) | epfid2d1_56   | pcasl_wfu_4_0C L>>R (COPY SLICES FROM R>>L)      |   70 |   56 |   43 |    3 | 4.000 |  11.00 |               False |      False |
+        #  | 26-pcasl_wfu_4_0C L>>R (COPY SLICES FROM R>>L) | epfid2d1_56   | Perfusion_Weighted                               |   70 |   56 |   43 |    1 | 4.000 |  11.00 |               False |       True |
+
+        # if (('NODDI_DTI_120dir_12b0_AF4 P>>A' in s.series_description) and
+        #         ('epse2d1_128' in s.sequence_name) and
+        #         (s.dim3 == 80) and
+        #         (s.dim4 == 1)):
+        #         info[noddi_dti_pa_topup] = [s.series_id]
+
 
     return info
