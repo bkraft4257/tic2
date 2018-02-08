@@ -181,7 +181,8 @@ def infotodict(seqinfo):
     t2 = create_key('sub-{subject}/{session}/anat/sub-{subject}_{session}_T2w.{item:01d}')
 
     # BOLD Resting State with TOPUP and Fieldmap
-    rest_fmri_ap = create_key('sub-{subject}/{session}/func/sub-{subject}_{session}_task-rest_acq-epi_bold.{item:01d}')
+    rest_fmri_ap_fmap = create_key('sub-{subject}/{session}/func/sub-{subject}_{session}_task-rest_acq-epi_recon-fmap_bold.{item:01d}')
+    rest_fmri_ap_topup = create_key('sub-{subject}/{session}/func/sub-{subject}_{session}_task-rest_acq-epi_recon-topup_bold.{item:01d}')
 
     rest_topup_ap = create_key('sub-{subject}/{session}/fmap/sub-{subject}_{session}_dir-ap_epi.{item:01d}')
     rest_topup_pa = create_key('sub-{subject}/{session}/fmap/sub-{subject}_{session}_dir-pa_epi.{item:01d}')
@@ -222,7 +223,8 @@ def infotodict(seqinfo):
 
     info = {t1: [],
             t2: [],
-            rest_fmri_ap: [],
+            rest_fmri_ap_fmap: [],
+            rest_fmri_ap_topup: [],
             rest_topup_ap: [],
             rest_topup_pa: [],
             fmap_rest_magnitude1: [],
@@ -254,45 +256,51 @@ def infotodict(seqinfo):
                 ('tfl3d1_16ns' in s.sequence_name) and
                 (s.dim3 == 192) and
                 (s.dim4 == 1)):
-                info[t1] = [s.series_id]
+                info[t1].append([s.series_id])
 
         if (('T2 FLAIR SPACE NEW' in s.series_description) and
                 ('spcir_192ns' in s.sequence_name) and
                 (s.dim3 == 192) and
                 (s.dim4 == 1)):
-                info[t2] = [s.series_id]
+                info[t2].append([s.series_id])
 
         if (('BOLD_resting 4X4X4 A>>P' in s.series_description) and
                 ('epfid2d1_64' in s.sequence_name) and
                 (s.dim3 == 35) and
                 (s.dim4 == 190)):
-                info[rest_fmri_ap] = [s.series_id]
+                info[rest_fmri_ap_fmap].append([s.series_id])
+
+        if (('BOLD_resting 4X4X4 A>>P' in s.series_description) and
+                ('epfid2d1_64' in s.sequence_name) and
+                (s.dim3 == 35) and
+                (s.dim4 == 190)):
+                info[rest_fmri_ap_topup].append([s.series_id])
 
         if (('rest_topup_A>>P' in s.series_description) and
                 ('epse2d1_64' in s.sequence_name) and
                 (s.dim3 == 140) and
                 (s.dim4 == 1)):
-                info[rest_topup_ap] = [s.series_id]
+                info[rest_topup_ap].append([s.series_id])
 
         if (('rest_topup_P>>A' in s.series_description) and
                 ('epse2d1_64' in s.sequence_name) and
                 (s.dim3 == 140) and
                 (s.dim4 == 1)):
-                info[rest_topup_pa] = [s.series_id]
+                info[rest_topup_pa].append([s.series_id])
 
         if (('Field_mapping 4X4X4 A>>P' in s.series_description) and
                 ('fm2d2r' in s.sequence_name) and
                 (s.dim3 == 35) and
                 (s.dim4 == 1) and
                 (s.TE == 4.92)):
-                info[fmap_rest_magnitude1] = [s.series_id]
+                info[fmap_rest_magnitude1].append([s.series_id])
 
         if (('Field_mapping 4X4X4 A>>P' in s.series_description) and
                 ('fm2d2r' in s.sequence_name) and
                 (s.dim3 == 35) and
                 (s.dim4 == 1) and
                 (s.TE == 7.38)):
-                info[fmap_rest_phasediff] = [s.series_id]
+                info[fmap_rest_phasediff].append([s.series_id])
 
         # --------------------------------------
         # Multiband EPI Resting State with TOPUP
@@ -302,13 +310,13 @@ def infotodict(seqinfo):
                 ('epfid2d1_64' in s.sequence_name) and
                 (s.dim3 == 64) and
                 (s.dim4 == 1)):
-                info[mbep2d_topup_lr] = [s.series_id]
+                info[mbep2d_topup_lr].append([s.series_id])
 
         if (('mbep2d_bold 3mm L>>R' in s.series_description) and
                 ('epfid2d1_64' in s.sequence_name) and
                 (s.dim3 == 64) and
                 (s.dim4 == 10)):
-                info[mbep2d_topup_lr_sbref] = [s.series_id]
+                info[mbep2d_topup_lr_sbref].append([s.series_id])
 
         # fmap/ topup rl (a copy of the mbepi resting data. NIFTI file will be truncated later)
 
@@ -316,26 +324,26 @@ def infotodict(seqinfo):
                 ('epfid2d1_64' in s.sequence_name) and
                 (s.dim3 == 64) and
                 (s.dim4 == 1)):
-                info[mbep2d_topup_rl_sbref] = [s.series_id]
+                info[mbep2d_topup_rl_sbref].append([s.series_id])
 
         if (('mbep2d_bold 3mm R>>L (copy from bold L>>R)' in s.series_description) and
                 ('epfid2d1_64' in s.sequence_name) and
                 (s.dim3 == 64) and
                 (s.dim4 == 500)):
-                info[mbep2d_topup_rl] = [s.series_id]
+                info[mbep2d_topup_rl].append([s.series_id])
 
         # func/ bold data
         if (('mbep2d_bold 3mm R>>L (copy from bold L>>R)_SBRef' in s.series_description) and
                 ('epfid2d1_64' in s.sequence_name) and
                 (s.dim3 == 64) and
                 (s.dim4 == 1)):
-                info[mbep2d_bold_sbref] = [s.series_id]
+                info[mbep2d_bold_sbref].append([s.series_id])
 
         if (('mbep2d_bold 3mm R>>L (copy from bold L>>R)' in s.series_description) and
                 ('epfid2d1_64' in s.sequence_name) and
                 (s.dim3 == 64) and
                 (s.dim4 == 500)):
-                info[mbep2d_bold] = [s.series_id]
+                info[mbep2d_bold].append([s.series_id])
 
         # --------------------------------------
         # NODDI DWI
@@ -344,25 +352,25 @@ def infotodict(seqinfo):
                 ('epse2d1_128' in s.sequence_name) and
                 (s.dim3 == 80) and
                 (s.dim4 == 1)):
-                info[noddi_dti_ap_sbref] = [s.series_id]
+                info[noddi_dti_ap_sbref].append([s.series_id])
 
         if (('NODDI_DTI_120dir_12b0_AF4' in s.series_description) and
                 ('epse2d1_128' in s.sequence_name) and
                 (s.dim3 == 80) and
                 (s.dim4 == 1)):
-                info[noddi_dti_ap] = [s.series_id]
+                info[noddi_dti_ap].append([s.series_id])
 
         if (('NODDI_DTI_120dir_12b0_AF4 P>>A_SBRef' in s.series_description) and
                 ('epse2d1_128' in s.sequence_name) and
                 (s.dim3 == 80) and
                 (s.dim4 == 1)):
-                info[noddi_dti_pa_topup_sbref] = [s.series_id]
+                info[noddi_dti_pa_topup_sbref].append([s.series_id])
 
         if (('NODDI_DTI_120dir_12b0_AF4 P>>A' in s.series_description) and
                 ('epse2d1_128' in s.sequence_name) and
                 (s.dim3 == 80) and
                 (s.dim4 == 1)):
-                info[noddi_dti_pa_topup] = [s.series_id]
+                info[noddi_dti_pa_topup].append([s.series_id])
 
         # --------------------------------------
         # Quantitative Susceptibility Mapping
@@ -372,28 +380,28 @@ def infotodict(seqinfo):
                 ('swi3d6r' in s.sequence_name) and
                 (s.dim3 == 384) and
                 (s.dim4 == 1)):
-                info[qsm_magnitude] = [s.series_id]
+                info[qsm_magnitude].append([s.series_id])
 
         if (('QSM_e6_p2_2mm' in s.series_id) and
                 ('Pha_Images' in s.series_description) and
                 ('swi3d6r' in s.sequence_name) and
                 (s.dim3 == 384) and
                 (s.dim4 == 1)):
-                info[qsm_phase] = [s.series_id]
+                info[qsm_phase].append([s.series_id])
 
         if (('QSM_e6_p2_2mm' in s.series_id) and
                 ('mIP_Images(SW)' in s.series_description) and
                 ('swi3d6r' in s.sequence_name) and
                 (s.dim3 == 342) and
                 (s.dim4 == 1)):
-                info[qsm_mip] = [s.series_id]
+                info[qsm_mip].append([s.series_id])
 
         if (('QSM_e6_p2_2mm' in s.series_id) and
                 ('SWI_Images' in s.series_description) and
                 ('swi3d6r' in s.sequence_name) and
                 (s.dim3 == 384) and
                 (s.dim4 == 1)):
-                info[qsm_swi] = [s.series_id]
+                info[qsm_swi].append([s.series_id])
 
         # --------------------------------------
         # Arterial Spin Labeling
@@ -408,18 +416,18 @@ def infotodict(seqinfo):
                 ('epfid2d1_56' in s.sequence_name) and
                 (s.dim3 == 43) and
                 (s.dim4 == 81)):
-                info[pcasl_rl] = [s.series_id]
+                info[pcasl_rl].append([s.series_id])
 
         if (('pcasl_wfu_4_0C R>>L EYES OPEN' in s.series_description) and
                 ('epfid2d1_56' in s.sequence_name) and
                 (s.dim3 == 43) and
                 (s.dim4 == 81)):
-                info[pcasl_rl_topup] = [s.series_id]
+                info[pcasl_rl_topup].append([s.series_id])
 
         if (('pcasl_wfu_4_0C L>>R (COPY SLICES FROM R>>L)' in s.series_description) and
                 ('epfid2d1_56' in s.sequence_name) and
                 (s.dim3 == 43) and
                 (s.dim4 ==  3)):
-                info[pcasl_lr_topup] = [s.series_id]
+                info[pcasl_lr_topup].append([s.series_id])
 
     return info
