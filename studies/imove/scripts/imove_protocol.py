@@ -144,10 +144,8 @@ def infotodict(seqinfo):
 
            [_acq-<label>]_dir-<dir_label>[_run-<run_index>]_epi
 
-
     dwi/   [_acq-<label>][_run-<index>]_dwi
-
-
+           [_acq-<label>][_run-<index>]_sbref
 
     swi/  [_acq-<label>][_rec-<label>]_part-<phase|mag>[_coil-<index>][_echo-<index>][_run-<index>]_GRE.nii[.gz]
 
@@ -212,6 +210,12 @@ def infotodict(seqinfo):
     qsm_mip = create_key('sub-{subject}/{session}/swi/sub-{subject}_{session}_swi.{item:01d}')
     qsm_swi = create_key('sub-{subject}/{session}/swi/sub-{subject}_{session}_minIP.{item:01d}')
 
+    pcasl_rl = create_key('sub-{subject}/{session}/func/sub-{subject}_{session}_acq-pcasl_bold.{item:01d}')
+
+    pcasl_rl_topup = create_key('sub-{subject}/{session}/fmap/sub-{subject}_{session}_acq-pcasl_dir-rl_epi.{item:01d}')
+    pcasl_lr_topup = create_key('sub-{subject}/{session}/fmap/sub-{subject}_{session}_acq-pcasl_dir-lr_epi.{item:01d}')
+
+
     # Create an empty dictionary called info for each key
 
     info = {t1: [],
@@ -235,6 +239,9 @@ def infotodict(seqinfo):
             qsm_phase: [],
             qsm_mip: [],
             qsm_swi: [],
+            pcasl_rl: [],
+            pcasl_rl_topup: [],
+            pcasl_lr_topup: [],
             }
 
     # Loop over each sequence. Use if statements to determine which sequences should be linked to which key
@@ -330,7 +337,6 @@ def infotodict(seqinfo):
 
         # --------------------------------------
         # NODDI DWI
-        #
 
         if (('NODDI_DTI_120dir_12b0_AF4_SBRef' in s.series_description) and
                 ('epse2d1_128' in s.sequence_name) and
@@ -387,7 +393,6 @@ def infotodict(seqinfo):
                 (s.dim4 == 1)):
                 info[qsm_swi] = [s.series_id]
 
-
         # --------------------------------------
         # Arterial Spin Labeling
 
@@ -397,11 +402,22 @@ def infotodict(seqinfo):
         #  | 25-pcasl_wfu_4_0C L>>R (COPY SLICES FROM R>>L) | epfid2d1_56   | pcasl_wfu_4_0C L>>R (COPY SLICES FROM R>>L)      |   70 |   56 |   43 |    3 | 4.000 |  11.00 |               False |      False |
         #  | 26-pcasl_wfu_4_0C L>>R (COPY SLICES FROM R>>L) | epfid2d1_56   | Perfusion_Weighted                               |   70 |   56 |   43 |    1 | 4.000 |  11.00 |               False |       True |
 
-        # if (('NODDI_DTI_120dir_12b0_AF4 P>>A' in s.series_description) and
-        #         ('epse2d1_128' in s.sequence_name) and
-        #         (s.dim3 == 80) and
-        #         (s.dim4 == 1)):
-        #         info[noddi_dti_pa_topup] = [s.series_id]
+        if (('pcasl_wfu_4_0C R>>L EYES OPEN' in s.series_description) and
+                ('epfid2d1_56' in s.sequence_name) and
+                (s.dim3 == 43) and
+                (s.dim4 == 81)):
+                info[pcasl_rl] = [s.series_id]
 
+        if (('pcasl_wfu_4_0C R>>L EYES OPEN' in s.series_description) and
+                ('epfid2d1_56' in s.sequence_name) and
+                (s.dim3 == 43) and
+                (s.dim4 == 81)):
+                info[pcasl_rl_topup] = [s.series_id]
+
+        if (('pcasl_wfu_4_0C L>>R (COPY SLICES FROM R>>L)' in s.series_description) and
+                ('epfid2d1_56' in s.sequence_name) and
+                (s.dim3 == 43) and
+                (s.dim4 ==  3)):
+                info[pcasl_lr_topup] = [s.series_id]
 
     return info
