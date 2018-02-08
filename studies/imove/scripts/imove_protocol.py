@@ -125,7 +125,11 @@ def infotodict(seqinfo):
 
     t2 = create_key('sub-{subject}/{session}/anat/sub-{subject}_{session}_T2w.{item:01d}')
 
-    rest_fmri_ap = create_key('sub-{subject}/{session}/func/sub-{subject}_{session}_dir-ap_acq-epi_task-rest_bold.{item:01d}')
+    # sub-<participant_label>[_ses-<session_label>]
+    # _task-<task_label>[_acq-<label>][_rec-<label>][_run-<index>][_echo-<index>]
+    # _bold.nii[.gz]
+
+    rest_fmri_ap = create_key('sub-{subject}/{session}/func/sub-{subject}_{session}__task-rest_acq-epi_bold.{item:01d}')
 
     rest_topup_ap = create_key('sub-{subject}/{session}/fmap/sub-{subject}_{session}_dir-ap_bold.{item:01d}')
     rest_topup_pa = create_key('sub-{subject}/{session}/fmap/sub-{subject}_{session}_dir-pa_bold.{item:01d}')
@@ -133,8 +137,8 @@ def infotodict(seqinfo):
     fmap_rest_magnitude1 = create_key('sub-{subject}/{session}/fmap/sub-{subject}_{session}_magnitude1.{item:01d}')
     fmap_rest_phasediff = create_key('sub-{subject}/{session}/fmap/sub-{subject}_{session}_phasediff.{item:01d}')
 
-    mbep2d_bold = create_key('sub-{subject}/{session}/func/sub-{subject}_{session}_dir-lr_acq-mbepi_task-rest_bold.{item:01d}')
-    mbep2d_bold_sbref = create_key('sub-{subject}/{session}/func/sub-{subject}_{session}_dir-lr_acq-mbepi_task-rest_sbref.{item:01d}')
+    mbep2d_bold = create_key('sub-{subject}/{session}/func/sub-{subject}_{session}_task-rest_acq-mbepi_bold.{item:01d}')
+    mbep2d_bold_sbref = create_key('sub-{subject}/{session}/func/sub-{subject}_{session}_task-rest_acq-mbepi_sbref.{item:01d}')
 
     mbep2d_topup_rl = create_key('sub-{subject}/{session}/fmap/sub-{subject}_{session}_dir-rl_acq-mbepi_task-rest_epi.{item:01d}')
     mbep2d_topup_rl_sbref = create_key('sub-{subject}/{session}/fmap/sub-{subject}_{session}_dir-rl_acq-mbepi_task-rest_sbref.{item:01d}')
@@ -147,7 +151,6 @@ def infotodict(seqinfo):
 
     noddi_dti_topup_ap = create_key('sub-{subject}/{session}/fmap/sub-{subject}_{session}_dir-ap_epi.{item:01d}')
     noddi_dti_topup_pa = create_key('sub-{subject}/{session}/fmap/sub-{subject}_{session}_dir-pa_epi.{item:01d}')
-
 
     qsm_magnitude = create_key('sub-{subject}/{session}/swi/sub-{subject}_{session}_part-mag_GRE.{item:01d}')
     qsm_phase = create_key('sub-{subject}/{session}/swi/sub-{subject}_{session}_part-phase_GRE.{item:01d}')
