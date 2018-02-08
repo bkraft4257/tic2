@@ -102,8 +102,11 @@ def infotodict(seqinfo):
          | 26-pcasl_wfu_4_0C L>>R (COPY SLICES FROM R>>L) | epfid2d1_56   | Perfusion_Weighted                               |   70 |   56 |   43 |    1 | 4.000 |  11.00 |               False |       True |
 
 
-    Tags
-    ----
+    key-value Tags
+    --------------
+
+    BIDS uses a key-value pairs in the naming convention.  Only certain keys are associated with each imaging modality. The
+
 
     T1w:
     bold : _task-<task_label>[_acq-<label>][_rec-<label>][_run-<index>][_echo-<index>]_bold
@@ -139,6 +142,7 @@ def infotodict(seqinfo):
 
     t2 = create_key('sub-{subject}/{session}/anat/sub-{subject}_{session}_T2w.{item:01d}')
 
+    # BOLD Resting State with TOPUP and Fieldmap
     rest_fmri_ap = create_key('sub-{subject}/{session}/func/sub-{subject}_{session}_task-rest_acq-epi_bold.{item:01d}')
 
     rest_topup_ap = create_key('sub-{subject}/{session}/fmap/sub-{subject}_{session}_dir-ap_epi.{item:01d}')
@@ -147,14 +151,15 @@ def infotodict(seqinfo):
     fmap_rest_magnitude1 = create_key('sub-{subject}/{session}/fmap/sub-{subject}_{session}_magnitude1.{item:01d}')
     fmap_rest_phasediff = create_key('sub-{subject}/{session}/fmap/sub-{subject}_{session}_phasediff.{item:01d}')
 
-    mbep2d_bold = create_key('sub-{subject}/{session}/func/sub-{subject}_{session}_task-rest_acq-mbepi_bold.{item:01d}')
-    mbep2d_bold_sbref = create_key('sub-{subject}/{session}/func/sub-{subject}_{session}_task-rest_acq-mbepi_sbref.{item:01d}')
+    # Multiband EPI Resting State with TOPUP
+    mbep2d_topup_lr = create_key('sub-{subject}/{session}/fmap/sub-{subject}_{session}_dir-lr_acq-mbepi_epi.{item:01d}')
+    mbep2d_topup_lr_sbref = create_key('sub-{subject}/{session}/fmap/sub-{subject}_{session}_dir-lr_acq-mbepi_sbref.{item:01d}')
 
     mbep2d_topup_rl = create_key('sub-{subject}/{session}/fmap/sub-{subject}_{session}_dir-rl_acq-mbepi_epi.{item:01d}')
     mbep2d_topup_rl_sbref = create_key('sub-{subject}/{session}/fmap/sub-{subject}_{session}_dir-rl_acq-mbepi_sbref.{item:01d}')
 
-    mbep2d_topup_lr = create_key('sub-{subject}/{session}/fmap/sub-{subject}_{session}_dir-lr_acq-mbepi_epi.{item:01d}')
-    mbep2d_topup_lr_sbref = create_key('sub-{subject}/{session}/fmap/sub-{subject}_{session}_dir-lr_acq-mbepi_sbref.{item:01d}')
+    mbep2d_bold = create_key('sub-{subject}/{session}/func/sub-{subject}_{session}_task-rest_acq-mbepi_bold.{item:01d}')
+    mbep2d_bold_sbref = create_key('sub-{subject}/{session}/func/sub-{subject}_{session}_task-rest_acq-mbepi_sbref.{item:01d}')
 
     noddi_dti_ap = create_key('sub-{subject}/{session}/dwi/sub-{subject}_{session}_dir-ap_bold.{item:01d}')
     noddi_dti_pa = create_key('sub-{subject}/{session}/dwi/sub-{subject}_{session}_dir-pa_bold.{item:01d}')
@@ -240,28 +245,53 @@ def infotodict(seqinfo):
                 (s.TE == 7.38)):
                 info[fmap_rest_phasediff] = [s.series_id]
 
+        # --------------------------------------
+        # Multiband EPI Resting State with TOPUP
+
+        # fmap/ topup lr
         if (('mbep2d_bold 3mm L>>R_SBRef' in s.series_id) and
                 ('epfid2d1_64' in s.sequence_name) and
                 (s.dim3 == 64) and
                 (s.dim4 == 1)):
-                info[mbep2d_bold] = [s.series_id]
+                info[mbep2d_topup_lr] = [s.series_id]
 
         if (('mbep2d_bold 3mm L>>R' in s.series_id) and
                 ('epfid2d1_64' in s.sequence_name) and
                 (s.dim3 == 64) and
                 (s.dim4 == 10)):
-                info[mbep2d_bold_sbref] = [s.series_id]
+                info[mbep2d_topup_lr_sbref] = [s.series_id]
 
-        if (('' in s.series_id) and
+        # fmap/ topup rl (a copy of the mbepi resting data. NIFTI file will be truncated later)
+
+        if (('mbep2d_bold 3mm R>>L (copy from bold L>>R)_SBRef' in s.series_id) and
                 ('epfid2d1_64' in s.sequence_name) and
                 (s.dim3 == 64) and
                 (s.dim4 == 1)):
-            info[mbep2d_topup_lr_sbref] = [s.series_id]
+                info[mbep2d_topup_rl_sbref] = [s.series_id]
 
-        if (('' in s.series_id) and
+        if (('mbep2d_bold 3mm R>>L (copy from bold L>>R)' in s.series_id) and
                 ('epfid2d1_64' in s.sequence_name) and
                 (s.dim3 == 64) and
-                (s.dim4 == 10)):
-            info[mbep2d_topup_lr] = [s.series_id]
+                (s.dim4 == 500)):
+                info[mbep2d_topup_rl] = [s.series_id]
+
+        # func/ bold data
+        if (('mbep2d_bold 3mm R>>L (copy from bold L>>R)_SBRef' in s.series_id) and
+                ('epfid2d1_64' in s.sequence_name) and
+                (s.dim3 == 64) and
+                (s.dim4 == 1)):
+                info[mbep2d_bold] = [s.series_id]
+
+        if (('mbep2d_bold 3mm R>>L (copy from bold L>>R)' in s.series_id) and
+                ('epfid2d1_64' in s.sequence_name) and
+                (s.dim3 == 64) and
+                (s.dim4 == 500)):
+                info[mbep2d_bold_sbref] = [s.series_id]
+
+        # --------------------------------------
+        # NODDI DWI
+
+        # --------------------------------------
+        # Quantitative Susceptibility Mapping
 
     return info
