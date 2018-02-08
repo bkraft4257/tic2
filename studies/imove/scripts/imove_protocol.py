@@ -137,7 +137,7 @@ def infotodict(seqinfo):
 
 
 
-    bold/ _task-<task_label>[_acq-<label>][_rec-<label>][_run-<index>][_echo-<index>]_bold
+    func/ _task-<task_label>[_acq-<label>][_rec-<label>][_run-<index>][_echo-<index>]_bold
 
     fmap/  [_acq-<label>][_run-<run_index>]_phasediff
            [_acq-<label>][_run-<run_index>]_magnitude1
@@ -213,7 +213,7 @@ def infotodict(seqinfo):
     qsm_swi = create_key('sub-{subject}/{session}/swi/sub-{subject}_{session}_swi.{item:01d}')
 
     # pseudo Continouous ASL
-    pcasl_rl = create_key('sub-{subject}/{session}/func/sub-{subject}_{session}_acq-pcasl_bold.{item:01d}')
+    pcasl_rl = create_key('sub-{subject}/{session}/func/sub-{subject}_{session}_task-rest_acq-pcasl_bold.{item:01d}')
     pcasl_rl_topup = create_key('sub-{subject}/{session}/fmap/sub-{subject}_{session}_acq-pcasl_dir-rl_epi.{item:01d}')
     pcasl_lr_topup = create_key('sub-{subject}/{session}/fmap/sub-{subject}_{session}_acq-pcasl_dir-lr_epi.{item:01d}')
 
