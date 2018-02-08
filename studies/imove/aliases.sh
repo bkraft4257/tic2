@@ -7,5 +7,5 @@ alias reimove='source $IMOVE_SCRIPTS_PATH/../aliases.sh'
 # name.
 alias sw_imove='study_switcher.py -s imove; source $TIC_INIT_PATH/tic_study_switcher.sh'
 
-alias hdc_imove='$IMOVE_SCRIPTS_PATH hdc_imove.sh'
+alias hdc_imove='$IMOVE_SCRIPTS_PATH/hdc_imove.sh'
 
