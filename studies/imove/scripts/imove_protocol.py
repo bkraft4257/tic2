@@ -137,14 +137,28 @@ def infotodict(seqinfo):
 
 
 
-    bold : _task-<task_label>[_acq-<label>][_rec-<label>][_run-<index>][_echo-<index>]_bold
+    bold/ _task-<task_label>[_acq-<label>][_rec-<label>][_run-<index>][_echo-<index>]_bold
 
-    fmap:  [_acq-<label>][_run-<run_index>]_phasediff
+    fmap/  [_acq-<label>][_run-<run_index>]_phasediff
            [_acq-<label>][_run-<run_index>]_magnitude1
 
            [_acq-<label>]_dir-<dir_label>[_run-<run_index>]_epi
 
+    dwi/   [_acq-<label>][_run-<index>]_dwi
 
+
+
+    swi/  [_acq-<label>][_rec-<label>]_part-<phase|mag>[_coil-<index>][_echo-<index>][_run-<index>]_GRE.nii[.gz]
+
+
+
+
+        https://docs.google.com/document/d/1kyw9mGgacNqeMbp4xZet3RnDhcMmf4_BmRgKaOkO2Sc/edit
+
+
+    asl/  _task-<task_label>[_acq-<label>][_rec-<label>][_run-<index>]_asl.nii[.gz]
+
+        https://docs.google.com/document/d/15tnn5F10KpgHypaQJNNGiNKsni9035GtDqJzWqkkP6c/edit#heading=h.mqkmyp254xh6
 
     """
 
@@ -180,11 +194,11 @@ def infotodict(seqinfo):
     fmap_rest_phasediff = create_key('sub-{subject}/{session}/fmap/sub-{subject}_{session}_phasediff.{item:01d}')
 
     # Multiband EPI Resting State with TOPUP
-    mbep2d_topup_lr = create_key('sub-{subject}/{session}/fmap/sub-{subject}_{session}_dir-lr_acq-mbepi_epi.{item:01d}')
-    mbep2d_topup_lr_sbref = create_key('sub-{subject}/{session}/fmap/sub-{subject}_{session}_dir-lr_acq-mbepi_sbref.{item:01d}')
+    mbep2d_topup_lr = create_key('sub-{subject}/{session}/fmap/sub-{subject}_{session}_acq-mbepi_dir-lr_epi.{item:01d}')
+    mbep2d_topup_lr_sbref = create_key('sub-{subject}/{session}/fmap/sub-{subject}_{session}_acq-mbepi_dir-lr_sbref.{item:01d}')
 
-    mbep2d_topup_rl = create_key('sub-{subject}/{session}/fmap/sub-{subject}_{session}_dir-rl_acq-mbepi_epi.{item:01d}')
-    mbep2d_topup_rl_sbref = create_key('sub-{subject}/{session}/fmap/sub-{subject}_{session}_dir-rl_acq-mbepi_sbref.{item:01d}')
+    mbep2d_topup_rl = create_key('sub-{subject}/{session}/fmap/sub-{subject}_{session}_acq-mbepi_dir-rl_epi.{item:01d}')
+    mbep2d_topup_rl_sbref = create_key('sub-{subject}/{session}/fmap/sub-{subject}_{session}_acq-mbepi_dir-rl_sbref.{item:01d}')
 
     mbep2d_bold = create_key('sub-{subject}/{session}/func/sub-{subject}_{session}_task-rest_acq-mbepi_bold.{item:01d}')
     mbep2d_bold_sbref = create_key('sub-{subject}/{session}/func/sub-{subject}_{session}_task-rest_acq-mbepi_sbref.{item:01d}')
