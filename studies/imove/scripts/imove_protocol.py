@@ -102,13 +102,41 @@ def infotodict(seqinfo):
          | 26-pcasl_wfu_4_0C L>>R (COPY SLICES FROM R>>L) | epfid2d1_56   | Perfusion_Weighted                               |   70 |   56 |   43 |    1 | 4.000 |  11.00 |               False |       True |
 
 
-    key-value Tags
+    key-value tags
     --------------
 
     BIDS uses a key-value pairs in the naming convention.  Only certain keys are associated with each imaging modality. The
 
+    common key-value tags:
 
-    T1w:
+        sub-<participant_label>/[ses-<session_label>/]/<dir>/sub-<participant_label>[_ses-<session_label>]
+
+        <dir> = anat, func, fmap, dwi, swi
+
+    anat key-value tags:
+
+        [_acq-<label>][_ce-<label>][_rec-<label>][_run-<index>]<modality_label>.nii[.gz]
+        [_acq-<label>][_ce-<label>][_rec-<label>][_run-<index>][_mod-<label>]_defacemask.nii[.gz]
+
+
+        Imaging Type/Name,       modality_label
+        T1 weighted              T1w
+        T2 weighted              T2w
+        T1 Rho map               T1rho
+        T1 map                   T1map
+        T2 map                   T2map
+        T2*                      T2star
+        FLAIR                    FLAIR
+        FLASH                    FLASH
+        Proton density           PD
+        Proton density map       PDmap
+        Combined PD/T2           PDT2
+        Inplane T1               inplaneT1
+        Inplane T2               inplaneT2
+        Angiography              angio
+
+
+
     bold : _task-<task_label>[_acq-<label>][_rec-<label>][_run-<index>][_echo-<index>]_bold
 
     fmap:  [_acq-<label>][_run-<run_index>]_phasediff
@@ -201,44 +229,44 @@ def infotodict(seqinfo):
 
     for idx, s in enumerate(seqinfo):
 
-        if (('MPRAGE_GRAPPA2' in s.series_id) and
+        if (('MPRAGE_GRAPPA2' in s.series_description) and
                 ('tfl3d1_16ns' in s.sequence_name) and
                 (s.dim3 == 192) and
                 (s.dim4 == 1)):
                 info[t1] = [s.series_id]
 
-        if (('T2 FLAIR SPACE NEW' in s.series_id) and
+        if (('T2 FLAIR SPACE NEW' in s.series_description) and
                 ('spcir_192ns' in s.sequence_name) and
                 (s.dim3 == 192) and
                 (s.dim4 == 1)):
                 info[t2] = [s.series_id]
 
-        if (('BOLD_resting 4X4X4 A>>P' in s.series_id) and
+        if (('BOLD_resting 4X4X4 A>>P' in s.series_description) and
                 ('epfid2d1_64' in s.sequence_name) and
                 (s.dim3 == 35) and
                 (s.dim4 == 190)):
                 info[rest_fmri_ap] = [s.series_id]
 
-        if (('rest_topup_A>>P' in s.series_id) and
+        if (('rest_topup_A>>P' in s.series_description) and
                 ('epse2d1_64' in s.sequence_name) and
                 (s.dim3 == 140) and
                 (s.dim4 == 1)):
                 info[rest_topup_ap] = [s.series_id]
 
-        if (('rest_topup_P>>A' in s.series_id) and
+        if (('rest_topup_P>>A' in s.series_description) and
                 ('epse2d1_64' in s.sequence_name) and
                 (s.dim3 == 140) and
                 (s.dim4 == 1)):
                 info[rest_topup_pa] = [s.series_id]
 
-        if (('Field_mapping 4X4X4 A>>P' in s.series_id) and
+        if (('Field_mapping 4X4X4 A>>P' in s.series_description) and
                 ('fm2d2r' in s.sequence_name) and
                 (s.dim3 == 35) and
                 (s.dim4 == 1) and
                 (s.TE == 4.92)):
                 info[fmap_rest_magnitude1] = [s.series_id]
 
-        if (('Field_mapping 4X4X4 A>>P' in s.series_id) and
+        if (('Field_mapping 4X4X4 A>>P' in s.series_description) and
                 ('fm2d2r' in s.sequence_name) and
                 (s.dim3 == 35) and
                 (s.dim4 == 1) and
@@ -249,13 +277,13 @@ def infotodict(seqinfo):
         # Multiband EPI Resting State with TOPUP
 
         # fmap/ topup lr
-        if (('mbep2d_bold 3mm L>>R_SBRef' in s.series_id) and
+        if (('mbep2d_bold 3mm L>>R_SBRef' in s.series_description) and
                 ('epfid2d1_64' in s.sequence_name) and
                 (s.dim3 == 64) and
                 (s.dim4 == 1)):
                 info[mbep2d_topup_lr] = [s.series_id]
 
-        if (('mbep2d_bold 3mm L>>R' in s.series_id) and
+        if (('mbep2d_bold 3mm L>>R' in s.series_description) and
                 ('epfid2d1_64' in s.sequence_name) and
                 (s.dim3 == 64) and
                 (s.dim4 == 10)):
@@ -263,30 +291,30 @@ def infotodict(seqinfo):
 
         # fmap/ topup rl (a copy of the mbepi resting data. NIFTI file will be truncated later)
 
-        if (('mbep2d_bold 3mm R>>L (copy from bold L>>R)_SBRef' in s.series_id) and
+        if (('mbep2d_bold 3mm R>>L (copy from bold L>>R)_SBRef' in s.series_description) and
                 ('epfid2d1_64' in s.sequence_name) and
                 (s.dim3 == 64) and
                 (s.dim4 == 1)):
                 info[mbep2d_topup_rl_sbref] = [s.series_id]
 
-        if (('mbep2d_bold 3mm R>>L (copy from bold L>>R)' in s.series_id) and
+        if (('mbep2d_bold 3mm R>>L (copy from bold L>>R)' in s.series_description) and
                 ('epfid2d1_64' in s.sequence_name) and
                 (s.dim3 == 64) and
                 (s.dim4 == 500)):
                 info[mbep2d_topup_rl] = [s.series_id]
 
         # func/ bold data
-        if (('mbep2d_bold 3mm R>>L (copy from bold L>>R)_SBRef' in s.series_id) and
+        if (('mbep2d_bold 3mm R>>L (copy from bold L>>R)_SBRef' in s.series_description) and
                 ('epfid2d1_64' in s.sequence_name) and
                 (s.dim3 == 64) and
                 (s.dim4 == 1)):
-                info[mbep2d_bold] = [s.series_id]
+                info[mbep2d_bold_sbref] = [s.series_id]
 
-        if (('mbep2d_bold 3mm R>>L (copy from bold L>>R)' in s.series_id) and
+        if (('mbep2d_bold 3mm R>>L (copy from bold L>>R)' in s.series_description) and
                 ('epfid2d1_64' in s.sequence_name) and
                 (s.dim3 == 64) and
                 (s.dim4 == 500)):
-                info[mbep2d_bold_sbref] = [s.series_id]
+                info[mbep2d_bold] = [s.series_id]
 
         # --------------------------------------
         # NODDI DWI
