@@ -101,6 +101,20 @@ def infotodict(seqinfo):
          | 25-pcasl_wfu_4_0C L>>R (COPY SLICES FROM R>>L) | epfid2d1_56   | pcasl_wfu_4_0C L>>R (COPY SLICES FROM R>>L)      |   70 |   56 |   43 |    3 | 4.000 |  11.00 |               False |      False |
          | 26-pcasl_wfu_4_0C L>>R (COPY SLICES FROM R>>L) | epfid2d1_56   | Perfusion_Weighted                               |   70 |   56 |   43 |    1 | 4.000 |  11.00 |               False |       True |
 
+
+    Tags
+    ----
+
+    T1w:
+    bold : _task-<task_label>[_acq-<label>][_rec-<label>][_run-<index>][_echo-<index>]_bold
+
+    fmap:  [_acq-<label>][_run-<run_index>]_phasediff
+           [_acq-<label>][_run-<run_index>]_magnitude1
+
+           [_acq-<label>]_dir-<dir_label>[_run-<run_index>]_epi
+
+
+
     """
 
     # Create a key for each DICOM file to convert.  The key tells HDC where and how to name the converted DICOM file.
@@ -125,14 +139,10 @@ def infotodict(seqinfo):
 
     t2 = create_key('sub-{subject}/{session}/anat/sub-{subject}_{session}_T2w.{item:01d}')
 
-    # sub-<participant_label>[_ses-<session_label>]
-    # _task-<task_label>[_acq-<label>][_rec-<label>][_run-<index>][_echo-<index>]
-    # _bold.nii[.gz]
+    rest_fmri_ap = create_key('sub-{subject}/{session}/func/sub-{subject}_{session}_task-rest_acq-epi_bold.{item:01d}')
 
-    rest_fmri_ap = create_key('sub-{subject}/{session}/func/sub-{subject}_{session}__task-rest_acq-epi_bold.{item:01d}')
-
-    rest_topup_ap = create_key('sub-{subject}/{session}/fmap/sub-{subject}_{session}_dir-ap_bold.{item:01d}')
-    rest_topup_pa = create_key('sub-{subject}/{session}/fmap/sub-{subject}_{session}_dir-pa_bold.{item:01d}')
+    rest_topup_ap = create_key('sub-{subject}/{session}/fmap/sub-{subject}_{session}_dir-ap_epi.{item:01d}')
+    rest_topup_pa = create_key('sub-{subject}/{session}/fmap/sub-{subject}_{session}_dir-pa_epi.{item:01d}')
 
     fmap_rest_magnitude1 = create_key('sub-{subject}/{session}/fmap/sub-{subject}_{session}_magnitude1.{item:01d}')
     fmap_rest_phasediff = create_key('sub-{subject}/{session}/fmap/sub-{subject}_{session}_phasediff.{item:01d}')
@@ -140,11 +150,11 @@ def infotodict(seqinfo):
     mbep2d_bold = create_key('sub-{subject}/{session}/func/sub-{subject}_{session}_task-rest_acq-mbepi_bold.{item:01d}')
     mbep2d_bold_sbref = create_key('sub-{subject}/{session}/func/sub-{subject}_{session}_task-rest_acq-mbepi_sbref.{item:01d}')
 
-    mbep2d_topup_rl = create_key('sub-{subject}/{session}/fmap/sub-{subject}_{session}_dir-rl_acq-mbepi_task-rest_epi.{item:01d}')
-    mbep2d_topup_rl_sbref = create_key('sub-{subject}/{session}/fmap/sub-{subject}_{session}_dir-rl_acq-mbepi_task-rest_sbref.{item:01d}')
+    mbep2d_topup_rl = create_key('sub-{subject}/{session}/fmap/sub-{subject}_{session}_dir-rl_acq-mbepi_epi.{item:01d}')
+    mbep2d_topup_rl_sbref = create_key('sub-{subject}/{session}/fmap/sub-{subject}_{session}_dir-rl_acq-mbepi_sbref.{item:01d}')
 
-    mbep2d_topup_lr = create_key('sub-{subject}/{session}/fmap/sub-{subject}_{session}_dir-lr_acq-mbepi_task-rest_epi.{item:01d}')
-    mbep2d_topup_lr_sbref = create_key('sub-{subject}/{session}/fmap/sub-{subject}_{session}_dir-lr_acq-mbepi_task-rest_sbref.{item:01d}')
+    mbep2d_topup_lr = create_key('sub-{subject}/{session}/fmap/sub-{subject}_{session}_dir-lr_acq-mbepi_epi.{item:01d}')
+    mbep2d_topup_lr_sbref = create_key('sub-{subject}/{session}/fmap/sub-{subject}_{session}_dir-lr_acq-mbepi_sbref.{item:01d}')
 
     noddi_dti_ap = create_key('sub-{subject}/{session}/dwi/sub-{subject}_{session}_dir-ap_bold.{item:01d}')
     noddi_dti_pa = create_key('sub-{subject}/{session}/dwi/sub-{subject}_{session}_dir-pa_bold.{item:01d}')
