@@ -21,6 +21,6 @@ echo
    -b --minmeta                    \
    -f $ACTIVE_HEUDICONV_PROTOCOL   \
    -o $ACTIVE_BIDS_PATH            \
-   -d "$ACTIVE_HEUDICONV_PATTERN"  \
+   -d "{subject}/2*/*/*.DCM"       \
    $@
 
