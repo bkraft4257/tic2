@@ -6,7 +6,6 @@ This template file can be used as an example and starting point for creating you
 
 """
 
-
 def create_key(template, outtype=('nii.gz',), annotation_classes=None):
     """
     Create key for HDC DICOM to NIFTI conversion
@@ -213,7 +212,7 @@ def infotodict(seqinfo):
     qsm_mip = create_key('sub-{subject}/{session}/swi/sub-{subject}_{session}_minIP.{item:01d}')
     qsm_swi = create_key('sub-{subject}/{session}/swi/sub-{subject}_{session}_swi.{item:01d}')
 
-    # pseudo Continouous ASL
+    # pseudo Continuous ASL
     pcasl_rl = create_key('sub-{subject}/{session}/func/sub-{subject}_{session}_task-rest_acq-pcasl_bold.{item:01d}')
     pcasl_rl_topup = create_key('sub-{subject}/{session}/fmap/sub-{subject}_{session}_acq-pcasl_dir-rl_epi.{item:01d}')
     pcasl_lr_topup = create_key('sub-{subject}/{session}/fmap/sub-{subject}_{session}_acq-pcasl_dir-lr_epi.{item:01d}')
@@ -427,7 +426,7 @@ def infotodict(seqinfo):
         if (('pcasl_wfu_4_0C L>>R (COPY SLICES FROM R>>L)' in s.series_description) and
                 ('epfid2d1_56' in s.sequence_name) and
                 (s.dim3 == 43) and
-                (s.dim4 ==  3)):
+                (s.dim4 == 3)):
                 info[pcasl_lr_topup].append([s.series_id])
 
-    return
+    return info
