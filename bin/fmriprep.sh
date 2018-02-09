@@ -44,4 +44,5 @@ nohup time /usr/local/bin/singularity run -w -B /cenc -B /gandg -B /bkraft1 \
                  $APP_SINGULARITY_IMAGE \
                  $ACTIVE_BIDS_PATH \
                  $ACTIVE_APP_OUTPUT_PATH \
+                 --work-dir $ACTIVE_APP_WORKING_PATH \
                  participant ${@} > $log_file 2>&1 &
