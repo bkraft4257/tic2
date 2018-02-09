@@ -430,4 +430,4 @@ def infotodict(seqinfo):
                 (s.dim4 ==  3)):
                 info[pcasl_lr_topup].append([s.series_id])
 
-    return infogit
+    return
