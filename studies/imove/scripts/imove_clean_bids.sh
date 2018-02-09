@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 # Contents of func directory
 #
@@ -106,6 +106,8 @@ echo "-----------------------------------------------------------------------"
 sed -i 's/"EchoTime": 0.00738,/"EchoTime1": 0.00492,\n  "EchoTime2": 0.00738,/' $fmap_phasediff
 grep -H "EchoTime" $fmap_phasediff
 
+
+
 #--- Update JSON files to include IntendedFor information -------------------------------------
 
 sed -i 's%"AcquisitionMatrixPE": 64,%"IntendedFor": [ "ses-__session_value__/func/sub-__subject_value___ses-__session_value___task-rest_acq-epi_bold.nii.gz" ],\n  "AcquisitionMatrixPE": 64,%' \
@@ -121,6 +123,7 @@ sed -i 's%"AcquisitionMatrixPE": 64,%"IntendedFor": [ "ses-__session_value__/fun
      $rest_topup_pa_json
 
 
+
 mbepi_topup_lr_json=${full_subject_session_value}_acq-mbepi_dir-lr_epi.json
 mbepi_topup_rl_json=${full_subject_session_value}_acq-mbepi_dir-rl_epi.json
 
@@ -131,6 +134,8 @@ sed -i 's%"AcquisitionMatrixPE": 64,%"IntendedFor": [ "ses-__session_value__/fun
      $mbepi_topup_rl_json
 
 
+
+
 pcasl_topup_lr_json=${full_subject_session_value}_acq-pcasl_dir-lr_epi.json
 pcasl_topup_rl_json=${full_subject_session_value}_acq-pcasl_dir-rl_epi.json
 
@@ -139,6 +144,8 @@ sed -i 's%"AcquisitionMatrixPE": 56,%"IntendedFor": [ "ses-__session_value__/fun
 
 sed -i 's%"AcquisitionMatrixPE": 56,%"IntendedFor": [ "ses-__session_value__/func/sub-__subject_value___ses-__session_value___task-rest_acq-pcasl_bold.nii.gz" ],\n  "AcquisitionMatrixPE": 56,%' \
      $pcasl_topup_rl_json
+
+
 
 
 # Intended for DWI
@@ -155,9 +162,6 @@ do
         echo "$ii file not found."
     fi  
 done
-
-#sed -i 's%"AcquisitionMatrixPE": 112,%"IntendedFor": [ "ses-__session_value__/dwi/sub-__subject_value___ses-__session_value___acq-30ap_dwi.nii.gz" ],\n  "AcquisitionMatrixPE": 112,%' \
-#     $dwi_topup_pa_json
 
 
 # Replace __session__ with ${session_value} and __subject__ with ${subject_value}.

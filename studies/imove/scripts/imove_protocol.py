@@ -6,6 +6,7 @@ This template file can be used as an example and starting point for creating you
 
 """
 
+
 def create_key(template, outtype=('nii.gz',), annotation_classes=None):
     """
     Create key for HDC DICOM to NIFTI conversion
@@ -104,13 +105,38 @@ def infotodict(seqinfo):
     key-value tags
     --------------
 
-    BIDS uses a key-value pairs in the naming convention.  Only certain keys are associated with each imaging modality. The
+    BIDS uses a key-value pairs in the naming convention.  The sub-<participant_label> is a required field. It is used
+    to create a subject specific directory in the BIDS directory.
+
+    It must also be included in each and every filename. The ses-<session_label> is a bug the <session_label> includes
+    the key.  This means that {session} translates to
+    ses-<session-label>.
+
+    Only certain keys are associated with each imaging modality.
+    key-value pairs are in [] are optional.  If a key-value pair is not in [] then it must be included in the name.
+    For example every filename must include sub-<participant_label> to be BIDS compliant.  The session key-value
+    is optional. However, if you include session key-value in the path then you must also include it in the
+    filename.
+
+    Another example of required and optional key-value pairs is in the FUNC images.  Here is the key-value
+    pairs taken from the BIDS documentation for images in the func directory.
+
+     _task-<task_label>[_acq-<label>][_rec-<label>][_run-<index>][_echo-<index>]_bold
+
+     You can see that task-<task_label> is not in [] so it is required. While _acq-<acq_label> is in [] and is
+     therefore optional.
+
+     Below I have included some notes for the key-value pairs for the different imaging modalities and BIDS
+     sub-directories.
+
 
     common key-value tags:
 
         sub-<participant_label>/[ses-<session_label>/]/<dir>/sub-<participant_label>[_ses-<session_label>]
 
         <dir> = anat, func, fmap, dwi, swi
+
+
 
     anat key-value tags:
 
@@ -217,7 +243,6 @@ def infotodict(seqinfo):
     pcasl_rl_topup = create_key('sub-{subject}/{session}/fmap/sub-{subject}_{session}_acq-pcasl_dir-rl_epi')
     pcasl_lr_topup = create_key('sub-{subject}/{session}/fmap/sub-{subject}_{session}_acq-pcasl_dir-lr_epi')
 
-
     # Create an empty dictionary called info for each key
 
     info = {t1: [],
@@ -251,17 +276,24 @@ def infotodict(seqinfo):
 
     for idx, s in enumerate(seqinfo):
 
+        # --------------------------------------
+        # anat - T1, FLAIR
+
         if (('MPRAGE_GRAPPA2' in s.series_description) and
                 ('tfl3d1_16ns' in s.sequence_name) and
                 (s.dim3 == 192) and
                 (s.dim4 == 1)):
                 info[t1].append([s.series_id])
+                print(info[t1])
 
         if (('T2 FLAIR SPACE NEW' in s.series_description) and
                 ('spcir_192ns' in s.sequence_name) and
                 (s.dim3 == 192) and
                 (s.dim4 == 1)):
                 info[t2].append([s.series_id])
+
+        # --------------------------------------
+        # bold and distortion correction data
 
         if (('BOLD_resting 4X4X4 A>>P' in s.series_description) and
                 ('epfid2d1_64' in s.sequence_name) and
@@ -404,12 +436,6 @@ def infotodict(seqinfo):
 
         # --------------------------------------
         # Arterial Spin Labeling
-
-        #  | 23-pcasl_wfu_4_0C R>>L EYES OPEN               | epfid2d1_56   | pcasl_wfu_4_0C R>>L EYES OPEN                    |   70 |   56 |   43 |   81 | 4.000 |  11.00 |               False |      False |
-        #  | 24-pcasl_wfu_4_0C R>>L EYES OPEN               | epfid2d1_56   | Perfusion_Weighted                               |   70 |   56 |   43 |    1 | 4.000 |  11.00 |               False |       True |
-        #  |                                                |               |                                                  |      |      |      |      |       |        |                     |            |
-        #  | 25-pcasl_wfu_4_0C L>>R (COPY SLICES FROM R>>L) | epfid2d1_56   | pcasl_wfu_4_0C L>>R (COPY SLICES FROM R>>L)      |   70 |   56 |   43 |    3 | 4.000 |  11.00 |               False |      False |
-        #  | 26-pcasl_wfu_4_0C L>>R (COPY SLICES FROM R>>L) | epfid2d1_56   | Perfusion_Weighted                               |   70 |   56 |   43 |    1 | 4.000 |  11.00 |               False |       True |
 
         if (('pcasl_wfu_4_0C R>>L EYES OPEN' in s.series_description) and
                 ('epfid2d1_56' in s.sequence_name) and

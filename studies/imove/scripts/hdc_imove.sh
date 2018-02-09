@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 
 ACTIVE_APP_OUTPUT_PATH=$ACTIVE_BIDS_PATH
