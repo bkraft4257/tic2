@@ -1,10 +1,9 @@
 #!/usr/bin/env bash
 
-BIDS_APP=fmriprep
 
-ACTIVE_APP_OUTPUT_PATH=$ACTIVE_FMRIPREP_PATH
-ACTIVE_APP_SINGULARITY_IMAGE=$FMRIPREP_SINGULARITY_IMAGE
-ACTIVE_APP_WORKING_PATH=$ACTIVE_FMRIPREP_PATH/_working
+ACTIVE_APP_OUTPUT_PATH=$ACTIVE_MRIQC_PATH
+APP_SINGULARITY_IMAGE=$FMRIPREP_SINGULARITY_IMAGE
+BIDS_APP=fmriprep
 
 # Convert to lower case
 study_prefix=$(echo "${ACTIVE_STUDY,,}")
@@ -20,8 +19,7 @@ echo 'bids app               = ' $BIDS_APP
 echo 'bids path              = ' $ACTIVE_BIDS_PATH
 echo 'log path               = ' $ACTIVE_IMAGE_PROCESSING_LOG_PATH
 echo 'output path            = ' $ACTIVE_APP_OUTPUT_PATH
-echo 'working path           = ' $ACTIVE_APP_WORKING_PATH
-echo 'app singularity image  = ' $ACTIVE_APP_SINGULARITY_IMAGE
+echo 'app singularity image  = ' $APP_SINGULARITY_IMAGE
 echo 'log file               = ' $log_file
 echo
 
@@ -37,15 +35,6 @@ echo
 #
 # Redirect both to a file:
 # command &> out
-
-
-#nohup time /usr/local/bin/singularity run -w -B /cenc -B /gandg -B /bkraft1 \
-#                 $APP_SINGULARITY_IMAGE \
-#                 $ACTIVE_BIDS_PATH \
-#                 $ACTIVE_APP_OUTPUT_PATH \
-#                 --write-graph \
-#                 --work-dir $ACTIVE_APP_WORKING_PATH \
-#                 participant ${@} > $log_file 2>&1 &
 
 
 nohup time /usr/local/bin/singularity run -w -B /cenc -B /gandg -B /bkraft1 \
