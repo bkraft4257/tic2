@@ -1,9 +1,10 @@
 #!/usr/bin/env bash
 
+BIDS_APP=fmriprep
+
 ACTIVE_APP_OUTPUT_PATH=$ACTIVE_FMRIPREP_PATH
 ACTIVE_APP_SINGULARITY_IMAGE=$FMRIPREP_SINGULARITY_IMAGE
 ACTIVE_APP_WORKING_PATH=$ACTIVE_FMRIPREP_PATH/_working
-BIDS_APP=fmriprep
 
 # Convert to lower case
 study_prefix=$(echo "${ACTIVE_STUDY,,}")
@@ -52,5 +53,3 @@ nohup time /usr/local/bin/singularity run -w -B /cenc -B /gandg -B /bkraft1 \
                  $ACTIVE_BIDS_PATH \
                  $ACTIVE_APP_OUTPUT_PATH \
                  participant ${@} > $log_file 2>&1 &
-
-# Adding a comment for Blake
