@@ -19,6 +19,7 @@ echo 'bids app               = ' $BIDS_APP
 echo 'bids path              = ' $ACTIVE_BIDS_PATH
 echo 'log path               = ' $ACTIVE_IMAGE_PROCESSING_LOG_PATH
 echo 'output path            = ' $ACTIVE_APP_OUTPUT_PATH
+echo 'working path           = ' $ACTIVE_APP_WORKING_PATH
 echo 'app singularity image  = ' $APP_SINGULARITY_IMAGE
 echo 'log file               = ' $log_file
 echo
