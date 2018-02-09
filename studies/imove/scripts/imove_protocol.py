@@ -175,29 +175,29 @@ def infotodict(seqinfo):
     #             criteria for data conversion. However, this can not happen if the scan is repeated.
     #
 
-    t1 = create_key('sub-{subject}/{session}/anat/sub-{subject}_{session}_T1w.{item:01d}')
+    t1 = create_key('sub-{subject}/{session}/anat/sub-{subject}_{session}_T1w')
 
-    t2 = create_key('sub-{subject}/{session}/anat/sub-{subject}_{session}_T2w.{item:01d}')
+    t2 = create_key('sub-{subject}/{session}/anat/sub-{subject}_{session}_T2w')
 
     # BOLD Resting State with TOPUP and Fieldmap
-    rest_fmri_ap_fmap = create_key('sub-{subject}/{session}/func/sub-{subject}_{session}_task-rest_acq-epi_rec-fmap_bold.{item:01d}')
-    rest_fmri_ap_topup = create_key('sub-{subject}/{session}/func/sub-{subject}_{session}_task-rest_acq-epi_rec-topup_bold.{item:01d}')
+    rest_fmri_ap_fmap = create_key('sub-{subject}/{session}/func/sub-{subject}_{session}_task-rest_acq-epi_rec-fmap_bold')
+    rest_fmri_ap_topup = create_key('sub-{subject}/{session}/func/sub-{subject}_{session}_task-rest_acq-epi_rec-topup_bold')
 
-    rest_topup_ap = create_key('sub-{subject}/{session}/fmap/sub-{subject}_{session}_dir-ap_epi.{item:01d}')
-    rest_topup_pa = create_key('sub-{subject}/{session}/fmap/sub-{subject}_{session}_dir-pa_epi.{item:01d}')
+    rest_topup_ap = create_key('sub-{subject}/{session}/fmap/sub-{subject}_{session}_dir-ap_epi')
+    rest_topup_pa = create_key('sub-{subject}/{session}/fmap/sub-{subject}_{session}_dir-pa_epi')
 
-    fmap_rest_magnitude1 = create_key('sub-{subject}/{session}/fmap/sub-{subject}_{session}_magnitude1.{item:01d}')
-    fmap_rest_phasediff = create_key('sub-{subject}/{session}/fmap/sub-{subject}_{session}_phasediff.{item:01d}')
+    fmap_rest_magnitude1 = create_key('sub-{subject}/{session}/fmap/sub-{subject}_{session}_magnitude1')
+    fmap_rest_phasediff = create_key('sub-{subject}/{session}/fmap/sub-{subject}_{session}_phasediff')
 
     # Multiband EPI Resting State with TOPUP
-    mbep2d_topup_lr = create_key('sub-{subject}/{session}/fmap/sub-{subject}_{session}_acq-mbepi_dir-lr_epi.{item:01d}')
-    mbep2d_topup_lr_sbref = create_key('sub-{subject}/{session}/fmap/sub-{subject}_{session}_acq-mbepi_dir-lr_sbref.{item:01d}')
+    mbep2d_topup_lr = create_key('sub-{subject}/{session}/fmap/sub-{subject}_{session}_acq-mbepi_dir-lr_epi')
+    mbep2d_topup_lr_sbref = create_key('sub-{subject}/{session}/fmap/sub-{subject}_{session}_acq-mbepi_dir-lr_sbref')
 
-    mbep2d_topup_rl = create_key('sub-{subject}/{session}/fmap/sub-{subject}_{session}_acq-mbepi_dir-rl_epi.{item:01d}')
-    mbep2d_topup_rl_sbref = create_key('sub-{subject}/{session}/fmap/sub-{subject}_{session}_acq-mbepi_dir-rl_sbref.{item:01d}')
+    mbep2d_topup_rl = create_key('sub-{subject}/{session}/fmap/sub-{subject}_{session}_acq-mbepi_dir-rl_epi')
+    mbep2d_topup_rl_sbref = create_key('sub-{subject}/{session}/fmap/sub-{subject}_{session}_acq-mbepi_dir-rl_sbref')
 
-    mbep2d_bold = create_key('sub-{subject}/{session}/func/sub-{subject}_{session}_task-rest_acq-mbepi_bold.{item:01d}')
-    mbep2d_bold_sbref = create_key('sub-{subject}/{session}/func/sub-{subject}_{session}_task-rest_acq-mbepi_sbref.{item:01d}')
+    mbep2d_bold = create_key('sub-{subject}/{session}/func/sub-{subject}_{session}_task-rest_acq-mbepi_bold')
+    mbep2d_bold_sbref = create_key('sub-{subject}/{session}/func/sub-{subject}_{session}_task-rest_acq-mbepi_sbref')
 
     # NODDI DTI
     noddi_dti_ap = create_key('sub-{subject}/{session}/dwi/sub-{subject}_{session}_acq-apNoddi_run-{item:01d}_dwi')
@@ -207,15 +207,15 @@ def infotodict(seqinfo):
     noddi_dti_pa_topup_sbref = create_key('sub-{subject}/{session}/dwi/sub-{subject}_{session}_acq-paNoddi_run-{item:01d}_sbref')
 
     # Quantitative Susceptibility Mapping
-    qsm_magnitude = create_key('sub-{subject}/{session}/swi/sub-{subject}_{session}_part-mag_GRE.{item:01d}')
-    qsm_phase = create_key('sub-{subject}/{session}/swi/sub-{subject}_{session}_part-phase_GRE.{item:01d}')
-    qsm_mip = create_key('sub-{subject}/{session}/swi/sub-{subject}_{session}_minIP.{item:01d}')
-    qsm_swi = create_key('sub-{subject}/{session}/swi/sub-{subject}_{session}_swi.{item:01d}')
+    qsm_magnitude = create_key('sub-{subject}/{session}/swi/sub-{subject}_{session}_part-mag_GRE')
+    qsm_phase = create_key('sub-{subject}/{session}/swi/sub-{subject}_{session}_part-phase_GRE')
+    qsm_mip = create_key('sub-{subject}/{session}/swi/sub-{subject}_{session}_minIP')
+    qsm_swi = create_key('sub-{subject}/{session}/swi/sub-{subject}_{session}_swi')
 
     # pseudo Continuous ASL
-    pcasl_rl = create_key('sub-{subject}/{session}/func/sub-{subject}_{session}_task-rest_acq-pcasl_bold.{item:01d}')
-    pcasl_rl_topup = create_key('sub-{subject}/{session}/fmap/sub-{subject}_{session}_acq-pcasl_dir-rl_epi.{item:01d}')
-    pcasl_lr_topup = create_key('sub-{subject}/{session}/fmap/sub-{subject}_{session}_acq-pcasl_dir-lr_epi.{item:01d}')
+    pcasl_rl = create_key('sub-{subject}/{session}/func/sub-{subject}_{session}_task-rest_acq-pcasl_bold')
+    pcasl_rl_topup = create_key('sub-{subject}/{session}/fmap/sub-{subject}_{session}_acq-pcasl_dir-rl_epi')
+    pcasl_lr_topup = create_key('sub-{subject}/{session}/fmap/sub-{subject}_{session}_acq-pcasl_dir-lr_epi')
 
 
     # Create an empty dictionary called info for each key
