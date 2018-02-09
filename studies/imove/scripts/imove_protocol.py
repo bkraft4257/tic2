@@ -284,9 +284,17 @@ def infotodict(seqinfo):
                 (s.dim3 == 192) and
                 (s.dim4 == 1)):
                 info[t1].append([s.series_id])
+
                 print('\n\n\n-----------------------------------------------------------------------------')
                 print(info[t1])
                 print('-----------------------------------------------------------------------------\n\n\n')
+
+                info[t1].append([s.series_id])
+
+                print('\n\n\n-----------------------------------------------------------------------------')
+                print(info[t1])
+                print('-----------------------------------------------------------------------------\n\n\n')
+
 
         if (('T2 FLAIR SPACE NEW' in s.series_description) and
                 ('spcir_192ns' in s.sequence_name) and
