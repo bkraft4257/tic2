@@ -310,13 +310,13 @@ def infotodict(seqinfo):
                 ('epfid2d1_64' in s.sequence_name) and
                 (s.dim3 == 64) and
                 (s.dim4 == 1)):
-                info[mbep2d_topup_lr].append([s.series_id])
+                info[mbep2d_topup_lr_sbref].append([s.series_id])
 
         if (('mbep2d_bold 3mm L>>R' in s.series_description) and
                 ('epfid2d1_64' in s.sequence_name) and
                 (s.dim3 == 64) and
                 (s.dim4 == 10)):
-                info[mbep2d_topup_lr_sbref].append([s.series_id])
+                info[mbep2d_topup_lr].append([s.series_id])
 
         # fmap/ topup rl (a copy of the mbepi resting data. NIFTI file will be truncated later)
 
