@@ -38,20 +38,18 @@ echo
 # command &> out
 
 
-# run it in the background so that it continues if user logs out
-#
-# full_command=$SINGULARITY_COMMAND \
+#nohup time /usr/local/bin/singularity run -w -B /cenc -B /gandg -B /bkraft1 \
 #                 $APP_SINGULARITY_IMAGE \
 #                 $ACTIVE_BIDS_PATH \
 #                 $ACTIVE_APP_OUTPUT_PATH \
 #                 --write-graph \
-#                 -w $ACTIVE_APP_WORKING_PATH \
+#                 --work-dir $ACTIVE_APP_WORKING_PATH \
 #                 participant ${@} > $log_file 2>&1 &
+
 
 nohup time /usr/local/bin/singularity run -w -B /cenc -B /gandg -B /bkraft1 \
                  $APP_SINGULARITY_IMAGE \
                  $ACTIVE_BIDS_PATH \
                  $ACTIVE_APP_OUTPUT_PATH \
-                 --write-graph \
                  --work-dir $ACTIVE_APP_WORKING_PATH \
                  participant ${@} > $log_file 2>&1 &
