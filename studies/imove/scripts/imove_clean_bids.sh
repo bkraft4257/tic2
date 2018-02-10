@@ -26,7 +26,7 @@ echo "session_dir   = " $session_dir
 echo
 echo "List images collected and stored as DICOM files"
 echo "------------------------------------------------------------------------------------------------"-
-hdc_bids_path=$HFPEF_BIDS_PATH/.heudiconv/${subject_value}/ses-${session_value}/info/
+hdc_bids_path=$ACTIVE_BIDS_PATH/.heudiconv/${subject_value}/ses-${session_value}/info/
 
 $HDC_PATH/hdc_add_header.py -v ${hdc_bids_path}/dicominfo_ses-${session_value}.tsv \
                             -o ${hdc_bids_path}/dicominfo_ses-${session_value}.csv
@@ -44,10 +44,9 @@ echo
 #chmod +w -R ${session_dir}
 
 find ${session_dir} -name "*.1.*" | xargs rename .1. .
+chmod +w *.{json,gz}
 
 cd ${session_dir}/fmap
-
-chmod +w *.json
 
 # magnitude1 of the phasediff fieldmap does not require a json file according to BIDS. 
 # Since the JSON file will be almost identical to phasediff.json file and is not required
@@ -58,39 +57,39 @@ rm -rf *magnitude1.json
 # which is being used as its own TOPUP reference for distortion correction.
 rm -rf *bvec *bval
 
+
 #--- Extract volumes for topup distortion correction from data to match corresponding topup calibration scans ------
 # Keep only the first 3 volumes of pcasl
 echo
 echo "Extract reference images for topup distortion correction"
 echo "--------------------------------------------------------"
 
-pcasl_topup_lr=${full_subject_session_value}_acq-pcasl_dir-lr_epi.nii.gz
+# Keep only the first 3 volumes of pcasl_rl
+pcasl_topup_lr=${full_subject_session_value}_acq-pcasl_dir-rl_epi.nii.gz
 
 if [ -f $pcasl_topup_lr ] 
 then         
    echo fslroi $pcasl_topup_lr
    fslroi $pcasl_topup_lr  $pcasl_topup_lr 0 3
+
+   echo
+   fslinfo  $pcasl_topup_lr
+   echo
 else
     echo "$pcasl_topup_lr file not found"
-fi
-
-# Keep only the first 1 volumes of dwi
-dwi_topup_ap=${full_subject_session_value}_acq-30ap_dir-ap_epi.nii.gz
-
-if [ -f $dwi_topup_ap ] 
-then         
-echo fslroi $dwi_topup_ap
-fslroi $dwi_topup_ap  $dwi_topup_ap 0 1
-else
-    echo "$dwi_topup_ap file not found"
 fi
 
 # Keep only the first 10 volumes of mbepi_rl
 mbepi_topup_rl=${full_subject_session_value}_acq-mbepi_dir-rl_epi.nii.gz
 if [ -f $mbepi_topup_rl ] 
 then         
-    echo fslroi $mbepi_topup_rl
+    echo fslroi $mbepi_topup_r
     fslroi $mbepi_topup_rl  $mbepi_topup_rl 0 10
+
+    echo
+    fslinfo $mbepi_topup_rl 
+    echo
+
 else
     echo "$mbepi_topup_rl file not found"
 fi
@@ -98,7 +97,7 @@ fi
 #--- Update JSON files to include Echo1, Echo2, and IntendedFor information -------------------------------------
 # Add Echo times for phase difference map
 
-fmap_phasediff=${full_subject_session_value}_acq-bold_phasediff.json
+fmap_phasediff=${full_subject_session_value}_acq-gre_phasediff.json
 
 echo
 echo "sed EchoTime " $fmap_phasedif
@@ -106,58 +105,67 @@ echo "-----------------------------------------------------------------------"
 sed -i 's/"EchoTime": 0.00738,/"EchoTime1": 0.00492,\n  "EchoTime2": 0.00738,/' $fmap_phasediff
 grep -H "EchoTime" $fmap_phasediff
 
-
-
 #--- Update JSON files to include IntendedFor information -------------------------------------
 
-sed -i 's%"AcquisitionMatrixPE": 64,%"IntendedFor": [ "ses-__session_value__/func/sub-__subject_value___ses-__session_value___task-rest_acq-epi_bold.nii.gz" ],\n  "AcquisitionMatrixPE": 64,%' \
+sed -i 's%"AcquisitionNumber": 1,%"IntendedFor": [ "ses-__session_value__/func/sub-__subject_value___ses-__session_value___task-rest_acq-epi_rec-fmap_bold.nii.gz" ],\n  "AcquisitionNumber": 1,%' \
      $fmap_phasediff
+
+grep -H "AcquisitionNumber" $fmap_phasediff
+
 
 rest_topup_ap_json=${full_subject_session_value}_acq-epse_dir-ap_epi.json
 rest_topup_pa_json=${full_subject_session_value}_acq-epse_dir-pa_epi.json
+                                                
+for ii in $rest_topup_ap_json $rest_topup_pa_json;
+do 
 
-sed -i 's%"AcquisitionMatrixPE": 64,%"IntendedFor": [ "ses-__session_value__/func/sub-__subject_value___ses-__session_value___task-rest_acq-epi_bold.nii.gz" ],\n  "AcquisitionMatrixPE": 64,%' \
-     $rest_topup_ap_json
+    if [ -f $ii ] 
+    then         
+        sed -i 's%"AcquisitionNumber": 1,%"IntendedFor": [ "ses-__session_value__/dwi/sub-__subject_value___ses-__session_value___task-rest_acq-epi_rec-topup_bold.nii.gz" ],\n  "AcquisitionNumber": 1,%' $ii
+	
+	echo 
+	grep -H -B 3 AcquisitionNumber $ii
 
-sed -i 's%"AcquisitionMatrixPE": 64,%"IntendedFor": [ "ses-__session_value__/func/sub-__subject_value___ses-__session_value___task-rest_acq-epi_bold.nii.gz" ],\n  "AcquisitionMatrixPE": 64,%' \
-     $rest_topup_pa_json
+    else
+        echo "$ii file not found."
+    fi  
+done
 
 
 
 mbepi_topup_lr_json=${full_subject_session_value}_acq-mbepi_dir-lr_epi.json
 mbepi_topup_rl_json=${full_subject_session_value}_acq-mbepi_dir-rl_epi.json
 
-sed -i 's%"AcquisitionMatrixPE": 64,%"IntendedFor": [ "ses-__session_value__/func/sub-__subject_value___ses-__session_value___task-rest_acq-mbepi_bold.nii.gz" ],\n  "AcquisitionMatrixPE": 64,%' \
-     $mbepi_topup_lr_json
 
-sed -i 's%"AcquisitionMatrixPE": 64,%"IntendedFor": [ "ses-__session_value__/func/sub-__subject_value___ses-__session_value___task-rest_acq-mbepi_bold.nii.gz" ],\n  "AcquisitionMatrixPE": 64,%' \
-     $mbepi_topup_rl_json
+for ii in $mbepi_topup_lr_json $mbepi_topup_rl_json;
+do 
 
+    if [ -f $ii ] 
+    then         
+        sed -i 's%"AcquisitionNumber": 1,%"IntendedFor": [ "ses-__session_value__/dwi/sub-__subject_value___ses-__session_value___task-rest_acq-mbepi_bold.nii.gz" ],\n  "AcquisitionNumber": 1,%' $ii
+	
+	echo 
+	grep -H -B 3 AcquisitionNumber $ii
 
+    else
+        echo "$ii file not found."
+    fi  
+done
 
 
 pcasl_topup_lr_json=${full_subject_session_value}_acq-pcasl_dir-lr_epi.json
 pcasl_topup_rl_json=${full_subject_session_value}_acq-pcasl_dir-rl_epi.json
 
-sed -i 's%"AcquisitionMatrixPE": 56,%"IntendedFor": [ "ses-__session_value__/func/sub-__subject_value___ses-__session_value___task-rest_acq-pcasl_bold.nii.gz" ],\n  "AcquisitionMatrixPE": 56,%' \
-     $pcasl_topup_lr_json
-
-sed -i 's%"AcquisitionMatrixPE": 56,%"IntendedFor": [ "ses-__session_value__/func/sub-__subject_value___ses-__session_value___task-rest_acq-pcasl_bold.nii.gz" ],\n  "AcquisitionMatrixPE": 56,%' \
-     $pcasl_topup_rl_json
-
-
-
-
-# Intended for DWI
-
-dwi_topup_ap_json=${full_subject_session_value}_acq-30ap_dir-ap_epi.json
-dwi_topup_pa_json=${full_subject_session_value}_acq-30ap_dir-pa_epi.json
-
-for ii in $dwi_topup_ap_json $dwi_topup_pa_json;
+for ii in $pcasl_topup_lr_json $pcasl_topup_rl_json;
 do 
+
     if [ -f $ii ] 
     then         
-        sed -i 's%"AcquisitionMatrixPE": 112,%"IntendedFor": [ "ses-__session_value__/dwi/sub-__subject_value___ses-__session_value___acq-30ap_dwi.nii.gz" ],\n  "AcquisitionMatrixPE": 112,%' $ii
+        sed -i 's%"AcquisitionNumber": 1,%"IntendedFor": [ "ses-__session_value__/dwi/sub-__subject_value___ses-__session_value___task-rest_acq-pcasl_bold.nii.gz" ],\n  "AcquisitionNumber": 1,%' $ii
+	
+	echo 
+	grep -H -B 3 AcquisitionNumber $ii
+
     else
         echo "$ii file not found."
     fi  

@@ -209,11 +209,11 @@ def infotodict(seqinfo):
     rest_fmri_ap_fmap = create_key('sub-{subject}/{session}/func/sub-{subject}_{session}_task-rest_acq-epi_rec-fmap_bold')
     rest_fmri_ap_topup = create_key('sub-{subject}/{session}/func/sub-{subject}_{session}_task-rest_acq-epi_rec-topup_bold')
 
-    rest_topup_ap = create_key('sub-{subject}/{session}/fmap/sub-{subject}_{session}_dir-ap_epi')
-    rest_topup_pa = create_key('sub-{subject}/{session}/fmap/sub-{subject}_{session}_dir-pa_epi')
+    rest_topup_ap = create_key('sub-{subject}/{session}/fmap/sub-{subject}_{session}_acq-epse_dir-ap_epi')
+    rest_topup_pa = create_key('sub-{subject}/{session}/fmap/sub-{subject}_{session}_acq-epse_dir-pa_epi')
 
-    fmap_rest_magnitude1 = create_key('sub-{subject}/{session}/fmap/sub-{subject}_{session}_magnitude1')
-    fmap_rest_phasediff = create_key('sub-{subject}/{session}/fmap/sub-{subject}_{session}_phasediff')
+    fmap_rest_magnitude1 = create_key('sub-{subject}/{session}/fmap/sub-{subject}_{session}_acq-gre_magnitude1')
+    fmap_rest_phasediff = create_key('sub-{subject}/{session}/fmap/sub-{subject}_{session}_acq-gre_phasediff')
 
     # Multiband EPI Resting State with TOPUP
     mbep2d_topup_lr = create_key('sub-{subject}/{session}/fmap/sub-{subject}_{session}_acq-mbepi_dir-lr_epi')
@@ -284,17 +284,6 @@ def infotodict(seqinfo):
                 (s.dim3 == 192) and
                 (s.dim4 == 1)):
                 info[t1].append([s.series_id])
-
-                print('\n\n\n-----------------------------------------------------------------------------')
-                print(info[t1])
-                print('-----------------------------------------------------------------------------\n\n\n')
-
-                info[t1].append([s.series_id])
-
-                print('\n\n\n-----------------------------------------------------------------------------')
-                print(info[t1])
-                print('-----------------------------------------------------------------------------\n\n\n')
-
 
         if (('T2 FLAIR SPACE NEW' in s.series_description) and
                 ('spcir_192ns' in s.sequence_name) and
