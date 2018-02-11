@@ -378,25 +378,41 @@ def infotodict(seqinfo):
         # --------------------------------------
         # NODDI DWI
 
-        if (('NODDI_DTI_120dir_12b0_AF4_SBRef' in s.series_description) and
+        """
+        13-NODDI_DTI_A>P 120dir_12b0_AF4   epse2d1_128               NODDI_DTI_A>P 120dir_12b0_AF4_SBRef   128   128    80     1  3.500  106.00       False                False
+        14-NODDI_DTI_A>P 120dir_12b0_AF4       ep_b5#1                     NODDI_DTI_A>P 120dir_12b0_AF4   128   128    80   132  3.500  106.00       False                False
+        15-NODDI_DTI_A>P 120dir_12b0_AF4       ep_b5#1                     NODDI_DTI_A>P 120dir_12b0_AF4   128   128    80   132  3.500  106.00       False                False
+        16-NODDI_DTI_P>>A120dir_12b0_AF4   epse2d1_128              NODDI_DTI_P>>A120dir_12b0_AF4 _SBRef   128   128    80     1  3.500  106.00       False                False
+        17-NODDI_DTI_P>>A120dir_12b0_AF4       ep_b5#1                     NODDI_DTI_P>>A120dir_12b0_AF4   128   128    80     1  3.500  106.00       False                False
+        18-NODDI_DTI_P>>A120dir_12b0_AF4       ep_b5#1                     NODDI_DTI_P>>A120dir_12b0_AF4   128   128    80     1  3.500  106.00       False                False
+        """
+
+
+        if (('NODDI_DTI' in s.series_description) and
+                ('SBRef' in s.series_description) and
+                ('A>P' in s.series_description) and
                 ('epse2d1_128' in s.sequence_name) and
                 (s.dim3 == 80) and
                 (s.dim4 == 1)):
                 info[noddi_dti_ap_sbref].append([s.series_id])
 
-        if (('NODDI_DTI_120dir_12b0_AF4' in s.series_description) and
+        if (('NODDI_DTI' in s.series_description) and
+                ('A>P' in s.series_description) and
                 ('epse2d1_128' in s.sequence_name) and
                 (s.dim3 == 80) and
                 (s.dim4 == 132)):
                 info[noddi_dti_ap].append([s.series_id])
 
-        if (('NODDI_DTI_120dir_12b0_AF4 P>>A_SBRef' in s.series_description) and
+        if (('NODDI_DTI' in s.series_description) and
+                ('P>>P' in s.series_description) and
+                ('SBRef' in s.series_description) and
                 ('epse2d1_128' in s.sequence_name) and
                 (s.dim3 == 80) and
                 (s.dim4 == 1)):
                 info[noddi_dti_pa_topup_sbref].append([s.series_id])
 
-        if (('NODDI_DTI_120dir_12b0_AF4 P>>A' in s.series_description) and
+        if (('NODDI_DTI' in s.series_description) and
+                ('P>>P' in s.series_description) and
                 ('epse2d1_128' in s.sequence_name) and
                 (s.dim3 == 80) and
                 (s.dim4 == 132)):
