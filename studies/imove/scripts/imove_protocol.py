@@ -404,7 +404,7 @@ def infotodict(seqinfo):
                 info[noddi_dti_ap].append([s.series_id])
 
         if (('NODDI_DTI' in s.series_description) and
-                ('P>>P' in s.series_description) and
+                ('P>>A' in s.series_description) and
                 ('SBRef' in s.series_description) and
                 ('epse2d1_128' in s.sequence_name) and
                 (s.dim3 == 80) and
@@ -412,7 +412,7 @@ def infotodict(seqinfo):
                 info[noddi_dti_pa_topup_sbref].append([s.series_id])
 
         if (('NODDI_DTI' in s.series_description) and
-                ('P>>P' in s.series_description) and
+                ('P>>A' in s.series_description) and
                 ('ep_b5#1' in s.sequence_name) and
                 (s.dim3 == 80) and
                 (s.dim4 == 1)):
