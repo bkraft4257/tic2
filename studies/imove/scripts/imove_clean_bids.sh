@@ -26,16 +26,16 @@ echo "session_dir   = " $session_dir
 echo
 echo "List images collected and stored as DICOM files"
 echo "------------------------------------------------------------------------------------------------"-
-hdc_bids_path=$ACTIVE_BIDS_PATH/.heudiconv/${subject_value}/ses-${session_value}/info/
+bids_path=$ACTIVE_BIDS_PATH/.heudiconv/${subject_value}/ses-${session_value}/info/
 
-$HDC_PATH/hdc_add_header.py -v ${hdc_bids_path}/dicominfo_ses-${session_value}.tsv \
-                            -o ${hdc_bids_path}/dicominfo_ses-${session_value}.csv
+$HDC_PATH/hdc_add_header.py -v ${bids_path}/dicominfo_ses-${session_value}.tsv \
+                            -o ${bids_path}/dicominfo_ses-${session_value}.csv
 
 echo
 echo "List images converted by heudiconv (HDC)"
 echo "-------------------------------------------------------------------------------------------------"
 echo
-cat -n ${hdc_bids_path}/${subject_value}_ses-${session_value}.auto.txt
+cat -n ${bids_path}/${subject_value}_ses-${session_value}.auto.txt
 echo
 echo
 
@@ -44,7 +44,7 @@ echo
 #chmod +w -R ${session_dir}
 
 find ${session_dir} -name "*.1.*" | xargs rename .1. .
-chmod +w *.{json,gz}
+find ${session_dir} -name "*.gz" -or -name "*.json" | xargs chmod +w 
 
 cd ${session_dir}/fmap
 
