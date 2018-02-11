@@ -213,7 +213,7 @@ def infotodict(seqinfo):
     rest_topup_pa = create_key('sub-{subject}/{session}/fmap/sub-{subject}_{session}_acq-epse_dir-pa_epi')
 
     fmap_rest_magnitude1 = create_key('sub-{subject}/{session}/fmap/sub-{subject}_{session}_acq-gre_magnitude1')
-    fmap_rest_phasediff = create_key('sub-{subject}/{session}/fmap/sub-{subject}_{session}_acq-gre_phasediff')
+    fmap_rest_phasediff = create_key('sub-{subject}/{session}/fmap/sub-{subject}_{session}_aicq-gre_phasediff')
 
     # Multiband EPI Resting State with TOPUP
     mbep2d_topup_lr = create_key('sub-{subject}/{session}/fmap/sub-{subject}_{session}_acq-mbepi_dir-lr_epi')
@@ -387,7 +387,7 @@ def infotodict(seqinfo):
         if (('NODDI_DTI_120dir_12b0_AF4' in s.series_description) and
                 ('epse2d1_128' in s.sequence_name) and
                 (s.dim3 == 80) and
-                (s.dim4 == 1)):
+                (s.dim4 == 132)):
                 info[noddi_dti_ap].append([s.series_id])
 
         if (('NODDI_DTI_120dir_12b0_AF4 P>>A_SBRef' in s.series_description) and
@@ -399,7 +399,7 @@ def infotodict(seqinfo):
         if (('NODDI_DTI_120dir_12b0_AF4 P>>A' in s.series_description) and
                 ('epse2d1_128' in s.sequence_name) and
                 (s.dim3 == 80) and
-                (s.dim4 == 1)):
+                (s.dim4 == 132)):
                 info[noddi_dti_pa_topup].append([s.series_id])
 
         # --------------------------------------
