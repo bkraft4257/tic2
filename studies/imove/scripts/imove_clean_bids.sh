@@ -121,7 +121,7 @@ do
 
     if [ -f $ii ] 
     then         
-        sed -i 's%"AcquisitionNumber": 1,%"IntendedFor": [ "ses-__session_value__/dwi/sub-__subject_value___ses-__session_value___task-rest_acq-epi_rec-topup_bold.nii.gz" ],\n  "AcquisitionNumber": 1,%' $ii
+        sed -i 's%"AcquisitionNumber": 1,%"IntendedFor": [ "ses-__session_value__/func/sub-__subject_value___ses-__session_value___task-rest_acq-epi_rec-topup_bold.nii.gz" ],\n  "AcquisitionNumber": 1,%' $ii
 	
 	echo 
 	grep -H -B 3 AcquisitionNumber $ii
@@ -142,7 +142,7 @@ do
 
     if [ -f $ii ] 
     then         
-        sed -i 's%"AcquisitionNumber": 1,%"IntendedFor": [ "ses-__session_value__/dwi/sub-__subject_value___ses-__session_value___task-rest_acq-mbepi_bold.nii.gz" ],\n  "AcquisitionNumber": 1,%' $ii
+        sed -i 's%"AcquisitionNumber": 1,%"IntendedFor": [ "ses-__session_value__/func/sub-__subject_value___ses-__session_value___task-rest_acq-mbepi_bold.nii.gz" ],\n  "AcquisitionNumber": 1,%' $ii
 	
 	echo 
 	grep -H -B 3 AcquisitionNumber $ii
@@ -161,7 +161,7 @@ do
 
     if [ -f $ii ] 
     then         
-        sed -i 's%"AcquisitionNumber": 1,%"IntendedFor": [ "ses-__session_value__/dwi/sub-__subject_value___ses-__session_value___task-rest_acq-pcasl_bold.nii.gz" ],\n  "AcquisitionNumber": 1,%' $ii
+        sed -i 's%"AcquisitionNumber": 1,%"IntendedFor": [ "ses-__session_value__/func/sub-__subject_value___ses-__session_value___task-rest_acq-pcasl_bold.nii.gz" ],\n  "AcquisitionNumber": 1,%' $ii
 	
 	echo 
 	grep -H -B 3 AcquisitionNumber $ii

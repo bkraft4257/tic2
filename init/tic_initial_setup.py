@@ -32,11 +32,15 @@ def _link_file(source, target):
         print('{0} not found. File was not copied.'.format(source))
 
 
-def _link_studies(studies=['hfpef', 'infinite', 'synergy']):
+def _link_studies(studies=None):
+
+    if studies is None:
+        studies = ['hfpef', 'infinite', 'synergy']
 
     for ii in studies:
-        _link_file( _absjoin(TIC_PATH, 'studies', ii, f'{ii}_init.sh'),
-                    _absjoin(HOME_TIC_PATH, f'{ii}_init.sh'))
+        _link_file(_absjoin(TIC_PATH, 'studies', ii, f'{ii}_init.sh'),
+                   _absjoin(HOME_TIC_PATH, f'{ii}_init.sh')
+                   )
 
 
 def _copy_file(source, target):
@@ -57,6 +61,7 @@ def _check_shell():
         print('TIC requires that you use the bash or zsh. '
               'Setup your Unix environment to run one of these shells \n'
               ' before continuing.')
+
 
 def _add_timestamp(in_filename):
 
@@ -144,5 +149,3 @@ print('   TIC_PATH     : /gandg/tic/')
 print('   SUBJECTS_DIR : /aging1/software/freesurfer/subjects')
 print('   umask        : 002')
 print('   Current active study = HFPEF\n\n')
-
-

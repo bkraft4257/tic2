@@ -213,7 +213,7 @@ def infotodict(seqinfo):
     rest_topup_pa = create_key('sub-{subject}/{session}/fmap/sub-{subject}_{session}_acq-epse_dir-pa_epi')
 
     fmap_rest_magnitude1 = create_key('sub-{subject}/{session}/fmap/sub-{subject}_{session}_acq-gre_magnitude1')
-    fmap_rest_phasediff = create_key('sub-{subject}/{session}/fmap/sub-{subject}_{session}_aicq-gre_phasediff')
+    fmap_rest_phasediff = create_key('sub-{subject}/{session}/fmap/sub-{subject}_{session}_acq-gre_phasediff')
 
     # Multiband EPI Resting State with TOPUP
     mbep2d_topup_lr = create_key('sub-{subject}/{session}/fmap/sub-{subject}_{session}_acq-mbepi_dir-lr_epi')
