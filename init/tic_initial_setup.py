@@ -104,7 +104,7 @@ def _update_shell(in_filename):
         file.write(f'#source $TIC_INIT_PATH/synergy_init.sh\n')
         file.write(f'#source $TIC_INIT_PATH/infinite_init.sh\n')
         file.write(f'#source $TIC_INIT_PATH/tic_default_study.sh\n\n')
-        file.write(f'#tic_status.sh\n\n')
+        file.write(f'#tic_info.sh\n\n')
         file.write(f'## <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<\n')
 
 
