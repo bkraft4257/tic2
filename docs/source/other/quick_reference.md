@@ -8,7 +8,7 @@ studies are defined in $TIC_PATH/init.
 
     tic_help - Launches the TIC Sphinx documentation.
     tic_stat - Displays information about the current TIC session (tic_path, active_study, and subjects_dir)
-    
+
     clean_bids  - Cleans a single subject and sessions bids directory.
     
     cdas - change directory to active study main directory  
@@ -32,6 +32,27 @@ These aliases allow you to quickly move between studies.
 **mriqc.sh**             - Runs MRI Quality Control on a single subject.  
 **mriqc_group.sh**       - Runs MRI Quality Control as a group on subjects in MRIQC directory.
 
+The scripts have been written to minimize the amount of stuff you have to remember for each study
+while allowing you flexibility to call scripts with various options. For example, the fmriprep.sh
+script sets several environment variables and then calls the command
+
+nohup time /usr/local/bin/singularity run -w -B /cenc -B /gandg -B /bkraft1 \
+                 $APP_SINGULARITY_IMAGE \
+                 $ACTIVE_BIDS_PATH \
+                 $ACTIVE_APP_OUTPUT_PATH \
+                 --work-dir $ACTIVE_APP_WORKING_PATH \
+                 participant ${@} > $log_file 2>&1 &
+
+The ${@} is the bash syntax to pass all of the variables from the command line and insert them
+for ${@}.  If you call fmriprep -h you can see the help for fmriprep with all of its optional
+parameters. For example if you want to run fmriprep with only anatomical processing you can run
+the script
+
+fmriprep.sh --participant-label imove1061 --anat-only
+
+
+We are hoping this structure will allow simplicity for new users with flexibilty for experieneced
+users. Advanced
 
 
 # Quick Instructions
@@ -68,12 +89,15 @@ to convert subject hfs070 session 1 and add it to the active study.
 
 1. bv
 
-
 ### MRI Quality Control
 
-1. mriqc.sh < subject_value, **hfs070** >
+1. mriqc.sh --participant-label < subject_value, **hfs070** >
+
 
 ### fmriprep
 
-1. fmriprep.sh < subject_value, **hfs070** >
+1. fmriprep.sh --participant-label < subject_value, **hfs070** >
+
+
+
 

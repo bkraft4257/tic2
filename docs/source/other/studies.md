@@ -6,12 +6,14 @@ their individual studies. These scripts are stored in the folder
 $TIC_PATH/studies under the invidual studies name. For example, in the
 list below there are four studies listed
 
-$TIC_PATH/studies
 
-    /active   
-    /infinite
-    /hfpef
-    /synergy
+    $TIC_PATH/studies
+            
+        /active   
+        /hfpef
+        /imove
+        /infinite
+        /synergy
 
 Dr. Christina Hugenschmidt is the PI for the studies infinite, hfpef,
 and synergy. **active** is a generic study that contains many of the
@@ -65,7 +67,7 @@ study_switcher.py writes a text file to set the environment variables
 and then we source this file. Since it is tiresome to type these
 commands we have created aliases to switch between different studies.
 
-``` code
+```
 >>> swh   
 Previous active study = SYNERGY  
 Current active study = HFPEF
@@ -117,8 +119,8 @@ each study this page will serve as a set of guidelines.
             sub_xnn/
 
         image_processing/
-            logs/        
-            .working/     
+            _working/     working directory for NiPype workflows. 
+            logs/         directory for log files ($ACTIVE_IMAGE_PROCESSING_LOG_PATH)
             fmriprep/     (output for fmriprep processing)
             freesurfer/   (output for freesurfer processing via fmriprep)
             netprep/      (output for freesurfer processing via fmriprep)
@@ -129,15 +131,9 @@ each study this page will serve as a set of guidelines.
             
         image_analysis/
 
-        mriqc/
-            derivatives
-            logs
-            reports
-            restpcasl.csv
-            T1w.csv
-            work
-            working
-
+        qc/
+            mriqc/
+                
         scripts/
         templates/
 
