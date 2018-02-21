@@ -3,7 +3,7 @@
 
 ANTS_CORTICAL_THICKNESS_SINGULARITY_IMAGE='/cenc/software/bids_apps/antsCorticalThickness/bids_antscorticalthickness-2017-10-14-95aa110c26f8.img'
 
-BIDS_APP=ants_cortical_thickness
+BIDS_APP=act # ants_cortical_thickness
 
 ACTIVE_ACT_OUTPUT_PATH=$ACTIVE_IMAGE_PROCESSING_PATH/act
 APP_SINGULARITY_IMAGE=$ANTS_CORTICAL_THICKNESS_SINGULARITY_IMAGE
@@ -17,7 +17,22 @@ study_prefix=$(echo "${ACTIVE_STUDY,,}")
 datetime_stamp=`date '+d%Y%m%d_%H:%M:%S'`
 log_file=${ACTIVE_IMAGE_PROCESSING_LOG_PATH}/${study_prefix}_${BIDS_APP}_${datetime_stamp}.log
 
-bids_app_status.sh
+source $TIC_PATH/bin/bids_app_status.sh
+
+# echo ' ' | tee log_file
+# echo 'datetime.now()         = ' $(date) | tee log_file
+# echo 'active study           = ' $ACTIVE_STUDY | tee log_file
+# echo 'bids app               = ' $BIDS_APP | tee log_file
+# echo 'bids path              = ' $ACTIVE_BIDS_PATH | tee log_file
+# echo 'log path               = ' $ACTIVE_IMAGE_PROCESSING_LOG_PATH | tee log_file
+# echo 'output path            = ' $ACTIVE_APP_OUTPUT_PATH | tee log_file
+# echo 'working path           = ' $ACTIVE_APP_WORKING_PATH | tee log_file
+# echo 'SUBJECTS_DIR           = ' $SUBJECTS_DIR | tee log_file
+# echo 'singularity command    = ' $SINGULARITY_COMMAND
+# echo 'app singularity image  = ' $APP_SINGULARITY_IMAGE | tee log_file
+# echo 'log file               = ' $log_file | tee log_file
+# echo ' ' | tee log_file
+
 
 # NOTE: any -B mount points must exist in the container
 #       run "sudo singularity shell -s xx.img"  and create the mount points
