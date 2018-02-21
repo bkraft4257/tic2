@@ -11,5 +11,5 @@ echo 'working path           = ' $ACTIVE_APP_WORKING_PATH | tee $log_file
 echo 'SUBJECTS_DIR           = ' $SUBJECTS_DIR | tee $log_file
 echo 'singularity command    = ' $SINGULARITY_COMMAND
 echo 'app singularity image  = ' $APP_SINGULARITY_IMAGE | tee $log_file
-echo 'log file               = ' $$log_file | tee $log_file
+echo 'log file               = ' $log_file | tee $log_file
 echo ' ' | tee $log_file
