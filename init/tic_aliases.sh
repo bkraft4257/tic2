@@ -5,6 +5,7 @@ alias tic_make_docs='cd $TIC_PATH/docs/; make clean; make html; cd -; firefox $T
 alias dfgandg='echo; df -h /gandg/; echo'
 
 alias tic_help='firefox $TIC_PATH/docs/build/html/index.html&'
+alias tic_info='tic_info.sh'
 
 source $TIC_PATH/bin/tic_functions.sh
 
