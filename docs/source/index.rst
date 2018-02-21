@@ -17,7 +17,7 @@ Contents:
    other/tic_documentation.rst
    other/studies.md
    other/creating_new_study.md
-   other/quick_instructions.md
+   other/quick_reference.md
 
 Indices and tables
 ==================
