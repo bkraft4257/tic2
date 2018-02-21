@@ -10,7 +10,7 @@ import os
 import argparse
 import sys
 
-STUDY_CHOICES = ['hfpef', 'synergy', 'infinite', 'cenc']
+STUDY_CHOICES = ['hfpef', 'synergy', 'infinite', 'cenc', 'imove']
 DEFAULT_STUDY_CHOICE = 'hfpef'
 
 STUDY_SWITCHER_OUTPUT_FILENAME = os.path.abspath(os.path.join(os.getenv('TIC_INIT_PATH'),
@@ -48,6 +48,7 @@ def _write_study_switcher_script(active_study,
 
         file.write(f'export ACTIVE_BIDS_CONFIG_FILE=${active_study}_BIDS_CONFIG_FILE\n')
         file.write(f'export ACTIVE_HEUDICONV_PROTOCOL=${active_study}_HEUDICONV_PROTOCOL\n')
+        file.write(f'export ACTIVE_CLEAN_BIDS=${active_study}_CLEAN_BIDS\n')
 
         # SUBJECTS_DIR for FreeSurfer
         file.write(f'export ACTIVE_SUBJECTS_DIR=${active_study}_SUBJECTS_DIR\n')

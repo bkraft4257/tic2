@@ -9,7 +9,7 @@ Welcome to TIC's documentation!
 Contents:
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 1
 
    tic_welcome.md
    tic_setup.md
@@ -17,6 +17,7 @@ Contents:
    other/tic_documentation.rst
    other/studies.md
    other/creating_new_study.md
+   other/quick_reference.md
 
 Indices and tables
 ==================

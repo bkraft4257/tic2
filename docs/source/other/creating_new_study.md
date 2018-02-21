@@ -16,7 +16,7 @@ specified TIC path.
 To create a new study in TIC you can run the command
 
 ```
-   >>> create_new_study.py <study_name>  <study_path> <tic_path>
+   >>> create_new_study.py <study_name>  <study_data_path> <tic_path>
    
 ```
 
@@ -115,26 +115,81 @@ alias is
 
 For example, you can run hdc_scan on a tarball
 
-for example
+for example if the DICOM images were in a tarball called imove000.dicom.tar.gz
+you can convert the DICOM images with a generic DICOM to NIFTI
+conversion.
 
 ```
-   >>> ls *
-   34P1081.dicom.tar.gz
+   >>> hdc_scan -d '{subject}.dicom.tar.gz' -s imove000 --ss 1
    
-   >>> hdc_scan -d '{subject}.dicom.tar.gz' -s 34P1081
+   where -s contains the subject_value and -ss is the session_value for
+   the study.
+      
+```
+
+**VERY IMPORTANT** - if you are using the zshrc you must include the
+quotes around the -d parameter. If you leave out the quotes the zsh will
+do automatic brace expansion and you will be kerfuffled.
+
+
+If your data was exported from the BME PACS through a DICOM receiver you
+will need to specify where the DICOM images are located and setup an
+appropriate glob string. Images that are exported via a DICOM receiver
+will be stored in the data structure as follows
 
 ```
 
+    imove000
+        /20180205
+            /MR0001
+            /MR0002
+            /MR....
+            
+    DICOM images stored in each of the MR[0-9][0-9][0-9] subdirectories 
+    with the extension DCM.
+     
+   when this is the data structure you can scan the directory for DICOM 
+   images with this command
+   
+   >>> hdc_scan -d '{subject}/*/*/*.DCM' -s imove000 -ss 1 
+  
+```
 
-This will scan the DICOM images and create a hidden directory,
-.heudiconv, which contains information about the contents of the DICOM images.
+**TIP 1** Your subject_value, in this example imove000, must be the
+parent directory containing your DICOM images. If it is not (and it
+won't be if you exported from BME PACS) you will need to rename the
+directory.
+
+**TIP 2** An easy way to determine the glob pattern is to do the
+following to find the first DICOM image.
 
 ```
-    >>> cd ./.heudiconv/34P1081/info
+    >>> find imove000 -name "*.DCM" -print -quit
+    
+    imove000/20180205/MR0002/000150.DCM
+    
+```
+
+you then just replace the above with '{subject}/*/*/*.DCM. You can also
+use the bash script hdc_find_dcm to perform the same task
+
+```
+    >>> hdc_find_dcm imove000
+
+    imove000/20180205/MR0002/000150.DCM
+    
+```
+
+The hdc_scan file will scan the DICOM images and create a hidden
+directory, .heudiconv in the current directory. This hidden directory
+contains information about the contents of the DICOM images.
+
+```
+    >>> cd ./.heudiconv/imove/info
 
     >>> ls -1 *
-    34P1081.auto.txt
-    34P1081.edit.txt
+    imove000.auto.txt
+    imove000.edit.txt
     convertall.py
     dicominfo.tsv
     dicominfo_with_header_.tsv
@@ -142,29 +197,90 @@ This will scan the DICOM images and create a hidden directory,
     hdc_convertall.py
 ```
 
-The file dicominfo.tsv is a tab separated file containing 29 pieces of
-information for each DICOM images acquired. Y
+The file dicominfo.tsv is a tab separated file containing 25 pieces of
+information for each DICOM images acquired. The 25 pieces of information
+are listed here.
 
 ```
-hdc_add_header dicominfo.tsv -v
-              series_id           sequence_name           series_description  dim1  dim2  dim3  dim4     TR      TE  is_derived  is_motion_corrected
- 0          2-sag_mprage            *tfl3d1_16ns                   sag_mprage   256   240   176     1  2.300    2.98       False                False
- 1          3-sag_swi                *swi3d1r                   Mag_Images   192   192   128     1  0.047   25.00       False                False
- 2          4-sag_swi                *swi3d1r                   Pha_Images   192   192   128     1  0.047   25.00       False                False
- 3          5-sag_swi                *swi3d1r               mIP_Images(SW)   192   192   121     1  0.047   25.00       False                False
- 4          6-sag_swi                *swi3d1r                   SWI_Images   192   192   128     1  0.047   25.00       False                False
- 5          7-sag_t2tse              *spc_133ns                    sag_t2tse   256   240   176     1  3.200  222.00       False                False
- 6          8-sag_t2flair            *spcir_133ns                  sag_t2flair   512   480   176     1  6.000  272.00       False                False
- 7          9-ax_dki_P>>A             *ep_b1000#3                  ax_dki_P>>A    84   128    59    68  9.700  100.00       False                False
- 8        10-ax_dki_P>>A             *ep_b0_2000              ax_dki_P>>A_ADC    84   128    59     1  9.700  100.00        True                False
- 9        11-ax_dki_P>>A              *ep_b1000t           ax_dki_P>>A_TRACEW    84   128   118     1  9.700  100.00        True                False
-10       12-ax_dki_P>>A             *ep_b0_2000               ax_dki_P>>A_FA    84   128    59     1  9.700  100.00        True                False
-11       13-ax_dki_P>>A               Not found            ax_dki_P>>A_ColFA    84   128    59     1 -1.000   -1.00        True                False
-... 
+
+    >>> cd .heudiconv/imove000/info
+    >>> hdc_add_header dicominfo_ses-1.tsv -o dicominfo_ses-1.csv
+    >>> csvcut -n dicominfo_ses-1.csv
+
+         1:
+         2: total_files_till_now
+         3: example_dcm_file
+         4: series_id
+         5: unspecified1
+         6: unspecified2
+         7: unspecified3
+         8: dim1
+         9: dim2
+        10: dim3
+        11: dim4
+        12: TR
+        13: TE
+        14: protocol_name
+        15: is_motion_corrected
+        16: is_derived
+        17: patient_id
+        18: study_description
+        19: referring_physician_name
+        20: series_description
+        21: sequence_name
+        22: image_type
+        23: accession_number
+        24: patient_age
+        25: patient_sex
+        26: date
+
 ```
 
+The fields created by HDC are written to a tsv file,
+dicominfo_ses-1.tsv. HDC creates this file but it does not include any
+header information. I have created a little script to add the header
+information called hdc_add_header. You can then list the header
+information with csvcut.
 
-You will use the information in this file to create a BIDS protocol.  Your protocol will look something like this
+To obtain the values for each of the DICOM images you can use csvcut
+with csvlook
+
+
+```
+>>> csvcut -c 4,21,8,9,10,12,13,15,16 dicominfo_ses-1.csv | csvlook
+
+| series_id                                      | sequence_name | dim1 | dim2 | dim3 |    TR |     TE | is_motion_corrected | is_derived |
+| ---------------------------------------------- | ------------- | ---- | ---- | ---- | ----- | ------ | ------------------- | ---------- |
+| 2-MPRAGE_GRAPPA2                               | *tfl3d1_16ns  |  256 |  240 |  192 | 2.300 |   2.98 |               False |      False |
+| 3-BOLD_resting 4X4X4 A>>P                      | *epfid2d1_64  |   64 |   64 |   35 | 2.000 |  25.00 |               False |      False |
+| 4-rest_topup_A>>P                              | *epse2d1_64   |   64 |   64 |  140 | 2.400 |  38.00 |               False |      False |
+| 5-rest_topup_P>>A                              | *epse2d1_64   |   64 |   64 |  140 | 2.400 |  38.00 |               False |      False |
+| 6-Field_mapping 4X4X4 A>>P                     | *fm2d2r       |   64 |   64 |   35 | 0.488 |   4.92 |               False |      False |
+| 7-Field_mapping 4X4X4 A>>P                     | *fm2d2r       |   64 |   64 |   35 | 0.488 |   7.38 |               False |      False |
+| 8-mbep2d_bold 3mm L>>R                         | epfid2d1_64   |   72 |   64 |   64 | 0.570 |  30.00 |               False |      False |
+| 9-mbep2d_bold 3mm L>>R                         | epfid2d1_64   |   72 |   64 |   64 | 0.570 |  30.00 |               False |      False |
+| 10-mbep2d_bold 3mm R>>L (copy from bold L>>R)  | epfid2d1_64   |   72 |   64 |   64 | 0.570 |  30.00 |               False |      False |
+| 11-mbep2d_bold 3mm R>>L (copy from bold L>>R)  | epfid2d1_64   |   72 |   64 |   64 | 0.570 |  30.00 |               False |      False |
+| 12-T2 FLAIR SPACE NEW                          | *spcir_192ns  |  256 |  236 |  192 | 5.000 | 383.00 |               False |      False |
+| 13-NODDI_DTI_120dir_12b0_AF4                   | epse2d1_128   |  128 |  128 |   80 | 3.500 | 106.00 |               False |      False |
+| 14-NODDI_DTI_120dir_12b0_AF4                   | ep_b5#1       |  128 |  128 |   80 | 3.500 | 106.00 |               False |      False |
+| 15-NODDI_DTI_120dir_12b0_AF4                   | ep_b5#1       |  128 |  128 |   80 | 3.500 | 106.00 |               False |      False |
+| 16-NODDI_DTI_120dir_12b0_AF4 P>>A              | epse2d1_128   |  128 |  128 |   80 | 3.500 | 106.00 |               False |      False |
+| 17-NODDI_DTI_120dir_12b0_AF4 P>>A              | ep_b5#1       |  128 |  128 |   80 | 3.500 | 106.00 |               False |      False |
+| 18-NODDI_DTI_120dir_12b0_AF4 P>>A              | ep_b5#1       |  128 |  128 |   80 | 3.500 | 106.00 |               False |      False |
+| 19-QSM_e6_p2_2mm                               | *swi3d6r      |  416 |  312 |  384 | 0.051 |  44.15 |               False |      False |
+| 20-QSM_e6_p2_2mm                               | *swi3d6r      |  416 |  312 |  384 | 0.051 |  44.15 |               False |      False |
+| 21-QSM_e6_p2_2mm                               | *swi3d6r      |  416 |  312 |  342 | 0.051 |  44.15 |               False |      False |
+| 22-QSM_e6_p2_2mm                               | *swi3d6r      |  416 |  312 |  384 | 0.051 |  44.15 |               False |      False |
+| 23-pcasl_wfu_4_0C R>>L EYES OPEN               | epfid2d1_56   |   70 |   56 |   43 | 4.000 |  11.00 |               False |      False |
+| 24-pcasl_wfu_4_0C R>>L EYES OPEN               | epfid2d1_56   |   70 |   56 |   43 | 4.000 |  11.00 |               False |       True |
+| 25-pcasl_wfu_4_0C L>>R (COPY SLICES FROM R>>L) | epfid2d1_56   |   70 |   56 |   43 | 4.000 |  11.00 |               False |      False |
+| 26-pcasl_wfu_4_0C L>>R (COPY SLICES FROM R>>L) | epfid2d1_56   |   70 |   56 |   43 | 4.000 |  11.00 |               False |       True |
+
+```
+
+You will use the information in this file to create a BIDS protocol.
+Your protocol will look something like this
 
 ```
 import os
