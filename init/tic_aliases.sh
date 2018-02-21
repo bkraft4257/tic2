@@ -11,6 +11,7 @@ source $TIC_PATH/bin/tic_functions.sh
 alias sw='study_switcher.py '
 
 alias swh='study_switcher.py -s hfpef; source $TIC_INIT_PATH/tic_study_switcher.sh'
+alias swm='study_switcher.py -s imove; source $TIC_INIT_PATH/tic_study_switcher.sh'
 alias swi='study_switcher.py -s infinite; source $TIC_INIT_PATH/tic_study_switcher.sh'
 alias sws='study_switcher.py -s synergy; source $TIC_INIT_PATH/tic_study_switcher.sh'
 
@@ -26,7 +27,7 @@ alias cdmni='cd $TEMPLATE_MNI; lsreport_function'
 
 alias cdsd='cd $SUBJECTS_DIR; lsreport_function'
 
-alias cda='echo; echo $PWD; cd $(pwd -P); echo $PWD; echo; ls; echo'
+alias cdabs='echo; echo $PWD; cd $(pwd -P); echo $PWD; echo; ls; echo'
 
 alias retic='source $TIC_PATH/init/tic_aliases.sh'
 alias lstic='echo; echo $TIC_PATH; echo'

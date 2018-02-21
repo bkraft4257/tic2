@@ -2,7 +2,7 @@
 
 # Aliases
 
-alias cds='cd $ACTIVE_PATH; lsreport_function'
+alias cdas='cd $ACTIVE_PATH; lsreport_function'
 alias cdb='cd $ACTIVE_BIDS_PATH; lsreport_function'
 alias cdin='cd $ACTIVE_PATH/incoming; lsreport_function'
 alias cdia='cd $ACTIVE_IMAGE_ANALYSIS_PATH; lsreport_function'
@@ -14,4 +14,4 @@ alias cdss='cd $ACTIVE_SCRIPTS_PATH; lsreport_function'
 alias asp='echo; echo $ACTIVE_PATH; echo'
 alias as='echo; echo $ACTIVE_STUDY; echo'
 
-alias bv='bids-validator -c $ACTIVE_BIDS_PATH/.bids.cfg $ACTIVE_BIDS_PATH'
+alias bv='echo; echo $ACTIVE_BIDS_PATH; echo; bids-validator -c $ACTIVE_BIDS_PATH/.bids.cfg $ACTIVE_BIDS_PATH; echo'
