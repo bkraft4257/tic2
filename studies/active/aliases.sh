@@ -14,4 +14,4 @@ alias cdss='cd $ACTIVE_SCRIPTS_PATH; lsreport_function'
 alias asp='echo; echo $ACTIVE_PATH; echo'
 alias as='echo; echo $ACTIVE_STUDY; echo'
 
-alias bv='echo; echo $ACTIVE_BIDS_PATH; echo; bids-validator -c $ACTIVE_BIDS_PATH/.bids.cfg $ACTIVE_BIDS_PATH; echo'
+alias bv='echo; $ACTIVE_BIDS_PATH; echo; cat $ACTIVE_BIDS_PATH/.bids.cfg;  echo; bids-validator -c $ACTIVE_BIDS_PATH/.bids.cfg $ACTIVE_BIDS_PATH; echo'
