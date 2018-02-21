@@ -27,10 +27,4 @@ PYTHONDONTWRITEBYTECODE=1
 
 umask 0002
 
-echo
-echo "TIC_PATH     : $TIC_PATH"
-echo "SUBJECTS_DIR : $SUBJECTS_DIR"
-echo "umask        : $(umask)"
-echo
-
  
