@@ -17,7 +17,7 @@ study_prefix=$(echo "${ACTIVE_STUDY,,}")
 datetime_stamp=`date '+d%Y%m%d_%H:%M:%S'`
 log_file=${ACTIVE_IMAGE_PROCESSING_LOG_PATH}/${study_prefix}_${BIDS_APP}_${datetime_stamp}.log
 
-source $TIC_PATH/bin/bids_app_status.sh
+source $ACTIVE_SCRIPTS_PATH/bids_app_status.sh
 
 # echo ' ' | tee log_file
 # echo 'datetime.now()         = ' $(date) | tee log_file
