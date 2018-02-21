@@ -1,13 +1,13 @@
 #!/bin/bash
 
-ACTIVE_ACT_OUTPUT_PATH=$ACTIVE_IMAGE_PROCESSING_PATH/act
 
-echo
-echo 'active study = ' $ACTIVE_STUDY
-echo 'bids path    = ' $ACTIVE_BIDS_PATH
-echo 'log path     = ' $ACTIVE_IMAGE_PROCESSING_LOG_PATH
-echo 'output path  = ' $ACTIVE_ACT_OUTPUT_PATH
-echo
+ANTS_CORTICAL_THICKNESS_SINGULARITY_IMAGE='/cenc/software/bids_apps/antsCorticalThickness/bids_antscorticalthickness-2017-10-14-95aa110c26f8.img'
+
+BIDS_APP=ants_cortical_thickness
+
+ACTIVE_ACT_OUTPUT_PATH=$ACTIVE_IMAGE_PROCESSING_PATH/act
+APP_SINGULARITY_IMAGE=$ANTS_CORTICAL_THICKNESS_SINGULARITY_IMAGE
+ACTIVE_APP_WORKING_PATH=$ACTIVE_APP_OUTPUT_PATH/_working
 
 # Convert to lower case
 study_prefix=$(echo "${ACTIVE_STUDY,,}")
@@ -15,20 +15,12 @@ study_prefix=$(echo "${ACTIVE_STUDY,,}")
 # create the output and work directories parallel to BIDS hierarchy, not inside it
 
 datetime_stamp=`date '+d%Y%m%d_%H:%M:%S'`
-log_file=${ACTIVE_IMAGE_PROCESSING_LOG_PATH}/${study_prefix}_act_${datetime_stamp}.log
+log_file=${ACTIVE_IMAGE_PROCESSING_LOG_PATH}/${study_prefix}_${BIDS_APP}_${datetime_stamp}.log
 
-echo
-echo $log_file
-echo
+bids_app_status.sh
 
 # NOTE: any -B mount points must exist in the container
 #       run "sudo singularity shell -s xx.img"  and create the mount points
-
-ANTS_CORTICAL_THICKNESS_SINGULARITY_IMAGE='/cenc/software/bids_apps/antsCorticalThickness/bids_antscorticalthickness-2017-10-14-95aa110c26f8.img'
-
-echo 'singularity command   = ' $SINGULARITY_COMMAND
-echo 'act singularity image = ' $ANTS_CORTICAL_THICKNESS_SINGULARITY_IMAGE
-
 
 # https://askubuntu.com/questions/625224/how-to-redirect-stderr-to-a-file
 # Redirect stdout to one file and stderr to another file:
