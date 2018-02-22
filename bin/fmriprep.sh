@@ -17,7 +17,7 @@ parameters=${@}
 datetime_stamp=`date '+d%Y%m%d_%H:%M:%S'`
 log_file=${ACTIVE_IMAGE_PROCESSING_LOG_PATH}/${study_prefix}_${BIDS_APP}_${datetime_stamp}.log
 
-source $TIC_PATH/studies/active/bids_app_status.sh
+source $TIC_PATH/studies/scripts/active/bids_app_status.sh
 
 echo ' ' | tee log_file
 echo 'datetime.now()         = ' $(date) | tee log_file
