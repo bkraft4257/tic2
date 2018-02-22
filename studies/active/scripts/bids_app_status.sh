@@ -13,3 +13,6 @@ echo 'singularity command    = ' $SINGULARITY_COMMAND
 echo 'app singularity image  = ' $APP_SINGULARITY_IMAGE | tee $log_file
 echo 'log file               = ' $log_file | tee $log_file
 echo ' ' | tee $log_file
+echo 'parameters             = ' ${parameters}
+echo ' ' | tee $log_file
+echo ' ' | tee $log_file

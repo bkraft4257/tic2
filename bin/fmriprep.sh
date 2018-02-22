@@ -10,11 +10,14 @@ ACTIVE_APP_WORKING_PATH=$ACTIVE_APP_OUTPUT_PATH/_working
 
 # Convert to lower case
 study_prefix=$(echo "${ACTIVE_STUDY,,}")
+parameters=${@}
 
 # create the output and work directories parallel to BIDS hierarchy, not inside it
 
 datetime_stamp=`date '+d%Y%m%d_%H:%M:%S'`
 log_file=${ACTIVE_IMAGE_PROCESSING_LOG_PATH}/${study_prefix}_${BIDS_APP}_${datetime_stamp}.log
+
+source $TIC_PATH/studies/active/bids_app_status.sh
 
 echo ' ' | tee log_file
 echo 'datetime.now()         = ' $(date) | tee log_file
@@ -47,4 +50,4 @@ nohup time /usr/local/bin/singularity run -w -B /cenc -B /gandg -B /bkraft1 \
                  $ACTIVE_BIDS_PATH \
                  $ACTIVE_APP_OUTPUT_PATH \
                  --work-dir $ACTIVE_APP_WORKING_PATH \
-                 participant ${@} > $log_file 2>&1 &
+                 participant ${@} >> $log_file 2>&1 &
