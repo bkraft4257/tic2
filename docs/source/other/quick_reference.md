@@ -27,7 +27,9 @@ These aliases allow you to quickly move between studies.
 
 # Scripts
 
-**hdc_singularity.sh**   - Converts DICOM to NIFTI and places them in the BIDS data directory.  
+**hdc.sh**   - Converts DICOM to NIFTI and places them in the BIDS data directory.  
+**clean_bids.sh**       - Runs MRI Quality Control as a group on subjects in MRIQC directory.
+
 **fmriprep.sh**          - Runs fmriprep on a single subject.  
 **mriqc.sh**             - Runs MRI Quality Control on a single subject.  
 **mriqc_group.sh**       - Runs MRI Quality Control as a group on subjects in MRIQC directory.
@@ -76,27 +78,31 @@ to convert subject hfs070 session 1 and add it to the active study.
 
 ### Convert DICOM images to NIFTI
 
-1. cdin
-1. mv <dicom_dicom_dir, **hf_s070_hf_s070** > < bids_subject_value, **hfs070** >
-1. **hdc_singularity** -s <bids_subject_value, **hfs070** > -ss < bids_session_value, **1** >
+1. **cdin**
+1. **mv** <dicom_dicom_dir, **hf_s070_hf_s070** > < bids_subject_value, **hfs070** >
+1. **hdc.sh** -s <bids_subject_value, **hfs070** > -ss < bids_session_value, **1** >
 
 ### Clean BIDS directory
 
-1. cdb
-2. **clean_bids** <subject_value,hfs070> <session_value,1>
+1. **cdb**
+2. **clean_bids.sh** <subject_value, **hfs070 **> <session_value, **1** >
 
 ### Check if BIDS directory is still valid
 
-1. bv
+1. **bv**
 
 ### MRI Quality Control
 
-1. mriqc.sh --participant-label < subject_value, **hfs070** >
+1. **mriqc.sh --participant-label** < subject_value, **hfs070** >
 
 
 ### fmriprep
 
-1. fmriprep.sh --participant-label < subject_value, **hfs070** >
+1. **fmriprep.sh --participant-label** < subject_value, **hfs070** >
+
+
+
+
 
 
 

@@ -35,7 +35,7 @@ echo
 echo "List images converted by heudiconv (HDC)"
 echo "-------------------------------------------------------------------------------------------------"
 echo
-cat -n ${bids_path}/${subject_value}_ses-${session_value}.auto.txt
+cat -n ${bids_path}/${subject_value}_ses-${session_value}.edit.txt
 echo
 echo
 
