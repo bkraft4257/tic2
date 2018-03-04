@@ -249,6 +249,9 @@ def infotodict(seqinfo):
     rest_epi_topup = create_key('sub-{subject}/{session}/func/sub-{subject}_{session}_task-rest'
                                 '_acq-epi_rec-topup_bold.{item:01d}')
 
+    rest_epi_topup_sbref = create_key('sub-{subject}/{session}/func/sub-{subject}_{session}_task-rest'
+                                      '_acq-epi_rec-topup_sbref.{item:01d}')
+
     rest_epi_topup_ap = create_key('sub-{subject}/{session}/fmap/sub-{subject}_{session}_acq-epse_dir-ap_epi.{item:01d}')
 
     rest_epi_topup_pa = create_key('sub-{subject}/{session}/func/sub-{subject}_{session}_task-rest'
@@ -261,14 +264,26 @@ def infotodict(seqinfo):
 
     fmap_phasediff = create_key('sub-{subject}/{session}/fmap/sub-{subject}_{session}_acq-bold_phasediff.{item:01d}')
 
-    pcasl_lr_high_co2 = create_key('sub-{subject}/{session}/func/sub-{subject}_{session}_task-rest'
+    # pCASL High CO2
+
+    pcasl_high_co2_lr = create_key('sub-{subject}/{session}/func/sub-{subject}_{session}_task-rest'
                                    '_acq-pcasl_bold.{item:01d}')
 
-    pcasl_rest_rl = create_key('sub-{subject}/{session}/fmap/sub-{subject}_{session}_acq-pcasl_dir-rl_epi.{item:01d}')
+    pcasl_high_co2_lr_sbref = create_key('sub-{subject}/{session}/func/sub-{subject}_{session}_task-rest'
+                                         '_acq-pcasl_sbref.{item:01d}')
 
-    pcasl_topup_rl = create_key('sub-{subject}/{session}/fmap/sub-{subject}_{session}_acq-pcasl_dir-rl_epi.{item:01d}')
+    pcasl_high_co2_topup_lr = create_key('sub-{subject}/{session}/fmap/sub-{subject}_{session}'
+                                         '_acq-pcasl_epi.{item:01d}')
 
-    pcasl_topup_lr = create_key('sub-{subject}/{session}/fmap/sub-{subject}_{session}_acq-pcasl_dir-lr_epi.{item:01d}')
+    pcasl_high_co2_topup_rl = create_key('sub-{subject}/{session}/fmap/sub-{subject}_{session}'
+                                         '_acq-pcasl_epi.{item:01d}')
+
+    # pCASL REST
+    pcasl_rest_rl = create_key('sub-{subject}/{session}/func/sub-{subject}_{session}_acq-pcasl_dir-rl_bold.{item:01d}')
+
+    pcasl_rest_topup_rl = create_key('sub-{subject}/{session}/fmap/sub-{subject}_{session}_acq-pcasl_dir-rl_epi.{item:01d}')
+
+    pcasl_rest_topup_lr = create_key('sub-{subject}/{session}/fmap/sub-{subject}_{session}_acq-pcasl_dir-lr_epi.{item:01d}')
 
     dti_30dir_ap = create_key('sub-{subject}/{session}/dwi/sub-{subject}_{session}_acq-30ap_dwi.{item:01d}')
 
@@ -288,11 +303,11 @@ def infotodict(seqinfo):
 
             rest_mbepi: [],
             rest_mbepi_sbref: [],
-
             rest_mbepi_topup_rl: [],
             rest_mbepi_topup_lr: [],
 
             rest_epi_topup: [],
+            rest_epi_topup_sbref: [],
             rest_epi_topup_ap: [],
             rest_epi_topup_pa: [],
 
@@ -300,10 +315,10 @@ def infotodict(seqinfo):
             fmap_magnitude1: [],
             fmap_phasediff: [],
 
-            pcasl_lr_high_co2: [],
-            pcasl_rest_rl: [],
-            pcasl_topup_rl: [],
-            pcasl_topup_lr: [],
+            pcasl_high_co2_lr: [],
+            pcasl_high_co2_lr_sbref: [],
+            pcasl_high_co2_topup_rl: [],
+            pcasl_high_co2_topup_lr: [],
 
             dti_30dir_ap: [],
             dti_30dir_topup_ap: [],
@@ -331,6 +346,7 @@ def infotodict(seqinfo):
                 ('epfid2d1_64' in s.sequence_name) and
                 (s.dim4 == 500)):
             info[rest_mbepi] = [s.series_id]
+            info[rest_mbepi_topup_rl] = [s.series_id]
 
         if (('mbep2d_bold 3mm L>>R_SBRef' in s.series_description) and
                 ('epfid2d1_64' in s.sequence_name) and
@@ -341,11 +357,6 @@ def infotodict(seqinfo):
                 ('epfid2d1_64' in s.sequence_name) and
                 (s.dim4 == 10)):
             info[rest_mbepi_topup_lr] = [s.series_id]
-
-        if (('mbep2d_bold 3mm R>>L' in s.series_description) and
-                ('epfid2d1_64' in s.sequence_name) and
-                (s.dim4 == 500)):
-            info[rest_mbepi_topup_rl] = [s.series_id]
 
         # EPI Rest with TOPUP correction
 
@@ -391,10 +402,6 @@ def infotodict(seqinfo):
                 ('ep_b0' in s.sequence_name) and
                 (s.dim4 == 31)):
             info[dti_30dir_ap] = [s.series_id]
-
-        if (('DTI_30dir_1b0 A>>P' in s.series_description) and
-                ('ep_b0' in s.sequence_name) and
-                (s.dim4 == 31)):
             info[dti_30dir_topup_ap] = [s.series_id]
 
         if (('DTI_30dir_1b0 P>>A' in s.series_description) and
@@ -408,10 +415,6 @@ def infotodict(seqinfo):
                 ('epfid2d1_64' in s.sequence_name) and
                 (s.dim4 == 81)):
             info[pcasl_rest_rl] = [s.series_id]
-
-        if (('pcasl_wfu_4_0C R>>L EYES OPEN' in s.series_description) and
-                ('epfid2d1_64' in s.sequence_name) and
-                (s.dim4 == 3)):
             info[pcasl_rest_topup_rl] = [s.series_id]
 
         if (('pcasl_wfu_4_0C L>>R' in s.series_description) and

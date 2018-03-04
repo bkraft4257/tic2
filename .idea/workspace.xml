@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6f3e13b3-cd58-4c4d-98f6-1a68f8358bfb" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/bin/hdc_clean.py" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/bin/hdc_look.py" afterPath="$PROJECT_DIR$/bin/hdc_look.py" />
       <change beforePath="$PROJECT_DIR$/studies/hfpef/scripts/hfpef_protocol_v2b.py" afterPath="$PROJECT_DIR$/studies/hfpef/scripts/hfpef_protocol_v2b.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -50,11 +48,11 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="hfpef_protocol_v2b.py" pinned="false" current-in-tab="false">
+          <file leaf-file-name="hfpef_protocol_v2b.py" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/studies/hfpef/scripts/hfpef_protocol_v2b.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="4916">
-                  <caret line="411" column="43" lean-forward="false" selection-start-line="411" selection-start-column="43" selection-end-line="411" selection-end-column="43" />
+                <state relative-caret-position="123">
+                  <caret line="416" column="47" lean-forward="true" selection-start-line="416" selection-start-column="47" selection-end-line="416" selection-end-column="47" />
                   <folding />
                 </state>
               </provider>
@@ -83,10 +81,10 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="hdc_clean.py" pinned="false" current-in-tab="true">
+          <file leaf-file-name="hdc_clean.py" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/bin/hdc_clean.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="282">
+                <state relative-caret-position="570">
                   <caret line="35" column="0" lean-forward="true" selection-start-line="35" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
                   <folding>
                     <element signature="e#122#137#0" expanded="true" />
@@ -103,9 +101,9 @@
             <entry file="file://$PROJECT_DIR$/studies/hfpef/scripts/hfpef_protocol_v2b.py">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="127">
-                  <caret line="265" column="0" lean-forward="false" selection-start-line="263" selection-start-column="0" selection-end-line="265" selection-end-column="0" />
+                  <caret line="270" column="0" lean-forward="false" selection-start-line="268" selection-start-column="0" selection-end-line="270" selection-end-column="0" />
                   <folding>
-                    <element signature="e#18538#18573#0" expanded="false" />
+                    <element signature="e#19282#19317#0" expanded="false" />
                   </folding>
                 </state>
               </provider>
@@ -238,9 +236,9 @@
         <option value="$PROJECT_DIR$/docs/source/other/heudiconv.rst.md" />
         <option value="$PROJECT_DIR$/studies/hfpef/environment.sh" />
         <option value="$PROJECT_DIR$/bin/hdc_singularity.sh" />
-        <option value="$PROJECT_DIR$/studies/hfpef/scripts/hfpef_protocol_v2b.py" />
         <option value="$PROJECT_DIR$/bin/hdc_look.py" />
         <option value="$PROJECT_DIR$/bin/hdc_clean.py" />
+        <option value="$PROJECT_DIR$/studies/hfpef/scripts/hfpef_protocol_v2b.py" />
       </list>
     </option>
   </component>
@@ -401,13 +399,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1517948604886</updated>
-    </task>
-    <task id="LOCAL-00057" summary="Removed {item:01d}.">
-      <created>1518218011646</created>
-      <option name="number" value="00057" />
-      <option name="presentableId" value="LOCAL-00057" />
-      <option name="project" value="LOCAL" />
-      <updated>1518218011646</updated>
     </task>
     <task id="LOCAL-00058" summary="Removed {item:01d}.">
       <created>1518218454698</created>
@@ -745,7 +736,14 @@
       <option name="project" value="LOCAL" />
       <updated>1520177392149</updated>
     </task>
-    <option name="localTasksCounter" value="106" />
+    <task id="LOCAL-00106" summary="Added ability to clean out a specific subject and session&#10;.heudiconv directory.">
+      <created>1520178470145</created>
+      <option name="number" value="00106" />
+      <option name="presentableId" value="LOCAL-00106" />
+      <option name="project" value="LOCAL" />
+      <updated>1520178470145</updated>
+    </task>
+    <option name="localTasksCounter" value="107" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -822,7 +820,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Sourced bids_app_status.sh instead of calling it directly." />
     <MESSAGE value="Fixed writing to log_file" />
     <MESSAGE value="Fixed bug. Missing output directory in act.sh" />
     <MESSAGE value="Added a cat of the bids.config file before running bids-validator" />
@@ -847,7 +844,8 @@
     <MESSAGE value="Testing hdc_look.py" />
     <MESSAGE value="Added display of dicominfo file" />
     <MESSAGE value="Fixed str bug." />
-    <option name="LAST_COMMIT_MESSAGE" value="Fixed str bug." />
+    <MESSAGE value="Added ability to clean out a specific subject and session&#10;.heudiconv directory." />
+    <option name="LAST_COMMIT_MESSAGE" value="Added ability to clean out a specific subject and session&#10;.heudiconv directory." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1257,14 +1255,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/studies/hfpef/scripts/hfpef_protocol_v2b.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4916">
-          <caret line="411" column="43" lean-forward="false" selection-start-line="411" selection-start-column="43" selection-end-line="411" selection-end-column="43" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/bin/hdc_look.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="221">
@@ -1278,11 +1268,19 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/bin/hdc_clean.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="282">
+        <state relative-caret-position="570">
           <caret line="35" column="0" lean-forward="true" selection-start-line="35" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
           <folding>
             <element signature="e#122#137#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/studies/hfpef/scripts/hfpef_protocol_v2b.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="123">
+          <caret line="416" column="47" lean-forward="true" selection-start-line="416" selection-start-column="47" selection-end-line="416" selection-end-column="47" />
+          <folding />
         </state>
       </provider>
     </entry>
