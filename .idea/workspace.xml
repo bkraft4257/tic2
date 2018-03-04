@@ -51,8 +51,8 @@
           <file leaf-file-name="hfpef_protocol_v2b.py" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/studies/hfpef/scripts/hfpef_protocol_v2b.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="385">
-                  <caret line="372" column="59" lean-forward="true" selection-start-line="372" selection-start-column="59" selection-end-line="372" selection-end-column="59" />
+                <state relative-caret-position="326">
+                  <caret line="367" column="54" lean-forward="true" selection-start-line="367" selection-start-column="54" selection-end-line="367" selection-end-column="54" />
                   <folding />
                 </state>
               </provider>
@@ -97,13 +97,13 @@
       </split-first>
       <split-second>
         <leaf>
-          <file leaf-file-name="hfpef_protocol_v2b.py" pinned="false" current-in-tab="false">
+          <file leaf-file-name="hfpef_protocol_v2b.py" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/studies/hfpef/scripts/hfpef_protocol_v2b.py">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="127">
-                  <caret line="269" column="0" lean-forward="false" selection-start-line="267" selection-start-column="0" selection-end-line="269" selection-end-column="0" />
+                  <caret line="278" column="0" lean-forward="false" selection-start-line="276" selection-start-column="0" selection-end-line="278" selection-end-column="0" />
                   <folding>
-                    <element signature="e#19232#19267#0" expanded="false" />
+                    <element signature="e#19592#19627#0" expanded="false" />
                   </folding>
                 </state>
               </provider>
@@ -124,7 +124,7 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="heudiconv.rst.md" pinned="false" current-in-tab="true">
+          <file leaf-file-name="heudiconv.rst.md" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/docs/source/other/heudiconv.rst.md">
               <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
                 <state split_layout="SPLIT">
@@ -399,13 +399,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1517948604886</updated>
-    </task>
-    <task id="LOCAL-00059" summary="Testing MPRAGE appending">
-      <created>1518218814245</created>
-      <option name="number" value="00059" />
-      <option name="presentableId" value="LOCAL-00059" />
-      <option name="project" value="LOCAL" />
-      <updated>1518218814245</updated>
     </task>
     <task id="LOCAL-00060" summary="Protocol is now correct except it doesn't handle multiple entries. I&#10;need to contact heudiconv group to ask them about this.">
       <created>1518222812443</created>
@@ -743,7 +736,14 @@
       <option name="project" value="LOCAL" />
       <updated>1520179862743</updated>
     </task>
-    <option name="localTasksCounter" value="108" />
+    <task id="LOCAL-00108" summary="Update hfpef protocol. Fixed numerous bugs.">
+      <created>1520180440485</created>
+      <option name="number" value="00108" />
+      <option name="presentableId" value="LOCAL-00108" />
+      <option name="project" value="LOCAL" />
+      <updated>1520180440485</updated>
+    </task>
+    <option name="localTasksCounter" value="109" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -1278,8 +1278,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/studies/hfpef/scripts/hfpef_protocol_v2b.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="385">
-          <caret line="372" column="59" lean-forward="true" selection-start-line="372" selection-start-column="59" selection-end-line="372" selection-end-column="59" />
+        <state relative-caret-position="326">
+          <caret line="367" column="54" lean-forward="true" selection-start-line="367" selection-start-column="54" selection-end-line="367" selection-end-column="54" />
           <folding />
         </state>
       </provider>

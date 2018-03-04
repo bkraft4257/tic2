@@ -237,6 +237,8 @@ def infotodict(seqinfo):
     t1 = create_key('sub-{subject}/{session}/anat/sub-{subject}_{session}_T1w.{item:01d}')
     flair = create_key('sub-{subject}/{session}/anat/sub-{subject}_{session}_FLAIR.{item:01d}')
 
+    # Rest Multiband EPI with TOPUP reconstruction
+
     rest_mbepi = create_key('sub-{subject}/{session}/func/sub-{subject}_{session}_task-rest_acq-mbepi_bold.{item:01d}')
     rest_mbepi_sbref = create_key('sub-{subject}/{session}/func/sub-{subject}_{session}_task-rest_acq-mbepi_sbref.{item:01d}')
 
@@ -245,6 +247,8 @@ def infotodict(seqinfo):
 
     rest_mbepi_topup_lr = create_key('sub-{subject}/{session}/fmap/sub-{subject}_{session}'
                                      '_acq-mbepi_dir-lr_epi.{item:01d}')
+
+    # Rest EPI with TOPUP reconstruction
 
     rest_epi_topup = create_key('sub-{subject}/{session}/func/sub-{subject}_{session}_task-rest'
                                 '_acq-epi_rec-topup_bold.{item:01d}')
@@ -256,8 +260,13 @@ def infotodict(seqinfo):
 
     rest_epi_topup_pa = create_key('sub-{subject}/{session}/func/sub-{subject}_{session}_acq-epse_dir-pa_epi.{item:01d}')
 
+    # Rest EPI with fieldmap reconstruction
+
     rest_epi_fmap = create_key('sub-{subject}/{session}/func/sub-{subject}_{session}_task-rest'
                                '_acq-epi_rec-fmap_bold.{item:01d}')
+
+    rest_epi_fmap_sbref = create_key('sub-{subject}/{session}/func/sub-{subject}_{session}_task-rest'
+                                     '_acq-epi_rec-fmap_sbref.{item:01d}')
 
     fmap_magnitude1 = create_key('sub-{subject}/{session}/fmap/sub-{subject}_{session}_acq-bold_magnitude1.{item:01d}')
 
@@ -265,17 +274,17 @@ def infotodict(seqinfo):
 
     # pCASL High CO2
 
-    pcasl_high_co2_lr = create_key('sub-{subject}/{session}/func/sub-{subject}_{session}_task-rest'
+    pcasl_high_co2_lr = create_key('sub-{subject}/{session}/func/sub-{subject}_{session}_task-co2'
                                    '_acq-pcasl_bold.{item:01d}')
 
-    pcasl_high_co2_lr_sbref = create_key('sub-{subject}/{session}/func/sub-{subject}_{session}_task-rest'
+    pcasl_high_co2_lr_sbref = create_key('sub-{subject}/{session}/func/sub-{subject}_{session}_task-co2'
                                          '_acq-pcasl_sbref.{item:01d}')
 
     pcasl_high_co2_topup_lr = create_key('sub-{subject}/{session}/fmap/sub-{subject}_{session}'
-                                         '_acq-pcasl_epi.{item:01d}')
+                                         '_acq-co2pcasl_dir-lr_epi.{item:01d}')
 
     pcasl_high_co2_topup_rl = create_key('sub-{subject}/{session}/fmap/sub-{subject}_{session}'
-                                         '_acq-pcasl_epi.{item:01d}')
+                                         '_acq-co2pcasl_dir-lr_epi.{item:01d}')
 
     # pCASL REST
     pcasl_rest_rl = create_key('sub-{subject}/{session}/func/sub-{subject}_{session}_acq-pcasl_dir-rl_bold.{item:01d}')
@@ -283,6 +292,8 @@ def infotodict(seqinfo):
     pcasl_rest_topup_rl = create_key('sub-{subject}/{session}/fmap/sub-{subject}_{session}_acq-pcasl_dir-rl_epi.{item:01d}')
 
     pcasl_rest_topup_lr = create_key('sub-{subject}/{session}/fmap/sub-{subject}_{session}_acq-pcasl_dir-lr_epi.{item:01d}')
+
+    # DTI 30 Directions
 
     dti_30dir_ap = create_key('sub-{subject}/{session}/dwi/sub-{subject}_{session}_acq-30ap_dwi.{item:01d}')
 
@@ -311,6 +322,7 @@ def infotodict(seqinfo):
             rest_epi_topup_pa: [],
 
             rest_epi_fmap: [],
+            rest_epi_fmap_sbref: [],
             fmap_magnitude1: [],
             fmap_phasediff: [],
 
