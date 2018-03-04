@@ -2,13 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6f3e13b3-cd58-4c4d-98f6-1a68f8358bfb" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/studies/hfpef/scripts/hfpef_protocol_v2b.py" />
-      <change beforePath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/tic_core.iml" afterPath="$PROJECT_DIR$/.idea/tic_core.iml" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/docs/source/other/heudiconv.rst.md" afterPath="$PROJECT_DIR$/docs/source/other/heudiconv.rst.md" />
-      <change beforePath="$PROJECT_DIR$/studies/_new_study_template/hdc_protocol_template.py" afterPath="$PROJECT_DIR$/studies/_new_study_template/hdc_protocol_template.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -86,8 +80,8 @@
           <file leaf-file-name="hfpef_protocol_v2b.py" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/studies/hfpef/scripts/hfpef_protocol_v2b.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="-5974">
-                  <caret line="25" column="0" lean-forward="true" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
+                <state relative-caret-position="112">
+                  <caret line="412" column="54" lean-forward="true" selection-start-line="412" selection-start-column="54" selection-end-line="412" selection-end-column="54" />
                   <folding>
                     <element signature="e#18538#18573#0" expanded="false" />
                   </folding>
@@ -131,7 +125,7 @@
               <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
                 <state split_layout="SPLIT">
                   <first_editor relative-caret-position="304">
-                    <caret line="27" column="4" lean-forward="true" selection-start-line="27" selection-start-column="4" selection-end-line="27" selection-end-column="4" />
+                    <caret line="27" column="4" lean-forward="false" selection-start-line="27" selection-start-column="4" selection-end-line="27" selection-end-column="4" />
                     <folding />
                   </first_editor>
                   <second_editor>
@@ -399,13 +393,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1517948604886</updated>
-    </task>
-    <task id="LOCAL-00045" summary="fmriprep is not running. Debugging now.  Reverting back to fmriprep.sh from&#10;master.&#10; &#10;Throwing error&#10;&#10;ERROR  : No valid /bin/sh in container&#10;ABORT  : Retval = 255&#10;0.01user 0.00system 0:00.03elapsed 48%CPU (0avgtext+0avgdata 1484maxresident)k&#10;0inputs+8outputs (0major+1081minor)pagefaults 0swaps">
-      <created>1518195568133</created>
-      <option name="number" value="00045" />
-      <option name="presentableId" value="LOCAL-00045" />
-      <option name="project" value="LOCAL" />
-      <updated>1518195568133</updated>
     </task>
     <task id="LOCAL-00046" summary="fmriprep is not running. Debugging now.  Reverting back to fmriprep.sh from&#10;master.&#10; &#10;Throwing error&#10;&#10;ERROR  : No valid /bin/sh in container&#10;ABORT  : Retval = 255&#10;0.01user 0.00system 0:00.03elapsed 48%CPU (0avgtext+0avgdata 1484maxresident)k&#10;0inputs+8outputs (0major+1081minor)pagefaults 0swaps">
       <created>1518195645523</created>
@@ -743,7 +730,14 @@
       <option name="project" value="LOCAL" />
       <updated>1519843785219</updated>
     </task>
-    <option name="localTasksCounter" value="94" />
+    <task id="LOCAL-00094" summary="Updating hfpef protocol to work with hdc singularity image.">
+      <created>1520173405725</created>
+      <option name="number" value="00094" />
+      <option name="presentableId" value="LOCAL-00094" />
+      <option name="project" value="LOCAL" />
+      <updated>1520173405726</updated>
+    </task>
+    <option name="localTasksCounter" value="95" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -820,7 +814,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Fixed NODDI protocol bug. Repeated scans are not supported at this time." />
     <MESSAGE value="Fixed bug in cleaning procedure. NIFTI files and JSON files must be +w &#10;before cleaning begins." />
     <MESSAGE value="Fixed NODDI protocol bug. Repeated scans are not supported at this time. &#10;series description keeps changing." />
     <MESSAGE value="Added a consistent interface across studies to clean a subject folder in&#10;the BIDS directory." />
@@ -845,7 +838,8 @@
     <MESSAGE value="Fixed bug. log_file -&gt; $log_file" />
     <MESSAGE value="Fixed bug. pointed to wrong directory again." />
     <MESSAGE value="Fixed bug. tee was overwriting log file not appending." />
-    <option name="LAST_COMMIT_MESSAGE" value="Fixed bug. tee was overwriting log file not appending." />
+    <MESSAGE value="Updating hfpef protocol to work with hdc singularity image." />
+    <option name="LAST_COMMIT_MESSAGE" value="Updating hfpef protocol to work with hdc singularity image." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1245,7 +1239,7 @@
       <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
         <state split_layout="SPLIT">
           <first_editor relative-caret-position="304">
-            <caret line="27" column="4" lean-forward="true" selection-start-line="27" selection-start-column="4" selection-end-line="27" selection-end-column="4" />
+            <caret line="27" column="4" lean-forward="false" selection-start-line="27" selection-start-column="4" selection-end-line="27" selection-end-column="4" />
             <folding />
           </first_editor>
           <second_editor>
@@ -1256,8 +1250,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/studies/hfpef/scripts/hfpef_protocol_v2b.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-5974">
-          <caret line="25" column="0" lean-forward="true" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
+        <state relative-caret-position="112">
+          <caret line="412" column="54" lean-forward="true" selection-start-line="412" selection-start-column="54" selection-end-line="412" selection-end-column="54" />
           <folding>
             <element signature="e#18538#18573#0" expanded="false" />
           </folding>
