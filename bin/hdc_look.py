@@ -12,7 +12,7 @@ import os
 HDC_FILES = ['edit.txt', 'auto.txt']
 BIDS_PATH = os.getenv('ACTIVE_BIDS_PATH')
 
-def _display_text_file(filename)
+def _display_text_file(filename):
 
     try:
         with open(filename, 'r') as fin:
