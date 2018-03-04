@@ -96,7 +96,7 @@ if __name__ == '__main__':
     parser.add_argument('tsv_filename', help='DICOM TSV info file created the heurdiconv.py')
 
     parser.add_argument('-s', '--subject', help='Participant Label')
-    parser.add_argument('-ss' '--session', help='Session Label')
+    parser.add_argument('-ss', '--session', help='Session Label', default=1)
 
     parser.add_argument('-f', '--files', help="Verbose flag", choices=['edit.txt', 'auto.txt'], default ='edit.txt')
 

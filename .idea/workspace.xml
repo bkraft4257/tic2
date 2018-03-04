@@ -123,8 +123,8 @@
           <file leaf-file-name="hdc_look.py" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/bin/hdc_look.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="215">
-                  <caret line="115" column="49" lean-forward="false" selection-start-line="115" selection-start-column="49" selection-end-line="115" selection-end-column="49" />
+                <state relative-caret-position="124">
+                  <caret line="98" column="32" lean-forward="false" selection-start-line="98" selection-start-column="32" selection-end-line="98" selection-end-column="32" />
                   <folding>
                     <element signature="e#122#135#0" expanded="true" />
                     <element signature="e#283#433#0" expanded="false" />
@@ -440,13 +440,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1517948604886</updated>
-    </task>
-    <task id="LOCAL-00051" summary="fmriprep is not running. Debugging now.  Reverting back to fmriprep.sh from&#10;master.&#10; &#10;Throwing error&#10;&#10;ERROR  : No valid /bin/sh in container&#10;ABORT  : Retval = 255&#10;0.01user 0.00system 0:00.03elapsed 48%CPU (0avgtext+0avgdata 1484maxresident)k&#10;0inputs+8outputs (0major+1081minor)pagefaults 0swaps">
-      <created>1518196150817</created>
-      <option name="number" value="00051" />
-      <option name="presentableId" value="LOCAL-00051" />
-      <option name="project" value="LOCAL" />
-      <updated>1518196150817</updated>
     </task>
     <task id="LOCAL-00052" summary="fmriprep is not running. Debugging now.  Reverting back to fmriprep.sh from&#10;master.&#10; &#10;Throwing error&#10;&#10;ERROR  : No valid /bin/sh in container&#10;ABORT  : Retval = 255&#10;0.01user 0.00system 0:00.03elapsed 48%CPU (0avgtext+0avgdata 1484maxresident)k&#10;0inputs+8outputs (0major+1081minor)pagefaults 0swaps">
       <created>1518196273273</created>
@@ -784,7 +777,14 @@
       <option name="project" value="LOCAL" />
       <updated>1520176547659</updated>
     </task>
-    <option name="localTasksCounter" value="100" />
+    <task id="LOCAL-00100" summary="Testing hdc_look.py">
+      <created>1520176602280</created>
+      <option name="number" value="00100" />
+      <option name="presentableId" value="LOCAL-00100" />
+      <option name="project" value="LOCAL" />
+      <updated>1520176602280</updated>
+    </task>
+    <option name="localTasksCounter" value="101" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -1308,8 +1308,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/bin/hdc_look.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="215">
-          <caret line="115" column="49" lean-forward="false" selection-start-line="115" selection-start-column="49" selection-end-line="115" selection-end-column="49" />
+        <state relative-caret-position="124">
+          <caret line="98" column="32" lean-forward="false" selection-start-line="98" selection-start-column="32" selection-end-line="98" selection-end-column="32" />
           <folding>
             <element signature="e#122#135#0" expanded="true" />
             <element signature="e#283#433#0" expanded="false" />
