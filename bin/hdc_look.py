@@ -27,6 +27,7 @@ def _display_text_file(filename):
 
 
 def _read_dicominfo_tsv(tsv_filename):
+    print(f'\n\n{tsv_filename}\n')
     return pandas.read_csv(tsv_filename, sep='\t')
 
 

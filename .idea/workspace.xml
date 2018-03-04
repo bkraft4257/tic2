@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="6f3e13b3-cd58-4c4d-98f6-1a68f8358bfb" name="Default" comment="Fixed str bug.">
+    <list default="true" id="6f3e13b3-cd58-4c4d-98f6-1a68f8358bfb" name="Default" comment="">
+      <change beforePath="" afterPath="$PROJECT_DIR$/bin/hdc_clean.py" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/bin/hdc_look.py" afterPath="$PROJECT_DIR$/bin/hdc_look.py" />
+      <change beforePath="$PROJECT_DIR$/studies/hfpef/scripts/hfpef_protocol_v2b.py" afterPath="$PROJECT_DIR$/studies/hfpef/scripts/hfpef_protocol_v2b.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -51,11 +53,9 @@
           <file leaf-file-name="hfpef_protocol_v2b.py" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/studies/hfpef/scripts/hfpef_protocol_v2b.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="112">
-                  <caret line="412" column="54" lean-forward="false" selection-start-line="412" selection-start-column="54" selection-end-line="412" selection-end-column="54" />
-                  <folding>
-                    <element signature="e#18538#18573#0" expanded="false" />
-                  </folding>
+                <state relative-caret-position="4916">
+                  <caret line="411" column="43" lean-forward="false" selection-start-line="411" selection-start-column="43" selection-end-line="411" selection-end-column="43" />
+                  <folding />
                 </state>
               </provider>
             </entry>
@@ -70,64 +70,26 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="hdc_singularity.sh" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/bin/hdc_singularity.sh">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="187">
-                  <caret line="11" column="4" lean-forward="false" selection-start-line="11" selection-start-column="4" selection-end-line="11" selection-end-column="4" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="create_new_study.py" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/bin/create_new_study.py">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="268">
-                  <caret line="197" column="25" lean-forward="false" selection-start-line="197" selection-start-column="25" selection-end-line="197" selection-end-column="25" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="hdc.sh" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/bin/hdc.sh">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="0">
-                  <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="as_list.sh" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/bin/as_list.sh">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="34">
-                  <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="act.sh" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/bin/act.sh">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="406">
-                  <caret line="45" column="4" lean-forward="false" selection-start-line="45" selection-start-column="4" selection-end-line="45" selection-end-column="4" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="hdc_look.py" pinned="false" current-in-tab="true">
+          <file leaf-file-name="hdc_look.py" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/bin/hdc_look.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="329">
-                  <caret line="123" column="29" lean-forward="false" selection-start-line="123" selection-start-column="29" selection-end-line="123" selection-end-column="29" />
+                <state relative-caret-position="221">
+                  <caret line="13" column="0" lean-forward="true" selection-start-line="12" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
                   <folding>
                     <element signature="e#122#135#0" expanded="true" />
-                    <element signature="e#2894#3034#0" expanded="false" />
+                    <element signature="e#2929#3069#0" expanded="false" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="hdc_clean.py" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/bin/hdc_clean.py">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="282">
+                  <caret line="35" column="0" lean-forward="true" selection-start-line="35" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
+                  <folding>
+                    <element signature="e#122#137#0" expanded="true" />
                   </folding>
                 </state>
               </provider>
@@ -274,10 +236,11 @@
         <option value="$PROJECT_DIR$/bin/as_list.sh" />
         <option value="$PROJECT_DIR$/studies/_new_study_template/hdc_protocol_template.py" />
         <option value="$PROJECT_DIR$/docs/source/other/heudiconv.rst.md" />
-        <option value="$PROJECT_DIR$/studies/hfpef/scripts/hfpef_protocol_v2b.py" />
         <option value="$PROJECT_DIR$/studies/hfpef/environment.sh" />
         <option value="$PROJECT_DIR$/bin/hdc_singularity.sh" />
+        <option value="$PROJECT_DIR$/studies/hfpef/scripts/hfpef_protocol_v2b.py" />
         <option value="$PROJECT_DIR$/bin/hdc_look.py" />
+        <option value="$PROJECT_DIR$/bin/hdc_clean.py" />
       </list>
     </option>
   </component>
@@ -404,9 +367,9 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/bin" />
       <recent name="$PROJECT_DIR$/studies/hfpef/scripts" />
       <recent name="$PROJECT_DIR$/docs/source/other" />
-      <recent name="$PROJECT_DIR$/bin" />
       <recent name="$PROJECT_DIR$/studies/imove/scripts" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
@@ -438,13 +401,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1517948604886</updated>
-    </task>
-    <task id="LOCAL-00056" summary="Removed {item:01d}.">
-      <created>1518216288862</created>
-      <option name="number" value="00056" />
-      <option name="presentableId" value="LOCAL-00056" />
-      <option name="project" value="LOCAL" />
-      <updated>1518216288862</updated>
     </task>
     <task id="LOCAL-00057" summary="Removed {item:01d}.">
       <created>1518218011646</created>
@@ -782,7 +738,14 @@
       <option name="project" value="LOCAL" />
       <updated>1520177346728</updated>
     </task>
-    <option name="localTasksCounter" value="105" />
+    <task id="LOCAL-00105" summary="Fixed str bug.">
+      <created>1520177392149</created>
+      <option name="number" value="00105" />
+      <option name="presentableId" value="LOCAL-00105" />
+      <option name="project" value="LOCAL" />
+      <updated>1520177392149</updated>
+    </task>
+    <option name="localTasksCounter" value="106" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -900,13 +863,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/studies/infinite/infinite_init.sh">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/studies/infinite/environment.sh">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="323">
@@ -1253,40 +1209,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/studies/hfpef/scripts/hfpef_protocol_v2b.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="112">
-          <caret line="412" column="54" lean-forward="false" selection-start-line="412" selection-start-column="54" selection-end-line="412" selection-end-column="54" />
-          <folding>
-            <element signature="e#18538#18573#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/studies/hfpef/environment.sh">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="16" column="64" lean-forward="false" selection-start-line="16" selection-start-column="64" selection-end-line="17" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bin/create_new_study.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="268">
-          <caret line="197" column="25" lean-forward="false" selection-start-line="197" selection-start-column="25" selection-end-line="197" selection-end-column="25" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bin/hdc_singularity.sh">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="4" lean-forward="false" selection-start-line="11" selection-start-column="4" selection-end-line="11" selection-end-column="4" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/bin/hdc.sh">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -1303,6 +1225,14 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/bin/create_new_study.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="268">
+          <caret line="197" column="25" lean-forward="false" selection-start-line="197" selection-start-column="25" selection-end-line="197" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/bin/act.sh">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="406">
@@ -1311,13 +1241,47 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/bin/hdc_singularity.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="4" lean-forward="false" selection-start-line="11" selection-start-column="4" selection-end-line="11" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/studies/hfpef/environment.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="16" column="64" lean-forward="false" selection-start-line="16" selection-start-column="64" selection-end-line="17" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/studies/hfpef/scripts/hfpef_protocol_v2b.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4916">
+          <caret line="411" column="43" lean-forward="false" selection-start-line="411" selection-start-column="43" selection-end-line="411" selection-end-column="43" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/bin/hdc_look.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="329">
-          <caret line="123" column="29" lean-forward="false" selection-start-line="123" selection-start-column="29" selection-end-line="123" selection-end-column="29" />
+        <state relative-caret-position="221">
+          <caret line="13" column="0" lean-forward="true" selection-start-line="12" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
           <folding>
             <element signature="e#122#135#0" expanded="true" />
-            <element signature="e#2894#3034#0" expanded="false" />
+            <element signature="e#2929#3069#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bin/hdc_clean.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="282">
+          <caret line="35" column="0" lean-forward="true" selection-start-line="35" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
+          <folding>
+            <element signature="e#122#137#0" expanded="true" />
           </folding>
         </state>
       </provider>

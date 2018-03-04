@@ -264,7 +264,7 @@ def infotodict(seqinfo):
     pcasl_lr_high_co2 = create_key('sub-{subject}/{session}/func/sub-{subject}_{session}_task-rest'
                                    '_acq-pcasl_bold.{item:01d}')
 
-    pcasl_rl_rest = create_key('sub-{subject}/{session}/fmap/sub-{subject}_{session}_acq-pcasl_dir-rl_epi.{item:01d}')
+    pcasl_rest_rl = create_key('sub-{subject}/{session}/fmap/sub-{subject}_{session}_acq-pcasl_dir-rl_epi.{item:01d}')
 
     pcasl_topup_rl = create_key('sub-{subject}/{session}/fmap/sub-{subject}_{session}_acq-pcasl_dir-rl_epi.{item:01d}')
 
@@ -301,7 +301,7 @@ def infotodict(seqinfo):
             fmap_phasediff: [],
 
             pcasl_lr_high_co2: [],
-            pcasl_rl_rest: [],
+            pcasl_rest_rl: [],
             pcasl_topup_rl: [],
             pcasl_topup_lr: [],
 
@@ -390,29 +390,34 @@ def infotodict(seqinfo):
         if (('DTI_30dir_1b0 A>>P' in s.series_description) and
                 ('ep_b0' in s.sequence_name) and
                 (s.dim4 == 31)):
-            info[rest_epi_topup] = [s.series_id]
+            info[dti_30dir_ap] = [s.series_id]
 
         if (('DTI_30dir_1b0 A>>P' in s.series_description) and
                 ('ep_b0' in s.sequence_name) and
                 (s.dim4 == 31)):
-            info[rest_epi_topup_ap] = [s.series_id]
+            info[dti_30dir_topup_ap] = [s.series_id]
 
         if (('DTI_30dir_1b0 P>>A' in s.series_description) and
                 ('ep_b0' in s.sequence_name) and
                 (s.dim4 == 1)):
-            info[rest_epi_topup_pa] = [s.series_id]
+            info[dti_30dir_topup_pa] = [s.series_id]
 
         # pCASL
 
         if (('pcasl_wfu_4_0C R>>L EYES OPEN' in s.series_description) and
                 ('epfid2d1_64' in s.sequence_name) and
                 (s.dim4 == 81)):
-            info[rest_epi_topup] = [s.series_id]
+            info[pcasl_rest_rl] = [s.series_id]
+
+        if (('pcasl_wfu_4_0C R>>L EYES OPEN' in s.series_description) and
+                ('epfid2d1_64' in s.sequence_name) and
+                (s.dim4 == 3)):
+            info[pcasl_rest_topup_rl] = [s.series_id]
 
         if (('pcasl_wfu_4_0C L>>R' in s.series_description) and
                 ('epfid2d1_64' in s.sequence_name) and
                 (s.dim4 == 3)):
-            info[rest_epi_topup] = [s.series_id]
+            info[pcasl_rest_topup_lr] = [s.series_id]
 
         # pCASL with high CO2
 
