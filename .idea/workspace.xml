@@ -51,8 +51,8 @@
           <file leaf-file-name="hfpef_protocol_v2b.py" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/studies/hfpef/scripts/hfpef_protocol_v2b.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="326">
-                  <caret line="367" column="54" lean-forward="true" selection-start-line="367" selection-start-column="54" selection-end-line="367" selection-end-column="54" />
+                <state relative-caret-position="211">
+                  <caret line="260" column="64" lean-forward="false" selection-start-line="260" selection-start-column="64" selection-end-line="260" selection-end-column="64" />
                   <folding />
                 </state>
               </provider>
@@ -400,13 +400,6 @@
       <option name="presentableId" value="Default" />
       <updated>1517948604886</updated>
     </task>
-    <task id="LOCAL-00060" summary="Protocol is now correct except it doesn't handle multiple entries. I&#10;need to contact heudiconv group to ask them about this.">
-      <created>1518222812443</created>
-      <option name="number" value="00060" />
-      <option name="presentableId" value="LOCAL-00060" />
-      <option name="project" value="LOCAL" />
-      <updated>1518222812443</updated>
-    </task>
     <task id="LOCAL-00061" summary="Fixed NODDI protocol bug. Repeated scans are not supported at this time.">
       <created>1518366689343</created>
       <option name="number" value="00061" />
@@ -743,7 +736,14 @@
       <option name="project" value="LOCAL" />
       <updated>1520180440485</updated>
     </task>
-    <option name="localTasksCounter" value="109" />
+    <task id="LOCAL-00109" summary="Update hfpef protocol. Fixed numerous bugs.">
+      <created>1520181186411</created>
+      <option name="number" value="00109" />
+      <option name="presentableId" value="LOCAL-00109" />
+      <option name="project" value="LOCAL" />
+      <updated>1520181186411</updated>
+    </task>
+    <option name="localTasksCounter" value="110" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -1278,8 +1278,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/studies/hfpef/scripts/hfpef_protocol_v2b.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="326">
-          <caret line="367" column="54" lean-forward="true" selection-start-line="367" selection-start-column="54" selection-end-line="367" selection-end-column="54" />
+        <state relative-caret-position="211">
+          <caret line="260" column="64" lean-forward="false" selection-start-line="260" selection-start-column="64" selection-end-line="260" selection-end-column="64" />
           <folding />
         </state>
       </provider>
