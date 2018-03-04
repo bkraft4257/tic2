@@ -9,15 +9,19 @@ import pandas
 import argparse
 import os
 
-HDC_FILES = ['edit.txt', 'auto.txt']
+HDC_FILES = ['edit', 'auto', 'dicominfo']
 BIDS_PATH = os.getenv('ACTIVE_BIDS_PATH')
 
 
 def _display_text_file(filename):
 
     try:
+
+        print(f'\n\n{filename}\n')
+
         with open(filename, 'r') as fin:
             print(fin.read())
+
     except FileNotFoundError:
         print(f'File not found. {filename}')
 
@@ -98,22 +102,33 @@ if __name__ == '__main__':
     parser.add_argument('-s', '--subject', help='Participant Label')
     parser.add_argument('-ss', '--session', help='Session Label', default=1)
 
-    parser.add_argument('-f', '--files', help="Verbose flag", choices=['edit.txt', 'auto.txt'], default ='edit.txt')
+    parser.add_argument('-f', '--files',
+                        nargs='*',
+                        type='str',
+                        help="Verbose flag", choices=['edit', 'auto', 'dicominfo'], default =['dicominfo', 'edit'])
 
     parser.add_argument('-v', '--verbose', help="Verbose flag", action="store_true", default=False)
 
     in_args = parser.parse_args()
 
+    hdc_info_path =  os.path.join(BIDS_PATH, '.heudiconv', in_args.subject, f'ses-{in_args.session}', 'info')
 
+    edit_text_filename = os.path.join(hdc_info_path, f'{in_args.subject}_ses-{in_args.session}.edit.txt')
+    auto_text_filename = os.path.join(hdc_info_path, f'{in_args.subject}_ses-{in_args.session}.auto.txt')
+    dicom_info_tsv_filename = os.path.join(hdc_info_path, f'dicominfo_ses-{in_args.session}.tsv')
 
-    edit_text_filename = os.path.join(BIDS_PATH, '.heudiconv', in_args.subject, f'ses-{in_args.session}',
-                                      'info', f'{in_args.subject}_ses-{in_args.session}.edit.txt')
-
-    print(edit_text_filename)
 
     try:
-        if in_args.files in HDC_FILES:
+        if 'dicominfo' in HDC_FILES:
+            dicom_info_tsv_filename = _read_dicominfo_tsv(in_args.filename)
+            _add_header(dicom_info_tsv_filename, verbose=True)
+
+        if 'auto' in in_args.files:
+            _display_text_file(auto_text_filename)
+
+        if 'edit' in in_args.files:
             _display_text_file(edit_text_filename)
+
 
     except:
 
