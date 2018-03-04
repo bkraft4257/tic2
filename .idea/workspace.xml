@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="6f3e13b3-cd58-4c4d-98f6-1a68f8358bfb" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/studies/hfpef/environment.sh" afterPath="$PROJECT_DIR$/studies/hfpef/environment.sh" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -77,7 +78,7 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="hfpef_protocol_v2b.py" pinned="false" current-in-tab="true">
+          <file leaf-file-name="hfpef_protocol_v2b.py" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/studies/hfpef/scripts/hfpef_protocol_v2b.py">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="112">
@@ -85,6 +86,16 @@
                   <folding>
                     <element signature="e#18538#18573#0" expanded="false" />
                   </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="environment.sh" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/studies/hfpef/environment.sh">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="272">
+                  <caret line="16" column="64" lean-forward="true" selection-start-line="16" selection-start-column="64" selection-end-line="17" selection-end-column="0" />
+                  <folding />
                 </state>
               </provider>
             </entry>
@@ -206,7 +217,6 @@
         <option value="$PROJECT_DIR$/bin/check_fmaps.py" />
         <option value="$PROJECT_DIR$/studies/synergy/aliases.sh" />
         <option value="$PROJECT_DIR$/studies/imove/environment.sh" />
-        <option value="$PROJECT_DIR$/studies/hfpef/environment.sh" />
         <option value="$PROJECT_DIR$/studies/_new_study_template/environment.sh" />
         <option value="$PROJECT_DIR$/studies/infinite/aliases.sh" />
         <option value="$PROJECT_DIR$/studies/synergy/environment.sh" />
@@ -231,6 +241,7 @@
         <option value="$PROJECT_DIR$/studies/_new_study_template/hdc_protocol_template.py" />
         <option value="$PROJECT_DIR$/docs/source/other/heudiconv.rst.md" />
         <option value="$PROJECT_DIR$/studies/hfpef/scripts/hfpef_protocol_v2b.py" />
+        <option value="$PROJECT_DIR$/studies/hfpef/environment.sh" />
       </list>
     </option>
   </component>
@@ -393,13 +404,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1517948604886</updated>
-    </task>
-    <task id="LOCAL-00046" summary="fmriprep is not running. Debugging now.  Reverting back to fmriprep.sh from&#10;master.&#10; &#10;Throwing error&#10;&#10;ERROR  : No valid /bin/sh in container&#10;ABORT  : Retval = 255&#10;0.01user 0.00system 0:00.03elapsed 48%CPU (0avgtext+0avgdata 1484maxresident)k&#10;0inputs+8outputs (0major+1081minor)pagefaults 0swaps">
-      <created>1518195645523</created>
-      <option name="number" value="00046" />
-      <option name="presentableId" value="LOCAL-00046" />
-      <option name="project" value="LOCAL" />
-      <updated>1518195645523</updated>
     </task>
     <task id="LOCAL-00047" summary="fmriprep is not running. Debugging now.  Reverting back to fmriprep.sh from&#10;master.&#10; &#10;Throwing error&#10;&#10;ERROR  : No valid /bin/sh in container&#10;ABORT  : Retval = 255&#10;0.01user 0.00system 0:00.03elapsed 48%CPU (0avgtext+0avgdata 1484maxresident)k&#10;0inputs+8outputs (0major+1081minor)pagefaults 0swaps">
       <created>1518195709369</created>
@@ -737,7 +741,14 @@
       <option name="project" value="LOCAL" />
       <updated>1520173405726</updated>
     </task>
-    <option name="localTasksCounter" value="95" />
+    <task id="LOCAL-00095" summary="Updated permissions of *.sh files in bin directory.">
+      <created>1520173611800</created>
+      <option name="number" value="00095" />
+      <option name="presentableId" value="LOCAL-00095" />
+      <option name="project" value="LOCAL" />
+      <updated>1520173611800</updated>
+    </task>
+    <option name="localTasksCounter" value="96" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -814,7 +825,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Fixed bug in cleaning procedure. NIFTI files and JSON files must be +w &#10;before cleaning begins." />
     <MESSAGE value="Fixed NODDI protocol bug. Repeated scans are not supported at this time. &#10;series description keeps changing." />
     <MESSAGE value="Added a consistent interface across studies to clean a subject folder in&#10;the BIDS directory." />
     <MESSAGE value="Changed directory from dwi to func.&#10;Fixed bug with acq being called aicq" />
@@ -839,7 +849,8 @@
     <MESSAGE value="Fixed bug. pointed to wrong directory again." />
     <MESSAGE value="Fixed bug. tee was overwriting log file not appending." />
     <MESSAGE value="Updating hfpef protocol to work with hdc singularity image." />
-    <option name="LAST_COMMIT_MESSAGE" value="Updating hfpef protocol to work with hdc singularity image." />
+    <MESSAGE value="Updated permissions of *.sh files in bin directory." />
+    <option name="LAST_COMMIT_MESSAGE" value="Updated permissions of *.sh files in bin directory." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -931,13 +942,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/studies/hfpef/environment.sh">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="61" lean-forward="true" selection-start-line="8" selection-start-column="61" selection-end-line="8" selection-end-column="61" />
         </state>
       </provider>
     </entry>
@@ -1255,6 +1259,14 @@
           <folding>
             <element signature="e#18538#18573#0" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/studies/hfpef/environment.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="16" column="64" lean-forward="true" selection-start-line="16" selection-start-column="64" selection-end-line="17" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
