@@ -104,7 +104,7 @@ if __name__ == '__main__':
 
     parser.add_argument('-f', '--files',
                         nargs='*',
-                        type='str',
+                        type=str,
                         help="Verbose flag", choices=['edit', 'auto', 'dicominfo'], default =['dicominfo', 'edit'])
 
     parser.add_argument('-v', '--verbose', help="Verbose flag", action="store_true", default=False)
