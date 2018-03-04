@@ -93,7 +93,7 @@ if __name__ == '__main__':
 
     parser = argparse.ArgumentParser(prog='heudiconv_add_header')
 
-    parser.add_argument('tsv_filename', help='DICOM TSV info file created the heurdiconv.py')
+    # parser.add_argument('tsv_filename', help='DICOM TSV info file created the heurdiconv.py')
 
     parser.add_argument('-s', '--subject', help='Participant Label')
     parser.add_argument('-ss', '--session', help='Session Label', default=1)
