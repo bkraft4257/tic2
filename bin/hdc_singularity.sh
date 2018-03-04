@@ -10,6 +10,8 @@ echo 'bids path    = ' $ACTIVE_BIDS_PATH
 echo 'protocol     = ' $ACTIVE_HEUDICONV_PROTOCOL
 echo 'pattern      = ' $ACTIVE_HEUDICONV_PATTERN
 echo
+echo 'parameters   = ' $@
+echo
 
 /usr/local/bin/singularity run     \
    -w                              \
