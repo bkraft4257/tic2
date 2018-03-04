@@ -3,11 +3,33 @@
 This page describes how to convert a set of DICOM images to NIFTI files in BIDS format using the NiPy tool heudiconv.  
 [https://github.com/nipy/heudiconv](https://github.com/nipy/heudiconv)
 
-# Quick Steps if you already have your hdc_study_protocol.py rules
+Using heudiconv via the singularity image is easy but the commands on aging1a/2a are long and cumbersome to type. We have
+created two aliases - hdc_scan, hdc_convert -- to simplify the commands.
 
-    $ hdc_convert -d '{subject}/*/*/*.DCM' -f ./hdc_study_protocol.py -s <subject_id> -ss 1 -o <output_dir>
+```
+alias hdc_scan='/usr/local/bin/singularity run -w -B /cenc -B /gandg -B /bkraft1 $HDC_SINGULARITY_IMAGE 
+                -c none'
+
+alias hdc_convert='/usr/local/bin/singularity run -w -B /cenc -B /gandg -B /bkraft1 $HDC_SINGULARITY_IMAGE 
+                -c dcm2niix'
+```
+
+# Quick Steps if you already have your HDC protocol defined for the study
+
+    $ hdc_convert -d '{subject}/*/*/*.DCM' -f <hdc_study_protocol> -s <subject_id> -ss 1 -o <output_dir>
 
     You could simplify this even further by creating an alias for each study
+
+# Quick Steps for scanning DICOM files
+
+    $ hdc_scan -d '{subject}/*/*/*.DCM' -f <hdc_study_protocol> -s <subject_id> -ss 1 -o <output_dir>
+
+    $ cd <output_dir>/.heudiconv/<subject_dir>/info/
+    
+    $ hdc_add_header dicominfo_ses-1.tsv -o dicominfo_ses-1.csv -v
+
+
+# Quick Steps for converting
 
 # Quick Steps
 
