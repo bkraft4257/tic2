@@ -12,6 +12,7 @@ import os
 HDC_FILES = ['edit.txt', 'auto.txt']
 BIDS_PATH = os.getenv('ACTIVE_BIDS_PATH')
 
+
 def _display_text_file(filename):
 
     try:
@@ -19,6 +20,7 @@ def _display_text_file(filename):
             print(fin.read())
     except FileNotFoundError:
         print(f'File not found. {filename}')
+
 
 def _read_dicominfo_tsv(tsv_filename):
     return pandas.read_csv(tsv_filename, sep='\t')
@@ -76,11 +78,9 @@ def add_header(tsv_filename, verbose=False):
     df_dicominfo = _add_header(df_tsv, verbose=verbose)
 
     if verbose:
-
-
+        pass
 
     return
-
 
 
 if __name__ == '__main__':
@@ -114,7 +114,6 @@ if __name__ == '__main__':
     try:
         if in_args.files in HDC_FILES:
             _display_text_file(edit_text_filename)
-
 
     except:
 
