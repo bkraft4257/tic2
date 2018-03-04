@@ -51,8 +51,8 @@
           <file leaf-file-name="hfpef_protocol_v2b.py" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/studies/hfpef/scripts/hfpef_protocol_v2b.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="123">
-                  <caret line="416" column="47" lean-forward="true" selection-start-line="416" selection-start-column="47" selection-end-line="416" selection-end-column="47" />
+                <state relative-caret-position="385">
+                  <caret line="372" column="59" lean-forward="true" selection-start-line="372" selection-start-column="59" selection-end-line="372" selection-end-column="59" />
                   <folding />
                 </state>
               </provider>
@@ -101,9 +101,9 @@
             <entry file="file://$PROJECT_DIR$/studies/hfpef/scripts/hfpef_protocol_v2b.py">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="127">
-                  <caret line="270" column="0" lean-forward="false" selection-start-line="268" selection-start-column="0" selection-end-line="270" selection-end-column="0" />
+                  <caret line="269" column="0" lean-forward="false" selection-start-line="267" selection-start-column="0" selection-end-line="269" selection-end-column="0" />
                   <folding>
-                    <element signature="e#19282#19317#0" expanded="false" />
+                    <element signature="e#19232#19267#0" expanded="false" />
                   </folding>
                 </state>
               </provider>
@@ -399,13 +399,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1517948604886</updated>
-    </task>
-    <task id="LOCAL-00058" summary="Removed {item:01d}.">
-      <created>1518218454698</created>
-      <option name="number" value="00058" />
-      <option name="presentableId" value="LOCAL-00058" />
-      <option name="project" value="LOCAL" />
-      <updated>1518218454698</updated>
     </task>
     <task id="LOCAL-00059" summary="Testing MPRAGE appending">
       <created>1518218814245</created>
@@ -743,7 +736,14 @@
       <option name="project" value="LOCAL" />
       <updated>1520178470145</updated>
     </task>
-    <option name="localTasksCounter" value="107" />
+    <task id="LOCAL-00107" summary="Update hfpef protocol. Fixed numerous bugs.">
+      <created>1520179862743</created>
+      <option name="number" value="00107" />
+      <option name="presentableId" value="LOCAL-00107" />
+      <option name="project" value="LOCAL" />
+      <updated>1520179862743</updated>
+    </task>
+    <option name="localTasksCounter" value="108" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -820,7 +820,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Fixed writing to log_file" />
     <MESSAGE value="Fixed bug. Missing output directory in act.sh" />
     <MESSAGE value="Added a cat of the bids.config file before running bids-validator" />
     <MESSAGE value="remove echo from bv so other options can be passed." />
@@ -845,7 +844,8 @@
     <MESSAGE value="Added display of dicominfo file" />
     <MESSAGE value="Fixed str bug." />
     <MESSAGE value="Added ability to clean out a specific subject and session&#10;.heudiconv directory." />
-    <option name="LAST_COMMIT_MESSAGE" value="Added ability to clean out a specific subject and session&#10;.heudiconv directory." />
+    <MESSAGE value="Update hfpef protocol. Fixed numerous bugs." />
+    <option name="LAST_COMMIT_MESSAGE" value="Update hfpef protocol. Fixed numerous bugs." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1278,8 +1278,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/studies/hfpef/scripts/hfpef_protocol_v2b.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="123">
-          <caret line="416" column="47" lean-forward="true" selection-start-line="416" selection-start-column="47" selection-end-line="416" selection-end-column="47" />
+        <state relative-caret-position="385">
+          <caret line="372" column="59" lean-forward="true" selection-start-line="372" selection-start-column="59" selection-end-line="372" selection-end-column="59" />
           <folding />
         </state>
       </provider>

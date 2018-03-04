@@ -254,8 +254,7 @@ def infotodict(seqinfo):
 
     rest_epi_topup_ap = create_key('sub-{subject}/{session}/fmap/sub-{subject}_{session}_acq-epse_dir-ap_epi.{item:01d}')
 
-    rest_epi_topup_pa = create_key('sub-{subject}/{session}/func/sub-{subject}_{session}_task-rest'
-                                   '_acq-epi_rec-fmap_bold.{item:01d}')
+    rest_epi_topup_pa = create_key('sub-{subject}/{session}/func/sub-{subject}_{session}_acq-epse_dir-pa_epi.{item:01d}')
 
     rest_epi_fmap = create_key('sub-{subject}/{session}/func/sub-{subject}_{session}_task-rest'
                                '_acq-epi_rec-fmap_bold.{item:01d}')
@@ -412,13 +411,13 @@ def infotodict(seqinfo):
         # pCASL
 
         if (('pcasl_wfu_4_0C R>>L EYES OPEN' in s.series_description) and
-                ('epfid2d1_64' in s.sequence_name) and
+                ('epfid2d1_56' in s.sequence_name) and
                 (s.dim4 == 81)):
             info[pcasl_rest_rl] = [s.series_id]
             info[pcasl_rest_topup_rl] = [s.series_id]
 
         if (('pcasl_wfu_4_0C L>>R' in s.series_description) and
-                ('epfid2d1_64' in s.sequence_name) and
+                ('epfid2d1_56' in s.sequence_name) and
                 (s.dim4 == 3)):
             info[pcasl_rest_topup_lr] = [s.series_id]
 
