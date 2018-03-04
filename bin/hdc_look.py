@@ -115,13 +115,13 @@ if __name__ == '__main__':
 
     edit_text_filename = os.path.join(hdc_info_path, f'{in_args.subject}_ses-{in_args.session}.edit.txt')
     auto_text_filename = os.path.join(hdc_info_path, f'{in_args.subject}_ses-{in_args.session}.auto.txt')
-    dicom_info_tsv_filename = os.path.join(hdc_info_path, f'dicominfo_ses-{in_args.session}.tsv')
+    dicominfo_tsv_filename = os.path.join(hdc_info_path, f'dicominfo_ses-{in_args.session}.tsv')
 
 
     try:
         if 'dicominfo' in HDC_FILES:
-            dicom_info_tsv_filename = _read_dicominfo_tsv(in_args.filename)
-            _add_header(dicom_info_tsv_filename, verbose=True)
+            dicominfo_tsv_filename = _read_dicominfo_tsv(dicominfo_tsv_filename)
+            _add_header(dicominfo_tsv_filename, verbose=True)
 
         if 'auto' in in_args.files:
             _display_text_file(auto_text_filename)
