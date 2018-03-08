@@ -36,28 +36,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="hdc_clean.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/bin/hdc_clean.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="816">
-              <caret line="48" column="0" lean-forward="true" selection-start-line="48" selection-start-column="0" selection-end-line="48" selection-end-column="0" />
-              <folding>
-                <element signature="e#122#137#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="fmriprep.sh" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/studies/active/scripts/fmriprep.sh">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="hfpef_fmriprep_v1.sh" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/studies/hfpef/scripts/hfpef_fmriprep_v1.sh">
           <provider selected="true" editor-type-id="text-editor">
@@ -111,8 +89,8 @@
       <file leaf-file-name="aliases.sh" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/studies/hfpef/aliases.sh">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="16" column="0" lean-forward="true" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+            <state relative-caret-position="238">
+              <caret line="14" column="64" lean-forward="false" selection-start-line="14" selection-start-column="64" selection-end-line="14" selection-end-column="64" />
               <folding />
             </state>
           </provider>
@@ -120,6 +98,26 @@
       </file>
       <file leaf-file-name="hfpef_init.sh" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/studies/hfpef/hfpef_init.sh">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="hfpef_fmriprep_2.sh" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/studies/hfpef/scripts/hfpef_fmriprep_2.sh">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="hfpef_clean_bids_with_cbf.sh" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/studies/hfpef/scripts/hfpef_clean_bids_with_cbf.sh">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="0">
               <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -159,6 +157,7 @@
       <find>**</find>
       <find>code</find>
       <find>log_file</find>
+      <find>/gandg/hfpef/scripts/</find>
     </findStrings>
     <replaceStrings>
       <replace>01d</replace>
@@ -169,6 +168,7 @@
       <replace>SYNERGY</replace>
       <replace>$log_file</replace>
       <replace>tee -a</replace>
+      <replace>$HFPEF_SCRIPTS_PATH/</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -402,13 +402,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1517948604886</updated>
-    </task>
-    <task id="LOCAL-00076" summary="Fixed writing to log_file">
-      <created>1519237544038</created>
-      <option name="number" value="00076" />
-      <option name="presentableId" value="LOCAL-00076" />
-      <option name="project" value="LOCAL" />
-      <updated>1519237544038</updated>
     </task>
     <task id="LOCAL-00077" summary="Fixed writing to log_file">
       <created>1519237588739</created>
@@ -746,7 +739,14 @@
       <option name="project" value="LOCAL" />
       <updated>1520536148624</updated>
     </task>
-    <option name="localTasksCounter" value="125" />
+    <task id="LOCAL-00125" summary="Simplified the hfpef aliases.">
+      <created>1520536828536</created>
+      <option name="number" value="00125" />
+      <option name="presentableId" value="LOCAL-00125" />
+      <option name="project" value="LOCAL" />
+      <updated>1520536828536</updated>
+    </task>
+    <option name="localTasksCounter" value="126" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -823,7 +823,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Changed file to display *.edit.txt instead of auto.txt as described by the&#10;heudiconv help.&#10;&#10;excerpt from heudiconv help&#10;&#10;If subject ID(s) is specified, it proceeds by extracting&#10;dicominfo from each subject and writing a config file&#10;$subject_id/$subject_id.auto.txt in the output directory. Users can create a&#10;copy of the file called $subject_id.edit.txt and modify it to change the files&#10;that are converted. This edited file will always overwrite the original file." />
     <MESSAGE value="Added additional information to bids_app_status.sh" />
     <MESSAGE value="Fixed bug. Pointed to correct directory" />
     <MESSAGE value="Fixed bug. log_file -&gt; $log_file" />
@@ -848,7 +847,8 @@
     <MESSAGE value="Fixed bug where subject and session where not in separate directories as they should be." />
     <MESSAGE value="Only delete the directory if it exists." />
     <MESSAGE value="The JSON file written after the upgrade is different than before the upgrade. &#10;AcquisitionMatrixPE: 64 is no longer in the file and has been replaced with&#10;AcquisitionNumber: 1" />
-    <option name="LAST_COMMIT_MESSAGE" value="The JSON file written after the upgrade is different than before the upgrade. &#10;AcquisitionMatrixPE: 64 is no longer in the file and has been replaced with&#10;AcquisitionNumber: 1" />
+    <MESSAGE value="Simplified the hfpef aliases." />
+    <option name="LAST_COMMIT_MESSAGE" value="Simplified the hfpef aliases." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -864,19 +864,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/docs/source/tic_welcome.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="0">
-            <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-            <folding />
-          </first_editor>
-          <second_editor>
-            <js_state />
-          </second_editor>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/docs/source/other/nipype.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
         <state split_layout="SPLIT">
@@ -1052,13 +1039,6 @@
         <state relative-caret-position="644">
           <caret line="273" column="0" lean-forward="false" selection-start-line="185" selection-start-column="0" selection-end-line="273" selection-end-column="0" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/studies/hfpef/scripts/hfpef_clean_bids_with_cbf.sh">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -1267,14 +1247,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/studies/hfpef/scripts/hfpef_clean_bids_2b.sh">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="748">
-          <caret line="44" column="5" lean-forward="true" selection-start-line="44" selection-start-column="5" selection-end-line="44" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/studies/hfpef/hfpef_init.sh">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -1291,10 +1263,34 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/studies/hfpef/scripts/hfpef_clean_bids_2b.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="748">
+          <caret line="44" column="5" lean-forward="true" selection-start-line="44" selection-start-column="5" selection-end-line="44" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/studies/hfpef/scripts/hfpef_fmriprep_2.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/studies/hfpef/scripts/hfpef_clean_bids_with_cbf.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/studies/hfpef/aliases.sh">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="16" column="0" lean-forward="true" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+        <state relative-caret-position="238">
+          <caret line="14" column="64" lean-forward="false" selection-start-line="14" selection-start-column="64" selection-end-line="14" selection-end-column="64" />
           <folding />
         </state>
       </provider>

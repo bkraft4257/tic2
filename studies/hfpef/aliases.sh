@@ -12,8 +12,8 @@ alias hfpef_bids_clean='$HFPEF_SCRIPTS_PATH/hfpef_bids_clean.sh'
 # AcquisitionNumber: 1.  I then modified the hfpef_clean_bids.sh file to accommodate this change. It is a quick and ugly
 # hack.
 
-alias hfpef_clean_bids_2b='$HFPEF_SCRIPTS_PATH/hfpef_bids_clean_2b.sh'
-alias hfpef_bids_clean_2b='$HFPEF_SCRIPTS_PATH/hfpef_bids_clean_2b.sh'
+alias hfpef_clean_bids_2b='$HFPEF_SCRIPTS_PATH/hfpef_clean_bids_2b.sh'
+alias hfpef_bids_clean_2b='$HFPEF_SCRIPTS_PATH/hfpef_clean_bids_2b.sh'
 
 alias hfpef_gi_netprep_epi='$HFPEF_SCRIPTS_PATH/hfpef_gi_netprep_epi.sh'
 alias hfpef_gi_netprep_mbepi='$HFPEF_SCRIPTS_PATH/hfpef_gi_netprep_mbepi.sh'
