@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="6f3e13b3-cd58-4c4d-98f6-1a68f8358bfb" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/studies/hfpef/scripts/hfpef_clean_bids_2b.sh" afterPath="$PROJECT_DIR$/studies/hfpef/scripts/hfpef_clean_bids_2b.sh" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -79,8 +78,8 @@
       <file leaf-file-name="hfpef_clean_bids_2b.sh" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/studies/hfpef/scripts/hfpef_clean_bids_2b.sh">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="353">
-              <caret line="154" column="73" lean-forward="true" selection-start-line="154" selection-start-column="73" selection-end-line="154" selection-end-column="73" />
+            <state relative-caret-position="846">
+              <caret line="183" column="18" lean-forward="true" selection-start-line="182" selection-start-column="0" selection-end-line="183" selection-end-column="18" />
               <folding />
             </state>
           </provider>
@@ -402,13 +401,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1517948604886</updated>
-    </task>
-    <task id="LOCAL-00078" summary="Fixed bug. Missing output directory in act.sh">
-      <created>1519237962864</created>
-      <option name="number" value="00078" />
-      <option name="presentableId" value="LOCAL-00078" />
-      <option name="project" value="LOCAL" />
-      <updated>1519237962864</updated>
     </task>
     <task id="LOCAL-00079" summary="Added a cat of the bids.config file before running bids-validator">
       <created>1519241977879</created>
@@ -746,7 +738,14 @@
       <option name="project" value="LOCAL" />
       <updated>1520537250097</updated>
     </task>
-    <option name="localTasksCounter" value="127" />
+    <task id="LOCAL-00127" summary="Fixed bug with the IntendedFor for EPI rest with fmap and topup">
+      <created>1520537588209</created>
+      <option name="number" value="00127" />
+      <option name="presentableId" value="LOCAL-00127" />
+      <option name="project" value="LOCAL" />
+      <updated>1520537588209</updated>
+    </task>
+    <option name="localTasksCounter" value="128" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -823,7 +822,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Added additional information to bids_app_status.sh" />
     <MESSAGE value="Fixed bug. Pointed to correct directory" />
     <MESSAGE value="Fixed bug. log_file -&gt; $log_file" />
     <MESSAGE value="Fixed bug. pointed to wrong directory again." />
@@ -848,7 +846,8 @@
     <MESSAGE value="Only delete the directory if it exists." />
     <MESSAGE value="The JSON file written after the upgrade is different than before the upgrade. &#10;AcquisitionMatrixPE: 64 is no longer in the file and has been replaced with&#10;AcquisitionNumber: 1" />
     <MESSAGE value="Simplified the hfpef aliases." />
-    <option name="LAST_COMMIT_MESSAGE" value="Simplified the hfpef aliases." />
+    <MESSAGE value="Fixed bug with the IntendedFor for EPI rest with fmap and topup" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixed bug with the IntendedFor for EPI rest with fmap and topup" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1289,8 +1288,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/studies/hfpef/scripts/hfpef_clean_bids_2b.sh">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="353">
-          <caret line="154" column="73" lean-forward="true" selection-start-line="154" selection-start-column="73" selection-end-line="154" selection-end-column="73" />
+        <state relative-caret-position="846">
+          <caret line="183" column="18" lean-forward="true" selection-start-line="182" selection-start-column="0" selection-end-line="183" selection-end-column="18" />
           <folding />
         </state>
       </provider>
