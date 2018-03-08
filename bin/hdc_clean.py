@@ -26,7 +26,7 @@ if __name__ == '__main__':
 
     in_args = parser.parse_args()
 
-    bids_subject_session_path = os.path.join(BIDS_PATH, f'sub-{in_args.subject}_ses-{in_args.session}')
+    bids_subject_session_path = os.path.join(BIDS_PATH, f'sub-{in_args.subject}', f'ses-{in_args.session}')
     heudiconv_subject_session_path = os.path.join(BIDS_PATH, '.heudiconv', in_args.subject, f'ses-{in_args.session}')
 
     for ii in [bids_subject_session_path, heudiconv_subject_session_path]:
