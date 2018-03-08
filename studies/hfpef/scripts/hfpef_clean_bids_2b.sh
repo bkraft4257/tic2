@@ -1,5 +1,11 @@
 #!/bin/bash
 
+# The JSON file written after the upgrade is different than before the upgrade.
+# AcquisitionMatrixPE: 64 is no longer in the file and has been replaced with
+# AcquisitionNumber: 1.  I then modified the hfpef_clean_bids.sh file to accommodate this change. It is a quick and ugly
+# hack.
+
+
 # Contents of func directory
 #
 #    uses fieldmap ...

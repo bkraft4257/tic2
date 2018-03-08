@@ -16,6 +16,14 @@ alias hfpef_bids_display='/gandg/hfpef/scripts/hfpef_display_bids.sh'
 alias hfpef_clean_bids='/gandg/hfpef/scripts/hfpef_bids_clean.sh'
 alias hfpef_bids_clean='/gandg/hfpef/scripts/hfpef_bids_clean.sh'
 
+# The JSON file written after the upgrade is different than before the upgrade.
+# AcquisitionMatrixPE: 64 is no longer in the file and has been replaced with
+# AcquisitionNumber: 1.  I then modified the hfpef_clean_bids.sh file to accommodate this change. It is a quick and ugly
+# hack.
+
+alias hfpef_clean_bids_2b='/gandg/hfpef/scripts/hfpef_bids_clean_2b.sh'
+alias hfpef_bids_clean_2b='/gandg/hfpef/scripts/hfpef_bids_clean_2b.sh'
+
 alias hfpef_fmriprep='/gandg/hfpef/scripts/hfpef_fmriprep.sh'
 alias hfpef_mriqc='/gandg/hfpef/scripts/hfpef_mriqc.sh'
 
