@@ -414,13 +414,13 @@ def infotodict(seqinfo):
 
         # pCASL
 
-        if (('pcasl_wfu_4_0C R>>L EYES OPEN' in s.series_description) and
+        if (('pcasl_wfu_3_1 R>>L EYES OPEN' in s.series_description) and
                 ('epfid2d1_56' in s.sequence_name) and
                 (s.dim4 == 81)):
             info[pcasl_rest_rl] = [s.series_id]
             info[pcasl_rest_topup_rl] = [s.series_id]
 
-        if (('pcasl_wfu_4_0C L>>R' in s.series_description) and
+        if (('pcasl_wfu_3_1 L>>R' in s.series_description) and
                 ('epfid2d1_56' in s.sequence_name) and
                 (s.dim4 == 3)):
             info[pcasl_rest_topup_lr] = [s.series_id]

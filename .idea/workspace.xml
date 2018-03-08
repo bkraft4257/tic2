@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="6f3e13b3-cd58-4c4d-98f6-1a68f8358bfb" name="Default" comment="Missing">
+    <list default="true" id="6f3e13b3-cd58-4c4d-98f6-1a68f8358bfb" name="Default" comment="Updated protocol to include missing pCASL, removed sbref scans where appropriate.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/studies/hfpef/scripts/hfpef_protocol_v2b.py" afterPath="$PROJECT_DIR$/studies/hfpef/scripts/hfpef_protocol_v2b.py" />
     </list>
@@ -124,8 +124,8 @@
       <file leaf-file-name="hfpef_protocol_v2b.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/studies/hfpef/scripts/hfpef_protocol_v2b.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="275">
-              <caret line="275" column="0" lean-forward="true" selection-start-line="275" selection-start-column="0" selection-end-line="275" selection-end-column="0" />
+            <state relative-caret-position="555">
+              <caret line="415" column="0" lean-forward="true" selection-start-line="415" selection-start-column="0" selection-end-line="415" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -239,10 +239,10 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-235" />
-    <option name="y" value="-1256" />
-    <option name="width" value="1874" />
-    <option name="height" value="1050" />
+    <option name="x" value="-342" />
+    <option name="y" value="-1186" />
+    <option name="width" value="1943" />
+    <option name="height" value="1162" />
   </component>
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
@@ -402,13 +402,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1517948604886</updated>
-    </task>
-    <task id="LOCAL-00066" summary="Fixed NODDI protocol bug. Repeated scans are not supported at this time. &#10;series description keeps changing.">
-      <created>1518370401364</created>
-      <option name="number" value="00066" />
-      <option name="presentableId" value="LOCAL-00066" />
-      <option name="project" value="LOCAL" />
-      <updated>1518370401364</updated>
     </task>
     <task id="LOCAL-00067" summary="Added a consistent interface across studies to clean a subject folder in&#10;the BIDS directory.">
       <created>1518977832584</created>
@@ -746,11 +739,19 @@
       <option name="project" value="LOCAL" />
       <updated>1520532779365</updated>
     </task>
-    <option name="localTasksCounter" value="115" />
+    <task id="LOCAL-00115" summary="Updated protocol to include missing pCASL, removed sbref scans where appropriate.">
+      <created>1520533581107</created>
+      <option name="number" value="00115" />
+      <option name="presentableId" value="LOCAL-00115" />
+      <option name="project" value="LOCAL" />
+      <updated>1520533581107</updated>
+    </task>
+    <option name="localTasksCounter" value="116" />
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-513" y="-1354" width="1943" height="1162" extended-state="0" />
+    <frame x="-342" y="-1186" width="1943" height="1162" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info id="Key Promoter X" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -760,7 +761,7 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.5032938" sideWeight="0.48497853" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.21996467" sideWeight="0.49006623" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22935297" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22935297" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3297724" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="SciView" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -822,7 +823,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="remove echo from bv so other options can be passed." />
     <MESSAGE value="Added documantation.  Added and cleaned up some aliases." />
     <MESSAGE value="Bug in index? Reverted back to an older version in local revision control." />
     <MESSAGE value="Renamed quick_instructions to quick_reference" />
@@ -847,7 +847,8 @@
     <MESSAGE value="Update hfpef protocol. Fixed numerous bugs." />
     <MESSAGE value="Updated hdc_look.py to show just the series_number instead of series_id.  &#10;The series_id contains both the series_number and repeated series_description. &#10;It is too long." />
     <MESSAGE value="Update protocol found a problem with func and fmap." />
-    <option name="LAST_COMMIT_MESSAGE" value="Update protocol found a problem with func and fmap." />
+    <MESSAGE value="Updated protocol to include missing pCASL, removed sbref scans where appropriate." />
+    <option name="LAST_COMMIT_MESSAGE" value="Updated protocol to include missing pCASL, removed sbref scans where appropriate." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1264,8 +1265,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/studies/hfpef/scripts/hfpef_protocol_v2b.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="275">
-          <caret line="275" column="0" lean-forward="true" selection-start-line="275" selection-start-column="0" selection-end-line="275" selection-end-column="0" />
+        <state relative-caret-position="555">
+          <caret line="415" column="0" lean-forward="true" selection-start-line="415" selection-start-column="0" selection-end-line="415" selection-end-column="0" />
           <folding />
         </state>
       </provider>
