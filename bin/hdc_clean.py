@@ -26,13 +26,13 @@ if __name__ == '__main__':
 
     in_args = parser.parse_args()
 
-    subject_session_path = os.path.join(BIDS_PATH, '.heudiconv', in_args.subject, f'ses-{in_args.session}')
+    bids_subject_session_path = os.path.join(BIDS_PATH, f'sub-{in_args.subject}_ses-{in_args.session}')
+    heudiconv_subject_session_path = os.path.join(BIDS_PATH, '.heudiconv', in_args.subject, f'ses-{in_args.session}')
 
-    try:
-        shutil.rmtree(subject_session_path)
-        print(Fore.GREEN + f'\nSuccessfully removed {subject_session_path}\n\n')
+    for ii in [bids_subject_session_path, heudiconv_subject_session_path]:
+        try:
+            shutil.rmtree(ii)
+            print(Fore.GREEN + f'\nSuccessfully removed {ii}\n\n')
 
-    except:
-
-        print(Fore.RED + f'\nFailed to remove {subject_session_path}\n\n')
-        raise
+        except:
+            print(Fore.RED + f'\nFailed to remove {ii}\n\n')
