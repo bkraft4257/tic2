@@ -253,9 +253,6 @@ def infotodict(seqinfo):
     rest_epi_topup = create_key('sub-{subject}/{session}/func/sub-{subject}_{session}_task-rest'
                                 '_acq-epi_rec-topup_bold.{item:01d}')
 
-    rest_epi_topup_sbref = create_key('sub-{subject}/{session}/func/sub-{subject}_{session}_task-rest'
-                                      '_acq-epi_rec-topup_sbref.{item:01d}')
-
     rest_epi_topup_ap = create_key('sub-{subject}/{session}/fmap/sub-{subject}_{session}_acq-epse_dir-ap_epi.{item:01d}')
 
     rest_epi_topup_pa = create_key('sub-{subject}/{session}/fmap/sub-{subject}_{session}_acq-epse_dir-pa_epi.{item:01d}')
@@ -265,9 +262,6 @@ def infotodict(seqinfo):
     rest_epi_fmap = create_key('sub-{subject}/{session}/func/sub-{subject}_{session}_task-rest'
                                '_acq-epi_rec-fmap_bold.{item:01d}')
 
-    rest_epi_fmap_sbref = create_key('sub-{subject}/{session}/func/sub-{subject}_{session}_task-rest'
-                                     '_acq-epi_rec-fmap_sbref.{item:01d}')
-
     fmap_magnitude1 = create_key('sub-{subject}/{session}/fmap/sub-{subject}_{session}_acq-bold_magnitude1.{item:01d}')
 
     fmap_phasediff = create_key('sub-{subject}/{session}/fmap/sub-{subject}_{session}_acq-bold_phasediff.{item:01d}')
@@ -276,9 +270,6 @@ def infotodict(seqinfo):
 
     pcasl_high_co2_lr = create_key('sub-{subject}/{session}/func/sub-{subject}_{session}_task-co2'
                                    '_acq-pcasl_bold.{item:01d}')
-
-    pcasl_high_co2_lr_sbref = create_key('sub-{subject}/{session}/func/sub-{subject}_{session}_task-co2'
-                                         '_acq-pcasl_sbref.{item:01d}')
 
     pcasl_high_co2_topup_lr = create_key('sub-{subject}/{session}/fmap/sub-{subject}_{session}'
                                          '_acq-co2pcasl_dir-lr_epi.{item:01d}')
@@ -317,19 +308,20 @@ def infotodict(seqinfo):
             rest_mbepi_topup_lr: [],
 
             rest_epi_topup: [],
-            rest_epi_topup_sbref: [],
             rest_epi_topup_ap: [],
             rest_epi_topup_pa: [],
 
             rest_epi_fmap: [],
-            rest_epi_fmap_sbref: [],
             fmap_magnitude1: [],
             fmap_phasediff: [],
 
             pcasl_high_co2_lr: [],
-            pcasl_high_co2_lr_sbref: [],
             pcasl_high_co2_topup_rl: [],
             pcasl_high_co2_topup_lr: [],
+
+            pcasl_rest_rl: [],
+            pcasl_rest_topup_rl: [],
+            pcasl_rest_topup_lr: [],
 
             dti_30dir_ap: [],
             dti_30dir_topup_ap: [],
