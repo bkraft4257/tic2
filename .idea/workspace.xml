@@ -112,8 +112,8 @@
       <file leaf-file-name="hdc_clean.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/bin/hdc_clean.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="476">
-              <caret line="28" column="82" lean-forward="false" selection-start-line="28" selection-start-column="82" selection-end-line="28" selection-end-column="82" />
+            <state relative-caret-position="663">
+              <caret line="39" column="4" lean-forward="true" selection-start-line="39" selection-start-column="4" selection-end-line="39" selection-end-column="4" />
               <folding>
                 <element signature="e#122#137#0" expanded="true" />
               </folding>
@@ -402,13 +402,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1517948604886</updated>
-    </task>
-    <task id="LOCAL-00070" summary="Added shell script to check status of tic session.">
-      <created>1519231105705</created>
-      <option name="number" value="00070" />
-      <option name="presentableId" value="LOCAL-00070" />
-      <option name="project" value="LOCAL" />
-      <updated>1519231105705</updated>
     </task>
     <task id="LOCAL-00071" summary="Cleaned up call to BIDS apps.">
       <created>1519235995434</created>
@@ -746,7 +739,14 @@
       <option name="project" value="LOCAL" />
       <updated>1520534821325</updated>
     </task>
-    <option name="localTasksCounter" value="119" />
+    <task id="LOCAL-00119" summary="Fixed bug where subject and session where not in separate directories as they should be.">
+      <created>1520534911369</created>
+      <option name="number" value="00119" />
+      <option name="presentableId" value="LOCAL-00119" />
+      <option name="project" value="LOCAL" />
+      <updated>1520534911369</updated>
+    </task>
+    <option name="localTasksCounter" value="120" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -823,7 +823,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Changes Sphinx theme" />
     <MESSAGE value="Updated documentation and added some aliases." />
     <MESSAGE value="Merge branch 'release/release_0.1.0'&#10;&#10;# Conflicts:&#10;#&#9;init/tic_aliases.sh" />
     <MESSAGE value="Changed file to display *.edit.txt instead of auto.txt as described by the&#10;heudiconv help.&#10;&#10;excerpt from heudiconv help&#10;&#10;If subject ID(s) is specified, it proceeds by extracting&#10;dicominfo from each subject and writing a config file&#10;$subject_id/$subject_id.auto.txt in the output directory. Users can create a&#10;copy of the file called $subject_id.edit.txt and modify it to change the files&#10;that are converted. This edited file will always overwrite the original file." />
@@ -848,7 +847,8 @@
     <MESSAGE value="Updated protocol to include missing pCASL. Series description was different." />
     <MESSAGE value="Updated hdc_clean to remove BIDS directory, as well as, .heudicon directory of &#10;the appropriate subject and session." />
     <MESSAGE value="Adjusted protocol to accommodate different versions of pcasl in the series_description." />
-    <option name="LAST_COMMIT_MESSAGE" value="Adjusted protocol to accommodate different versions of pcasl in the series_description." />
+    <MESSAGE value="Fixed bug where subject and session where not in separate directories as they should be." />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixed bug where subject and session where not in separate directories as they should be." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1276,8 +1276,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/bin/hdc_clean.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="476">
-          <caret line="28" column="82" lean-forward="false" selection-start-line="28" selection-start-column="82" selection-end-line="28" selection-end-column="82" />
+        <state relative-caret-position="663">
+          <caret line="39" column="4" lean-forward="true" selection-start-line="39" selection-start-column="4" selection-end-line="39" selection-end-column="4" />
           <folding>
             <element signature="e#122#137#0" expanded="true" />
           </folding>

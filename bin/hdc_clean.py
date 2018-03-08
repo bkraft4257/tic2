@@ -31,7 +31,13 @@ if __name__ == '__main__':
 
     for ii in [bids_subject_session_path, heudiconv_subject_session_path]:
         try:
-            shutil.rmtree(ii)
+
+            # We want to remove these directories. If the directory doesn't exist just assume that it was deleted.  After all
+            # the result is the same if the directory was successfully deleted. This is why I don't catch the exception.
+
+            if os.path.isdir(ii):
+                shutil.rmtree(ii)
+
             print(Fore.GREEN + f'\nSuccessfully removed {ii}\n\n')
 
         except:
