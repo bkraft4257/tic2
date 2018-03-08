@@ -122,10 +122,10 @@
         <entry file="file://$PROJECT_DIR$/bin/hdc_look.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="302">
-              <caret line="70" column="54" lean-forward="true" selection-start-line="70" selection-start-column="54" selection-end-line="70" selection-end-column="54" />
+              <caret line="70" column="53" lean-forward="true" selection-start-line="70" selection-start-column="53" selection-end-line="70" selection-end-column="53" />
               <folding>
                 <element signature="e#122#135#0" expanded="true" />
-                <element signature="e#3084#3224#0" expanded="false" />
+                <element signature="e#3083#3223#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -395,13 +395,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1517948604886</updated>
-    </task>
-    <task id="LOCAL-00062" summary="Fixed NODDI protocol bug. Repeated scans are not supported at this time.">
-      <created>1518367473635</created>
-      <option name="number" value="00062" />
-      <option name="presentableId" value="LOCAL-00062" />
-      <option name="project" value="LOCAL" />
-      <updated>1518367473635</updated>
     </task>
     <task id="LOCAL-00063" summary="Fixed NODDI protocol bug. Repeated scans are not supported at this time.">
       <created>1518367697150</created>
@@ -739,7 +732,14 @@
       <option name="project" value="LOCAL" />
       <updated>1520181944072</updated>
     </task>
-    <option name="localTasksCounter" value="111" />
+    <task id="LOCAL-00111" summary="Updated hdc_look.py to show just the series_number instead of series_id.  &#10;The series_id contains both the series_number and repeated series_description. &#10;It is too long.">
+      <created>1520528169412</created>
+      <option name="number" value="00111" />
+      <option name="presentableId" value="LOCAL-00111" />
+      <option name="project" value="LOCAL" />
+      <updated>1520528169412</updated>
+    </task>
+    <option name="localTasksCounter" value="112" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -816,7 +816,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Fixed bug. Missing output directory in act.sh" />
     <MESSAGE value="Added a cat of the bids.config file before running bids-validator" />
     <MESSAGE value="remove echo from bv so other options can be passed." />
     <MESSAGE value="Added documantation.  Added and cleaned up some aliases." />
@@ -841,7 +840,8 @@
     <MESSAGE value="Fixed str bug." />
     <MESSAGE value="Added ability to clean out a specific subject and session&#10;.heudiconv directory." />
     <MESSAGE value="Update hfpef protocol. Fixed numerous bugs." />
-    <option name="LAST_COMMIT_MESSAGE" value="Update hfpef protocol. Fixed numerous bugs." />
+    <MESSAGE value="Updated hdc_look.py to show just the series_number instead of series_id.  &#10;The series_id contains both the series_number and repeated series_description. &#10;It is too long." />
+    <option name="LAST_COMMIT_MESSAGE" value="Updated hdc_look.py to show just the series_number instead of series_id.  &#10;The series_id contains both the series_number and repeated series_description. &#10;It is too long." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1254,10 +1254,10 @@
     <entry file="file://$PROJECT_DIR$/bin/hdc_look.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="302">
-          <caret line="70" column="54" lean-forward="true" selection-start-line="70" selection-start-column="54" selection-end-line="70" selection-end-column="54" />
+          <caret line="70" column="53" lean-forward="true" selection-start-line="70" selection-start-column="53" selection-end-line="70" selection-end-column="53" />
           <folding>
             <element signature="e#122#135#0" expanded="true" />
-            <element signature="e#3084#3224#0" expanded="false" />
+            <element signature="e#3083#3223#0" expanded="false" />
           </folding>
         </state>
       </provider>

@@ -68,7 +68,7 @@ def _add_header(df_dicominfo,
     df_dicominfo['series_number'] = df_dicominfo['series_id'].str.split('-').str.get(1)
 
     if verbose:
-        pandas.set_option('display.max_columns', 500)v
+        pandas.set_option('display.max_columns', 500)
         pandas.set_option('display.width', 1000)
         print(df_dicominfo[display_columns])
 
