@@ -29,6 +29,8 @@ if __name__ == '__main__':
     bids_subject_session_path = os.path.join(BIDS_PATH, f'sub-{in_args.subject}', f'ses-{in_args.session}')
     heudiconv_subject_session_path = os.path.join(BIDS_PATH, '.heudiconv', in_args.subject, f'ses-{in_args.session}')
 
+    print('\n')
+
     for ii in [bids_subject_session_path, heudiconv_subject_session_path]:
         try:
 
@@ -42,3 +44,5 @@ if __name__ == '__main__':
 
         except:
             print(Fore.RED + f'Failed to remove {ii}')
+
+    print('\n')

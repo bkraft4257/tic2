@@ -4,6 +4,7 @@
     <list default="true" id="6f3e13b3-cd58-4c4d-98f6-1a68f8358bfb" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/bin/hdc_clean.py" afterPath="$PROJECT_DIR$/bin/hdc_clean.py" />
+      <change beforePath="$PROJECT_DIR$/studies/hfpef/scripts/hfpef_clean_bids.sh" afterPath="$PROJECT_DIR$/studies/hfpef/scripts/hfpef_clean_bids.sh" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -36,46 +37,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="environment.sh" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/studies/infinite/environment.sh">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="340">
-              <caret line="20" column="0" lean-forward="false" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="heudiconv_add_header.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/bin/heudiconv_add_header.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-516">
-              <caret line="16" column="61" lean-forward="false" selection-start-line="16" selection-start-column="61" selection-end-line="16" selection-end-column="61" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="check_fmaps.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/bin/check_fmaps.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="hdc.sh" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/bin/hdc.sh">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="hdc_look.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/bin/hdc_look.py">
           <provider selected="true" editor-type-id="text-editor">
@@ -92,7 +53,7 @@
       <file leaf-file-name="hfpef_protocol_v2b.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/studies/hfpef/scripts/hfpef_protocol_v2b.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="894">
+            <state relative-caret-position="49">
               <caret line="244" column="93" lean-forward="true" selection-start-line="244" selection-start-column="93" selection-end-line="244" selection-end-column="93" />
               <folding />
             </state>
@@ -109,11 +70,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="hdc_clean.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="hdc_clean.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/bin/hdc_clean.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="663">
-              <caret line="39" column="4" lean-forward="true" selection-start-line="39" selection-start-column="4" selection-end-line="39" selection-end-column="4" />
+            <state relative-caret-position="816">
+              <caret line="48" column="0" lean-forward="true" selection-start-line="48" selection-start-column="0" selection-end-line="48" selection-end-column="0" />
               <folding>
                 <element signature="e#122#137#0" expanded="true" />
               </folding>
@@ -126,6 +87,46 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="187">
               <caret line="11" column="4" lean-forward="false" selection-start-line="11" selection-start-column="4" selection-end-line="11" selection-end-column="4" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="fmriprep.sh" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/studies/active/scripts/fmriprep.sh">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="hfpef_fmriprep_v1.sh" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/studies/hfpef/scripts/hfpef_fmriprep_v1.sh">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="hfpef_clean_bids_fmap.sh" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/studies/hfpef/scripts/hfpef_clean_bids_fmap.sh">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="hfpef_clean_bids.sh" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/studies/hfpef/scripts/hfpef_clean_bids.sh">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="588">
+              <caret line="163" column="28" lean-forward="false" selection-start-line="163" selection-start-column="28" selection-end-line="163" selection-end-column="28" />
               <folding />
             </state>
           </provider>
@@ -229,6 +230,7 @@
         <option value="$PROJECT_DIR$/bin/hdc_look.py" />
         <option value="$PROJECT_DIR$/studies/hfpef/scripts/hfpef_protocol_v2b.py" />
         <option value="$PROJECT_DIR$/bin/hdc_clean.py" />
+        <option value="$PROJECT_DIR$/studies/hfpef/scripts/hfpef_clean_bids.sh" />
       </list>
     </option>
   </component>
@@ -402,20 +404,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1517948604886</updated>
-    </task>
-    <task id="LOCAL-00071" summary="Cleaned up call to BIDS apps.">
-      <created>1519235995434</created>
-      <option name="number" value="00071" />
-      <option name="presentableId" value="LOCAL-00071" />
-      <option name="project" value="LOCAL" />
-      <updated>1519235995434</updated>
-    </task>
-    <task id="LOCAL-00072" summary="Sourced bids_app_status.sh instead of calling it directly.">
-      <created>1519236855987</created>
-      <option name="number" value="00072" />
-      <option name="presentableId" value="LOCAL-00072" />
-      <option name="project" value="LOCAL" />
-      <updated>1519236855987</updated>
     </task>
     <task id="LOCAL-00073" summary="Sourced bids_app_status.sh instead of calling it directly.">
       <created>1519236949722</created>
@@ -746,7 +734,21 @@
       <option name="project" value="LOCAL" />
       <updated>1520534911369</updated>
     </task>
-    <option name="localTasksCounter" value="120" />
+    <task id="LOCAL-00120" summary="Only delete the directory if it exists.">
+      <created>1520535098727</created>
+      <option name="number" value="00120" />
+      <option name="presentableId" value="LOCAL-00120" />
+      <option name="project" value="LOCAL" />
+      <updated>1520535098727</updated>
+    </task>
+    <task id="LOCAL-00121" summary="Only delete the directory if it exists.">
+      <created>1520535174863</created>
+      <option name="number" value="00121" />
+      <option name="presentableId" value="LOCAL-00121" />
+      <option name="project" value="LOCAL" />
+      <updated>1520535174863</updated>
+    </task>
+    <option name="localTasksCounter" value="122" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -761,7 +763,7 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.5032938" sideWeight="0.48497853" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.21996467" sideWeight="0.49006623" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22935297" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.22935297" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3297724" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="SciView" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -823,7 +825,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Updated documentation and added some aliases." />
     <MESSAGE value="Merge branch 'release/release_0.1.0'&#10;&#10;# Conflicts:&#10;#&#9;init/tic_aliases.sh" />
     <MESSAGE value="Changed file to display *.edit.txt instead of auto.txt as described by the&#10;heudiconv help.&#10;&#10;excerpt from heudiconv help&#10;&#10;If subject ID(s) is specified, it proceeds by extracting&#10;dicominfo from each subject and writing a config file&#10;$subject_id/$subject_id.auto.txt in the output directory. Users can create a&#10;copy of the file called $subject_id.edit.txt and modify it to change the files&#10;that are converted. This edited file will always overwrite the original file." />
     <MESSAGE value="Added additional information to bids_app_status.sh" />
@@ -848,7 +849,8 @@
     <MESSAGE value="Updated hdc_clean to remove BIDS directory, as well as, .heudicon directory of &#10;the appropriate subject and session." />
     <MESSAGE value="Adjusted protocol to accommodate different versions of pcasl in the series_description." />
     <MESSAGE value="Fixed bug where subject and session where not in separate directories as they should be." />
-    <option name="LAST_COMMIT_MESSAGE" value="Fixed bug where subject and session where not in separate directories as they should be." />
+    <MESSAGE value="Only delete the directory if it exists." />
+    <option name="LAST_COMMIT_MESSAGE" value="Only delete the directory if it exists." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -864,22 +866,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/init/tic_default_study.sh" />
-    <entry file="file://$PROJECT_DIR$/bin/tic_functions.sh">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-621">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bin/mriqc.sh">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
-          <caret line="26" column="0" lean-forward="false" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/studies/junk" />
     <entry file="file://$PROJECT_DIR$/studies/active/aliases.sh">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
@@ -1010,13 +996,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/studies/active/scripts/fmriprep.sh">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/init/tic_aliases.sh">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="629">
@@ -1084,13 +1063,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/studies/hfpef/scripts/hfpef_fmriprep.sh">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/studies/hfpef/scripts/hfpef_clean_bids_fmap.sh">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -1266,21 +1238,69 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/bin/hdc_clean.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="816">
+          <caret line="48" column="0" lean-forward="true" selection-start-line="48" selection-start-column="0" selection-end-line="48" selection-end-column="0" />
+          <folding>
+            <element signature="e#122#137#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/studies/infinite/environment.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="20" column="0" lean-forward="false" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/studies/active/scripts/fmriprep.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bin/check_fmaps.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/studies/hfpef/scripts/hfpef_fmriprep_v1.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/studies/hfpef/scripts/hfpef_protocol_v2b.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="894">
+        <state relative-caret-position="49">
           <caret line="244" column="93" lean-forward="true" selection-start-line="244" selection-start-column="93" selection-end-line="244" selection-end-column="93" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/bin/hdc_clean.py">
+    <entry file="file://$PROJECT_DIR$/studies/hfpef/scripts/hfpef_clean_bids_fmap.sh">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="663">
-          <caret line="39" column="4" lean-forward="true" selection-start-line="39" selection-start-column="4" selection-end-line="39" selection-end-column="4" />
-          <folding>
-            <element signature="e#122#137#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/studies/hfpef/scripts/hfpef_clean_bids.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="588">
+          <caret line="163" column="28" lean-forward="false" selection-start-line="163" selection-start-column="28" selection-end-line="163" selection-end-column="28" />
+          <folding />
         </state>
       </provider>
     </entry>
