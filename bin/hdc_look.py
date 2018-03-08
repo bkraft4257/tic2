@@ -12,6 +12,10 @@ import os
 HDC_FILES = ['edit', 'auto', 'dicominfo']
 BIDS_PATH = os.getenv('ACTIVE_BIDS_PATH')
 
+DISPLAY_COLUMNS = ['series_number', 'sequence_name', 'series_description',
+                       'dim1', 'dim2', 'dim3', 'dim4',
+                       'TR', 'TE', 'is_derived', 'is_motion_corrected']
+
 
 def _display_text_file(filename):
 
@@ -31,11 +35,9 @@ def _read_dicominfo_tsv(tsv_filename):
     return pandas.read_csv(tsv_filename, sep='\t')
 
 
-def _add_header(df_dicominfo, verbose=False):
-
-    verbose_columns = ['series_id', 'sequence_name', 'series_description',
-                       'dim1', 'dim2', 'dim3', 'dim4',
-                       'TR', 'TE', 'is_derived', 'is_motion_corrected']
+def _add_header(df_dicominfo,
+                display_columns=DISPLAY_COLUMNS,
+                verbose=False):
 
     df_dicominfo.columns = ['total_files_till_now',            #  1
                             'example_dcm_file',                #  2
@@ -63,10 +65,12 @@ def _add_header(df_dicominfo, verbose=False):
                             'patient_sex',                     # 24
                             'date']                            # 25
 
+    df_dicominfo['series_number'] = df_dicominfo['series_id'].str.split('-').str.get(1)
+
     if verbose:
-        pandas.set_option('display.max_columns', 500)
+        pandas.set_option('display.max_columns', 500)v
         pandas.set_option('display.width', 1000)
-        print(df_dicominfo[verbose_columns])
+        print(df_dicominfo[display_columns])
 
     return df_dicominfo
 
