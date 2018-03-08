@@ -287,7 +287,7 @@ def infotodict(seqinfo):
                                          '_acq-co2pcasl_dir-lr_epi.{item:01d}')
 
     # pCASL REST
-    pcasl_rest_rl = create_key('sub-{subject}/{session}/func/sub-{subject}_{session}_acq-pcasl_dir-rl_bold.{item:01d}')
+    pcasl_rest_rl = create_key('sub-{subject}/{session}/func/sub-{subject}_{session}_task-rest_acq-pcasl_bold.{item:01d}')
 
     pcasl_rest_topup_rl = create_key('sub-{subject}/{session}/fmap/sub-{subject}_{session}_acq-pcasl_dir-rl_epi.{item:01d}')
 
