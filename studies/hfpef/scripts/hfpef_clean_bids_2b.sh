@@ -142,36 +142,36 @@ grep -H "EchoTime" $fmap_phasediff
 #  -rw-rw-r-- 1 bkraft infinite     1929 Mar  8 13:57 sub-hfs084_ses-1_acq-pcasl_dir-lr_epi.json
 #  -rw-rw-r-- 1 bkraft infinite     1903 Mar  8 13:57 sub-hfs084_ses-1_acq-pcasl_dir-rl_epi.json
 
-sed -i 's%"AcquisitionMatrixPE": 64,%"IntendedFor": [ "ses-__session_value__/func/sub-__subject_value___ses-__session_value___task-rest_acq-epi_bold.nii.gz" ],\n  "AcquisitionMatrixPE": 64,%' \
+sed -i 's%"AcquisitionNumber": 1,%"IntendedFor": [ "ses-__session_value__/func/sub-__subject_value___ses-__session_value___task-rest_acq-epi_bold.nii.gz" ],\n  "AcquisitionNumber": 1,%' \
      $fmap_phasediff
 
 rest_topup_ap_json=${full_subject_session_value}_acq-epse_dir-ap_epi.json
 rest_topup_pa_json=${full_subject_session_value}_acq-epse_dir-pa_epi.json
 
-sed -i 's%"AcquisitionMatrixPE": 64,%"IntendedFor": [ "ses-__session_value__/func/sub-__subject_value___ses-__session_value___task-rest_acq-epi_bold.nii.gz" ],\n  "AcquisitionMatrixPE": 64,%' \
+sed -i 's%"AcquisitionNumber": 1,%"IntendedFor": [ "ses-__session_value__/func/sub-__subject_value___ses-__session_value___task-rest_acq-epi_bold.nii.gz" ],\n  "AcquisitionNumber": 1,%' \
      $rest_topup_ap_json
 
-sed -i 's%"AcquisitionMatrixPE": 64,%"IntendedFor": [ "ses-__session_value__/func/sub-__subject_value___ses-__session_value___task-rest_acq-epi_bold.nii.gz" ],\n  "AcquisitionMatrixPE": 64,%' \
+sed -i 's%"AcquisitionNumber": 1,%"IntendedFor": [ "ses-__session_value__/func/sub-__subject_value___ses-__session_value___task-rest_acq-epi_bold.nii.gz" ],\n  "AcquisitionNumber": 1,%' \
      $rest_topup_pa_json
 
 
 mbepi_topup_lr_json=${full_subject_session_value}_acq-mbepi_dir-lr_epi.json
 mbepi_topup_rl_json=${full_subject_session_value}_acq-mbepi_dir-rl_epi.json
 
-sed -i 's%"AcquisitionMatrixPE": 64,%"IntendedFor": [ "ses-__session_value__/func/sub-__subject_value___ses-__session_value___task-rest_acq-mbepi_bold.nii.gz" ],\n  "AcquisitionMatrixPE": 64,%' \
+sed -i 's%"AcquisitionNumber": 1,%"IntendedFor": [ "ses-__session_value__/func/sub-__subject_value___ses-__session_value___task-rest_acq-mbepi_bold.nii.gz" ],\n  "AcquisitionNumber": 1,%' \
      $mbepi_topup_lr_json
 
-sed -i 's%"AcquisitionMatrixPE": 64,%"IntendedFor": [ "ses-__session_value__/func/sub-__subject_value___ses-__session_value___task-rest_acq-mbepi_bold.nii.gz" ],\n  "AcquisitionMatrixPE": 64,%' \
+sed -i 's%"AcquisitionNumber": 1,%"IntendedFor": [ "ses-__session_value__/func/sub-__subject_value___ses-__session_value___task-rest_acq-mbepi_bold.nii.gz" ],\n  "AcquisitionNumber": 1,%' \
      $mbepi_topup_rl_json
 
 
 pcasl_topup_lr_json=${full_subject_session_value}_acq-pcasl_dir-lr_epi.json
 pcasl_topup_rl_json=${full_subject_session_value}_acq-pcasl_dir-rl_epi.json
 
-sed -i 's%"AcquisitionMatrixPE": 56,%"IntendedFor": [ "ses-__session_value__/func/sub-__subject_value___ses-__session_value___task-rest_acq-pcasl_bold.nii.gz" ],\n  "AcquisitionMatrixPE": 56,%' \
+sed -i 's%"AcquisitionNumber": 1,%"IntendedFor": [ "ses-__session_value__/func/sub-__subject_value___ses-__session_value___task-rest_acq-pcasl_bold.nii.gz" ],\n  "AcquisitionNumber": 1,%' \
      $pcasl_topup_lr_json
 
-sed -i 's%"AcquisitionMatrixPE": 56,%"IntendedFor": [ "ses-__session_value__/func/sub-__subject_value___ses-__session_value___task-rest_acq-pcasl_bold.nii.gz" ],\n  "AcquisitionMatrixPE": 56,%' \
+sed -i 's%"AcquisitionNumber": 1,%"IntendedFor": [ "ses-__session_value__/func/sub-__subject_value___ses-__session_value___task-rest_acq-pcasl_bold.nii.gz" ],\n  "AcquisitionNumber": 1,%' \
      $pcasl_topup_rl_json
 
 
