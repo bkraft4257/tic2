@@ -71,10 +71,9 @@ echo
 #chmod +w -R ${session_dir}
 
 find ${session_dir} -name "*.1.*" | xargs rename .1. .
+find ${session_dir} -name "*.json" -o -name "*.gz" | xargs chmod +w
 
 cd ${session_dir}/fmap
-
-chmod +w *.json
 
 # magnitude1 of the phasediff fieldmap does not require a json file according to BIDS. 
 # Since the JSON file will be almost identical to phasediff.json file and is not required

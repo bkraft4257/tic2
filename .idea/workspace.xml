@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="6f3e13b3-cd58-4c4d-98f6-1a68f8358bfb" name="Default" comment="">
+    <list default="true" id="6f3e13b3-cd58-4c4d-98f6-1a68f8358bfb" name="Default" comment="Fixed bug with the IntendedFor for EPI rest with fmap and topup">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/studies/hfpef/scripts/hfpef_clean_bids_2b.sh" afterPath="$PROJECT_DIR$/studies/hfpef/scripts/hfpef_clean_bids_2b.sh" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -78,8 +79,8 @@
       <file leaf-file-name="hfpef_clean_bids_2b.sh" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/studies/hfpef/scripts/hfpef_clean_bids_2b.sh">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="846">
-              <caret line="183" column="18" lean-forward="true" selection-start-line="182" selection-start-column="0" selection-end-line="183" selection-end-column="18" />
+            <state relative-caret-position="-2041">
+              <caret line="76" column="0" lean-forward="true" selection-start-line="76" selection-start-column="0" selection-end-line="76" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -238,8 +239,8 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-342" />
-    <option name="y" value="-1186" />
+    <option name="x" value="-412" />
+    <option name="y" value="-1307" />
     <option name="width" value="2181" />
     <option name="height" value="1162" />
   </component>
@@ -401,13 +402,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1517948604886</updated>
-    </task>
-    <task id="LOCAL-00079" summary="Added a cat of the bids.config file before running bids-validator">
-      <created>1519241977879</created>
-      <option name="number" value="00079" />
-      <option name="presentableId" value="LOCAL-00079" />
-      <option name="project" value="LOCAL" />
-      <updated>1519241977879</updated>
     </task>
     <task id="LOCAL-00080" summary="remove echo from bv so other options can be passed.">
       <created>1519242284019</created>
@@ -745,11 +739,18 @@
       <option name="project" value="LOCAL" />
       <updated>1520537588209</updated>
     </task>
-    <option name="localTasksCounter" value="128" />
+    <task id="LOCAL-00128" summary="Fixed bug with the IntendedFor for EPI rest with fmap and topup">
+      <created>1520537654577</created>
+      <option name="number" value="00128" />
+      <option name="presentableId" value="LOCAL-00128" />
+      <option name="project" value="LOCAL" />
+      <updated>1520537654577</updated>
+    </task>
+    <option name="localTasksCounter" value="129" />
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-342" y="-1186" width="2181" height="1162" extended-state="0" />
+    <frame x="-412" y="-1307" width="2181" height="1162" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Key Promoter X" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1230,14 +1231,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/studies/hfpef/scripts/hfpef_clean_bids_fmap.sh">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/studies/hfpef/scripts/hfpef_clean_bids.sh">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="588">
@@ -1278,6 +1271,14 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/studies/hfpef/scripts/hfpef_clean_bids_fmap.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/studies/hfpef/aliases.sh">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="238">
@@ -1288,8 +1289,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/studies/hfpef/scripts/hfpef_clean_bids_2b.sh">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="846">
-          <caret line="183" column="18" lean-forward="true" selection-start-line="182" selection-start-column="0" selection-end-line="183" selection-end-column="18" />
+        <state relative-caret-position="-2041">
+          <caret line="76" column="0" lean-forward="true" selection-start-line="76" selection-start-column="0" selection-end-line="76" selection-end-column="0" />
           <folding />
         </state>
       </provider>
