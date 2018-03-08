@@ -65,7 +65,7 @@ def _add_header(df_dicominfo,
                             'patient_sex',                     # 24
                             'date']                            # 25
 
-    df_dicominfo['series_number'] = df_dicominfo['series_id'].str.split('-').str.get(1)
+    df_dicominfo['series_number'] = df_dicominfo['series_id'].str.split('-').str.get(0)
 
     if verbose:
         pandas.set_option('display.max_columns', 500)

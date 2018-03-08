@@ -121,8 +121,8 @@
       <file leaf-file-name="hdc_look.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/bin/hdc_look.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="302">
-              <caret line="70" column="53" lean-forward="true" selection-start-line="70" selection-start-column="53" selection-end-line="70" selection-end-column="53" />
+            <state relative-caret-position="914">
+              <caret line="114" column="99" lean-forward="true" selection-start-line="114" selection-start-column="99" selection-end-line="114" selection-end-column="99" />
               <folding>
                 <element signature="e#122#135#0" expanded="true" />
                 <element signature="e#3083#3223#0" expanded="false" />
@@ -395,13 +395,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1517948604886</updated>
-    </task>
-    <task id="LOCAL-00063" summary="Fixed NODDI protocol bug. Repeated scans are not supported at this time.">
-      <created>1518367697150</created>
-      <option name="number" value="00063" />
-      <option name="presentableId" value="LOCAL-00063" />
-      <option name="project" value="LOCAL" />
-      <updated>1518367697150</updated>
     </task>
     <task id="LOCAL-00064" summary="Fixed NODDI protocol bug. Repeated scans are not supported at this time.">
       <created>1518368689198</created>
@@ -739,7 +732,14 @@
       <option name="project" value="LOCAL" />
       <updated>1520528169412</updated>
     </task>
-    <option name="localTasksCounter" value="112" />
+    <task id="LOCAL-00112" summary="Updated hdc_look.py to show just the series_number instead of series_id.  &#10;The series_id contains both the series_number and repeated series_description. &#10;It is too long.">
+      <created>1520528210313</created>
+      <option name="number" value="00112" />
+      <option name="presentableId" value="LOCAL-00112" />
+      <option name="project" value="LOCAL" />
+      <updated>1520528210313</updated>
+    </task>
+    <option name="localTasksCounter" value="113" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -1253,8 +1253,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/bin/hdc_look.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="302">
-          <caret line="70" column="53" lean-forward="true" selection-start-line="70" selection-start-column="53" selection-end-line="70" selection-end-column="53" />
+        <state relative-caret-position="914">
+          <caret line="114" column="99" lean-forward="true" selection-start-line="114" selection-start-column="99" selection-end-line="114" selection-end-column="99" />
           <folding>
             <element signature="e#122#135#0" expanded="true" />
             <element signature="e#3083#3223#0" expanded="false" />
