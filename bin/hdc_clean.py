@@ -38,7 +38,7 @@ if __name__ == '__main__':
             if os.path.isdir(ii):
                 shutil.rmtree(ii)
 
-            print(Fore.GREEN + f'\nSuccessfully removed {ii}\n\n')
+            print(Fore.GREEN + f'Successfully removed {ii}')
 
         except:
-            print(Fore.RED + f'\nFailed to remove {ii}\n\n')
+            print(Fore.RED + f'Failed to remove {ii}')
