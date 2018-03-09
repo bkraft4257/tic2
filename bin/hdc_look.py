@@ -132,7 +132,7 @@ if __name__ == '__main__':
 
     except:
 
-        print(Fore.RED + '\nFailed to run ... \n\n'
+        print(Fore.RED + '\nFailed to run ... \n\n' + Fore.WHITE +
                          'heudiconv_add_header  -subject {0} --session {1} --bids {2}  \n\n'
               .format(in_args.subject,
                       in_args.session,

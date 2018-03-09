@@ -137,8 +137,8 @@
       <file leaf-file-name="hdc_look.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/bin/hdc_look.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="759">
-              <caret line="133" column="0" lean-forward="true" selection-start-line="133" selection-start-column="0" selection-end-line="133" selection-end-column="0" />
+            <state relative-caret-position="776">
+              <caret line="134" column="64" lean-forward="false" selection-start-line="134" selection-start-column="64" selection-end-line="134" selection-end-column="64" />
               <folding>
                 <element signature="e#122#135#0" expanded="true" />
               </folding>
@@ -259,7 +259,7 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-569" />
+    <option name="x" value="-570" />
     <option name="y" value="-1199" />
     <option name="width" value="2181" />
     <option name="height" value="1162" />
@@ -409,13 +409,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1517948604886</updated>
-    </task>
-    <task id="LOCAL-00095" summary="Updated permissions of *.sh files in bin directory.">
-      <created>1520173611800</created>
-      <option name="number" value="00095" />
-      <option name="presentableId" value="LOCAL-00095" />
-      <option name="project" value="LOCAL" />
-      <updated>1520173611800</updated>
     </task>
     <task id="LOCAL-00096" summary="Updated protocol in environment.">
       <created>1520173688336</created>
@@ -753,11 +746,18 @@
       <option name="project" value="LOCAL" />
       <updated>1520609110028</updated>
     </task>
-    <option name="localTasksCounter" value="144" />
+    <task id="LOCAL-00144" summary="Updating HDC documentation and API">
+      <created>1520609179325</created>
+      <option name="number" value="00144" />
+      <option name="presentableId" value="LOCAL-00144" />
+      <option name="project" value="LOCAL" />
+      <updated>1520609179325</updated>
+    </task>
+    <option name="localTasksCounter" value="145" />
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-569" y="-1199" width="2181" height="1162" extended-state="0" />
+    <frame x="-570" y="-1199" width="2181" height="1162" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Key Promoter X" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1267,8 +1267,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/bin/hdc_look.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="759">
-          <caret line="133" column="0" lean-forward="true" selection-start-line="133" selection-start-column="0" selection-end-line="133" selection-end-column="0" />
+        <state relative-caret-position="776">
+          <caret line="134" column="64" lean-forward="false" selection-start-line="134" selection-start-column="64" selection-end-line="134" selection-end-column="64" />
           <folding>
             <element signature="e#122#135#0" expanded="true" />
           </folding>
