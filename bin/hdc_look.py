@@ -101,9 +101,7 @@ if __name__ == '__main__':
     parser.add_argument('-f', '--files',
                         nargs='*',
                         type=str,
-                        help="Verbose flag", choices=['edit', 'auto', 'dicominfo'], default=['dicominfo', 'edit'])
-
-    parser.add_argument('-v', '--verbose', help="Verbose flag", action="store_true", default=False)
+                        help="Files to display", choices=['edit', 'auto', 'dicominfo'], default=['dicominfo', 'edit'])
 
     in_args = parser.parse_args()
 
@@ -127,8 +125,9 @@ if __name__ == '__main__':
     except:
 
         print('\nFailed to run ... \n\n'
-              'heudiconv_add_header  {0} --out_filename {1} --verbose {2} \n\n'
-              .format(in_args.tsv_filename,
-                      in_args.out_filename,
-                      in_args.verbose))
+              'heudiconv_add_header  -subject {0} --session {1} --bids {2}  \n\n'
+              .format(in_args.subject,
+                      in_args.session,
+                      in_args.bids,
+                      ))
         raise
