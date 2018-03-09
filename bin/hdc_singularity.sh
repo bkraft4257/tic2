@@ -37,6 +37,11 @@ else
             -d $ACTIVE_HEUDICONV_PATTERN    \
             $@"
 
+    echo
     echo $cmd
+    echo
+
+    $cmd
+
 
 fi
