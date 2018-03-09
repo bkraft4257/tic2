@@ -137,8 +137,8 @@
       <file leaf-file-name="hdc_look.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/bin/hdc_look.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="385">
-              <caret line="103" column="46" lean-forward="false" selection-start-line="103" selection-start-column="46" selection-end-line="103" selection-end-column="46" />
+            <state relative-caret-position="196">
+              <caret line="12" column="58" lean-forward="true" selection-start-line="12" selection-start-column="58" selection-end-line="12" selection-end-column="58" />
               <folding>
                 <element signature="e#122#135#0" expanded="true" />
               </folding>
@@ -409,13 +409,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1517948604886</updated>
-    </task>
-    <task id="LOCAL-00091" summary="Fixed bug. pointed to wrong directory again.">
-      <created>1519307331052</created>
-      <option name="number" value="00091" />
-      <option name="presentableId" value="LOCAL-00091" />
-      <option name="project" value="LOCAL" />
-      <updated>1519307331052</updated>
     </task>
     <task id="LOCAL-00092" summary="Fixed bug. tee was overwriting log file not appending.">
       <created>1519307523451</created>
@@ -753,7 +746,14 @@
       <option name="project" value="LOCAL" />
       <updated>1520608662776</updated>
     </task>
-    <option name="localTasksCounter" value="140" />
+    <task id="LOCAL-00140" summary="Updating HDC documentation and API">
+      <created>1520608815288</created>
+      <option name="number" value="00140" />
+      <option name="presentableId" value="LOCAL-00140" />
+      <option name="project" value="LOCAL" />
+      <updated>1520608815288</updated>
+    </task>
+    <option name="localTasksCounter" value="141" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -1267,8 +1267,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/bin/hdc_look.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="385">
-          <caret line="103" column="46" lean-forward="false" selection-start-line="103" selection-start-column="46" selection-end-line="103" selection-end-column="46" />
+        <state relative-caret-position="196">
+          <caret line="12" column="58" lean-forward="true" selection-start-line="12" selection-start-column="58" selection-end-line="12" selection-end-column="58" />
           <folding>
             <element signature="e#122#135#0" expanded="true" />
           </folding>

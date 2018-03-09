@@ -10,7 +10,7 @@ import argparse
 import os
 
 HDC_FILES = ['edit', 'auto', 'dicominfo']
-BIDS_PATH = os.getenv('ACTIVE_BIDS_PATH')
+BIDS_PATH = os.path.abspath(os.getenv('ACTIVE_BIDS_PATH'))
 
 DISPLAY_COLUMNS = ['series_number', 'sequence_name', 'series_description',
                    'dim1', 'dim2', 'dim3', 'dim4',
@@ -105,7 +105,7 @@ if __name__ == '__main__':
 
     in_args = parser.parse_args()
 
-    hdc_info_path = os.path.join(in_args.bids, '.heudiconv', in_args.subject, f'ses-{in_args.session}', 'info')
+    hdc_info_path = os.path.join(os.path.abspath(in_args.bids), '.heudiconv', in_args.subject, f'ses-{in_args.session}', 'info')
 
     edit_text_filename = os.path.join(hdc_info_path, f'{in_args.subject}_ses-{in_args.session}.edit.txt')
     auto_text_filename = os.path.join(hdc_info_path, f'{in_args.subject}_ses-{in_args.session}.auto.txt')
