@@ -4,15 +4,30 @@ This page describes how to convert a set of DICOM images to NIFTI files in BIDS 
 [https://github.com/nipy/heudiconv](https://github.com/nipy/heudiconv)
 
 Using heudiconv via the singularity image is easy but the commands on aging1a/2a are long and cumbersome to type. We have
-created two aliases - hdc_scan, hdc_convert -- to simplify the commands.
+created the script hdc.sh to simplify the process. While script provides some helper text to the user the core of the script is
 
 ```
-alias hdc_scan='/usr/local/bin/singularity run -w -B /cenc -B /gandg -B /bkraft1 $HDC_SINGULARITY_IMAGE 
-                -c none'
+    cmd="/usr/local/bin/singularity run     \
+            -w                              \
+            -B /cenc                        \
+            -B /gandg                       \
+            -B /bkraft1                     \
+            $HDC_SINGULARITY_IMAGE          \
+            -c dcm2niix                     \
+            -b                              \
+            --minmeta                       \
+            -f $ACTIVE_HEUDICONV_PROTOCOL   \
+            -o $ACTIVE_BIDS_PATH            \
+            -d $ACTIVE_HEUDICONV_PATTERN    \
+            $@"
 
-alias hdc_convert='/usr/local/bin/singularity run -w -B /cenc -B /gandg -B /bkraft1 $HDC_SINGULARITY_IMAGE 
-                -c dcm2niix'
 ```
+
+This command runs the heudiconv singularity image while mounting our common drives
+
+
+
+
 
 # Quick Steps if you already have your HDC protocol defined for the study
 

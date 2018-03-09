@@ -22,3 +22,5 @@ export HFPEF_CLEAN_BIDS=${HFPEF_SCRIPTS_PATH}/hfpef_clean_bids.sh
 
 export HFPEF_SUBJECTS_DIR=${HFPEF_IMAGE_PROCESSING_PATH}/freesurfer
 
+export HFPEF_SINGULARITY_USER_BIND_PATHS='/gandg'
+

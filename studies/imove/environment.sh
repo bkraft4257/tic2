@@ -23,3 +23,5 @@ export IMOVE_CLEAN_BIDS=${IMOVE_SCRIPTS_PATH}/imove_clean_bids.sh
 
 export IMOVE_SUBJECTS_DIR=${IMOVE_IMAGE_PROCESSING_PATH}/freesurfer
 
+export IMOVE_SINGULARITY_USER_BIND_PATHS='/gandg'
+
