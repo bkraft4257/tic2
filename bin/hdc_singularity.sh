@@ -23,7 +23,6 @@ else
     echo "Running heudiconv for DICOM to NIFTI conversion"
     echo
 
-
     /usr/local/bin/singularity run     \
        -w                              \
        -B /cenc                        \
@@ -31,9 +30,10 @@ else
        -B /bkraft1                     \
        $HDC_SINGULARITY_IMAGE          \
        -c dcm2niix                     \
-       -b --minmeta                    \
+       -b                              \
+       --minmeta                       \
        -f $ACTIVE_HEUDICONV_PROTOCOL   \
        -o $ACTIVE_BIDS_PATH            \
-       -d "{subject}/2*/*/*.DCM"       \
+       -d $ACTIVE_HEUDICONV_PATTERN    \
        $@
 fi
