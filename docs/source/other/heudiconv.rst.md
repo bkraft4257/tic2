@@ -88,6 +88,7 @@ alias hdc_scan='/usr/local/bin/singularity run -w -B /cenc -B /gandg -B /bkraft1
 
 Notice that this alias fills in all the information except the parameters -d, -s, -ss, and -o.   These parameters will vary for each conversion and can not be specified before hand. A copy of the HDC help is at the bottom of this WIKI page.  I have copied the four parameters here for convenience.
 
+<pre>Text
   -d DICOM_DIR_TEMPLATE, --dicom_dir_template DICOM_DIR_TEMPLATE
                         location of dicomdir that can be indexed with subject
                         id {subject} and session {session}. Tarballs (can be
@@ -107,6 +108,7 @@ Notice that this alias fills in all the information except the parameters -d, -s
                         output directory for conversion setup (for further
                         customization and future reference. This directory
                         will refer to non-anonymized subject IDs
+<pre>Text
 
 As an example of how to scan a set of DICOM images exported from the PACS I will look at a specific example.  I have exported a set of DICOM images from the study with the Patient_Name of clbp01 and Patient_Id of clbp01.  When this exported from the PACS using a DICOM Receiver that Ricardo has setup  the DICOM images will be written to the specified directory of the DICOM Receiver in the directory <Patient_Name>_<Patient_ID>.  In my case, the data was written to the directory /bkraft1/dcm/incoming in the directory clbp01_clbp01.
 

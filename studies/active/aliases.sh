@@ -12,6 +12,12 @@ alias cdqc='cd $ACTIVE_MRIQC_PATH; lsreport_function'
 alias cdss='cd $ACTIVE_SCRIPTS_PATH; lsreport_function'
 
 alias asp='echo; echo $ACTIVE_PATH; echo'
-alias as='echo; echo $ACTIVE_STUDY; echo'
+alias asi='active_study_info.sh'
 
 alias bv='echo; $ACTIVE_BIDS_PATH; echo; cat $ACTIVE_BIDS_PATH/.bids.cfg;  echo; bids-validator -c $ACTIVE_BIDS_PATH/.bids.cfg $ACTIVE_BIDS_PATH'
+alias hdc='echo; cat $TIC_PATH/bin/hdc_singularity.sh; echo; $ACTIVE_BIDS_PATH; echo; $TIC_PATH/bin/hdc_singularity.sh'
+
+
+# Common environment variables used for ACTIVE scripts and such.
+
+export ACTIVE_HEUDICONV_PATTERN="\"{subject}/2*/*/*.DCM\""
