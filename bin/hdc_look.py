@@ -107,7 +107,7 @@ if __name__ == '__main__':
 
     in_args = parser.parse_args()
 
-    hdc_info_path = os.path.join(in_args.bids_path, '.heudiconv', in_args.subject, f'ses-{in_args.session}', 'info')
+    hdc_info_path = os.path.join(in_args.bids, '.heudiconv', in_args.subject, f'ses-{in_args.session}', 'info')
 
     edit_text_filename = os.path.join(hdc_info_path, f'{in_args.subject}_ses-{in_args.session}.edit.txt')
     auto_text_filename = os.path.join(hdc_info_path, f'{in_args.subject}_ses-{in_args.session}.auto.txt')
