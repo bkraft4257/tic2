@@ -12,12 +12,18 @@ echo
 if [ $# -eq 0 ]
   then
     echo
-    echo "No arguments supplied for heudiconv"
+    echo "No arguments supplied for heudiconv. Displaying heudiconv help."
     echo
 
     /usr/local/bin/singularity run $HDC_SINGULARITY_IMAGE -h
 
 else
+
+    echo
+    echo "Running heudiconv for DICOM to NIFTI conversion"
+    echo
+
+
     /usr/local/bin/singularity run     \
        -w                              \
        -B /cenc                        \
