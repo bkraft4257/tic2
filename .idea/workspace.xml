@@ -3,10 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="6f3e13b3-cd58-4c4d-98f6-1a68f8358bfb" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/bin/as_list.sh" afterPath="$PROJECT_DIR$/bin/active_study_info.sh" />
-      <change beforePath="$PROJECT_DIR$/bin/hdc_singularity.sh" afterPath="$PROJECT_DIR$/bin/hdc_singularity.sh" />
-      <change beforePath="$PROJECT_DIR$/docs/source/other/heudiconv.rst.md" afterPath="$PROJECT_DIR$/docs/source/other/heudiconv.rst.md" />
-      <change beforePath="$PROJECT_DIR$/studies/active/aliases.sh" afterPath="$PROJECT_DIR$/studies/active/aliases.sh" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -94,7 +90,7 @@
           <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
             <state split_layout="SPLIT">
               <first_editor relative-caret-position="114">
-                <caret line="8" column="3" lean-forward="true" selection-start-line="8" selection-start-column="3" selection-end-line="8" selection-end-column="3" />
+                <caret line="8" column="3" lean-forward="false" selection-start-line="8" selection-start-column="3" selection-end-line="8" selection-end-column="3" />
                 <folding>
                   <marker date="1520604799241" expanded="true" signature="5937:33004" ph="..." />
                   <marker date="1520604799241" expanded="true" signature="6979:33004" ph="..." />
@@ -404,13 +400,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1517948604886</updated>
-    </task>
-    <task id="LOCAL-00081" summary="Added documantation.  Added and cleaned up some aliases.">
-      <created>1519245581885</created>
-      <option name="number" value="00081" />
-      <option name="presentableId" value="LOCAL-00081" />
-      <option name="project" value="LOCAL" />
-      <updated>1519245581885</updated>
     </task>
     <task id="LOCAL-00082" summary="Bug in index? Reverted back to an older version in local revision control.">
       <created>1519246041518</created>
@@ -748,7 +737,14 @@
       <option name="project" value="LOCAL" />
       <updated>1520539348376</updated>
     </task>
-    <option name="localTasksCounter" value="130" />
+    <task id="LOCAL-00130" summary="Added ability to change permission of json and gz files.">
+      <created>1520605820147</created>
+      <option name="number" value="00130" />
+      <option name="presentableId" value="LOCAL-00130" />
+      <option name="project" value="LOCAL" />
+      <updated>1520605820147</updated>
+    </task>
+    <option name="localTasksCounter" value="131" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -1229,7 +1225,7 @@
       <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
         <state split_layout="SPLIT">
           <first_editor relative-caret-position="114">
-            <caret line="8" column="3" lean-forward="true" selection-start-line="8" selection-start-column="3" selection-end-line="8" selection-end-column="3" />
+            <caret line="8" column="3" lean-forward="false" selection-start-line="8" selection-start-column="3" selection-end-line="8" selection-end-column="3" />
             <folding>
               <marker date="1520604799241" expanded="true" signature="5937:33004" ph="..." />
               <marker date="1520604799241" expanded="true" signature="6979:33004" ph="..." />
