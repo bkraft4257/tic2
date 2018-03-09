@@ -8,6 +8,7 @@ Looks at various files involved in the Heudiconv convert process.
 import pandas
 import argparse
 import os
+import sys
 
 HDC_FILES = ['edit', 'auto', 'dicominfo']
 BIDS_PATH = os.path.abspath(os.getenv('ACTIVE_BIDS_PATH'))
@@ -38,6 +39,7 @@ def _read_dicominfo_tsv(tsv_filename):
 
     except FileNotFoundError:
         print('File Not Found')
+        sys.exit()
 
 
 def _add_header(df_dicominfo,
