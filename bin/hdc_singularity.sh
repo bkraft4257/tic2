@@ -23,17 +23,20 @@ else
     echo "Running heudiconv for DICOM to NIFTI conversion"
     echo
 
-    /usr/local/bin/singularity run     \
-       -w                              \
-       -B /cenc                        \
-       -B /gandg                       \
-       -B /bkraft1                     \
-       $HDC_SINGULARITY_IMAGE          \
-       -c dcm2niix                     \
-       -b                              \
-       --minmeta                       \
-       -f $ACTIVE_HEUDICONV_PROTOCOL   \
-       -o $ACTIVE_BIDS_PATH            \
-       -d $ACTIVE_HEUDICONV_PATTERN    \
-       $@
+    cmd="/usr/local/bin/singularity run     \
+            -w                              \
+            -B /cenc                        \
+            -B /gandg                       \
+            -B /bkraft1                     \
+            $HDC_SINGULARITY_IMAGE          \
+            -c dcm2niix                     \
+            -b                              \
+            --minmeta                       \
+            -f $ACTIVE_HEUDICONV_PROTOCOL   \
+            -o $ACTIVE_BIDS_PATH            \
+            -d $ACTIVE_HEUDICONV_PATTERN    \
+            $@"
+
+    echo $cmd
+
 fi
