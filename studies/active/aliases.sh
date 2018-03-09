@@ -25,5 +25,4 @@ alias sws='study_switcher.py -s synergy; source $TIC_INIT_PATH/tic_study_switche
 
 # Common environment variables used for ACTIVE scripts and such.
 
-export ACTIVE_HEUDICONV_PATTERN="\"{subject}/2*/*/*.DCM\""
-˚
+export ACTIVE_HEUDICONV_PATTERN="{subject}/2*/*/*.DCM"
