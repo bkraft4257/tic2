@@ -29,17 +29,15 @@ def _display_text_file(filename):
             print(fin.read())
 
     except FileNotFoundError:
-        print(f'File not found. {filename}')
+        print(f'{Fore.RED} File not found. {Fore.WHITE}{filename}')
 
 
 def _read_dicominfo_tsv(tsv_filename):
-    print(f'\n\n{tsv_filename}\n')
-
     try:
         return pandas.read_csv(tsv_filename, sep='\t')
 
     except FileNotFoundError:
-        print('File Not Found')
+        print(f'{Fore.RED} File not found. {Fore.WHITE}{tsv_filename}')
         sys.exit()
 
 
