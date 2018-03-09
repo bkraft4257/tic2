@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env zsh
 
 echo
 echo 'active study = ' $ACTIVE_STUDY
@@ -42,6 +42,5 @@ else
     echo
 
     $cmd
-
 
 fi
