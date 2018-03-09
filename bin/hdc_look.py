@@ -9,6 +9,7 @@ import pandas
 import argparse
 import os
 import sys
+from colorama import Fore
 
 HDC_FILES = ['edit', 'auto', 'dicominfo']
 BIDS_PATH = os.path.abspath(os.getenv('ACTIVE_BIDS_PATH'))
@@ -131,8 +132,8 @@ if __name__ == '__main__':
 
     except:
 
-        print('\nFailed to run ... \n\n'
-              'heudiconv_add_header  -subject {0} --session {1} --bids {2}  \n\n'
+        print(Fore.RED + '\nFailed to run ... \n\n'
+                         'heudiconv_add_header  -subject {0} --session {1} --bids {2}  \n\n'
               .format(in_args.subject,
                       in_args.session,
                       in_args.bids,
