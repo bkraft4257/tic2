@@ -13,8 +13,8 @@ HDC_FILES = ['edit', 'auto', 'dicominfo']
 BIDS_PATH = os.getenv('ACTIVE_BIDS_PATH')
 
 DISPLAY_COLUMNS = ['series_number', 'sequence_name', 'series_description',
-                       'dim1', 'dim2', 'dim3', 'dim4',
-                       'TR', 'TE', 'is_derived', 'is_motion_corrected']
+                   'dim1', 'dim2', 'dim3', 'dim4',
+                   'TR', 'TE', 'is_derived', 'is_motion_corrected']
 
 
 def _display_text_file(filename):
@@ -39,15 +39,15 @@ def _add_header(df_dicominfo,
                 display_columns=DISPLAY_COLUMNS,
                 verbose=False):
 
-    df_dicominfo.columns = ['total_files_till_now',            #  1
-                            'example_dcm_file',                #  2
-                            'series_id',                       #  3
-                            'unspecified1',                    #  4
-                            'unspecified2',                    #  5
-                            'unspecified3',                    #  6
-                            'dim1',                            #  7
-                            'dim2',                            #  8
-                            'dim3',                            #  9
+    df_dicominfo.columns = ['total_files_till_now',            # 01
+                            'example_dcm_file',                # 02
+                            'series_id',                       # 03
+                            'unspecified1',                    # 04
+                            'unspecified2',                    # 05
+                            'unspecified3',                    # 06
+                            'dim1',                            # 07
+                            'dim2',                            # 08
+                            'dim3',                            # 09
                             'dim4',                            # 10
                             'TR',                              # 11
                             'TE',                              # 12
@@ -81,17 +81,6 @@ def _save_dicominfo_csv(df_dicominfo, csv_filename):
         df_dicominfo.to_csv(csv_filename)
 
 
-def add_header(tsv_filename, verbose=False):
-
-    df_tsv = _read_dicominfo_tsv(tsv_filename)
-    df_dicominfo = _add_header(df_tsv, verbose=verbose)
-
-    if verbose:
-        pass
-
-    return
-
-
 if __name__ == '__main__':
 
     """
@@ -107,21 +96,22 @@ if __name__ == '__main__':
     parser.add_argument('-s', '--subject', help='Participant Label')
     parser.add_argument('-ss', '--session', help='Session Label', default=1)
 
+    parser.add_argument('-b', '--bids', help='BIDS path.  default=ACTIVE_BIDS_PATH', default=BIDS_PATH)
+
     parser.add_argument('-f', '--files',
                         nargs='*',
                         type=str,
-                        help="Verbose flag", choices=['edit', 'auto', 'dicominfo'], default =['dicominfo', 'edit'])
+                        help="Verbose flag", choices=['edit', 'auto', 'dicominfo'], default=['dicominfo', 'edit'])
 
     parser.add_argument('-v', '--verbose', help="Verbose flag", action="store_true", default=False)
 
     in_args = parser.parse_args()
 
-    hdc_info_path =  os.path.join(BIDS_PATH, '.heudiconv', in_args.subject, f'ses-{in_args.session}', 'info')
+    hdc_info_path = os.path.join(in_args.bids_path, '.heudiconv', in_args.subject, f'ses-{in_args.session}', 'info')
 
     edit_text_filename = os.path.join(hdc_info_path, f'{in_args.subject}_ses-{in_args.session}.edit.txt')
     auto_text_filename = os.path.join(hdc_info_path, f'{in_args.subject}_ses-{in_args.session}.auto.txt')
     dicominfo_tsv_filename = os.path.join(hdc_info_path, f'dicominfo_ses-{in_args.session}.tsv')
-
 
     try:
         if 'dicominfo' in HDC_FILES:
@@ -133,7 +123,6 @@ if __name__ == '__main__':
 
         if 'edit' in in_args.files:
             _display_text_file(edit_text_filename)
-
 
     except:
 
