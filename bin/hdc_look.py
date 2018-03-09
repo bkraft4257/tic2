@@ -29,7 +29,7 @@ def _display_text_file(filename):
             print(fin.read())
 
     except FileNotFoundError:
-        print(f'{Fore.RED} File not found. {Fore.WHITE}{filename}')
+        print(f'{Fore.RED}File not found. {Fore.WHITE}{filename}')
 
 
 def _read_dicominfo_tsv(tsv_filename):

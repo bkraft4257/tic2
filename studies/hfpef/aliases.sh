@@ -4,16 +4,16 @@
 alias rehfpef='source $HFPEF_SCRIPTS_PATH/aliases.sh'
 alias hfpef_help='firefox https://github.com/theimagingcollective/nipype_workflows/wiki/HFPEF-Image-Processing &'
 
-alias hfpef_clean_bids='$HFPEF_SCRIPTS_PATH/hfpef_bids_clean.sh'
-alias hfpef_bids_clean='$HFPEF_SCRIPTS_PATH/hfpef_bids_clean.sh'
+
+
+#alias hfpef_bids_clean='$HFPEF_SCRIPTS_PATH/hfpef_bids_clean.sh'
+alias hfpef_bids_clean='$HFPEF_SCRIPTS_PATH/hfpef_clean_bids_2b.sh'
 
 # The JSON file written after the upgrade is different than before the upgrade.
 # AcquisitionMatrixPE: 64 is no longer in the file and has been replaced with
 # AcquisitionNumber: 1.  I then modified the hfpef_clean_bids.sh file to accommodate this change. It is a quick and ugly
 # hack.
 
-alias hfpef_clean_bids_2b='$HFPEF_SCRIPTS_PATH/hfpef_clean_bids_2b.sh'
-alias hfpef_bids_clean_2b='$HFPEF_SCRIPTS_PATH/hfpef_clean_bids_2b.sh'
 
 alias hfpef_gi_netprep_epi='$HFPEF_SCRIPTS_PATH/hfpef_gi_netprep_epi.sh'
 alias hfpef_gi_netprep_mbepi='$HFPEF_SCRIPTS_PATH/hfpef_gi_netprep_mbepi.sh'
