@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="6f3e13b3-cd58-4c4d-98f6-1a68f8358bfb" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/studies/active/aliases.sh" afterPath="$PROJECT_DIR$/studies/active/aliases.sh" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -116,8 +117,8 @@
       <file leaf-file-name="aliases.sh" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/studies/active/aliases.sh">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="51">
-              <caret line="3" column="0" lean-forward="true" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+            <state relative-caret-position="289">
+              <caret line="17" column="11" lean-forward="false" selection-start-line="17" selection-start-column="11" selection-end-line="17" selection-end-column="11" />
               <folding />
             </state>
           </provider>
@@ -400,13 +401,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1517948604886</updated>
-    </task>
-    <task id="LOCAL-00082" summary="Bug in index? Reverted back to an older version in local revision control.">
-      <created>1519246041518</created>
-      <option name="number" value="00082" />
-      <option name="presentableId" value="LOCAL-00082" />
-      <option name="project" value="LOCAL" />
-      <updated>1519246041518</updated>
     </task>
     <task id="LOCAL-00083" summary="Renamed quick_instructions to quick_reference">
       <created>1519246749255</created>
@@ -744,7 +738,14 @@
       <option name="project" value="LOCAL" />
       <updated>1520605820147</updated>
     </task>
-    <option name="localTasksCounter" value="131" />
+    <task id="LOCAL-00131" summary="Updating HDC documentation and API">
+      <created>1520605847693</created>
+      <option name="number" value="00131" />
+      <option name="presentableId" value="LOCAL-00131" />
+      <option name="project" value="LOCAL" />
+      <updated>1520605847693</updated>
+    </task>
+    <option name="localTasksCounter" value="132" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -806,7 +807,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Fixed bug. log_file -&gt; $log_file" />
     <MESSAGE value="Fixed bug. pointed to wrong directory again." />
     <MESSAGE value="Fixed bug. tee was overwriting log file not appending." />
     <MESSAGE value="Updating hfpef protocol to work with hdc singularity image." />
@@ -831,7 +831,8 @@
     <MESSAGE value="Simplified the hfpef aliases." />
     <MESSAGE value="Fixed bug with the IntendedFor for EPI rest with fmap and topup" />
     <MESSAGE value="Added ability to change permission of json and gz files." />
-    <option name="LAST_COMMIT_MESSAGE" value="Added ability to change permission of json and gz files." />
+    <MESSAGE value="Updating HDC documentation and API" />
+    <option name="LAST_COMMIT_MESSAGE" value="Updating HDC documentation and API" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1265,8 +1266,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/studies/active/aliases.sh">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="0" lean-forward="true" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+        <state relative-caret-position="289">
+          <caret line="17" column="11" lean-forward="false" selection-start-line="17" selection-start-column="11" selection-end-line="17" selection-end-column="11" />
           <folding />
         </state>
       </provider>
