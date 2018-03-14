@@ -29,7 +29,8 @@ if __name__ == '__main__':
 
     in_args = parser.parse_args()
 
-    bids_subject_session_path = os.path.join(BIDS_PATH, f'sub-{in_args.subject}', f'ses-{in_args.session}')
+    bids_subject_path = os.path.join(BIDS_PATH, f'sub-{in_args.subject}')
+    bids_subject_session_path = os.path.join(bids_subject_path, f'ses-{in_args.session}')
     heudiconv_subject_session_path = os.path.join(BIDS_PATH, '.heudiconv', in_args.subject, f'ses-{in_args.session}')
 
     print('\n')
@@ -47,5 +48,8 @@ if __name__ == '__main__':
 
         except:
             print(Fore.RED + f'Failed to remove {ii}')
+
+    if os.listdir(bids_subject_path) == []:
+        os.rmdir(bids_subject_path)
 
     print('\n')
