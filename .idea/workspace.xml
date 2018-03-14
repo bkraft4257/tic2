@@ -1,14 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="6f3e13b3-cd58-4c4d-98f6-1a68f8358bfb" name="Default" comment="Up">
-      <change beforePath="" afterPath="$PROJECT_DIR$/bin/tic_bids_validator.sh" />
+    <list default="true" id="6f3e13b3-cd58-4c4d-98f6-1a68f8358bfb" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/bin/bids_display.sh" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/bin/check_fmaps.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/bin/hdc_clean.py" afterPath="$PROJECT_DIR$/bin/hdc_clean.py" />
-      <change beforePath="$PROJECT_DIR$/bin/study_switcher.py" afterPath="$PROJECT_DIR$/bin/study_switcher.py" />
-      <change beforePath="$PROJECT_DIR$/studies/active/aliases.sh" afterPath="$PROJECT_DIR$/studies/active/aliases.sh" />
+      <change beforePath="$PROJECT_DIR$/bin/tic_bids_validator.sh" afterPath="$PROJECT_DIR$/bin/tic_bids_validator.sh" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -118,8 +113,8 @@
       <file leaf-file-name="tic_bids_validator.sh" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/bin/tic_bids_validator.sh">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="14" column="68" lean-forward="false" selection-start-line="14" selection-start-column="68" selection-end-line="14" selection-end-column="68" />
+            <state relative-caret-position="170">
+              <caret line="10" column="20" lean-forward="true" selection-start-line="10" selection-start-column="20" selection-end-line="10" selection-end-column="20" />
               <folding />
             </state>
           </provider>
@@ -353,13 +348,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1517948604886</updated>
-    </task>
-    <task id="LOCAL-00104" summary="Fixed str bug.">
-      <created>1520177346728</created>
-      <option name="number" value="00104" />
-      <option name="presentableId" value="LOCAL-00104" />
-      <option name="project" value="LOCAL" />
-      <updated>1520177346728</updated>
     </task>
     <task id="LOCAL-00105" summary="Fixed str bug.">
       <created>1520177392149</created>
@@ -697,7 +685,14 @@
       <option name="project" value="LOCAL" />
       <updated>1520633700172</updated>
     </task>
-    <option name="localTasksCounter" value="153" />
+    <task id="LOCAL-00153" summary="Updated bids-validator and alias bv to be more expressive.">
+      <created>1521043102271</created>
+      <option name="number" value="00153" />
+      <option name="presentableId" value="LOCAL-00153" />
+      <option name="project" value="LOCAL" />
+      <updated>1521043102272</updated>
+    </task>
+    <option name="localTasksCounter" value="154" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -759,7 +754,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Fixed bug. tee was overwriting log file not appending." />
     <MESSAGE value="Updating hfpef protocol to work with hdc singularity image." />
     <MESSAGE value="Updated permissions of *.sh files in bin directory." />
     <MESSAGE value="Updated protocol in environment." />
@@ -784,7 +778,8 @@
     <MESSAGE value="Added ability to change permission of json and gz files." />
     <MESSAGE value="Updating HDC documentation and API" />
     <MESSAGE value="Cleaned up HFPEF aliases, scripts, and protocols." />
-    <option name="LAST_COMMIT_MESSAGE" value="Cleaned up HFPEF aliases, scripts, and protocols." />
+    <MESSAGE value="Updated bids-validator and alias bv to be more expressive." />
+    <option name="LAST_COMMIT_MESSAGE" value="Updated bids-validator and alias bv to be more expressive." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1177,8 +1172,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/bin/tic_bids_validator.sh">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" column="68" lean-forward="false" selection-start-line="14" selection-start-column="68" selection-end-line="14" selection-end-column="68" />
+        <state relative-caret-position="170">
+          <caret line="10" column="20" lean-forward="true" selection-start-line="10" selection-start-column="20" selection-end-line="10" selection-end-column="20" />
           <folding />
         </state>
       </provider>
