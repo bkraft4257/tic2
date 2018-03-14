@@ -198,10 +198,10 @@ def infotodict(seqinfo):
     # Create an empty dictionary called info for each key
 
     info = {t1: [],
-            # tof: [],
-            # pc_bilateral: [],
-            # pc_right_mca: [],
-            # pc_left_mca: [],
+            tof: [],
+            pc_bilateral: [],
+            pc_right_mca: [],
+            pc_left_mca: [],
             rest_ap: [],
             rest_topup_ap: [],
             rest_topup_pa: [],

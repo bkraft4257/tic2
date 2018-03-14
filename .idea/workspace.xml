@@ -133,8 +133,8 @@
       <file leaf-file-name="synergy_protocol_singularity.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/studies/synergy/scripts/synergy_protocol_singularity.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-416">
-              <caret line="192" column="0" lean-forward="true" selection-start-line="187" selection-start-column="0" selection-end-line="192" selection-end-column="0" />
+            <state relative-caret-position="534">
+              <caret line="204" column="0" lean-forward="false" selection-start-line="200" selection-start-column="0" selection-end-line="204" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -379,13 +379,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1517948604886</updated>
-    </task>
-    <task id="LOCAL-00116" summary="Updated protocol to include missing pCASL. Series description was different.">
-      <created>1520534251022</created>
-      <option name="number" value="00116" />
-      <option name="presentableId" value="LOCAL-00116" />
-      <option name="project" value="LOCAL" />
-      <updated>1520534251022</updated>
     </task>
     <task id="LOCAL-00117" summary="Updated hdc_clean to remove BIDS directory, as well as, .heudicon directory of &#10;the appropriate subject and session.">
       <created>1520534499423</created>
@@ -723,7 +716,14 @@
       <option name="project" value="LOCAL" />
       <updated>1521058456930</updated>
     </task>
-    <option name="localTasksCounter" value="165" />
+    <task id="LOCAL-00165" summary="Updated SYNERGY protocol.">
+      <created>1521058610673</created>
+      <option name="number" value="00165" />
+      <option name="presentableId" value="LOCAL-00165" />
+      <option name="project" value="LOCAL" />
+      <updated>1521058610673</updated>
+    </task>
+    <option name="localTasksCounter" value="166" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -785,7 +785,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Added function to display text files involved in heudiconv" />
     <MESSAGE value="Testing hdc_look.py" />
     <MESSAGE value="Added display of dicominfo file" />
     <MESSAGE value="Fixed str bug." />
@@ -810,7 +809,8 @@
     <MESSAGE value="Updated Heudiconv singularity image from 0.3 to 0.5" />
     <MESSAGE value="Updated tic_info to display all the singularity images." />
     <MESSAGE value="Updated singularity image documentation.  &#10;Added ability to remove CR from DICOM images." />
-    <option name="LAST_COMMIT_MESSAGE" value="Updated singularity image documentation.  &#10;Added ability to remove CR from DICOM images." />
+    <MESSAGE value="Updated SYNERGY protocol." />
+    <option name="LAST_COMMIT_MESSAGE" value="Updated SYNERGY protocol." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1228,8 +1228,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/studies/synergy/scripts/synergy_protocol_singularity.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-416">
-          <caret line="192" column="0" lean-forward="true" selection-start-line="187" selection-start-column="0" selection-end-line="192" selection-end-column="0" />
+        <state relative-caret-position="534">
+          <caret line="204" column="0" lean-forward="false" selection-start-line="200" selection-start-column="0" selection-end-line="204" selection-end-column="0" />
           <folding />
         </state>
       </provider>
