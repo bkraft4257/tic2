@@ -56,6 +56,5 @@ if __name__ == '__main__':
 
     if not os.listdir(bids_heudiconv_path):
         os.rmdir(bids_heudiconv_path)
-        print(Fore.GREEN + f'Successfully removed {bids_heudiconv_path}')
 
     print('\n')
