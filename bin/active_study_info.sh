@@ -3,7 +3,7 @@
 # List the ACTIVE study setup
 
 echo
-echo '$ACTIVE_STUDY'
+echo $ACTIVE_STUDY
 echo
 echo 'ACTIVE_SCRIPTS_PATH                = ' $ACTIVE_SCRIPTS_PATH
 echo 'ACTIVE_PATH                        = ' $ACTIVE_PATH
