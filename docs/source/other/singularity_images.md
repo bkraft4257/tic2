@@ -8,7 +8,7 @@
 
 ## Converting a Docker image to a Singularity container
 
-These notes were provided by Craig Hamilton. The
+These notes were provided by Craig Hamilton.
 
 I used the instructions on converting fmriprep:
 https://fmriprep.readthedocs.io/en/stable/installation.html#singularity-container
@@ -36,3 +36,6 @@ But, you can get a local copy if you want it:
 (However, this local copy is put somewhere special, known to docker. It
 doesn't go in the local directory. "docker images" will show your
 images, but not where they reside.)
+
+
+## Add Mounting points to Singularity image.
