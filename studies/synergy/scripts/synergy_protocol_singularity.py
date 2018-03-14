@@ -184,24 +184,23 @@ def infotodict(seqinfo):
     #
 
     t1 = create_key('sub-{subject}/{session}/anat/sub-{subject}_{session}_T1w.{item:01d}')
-    tof = create_key('sub-{subject}/{session}/anat/sub-{subject}_{session}_acq-3dtof_angio.{item:01d}')
-
-    pc_bilateral = create_key('sub-{subject}/{session}/anat/sub-{subject}_{session}_acq-pcbilateral_angio.{item:01d}')
-    pc_right_mca = create_key('sub-{subject}/{session}/anat/sub-{subject}_{session}_acq-pcright_angio.{item:01d}')
-    pc_left_mca = create_key('sub-{subject}/{session}/anat/sub-{subject}_{session}_acq-pcleft_angio.{item:01d}')
+    # tof = create_key('sub-{subject}/{session}/anat/sub-{subject}_{session}_acq-3dtof_angio.{item:01d}')
+    #
+    # pc_bilateral = create_key('sub-{subject}/{session}/anat/sub-{subject}_{session}_acq-pcbilateral_angio.{item:01d}')
+    # pc_right_mca = create_key('sub-{subject}/{session}/anat/sub-{subject}_{session}_acq-pcright_angio.{item:01d}')
+    # pc_left_mca = create_key('sub-{subject}/{session}/anat/sub-{subject}_{session}_acq-pcleft_angio.{item:01d}')
 
     rest_ap = create_key('sub-{subject}/{session}/func/sub-{subject}_{session}_task-rest_acq-epi_bold.{item:01d}')
     rest_topup_ap = create_key('sub-{subject}/{session}/fmap/sub-{subject}_{session}_acq-topup_dir-ap_epi.{item:01d}')
     rest_topup_pa = create_key('sub-{subject}/{session}/fmap/sub-{subject}_{session}_acq-topup_dir-pa_epi.{item:01d}')
 
-
     # Create an empty dictionary called info for each key
 
     info = {t1: [],
-            tof: [],
-            pc_bilateral: [],
-            pc_right_mca: [],
-            pc_left_mca: [],
+            # tof: [],
+            # pc_bilateral: [],
+            # pc_right_mca: [],
+            # pc_left_mca: [],
             rest_ap: [],
             rest_topup_ap: [],
             rest_topup_pa: [],
@@ -217,25 +216,25 @@ def infotodict(seqinfo):
         if 'MPRAGE' in s.series_description:
                 info[t1].append([s.series_id])
 
-        if (('TOF_3D' in s.series_description) and
-                ('fl3d1r_t70' in s.sequence_name) and
-                (s.dim3 >= 64) and (s.dim3 <= 128)):
-            info[tof].append([s.series_id])
-
-        if (('Brain 2D PhCon BILATERAL' in s.series_description) and
-                ('fl2d1r3' in s.sequence_name) and
-                (s.is_derived == False)):
-                info[pc_bilateral].append([s.series_id])
-
-        if (('Brain 2D PhCon RT MCA' in s.series_description) and
-                ('fl2d1r3' in s.sequence_name) and
-                (s.is_derived == False)):
-                info[pc_right_mca].append([s.series_id])
-
-        if (('Brain 2D PhCon LT MCA' in s.series_description) and
-                ('fl2d1r3' in s.sequence_name) and
-                (s.is_derived == False)):
-                info[pc_left_mca].append([s.series_id])
+        # if (('TOF_3D' in s.series_description) and
+        #         ('fl3d1r_t70' in s.sequence_name) and
+        #         (s.dim3 >= 64) and (s.dim3 <= 128)):
+        #     info[tof].append([s.series_id])
+        #
+        # if (('Brain 2D PhCon BILATERAL' in s.series_description) and
+        #         ('fl2d1r3' in s.sequence_name) and
+        #         (not s.is_derived)):
+        #         info[pc_bilateral].append([s.series_id])
+        #
+        # if (('Brain 2D PhCon RT MCA' in s.series_description) and
+        #         ('fl2d1r3' in s.sequence_name) and
+        #         (not s.is_derived)):
+        #         info[pc_right_mca].append([s.series_id])
+        #
+        # if (('Brain 2D PhCon LT MCA' in s.series_description) and
+        #         ('fl2d1r3' in s.sequence_name) and
+        #         (not s.is_derived)):
+        #         info[pc_left_mca].append([s.series_id])
 
         # --------------------------------------
         # resting state bold
