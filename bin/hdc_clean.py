@@ -51,10 +51,10 @@ if __name__ == '__main__':
         except:
             print(Fore.RED + f'Failed to remove {ii}')
 
-    if os.listdir(bids_subject_path):
+    if not os.listdir(bids_subject_path):
         os.rmdir(bids_subject_path)
 
-    if os.listdir(bids_heudiconv_path):
+    if not os.listdir(bids_heudiconv_path):
         os.rmdir(bids_heudiconv_path)
         print(Fore.GREEN + f'Successfully removed {bids_heudiconv_path}')
 
