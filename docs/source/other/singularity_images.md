@@ -1,6 +1,11 @@
 # Singularity Images
 
 
+## Downloading a Docker Image
+
+1. Run the Docker daemon
+1. docker pull nipy/heudiconv:latest
+
 ## Converting a Docker image to a Singularity container
 
 These notes were provided by Craig Hamilton. The
@@ -23,7 +28,7 @@ so don't need a copy of it locally. This put the singularity container
 in my tmp directory, which I copied to /cenc/software/heudiconv. (the
 /cenc mount was evidently not available to docker)
 
-But, you can get alocal copy if you want it:
+But, you can get a local copy if you want it:
 
 * $ docker pull nipy/heudiconv
 * $ docker pull poldracklab/fmriprep

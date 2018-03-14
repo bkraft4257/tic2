@@ -44,7 +44,6 @@ This command runs the heudiconv singularity image while mounting our common driv
     $ hdc_add_header dicominfo_ses-1.tsv -o dicominfo_ses-1.csv -v
 
 
-# Quick Steps for converting
 
 # Quick Steps
 
