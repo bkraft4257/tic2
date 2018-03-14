@@ -2,7 +2,8 @@
 # -*- coding: utf-8 -*-
 
 """
-Looks at various files involved in the Heudiconv convert process.
+Removes the Heudiconv files so that they may be run again. The function currently does not remove
+the subject from the participant.tsv file.
 """
 
 import argparse
@@ -12,6 +13,8 @@ from colorama import Fore, Back, Style
 
 BIDS_PATH = os.getenv('ACTIVE_BIDS_PATH')
 
+
+# TODO: Remove subject from participant.tsv file.
 
 if __name__ == '__main__':
 

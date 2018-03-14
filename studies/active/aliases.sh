@@ -14,12 +14,13 @@ alias cdass='cd $ACTIVE_SCRIPTS_PATH; lsreport_function'
 alias asp='echo; echo $ACTIVE_PATH; echo'
 alias asi='active_study_info.sh'
 
-alias bv='echo; $ACTIVE_BIDS_PATH; echo; cat $ACTIVE_BIDS_PATH/.bids.cfg;  echo; bids-validator -c $ACTIVE_BIDS_PATH/.bids.cfg $ACTIVE_BIDS_PATH'
+alias bv='tic_bids_validator.sh'
 
 alias sw='study_switcher.py '
 
 alias swh='study_switcher.py -s hfpef; source $TIC_INIT_PATH/tic_study_switcher.sh'
 alias swi='study_switcher.py -s infinite; source $TIC_INIT_PATH/tic_study_switcher.sh'
+alias swm='study_switcher.py -s imove; source $TIC_INIT_PATH/tic_study_switcher.sh'
 alias sws='study_switcher.py -s synergy; source $TIC_INIT_PATH/tic_study_switcher.sh'
 
 

@@ -2,6 +2,11 @@
 # -*- coding: utf-8 -*-
 
 """
+Writes a bash script to TIC_INIT_PATH.  This function is often called with an alias that calls this function
+and then sources the bash script.  For example,
+
+alias swh='study_switcher.py -s hfpef; source $TIC_INIT_PATH/tic_study_switcher.sh'
+
 """
 
 __version__ = "0.0.0"
