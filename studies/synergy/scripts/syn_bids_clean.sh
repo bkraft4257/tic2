@@ -30,7 +30,7 @@ session_value=$2
 
 full_subject_session_value=sub-${subject_value}_ses-${session_value}
 
-session_dir=${start_dir}/sub-${subject_value}/ses-${session_value}
+session_dir=${SYNERGY_BIDS_PATH}/sub-${subject_value}/ses-${session_value}
 
 echo 
 echo "================================================================================="
@@ -47,6 +47,9 @@ echo
 #echo "------------------------------------------------------------------------------------------------"-
 
 $TIC_PATH/bin/hdc_look.py -s $subject_value -ss $session_value -f dicominfo edit
+
+echo
+echo
 
 #--- Remove .1. from filenames and enable write permission --------------------------------------------
 find ${session_dir} \( -name "*.gz" -or -name "*.json" \)| xargs chmod +w 
@@ -102,7 +105,7 @@ echo "--------------------------------------------------------------------------
 grep -H "IntendedFor" *.json
 echo
 
-cd $start_dir 
+cd $SYNERGY_BIDS_PATH
 
 #--- Reorient all images to match FSL orientation -------------------------------------------------
 echo "Reorienting all *.gz files with fslreorient2std"
@@ -133,3 +136,5 @@ find $session_dir -name "*.[0-9]*"
 
 
 echo " "
+
+cd $start_dir

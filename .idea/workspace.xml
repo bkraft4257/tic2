@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="6f3e13b3-cd58-4c4d-98f6-1a68f8358bfb" name="Default" comment="">
+    <list default="true" id="6f3e13b3-cd58-4c4d-98f6-1a68f8358bfb" name="Default" comment="Removed old aliases from Synergy">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/studies/synergy/aliases.sh" afterPath="$PROJECT_DIR$/studies/synergy/aliases.sh" />
+      <change beforePath="$PROJECT_DIR$/studies/hfpef/scripts/hfpef_bids_clean.sh" afterPath="$PROJECT_DIR$/studies/hfpef/scripts/hfpef_bids_clean.sh" />
+      <change beforePath="$PROJECT_DIR$/studies/synergy/scripts/syn_bids_clean.sh" afterPath="$PROJECT_DIR$/studies/synergy/scripts/syn_bids_clean.sh" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -26,11 +27,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="syn_bids_clean.sh" pinned="false" current-in-tab="false">
+      <file leaf-file-name="syn_bids_clean.sh" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/studies/synergy/scripts/syn_bids_clean.sh">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="521">
-              <caret line="49" column="0" lean-forward="false" selection-start-line="49" selection-start-column="0" selection-end-line="49" selection-end-column="0" />
+            <state relative-caret-position="199">
+              <caret line="28" column="16" lean-forward="true" selection-start-line="28" selection-start-column="16" selection-end-line="28" selection-end-column="16" />
               <folding />
             </state>
           </provider>
@@ -69,8 +70,8 @@
       <file leaf-file-name="hfpef_bids_clean.sh" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/studies/hfpef/scripts/hfpef_bids_clean.sh">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-275">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state relative-caret-position="752">
+              <caret line="239" column="13" lean-forward="false" selection-start-line="239" selection-start-column="4" selection-end-line="239" selection-end-column="13" />
               <folding />
             </state>
           </provider>
@@ -116,11 +117,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="aliases.sh" pinned="false" current-in-tab="true">
+      <file leaf-file-name="aliases.sh" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/studies/synergy/aliases.sh">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="6" column="0" lean-forward="true" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
+            <state relative-caret-position="34">
+              <caret line="2" column="53" lean-forward="false" selection-start-line="2" selection-start-column="53" selection-end-line="2" selection-end-column="53" />
               <folding />
             </state>
           </provider>
@@ -160,6 +161,7 @@
       <find>/gandg/hfpef/scripts/</find>
       <find>is_deriverd</find>
       <find>hdc_bids_path</find>
+      <find>start_dir</find>
     </findStrings>
     <replaceStrings>
       <replace>01d</replace>
@@ -185,8 +187,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/studies/imove/aliases.sh" />
-        <option value="$PROJECT_DIR$/studies/imove/scripts/imove_bids.cfg" />
         <option value="$PROJECT_DIR$/studies/imove/scripts/hdc_imove.sh" />
         <option value="$PROJECT_DIR$/bin/clean_bids.sh" />
         <option value="$PROJECT_DIR$/studies/imove/scripts/imove_protocol.py" />
@@ -236,6 +236,8 @@
         <option value="$PROJECT_DIR$/studies/synergy/scripts/synergy_protocol_singularity.py" />
         <option value="$PROJECT_DIR$/studies/synergy/scripts/syn_clean_bids.sh" />
         <option value="$PROJECT_DIR$/studies/synergy/aliases.sh" />
+        <option value="$PROJECT_DIR$/studies/hfpef/scripts/hfpef_bids_clean.sh" />
+        <option value="$PROJECT_DIR$/studies/synergy/scripts/syn_bids_clean.sh" />
       </list>
     </option>
   </component>
@@ -379,13 +381,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1517948604886</updated>
-    </task>
-    <task id="LOCAL-00120" summary="Only delete the directory if it exists.">
-      <created>1520535098727</created>
-      <option name="number" value="00120" />
-      <option name="presentableId" value="LOCAL-00120" />
-      <option name="project" value="LOCAL" />
-      <updated>1520535098727</updated>
     </task>
     <task id="LOCAL-00121" summary="Only delete the directory if it exists.">
       <created>1520535174863</created>
@@ -723,7 +718,14 @@
       <option name="project" value="LOCAL" />
       <updated>1521059351075</updated>
     </task>
-    <option name="localTasksCounter" value="169" />
+    <task id="LOCAL-00169" summary="Removed old aliases from Synergy">
+      <created>1521059471583</created>
+      <option name="number" value="00169" />
+      <option name="presentableId" value="LOCAL-00169" />
+      <option name="project" value="LOCAL" />
+      <updated>1521059471584</updated>
+    </task>
+    <option name="localTasksCounter" value="170" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -785,7 +787,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Fixed str bug." />
     <MESSAGE value="Added ability to clean out a specific subject and session&#10;.heudiconv directory." />
     <MESSAGE value="Update hfpef protocol. Fixed numerous bugs." />
     <MESSAGE value="Updated hdc_look.py to show just the series_number instead of series_id.  &#10;The series_id contains both the series_number and repeated series_description. &#10;It is too long." />
@@ -810,7 +811,8 @@
     <MESSAGE value="Updated SYNERGY protocol." />
     <MESSAGE value="Updated SYNERGY bids cleaning." />
     <MESSAGE value="Renamed synergy_clean_bids.sh to synergy_bids_clean.sh&#10;Removed some old scripts." />
-    <option name="LAST_COMMIT_MESSAGE" value="Renamed synergy_clean_bids.sh to synergy_bids_clean.sh&#10;Removed some old scripts." />
+    <MESSAGE value="Removed old aliases from Synergy" />
+    <option name="LAST_COMMIT_MESSAGE" value="Removed old aliases from Synergy" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1177,30 +1179,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/studies/hfpef/scripts/hfpef_bids_clean_2.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="8" column="0" lean-forward="false" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/studies/hfpef/scripts/hfpef_bids_clean.sh">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-275">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/studies/synergy/scripts/syn_bids_clean.sh">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="521">
-          <caret line="49" column="0" lean-forward="false" selection-start-line="49" selection-start-column="0" selection-end-line="49" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/studies/synergy/scripts/syn_display_bids.sh">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -1259,8 +1237,32 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/studies/synergy/aliases.sh">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="0" lean-forward="true" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
+        <state relative-caret-position="34">
+          <caret line="2" column="53" lean-forward="false" selection-start-line="2" selection-start-column="53" selection-end-line="2" selection-end-column="53" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/studies/hfpef/scripts/hfpef_bids_clean_2.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="8" column="0" lean-forward="false" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/studies/hfpef/scripts/hfpef_bids_clean.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="752">
+          <caret line="239" column="13" lean-forward="false" selection-start-line="239" selection-start-column="4" selection-end-line="239" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/studies/synergy/scripts/syn_bids_clean.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="199">
+          <caret line="28" column="16" lean-forward="true" selection-start-line="28" selection-start-column="16" selection-end-line="28" selection-end-column="16" />
           <folding />
         </state>
       </provider>
