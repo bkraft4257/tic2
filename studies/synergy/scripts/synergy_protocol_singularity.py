@@ -184,6 +184,7 @@ def infotodict(seqinfo):
     #
 
     t1 = create_key('sub-{subject}/{session}/anat/sub-{subject}_{session}_T1w.{item:01d}')
+
     # tof = create_key('sub-{subject}/{session}/anat/sub-{subject}_{session}_acq-3dtof_angio.{item:01d}')
     #
     # pc_bilateral = create_key('sub-{subject}/{session}/anat/sub-{subject}_{session}_acq-pcbilateral_angio.{item:01d}')
@@ -239,22 +240,22 @@ def infotodict(seqinfo):
         # --------------------------------------
         # resting state bold
 
-        if (('BOLD_resting 4X4X4 A>>P' in s.series_description) and
-                ('epfid2d1_64' in s.sequence_name) and
-                (s.dim3 == 35) and
-                (s.dim4 == 190)):
-                info[rest_ap].append([s.series_id])
-
-        if (('rest_topup_A>>P' in s.series_description) and
-                ('epse2d1_64' in s.sequence_name) and
-                (s.dim3 == 140) and
-                (s.dim4 == 1)):
-                info[rest_topup_ap].append([s.series_id])
-
-        if (('rest_topup_P>>A' in s.series_description) and
-                ('epse2d1_64' in s.sequence_name) and
-                (s.dim3 == 140) and
-                (s.dim4 == 1)):
-                info[rest_topup_pa].append([s.series_id])
+        # if (('BOLD_resting 4X4X4 A>>P' in s.series_description) and
+        #         ('epfid2d1_64' in s.sequence_name) and
+        #         (s.dim3 == 35) and
+        #         (s.dim4 == 190)):
+        #         info[rest_ap].append([s.series_id])
+        #
+        # if (('rest_topup_A>>P' in s.series_description) and
+        #         ('epse2d1_64' in s.sequence_name) and
+        #         (s.dim3 == 140) and
+        #         (s.dim4 == 1)):
+        #         info[rest_topup_ap].append([s.series_id])
+        #
+        # if (('rest_topup_P>>A' in s.series_description) and
+        #         ('epse2d1_64' in s.sequence_name) and
+        #         (s.dim3 == 140) and
+        #         (s.dim4 == 1)):
+        #         info[rest_topup_pa].append([s.series_id])
 
     return info
