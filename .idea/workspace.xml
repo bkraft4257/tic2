@@ -3,9 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="6f3e13b3-cd58-4c4d-98f6-1a68f8358bfb" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/docs/source/other/heudiconv.md" afterPath="$PROJECT_DIR$/docs/source/other/heudiconv.md" />
-      <change beforePath="$PROJECT_DIR$/docs/source/other/singularity_images.md" afterPath="$PROJECT_DIR$/docs/source/other/singularity_images.md" />
-      <change beforePath="$PROJECT_DIR$/init/tic_wake_aging1a_environment.sh" afterPath="$PROJECT_DIR$/init/tic_wake_aging1a_environment.sh" />
+      <change beforePath="$PROJECT_DIR$/bin/tic_info.sh" afterPath="$PROJECT_DIR$/bin/tic_info.sh" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -28,18 +26,6 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="hdc_clean.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/bin/hdc_clean.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="16" column="49" lean-forward="false" selection-start-line="16" selection-start-column="49" selection-end-line="16" selection-end-column="49" />
-              <folding>
-                <element signature="e#197#212#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="environment.sh" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/studies/synergy/environment.sh">
           <provider selected="true" editor-type-id="text-editor">
@@ -55,7 +41,7 @@
           <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
             <state split_layout="SPLIT">
               <first_editor relative-caret-position="1275">
-                <caret line="75" column="0" lean-forward="true" selection-start-line="75" selection-start-column="0" selection-end-line="75" selection-end-column="0" />
+                <caret line="75" column="0" lean-forward="false" selection-start-line="75" selection-start-column="0" selection-end-line="75" selection-end-column="0" />
                 <folding>
                   <marker date="1521056043511" expanded="true" signature="6352:33419" ph="..." />
                   <marker date="1521056043511" expanded="true" signature="7394:33419" ph="..." />
@@ -143,11 +129,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="tic_wake_aging1a_environment.sh" pinned="false" current-in-tab="true">
+      <file leaf-file-name="tic_wake_aging1a_environment.sh" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/init/tic_wake_aging1a_environment.sh">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="677">
               <caret line="119" column="0" lean-forward="false" selection-start-line="119" selection-start-column="0" selection-end-line="119" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="tic_info.sh" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/bin/tic_info.sh">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="68">
+              <caret line="4" column="4" lean-forward="false" selection-start-line="4" selection-start-column="4" selection-end-line="4" selection-end-column="4" />
               <folding />
             </state>
           </provider>
@@ -211,7 +207,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/docs/source/other/imove.md" />
         <option value="$PROJECT_DIR$/studies/imove/imove_init.sh" />
         <option value="$PROJECT_DIR$/docs/source/other/creating_new_study.md" />
@@ -262,6 +257,7 @@
         <option value="$PROJECT_DIR$/docs/source/other/heudiconv.md" />
         <option value="$PROJECT_DIR$/docs/source/other/singularity_images.md" />
         <option value="$PROJECT_DIR$/init/tic_wake_aging1a_environment.sh" />
+        <option value="$PROJECT_DIR$/bin/tic_info.sh" />
       </list>
     </option>
   </component>
@@ -303,6 +299,11 @@
             <path>
               <item name="tic_core" type="b2602c69:ProjectViewProjectNode" />
               <item name="tic_core" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="tic_core" type="b2602c69:ProjectViewProjectNode" />
+              <item name="tic_core" type="462c0819:PsiDirectoryNode" />
+              <item name="bin" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="tic_core" type="b2602c69:ProjectViewProjectNode" />
@@ -381,13 +382,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1517948604886</updated>
-    </task>
-    <task id="LOCAL-00113" summary="Updated hdc_look.py to show just the series_number instead of series_id.  &#10;The series_id contains both the series_number and repeated series_description. &#10;It is too long.">
-      <created>1520528244055</created>
-      <option name="number" value="00113" />
-      <option name="presentableId" value="LOCAL-00113" />
-      <option name="project" value="LOCAL" />
-      <updated>1520528244055</updated>
     </task>
     <task id="LOCAL-00114" summary="Update protocol found a problem with func and fmap.">
       <created>1520532779365</created>
@@ -725,7 +719,14 @@
       <option name="project" value="LOCAL" />
       <updated>1521055509572</updated>
     </task>
-    <option name="localTasksCounter" value="162" />
+    <task id="LOCAL-00162" summary="Updated Heudiconv singularity image from 0.3 to 0.5">
+      <created>1521056493030</created>
+      <option name="number" value="00162" />
+      <option name="presentableId" value="LOCAL-00162" />
+      <option name="project" value="LOCAL" />
+      <updated>1521056493030</updated>
+    </task>
+    <option name="localTasksCounter" value="163" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -787,7 +788,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Updated permissions of *.sh files in bin directory." />
     <MESSAGE value="Updated protocol in environment." />
     <MESSAGE value="Updated hdc_singularity to display parameters." />
     <MESSAGE value="Added function to display text files involved in heudiconv" />
@@ -812,7 +812,8 @@
     <MESSAGE value="Cleaned up HFPEF aliases, scripts, and protocols." />
     <MESSAGE value="Updated bids-validator and alias bv to be more expressive." />
     <MESSAGE value="Updated Synergy protocol to function correctly with hdc_singularity image." />
-    <option name="LAST_COMMIT_MESSAGE" value="Updated Synergy protocol to function correctly with hdc_singularity image." />
+    <MESSAGE value="Updated Heudiconv singularity image from 0.3 to 0.5" />
+    <option name="LAST_COMMIT_MESSAGE" value="Updated Heudiconv singularity image from 0.3 to 0.5" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1089,14 +1090,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/bin/tic_info.sh">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/bin/cpflatten.sh">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -1175,7 +1168,7 @@
       <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
         <state split_layout="SPLIT">
           <first_editor relative-caret-position="1275">
-            <caret line="75" column="0" lean-forward="true" selection-start-line="75" selection-start-column="0" selection-end-line="75" selection-end-column="0" />
+            <caret line="75" column="0" lean-forward="false" selection-start-line="75" selection-start-column="0" selection-end-line="75" selection-end-column="0" />
             <folding>
               <marker date="1521056043511" expanded="true" signature="6352:33419" ph="..." />
               <marker date="1521056043511" expanded="true" signature="7394:33419" ph="..." />
@@ -1222,6 +1215,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="677">
           <caret line="119" column="0" lean-forward="false" selection-start-line="119" selection-start-column="0" selection-end-line="119" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bin/tic_info.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="4" lean-forward="false" selection-start-line="4" selection-start-column="4" selection-end-line="4" selection-end-column="4" />
           <folding />
         </state>
       </provider>
