@@ -16,6 +16,15 @@ BIDS_PATH = os.getenv('ACTIVE_BIDS_PATH')
 
 # TODO: Remove subject from participant.tsv file.
 
+def _remove_empty_directory(directory):
+
+    try:
+        if not os.listdir(directory):
+            os.rmdir(directory)
+    except FileNotFoundError:
+        pass  # Since we are trying to delete the directory. If it doesn't exist just ignore exception.
+
+
 if __name__ == '__main__':
 
     """
@@ -51,10 +60,8 @@ if __name__ == '__main__':
         except:
             print(Fore.RED + f'Failed to remove {ii}')
 
-    if not os.listdir(bids_subject_path):
-        os.rmdir(bids_subject_path)
+    _remove_empty_directory(bids_subject_path)
+    _remove_empty_directory(bids_heudiconv_path)
 
-    if not os.listdir(bids_heudiconv_path):
-        os.rmdir(bids_heudiconv_path)
 
     print('\n')
