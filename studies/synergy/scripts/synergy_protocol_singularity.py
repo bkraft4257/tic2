@@ -214,8 +214,8 @@ def infotodict(seqinfo):
         # --------------------------------------
         # anat - T1
 
-        if 'MPRAGE' in s.series_description:
-                info[t1].append([s.series_id])
+        # if 'MPRAGE' in s.series_description:
+        #         info[t1].append([s.series_id])
 
         # if (('TOF_3D' in s.series_description) and
         #         ('fl3d1r_t70' in s.sequence_name) and
@@ -240,11 +240,11 @@ def infotodict(seqinfo):
         # --------------------------------------
         # resting state bold
 
-        # if (('BOLD_resting 4X4X4 A>>P' in s.series_description) and
-        #         ('epfid2d1_64' in s.sequence_name) and
-        #         (s.dim3 == 35) and
-        #         (s.dim4 == 190)):
-        #         info[rest_ap].append([s.series_id])
+        if (('BOLD_resting 4X4X4 A>>P' in s.series_description) and
+                ('epfid2d1_64' in s.sequence_name) and
+                (s.dim3 == 35) and
+                (s.dim4 == 190)):
+                info[rest_ap].append([s.series_id])
         #
         # if (('rest_topup_A>>P' in s.series_description) and
         #         ('epse2d1_64' in s.sequence_name) and
