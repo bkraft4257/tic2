@@ -51,6 +51,11 @@ if __name__ == '__main__':
 
             # We want to remove these directories. If the directory doesn't exist just assume that it was deleted.  After all
             # the result is the same if the directory was successfully deleted. This is why I don't catch the exception.
+            # Of course, this has the unintended effect of having a person think they removed a directory when they haven't.
+            # This is a problem if the directory to be removec contained a typo.  The person thinks the directory was removed but it
+            # wasn't.  It is probably better to report the directory was not found.
+
+            # TODO:  Report if a directory was not found.
 
             if os.path.isdir(ii):
                 shutil.rmtree(ii)
