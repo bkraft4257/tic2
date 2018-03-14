@@ -31,7 +31,9 @@ if __name__ == '__main__':
 
     bids_subject_path = os.path.join(BIDS_PATH, f'sub-{in_args.subject}')
     bids_subject_session_path = os.path.join(bids_subject_path, f'ses-{in_args.session}')
-    heudiconv_subject_session_path = os.path.join(BIDS_PATH, '.heudiconv', in_args.subject, f'ses-{in_args.session}')
+
+    bids_heudiconv_path = os.path.join(BIDS_PATH, '.heudiconv', in_args.subject)
+    heudiconv_subject_session_path = os.path.join(bids_heudiconv_path, f'ses-{in_args.session}')
 
     print('\n')
 
@@ -49,7 +51,10 @@ if __name__ == '__main__':
         except:
             print(Fore.RED + f'Failed to remove {ii}')
 
-    if os.listdir(bids_subject_path) == []:
+    if os.listdir(bids_subject_path):
         os.rmdir(bids_subject_path)
+
+    if os.listdir(bids_heudiconv_path):
+        os.rmdir(bids_heudiconv_path)
 
     print('\n')
