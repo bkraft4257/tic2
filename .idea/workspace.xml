@@ -3,11 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="6f3e13b3-cd58-4c4d-98f6-1a68f8358bfb" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/studies/synergy/scripts/syn_clean_bids.sh" afterPath="$PROJECT_DIR$/studies/synergy/scripts/syn_bids_clean.sh" />
-      <change beforePath="$PROJECT_DIR$/studies/synergy/scripts/syn_display_bids.sh" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/studies/synergy/scripts/syn_fmriprep.sh" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/studies/synergy/scripts/syn_mriqc.sh" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/studies/synergy/scripts/syn_mriqc_2.sh" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/studies/synergy/aliases.sh" afterPath="$PROJECT_DIR$/studies/synergy/aliases.sh" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -30,26 +26,6 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="isdicom.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/bin/isdicom.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="8" column="0" lean-forward="true" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="synergy_protocol_singularity.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/studies/synergy/scripts/synergy_protocol_singularity.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="534">
-              <caret line="204" column="0" lean-forward="false" selection-start-line="200" selection-start-column="0" selection-end-line="204" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="syn_bids_clean.sh" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/studies/synergy/scripts/syn_bids_clean.sh">
           <provider selected="true" editor-type-id="text-editor">
@@ -120,11 +96,31 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="hfpef_init.sh" pinned="false" current-in-tab="true">
+      <file leaf-file-name="hfpef_init.sh" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/studies/hfpef/hfpef_init.sh">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="0">
               <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="hfpef_display_bids_with_cbf.sh" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/studies/hfpef/scripts/hfpef_display_bids_with_cbf.sh">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="aliases.sh" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/studies/synergy/aliases.sh">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="102">
+              <caret line="6" column="0" lean-forward="true" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -195,7 +191,6 @@
         <option value="$PROJECT_DIR$/bin/clean_bids.sh" />
         <option value="$PROJECT_DIR$/studies/imove/scripts/imove_protocol.py" />
         <option value="$PROJECT_DIR$/bin/check_fmaps.py" />
-        <option value="$PROJECT_DIR$/studies/synergy/aliases.sh" />
         <option value="$PROJECT_DIR$/studies/_new_study_template/environment.sh" />
         <option value="$PROJECT_DIR$/studies/infinite/aliases.sh" />
         <option value="$PROJECT_DIR$/studies/infinite/environment.sh" />
@@ -240,6 +235,7 @@
         <option value="$PROJECT_DIR$/bin/isdicom.py" />
         <option value="$PROJECT_DIR$/studies/synergy/scripts/synergy_protocol_singularity.py" />
         <option value="$PROJECT_DIR$/studies/synergy/scripts/syn_clean_bids.sh" />
+        <option value="$PROJECT_DIR$/studies/synergy/aliases.sh" />
       </list>
     </option>
   </component>
@@ -383,13 +379,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1517948604886</updated>
-    </task>
-    <task id="LOCAL-00119" summary="Fixed bug where subject and session where not in separate directories as they should be.">
-      <created>1520534911369</created>
-      <option name="number" value="00119" />
-      <option name="presentableId" value="LOCAL-00119" />
-      <option name="project" value="LOCAL" />
-      <updated>1520534911369</updated>
     </task>
     <task id="LOCAL-00120" summary="Only delete the directory if it exists.">
       <created>1520535098727</created>
@@ -727,11 +716,19 @@
       <option name="project" value="LOCAL" />
       <updated>1521059255578</updated>
     </task>
-    <option name="localTasksCounter" value="168" />
+    <task id="LOCAL-00168" summary="Renamed synergy_clean_bids.sh to synergy_bids_clean.sh&#10;Removed some old scripts.">
+      <created>1521059351075</created>
+      <option name="number" value="00168" />
+      <option name="presentableId" value="LOCAL-00168" />
+      <option name="project" value="LOCAL" />
+      <updated>1521059351075</updated>
+    </task>
+    <option name="localTasksCounter" value="169" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="-439" y="-1217" width="2236" height="1024" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info id="Key Promoter X" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -741,7 +738,7 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.50287354" sideWeight="0.48106593" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.21996467" sideWeight="0.49006623" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22424795" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22424795" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3297724" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="SciView" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -788,7 +785,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Added display of dicominfo file" />
     <MESSAGE value="Fixed str bug." />
     <MESSAGE value="Added ability to clean out a specific subject and session&#10;.heudiconv directory." />
     <MESSAGE value="Update hfpef protocol. Fixed numerous bugs." />
@@ -813,7 +809,8 @@
     <MESSAGE value="Updated singularity image documentation.  &#10;Added ability to remove CR from DICOM images." />
     <MESSAGE value="Updated SYNERGY protocol." />
     <MESSAGE value="Updated SYNERGY bids cleaning." />
-    <option name="LAST_COMMIT_MESSAGE" value="Updated SYNERGY bids cleaning." />
+    <MESSAGE value="Renamed synergy_clean_bids.sh to synergy_bids_clean.sh&#10;Removed some old scripts." />
+    <option name="LAST_COMMIT_MESSAGE" value="Renamed synergy_clean_bids.sh to synergy_bids_clean.sh&#10;Removed some old scripts." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -829,20 +826,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/studies/infinite/environment.sh">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="20" column="0" lean-forward="false" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/studies/hfpef/scripts/hfpef_mriqc.sh">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/studies/hfpef/scripts/hfpef_bids.cfg">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -1262,6 +1245,22 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/studies/hfpef/scripts/hfpef_display_bids_with_cbf.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/studies/synergy/aliases.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="0" lean-forward="true" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
           <folding />
         </state>
       </provider>
