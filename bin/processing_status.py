@@ -78,6 +78,7 @@ def _argparse():
 
 def display(in_df):
 
+    print(in_df)
     print(f'subject,session,file')
 
     for row in in_df.itertuples():
