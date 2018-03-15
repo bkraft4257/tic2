@@ -88,9 +88,11 @@ def main():
 
     for ii,ii_file in enumerate(files):
 
-        key, value = get_key_value_from_string(ii_file, in_args.subject)
+        _, subject_value = get_key_value_from_string(ii_file, in_args.subject
+        _, session_value = get_key_value_from_string(ii_file, in_args.session)
 
-        print(f'{ii}) {ii_file} {value}')
+
+        print(f'{ii}) {ii_file} {subject_value}, {session_value}')
 
     return
 
