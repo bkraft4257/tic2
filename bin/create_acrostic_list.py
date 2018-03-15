@@ -52,9 +52,10 @@ def main():
     df.to_csv(os.path.join(active_bids_path, 'acrostic.csv'))
 
     if in_args.verbose:
-        print(df.describe())
+        print(df)
 
         if in_args.summary:
+            print('\n\nSummary of Subjects by Session\n')
             df2 = df.set_index('subject').stack()
             print(df2.apply(pd.value_counts))
 
