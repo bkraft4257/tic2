@@ -82,7 +82,7 @@ def display(in_df):
 
     for row in in_df.itertuples():
         print(row)
-        print(f'{row[0]}, {row[1]} ,{row[2]}')
+        #print(f'{row[0]}, {row[1]} ,{row[2]}')
 
 
 def main():
