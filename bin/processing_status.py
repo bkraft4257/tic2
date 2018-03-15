@@ -94,16 +94,16 @@ def display(in_df, noheader=False):
         print(f'{row[0]},{row[1]},{row[2]},{row[3]}')
 
 
-def _clean_nan(in_df, nan_option):
+def _clean_nan(in_df, nan_option, nan_fill='not_found'):
 
     if nan_option == 'drop':
-        out_df = in_df.dropna(in_df, axis=1).copy()
+        out_df = in_df.dropna(axis=1).copy()
 
     elif nan_option == 'only':
         out_df = in_df[in_df.isna().any(axis=1)].copy()
 
     else:
-        out_df = in_df.fillna('not_found').copy()
+        out_df = in_df.fillna(nan_fill).copy()
 
     return out_df
 
