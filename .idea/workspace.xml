@@ -79,8 +79,8 @@
       <file leaf-file-name="processing_status.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/bin/processing_status.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="874">
-              <caret line="85" column="0" lean-forward="true" selection-start-line="85" selection-start-column="0" selection-end-line="85" selection-end-column="0" />
+            <state relative-caret-position="24">
+              <caret line="35" column="62" lean-forward="true" selection-start-line="34" selection-start-column="0" selection-end-line="35" selection-end-column="62" />
               <folding>
                 <element signature="e#148#159#0" expanded="true" />
               </folding>
@@ -345,13 +345,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1517948604886</updated>
-    </task>
-    <task id="LOCAL-00143" summary="Updating HDC documentation and API">
-      <created>1520609110028</created>
-      <option name="number" value="00143" />
-      <option name="presentableId" value="LOCAL-00143" />
-      <option name="project" value="LOCAL" />
-      <updated>1520609110028</updated>
     </task>
     <task id="LOCAL-00144" summary="Updating HDC documentation and API">
       <created>1520609179325</created>
@@ -689,7 +682,14 @@
       <option name="project" value="LOCAL" />
       <updated>1521135520012</updated>
     </task>
-    <option name="localTasksCounter" value="192" />
+    <task id="LOCAL-00192" summary="Added file to check processing status.">
+      <created>1521135615579</created>
+      <option name="number" value="00192" />
+      <option name="presentableId" value="LOCAL-00192" />
+      <option name="project" value="LOCAL" />
+      <updated>1521135615579</updated>
+    </task>
+    <option name="localTasksCounter" value="193" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -1077,8 +1077,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/bin/processing_status.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="874">
-          <caret line="85" column="0" lean-forward="true" selection-start-line="85" selection-start-column="0" selection-end-line="85" selection-end-column="0" />
+        <state relative-caret-position="24">
+          <caret line="35" column="62" lean-forward="true" selection-start-line="34" selection-start-column="0" selection-end-line="35" selection-end-column="62" />
           <folding>
             <element signature="e#148#159#0" expanded="true" />
           </folding>

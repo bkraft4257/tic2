@@ -50,7 +50,7 @@ def get_key_value_from_string(string, acrostic_regex, key_value_split_on='-'):
     print(m)
 
     if m:
-        key,value =m.split(key_value_split_on)
+        key,value =m.group(0).split(key_value_split_on)
     else:
         key = None
         value = None
