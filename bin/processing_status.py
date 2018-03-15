@@ -77,6 +77,11 @@ def _argparse():
                         action="store_true",
                         default=False)
 
+    parser.add_argument("--nan", help="Remove NaNs from output",
+                        choices=['drop', 'only', 'ignore'],
+                        default='ignore')
+
+
     return parser.parse_args()
 
 
@@ -87,6 +92,19 @@ def display(in_df, noheader=False):
 
     for row in in_df.itertuples():
         print(f'{row[0]},{row[1]},{row[2]},{row[3]}')
+
+def _clean_nan(in_df, nan_option):
+
+    if nan_option == 'drop':
+        out_df = in_df.dropnan(in_df)
+
+    elif nan_option == 'only':
+        out_df = in_df[in_df.isnull().any()]
+
+    else:
+        out_df = in_df.fillna('not_found')
+
+    return out_df
 
 
 def main():
@@ -109,9 +127,8 @@ def main():
                                     "file": ii_file
                                     }, ignore_index=True)
 
-
     df_full_list = (df_acrostic_list.merge(df_files, how='left', on='subject')
-                    .fillna('not_found')
+                    .pipe(_clean_nan, nan_option=in_args.nan)
                     )
 
     display(df_full_list, noheader=in_args.noheader)
