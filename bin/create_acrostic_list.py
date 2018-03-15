@@ -11,6 +11,8 @@ import glob
 import argparse
 import sys
 
+ACTIVE_BIDS_PATH = os.getenv('ACTIVE_BIDS_PATH')
+ACROSTIC_CSV_DEFAULT_FILENAME = os.path.join(ACTIVE_BIDS_PATH, 'acrostic.csv')
 
 def _argparse():
     """ Get command line arguments.
@@ -26,6 +28,11 @@ def _argparse():
                         action="store_true",
                         default=False)
 
+    parser.add_argument('-o', '--out_filename',
+                        help=f'Output filename.  default={ACROSTIC_CSV_DEFAULT_FILENAME}',
+                        default=ACROSTIC_CSV_DEFAULT_FILENAME,
+                        )
+
     return parser.parse_args()
 
 
@@ -33,9 +40,7 @@ def main():
 
     in_args = _argparse()
 
-    active_bids_path = os.getenv('ACTIVE_BIDS_PATH')
-
-    df0 = pandas.DataFrame({'directory': glob.glob(os.path.join(active_bids_path, 'sub-*', 'ses-*'))})
+    df0 = pandas.DataFrame({'directory': glob.glob(os.path.join(ACTIVE_BIDS_PATH, 'sub-*', 'ses-*'))})
     df0.directory = df0.directory.str.replace(active_bids_path, '')
     df = df0.directory.str.split('/', expand=True).copy()
 
@@ -49,7 +54,7 @@ def main():
     df = df.set_index(['subject', 'session']).unstack().fillna(False)
     df.columns = ['ses-1', 'ses-2']
 
-    df.to_csv(os.path.join(active_bids_path, 'acrostic.csv'))
+    df.to_csv(in_args.out_filename)
 
     if in_args.verbose:
         print(df)
