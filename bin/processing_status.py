@@ -73,17 +73,20 @@ def _argparse():
                         action="store_true",
                         default=False)
 
+    parser.add_argument("-H", "--noheader", help="Remove header from output",
+                        action="store_true",
+                        default=False)
+
     return parser.parse_args()
 
 
-def display(in_df):
+def display(in_df, noheader=False):
 
-    print(f'subject,session,file')
-
-    # row[0] is the index
+    if not noheader:
+        print(f'index,subject,session,file')
 
     for row in in_df.itertuples():
-        print(f'{row[1]},{row[2]},{row[3]}')
+        print(f'{row[0]},{row[1]},{row[2]},{row[3]}')
 
 
 def main():
@@ -111,7 +114,7 @@ def main():
                     .fillna('not_found')
                     )
 
-    display(df_full_list)
+    display(df_full_list, noheader=in_args.noheader)
 
     return
 
