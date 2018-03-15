@@ -102,9 +102,12 @@ def main():
 
         print(ii_file, subject_value, session_value)
 
-        ii_df_files.append(pandas.DataFrame({'file': ii_file,
+        #ii_df_files.append(
+
+        print(pandas.DataFrame({'file': ii_file,
                                              'subject': subject_value,
-                                             'session': session_value,}))
+                                             'session': session_value,})
+              )
 
     df_files = pandas.concat(ii_df_files)
 
