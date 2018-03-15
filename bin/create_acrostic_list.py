@@ -56,8 +56,7 @@ def main():
 
         if in_args.summary:
             print('\n\nSummary of Subjects by Session\n')
-            df2 = df.set_index('subject').stack()
-            print(df2.apply(pandas.value_counts))
+            print(df.apply(pandas.value_counts).fillna(0))
 
 # ====================================================================================================================
 # region Command Line Interface
