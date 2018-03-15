@@ -152,9 +152,9 @@ def main():
         n_rows = df_full_list.shape[0]
         n_rows_with_na = df_full_list.dropna().shape[0]
 
-        if n_rows > n_rows_with_na:
+        if n_rows_with_na < n_rows:
 
-            print(f'{Fore.RED}\nMissing files {n_rows_with_na}.\n')
+            print(f'{Fore.RED}\nMissing files {nrows-n_rows_with_na}.\n')
 
         else:
             print(f'{Fore.GREEN}\nAt least one file found for each acrostic.\n')
