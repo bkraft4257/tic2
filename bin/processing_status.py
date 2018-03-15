@@ -93,10 +93,11 @@ def display(in_df, noheader=False):
     for row in in_df.itertuples():
         print(f'{row[0]},{row[1]},{row[2]},{row[3]}')
 
+
 def _clean_nan(in_df, nan_option):
 
     if nan_option == 'drop':
-        out_df = in_df.dropnan(in_df)
+        out_df = in_df.dropna(in_df)
 
     elif nan_option == 'only':
         out_df = in_df[in_df.isnull().any()]
