@@ -78,12 +78,10 @@ def _argparse():
 
 def display(in_df):
 
-    print(in_df)
     print(f'subject,session,file')
 
     for row in in_df.itertuples():
-        print(row)
-        #print(f'{row[0]}, {row[1]} ,{row[2]}')
+        print(f'{row[0]}, {row[1]} ,{row[2]}')
 
 
 def main():
@@ -106,12 +104,8 @@ def main():
                                     "file": ii_file
                                     }, ignore_index=True)
 
-    print(df_files)
-    print(df_acrostic_list)
 
     df_full_list = df_acrostic_list.merge(df_files, how='left', on='subject')
-
-    print(df_full_list)
 
     display(df_full_list)
 
