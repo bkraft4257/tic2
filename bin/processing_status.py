@@ -92,7 +92,7 @@ def main():
 
     ii_df_files = []
 
-    print(pandas.get_option("display.max_rows"))
+    print(pandas.get_option("display.max_cols"))
     print(pandas.get_option("display.width"))
 
     for ii,ii_file in enumerate(files):
