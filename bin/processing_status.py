@@ -29,7 +29,9 @@ def get_acrostic_study_list_full_filename(active_study_bids_path=ACTIVE_BIDS_PAT
 
 
 def get_acrostic_list():
-    acrostic_list_filename = get_acrostic_study_list_full_filename
+    acrostic_list_filename = get_acrostic_study_list_full_filename()
+
+    print(acrostic_list_filename)
 
     df_acrostic_list = pandas.read_csv(acrostic_list_filename)
 
