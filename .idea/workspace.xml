@@ -60,7 +60,7 @@
         <entry file="file://$PROJECT_DIR$/bin/processing_status.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="461">
-              <caret line="157" column="20" lean-forward="false" selection-start-line="157" selection-start-column="20" selection-end-line="157" selection-end-column="20" />
+              <caret line="157" column="31" lean-forward="false" selection-start-line="157" selection-start-column="31" selection-end-line="157" selection-end-column="31" />
               <folding>
                 <element signature="e#148#159#0" expanded="true" />
               </folding>
@@ -256,7 +256,7 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-374" />
+    <option name="x" value="-375" />
     <option name="y" value="-1272" />
     <option name="width" value="1887" />
     <option name="height" value="1254" />
@@ -360,13 +360,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1517948604886</updated>
-    </task>
-    <task id="LOCAL-00236" summary="Added file to check processing status.">
-      <created>1521141085438</created>
-      <option name="number" value="00236" />
-      <option name="presentableId" value="LOCAL-00236" />
-      <option name="project" value="LOCAL" />
-      <updated>1521141085439</updated>
     </task>
     <task id="LOCAL-00237" summary="Added file to check processing status.">
       <created>1521141205729</created>
@@ -704,11 +697,18 @@
       <option name="project" value="LOCAL" />
       <updated>1521152216528</updated>
     </task>
-    <option name="localTasksCounter" value="285" />
+    <task id="LOCAL-00285" summary="Wrote new function to create acrostic.csv">
+      <created>1521152288629</created>
+      <option name="number" value="00285" />
+      <option name="presentableId" value="LOCAL-00285" />
+      <option name="project" value="LOCAL" />
+      <updated>1521152288629</updated>
+    </task>
+    <option name="localTasksCounter" value="286" />
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-374" y="-1272" width="1887" height="1254" extended-state="0" />
+    <frame x="-375" y="-1272" width="1887" height="1254" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Key Promoter X" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1100,7 +1100,7 @@
     <entry file="file://$PROJECT_DIR$/bin/processing_status.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="461">
-          <caret line="157" column="20" lean-forward="false" selection-start-line="157" selection-start-column="20" selection-end-line="157" selection-end-column="20" />
+          <caret line="157" column="31" lean-forward="false" selection-start-line="157" selection-start-column="31" selection-end-line="157" selection-end-column="31" />
           <folding>
             <element signature="e#148#159#0" expanded="true" />
           </folding>
