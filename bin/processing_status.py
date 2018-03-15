@@ -12,18 +12,16 @@ import sys
 
 # TODO Study Choices should be a common variable that is imported.
 
+
 def get_active_study():
     return os.getenv('ACTIVE_STUDY')
 
 
-
 def _argparse():
-    # Parsing Arguments
-    # TODO: Improve documentation.
 
     parser = argparse.ArgumentParser(prog='processing_status')
 
-    parser.add_argument("file_pattern", help="String file pattern to glob")
+    parser.add_argument('file_pattern', help='String file pattern to glob')
 
     return parser.parse_args()
 
@@ -31,6 +29,8 @@ def _argparse():
 def main():
 
     in_args = _argparse()
+
+    print(in_args)
 
     files = glob.glob(in_args.file_pattern)
 
