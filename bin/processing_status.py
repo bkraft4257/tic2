@@ -18,7 +18,9 @@ def get_active_study():
 
 
 def _argparse():
+    """ Get command line arguments.
 
+    """
     parser = argparse.ArgumentParser(prog='processing_status')
 
     parser.add_argument('file_pattern', help='String file pattern to glob')
