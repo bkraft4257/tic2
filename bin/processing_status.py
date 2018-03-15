@@ -11,7 +11,6 @@ import argparse
 import sys
 import pandas
 import re
-from IPython.core.display import display
 
 pandas.set_option('display.max_columns', 500)
 pandas.set_option('display.width', 1000)
@@ -75,6 +74,14 @@ def _argparse():
                         default=False)
 
     return parser.parse_args()
+
+
+def display(in_df):
+
+    print(f'subject,session,file')
+
+    for row in in_df.iterrows():
+            print(f'{row["subject"]},{row["session"],row["file"]'})
 
 
 def main():
