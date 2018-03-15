@@ -36,7 +36,7 @@ def get_acrostic_study_list_full_filename(active_study_bids_path=ACTIVE_BIDS_PAT
 
 def get_acrostic_list(acrostic_list_filename = get_acrostic_study_list_full_filename()):
     df_acrostic_list = pandas.read_csv(acrostic_list_filename)
-
+    df_acrostic_list.columns = ['subject']
     return df_acrostic_list
 
 
@@ -85,21 +85,23 @@ def main():
                       recursive=in_args.recursive)
 
     df_acrostic_list = get_acrostic_list(in_args.acrostic_list)
+    print(df_acrostic_list)
 
-    df = pandas.DataFrame(columns=["subject", "session", "file"])
+    df_files = pandas.DataFrame(columns=["subject", "session", "file"])
 
     for ii,ii_file in enumerate(files):
 
         _, subject_value = get_key_value_from_string(ii_file, in_args.subject)
         _, session_value = get_key_value_from_string(ii_file, in_args.session)
 
-        df = df.append({
+        df_files = df.append({
             "subject": subject_value,
             "session": session_value,
             "file": ii_file
         }, ignore_index=True)
 
-    display(df)
+
+    df_full_list = df_acrostic_list.merge(df_files, how='outer', on='subject')
 
     return
 
