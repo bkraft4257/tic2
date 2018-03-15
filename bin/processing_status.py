@@ -40,6 +40,11 @@ def get_acrostic_list(acrostic_list_filename = get_acrostic_study_list_full_file
     return df_acrostic_list
 
 
+def get_key_value_from_string(string, acrostic_regex, key_value_split_on='-'):
+    m = re.search(acrostic_regex, string)
+    return m.split(key_value_split_on)
+
+
 def _argparse():
     """ Get command line arguments.
 
@@ -75,8 +80,11 @@ def main():
 
     df_acrostic_list = get_acrostic_list(in_args.acrostic_list)
 
-    for ii,ii_files in enumerate(files):
-        print(f'{ii}) {ii_files}')
+    for ii,ii_file in enumerate(files):
+
+        key, value = get_key_value_from_string(ii_file, in_args.subject)
+
+        print(f'{ii}) {ii_files} {value}')
 
     return
 
