@@ -48,7 +48,7 @@ def main():
     df.to_csv(os.path.join(active_bids_path, 'acrostic.csv'))
 
     if in_args.verbose:
-        print(df)
+        print(df.describe())
 
 
 # ====================================================================================================================
