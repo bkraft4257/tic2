@@ -15,7 +15,7 @@ from IPython.core.display import display
 
 pandas.set_option('display.max_columns', 500)
 pandas.set_option('display.width', 1000)
-pandas.set_option('display.max_colwidth',40)
+pandas.set_option('display.max_colwidth',200)
 
 # TODO Study Choices should be a common variable that is imported.
 
@@ -98,7 +98,6 @@ def main():
             "session": session_value,
             "file": ii_file
         }, ignore_index=True)
-
 
     display(df)
 
