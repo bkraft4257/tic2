@@ -25,7 +25,7 @@ def _argparse():
 
     parser.add_argument("file_pattern", help="String file pattern to glob")
 
-    return parser
+    return parser.parse_args()
 
 
 def main():
