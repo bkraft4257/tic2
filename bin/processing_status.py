@@ -45,7 +45,6 @@ def _argparse():
 
     parser.add_argument('file_pattern', help='String file pattern to glob')
 
-
     parser.add_argument("-r", "--recursive", help="Recursive boolean flag for glob",
                         action="store_true",
                         default=False)
@@ -61,6 +60,8 @@ def main():
                       recursive=in_args.recursive)
 
     print(get_acrostic_study_list_full_filename())
+
+    get_acrostic_list()
 
     for ii,ii_files in enumerate(files):
         print(f'{ii}) {ii_files}')
