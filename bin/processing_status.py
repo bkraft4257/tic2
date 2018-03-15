@@ -86,13 +86,20 @@ def main():
 
     df_acrostic_list = get_acrostic_list(in_args.acrostic_list)
 
+    ii_df_files = []
+
     for ii,ii_file in enumerate(files):
 
         _, subject_value = get_key_value_from_string(ii_file, in_args.subject)
         _, session_value = get_key_value_from_string(ii_file, in_args.session)
 
+        ii_df_files.append(pandas.DataFrame({'file':{ii_file},
+                                             'subject':subject_value,
+                                             'session':session_value,}))
 
-        print(f'{ii}) {ii_file} {subject_value}, {session_value}')
+    df_files = pandas.concat(ii_df_files)
+
+    print(df_files)
 
     return
 

@@ -79,8 +79,8 @@
       <file leaf-file-name="processing_status.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/bin/processing_status.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="937">
-              <caret line="90" column="78" lean-forward="false" selection-start-line="90" selection-start-column="78" selection-end-line="90" selection-end-column="78" />
+            <state relative-caret-position="858">
+              <caret line="92" column="4" lean-forward="true" selection-start-line="92" selection-start-column="4" selection-end-line="92" selection-end-column="4" />
               <folding>
                 <element signature="e#148#159#0" expanded="true" />
               </folding>
@@ -241,7 +241,7 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-284" />
+    <option name="x" value="-285" />
     <option name="y" value="-1254" />
     <option name="width" value="1887" />
     <option name="height" value="1254" />
@@ -345,13 +345,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1517948604886</updated>
-    </task>
-    <task id="LOCAL-00148" summary="Cleaned up HFPEF aliases, scripts, and protocols.">
-      <created>1520613007793</created>
-      <option name="number" value="00148" />
-      <option name="presentableId" value="LOCAL-00148" />
-      <option name="project" value="LOCAL" />
-      <updated>1520613007793</updated>
     </task>
     <task id="LOCAL-00149" summary="Cleaned up HFPEF aliases, scripts, and protocols.">
       <created>1520613575787</created>
@@ -689,11 +682,18 @@
       <option name="project" value="LOCAL" />
       <updated>1521135774926</updated>
     </task>
-    <option name="localTasksCounter" value="197" />
+    <task id="LOCAL-00197" summary="Added file to check processing status.">
+      <created>1521135804026</created>
+      <option name="number" value="00197" />
+      <option name="presentableId" value="LOCAL-00197" />
+      <option name="project" value="LOCAL" />
+      <updated>1521135804026</updated>
+    </task>
+    <option name="localTasksCounter" value="198" />
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-284" y="-1254" width="1887" height="1254" extended-state="0" />
+    <frame x="-285" y="-1254" width="1887" height="1254" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Key Promoter X" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1077,8 +1077,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/bin/processing_status.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="937">
-          <caret line="90" column="78" lean-forward="false" selection-start-line="90" selection-start-column="78" selection-end-line="90" selection-end-column="78" />
+        <state relative-caret-position="858">
+          <caret line="92" column="4" lean-forward="true" selection-start-line="92" selection-start-column="4" selection-end-line="92" selection-end-column="4" />
           <folding>
             <element signature="e#148#159#0" expanded="true" />
           </folding>
