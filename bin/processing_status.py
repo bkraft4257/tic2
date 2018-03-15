@@ -39,8 +39,8 @@ def main():
     files = glob.glob(in_args.file_pattern,
                       recursive=in_args.recursive)
 
-    print('\n')
-    print(files)
+    for ii,ii_files in enumerate(files):
+        print(f'{ii}) {ii_files}\n')
 
     return
 
