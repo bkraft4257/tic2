@@ -139,7 +139,9 @@ def main():
                     .pipe(_clean_nan, nan_option=in_args.nan)
                     )
 
-    display(df_full_list, noheader=in_args.noheader)
+    display(df_full_list,
+            subject_only=in_args.subject_only,
+            noheader=in_args.noheader)
 
     return
 
