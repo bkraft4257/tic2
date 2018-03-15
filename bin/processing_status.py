@@ -149,7 +149,8 @@ def main():
 
     df_full_list = (df_acrostic_list
                     .reset_index()
-                    .merge(df_files_2.reset_index(), how='left', on='subject', lsuffix='_scanned', rsuffix='_processed')
+                    .merge(df_files_2.reset_index(), how='left', on='subject',
+                           suffixes=('_scanned', '_processed'))
                     .fillna(False)
                     )
 

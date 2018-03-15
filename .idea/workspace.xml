@@ -59,8 +59,8 @@
       <file leaf-file-name="processing_status.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/bin/processing_status.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="467">
-              <caret line="151" column="118" lean-forward="false" selection-start-line="151" selection-start-column="118" selection-end-line="151" selection-end-column="118" />
+            <state relative-caret-position="484">
+              <caret line="152" column="63" lean-forward="true" selection-start-line="152" selection-start-column="63" selection-end-line="152" selection-end-column="63" />
               <folding>
                 <element signature="e#148#159#0" expanded="true" />
               </folding>
@@ -360,13 +360,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1517948604886</updated>
-    </task>
-    <task id="LOCAL-00232" summary="Added file to check processing status.">
-      <created>1521140507461</created>
-      <option name="number" value="00232" />
-      <option name="presentableId" value="LOCAL-00232" />
-      <option name="project" value="LOCAL" />
-      <updated>1521140507461</updated>
     </task>
     <task id="LOCAL-00233" summary="Added file to check processing status.">
       <created>1521140697251</created>
@@ -704,7 +697,14 @@
       <option name="project" value="LOCAL" />
       <updated>1521150592000</updated>
     </task>
-    <option name="localTasksCounter" value="281" />
+    <task id="LOCAL-00281" summary="Wrote new function to create acrostic.csv">
+      <created>1521150692951</created>
+      <option name="number" value="00281" />
+      <option name="presentableId" value="LOCAL-00281" />
+      <option name="project" value="LOCAL" />
+      <updated>1521150692951</updated>
+    </task>
+    <option name="localTasksCounter" value="282" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -1099,8 +1099,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/bin/processing_status.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="467">
-          <caret line="151" column="118" lean-forward="false" selection-start-line="151" selection-start-column="118" selection-end-line="151" selection-end-column="118" />
+        <state relative-caret-position="484">
+          <caret line="152" column="63" lean-forward="true" selection-start-line="152" selection-start-column="63" selection-end-line="152" selection-end-column="63" />
           <folding>
             <element signature="e#148#159#0" expanded="true" />
           </folding>
