@@ -42,12 +42,7 @@ def get_acrostic_list(acrostic_list_filename = get_acrostic_study_list_full_file
 
 def get_key_value_from_string(string, acrostic_regex, key_value_split_on='-'):
 
-    print(string)
-    print(acrostic_regex)
-    print(key_value_split_on)
-
     m = re.search(acrostic_regex, string)
-    print(m)
 
     if m:
         key,value =m.group(0).split(key_value_split_on)
@@ -88,8 +83,6 @@ def main():
 
     files = glob.glob(in_args.file_pattern,
                       recursive=in_args.recursive)
-
-    print(in_args.acrostic_list)
 
     df_acrostic_list = get_acrostic_list(in_args.acrostic_list)
 
