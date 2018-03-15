@@ -59,8 +59,8 @@
       <file leaf-file-name="processing_status.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/bin/processing_status.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="416">
-              <caret line="148" column="55" lean-forward="false" selection-start-line="148" selection-start-column="55" selection-end-line="148" selection-end-column="55" />
+            <state relative-caret-position="433">
+              <caret line="149" column="77" lean-forward="false" selection-start-line="149" selection-start-column="77" selection-end-line="149" selection-end-column="77" />
               <folding>
                 <element signature="e#148#159#0" expanded="true" />
               </folding>
@@ -256,8 +256,8 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-391" />
-    <option name="y" value="-1336" />
+    <option name="x" value="-374" />
+    <option name="y" value="-1272" />
     <option name="width" value="1887" />
     <option name="height" value="1254" />
   </component>
@@ -360,13 +360,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1517948604886</updated>
-    </task>
-    <task id="LOCAL-00225" summary="Added file to check processing status.">
-      <created>1521139555346</created>
-      <option name="number" value="00225" />
-      <option name="presentableId" value="LOCAL-00225" />
-      <option name="project" value="LOCAL" />
-      <updated>1521139555346</updated>
     </task>
     <task id="LOCAL-00226" summary="Added file to check processing status.">
       <created>1521139599083</created>
@@ -704,11 +697,18 @@
       <option name="project" value="LOCAL" />
       <updated>1521150101963</updated>
     </task>
-    <option name="localTasksCounter" value="274" />
+    <task id="LOCAL-00274" summary="Wrote new function to create acrostic.csv">
+      <created>1521150139803</created>
+      <option name="number" value="00274" />
+      <option name="presentableId" value="LOCAL-00274" />
+      <option name="project" value="LOCAL" />
+      <updated>1521150139803</updated>
+    </task>
+    <option name="localTasksCounter" value="275" />
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-391" y="-1336" width="1887" height="1254" extended-state="0" />
+    <frame x="-374" y="-1272" width="1887" height="1254" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Key Promoter X" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1099,8 +1099,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/bin/processing_status.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="416">
-          <caret line="148" column="55" lean-forward="false" selection-start-line="148" selection-start-column="55" selection-end-line="148" selection-end-column="55" />
+        <state relative-caret-position="433">
+          <caret line="149" column="77" lean-forward="false" selection-start-line="149" selection-start-column="77" selection-end-line="149" selection-end-column="77" />
           <folding>
             <element signature="e#148#159#0" expanded="true" />
           </folding>
