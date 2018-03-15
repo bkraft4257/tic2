@@ -9,8 +9,6 @@ alias swh='study_switcher.py -s hfpef; source $TIC_INIT_PATH/tic_study_switcher.
 
 """
 
-__version__ = "0.0.0"
-
 import os
 import argparse
 import sys
