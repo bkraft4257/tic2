@@ -90,7 +90,7 @@ def _argparse():
 
 def display(in_df, subject_only=False, noheader=False):
 
-    if not noheader or not subject_only:
+    if not noheader and not subject_only:
         print(f'index,subject,session,file')
 
     for row in in_df.itertuples():
