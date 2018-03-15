@@ -155,24 +155,26 @@ def main():
                     .fillna(False)
                     )
 
-    display(df_full_list.pipe(_clean_nan, nan_option=in_args.nan),
-            subject_only=in_args.subject_only,
-            noheader=in_args.noheader)
+    print(df_full_list)
 
-    if in_args.summary:
-
-        n_acrostics = len(df_acrostic_list)
-        n_rows = len(df_full_list)
-        n_rows_with_na = len(df_full_list.dropna())
-
-        if n_rows_with_na < n_rows:
-            print(f'{Fore.RED}\nMissing files {n_acrostics-n_rows_with_na}.\n')
-
-        elif n_acrostics < n_rows:
-            print(f'{Fore.RED}\nAdditional file(s) found {n_rows-n_acrostics}.\n')
-
-        else:
-            print(f'{Fore.GREEN}\nOne file found for each acrostic.\n')
+    # display(df_full_list.pipe(_clean_nan, nan_option=in_args.nan),
+    #         subject_only=in_args.subject_only,
+    #         noheader=in_args.noheader)
+    #
+    # if in_args.summary:
+    #
+    #     n_acrostics = len(df_acrostic_list)
+    #     n_rows = len(df_full_list)
+    #     n_rows_with_na = len(df_full_list.dropna())
+    #
+    #     if n_rows_with_na < n_rows:
+    #         print(f'{Fore.RED}\nMissing files {n_acrostics-n_rows_with_na}.\n')
+    #
+    #     elif n_acrostics < n_rows:
+    #         print(f'{Fore.RED}\nAdditional file(s) found {n_rows-n_acrostics}.\n')
+    #
+    #     else:
+    #         print(f'{Fore.GREEN}\nOne file found for each acrostic.\n')
 
     return
 
