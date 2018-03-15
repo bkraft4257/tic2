@@ -137,8 +137,6 @@ def main():
 
     df_files = pandas.DataFrame(columns=["subject", "session", "file"])
 
-    print(df_files)
-
     for ii, ii_file in enumerate(files):
         _, subject_value = get_key_value_from_string(ii_file, in_args.subject)
         _, session_value = get_key_value_from_string(ii_file, in_args.session)
@@ -148,7 +146,7 @@ def main():
                                     "file": ii_file
                                     }, ignore_index=True)
 
-    df_full_list = df_acrostic_list.merge(df_files, how='left', on='subject')
+    df_full_list = df_acrostic_list.reset_index().merge(df_files, how='left', on='subject')
 
     display(df_full_list.pipe(_clean_nan, nan_option=in_args.nan),
             subject_only=in_args.subject_only,
