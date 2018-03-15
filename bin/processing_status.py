@@ -152,7 +152,7 @@ def main():
 
         if df_full_list.isnull().values.any():
 
-            print(f'{Fore.RED}\nMissing files.\n')
+            print(f'{Fore.RED}\nMissing files {np.count_nonzero(df_full_list.isnull().values)}.\n')
 
         else:
             print(f'{Fore.GREEN}\nAt least one file found for each acrostic.\n')

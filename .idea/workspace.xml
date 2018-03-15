@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="6f3e13b3-cd58-4c4d-98f6-1a68f8358bfb" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/bin/processing_status.py" afterPath="$PROJECT_DIR$/bin/processing_status.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -78,8 +79,8 @@
       <file leaf-file-name="processing_status.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/bin/processing_status.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="790">
-              <caret line="156" column="13" lean-forward="true" selection-start-line="156" selection-start-column="13" selection-end-line="156" selection-end-column="13" />
+            <state relative-caret-position="756">
+              <caret line="154" column="76" lean-forward="false" selection-start-line="154" selection-start-column="76" selection-end-line="154" selection-end-column="76" />
               <folding>
                 <element signature="e#148#159#0" expanded="true" />
               </folding>
@@ -347,13 +348,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1517948604886</updated>
-    </task>
-    <task id="LOCAL-00197" summary="Added file to check processing status.">
-      <created>1521135804026</created>
-      <option name="number" value="00197" />
-      <option name="presentableId" value="LOCAL-00197" />
-      <option name="project" value="LOCAL" />
-      <updated>1521135804026</updated>
     </task>
     <task id="LOCAL-00198" summary="Added file to check processing status.">
       <created>1521136015798</created>
@@ -691,7 +685,14 @@
       <option name="project" value="LOCAL" />
       <updated>1521142491380</updated>
     </task>
-    <option name="localTasksCounter" value="246" />
+    <task id="LOCAL-00246" summary="Added file to check processing status.">
+      <created>1521142504560</created>
+      <option name="number" value="00246" />
+      <option name="presentableId" value="LOCAL-00246" />
+      <option name="project" value="LOCAL" />
+      <updated>1521142504560</updated>
+    </task>
+    <option name="localTasksCounter" value="247" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -1081,8 +1082,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/bin/processing_status.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="790">
-          <caret line="156" column="13" lean-forward="true" selection-start-line="156" selection-start-column="13" selection-end-line="156" selection-end-column="13" />
+        <state relative-caret-position="756">
+          <caret line="154" column="76" lean-forward="false" selection-start-line="154" selection-start-column="76" selection-end-line="154" selection-end-column="76" />
           <folding>
             <element signature="e#148#159#0" expanded="true" />
           </folding>
