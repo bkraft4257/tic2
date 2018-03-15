@@ -140,11 +140,9 @@ def main():
                                     "file": ii_file
                                     }, ignore_index=True)
 
-    df_full_list = (df_acrostic_list.merge(df_files, how='left', on='subject')
-                    .pipe(_clean_nan, nan_option=in_args.nan)
-                    )
+    df_full_list = df_acrostic_list.merge(df_files, how='left', on='subject')
 
-    display(df_full_list,
+    display(df_full_list.pipe(_clean_nan, nan_option=in_args.nan),
             subject_only=in_args.subject_only,
             noheader=in_args.noheader)
 
