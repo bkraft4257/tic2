@@ -69,7 +69,7 @@ def _argparse():
     parser.add_argument("-a", "--acrostic_list", help="Acrostic List",
                         default=get_acrostic_study_list_full_filename())
 
-    parser.add_argument("-r", "--recursive", help="Recursive boolean flag for glob",
+    parser.add_argument("--glob_current_directory_only", help="Recursive boolean flag for glob",
                         action="store_true",
                         default=False)
 
@@ -80,7 +80,6 @@ def _argparse():
     parser.add_argument("--nan", help="Remove NaNs from output",
                         choices=['drop', 'only', 'ignore'],
                         default='ignore')
-
 
     return parser.parse_args()
 
@@ -113,7 +112,7 @@ def main():
     in_args = _argparse()
 
     files = glob.glob(in_args.file_pattern,
-                      recursive=in_args.recursive)
+                      recursive=not in_args.glob_current_directory_only)
 
     df_acrostic_list = get_acrostic_list(in_args.acrostic_list)
 
