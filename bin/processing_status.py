@@ -85,7 +85,6 @@ def main():
                       recursive=in_args.recursive)
 
     df_acrostic_list = get_acrostic_list(in_args.acrostic_list)
-    print(df_acrostic_list)
 
     df_files = pandas.DataFrame(columns=["subject", "session", "file"])
 
