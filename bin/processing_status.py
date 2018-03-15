@@ -97,7 +97,7 @@ def main():
 
         key, value = get_key_value_from_string(ii_file, in_args.subject)
 
-        print(f'{ii}) {ii_files} {value}')
+        print(f'{ii}) {ii_file} {value}')
 
     return
 
