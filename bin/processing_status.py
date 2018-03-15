@@ -11,6 +11,7 @@ import argparse
 import sys
 import pandas
 import re
+from colorama import Fore
 
 pandas.set_option('display.max_columns', 500)
 pandas.set_option('display.width', 1000)
@@ -81,6 +82,10 @@ def _argparse():
                         action="store_true",
                         default=False)
 
+    parser.add_argument("--summary", help="Display summary stats",
+                        action="store_true",
+                        default=False)
+
     parser.add_argument("--nan", help="Remove NaNs from output",
                         choices=['drop', 'only', 'ignore'],
                         default='ignore')
@@ -142,6 +147,16 @@ def main():
     display(df_full_list,
             subject_only=in_args.subject_only,
             noheader=in_args.noheader)
+
+    if in_args.summary:
+
+        if df_full_list.isnull().values.any():
+
+            print(f'{Fore.RED} Missing files.')
+
+        else:
+            print(f'{Fore.GREEN} At least one file found for each acrostic.')
+
 
     return
 
