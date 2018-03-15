@@ -12,6 +12,10 @@ import sys
 import pandas
 import re
 
+
+pandas.set_option('display.max_columns', 500)
+pandas.set_option('display.width', 1000)
+
 # TODO Study Choices should be a common variable that is imported.
 
 
