@@ -13,8 +13,18 @@ import sys
 # TODO Study Choices should be a common variable that is imported.
 
 
-def get_active_study():
-    return os.getenv('ACTIVE_STUDY')
+def get_active_study_bids_path():
+    return os.getenv('ACTIVE_BIDS_PATH')
+
+
+ACROSTIC_LIST_FILENAME = 'acrostic.list'
+ACTIVE_BIDS_PATH = get_active_study_bids_path()
+
+
+def get_acrostic_study_list_full_filename(active_study_bids_path=ACTIVE_BIDS_PATH,
+                                          acrostic_list_name=ACROSTIC_LIST_FILENAME):
+
+    return os.path.abspath(os.path.join(active_study_bids_path, acrostic_list_name))
 
 
 def _argparse():
@@ -24,6 +34,7 @@ def _argparse():
     parser = argparse.ArgumentParser(prog='processing_status')
 
     parser.add_argument('file_pattern', help='String file pattern to glob')
+
 
     parser.add_argument("-r", "--recursive", help="Recursive boolean flag for glob",
                         action="store_true",
@@ -39,8 +50,10 @@ def main():
     files = glob.glob(in_args.file_pattern,
                       recursive=in_args.recursive)
 
+    print(get_acrostic_study_list_full_filename())
+
     for ii,ii_files in enumerate(files):
-        print(f'{ii}) {ii_files}\n')
+        print(f'{ii}) {ii_files}')
 
     return
 
