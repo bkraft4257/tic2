@@ -25,6 +25,10 @@ def _argparse():
 
     parser.add_argument('file_pattern', help='String file pattern to glob')
 
+    parser.add_argument("-r", "--recursive", help="Recursive boolean flag for glob",
+                        action="store_true",
+                        default=False)
+
     return parser.parse_args()
 
 
@@ -32,11 +36,9 @@ def main():
 
     in_args = _argparse()
 
-    print(in_args)
+    files = glob.glob(in_args.file_pattern,
+                      recursive=in_args.recursive)
 
-    files = glob.glob(in_args.file_pattern)
-
-    print(get_active_study())
     print('\n')
     print(files)
 
