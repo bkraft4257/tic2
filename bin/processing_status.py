@@ -156,7 +156,7 @@ def main():
         if n_rows_with_na < n_rows:
             print(f'{Fore.RED}\nMissing files {n_acrostics-n_rows_with_na}.\n')
 
-        if n_rows_with_na > n_rows:
+        if n_acrostics < n_rows:
             print(f'{Fore.RED}\nAdditional files found {n_rows-n_acrostics}.\n')
 
         else:
