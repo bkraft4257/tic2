@@ -11,7 +11,7 @@ import argparse
 import sys
 import pandas
 import re
-
+from IPython.core.display import display
 
 pandas.set_option('display.max_columns', 500)
 pandas.set_option('display.width', 1000)
@@ -106,7 +106,7 @@ def main():
 
     df_files = pandas.concat(ii_df_files)
 
-    print(df_files)
+    display(df_files)
 
     return
 
