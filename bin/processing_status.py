@@ -97,13 +97,13 @@ def display(in_df, noheader=False):
 def _clean_nan(in_df, nan_option):
 
     if nan_option == 'drop':
-        out_df = in_df.dropna(in_df)
+        out_df = in_df.dropna(in_df).copy()
 
     elif nan_option == 'only':
-        out_df = in_df[in_df.isnull().any()]
+        out_df = in_df[in_df.isnull().any()].copy()
 
     else:
-        out_df = in_df.fillna('not_found')
+        out_df = in_df.fillna('not_found').copy()
 
     return out_df
 
