@@ -108,7 +108,7 @@ def main():
 
 
     df_full_list = (df_acrostic_list.merge(df_files, how='left', on='subject')
-                    .fillna('nan')
+                    .fillna('not_found')
                     )
 
     display(df_full_list)
