@@ -81,7 +81,7 @@ def display(in_df):
     print(f'subject,session,file')
 
     for row in in_df.iterrows():
-            print(f'{row["subject"]},{row["session"],row["file"]'})
+            print(f'{row["subject"]}, {row["session"]} ,{row["file"]}')
 
 
 def main():
