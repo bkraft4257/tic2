@@ -152,10 +152,10 @@ def main():
 
         if df_full_list.isnull().values.any():
 
-            print(f'{Fore.RED} Missing files.')
+            print(f'{Fore.RED}\nMissing files.\n')
 
         else:
-            print(f'{Fore.GREEN} At least one file found for each acrostic.')
+            print(f'{Fore.GREEN}\nAt least one file found for each acrostic.\n')
 
 
     return

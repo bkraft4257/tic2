@@ -79,8 +79,8 @@
       <file leaf-file-name="processing_status.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/bin/processing_status.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="722">
-              <caret line="152" column="23" lean-forward="false" selection-start-line="152" selection-start-column="23" selection-end-line="152" selection-end-column="23" />
+            <state relative-caret-position="790">
+              <caret line="156" column="13" lean-forward="true" selection-start-line="156" selection-start-column="13" selection-end-line="156" selection-end-column="13" />
               <folding>
                 <element signature="e#148#159#0" expanded="true" />
               </folding>
@@ -348,13 +348,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1517948604886</updated>
-    </task>
-    <task id="LOCAL-00195" summary="Added file to check processing status.">
-      <created>1521135716412</created>
-      <option name="number" value="00195" />
-      <option name="presentableId" value="LOCAL-00195" />
-      <option name="project" value="LOCAL" />
-      <updated>1521135716412</updated>
     </task>
     <task id="LOCAL-00196" summary="Added file to check processing status.">
       <created>1521135774926</created>
@@ -692,7 +685,14 @@
       <option name="project" value="LOCAL" />
       <updated>1521142000948</updated>
     </task>
-    <option name="localTasksCounter" value="244" />
+    <task id="LOCAL-00244" summary="Added file to check processing status.">
+      <created>1521142419037</created>
+      <option name="number" value="00244" />
+      <option name="presentableId" value="LOCAL-00244" />
+      <option name="project" value="LOCAL" />
+      <updated>1521142419037</updated>
+    </task>
+    <option name="localTasksCounter" value="245" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -1082,8 +1082,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/bin/processing_status.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="722">
-          <caret line="152" column="23" lean-forward="false" selection-start-line="152" selection-start-column="23" selection-end-line="152" selection-end-column="23" />
+        <state relative-caret-position="790">
+          <caret line="156" column="13" lean-forward="true" selection-start-line="156" selection-start-column="13" selection-end-line="156" selection-end-column="13" />
           <folding>
             <element signature="e#148#159#0" expanded="true" />
           </folding>
