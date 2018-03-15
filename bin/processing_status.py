@@ -98,8 +98,7 @@ def main():
                                     "file": ii_file
                                     }, ignore_index=True)
 
-
-    df_full_list = df_acrostic_list.merge(df_files, how='outer', on='subject')
+    df_full_list = df_acrostic_list.merge(df_files, how='left', on='subject')
 
     display(df_full_list)
 
