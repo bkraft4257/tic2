@@ -133,8 +133,6 @@ def main():
 
     df_acrostic_list = get_acrostic_list(in_args.acrostic_list)
 
-    print(df_acrostic_list)
-
     df_files = pandas.DataFrame(columns=["subject", "session", "file"])
 
     for ii, ii_file in enumerate(files):
@@ -151,7 +149,7 @@ def main():
 
     df_full_list = (df_acrostic_list
                     .reset_index()
-                    .merge(df_files_2.reset_index(), how='left', on='subject')
+                    .merge(df_files_2.reset_index(), how='left', on='subject', lsuffix='_scanned', rsuffix='_processed')
                     .fillna(False)
                     )
 
