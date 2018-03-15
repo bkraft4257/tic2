@@ -90,10 +90,7 @@ def main():
 
     df_acrostic_list = get_acrostic_list(in_args.acrostic_list)
 
-    ii_df_files = []
-
-    print(pandas.get_option("display.max_columns"))
-    print(pandas.get_option("display.width"))
+    df = pandas.DataFrame(columns=["subject", "session", "file"])
 
     for ii,ii_file in enumerate(files):
 
@@ -102,16 +99,14 @@ def main():
 
         print(ii_file, subject_value, session_value)
 
-        # ii_df_files.append(
+        df = df.append({
+            "subject": subject_value,
+            "session": session_value,
+            "file": ii_file
+        }, ignore_index=True)
 
-        print(dict({'file': ii_file,
-                    'subject': subject_value,
-                    'session': session_value, })
-              )
 
-#    df_files = pandas.concat(ii_df_files)
-
-#    display(df_files)
+    display(df)
 
     return
 
