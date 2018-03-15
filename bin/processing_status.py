@@ -154,7 +154,7 @@ def main():
                     .fillna(False)
                     )
 
-    for row in df_full_list.iterrows():
+    for index, row in df_full_list.iterrows():
         print(row.to_frame().T) # re.sub("\s+", ",", df_full_list.to_string().strip()))
 
     # display(df_full_list.pipe(_clean_nan, nan_option=in_args.nan),
