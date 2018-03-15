@@ -60,7 +60,7 @@
         <entry file="file://$PROJECT_DIR$/bin/processing_status.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="416">
-              <caret line="148" column="60" lean-forward="false" selection-start-line="148" selection-start-column="60" selection-end-line="148" selection-end-column="60" />
+              <caret line="148" column="55" lean-forward="false" selection-start-line="148" selection-start-column="55" selection-end-line="148" selection-end-column="55" />
               <folding>
                 <element signature="e#148#159#0" expanded="true" />
               </folding>
@@ -360,13 +360,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1517948604886</updated>
-    </task>
-    <task id="LOCAL-00224" summary="Added file to check processing status.">
-      <created>1521139525739</created>
-      <option name="number" value="00224" />
-      <option name="presentableId" value="LOCAL-00224" />
-      <option name="project" value="LOCAL" />
-      <updated>1521139525739</updated>
     </task>
     <task id="LOCAL-00225" summary="Added file to check processing status.">
       <created>1521139555346</created>
@@ -704,7 +697,14 @@
       <option name="project" value="LOCAL" />
       <updated>1521150000924</updated>
     </task>
-    <option name="localTasksCounter" value="273" />
+    <task id="LOCAL-00273" summary="Wrote new function to create acrostic.csv">
+      <created>1521150101963</created>
+      <option name="number" value="00273" />
+      <option name="presentableId" value="LOCAL-00273" />
+      <option name="project" value="LOCAL" />
+      <updated>1521150101963</updated>
+    </task>
+    <option name="localTasksCounter" value="274" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -1100,7 +1100,7 @@
     <entry file="file://$PROJECT_DIR$/bin/processing_status.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="416">
-          <caret line="148" column="60" lean-forward="false" selection-start-line="148" selection-start-column="60" selection-end-line="148" selection-end-column="60" />
+          <caret line="148" column="55" lean-forward="false" selection-start-line="148" selection-start-column="55" selection-end-line="148" selection-end-column="55" />
           <folding>
             <element signature="e#148#159#0" expanded="true" />
           </folding>

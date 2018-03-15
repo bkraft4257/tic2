@@ -146,7 +146,7 @@ def main():
                                     "file": ii_file
                                     }, ignore_index=True)
 
-    print(df_files.set_index(['subject', 'session']).stack())
+    print(df_files.set_index(['subject', 'session']).unstack())
 
     df_full_list = df_acrostic_list.reset_index().merge(df_files, how='left', on='subject')
 
