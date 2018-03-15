@@ -79,8 +79,8 @@
       <file leaf-file-name="processing_status.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/bin/processing_status.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="773">
-              <caret line="110" column="22" lean-forward="false" selection-start-line="110" selection-start-column="22" selection-end-line="110" selection-end-column="22" />
+            <state relative-caret-position="756">
+              <caret line="109" column="27" lean-forward="true" selection-start-line="109" selection-start-column="27" selection-end-line="109" selection-end-column="27" />
               <folding>
                 <element signature="e#148#159#0" expanded="true" />
               </folding>
@@ -348,13 +348,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1517948604886</updated>
-    </task>
-    <task id="LOCAL-00176" summary="Updated hdc_clean.py to remove subject directory if it is empty.">
-      <created>1521062519834</created>
-      <option name="number" value="00176" />
-      <option name="presentableId" value="LOCAL-00176" />
-      <option name="project" value="LOCAL" />
-      <updated>1521062519834</updated>
     </task>
     <task id="LOCAL-00177" summary="Updated hdc_clean.py to remove subject directory if it is empty.">
       <created>1521062708036</created>
@@ -692,7 +685,14 @@
       <option name="project" value="LOCAL" />
       <updated>1521139525739</updated>
     </task>
-    <option name="localTasksCounter" value="225" />
+    <task id="LOCAL-00225" summary="Added file to check processing status.">
+      <created>1521139555346</created>
+      <option name="number" value="00225" />
+      <option name="presentableId" value="LOCAL-00225" />
+      <option name="project" value="LOCAL" />
+      <updated>1521139555346</updated>
+    </task>
+    <option name="localTasksCounter" value="226" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -1082,8 +1082,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/bin/processing_status.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="773">
-          <caret line="110" column="22" lean-forward="false" selection-start-line="110" selection-start-column="22" selection-end-line="110" selection-end-column="22" />
+        <state relative-caret-position="756">
+          <caret line="109" column="27" lean-forward="true" selection-start-line="109" selection-start-column="27" selection-end-line="109" selection-end-column="27" />
           <folding>
             <element signature="e#148#159#0" expanded="true" />
           </folding>
