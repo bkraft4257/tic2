@@ -79,8 +79,8 @@
       <file leaf-file-name="processing_status.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/bin/processing_status.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="258">
-              <caret line="38" column="42" lean-forward="false" selection-start-line="38" selection-start-column="42" selection-end-line="38" selection-end-column="42" />
+            <state relative-caret-position="749">
+              <caret line="99" column="0" lean-forward="true" selection-start-line="95" selection-start-column="0" selection-end-line="99" selection-end-column="0" />
               <folding>
                 <element signature="e#148#159#0" expanded="true" />
               </folding>
@@ -347,13 +347,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1517948604886</updated>
-    </task>
-    <task id="LOCAL-00164" summary="Updated singularity image documentation.  &#10;Added ability to remove CR from DICOM images.">
-      <created>1521058456930</created>
-      <option name="number" value="00164" />
-      <option name="presentableId" value="LOCAL-00164" />
-      <option name="project" value="LOCAL" />
-      <updated>1521058456930</updated>
     </task>
     <task id="LOCAL-00165" summary="Updated SYNERGY protocol.">
       <created>1521058610673</created>
@@ -691,7 +684,14 @@
       <option name="project" value="LOCAL" />
       <updated>1521136966074</updated>
     </task>
-    <option name="localTasksCounter" value="213" />
+    <task id="LOCAL-00213" summary="Added file to check processing status.">
+      <created>1521137085985</created>
+      <option name="number" value="00213" />
+      <option name="presentableId" value="LOCAL-00213" />
+      <option name="project" value="LOCAL" />
+      <updated>1521137085985</updated>
+    </task>
+    <option name="localTasksCounter" value="214" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -1081,8 +1081,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/bin/processing_status.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="258">
-          <caret line="38" column="42" lean-forward="false" selection-start-line="38" selection-start-column="42" selection-end-line="38" selection-end-column="42" />
+        <state relative-caret-position="749">
+          <caret line="99" column="0" lean-forward="true" selection-start-line="95" selection-start-column="0" selection-end-line="99" selection-end-column="0" />
           <folding>
             <element signature="e#148#159#0" expanded="true" />
           </folding>

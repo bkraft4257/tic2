@@ -89,16 +89,14 @@ def main():
 
     df_files = pandas.DataFrame(columns=["subject", "session", "file"])
 
-    for ii,ii_file in enumerate(files):
-
+    for ii, ii_file in enumerate(files):
         _, subject_value = get_key_value_from_string(ii_file, in_args.subject)
         _, session_value = get_key_value_from_string(ii_file, in_args.session)
 
-        df_files = df.append({
-            "subject": subject_value,
-            "session": session_value,
-            "file": ii_file
-        }, ignore_index=True)
+        df_files = df_files.append({"subject": subject_value,
+                                    "session": session_value,
+                                    "file": ii_file
+                                    }, ignore_index=True)
 
 
     df_full_list = df_acrostic_list.merge(df_files, how='outer', on='subject')
