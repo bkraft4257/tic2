@@ -45,7 +45,7 @@ def main():
     df = df.set_index(['subject', 'session']).unstack().fillna(False)
     df.columns = ['ses-1', 'ses-2']
 
-    df.to_csv('acrostic.csv')
+    df.to_csv(os.path.join(active_bids_path, 'acrostic.csv'))
 
     if in_args.verbose:
         print(df)

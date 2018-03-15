@@ -2,9 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6f3e13b3-cd58-4c4d-98f6-1a68f8358bfb" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/bin/create_acrostic_list.py" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/bin/processing_status.py" afterPath="$PROJECT_DIR$/bin/processing_status.py" />
+      <change beforePath="$PROJECT_DIR$/bin/create_acrostic_list.py" afterPath="$PROJECT_DIR$/bin/create_acrostic_list.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -106,8 +105,8 @@
       <file leaf-file-name="create_acrostic_list.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/bin/create_acrostic_list.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="11" column="10" lean-forward="false" selection-start-line="11" selection-start-column="10" selection-end-line="11" selection-end-column="10" />
+            <state relative-caret-position="732">
+              <caret line="47" column="61" lean-forward="false" selection-start-line="47" selection-start-column="61" selection-end-line="47" selection-end-column="61" />
               <folding>
                 <element signature="e#127#136#0" expanded="true" />
               </folding>
@@ -361,13 +360,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1517948604886</updated>
-    </task>
-    <task id="LOCAL-00210" summary="Added file to check processing status.">
-      <created>1521136895279</created>
-      <option name="number" value="00210" />
-      <option name="presentableId" value="LOCAL-00210" />
-      <option name="project" value="LOCAL" />
-      <updated>1521136895279</updated>
     </task>
     <task id="LOCAL-00211" summary="Added file to check processing status.">
       <created>1521136931910</created>
@@ -705,7 +697,14 @@
       <option name="project" value="LOCAL" />
       <updated>1521144048054</updated>
     </task>
-    <option name="localTasksCounter" value="259" />
+    <task id="LOCAL-00259" summary="Wrote new function to create acrostic.csv">
+      <created>1521147838726</created>
+      <option name="number" value="00259" />
+      <option name="presentableId" value="LOCAL-00259" />
+      <option name="project" value="LOCAL" />
+      <updated>1521147838726</updated>
+    </task>
+    <option name="localTasksCounter" value="260" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -767,7 +766,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Update protocol found a problem with func and fmap." />
     <MESSAGE value="Updated protocol to include missing pCASL, removed sbref scans where appropriate." />
     <MESSAGE value="Updated protocol to include missing pCASL. Series description was different." />
     <MESSAGE value="Updated hdc_clean to remove BIDS directory, as well as, .heudicon directory of &#10;the appropriate subject and session." />
@@ -792,7 +790,8 @@
     <MESSAGE value="Updated hdc_clean.py to remove subject directory if it is empty." />
     <MESSAGE value="Removed all scripts." />
     <MESSAGE value="Added file to check processing status." />
-    <option name="LAST_COMMIT_MESSAGE" value="Added file to check processing status." />
+    <MESSAGE value="Wrote new function to create acrostic.csv" />
+    <option name="LAST_COMMIT_MESSAGE" value="Wrote new function to create acrostic.csv" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1100,8 +1099,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/bin/create_acrostic_list.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="10" lean-forward="false" selection-start-line="11" selection-start-column="10" selection-end-line="11" selection-end-column="10" />
+        <state relative-caret-position="732">
+          <caret line="47" column="61" lean-forward="false" selection-start-line="47" selection-start-column="61" selection-end-line="47" selection-end-column="61" />
           <folding>
             <element signature="e#127#136#0" expanded="true" />
           </folding>
