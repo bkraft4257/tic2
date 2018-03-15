@@ -77,6 +77,10 @@ def _argparse():
                         action="store_true",
                         default=False)
 
+    parser.add_argument("--subject_only", help="Only display subject",
+                        action="store_true",
+                        default=False)
+
     parser.add_argument("--nan", help="Remove NaNs from output",
                         choices=['drop', 'only', 'ignore'],
                         default='ignore')
@@ -84,13 +88,17 @@ def _argparse():
     return parser.parse_args()
 
 
-def display(in_df, noheader=False):
+def display(in_df, subject_only=False, noheader=False):
 
-    if not noheader:
+    if not noheader or not subject_only:
         print(f'index,subject,session,file')
 
     for row in in_df.itertuples():
-        print(f'{row[0]},{row[1]},{row[2]},{row[3]}')
+
+        if subject_only:
+            print(f'{row[1]}')
+        else:
+            print(f'{row[0]},{row[1]},{row[2]},{row[3]}')
 
 
 def _clean_nan(in_df, nan_option, nan_fill='not_found'):
