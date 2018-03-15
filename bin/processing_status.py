@@ -15,6 +15,7 @@ from IPython.core.display import display
 
 pandas.set_option('display.max_columns', 500)
 pandas.set_option('display.width', 1000)
+pandas.set_option('display.max_colwidth',40)
 
 # TODO Study Choices should be a common variable that is imported.
 
@@ -96,8 +97,6 @@ def main():
 
         _, subject_value = get_key_value_from_string(ii_file, in_args.subject)
         _, session_value = get_key_value_from_string(ii_file, in_args.session)
-
-        print(ii_file, subject_value, session_value)
 
         df = df.append({
             "subject": subject_value,
