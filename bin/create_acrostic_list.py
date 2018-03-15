@@ -56,7 +56,7 @@ def main():
 
         if in_args.summary:
             print('\n\nSummary of Subjects by Session\n')
-            print(df.apply(pandas.value_counts).fillna(0))
+            print(df.apply(pandas.value_counts).fillna(0).astype(int))
 
 # ====================================================================================================================
 # region Command Line Interface
