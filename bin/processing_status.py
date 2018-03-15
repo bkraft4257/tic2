@@ -149,15 +149,18 @@ def main():
 
     if in_args.summary:
 
-        n_rows = df_full_list.shape[0]
-        n_rows_with_na = df_full_list.dropna().shape[0]
+        n_acrostics = len(df_acrostic_list)
+        n_rows = len(df_full_list)
+        n_rows_with_na = len(df_full_list.dropna())
 
         if n_rows_with_na < n_rows:
+            print(f'{Fore.RED}\nMissing files {n_acrostics-n_rows_with_na}.\n')
 
-            print(f'{Fore.RED}\nMissing files {n_rows-n_rows_with_na}.\n')
+        if n_rows_with_na > n_rows:
+            print(f'{Fore.RED}\nAdditional files found {n_rows-n_acrostics}.\n')
 
         else:
-            print(f'{Fore.GREEN}\nAt least one file found for each acrostic.\n')
+            print(f'{Fore.GREEN}\nOne file found for each acrostic.\n')
 
 
     return
