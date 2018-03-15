@@ -12,7 +12,6 @@ import sys
 import pandas
 import re
 from colorama import Fore
-import numpy as np
 
 pandas.set_option('display.max_columns', 500)
 pandas.set_option('display.width', 1000)
@@ -164,12 +163,12 @@ def main():
         else:
             print(f'{Fore.GREEN}\nOne file found for each acrostic.\n')
 
-
     return
 
 
 # ====================================================================================================================
 # region Command Line Interface
+
 
 if __name__ == '__main__':
     sys.exit(main())
