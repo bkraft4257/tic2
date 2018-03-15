@@ -78,12 +78,12 @@ def _argparse():
 
 def display(in_df):
 
-    print(f'subject\tsession\tfile')
+    print(f'subject,session,file')
 
     # row[0] is the index
 
     for row in in_df.itertuples():
-        print(f'{row[1]}\t{row[2]}\t{row[3]}')
+        print(f'{row[1]},{row[2]},{row[3]}')
 
 
 def main():
