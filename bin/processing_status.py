@@ -47,6 +47,7 @@ def get_key_value_from_string(string, acrostic_regex, key_value_split_on='-'):
     print(key_value_split_on)
 
     m = re.search(acrostic_regex, string)
+    print(m)
 
     if m:
         key,value =m.split(key_value_split_on)
@@ -66,7 +67,7 @@ def _argparse():
     parser.add_argument('file_pattern', help='String file pattern to glob')
 
     parser.add_argument("-s", "--subject", help="Regular expression subject acrostic",
-                        default='sub-imove[0-9][0-9][0-9][0-9]')
+                        default='sub-imove[0-9]{4}')
 
     parser.add_argument("-ss", "--session", help="Regular expression session ",
                         default='ses-[0-9]')
