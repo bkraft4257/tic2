@@ -132,6 +132,8 @@ def main():
 
     df_files = pandas.DataFrame(columns=["subject", "session", "file"])
 
+    print(df_files)
+
     for ii, ii_file in enumerate(files):
         _, subject_value = get_key_value_from_string(ii_file, in_args.subject)
         _, session_value = get_key_value_from_string(ii_file, in_args.session)
@@ -156,8 +158,8 @@ def main():
         if n_rows_with_na < n_rows:
             print(f'{Fore.RED}\nMissing files {n_acrostics-n_rows_with_na}.\n')
 
-        if n_acrostics < n_rows:
-            print(f'{Fore.RED}\nAdditional files found {n_rows-n_acrostics}.\n')
+        elif n_acrostics < n_rows:
+            print(f'{Fore.RED}\nAdditional file(s) found {n_rows-n_acrostics}.\n')
 
         else:
             print(f'{Fore.GREEN}\nOne file found for each acrostic.\n')
