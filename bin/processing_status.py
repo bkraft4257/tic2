@@ -92,6 +92,9 @@ def main():
 
     ii_df_files = []
 
+    print(pandas.get_option("display.max_rows"))
+    print(pandas.get_option("display.width"))
+
     for ii,ii_file in enumerate(files):
 
         _, subject_value = get_key_value_from_string(ii_file, in_args.subject)
