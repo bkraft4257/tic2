@@ -148,6 +148,8 @@ def main():
 
     df_full_list = df_acrostic_list.reset_index().merge(df_files, how='left', on='subject')
 
+    print(df_full_list)
+
     display(df_full_list.pipe(_clean_nan, nan_option=in_args.nan),
             subject_only=in_args.subject_only,
             noheader=in_args.noheader)
