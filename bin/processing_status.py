@@ -80,8 +80,9 @@ def display(in_df):
 
     print(f'subject,session,file')
 
-    for row in in_df.iterrows():
-            print(f'{row[0]}, {row[1]} ,{row[2]}')
+    for row in in_df.itertuples():
+        print(row)
+        print(f'{row[0]}, {row[1]} ,{row[2]}')
 
 
 def main():
