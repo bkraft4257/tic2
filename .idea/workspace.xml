@@ -59,8 +59,8 @@
       <file leaf-file-name="processing_status.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/bin/processing_status.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="444">
-              <caret line="156" column="63" lean-forward="true" selection-start-line="156" selection-start-column="63" selection-end-line="156" selection-end-column="63" />
+            <state relative-caret-position="461">
+              <caret line="157" column="20" lean-forward="false" selection-start-line="157" selection-start-column="20" selection-end-line="157" selection-end-column="20" />
               <folding>
                 <element signature="e#148#159#0" expanded="true" />
               </folding>
@@ -360,13 +360,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1517948604886</updated>
-    </task>
-    <task id="LOCAL-00235" summary="Added file to check processing status.">
-      <created>1521141030378</created>
-      <option name="number" value="00235" />
-      <option name="presentableId" value="LOCAL-00235" />
-      <option name="project" value="LOCAL" />
-      <updated>1521141030378</updated>
     </task>
     <task id="LOCAL-00236" summary="Added file to check processing status.">
       <created>1521141085438</created>
@@ -704,7 +697,14 @@
       <option name="project" value="LOCAL" />
       <updated>1521151949208</updated>
     </task>
-    <option name="localTasksCounter" value="284" />
+    <task id="LOCAL-00284" summary="Wrote new function to create acrostic.csv">
+      <created>1521152216528</created>
+      <option name="number" value="00284" />
+      <option name="presentableId" value="LOCAL-00284" />
+      <option name="project" value="LOCAL" />
+      <updated>1521152216528</updated>
+    </task>
+    <option name="localTasksCounter" value="285" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -1099,8 +1099,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/bin/processing_status.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="444">
-          <caret line="156" column="63" lean-forward="true" selection-start-line="156" selection-start-column="63" selection-end-line="156" selection-end-column="63" />
+        <state relative-caret-position="461">
+          <caret line="157" column="20" lean-forward="false" selection-start-line="157" selection-start-column="20" selection-end-line="157" selection-end-column="20" />
           <folding>
             <element signature="e#148#159#0" expanded="true" />
           </folding>
