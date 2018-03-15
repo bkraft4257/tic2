@@ -22,6 +22,10 @@ def _argparse():
                         action="store_true",
                         default=False)
 
+    parser.add_argument("-s", "--summary", help="Display acrostic summary by session.",
+                        action="store_true",
+                        default=False)
+
     return parser.parse_args()
 
 
@@ -50,6 +54,9 @@ def main():
     if in_args.verbose:
         print(df.describe())
 
+        if in_args.summary:
+            df2 = df.set_index('subject').stack()
+            print(df2.apply(pd.value_counts))
 
 # ====================================================================================================================
 # region Command Line Interface
