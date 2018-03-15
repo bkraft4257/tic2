@@ -14,6 +14,7 @@ import sys
 ACTIVE_BIDS_PATH = os.getenv('ACTIVE_BIDS_PATH')
 ACROSTIC_CSV_DEFAULT_FILENAME = os.path.join(ACTIVE_BIDS_PATH, 'acrostic.csv')
 
+
 def _argparse():
     """ Get command line arguments.
 
@@ -41,7 +42,7 @@ def main():
     in_args = _argparse()
 
     df0 = pandas.DataFrame({'directory': glob.glob(os.path.join(ACTIVE_BIDS_PATH, 'sub-*', 'ses-*'))})
-    df0.directory = df0.directory.str.replace(active_bids_path, '')
+    df0.directory = df0.directory.str.replace(ACTIVE_BIDS_PATH, '')
     df = df0.directory.str.split('/', expand=True).copy()
 
     df.columns = ['index', 'subject', 'session']
