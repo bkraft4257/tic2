@@ -41,8 +41,20 @@ def get_acrostic_list(acrostic_list_filename = get_acrostic_study_list_full_file
 
 
 def get_key_value_from_string(string, acrostic_regex, key_value_split_on='-'):
+
+    print(string)
+    print(acrostic_regex)
+    print(key_value_split_on)
+
     m = re.search(acrostic_regex, string)
-    return m.split(key_value_split_on)
+
+    if m:
+        key,value =m.split(key_value_split_on)
+    else:
+        key = None
+        value = None
+
+    return key, value
 
 
 def _argparse():
