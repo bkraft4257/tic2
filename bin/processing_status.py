@@ -32,7 +32,7 @@ def get_acrostic_study_list_full_filename(active_study_bids_path=ACTIVE_BIDS_PAT
 
 def get_acrostic_list(acrostic_list_filename = get_acrostic_study_list_full_filename()):
     df_acrostic_list = (pandas.read_csv(acrostic_list_filename)
-                        .rename(columns={'participant_id':'subject'})
+                        .rename(columns={'participant_id': 'subject'})
                         .set_index('subject')
                         )
 
@@ -132,6 +132,8 @@ def main():
                       recursive=not in_args.glob_current_directory_only)
 
     df_acrostic_list = get_acrostic_list(in_args.acrostic_list)
+
+    print(df_acrostic_list)
 
     df_files = pandas.DataFrame(columns=["subject", "session", "file"])
 
