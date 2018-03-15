@@ -150,7 +150,7 @@ def main():
 
     if in_args.summary:
 
-        if df_full_list.isnull().values.any():
+        if df_full_list.isnull(axis=1).values.any():
 
             print(f'{Fore.RED}\nMissing files {np.count_nonzero(df_full_list.isnull().values)}.\n')
 
