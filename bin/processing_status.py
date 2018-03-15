@@ -10,6 +10,7 @@ import os
 import argparse
 import sys
 import pandas
+import re
 
 # TODO Study Choices should be a common variable that is imported.
 
@@ -28,8 +29,7 @@ def get_acrostic_study_list_full_filename(active_study_bids_path=ACTIVE_BIDS_PAT
     return os.path.abspath(os.path.join(active_study_bids_path, acrostic_list_name))
 
 
-def get_acrostic_list():
-    acrostic_list_filename = get_acrostic_study_list_full_filename()
+def get_acrostic_list(acrostic_list_filename = get_acrostic_study_list_full_filename()):
 
     print(acrostic_list_filename)
 
@@ -39,6 +39,7 @@ def get_acrostic_list():
 
     return df_acrostic_list
 
+
 def _argparse():
     """ Get command line arguments.
 
@@ -46,6 +47,15 @@ def _argparse():
     parser = argparse.ArgumentParser(prog='processing_status')
 
     parser.add_argument('file_pattern', help='String file pattern to glob')
+
+    parser.add_argument("-s", "--subject", help="Regular expression subject acrostic",
+                        default='sub-imove[0-9][0-9][0-9][0-9]')
+
+    parser.add_argument("-ss", "--session", help="Regular expression session ",
+                        default='ses-[0-9]')
+
+    parser.add_argument("-a", "--acrostic_list", help="Acrostic List",
+                        default=get_acrostic_study_list_full_filename())
 
     parser.add_argument("-r", "--recursive", help="Recursive boolean flag for glob",
                         action="store_true",
@@ -61,9 +71,9 @@ def main():
     files = glob.glob(in_args.file_pattern,
                       recursive=in_args.recursive)
 
-    print(get_acrostic_study_list_full_filename())
+    print(in_args.acrostic_list)
 
-    get_acrostic_list()
+    df_acrostic_list = get_acrostic_list(in_args.acrostic_list)
 
     for ii,ii_files in enumerate(files):
         print(f'{ii}) {ii_files}')
