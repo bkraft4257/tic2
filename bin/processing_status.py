@@ -20,12 +20,8 @@ pandas.set_option('display.max_colwidth',200)
 # TODO Study Choices should be a common variable that is imported.
 
 
-def get_active_study_bids_path():
-    return os.getenv('ACTIVE_BIDS_PATH')
-
-
-ACROSTIC_LIST_FILENAME = 'acrostic.list'
-ACTIVE_BIDS_PATH = get_active_study_bids_path()
+ACROSTIC_LIST_FILENAME = 'acrostic.csv'
+ACTIVE_BIDS_PATH = os.getenv('ACTIVE_BIDS_PATH')
 
 
 def get_acrostic_study_list_full_filename(active_study_bids_path=ACTIVE_BIDS_PATH,
@@ -35,8 +31,11 @@ def get_acrostic_study_list_full_filename(active_study_bids_path=ACTIVE_BIDS_PAT
 
 
 def get_acrostic_list(acrostic_list_filename = get_acrostic_study_list_full_filename()):
-    df_acrostic_list = pandas.read_csv(acrostic_list_filename, header=None)
-    df_acrostic_list.columns = ['subject']
+    df_acrostic_list = (pandas.read_csv(acrostic_list_filename)
+                        .rename(columns={'participant_id':'subject'})
+                        .set_index('subject')
+                        )
+
     return df_acrostic_list
 
 
@@ -66,6 +65,11 @@ def _argparse():
 
     parser.add_argument("-ss", "--session", help="Regular expression session ",
                         default='ses-[0-9]')
+
+    parser.add_argument("--acrostic_session",
+                        help="Acrostic Session",
+                        default=1
+                        )
 
     parser.add_argument("-a", "--acrostic_list", help="Acrostic List",
                         default=get_acrostic_study_list_full_filename())
