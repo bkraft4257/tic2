@@ -149,9 +149,11 @@ def main():
     df_files_2 = df_files.set_index(['subject', 'session']).unstack()
     df_files_2.columns = [ f'ses-{x+1}' for x in range(len(df_files_2.columns))]
 
-    df_full_list = df_acrostic_list.reset_index().merge(df_files_2.reset_index(), how='left', on='subject')
-
-    print(df_full_list)
+    df_full_list = (df_acrostic_list
+                    .reset_index()
+                    .merge(df_files_2.reset_index(), how='left', on='subject')
+                    .fillna(False)
+                    )
 
     display(df_full_list.pipe(_clean_nan, nan_option=in_args.nan),
             subject_only=in_args.subject_only,
