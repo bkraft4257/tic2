@@ -154,7 +154,7 @@ def main():
                     .fillna(False)
                     )
 
-    print(df_full_list)
+    print(df_full_list.to_string())
 
     # display(df_full_list.pipe(_clean_nan, nan_option=in_args.nan),
     #         subject_only=in_args.subject_only,
