@@ -100,7 +100,7 @@ def main():
         _, subject_value = get_key_value_from_string(ii_file, in_args.subject)
         _, session_value = get_key_value_from_string(ii_file, in_args.session)
 
-        print(ii_file)
+        print(ii_file, subject_value, session_value)
 
         ii_df_files.append(pandas.DataFrame({'file': ii_file,
                                              'subject': subject_value,
