@@ -154,6 +154,7 @@ def main():
                     .fillna(False)
                     )
 
+# https://stackoverflow.com/questions/36688022/removing-header-column-from-pandas-dataframe
     for index, row in df_full_list.iterrows():
         print(row.to_string()) # re.sub("\s+", ",", df_full_list.to_string().strip()))
 
