@@ -2,9 +2,12 @@
 # -*- coding: utf-8 -*-
 
 """
-"""
+Writes a bash script to TIC_INIT_PATH.  This function is often called with an alias that calls this function
+and then sources the bash script.  For example,
 
-__version__ = "0.0.0"
+alias swh='study_switcher.py -s hfpef; source $TIC_INIT_PATH/tic_study_switcher.sh'
+
+"""
 
 import os
 import argparse
@@ -49,6 +52,7 @@ def _write_study_switcher_script(active_study,
         file.write(f'export ACTIVE_BIDS_CONFIG_FILE=${active_study}_BIDS_CONFIG_FILE\n')
         file.write(f'export ACTIVE_HEUDICONV_PROTOCOL=${active_study}_HEUDICONV_PROTOCOL\n')
         file.write(f'export ACTIVE_CLEAN_BIDS=${active_study}_CLEAN_BIDS\n')
+        file.write(f'export ACTIVE_SINGULARITY_USER_BIND_PATHS=${active_study}_SINGULARITY_USER_BIND_PATHS\n')
 
         # SUBJECTS_DIR for FreeSurfer
         file.write(f'export ACTIVE_SUBJECTS_DIR=${active_study}_SUBJECTS_DIR\n')

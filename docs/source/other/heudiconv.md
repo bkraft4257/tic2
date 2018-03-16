@@ -3,11 +3,47 @@
 This page describes how to convert a set of DICOM images to NIFTI files in BIDS format using the NiPy tool heudiconv.  
 [https://github.com/nipy/heudiconv](https://github.com/nipy/heudiconv)
 
-# Quick Steps if you already have your hdc_study_protocol.py rules
+Using heudiconv via the singularity image is easy but the commands on aging1a/2a are long and cumbersome to type. We have
+created the script hdc.sh to simplify the process. While script provides some helper text to the user the core of the script is
 
-    $ hdc_convert -d '{subject}/*/*/*.DCM' -f ./hdc_study_protocol.py -s <subject_id> -ss 1 -o <output_dir>
+```
+    cmd="/usr/local/bin/singularity run     \
+            -w                              \
+            -B /cenc                        \
+            -B /gandg                       \
+            -B /bkraft1                     \
+            $HDC_SINGULARITY_IMAGE          \
+            -c dcm2niix                     \
+            -b                              \
+            --minmeta                       \
+            -f $ACTIVE_HEUDICONV_PROTOCOL   \
+            -o $ACTIVE_BIDS_PATH            \
+            -d $ACTIVE_HEUDICONV_PATTERN    \
+            $@"
+
+```
+
+This command runs the heudiconv singularity image while mounting our common drives
+
+
+
+
+
+# Quick Steps if you already have your HDC protocol defined for the study
+
+    $ hdc_convert -d '{subject}/*/*/*.DCM' -f <hdc_study_protocol> -s <subject_id> -ss 1 -o <output_dir>
 
     You could simplify this even further by creating an alias for each study
+
+# Quick Steps for scanning DICOM files
+
+    $ hdc_scan -d '{subject}/*/*/*.DCM' -f <hdc_study_protocol> -s <subject_id> -ss 1 -o <output_dir>
+
+    $ cd <output_dir>/.heudiconv/<subject_dir>/info/
+    
+    $ hdc_add_header dicominfo_ses-1.tsv -o dicominfo_ses-1.csv -v
+
+
 
 # Quick Steps
 
@@ -66,6 +102,7 @@ alias hdc_scan='/usr/local/bin/singularity run -w -B /cenc -B /gandg -B /bkraft1
 
 Notice that this alias fills in all the information except the parameters -d, -s, -ss, and -o.   These parameters will vary for each conversion and can not be specified before hand. A copy of the HDC help is at the bottom of this WIKI page.  I have copied the four parameters here for convenience.
 
+<pre>Text
   -d DICOM_DIR_TEMPLATE, --dicom_dir_template DICOM_DIR_TEMPLATE
                         location of dicomdir that can be indexed with subject
                         id {subject} and session {session}. Tarballs (can be
@@ -85,6 +122,7 @@ Notice that this alias fills in all the information except the parameters -d, -s
                         output directory for conversion setup (for further
                         customization and future reference. This directory
                         will refer to non-anonymized subject IDs
+<pre>Text
 
 As an example of how to scan a set of DICOM images exported from the PACS I will look at a specific example.  I have exported a set of DICOM images from the study with the Patient_Name of clbp01 and Patient_Id of clbp01.  When this exported from the PACS using a DICOM Receiver that Ricardo has setup  the DICOM images will be written to the specified directory of the DICOM Receiver in the directory <Patient_Name>_<Patient_ID>.  In my case, the data was written to the directory /bkraft1/dcm/incoming in the directory clbp01_clbp01.
 

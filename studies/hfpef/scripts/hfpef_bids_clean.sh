@@ -32,9 +32,11 @@ start_dir=$PWD
 subject_value=$1
 session_value=$2
 
+
+
 full_subject_session_value=sub-${subject_value}_ses-${session_value}
 
-session_dir=${start_dir}/sub-${subject_value}/ses-${session_value}
+session_dir=${$HFPEF_BIDS_PATH}/sub-${subject_value}/ses-${session_value}
 
 echo 
 echo "================================================================================="
@@ -206,7 +208,7 @@ echo "--------------------------------------------------------------------------
 grep -H "IntendedFor" *.json
 echo
 
-cd $start_dir 
+cd $HFPEF_BIDS_PATH
 
 #--- Reorient all images to match FSL orientation -------------------------------------------------
 echo "Reorienting all *.gz files with fslreorient2std"
@@ -233,5 +235,6 @@ echo "--------------------------------------------------------------------------
 find $session_dir -name "*.[0-9]*"
 
 
-
 echo " "
+
+cd $start_dir
