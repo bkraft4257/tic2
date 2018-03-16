@@ -4,6 +4,7 @@ import glob
 import argparse
 import os
 
+
 def find_files( in_dir=os.getcwd(), pattern='*/*.2-9.*' ):
  
     file_search_pattern = os.path.abspath(os.path.join(in_dir, pattern ))
@@ -18,7 +19,6 @@ def find_files( in_dir=os.getcwd(), pattern='*/*.2-9.*' ):
     return
 
 
-                           
 if __name__ == '__main__':
  
     # Parsing Arguments

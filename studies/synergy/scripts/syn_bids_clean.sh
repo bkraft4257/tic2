@@ -30,7 +30,7 @@ session_value=$2
 
 full_subject_session_value=sub-${subject_value}_ses-${session_value}
 
-session_dir=${start_dir}/sub-${subject_value}/ses-${session_value}
+session_dir=${SYNERGY_BIDS_PATH}/sub-${subject_value}/ses-${session_value}
 
 echo 
 echo "================================================================================="
@@ -39,24 +39,17 @@ echo "session_value = " $subject_value
 echo "subject_value = " $session_value
 echo
 echo "session_dir   = " $session_dir
-
-echo
-echo "List images collected and stored as DICOM files"
-echo "------------------------------------------------------------------------------------------------"-
-
-hdc_bids_path=$SYNERGY_PATH/bids.heudiconv/${subject_value}/ses-${session_value}/info/
-
-$HDC_PATH/hdc_add_header.py -v ${hdc_bids_path}/dicominfo_ses-${session_value}.tsv \
-                            -o ${hdc_bids_path}/dicominfo_ses-${session_value}.csv
-
-echo
-echo "List images converted by heudiconv (HDC)"
-echo "-------------------------------------------------------------------------------------------------"
-echo
-cat -n ${hdc_bids_path}/${subject_value}_ses-${session_value}.auto.txt
 echo
 echo
 
+#echo
+#echo "List images collected and stored as DICOM files"
+#echo "------------------------------------------------------------------------------------------------"-
+
+$TIC_PATH/bin/hdc_look.py -s $subject_value -ss $session_value -f dicominfo edit
+
+echo
+echo
 
 #--- Remove .1. from filenames and enable write permission --------------------------------------------
 find ${session_dir} \( -name "*.gz" -or -name "*.json" \)| xargs chmod +w 
@@ -112,7 +105,7 @@ echo "--------------------------------------------------------------------------
 grep -H "IntendedFor" *.json
 echo
 
-cd $start_dir 
+cd $SYNERGY_BIDS_PATH
 
 #--- Reorient all images to match FSL orientation -------------------------------------------------
 echo "Reorienting all *.gz files with fslreorient2std"
@@ -143,3 +136,5 @@ find $session_dir -name "*.[0-9]*"
 
 
 echo " "
+
+cd $start_dir

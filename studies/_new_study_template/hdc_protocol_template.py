@@ -73,21 +73,96 @@ def infotodict(seqinfo):
     | 7-Field_mapping 4X4X4 A>>P  | *fm2d2r       |   64 |   64 |   35 |    1 | 0.488 |   7.38 |               False |
 
 
-    """
+    key-value tags
+    --------------
 
-    # Create a key for each DICOM file to convert.  The key tells HDC where and how to name the converted DICOM file.
-    # The naming convention is very strict. The rules are established by BIDS  http://bids.neuroimaging.io/
-    #
-    #  anat, func, fmap are established directories where the data can reside.
-    #
-    #  {subject} is the variable which will be replaced by the subject's acrostic
-    #
-    #  {acq} is the acquisition value
-    #
-    #  {item:02d} is the item counter padded by two zeros.  This allows HDC to create a unique name if it finds
-    #             multiple images that meet your criteria.  We recommend that only one DICOM image should match your
-    #             criteria for data conversion. However, this can not happen if the scan is repeated.
-    #
+    BIDS uses a key-value pairs in the naming convention.  The sub-<participant_label> is a required field. It is used
+    to create a subject specific directory in the BIDS directory.
+
+    It must also be included in each and every filename. The ses-<session_label> is a bug the <session_label> includes
+    the key.  This means that {session} translates to
+    ses-<session-label>.
+
+    Only certain keys are associated with each imaging modality.
+    key-value pairs are in [] are optional.  If a key-value pair is not in [] then it must be included in the name.
+    For example every filename must include sub-<participant_label> to be BIDS compliant.  The session key-value
+    is optional. However, if you include session key-value in the path then you must also include it in the
+    filename.
+
+    Another example of required and optional key-value pairs is in the FUNC images.  Here is the key-value
+    pairs taken from the BIDS documentation for images in the func directory.
+
+     _task-<task_label>[_acq-<label>][_rec-<label>][_run-<index>][_echo-<index>]_bold
+
+     You can see that task-<task_label> is not in [] so it is required. While _acq-<acq_label> is in [] and is
+     therefore optional.
+
+     Below I have included some notes for the key-value pairs for the different imaging modalities and BIDS
+     sub-directories.
+
+
+    common key-value tags:
+
+        sub-<participant_label>/[ses-<session_label>/]/<dir>/sub-<participant_label>[_ses-<session_label>]
+
+        <dir> = anat, func, fmap, dwi, swi
+
+        {participant_label} is the variable which will be replaced by the subject's acrostic
+
+        {session_label} is the variable which will be replaced by the session value key.  {session} is inconsistent
+                        and is replaced by the key and it's value. An example, should help clarify this inconsistency
+                        {session} is replaced by ses-{session_id}.
+
+        {acq} is the acquisition value
+
+        {item:01d} is the item counter padded by two zeros.  This allows HDC to create a unique name if it finds
+                  multiple images that meet your criteria.  We recommend that only one DICOM image should match your
+                  criteria for data conversion. However, this can not happen if the scan is repeated.
+
+    anat key-value tags:
+
+        [_acq-<label>][_ce-<label>][_rec-<label>][_run-<index>]<modality_label>.nii[.gz]
+        [_acq-<label>][_ce-<label>][_rec-<label>][_run-<index>][_mod-<label>]_defacemask.nii[.gz]
+
+
+        Imaging Type/Name,       modality_label
+        T1 weighted              T1w
+        T2 weighted              T2w
+        T1 Rho map               T1rho
+        T1 map                   T1map
+        T2 map                   T2map
+        T2*                      T2star
+        FLAIR                    FLAIR
+        FLASH                    FLASH
+        Proton density           PD
+        Proton density map       PDmap
+        Combined PD/T2           PDT2
+        Inplane T1               inplaneT1
+        Inplane T2               inplaneT2
+        Angiography              angio
+
+
+
+    func/ _task-<task_label>[_acq-<label>][_rec-<label>][_run-<index>][_echo-<index>]_bold
+
+    fmap/  [_acq-<label>][_run-<run_index>]_phasediff
+           [_acq-<label>][_run-<run_index>]_magnitude1
+
+           [_acq-<label>]_dir-<dir_label>[_run-<run_index>]_epi
+
+    dwi/   [_acq-<label>][_run-<index>]_dwi
+           [_acq-<label>][_run-<index>]_sbref
+
+    swi/  [_acq-<label>][_rec-<label>]_part-<phase|mag>[_coil-<index>][_echo-<index>][_run-<index>]_GRE.nii[.gz]
+
+        https://docs.google.com/document/d/1kyw9mGgacNqeMbp4xZet3RnDhcMmf4_BmRgKaOkO2Sc/edit
+
+
+    asl/  _task-<task_label>[_acq-<label>][_rec-<label>][_run-<index>]_asl.nii[.gz]
+
+        https://docs.google.com/document/d/15tnn5F10KpgHypaQJNNGiNKsni9035GtDqJzWqkkP6c/edit#heading=h.mqkmyp254xh6
+
+    """
 
     t1 = create_key('anat/sub-{subject}_run-{item:02d}_T1w')
     rest_fmri_ap = create_key('func/sub-{subject}_dir-ap_task-rest_run-{item:02d}_bold')

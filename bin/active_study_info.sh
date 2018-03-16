@@ -1,0 +1,30 @@
+#!/usr/bin/env bash
+
+# List the ACTIVE study setup
+
+echo
+echo $ACTIVE_STUDY
+echo
+echo 'ACTIVE_SCRIPTS_PATH                = ' $ACTIVE_SCRIPTS_PATH
+echo 'ACTIVE_PATH                        = ' $ACTIVE_PATH
+echo 'ACTIVE_BIDS_PATH                   = ' $ACTIVE_BIDS_PATH
+echo 'ACTIVE_HEUDICONV_PROTOCOL          = ' $ACTIVE_HEUDICONV_PROTOCOL
+echo
+echo 'ACTIVE_BIDS_CONFIG_FILE            = ' $ACTIVE_BIDS_CONFIG_FILE
+echo 'ACTIVE_CLEAN_BIDS                  = ' $ACTIVE_CLEAN_BIDS
+echo 'ACTIVE_SINGULARITY_USER_BIND_PATHS = ' $ACTIVE_CLEAN_BIDS
+
+echo
+echo 'ACTIVE_IMAGE_ANALYSIS_PATH         = ' $ACTIVE_IMAGE_ANALYSIS_PATH
+echo 'ACTIVE_IMAGE_PROCESSING_PATH       = ' $ACTIVE_IMAGE_PROCESSING_PATH
+echo 'ACTIVE_IMAGE_PROCESSING_LOG_PATH   = ' $ACTIVE_SINGULARITY_USER_BIND_PATHS
+echo
+echo 'ACTIVE_MRIQC_PATH                  = ' $ACTIVE_MRIQC_PATH
+echo
+echo 'ACTIVE_ACT_PATH                    = ' $ACTIVE_ACT_PATH
+echo 'ACTIVE_FMRIPREP_PATH               = ' $ACTIVE_FMRIPREP_PATH
+echo 'ACTIVE_NETPREP_PATH                = ' $ACTIVE_NETPREP_PATH
+echo
+echo 'SUBJECTS_DIR                       = ' $SUBJECTS_DIR
+echo 'ACTIVE_SUBJECTS_DIR                = ' $ACTIVE_SUBJECTS_DIR
+echo
