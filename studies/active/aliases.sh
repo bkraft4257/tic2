@@ -9,6 +9,7 @@ alias cdia='cd $ACTIVE_IMAGE_ANALYSIS_PATH; lsreport_function'
 alias cdip='cd $ACTIVE_IMAGE_PROCESSING_PATH; lsreport_function'
 alias cdipl='cd $ACTIVE_IMAGE_PROCESSING_PATH/logs; lsreport_function'
 alias cdqc='cd $ACTIVE_MRIQC_PATH; lsreport_function'
+alias cdqcl='cd $ACTIVE_MRIQC_PATH/logs; lsreport_function'
 alias cdass='cd $ACTIVE_SCRIPTS_PATH; lsreport_function'
 
 alias asp='echo; echo $ACTIVE_PATH; echo'
