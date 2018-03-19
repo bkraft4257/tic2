@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-echo ' ' | tee -a $log_file
+echo ' ' | tee $log_file
 echo 'datetime.now()         = ' $(date) | tee -a $log_file
 echo 'active study           = ' $ACTIVE_STUDY | tee -a $log_file
 echo 'bids app               = ' $BIDS_APP | tee -a $log_file

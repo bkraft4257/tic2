@@ -1,6 +1,6 @@
 #!/bin/bash
 
-BIDS_APP='mriqc.sh'
+BIDS_APP='mriqc'
 ACTIVE_APP_WORKING_PATH=$ACTIVE_MRIQC_PATH/_working
 ACTIVE_IMAGE_PROCESSING_LOG_PATH=$ACTIVE_MRIQC_PATH/logs
 ACTIVE_APP_OUTPUT_PATH=$ACTIVE_MRIQC_PATH
@@ -14,7 +14,7 @@ parameters=${@}
 # create the output and work directories parallel to BIDS hierarchy, not inside it
 
 datetime_stamp=`date '+d%Y%m%d_%H:%M:%S'`
-log_file=${ACTIVE_IMAGE_PROCESSING_LOG_PATH}/${study_prefix}_${app}_${datetime_stamp}.log
+log_file=${ACTIVE_IMAGE_PROCESSING_LOG_PATH}/${study_prefix}_${BIDS_APP}_${datetime_stamp}.log
 
 source $TIC_PATH/studies/active/scripts/bids_app_status.sh
 
@@ -59,7 +59,7 @@ act_full_command=$SINGULARITY_COMMAND \
                  $ACTIVE_BIDS_PATH \
                  $ACTIVE_APP_OUTPUT_PATH \
                  --work-dir $ACTIVE_APP_WORKING_PATH \
-                 participant ${@} > $log_file 2>&1 &
+                 participant ${@} >> $log_file 2>&1 &
 
 
 
