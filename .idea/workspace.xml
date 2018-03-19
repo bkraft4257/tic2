@@ -104,8 +104,8 @@
       <file leaf-file-name="mriqc.sh" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/bin/mriqc.sh">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="492">
-              <caret line="31" column="0" lean-forward="true" selection-start-line="19" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
+            <state relative-caret-position="34">
+              <caret line="2" column="18" lean-forward="false" selection-start-line="2" selection-start-column="18" selection-end-line="2" selection-end-column="18" />
               <folding />
             </state>
           </provider>
@@ -114,8 +114,8 @@
       <file leaf-file-name="fmriprep.sh" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/bin/fmriprep.sh">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="292">
-              <caret line="20" column="0" lean-forward="true" selection-start-line="19" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
+            <state relative-caret-position="122">
+              <caret line="10" column="0" lean-forward="false" selection-start-line="10" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -144,7 +144,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>02d</find>
       <find>sub-{subject}_</find>
       <find>{session}_{session}</find>
       <find>run-{item:01d}_</find>
@@ -174,6 +173,7 @@
       <find>sbref</find>
       <find>rest_fmri_</find>
       <find>fmap</find>
+      <find>app</find>
     </findStrings>
     <replaceStrings>
       <replace>01d</replace>
@@ -485,13 +485,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1517948604886</updated>
-    </task>
-    <task id="LOCAL-00251" summary="Added file to check processing status.">
-      <created>1521142871026</created>
-      <option name="number" value="00251" />
-      <option name="presentableId" value="LOCAL-00251" />
-      <option name="project" value="LOCAL" />
-      <updated>1521142871026</updated>
     </task>
     <task id="LOCAL-00252" summary="Added file to check processing status.">
       <created>1521142892257</created>
@@ -829,7 +822,14 @@
       <option name="project" value="LOCAL" />
       <updated>1521486939014</updated>
     </task>
-    <option name="localTasksCounter" value="300" />
+    <task id="LOCAL-00300" summary="Updated mriqc">
+      <created>1521487221090</created>
+      <option name="number" value="00300" />
+      <option name="presentableId" value="LOCAL-00300" />
+      <option name="project" value="LOCAL" />
+      <updated>1521487221090</updated>
+    </task>
+    <option name="localTasksCounter" value="301" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -1231,6 +1231,14 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/bin/fmriprep.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="122">
+          <caret line="10" column="0" lean-forward="false" selection-start-line="10" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/studies/active/scripts/bids_app_status.sh">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
@@ -1239,18 +1247,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/bin/fmriprep.sh">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="292">
-          <caret line="20" column="0" lean-forward="true" selection-start-line="19" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/bin/mriqc.sh">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="492">
-          <caret line="31" column="0" lean-forward="true" selection-start-line="19" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
+        <state relative-caret-position="34">
+          <caret line="2" column="18" lean-forward="false" selection-start-line="2" selection-start-column="18" selection-end-line="2" selection-end-column="18" />
           <folding />
         </state>
       </provider>

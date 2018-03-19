@@ -9,6 +9,7 @@ APP_SINGULARITY_IMAGE=$MRIQC_SINGULARITY_IMAGE
 # Convert to lower case
 app=mriqc
 study_prefix=$(echo "${ACTIVE_STUDY,,}")
+parameters=${@}
 
 # create the output and work directories parallel to BIDS hierarchy, not inside it
 
