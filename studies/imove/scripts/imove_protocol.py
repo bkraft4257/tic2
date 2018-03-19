@@ -206,31 +206,27 @@ def infotodict(seqinfo):
     t2 = create_key('sub-{subject}/{session}/anat/sub-{subject}_{session}_T2w')
 
     # BOLD Resting State with TOPUP and Fieldmap
-    rest_fmri_ap_fmap = create_key('sub-{subject}/{session}/func/sub-{subject}_{session}_task-rest_acq-epi_rec-fmap_bold')
     rest_fmri_ap_topup = create_key('sub-{subject}/{session}/func/sub-{subject}_{session}_task-rest_acq-epi_rec-topup_bold')
 
     rest_topup_ap = create_key('sub-{subject}/{session}/fmap/sub-{subject}_{session}_acq-epse_dir-ap_epi')
     rest_topup_pa = create_key('sub-{subject}/{session}/fmap/sub-{subject}_{session}_acq-epse_dir-pa_epi')
 
-    fmap_rest_magnitude1 = create_key('sub-{subject}/{session}/fmap/sub-{subject}_{session}_acq-gre_magnitude1')
-    fmap_rest_phasediff = create_key('sub-{subject}/{session}/fmap/sub-{subject}_{session}_acq-gre_phasediff')
-
     # Multiband EPI Resting State with TOPUP
     mbep2d_topup_lr = create_key('sub-{subject}/{session}/fmap/sub-{subject}_{session}_acq-mbepi_dir-lr_epi')
-    mbep2d_topup_lr_sbref = create_key('sub-{subject}/{session}/fmap/sub-{subject}_{session}_acq-mbepi_dir-lr_sbref')
+    mbep2d_topup_lr_sbref = create_key('sub-{subject}/{session}/sbref/sub-{subject}_{session}_acq-mbepi_dir-lr_sbref')
 
     mbep2d_topup_rl = create_key('sub-{subject}/{session}/fmap/sub-{subject}_{session}_acq-mbepi_dir-rl_epi')
-    mbep2d_topup_rl_sbref = create_key('sub-{subject}/{session}/fmap/sub-{subject}_{session}_acq-mbepi_dir-rl_sbref')
+    mbep2d_topup_rl_sbref = create_key('sub-{subject}/{session}/sbref/sub-{subject}_{session}_acq-mbepi_dir-rl_sbref')
 
     mbep2d_bold = create_key('sub-{subject}/{session}/func/sub-{subject}_{session}_task-rest_acq-mbepi_bold')
-    mbep2d_bold_sbref = create_key('sub-{subject}/{session}/func/sub-{subject}_{session}_task-rest_acq-mbepi_sbref')
+    mbep2d_bold_sbref = create_key('sub-{subject}/{session}/sbref/sub-{subject}_{session}_task-rest_acq-mbepi_sbref')
 
     # NODDI DTI
     noddi_dti_ap = create_key('sub-{subject}/{session}/dwi/sub-{subject}_{session}_acq-apNoddi_run-{item:01d}_dwi')
-    noddi_dti_ap_sbref = create_key('sub-{subject}/{session}/dwi/sub-{subject}_{session}_acq-apNoddi_run-{item:01d}_sbref')
+    noddi_dti_ap_sbref = create_key('sub-{subject}/{session}/sbref/sub-{subject}_{session}_acq-apNoddi_run-{item:01d}_sbref')
 
     noddi_dti_pa_topup = create_key('sub-{subject}/{session}/dwi/sub-{subject}_{session}_acq-paNoddi_run-{item:01d}_dwi')
-    noddi_dti_pa_topup_sbref = create_key('sub-{subject}/{session}/dwi/sub-{subject}_{session}_acq-paNoddi_run-{item:01d}_sbref')
+    noddi_dti_pa_topup_sbref = create_key('sub-{subject}/{session}/sbref/sub-{subject}_{session}_acq-paNoddi_run-{item:01d}_sbref')
 
     # Quantitative Susceptibility Mapping
     qsm_magnitude = create_key('sub-{subject}/{session}/swi/sub-{subject}_{session}_part-mag_GRE')
@@ -459,13 +455,9 @@ def infotodict(seqinfo):
         if (('pcasl_wfu_4_0C R>>L EYES OPEN' in s.series_description) and
                 ('epfid2d1_56' in s.sequence_name) and
                 (s.dim3 == 43) and
-                (s.dim4 == 81)):
-                info[pcasl_rl].append([s.series_id])
+                (s.dim4 > 20)):
 
-        if (('pcasl_wfu_4_0C R>>L EYES OPEN' in s.series_description) and
-                ('epfid2d1_56' in s.sequence_name) and
-                (s.dim3 == 43) and
-                (s.dim4 == 81)):
+                info[pcasl_rl].append([s.series_id])
                 info[pcasl_rl_topup].append([s.series_id])
 
         if (('pcasl_wfu_4_0C L>>R (COPY SLICES FROM R>>L)' in s.series_description) and
