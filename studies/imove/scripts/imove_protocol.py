@@ -291,12 +291,6 @@ def infotodict(seqinfo):
                 ('epfid2d1_64' in s.sequence_name) and
                 (s.dim3 == 35) and
                 (s.dim4 == 190)):
-                info[rest_fmri_ap_fmap].append([s.series_id])
-
-        if (('BOLD_resting 4X4X4 A>>P' in s.series_description) and
-                ('epfid2d1_64' in s.sequence_name) and
-                (s.dim3 == 35) and
-                (s.dim4 == 190)):
                 info[rest_fmri_ap_topup].append([s.series_id])
 
         if (('rest_topup_A>>P' in s.series_description) and
