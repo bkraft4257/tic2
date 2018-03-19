@@ -95,23 +95,8 @@ else
 fi
 
 #--- Update JSON files to include Echo1, Echo2, and IntendedFor information -------------------------------------
-# Add Echo times for phase difference map
-
-fmap_phasediff=${full_subject_session_value}_acq-gre_phasediff.json
-
-echo
-echo "sed EchoTime " $fmap_phasedif
-echo "-----------------------------------------------------------------------"
-sed -i 's/"EchoTime": 0.00738,/"EchoTime1": 0.00492,\n  "EchoTime2": 0.00738,/' $fmap_phasediff
-grep -H "EchoTime" $fmap_phasediff
 
 #--- Update JSON files to include IntendedFor information -------------------------------------
-
-sed -i 's%"AcquisitionNumber": 1,%"IntendedFor": [ "ses-__session_value__/func/sub-__subject_value___ses-__session_value___task-rest_acq-epi_rec-fmap_bold.nii.gz" ],\n  "AcquisitionNumber": 1,%' \
-     $fmap_phasediff
-
-grep -H "AcquisitionNumber" $fmap_phasediff
-
 
 rest_topup_ap_json=${full_subject_session_value}_acq-epse_dir-ap_epi.json
 rest_topup_pa_json=${full_subject_session_value}_acq-epse_dir-pa_epi.json

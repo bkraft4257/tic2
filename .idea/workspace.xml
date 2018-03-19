@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="6f3e13b3-cd58-4c4d-98f6-1a68f8358bfb" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/studies/imove/scripts/imove_protocol.py" afterPath="$PROJECT_DIR$/studies/imove/scripts/imove_protocol.py" />
+      <change beforePath="$PROJECT_DIR$/studies/imove/scripts/imove_clean_bids.sh" afterPath="$PROJECT_DIR$/studies/imove/scripts/imove_clean_bids.sh" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -113,11 +113,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="imove_protocol.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="imove_protocol.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/studies/imove/scripts/imove_protocol.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="139">
               <caret line="288" column="0" lean-forward="true" selection-start-line="288" selection-start-column="0" selection-end-line="288" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="imove_clean_bids.sh" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/studies/imove/scripts/imove_clean_bids.sh">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="85">
+              <caret line="5" column="18" lean-forward="false" selection-start-line="5" selection-start-column="14" selection-end-line="5" selection-end-column="18" />
               <folding />
             </state>
           </provider>
@@ -164,6 +174,8 @@
       <find>display_mode</find>
       <find>_sbref</find>
       <find>sbref</find>
+      <find>rest_fmri_</find>
+      <find>fmap</find>
     </findStrings>
     <replaceStrings>
       <replace>01d</replace>
@@ -192,7 +204,6 @@
         <option value="$PROJECT_DIR$/docs/source/index.rst" />
         <option value="$PROJECT_DIR$/docs/source/other/studies.md" />
         <option value="$PROJECT_DIR$/docs/source/conf.py" />
-        <option value="$PROJECT_DIR$/studies/imove/scripts/imove_clean_bids.sh" />
         <option value="$PROJECT_DIR$/bin/fmriprep.sh" />
         <option value="$PROJECT_DIR$/studies/active/scripts/bids_app_status.sh" />
         <option value="$PROJECT_DIR$/docs/source/other/quick_reference.md" />
@@ -240,6 +251,7 @@
         <option value="$PROJECT_DIR$/tests/test_plot_overlay.py" />
         <option value="$PROJECT_DIR$/bin/clean_bids.sh" />
         <option value="$PROJECT_DIR$/studies/imove/scripts/imove_protocol.py" />
+        <option value="$PROJECT_DIR$/studies/imove/scripts/imove_clean_bids.sh" />
       </list>
     </option>
   </component>
@@ -463,13 +475,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1517948604886</updated>
-    </task>
-    <task id="LOCAL-00247" summary="Added file to check processing status.">
-      <created>1521142675798</created>
-      <option name="number" value="00247" />
-      <option name="presentableId" value="LOCAL-00247" />
-      <option name="project" value="LOCAL" />
-      <updated>1521142675798</updated>
     </task>
     <task id="LOCAL-00248" summary="Added file to check processing status.">
       <created>1521142710783</created>
@@ -807,7 +812,14 @@
       <option name="project" value="LOCAL" />
       <updated>1521481119930</updated>
     </task>
-    <option name="localTasksCounter" value="296" />
+    <task id="LOCAL-00296" summary="Updated imove_protocol. &#10;&#10;1) sbref scans are written to their own subdirectory.  .bidsignore removes them from bids-validator.&#10;2) remove magnitude and phasediff from fmap.  These are no longer being acquired.">
+      <created>1521481260422</created>
+      <option name="number" value="00296" />
+      <option name="presentableId" value="LOCAL-00296" />
+      <option name="project" value="LOCAL" />
+      <updated>1521481260422</updated>
+    </task>
+    <option name="localTasksCounter" value="297" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -942,7 +954,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/tests/overlay_z_011.png" />
     <entry file="file://$PROJECT_DIR$/tests/overlay_z_010.png" />
     <entry file="file://$PROJECT_DIR$/tests/overlay_z_008.png" />
     <entry file="file://$PROJECT_DIR$/tests/overlay_z_004.png" />
@@ -1145,6 +1156,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="139">
           <caret line="288" column="0" lean-forward="true" selection-start-line="288" selection-start-column="0" selection-end-line="288" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/studies/imove/scripts/imove_clean_bids.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="18" lean-forward="false" selection-start-line="5" selection-start-column="14" selection-end-line="5" selection-end-column="18" />
           <folding />
         </state>
       </provider>
