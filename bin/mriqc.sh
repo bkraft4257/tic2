@@ -47,10 +47,11 @@ source $TIC_PATH/studies/active/scripts/bids_app_status.sh
 
 
 # run it in the background so that it continues if user logs out
-act_full_command=$SINGULARITY_COMMAND \
+full_command=$SINGULARITY_COMMAND \
                  $APP_SINGULARITY_IMAGE \
                  $ACTIVE_BIDS_PATH \
                  $ACTIVE_APP_OUTPUT_PATH \
+                  --work-dir $ACTIVE_APP_WORKING_PATH \
                  participant ${@} &> $log_file
 
 
@@ -59,7 +60,7 @@ act_full_command=$SINGULARITY_COMMAND \
                  $ACTIVE_BIDS_PATH \
                  $ACTIVE_APP_OUTPUT_PATH \
                  --work-dir $ACTIVE_APP_WORKING_PATH \
-                 participant ${@} >> $log_file 2>&1 &
+                 participant ${@} &> $log_file 2>&1 &
 
 
 
