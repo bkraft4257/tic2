@@ -1,13 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="6f3e13b3-cd58-4c4d-98f6-1a68f8358bfb" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/bin/plot_overlay.py" />
-      <change beforePath="$PROJECT_DIR$/.idea/dictionaries/bkraft.xml" afterPath="$PROJECT_DIR$/.idea/dictionaries/bkraft.xml" />
+    <list default="true" id="6f3e13b3-cd58-4c4d-98f6-1a68f8358bfb" name="Default" comment="Refactored plot_overlay.py so it is in the bin directory as a &#10;command line function.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/bin/clean_bids.sh" afterPath="$PROJECT_DIR$/bin/clean_bids.sh" />
-      <change beforePath="$PROJECT_DIR$/tests/test_plot_overlay.py" afterPath="$PROJECT_DIR$/tests/test_plot_overlay.py" />
-      <change beforePath="$PROJECT_DIR$/tic_core/plot_overlay.py" afterPath="$PROJECT_DIR$/tic_core/plot_overlay.py" />
+      <change beforePath="$PROJECT_DIR$/studies/imove/scripts/imove_protocol.py" afterPath="$PROJECT_DIR$/studies/imove/scripts/imove_protocol.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -107,11 +103,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="clean_bids.sh" pinned="false" current-in-tab="true">
+      <file leaf-file-name="clean_bids.sh" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/bin/clean_bids.sh">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="306">
               <caret line="18" column="16" lean-forward="false" selection-start-line="18" selection-start-column="16" selection-end-line="18" selection-end-column="16" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="imove_protocol.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/studies/imove/scripts/imove_protocol.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="793">
+              <caret line="401" column="40" lean-forward="true" selection-start-line="401" selection-start-column="40" selection-end-line="401" selection-end-column="40" />
               <folding />
             </state>
           </provider>
@@ -156,6 +162,8 @@
       <find>display</find>
       <find>verbose</find>
       <find>display_mode</find>
+      <find>_sbref</find>
+      <find>sbref</find>
     </findStrings>
     <replaceStrings>
       <replace>01d</replace>
@@ -181,7 +189,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/init/tic_initial_setup.py" />
         <option value="$PROJECT_DIR$/docs/source/index.rst" />
         <option value="$PROJECT_DIR$/docs/source/other/studies.md" />
         <option value="$PROJECT_DIR$/docs/source/conf.py" />
@@ -232,6 +239,7 @@
         <option value="$PROJECT_DIR$/bin/plot_overlay.py" />
         <option value="$PROJECT_DIR$/tests/test_plot_overlay.py" />
         <option value="$PROJECT_DIR$/bin/clean_bids.sh" />
+        <option value="$PROJECT_DIR$/studies/imove/scripts/imove_protocol.py" />
       </list>
     </option>
   </component>
@@ -244,8 +252,8 @@
   <component name="ProjectFrameBounds">
     <option name="x" value="-428" />
     <option name="y" value="-1342" />
-    <option name="width" value="2100" />
-    <option name="height" value="1141" />
+    <option name="width" value="2384" />
+    <option name="height" value="1342" />
   </component>
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
@@ -320,6 +328,13 @@
               <item name="tic_core" type="462c0819:PsiDirectoryNode" />
               <item name="studies" type="462c0819:PsiDirectoryNode" />
               <item name="imove" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="tic_core" type="b2602c69:ProjectViewProjectNode" />
+              <item name="tic_core" type="462c0819:PsiDirectoryNode" />
+              <item name="studies" type="462c0819:PsiDirectoryNode" />
+              <item name="imove" type="462c0819:PsiDirectoryNode" />
+              <item name="scripts" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="tic_core" type="b2602c69:ProjectViewProjectNode" />
@@ -448,13 +463,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1517948604886</updated>
-    </task>
-    <task id="LOCAL-00243" summary="Added file to check processing status.">
-      <created>1521142000948</created>
-      <option name="number" value="00243" />
-      <option name="presentableId" value="LOCAL-00243" />
-      <option name="project" value="LOCAL" />
-      <updated>1521142000948</updated>
     </task>
     <task id="LOCAL-00244" summary="Added file to check processing status.">
       <created>1521142419037</created>
@@ -792,7 +800,14 @@
       <option name="project" value="LOCAL" />
       <updated>1521221684373</updated>
     </task>
-    <option name="localTasksCounter" value="292" />
+    <task id="LOCAL-00292" summary="Refactored plot_overlay.py so it is in the bin directory as a &#10;command line function.">
+      <created>1521475853052</created>
+      <option name="number" value="00292" />
+      <option name="presentableId" value="LOCAL-00292" />
+      <option name="project" value="LOCAL" />
+      <updated>1521475853053</updated>
+    </task>
+    <option name="localTasksCounter" value="293" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -828,20 +843,20 @@
     </history-entry>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-428" y="-1342" width="2100" height="1141" extended-state="0" />
+    <frame x="-428" y="-1342" width="2384" height="1342" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Key Promoter X" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Regex Tester" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.46725318" sideWeight="0.31681243" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.46725318" sideWeight="0.68318754" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.39052287" sideWeight="0.68318754" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.50287354" sideWeight="0.48106593" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.21870883" sideWeight="0.49006623" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21331389" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18744662" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22400388" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1968403" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="SciView" active="false" anchor="right" auto_hide="true" internal_type="DOCKED" type="FLOATING" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -886,7 +901,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Updated protocol to include missing pCASL. Series description was different." />
     <MESSAGE value="Updated hdc_clean to remove BIDS directory, as well as, .heudicon directory of &#10;the appropriate subject and session." />
     <MESSAGE value="Adjusted protocol to accommodate different versions of pcasl in the series_description." />
     <MESSAGE value="Fixed bug where subject and session where not in separate directories as they should be." />
@@ -911,7 +925,8 @@
     <MESSAGE value="Added file to check processing status." />
     <MESSAGE value="Wrote new function to create acrostic.csv" />
     <MESSAGE value="Added plot_overlay to tic_core." />
-    <option name="LAST_COMMIT_MESSAGE" value="Added plot_overlay to tic_core." />
+    <MESSAGE value="Refactored plot_overlay.py so it is in the bin directory as a &#10;command line function." />
+    <option name="LAST_COMMIT_MESSAGE" value="Refactored plot_overlay.py so it is in the bin directory as a &#10;command line function." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -927,7 +942,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/tests/overlay_z_005.png" />
     <entry file="file://$PROJECT_DIR$/tests/overlay_z_011.png" />
     <entry file="file://$PROJECT_DIR$/tests/overlay_z_010.png" />
     <entry file="file://$PROJECT_DIR$/tests/overlay_z_008.png" />
@@ -1123,6 +1137,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="306">
           <caret line="18" column="16" lean-forward="false" selection-start-line="18" selection-start-column="16" selection-end-line="18" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/studies/imove/scripts/imove_protocol.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="793">
+          <caret line="401" column="40" lean-forward="true" selection-start-line="401" selection-start-column="40" selection-end-line="401" selection-end-column="40" />
           <folding />
         </state>
       </provider>
