@@ -314,20 +314,6 @@ def infotodict(seqinfo):
                 (s.dim4 == 1)):
                 info[rest_topup_pa].append([s.series_id])
 
-        if (('Field_mapping 4X4X4 A>>P' in s.series_description) and
-                ('fm2d2r' in s.sequence_name) and
-                (s.dim3 == 35) and
-                (s.dim4 == 1) and
-                (s.TE == 4.92)):
-                info[fmap_rest_magnitude1].append([s.series_id])
-
-        if (('Field_mapping 4X4X4 A>>P' in s.series_description) and
-                ('fm2d2r' in s.sequence_name) and
-                (s.dim3 == 35) and
-                (s.dim4 == 1) and
-                (s.TE == 7.38)):
-                info[fmap_rest_phasediff].append([s.series_id])
-
         # --------------------------------------
         # Multiband EPI Resting State with TOPUP
 
