@@ -243,12 +243,9 @@ def infotodict(seqinfo):
 
     info = {t1: [],
             t2: [],
-            rest_fmri_ap_fmap: [],
             rest_fmri_ap_topup: [],
             rest_topup_ap: [],
             rest_topup_pa: [],
-            fmap_rest_magnitude1: [],
-            fmap_rest_phasediff: [],
             mbep2d_bold: [],
             mbep2d_bold_sbref: [],
             mbep2d_topup_rl: [],
