@@ -1,5 +1,6 @@
 #!/bin/bash
 
+BIDS_APP='mriqc.sh'
 ACTIVE_APP_WORKING_PATH=$ACTIVE_MRIQC_PATH/_working
 ACTIVE_IMAGE_PROCESSING_LOG_PATH=$ACTIVE_MRIQC_PATH/logs
 ACTIVE_APP_OUTPUT_PATH=$ACTIVE_MRIQC_PATH
@@ -54,6 +55,7 @@ act_full_command=$SINGULARITY_COMMAND \
                  $APP_SINGULARITY_IMAGE \
                  $ACTIVE_BIDS_PATH \
                  $ACTIVE_APP_OUTPUT_PATH \
+                 --work-dir $ACTIVE_APP_WORKING_PATH \
                  participant ${@} > $log_file 2>&1 &
 
 
