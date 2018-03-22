@@ -31,10 +31,15 @@ def get_acrostic_study_list_full_filename(active_study_bids_path=ACTIVE_BIDS_PAT
 
 
 def get_acrostic_list(acrostic_list_filename = get_acrostic_study_list_full_filename()):
-    df_acrostic_list = (pandas.read_csv(acrostic_list_filename)
-                        .rename(columns={'participant_id': 'subject'})
-                        .set_index('subject')
-                        )
+
+    try:
+        df_acrostic_list = (pandas.read_csv(acrostic_list_filename)
+                            .rename(columns={'participant_id': 'subject'})
+                            .set_index('subject')
+                            )
+    except FileNotFoundError:
+        print('File Not Found Error')
+
 
     return df_acrostic_list
 
@@ -60,41 +65,45 @@ def _argparse():
 
     parser.add_argument('file_pattern', help='String file pattern to glob')
 
-    parser.add_argument("-s", "--subject", help="Regular expression subject acrostic",
+    parser.add_argument('-s', '--subject', help='Regular expression subject acrostic',
                         default='sub-imove[0-9]{4}')
 
-    parser.add_argument("-ss", "--session", help="Regular expression session ",
+    parser.add_argument('-ss', '--session', help='Regular expression session ',
                         default='ses-[0-9]')
 
-    parser.add_argument("-a", "--acrostic_list", help="Acrostic List",
+    parser.add_argument('-a', '--acrostic_list', help='Acrostic List',
                         default=get_acrostic_study_list_full_filename())
 
-    parser.add_argument("--glob_current_directory_only", help="Recursive boolean flag for glob",
-                        action="store_true",
+    parser.add_argument('--glob_current_directory_only', help='Recursive boolean flag for glob',
+                        action='store_true',
                         default=False)
 
-    parser.add_argument("-H", "--noheader", help="Remove header from output",
-                        action="store_true",
+    parser.add_argument('-v', '--verbose', help='Turn on verbose mode.',
+                        action='store_true',
                         default=False)
 
-    parser.add_argument("--subject_only", help="Only display subject",
-                        action="store_true",
+    parser.add_argument('-H', '--noheader', help='Remove header from output',
+                        action='store_true',
                         default=False)
 
-    parser.add_argument("--summary", help="Display summary stats",
-                        action="store_true",
+    parser.add_argument('--subject_only', help='Only display subject',
+                        action='store_true',
                         default=False)
 
-    parser.add_argument("--nan", help="Remove NaNs from output",
+    parser.add_argument('--summary', help='Display summary stats',
+                        action='store_true',
+                        default=False)
+
+    parser.add_argument('--nan', help='Remove NaNs from output',
                         choices=['drop', 'only', 'ignore'],
                         default='ignore')
 
-    parser.add_argument("--display_group", help="Display files that were found, missing, or both. Default is both.",
+    parser.add_argument('--display_group', help='Display files that were found, missing, or both. Default is both.',
                         choices=['found', 'missing', 'both'],
                         default='both')
 
-    parser.add_argument("--drop_missing", help="Drop files that were found from list.",
-                        action="store_true",
+    parser.add_argument('--drop_missing', help='Drop files that were found from list.',
+                        action='store_true',
                         default=False)
 
     return parser.parse_args()
@@ -103,7 +112,7 @@ def _argparse():
 def filter_rows(in_df, display_group='both'):
 
     all_columns = list(in_df.columns.values)
-    r = re.compile(".*_processed$")
+    r = re.compile('.*_processed$')
     search_columns = list(filter(r.match, all_columns))
     
     keep_rows= in_df[search_columns].any(axis=1)
@@ -150,6 +159,39 @@ def _clean_nan(in_df, nan_option, nan_fill='not_found'):
 def _rename_acrostic_list(in_df):
     return in_df.rename(columns=lambda x: re.sub(r'(ses-\d)',r'\1_scanned',x))
 
+def _get_subject_and_session_from_filenames(files, 
+                                            subject_acrostic_regex, 
+                                            session_acrostic_regex, 
+                                            verbose=False):
+
+    df_files = pandas.DataFrame(columns=['subject', 'session', 'file'])
+
+    for ii, ii_file in enumerate(files):
+        _, subject_value = get_key_value_from_string(ii_file, subject_acrostic_regex)
+        _, session_value = get_key_value_from_string(ii_file, session_acrostic_regex)
+
+        df_files = df_files.append({'subject': subject_value,
+                                    'session': session_value,
+                                    'file': ii_file
+                                    }, ignore_index=True)
+
+    # If a person is not careful with their regular expression a file can be found that does 
+    # not contain the subject and session in the filename.  When this happens discard those
+    # files.  It would be nice if a warning was issues. 
+
+    if verbose:
+        print('\n List of files found with subject and session information beforing cleaning.\n')
+        print(df_files)
+        print('\n\n')
+
+    # Remove files that do not have a subject_value or session value.  There is no need to save
+    # these because they are not the files you are looking for.   If they are you shouldn't be 
+    # using this function.
+
+    df_files = df_files.dropna(subset=['subject', 'session'],axis=0)
+
+    return df_files
+
 
 def main():
 
@@ -160,16 +202,10 @@ def main():
 
     df_acrostic_list = get_acrostic_list(in_args.acrostic_list)
 
-    df_files = pandas.DataFrame(columns=["subject", "session", "file"])
-
-    for ii, ii_file in enumerate(files):
-        _, subject_value = get_key_value_from_string(ii_file, in_args.subject)
-        _, session_value = get_key_value_from_string(ii_file, in_args.session)
-
-        df_files = df_files.append({"subject": subject_value,
-                                    "session": session_value,
-                                    "file": ii_file
-                                    }, ignore_index=True)
+    df_files = _get_subject_and_session_from_filenames(files, 
+                                                       in_args.subject,
+                                                       in_args.session, 
+                                                       in_args.verbose)
 
     df_files_2 = df_files.set_index(['subject', 'session']).unstack()
     df_files_2.columns = [ f'ses-{x+1}_processed' for x in range(len(df_files_2.columns))]
@@ -181,10 +217,10 @@ def main():
                     )
 
     _display(df_full_list.pipe(_clean_nan, nan_option=in_args.nan),
-            display_group=in_args.display_group,
-            subject_only=in_args.subject_only,
-            noheader=in_args.noheader,
-            )
+                 display_group=in_args.display_group,
+                 subject_only=in_args.subject_only,
+                 noheader=in_args.noheader,
+                 )
 
     if in_args.summary:
 
@@ -193,13 +229,13 @@ def main():
         n_rows_with_na = len(df_full_list.dropna())
 
         if n_rows_with_na < n_rows:
-            print(f'{Fore.RED}\nMissing files {n_acrostics-n_rows_with_na}.\n')
+            print(f'{Fore.RED}\nFAIL: {Fore.WHITE}Missing files {n_acrostics-n_rows_with_na}.\n')
 
         elif n_acrostics < n_rows:
-            print(f'{Fore.RED}\nAdditional file(s) found {n_rows-n_acrostics}.\n')
+            print(f'{Fore.RED}\n FAIL: {Fore.WHITE}Additional file(s) found {n_rows-n_acrostics}.\n')
 
         else:
-            print(f'{Fore.GREEN}\nOne file found for each acrostic.\n')
+            print(f'{Fore.GREEN}\nPASS: {Fore.WHITE}One file found for each acrostic.\n')
 
     return
 
