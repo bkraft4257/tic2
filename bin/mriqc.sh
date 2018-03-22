@@ -52,17 +52,14 @@ source $TIC_PATH/studies/active/scripts/bids_app_status.sh
 # is why I don't use the $SINGULARITY_COMMAND in when running the BIDS_APP
 #
 
-full_command=$SINGULARITY_COMMAND \
-                 $APP_SINGULARITY_IMAGE \
-                 $ACTIVE_BIDS_PATH \
-                 $ACTIVE_APP_OUTPUT_PATH \
-                  --work-dir $ACTIVE_APP_WORKING_PATH \
-                 participant ${@} >> $log_file 2>&1 &
+#full_command=$SINGULARITY_COMMAND \
+#                 $APP_SINGULARITY_IMAGE \
+#                 $ACTIVE_BIDS_PATH \
+#                 $ACTIVE_APP_OUTPUT_PATH \
+#                  --work-dir $ACTIVE_APP_WORKING_PATH \
+#                 participant ${@} >> $log_file 2>&1 &
 
 
-echo $full_command
-echo
-echo
 
 /usr/local/bin/singularity run -w -B /cenc -B /gandg -B /bkraft1 \
                  $APP_SINGULARITY_IMAGE \

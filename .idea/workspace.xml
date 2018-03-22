@@ -64,8 +64,8 @@
       <file leaf-file-name="mriqc.sh" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/bin/mriqc.sh">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="600">
-              <caret line="65" column="0" lean-forward="true" selection-start-line="65" selection-start-column="0" selection-end-line="65" selection-end-column="0" />
+            <state relative-caret-position="566">
+              <caret line="60" column="0" lean-forward="true" selection-start-line="60" selection-start-column="0" selection-end-line="60" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -487,13 +487,6 @@
       <option name="presentableId" value="Default" />
       <updated>1517948604886</updated>
     </task>
-    <task id="LOCAL-00256" summary="Added file to check processing status.">
-      <created>1521143474698</created>
-      <option name="number" value="00256" />
-      <option name="presentableId" value="LOCAL-00256" />
-      <option name="project" value="LOCAL" />
-      <updated>1521143474698</updated>
-    </task>
     <task id="LOCAL-00257" summary="Added file to check processing status.">
       <created>1521143545901</created>
       <option name="number" value="00257" />
@@ -830,7 +823,14 @@
       <option name="project" value="LOCAL" />
       <updated>1521734700737</updated>
     </task>
-    <option name="localTasksCounter" value="305" />
+    <task id="LOCAL-00305" summary="Updated mriqc.  There was a &amp;&gt; instead of &amp;&gt;&gt; bug in the code.">
+      <created>1521734836675</created>
+      <option name="number" value="00305" />
+      <option name="presentableId" value="LOCAL-00305" />
+      <option name="project" value="LOCAL" />
+      <updated>1521734836675</updated>
+    </task>
+    <option name="localTasksCounter" value="306" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -1191,8 +1191,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/bin/mriqc.sh">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="600">
-          <caret line="65" column="0" lean-forward="true" selection-start-line="65" selection-start-column="0" selection-end-line="65" selection-end-column="0" />
+        <state relative-caret-position="566">
+          <caret line="60" column="0" lean-forward="true" selection-start-line="60" selection-start-column="0" selection-end-line="60" selection-end-column="0" />
           <folding />
         </state>
       </provider>
