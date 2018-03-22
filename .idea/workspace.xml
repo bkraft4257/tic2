@@ -94,8 +94,8 @@
       <file leaf-file-name="processing_status.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/bin/processing_status.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="433">
-              <caret line="217" column="66" lean-forward="false" selection-start-line="217" selection-start-column="66" selection-end-line="217" selection-end-column="66" />
+            <state relative-caret-position="450">
+              <caret line="218" column="62" lean-forward="false" selection-start-line="218" selection-start-column="62" selection-end-line="218" selection-end-column="62" />
               <folding />
             </state>
           </provider>
@@ -487,13 +487,6 @@
       <option name="presentableId" value="Default" />
       <updated>1517948604886</updated>
     </task>
-    <task id="LOCAL-00269" summary="Wrote new function to create acrostic.csv">
-      <created>1521149730066</created>
-      <option name="number" value="00269" />
-      <option name="presentableId" value="LOCAL-00269" />
-      <option name="project" value="LOCAL" />
-      <updated>1521149730066</updated>
-    </task>
     <task id="LOCAL-00270" summary="Wrote new function to create acrostic.csv">
       <created>1521149854482</created>
       <option name="number" value="00270" />
@@ -830,7 +823,14 @@
       <option name="project" value="LOCAL" />
       <updated>1521751084393</updated>
     </task>
-    <option name="localTasksCounter" value="318" />
+    <task id="LOCAL-00318" summary="Fixed bug when a file or files was selected that did not match bids convention.">
+      <created>1521751153977</created>
+      <option name="number" value="00318" />
+      <option name="presentableId" value="LOCAL-00318" />
+      <option name="project" value="LOCAL" />
+      <updated>1521751153977</updated>
+    </task>
+    <option name="localTasksCounter" value="319" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -1212,8 +1212,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/bin/processing_status.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="433">
-          <caret line="217" column="66" lean-forward="false" selection-start-line="217" selection-start-column="66" selection-end-line="217" selection-end-column="66" />
+        <state relative-caret-position="450">
+          <caret line="218" column="62" lean-forward="false" selection-start-line="218" selection-start-column="62" selection-end-line="218" selection-end-column="62" />
           <folding />
         </state>
       </provider>
