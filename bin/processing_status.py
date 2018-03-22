@@ -202,7 +202,7 @@ def main():
 
     if len(files) == 0:
         print(f'No files were found given with your glob string {in_args.file_pattern}')
-
+        sys.exit()
 
     df_acrostic_list = get_acrostic_list(in_args.acrostic_list)
 
