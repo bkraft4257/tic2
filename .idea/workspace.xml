@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="6f3e13b3-cd58-4c4d-98f6-1a68f8358bfb" name="Default" comment="">
+    <list default="true" id="6f3e13b3-cd58-4c4d-98f6-1a68f8358bfb" name="Default" comment="Fixed bug when a file or files was selected that did not match bids convention.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/bin/mriqc.sh" afterPath="$PROJECT_DIR$/bin/mriqc.sh" />
       <change beforePath="$PROJECT_DIR$/bin/processing_status.py" afterPath="$PROJECT_DIR$/bin/processing_status.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -34,7 +35,7 @@
       <file leaf-file-name="mriqc.sh" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/bin/mriqc.sh">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="566">
+            <state relative-caret-position="600">
               <caret line="60" column="0" lean-forward="true" selection-start-line="60" selection-start-column="0" selection-end-line="60" selection-end-column="0" />
               <folding />
             </state>
@@ -94,8 +95,8 @@
       <file leaf-file-name="processing_status.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/bin/processing_status.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="450">
-              <caret line="218" column="68" lean-forward="false" selection-start-line="218" selection-start-column="68" selection-end-line="218" selection-end-column="68" />
+            <state relative-caret-position="274">
+              <caret line="203" column="87" lean-forward="false" selection-start-line="203" selection-start-column="87" selection-end-line="203" selection-end-column="87" />
               <folding />
             </state>
           </provider>
@@ -247,8 +248,8 @@
         <option value="$PROJECT_DIR$/studies/hfpef/scripts/hfpef_bids_clean_2.py" />
         <option value="$PROJECT_DIR$/studies/active/scripts/bids_app_status.sh" />
         <option value="$PROJECT_DIR$/studies/active/aliases.sh" />
-        <option value="$PROJECT_DIR$/bin/mriqc.sh" />
         <option value="$PROJECT_DIR$/bin/create_acrostic_list.py" />
+        <option value="$PROJECT_DIR$/bin/mriqc.sh" />
         <option value="$PROJECT_DIR$/bin/processing_status.py" />
       </list>
     </option>
@@ -486,13 +487,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1517948604886</updated>
-    </task>
-    <task id="LOCAL-00273" summary="Wrote new function to create acrostic.csv">
-      <created>1521150101963</created>
-      <option name="number" value="00273" />
-      <option name="presentableId" value="LOCAL-00273" />
-      <option name="project" value="LOCAL" />
-      <updated>1521150101963</updated>
     </task>
     <task id="LOCAL-00274" summary="Wrote new function to create acrostic.csv">
       <created>1521150139803</created>
@@ -830,7 +824,14 @@
       <option name="project" value="LOCAL" />
       <updated>1521751340996</updated>
     </task>
-    <option name="localTasksCounter" value="322" />
+    <task id="LOCAL-00322" summary="Fixed bug when a file or files was selected that did not match bids convention.">
+      <created>1521751359999</created>
+      <option name="number" value="00322" />
+      <option name="presentableId" value="LOCAL-00322" />
+      <option name="project" value="LOCAL" />
+      <updated>1521751359999</updated>
+    </task>
+    <option name="localTasksCounter" value="323" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -1178,14 +1179,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/bin/mriqc.sh">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="566">
-          <caret line="60" column="0" lean-forward="true" selection-start-line="60" selection-start-column="0" selection-end-line="60" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/bin/create_acrostic_list.sh">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -1210,10 +1203,18 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/bin/mriqc.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="600">
+          <caret line="60" column="0" lean-forward="true" selection-start-line="60" selection-start-column="0" selection-end-line="60" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/bin/processing_status.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="450">
-          <caret line="218" column="68" lean-forward="false" selection-start-line="218" selection-start-column="68" selection-end-line="218" selection-end-column="68" />
+        <state relative-caret-position="274">
+          <caret line="203" column="87" lean-forward="false" selection-start-line="203" selection-start-column="87" selection-end-line="203" selection-end-column="87" />
           <folding />
         </state>
       </provider>
