@@ -124,8 +124,8 @@
       <file leaf-file-name="processing_status.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/bin/processing_status.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="388">
-              <caret line="157" column="0" lean-forward="true" selection-start-line="157" selection-start-column="0" selection-end-line="157" selection-end-column="0" />
+            <state relative-caret-position="551">
+              <caret line="150" column="27" lean-forward="true" selection-start-line="150" selection-start-column="27" selection-end-line="150" selection-end-column="27" />
               <folding />
             </state>
           </provider>
@@ -144,8 +144,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>sub-{subject}_</find>
-      <find>{session}_{session}</find>
       <find>run-{item:01d}_</find>
       <find>heudicon</find>
       <find />
@@ -174,6 +172,8 @@
       <find>rest_fmri_</find>
       <find>fmap</find>
       <find>app</find>
+      <find>acrostic_session</find>
+      <find>subject_only</find>
     </findStrings>
     <replaceStrings>
       <replace>01d</replace>
@@ -486,13 +486,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1517948604886</updated>
-    </task>
-    <task id="LOCAL-00259" summary="Wrote new function to create acrostic.csv">
-      <created>1521147838726</created>
-      <option name="number" value="00259" />
-      <option name="presentableId" value="LOCAL-00259" />
-      <option name="project" value="LOCAL" />
-      <updated>1521147838726</updated>
     </task>
     <task id="LOCAL-00260" summary="Wrote new function to create acrostic.csv">
       <created>1521147871124</created>
@@ -830,7 +823,14 @@
       <option name="project" value="LOCAL" />
       <updated>1521736164128</updated>
     </task>
-    <option name="localTasksCounter" value="308" />
+    <task id="LOCAL-00308" summary="Updated processing_status.py by including to_string instead of my own formatting.">
+      <created>1521738637925</created>
+      <option name="number" value="00308" />
+      <option name="presentableId" value="LOCAL-00308" />
+      <option name="project" value="LOCAL" />
+      <updated>1521738637925</updated>
+    </task>
+    <option name="localTasksCounter" value="309" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -924,7 +924,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Only delete the directory if it exists." />
     <MESSAGE value="The JSON file written after the upgrade is different than before the upgrade. &#10;AcquisitionMatrixPE: 64 is no longer in the file and has been replaced with&#10;AcquisitionNumber: 1" />
     <MESSAGE value="Simplified the hfpef aliases." />
     <MESSAGE value="Fixed bug with the IntendedFor for EPI rest with fmap and topup" />
@@ -949,7 +948,8 @@
     <MESSAGE value="Updated imove_protocol. &#10;&#10;1) sbref scans are written to their own subdirectory.  .bidsignore removes them from bids-validator.&#10;2) remove magnitude and phasediff from fmap.  These are no longer being acquired." />
     <MESSAGE value="Updated mriqc" />
     <MESSAGE value="Updated mriqc.  There was a &amp;&gt; instead of &amp;&gt;&gt; bug in the code." />
-    <option name="LAST_COMMIT_MESSAGE" value="Updated mriqc.  There was a &amp;&gt; instead of &amp;&gt;&gt; bug in the code." />
+    <MESSAGE value="Updated processing_status.py by including to_string instead of my own formatting." />
+    <option name="LAST_COMMIT_MESSAGE" value="Updated processing_status.py by including to_string instead of my own formatting." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1191,8 +1191,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/bin/processing_status.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="388">
-          <caret line="157" column="0" lean-forward="true" selection-start-line="157" selection-start-column="0" selection-end-line="157" selection-end-column="0" />
+        <state relative-caret-position="551">
+          <caret line="150" column="27" lean-forward="true" selection-start-line="150" selection-start-column="27" selection-end-line="150" selection-end-column="27" />
           <folding />
         </state>
       </provider>
