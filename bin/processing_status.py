@@ -207,8 +207,12 @@ def main():
                                                        in_args.session, 
                                                        in_args.verbose)
 
-    df_files_2 = df_files.set_index(['subject', 'session']).unstack()
-    df_files_2.columns = [ f'ses-{x+1}_processed' for x in range(len(df_files_2.columns))]
+    try:
+        df_files_2 = df_files.set_index(['subject', 'session']).unstack()
+        df_files_2.columns = [ f'ses-{x+1}_processed' for x in range(len(df_files_2.columns))]
+
+    except ValueError:
+        print('Unable to stack.')
 
     df_full_list = (_rename_acrostic_list(df_acrostic_list)
                     .reset_index()
