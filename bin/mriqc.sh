@@ -47,12 +47,22 @@ source $TIC_PATH/studies/active/scripts/bids_app_status.sh
 
 
 # run it in the background so that it continues if user logs out
+# I was having problems with running the command from a variable. I am not certain why.
+# As an intermediate step i save the file to a variable and then run the variable. This
+# is why I don't use the $SINGULARITY_COMMAND in when running the BIDS_APP
+#
+
 full_command=$SINGULARITY_COMMAND \
                  $APP_SINGULARITY_IMAGE \
                  $ACTIVE_BIDS_PATH \
                  $ACTIVE_APP_OUTPUT_PATH \
                   --work-dir $ACTIVE_APP_WORKING_PATH \
-                 participant ${@} &> $log_file
+                 participant ${@} &>> $log_file
+
+
+echo $full_command
+
+
 
 
 /usr/local/bin/singularity run -w -B /cenc -B /gandg -B /bkraft1 \
@@ -60,7 +70,7 @@ full_command=$SINGULARITY_COMMAND \
                  $ACTIVE_BIDS_PATH \
                  $ACTIVE_APP_OUTPUT_PATH \
                  --work-dir $ACTIVE_APP_WORKING_PATH \
-                 participant ${@} &> $log_file 2>&1 &
+                 participant ${@} &>> $log_file 2>&1 &
 
 
 
