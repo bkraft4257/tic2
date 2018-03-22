@@ -215,6 +215,8 @@ def main():
         print(f'\n{Fore.RED}Unable to stack. {Fore.WHITE}\n')
         print(df_files)
         print('\n\n')
+        print(df_files.groupby(['subject', 'session'].file.count()))
+        print('\n\n')
         sys.exit()
 
     df_full_list = (_rename_acrostic_list(df_acrostic_list)
