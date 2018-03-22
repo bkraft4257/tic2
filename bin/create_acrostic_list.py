@@ -53,7 +53,7 @@ def main():
     df['acquired'] = True
 
     df = df.set_index(['subject', 'session']).unstack().fillna(False)
-    df.columns = ['ses-1', 'ses-2']
+    df.columns = df.columns.get_level_values(1)
 
     df.to_csv(in_args.out_filename)
 
