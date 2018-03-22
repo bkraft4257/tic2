@@ -212,7 +212,10 @@ def main():
         df_files_2.columns = [ f'ses-{x+1}_processed' for x in range(len(df_files_2.columns))]
 
     except ValueError:
-        print('Unable to stack.')
+        print(f'\n{Fore.RED}Unable to stack. {Fore.WHITE}\n')
+        print(df_files)
+        print('\n\n')
+        sys.exit()
 
     df_full_list = (_rename_acrostic_list(df_acrostic_list)
                     .reset_index()
