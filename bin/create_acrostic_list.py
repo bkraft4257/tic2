@@ -59,7 +59,7 @@ def main():
     acrostic_list_default_filename = os.path.join(ACTIVE_BIDS_PATH, f'{in_args.out_base_filename}.list')
 
     df.to_csv(acrostic_csv_default_filename)
-    df.reset_index()['subject'].to_csv(acrostic_list_default_filename, header=False)
+    df.reset_index()['subject'].to_csv(acrostic_list_default_filename, header=False, index=False)
 
     if in_args.verbose:
         print(df)
