@@ -154,28 +154,22 @@ def main():
                     .fillna(False)
                     )
 
-# https://stackoverflow.com/questions/36688022/removing-header-column-from-pandas-dataframe
-    for index, row in df_full_list.iterrows():
-        print(row.to_string()) # re.sub("\s+", ",", df_full_list.to_string().strip()))
+    print(df_full_list.pipe(_clean_nan, nan_option=in_args.nan).to_string(index=False))
 
-    # display(df_full_list.pipe(_clean_nan, nan_option=in_args.nan),
-    #         subject_only=in_args.subject_only,
-    #         noheader=in_args.noheader)
-    #
-    # if in_args.summary:
-    #
-    #     n_acrostics = len(df_acrostic_list)
-    #     n_rows = len(df_full_list)
-    #     n_rows_with_na = len(df_full_list.dropna())
-    #
-    #     if n_rows_with_na < n_rows:
-    #         print(f'{Fore.RED}\nMissing files {n_acrostics-n_rows_with_na}.\n')
-    #
-    #     elif n_acrostics < n_rows:
-    #         print(f'{Fore.RED}\nAdditional file(s) found {n_rows-n_acrostics}.\n')
-    #
-    #     else:
-    #         print(f'{Fore.GREEN}\nOne file found for each acrostic.\n')
+    if in_args.summary:
+
+        n_acrostics = len(df_acrostic_list)
+        n_rows = len(df_full_list)
+        n_rows_with_na = len(df_full_list.dropna())
+
+        if n_rows_with_na < n_rows:
+            print(f'{Fore.RED}\nMissing files {n_acrostics-n_rows_with_na}.\n')
+
+        elif n_acrostics < n_rows:
+            print(f'{Fore.RED}\nAdditional file(s) found {n_rows-n_acrostics}.\n')
+
+        else:
+            print(f'{Fore.GREEN}\nOne file found for each acrostic.\n')
 
     return
 
