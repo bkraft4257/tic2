@@ -100,24 +100,38 @@ def _argparse():
     return parser.parse_args()
 
 
-def display(in_df,
+def filter_rows(in_df, display_group='both'):
+
+    all_columns = list(in_df.columns.values)
+    r = re.compile(".*_processed$")
+    search_columns = list(filter(r.match, all_columns))
+    
+    keep_rows= in_df[search_columns].any(axis=1)
+
+    if display_group == 'found':
+        out_df = in_df[ keep_rows ].copy()
+
+    elif display_group == 'missing':
+        out_df = in_df[ ~keep_rows ].copy()
+
+    else:
+        out_df = in_df.copy()
+
+    return out_df
+
+
+def _display(in_df,
             display_group='both',
             subject_only=False,
             noheader=False,
             ):
 
+    out_df = filter_rows(in_df, display_group=display_group)
 
     if subject_only:
-        out_df = in_df['subject'].copy()
-    else:
-        out_df = in_df.copy()
+        out_df = out_df['subject'].copy()
 
-    if display_group == 'found':
-        pass
-    elif display_group == 'missing':
-        pass
-
-    print(out_df.to_string(index=False, header=noheader))
+    print(out_df.to_string(index=False, header=(not noheader)))
 
 
 def _clean_nan(in_df, nan_option, nan_fill='not_found'):
@@ -132,6 +146,9 @@ def _clean_nan(in_df, nan_option, nan_fill='not_found'):
         out_df = in_df.fillna(nan_fill).copy()
 
     return out_df
+
+def _rename_acrostic_list(in_df):
+    return in_df.rename(columns=lambda x: re.sub(r'(ses-\d)',r'\1_scanned',x))
 
 
 def main():
@@ -155,16 +172,15 @@ def main():
                                     }, ignore_index=True)
 
     df_files_2 = df_files.set_index(['subject', 'session']).unstack()
-    df_files_2.columns = [ f'ses-{x+1}' for x in range(len(df_files_2.columns))]
+    df_files_2.columns = [ f'ses-{x+1}_processed' for x in range(len(df_files_2.columns))]
 
-    df_full_list = (df_acrostic_list
+    df_full_list = (_rename_acrostic_list(df_acrostic_list)
                     .reset_index()
-                    .merge(df_files_2.reset_index(), how='left', on='subject',
-                           suffixes=('_scanned', '_processed'))
+                    .merge(df_files_2.reset_index(), how='left', on='subject')
                     .fillna(False)
                     )
 
-    display(df_full_list.pipe(_clean_nan, nan_option=in_args.nan),
+    _display(df_full_list.pipe(_clean_nan, nan_option=in_args.nan),
             display_group=in_args.display_group,
             subject_only=in_args.subject_only,
             noheader=in_args.noheader,
