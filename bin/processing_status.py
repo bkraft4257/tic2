@@ -66,11 +66,6 @@ def _argparse():
     parser.add_argument("-ss", "--session", help="Regular expression session ",
                         default='ses-[0-9]')
 
-    parser.add_argument("--acrostic_session",
-                        help="Acrostic Session",
-                        default=1
-                        )
-
     parser.add_argument("-a", "--acrostic_list", help="Acrostic List",
                         default=get_acrostic_study_list_full_filename())
 
@@ -99,15 +94,12 @@ def _argparse():
 
 def display(in_df, subject_only=False, noheader=False):
 
-    if not noheader and not subject_only:
-        print(f'index,subject,session,file')
+    if subject_only:
+        out_df = in_df['subject'].copy()
+    else:
+        out_df = in_df.copy()
 
-    for row in in_df.itertuples():
-
-        if subject_only:
-            print(f'{row[1]}')
-        else:
-            print(f'{row[0]},{row[1]},{row[2]},{row[3]}')
+    out_df.to_string(index=False, header=noheader)
 
 
 def _clean_nan(in_df, nan_option, nan_fill='not_found'):
@@ -154,7 +146,10 @@ def main():
                     .fillna(False)
                     )
 
-    print(df_full_list.pipe(_clean_nan, nan_option=in_args.nan).to_string(index=False))
+    display(df_full_list.pipe(_clean_nan, nan_option=in_args.nan),
+            subject_only=False,
+            noheader=False,
+            )
 
     if in_args.summary:
 
