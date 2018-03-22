@@ -89,17 +89,35 @@ def _argparse():
                         choices=['drop', 'only', 'ignore'],
                         default='ignore')
 
+    parser.add_argument("--display_group", help="Display files that were found, missing, or both. Default is both.",
+                        choices=['found', 'missing', 'both'],
+                        default='both')
+
+    parser.add_argument("--drop_missing", help="Drop files that were found from list.",
+                        action="store_true",
+                        default=False)
+
     return parser.parse_args()
 
 
-def display(in_df, subject_only=False, noheader=False):
+def display(in_df,
+            display_group='both',
+            subject_only=False,
+            noheader=False,
+            ):
+
 
     if subject_only:
         out_df = in_df['subject'].copy()
     else:
         out_df = in_df.copy()
 
-    out_df.to_string(index=False, header=noheader)
+    if display_group == 'found':
+        pass
+    elif display_group == 'missing':
+        pass
+
+    print(out_df.to_string(index=False, header=noheader))
 
 
 def _clean_nan(in_df, nan_option, nan_fill='not_found'):
@@ -147,8 +165,9 @@ def main():
                     )
 
     display(df_full_list.pipe(_clean_nan, nan_option=in_args.nan),
-            subject_only=False,
-            noheader=False,
+            display_group=in_args.display_group,
+            subject_only=in_args.subject_only,
+            noheader=in_args.noheader,
             )
 
     if in_args.summary:
