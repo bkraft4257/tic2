@@ -209,14 +209,14 @@ def main():
 
     try:
         df_files_2 = df_files.set_index(['subject', 'session']).unstack()
-        df_files_2.columns = [ f'ses-{x+1}_processed' for x in range(len(df_files_2.columns))]
+        df_files_2.columns = [f'ses-{x+1}_processed' for x in range(len(df_files_2.columns))]
 
     except ValueError:
         print(f'\n{Fore.RED}Unable to stack. {Fore.WHITE}\n')
         print(df_files)
         print('\n\n')
 
-        print(df_files.groupby(['subject', 'session']['file'].count()))
+        print(df_files.groupby(['subject', 'session']file.count()))
         print('\n\n')
         sys.exit()
 
