@@ -2,9 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6f3e13b3-cd58-4c4d-98f6-1a68f8358bfb" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/bin/update_study_init_links.py" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/bin/create_acrostic_list.sh" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/bin/update_study_init_links.py" afterPath="$PROJECT_DIR$/bin/update_study_init_links.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -105,8 +104,8 @@
       <file leaf-file-name="update_study_init_links.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/bin/update_study_init_links.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="493">
-              <caret line="31" column="11" lean-forward="true" selection-start-line="31" selection-start-column="11" selection-end-line="31" selection-end-column="11" />
+            <state relative-caret-position="578">
+              <caret line="36" column="0" lean-forward="true" selection-start-line="36" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -488,13 +487,6 @@
       <option name="presentableId" value="Default" />
       <updated>1517948604886</updated>
     </task>
-    <task id="LOCAL-00275" summary="Wrote new function to create acrostic.csv">
-      <created>1521150297871</created>
-      <option name="number" value="00275" />
-      <option name="presentableId" value="LOCAL-00275" />
-      <option name="project" value="LOCAL" />
-      <updated>1521150297871</updated>
-    </task>
     <task id="LOCAL-00276" summary="Wrote new function to create acrostic.csv">
       <created>1521150338488</created>
       <option name="number" value="00276" />
@@ -831,7 +823,14 @@
       <option name="project" value="LOCAL" />
       <updated>1521754401989</updated>
     </task>
-    <option name="localTasksCounter" value="324" />
+    <task id="LOCAL-00324" summary="Added switch to change study init links.">
+      <created>1521820044440</created>
+      <option name="number" value="00324" />
+      <option name="presentableId" value="LOCAL-00324" />
+      <option name="project" value="LOCAL" />
+      <updated>1521820044440</updated>
+    </task>
+    <option name="localTasksCounter" value="325" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -868,6 +867,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-496" y="-1332" width="1631" height="1083" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info id="Key Promoter X" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -877,7 +877,7 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.50287354" sideWeight="0.48106593" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.21870883" sideWeight="0.49006623" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2838263" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2838263" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3297568" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="SciView" active="false" anchor="right" auto_hide="true" internal_type="DOCKED" type="FLOATING" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -939,7 +939,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Added ability to change permission of json and gz files." />
     <MESSAGE value="Updating HDC documentation and API" />
     <MESSAGE value="Cleaned up HFPEF aliases, scripts, and protocols." />
     <MESSAGE value="Updated bids-validator and alias bv to be more expressive." />
@@ -964,7 +963,8 @@
     <MESSAGE value="Updated create_acrostic_list.py to handle single session data.&#10;Updated processing_status.py to handle single session." />
     <MESSAGE value="Updated create_acrostic_list.py to write acrostic.csv, which contains columns letting &#10;you know which sessions have been scanned, and acrostic.list which just contains &#10;a list of acrostics with no header" />
     <MESSAGE value="Fixed bug when a file or files was selected that did not match bids convention." />
-    <option name="LAST_COMMIT_MESSAGE" value="Fixed bug when a file or files was selected that did not match bids convention." />
+    <MESSAGE value="Added switch to change study init links." />
+    <option name="LAST_COMMIT_MESSAGE" value="Added switch to change study init links." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1255,8 +1255,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/bin/update_study_init_links.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="493">
-          <caret line="31" column="11" lean-forward="true" selection-start-line="31" selection-start-column="11" selection-end-line="31" selection-end-column="11" />
+        <state relative-caret-position="578">
+          <caret line="36" column="0" lean-forward="true" selection-start-line="36" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
           <folding />
         </state>
       </provider>
