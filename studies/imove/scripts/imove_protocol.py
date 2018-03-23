@@ -222,11 +222,11 @@ def infotodict(seqinfo):
     mbep2d_bold_sbref = create_key('sub-{subject}/{session}/func/sub-{subject}_{session}_task-rest_acq-mbepi_sbref.{item:01d}')
 
     # NODDI DTI
-    noddi_dti_ap = create_key('sub-{subject}/{session}/dwi/sub-{subject}_{session}_acq-apNoddi_run-{item:01d}_dwi.{item:01d}')
-    noddi_dti_ap_sbref = create_key('sub-{subject}/{session}/dwi/sub-{subject}_{session}_acq-apNoddi_run-{item:01d}_sbref.{item:01d}')
+    noddi_dti_ap = create_key('sub-{subject}/{session}/dwi/sub-{subject}_{session}_acq-apNoddi_run-{item:01d}_dwi')
+    noddi_dti_ap_sbref = create_key('sub-{subject}/{session}/dwi/sub-{subject}_{session}_acq-apNoddi_run-{item:01d}_sbref')
 
-    noddi_dti_pa_topup = create_key('sub-{subject}/{session}/dwi/sub-{subject}_{session}_acq-paNoddi_run-{item:01d}_dwi.{item:01d}')
-    noddi_dti_pa_topup_sbref = create_key('sub-{subject}/{session}/dwi/sub-{subject}_{session}_acq-paNoddi_run-{item:01d}_sbref.{item:01d}')
+    noddi_dti_pa_topup = create_key('sub-{subject}/{session}/dwi_fmap/sub-{subject}_{session}_acq-paNoddi_run-{item:01d}_dwi')
+    noddi_dti_pa_topup_sbref = create_key('sub-{subject}/{session}/dwi_fmap/sub-{subject}_{session}_acq-paNoddi_run-{item:01d}_sbref')
 
     # Quantitative Susceptibility Mapping
     qsm_magnitude = create_key('sub-{subject}/{session}/swi/sub-{subject}_{session}_part-mag_GRE.{item:01d}')
@@ -359,7 +359,6 @@ def infotodict(seqinfo):
         17-NODDI_DTI_P>>A120dir_12b0_AF4       ep_b5#1                     NODDI_DTI_P>>A120dir_12b0_AF4   128   128    80     1  3.500  106.00       False                False
         18-NODDI_DTI_P>>A120dir_12b0_AF4       ep_b5#1                     NODDI_DTI_P>>A120dir_12b0_AF4   128   128    80     1  3.500  106.00       False                False
         """
-
 
         if (('NODDI_DTI' in s.series_description) and
                 ('SBRef' in s.series_description) and
