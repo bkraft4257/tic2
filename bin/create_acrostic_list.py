@@ -12,7 +12,7 @@ import argparse
 import sys
 
 ACTIVE_BIDS_PATH = os.getenv('ACTIVE_BIDS_PATH')
-ACROSTIC_CSV_DEFAULT_FILENAME = os.path.join(ACTIVE_BIDS_PATH, 'acrostic.csv')
+ACROSTIC_BASE_FILENAME = 'acrostic'
 
 
 def _argparse():
@@ -29,9 +29,9 @@ def _argparse():
                         action="store_true",
                         default=False)
 
-    parser.add_argument('-o', '--out_filename',
-                        help=f'Output filename.  default={ACROSTIC_CSV_DEFAULT_FILENAME}',
-                        default=ACROSTIC_CSV_DEFAULT_FILENAME,
+    parser.add_argument('-o', '--out_base_filename',
+                        help=f'Output filename.  default={ACROSTIC_BASE_FILENAME}',
+                        default=ACROSTIC_BASE_FILENAME,
                         )
 
     return parser.parse_args()
@@ -53,9 +53,13 @@ def main():
     df['acquired'] = True
 
     df = df.set_index(['subject', 'session']).unstack().fillna(False)
-    df.columns = ['ses-1', 'ses-2']
+    df.columns = df.columns.get_level_values(1)
 
-    df.to_csv(in_args.out_filename)
+    acrostic_csv_default_filename = os.path.join(ACTIVE_BIDS_PATH, f'{in_args.out_base_filename}.csv')
+    acrostic_list_default_filename = os.path.join(ACTIVE_BIDS_PATH, f'{in_args.out_base_filename}.list')
+
+    df.to_csv(acrostic_csv_default_filename)
+    df.reset_index()['subject'].to_csv(acrostic_list_default_filename, header=False, index=False)
 
     if in_args.verbose:
         print(df)
