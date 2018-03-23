@@ -35,7 +35,7 @@ def symlink_force(target, link_name):
 
 
 def main():
-    for ii in STUDY_LIST
+    for ii in STUDY_LIST:
 
         ii_source = os.path.join(TIC_PATH, 'studies', ii, f'{ii}_init.sh')
         ii_link = os.path.join(TIC_INIT_PATH, f'{ii}_init.sh')
