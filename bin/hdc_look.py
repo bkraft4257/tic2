@@ -16,7 +16,7 @@ ACTIVE_ACROSTIC_REGEX = os.getenv('ACTIVE_ACROSTIC_REGEX')
 HDC_FILES = ['edit', 'auto', 'dicominfo']
 BIDS_PATH = os.path.abspath(os.getenv('ACTIVE_BIDS_PATH'))
 
-DISPLAY_COLUMNS = ['series_number', 'sequence_name', 'series_description',
+DISPLAY_COLUMNS = ['series_id', 'sequence_name', 'series_description',
                    'dim1', 'dim2', 'dim3', 'dim4',
                    'TR', 'TE', 'is_derived', 'is_motion_corrected']
 
