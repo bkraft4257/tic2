@@ -201,8 +201,14 @@ echo
 echo "Looking for repeated scans one last time. "
 echo "If you see something reported here you must CHOOSE which images you want to use."
 echo "--------------------------------------------------------------------------------"
-find $session_dir -name "*.[0-9]*"
 
+# The normal call is just
+#
+# find $session_dir -name "*.[0-9]*.*"
+#
+# I have specifically excluded swi scans because there is something peculiar with the conversion.  This needs and multiple
+# copies are created. I am in the process of looking into this.
 
+find $session_dir -name "*.[0-9]*.*" ! -path "*swi*"
 
-echo " "
+echo
