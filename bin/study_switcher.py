@@ -39,6 +39,7 @@ def _write_study_switcher_script(active_study,
         file.write(f"echo 'Previous active study' = $ACTIVE_STUDY\n\n")
 
         file.write(f'export ACTIVE_STUDY={active_study}\n')
+        file.write(f'export ACTIVE_ACROSTIC_REGEX={active_study}_ACROSTIC_REGEX\n')
         file.write(f'export ACTIVE_SCRIPTS_PATH=${active_study}_SCRIPTS_PATH \n')
         file.write(f'export ACTIVE_PATH=${active_study}_PATH\n')
         file.write(f'export ACTIVE_BIDS_PATH=${active_study}_BIDS_PATH\n')
