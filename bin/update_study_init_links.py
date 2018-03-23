@@ -22,7 +22,11 @@ def symlink_force(target, link_name):
     """
 
     try:
-        os.symlink(target, link_name)
+
+        if os.path.isfile(target):
+            os.symlink(target, link_name)
+        else:
+            print(f'\nSource file does not exist. Skipping creating link. \n{target}\n')
 
     except OSError as e:
         if e.errno == errno.EEXIST:
