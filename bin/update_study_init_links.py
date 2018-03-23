@@ -35,10 +35,15 @@ def symlink_force(target, link_name):
 
 
 def main():
-    for ii in STUDY_LIST:
-        symlink_force(os.path.join(TIC_PATH, 'studies', ii, f'{ii}_init.sh'),
-                      os.path.join(TIC_INIT_PATH, f'{ii}_init.sh'),
-                      )
+    for ii in STUDY_LIST
+
+        ii_source = os.path.join(TIC_PATH, 'studies', ii, f'{ii}_init.sh')
+        ii_link = os.path.join(TIC_INIT_PATH, f'{ii}_init.sh')
+
+        print(ii_source)
+        print(ii_link)
+
+        symlink_force(ii_source, ii_link,)
 
 
 if __name__ == '__main__':
