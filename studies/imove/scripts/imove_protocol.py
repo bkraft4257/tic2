@@ -213,20 +213,20 @@ def infotodict(seqinfo):
 
     # Multiband EPI Resting State with TOPUP
     mbep2d_topup_lr = create_key('sub-{subject}/{session}/fmap/sub-{subject}_{session}_acq-mbepi_dir-lr_epi.{item:01d}')
-    mbep2d_topup_lr_sbref = create_key('sub-{subject}/{session}/sbref/sub-{subject}_{session}_acq-mbepi_dir-lr_sbref.{item:01d}')
+    mbep2d_topup_lr_sbref = create_key('sub-{subject}/{session}/fmap/sub-{subject}_{session}_acq-mbepi_dir-lr_sbref.{item:01d}')
 
     mbep2d_topup_rl = create_key('sub-{subject}/{session}/fmap/sub-{subject}_{session}_acq-mbepi_dir-rl_epi.{item:01d}')
-    mbep2d_topup_rl_sbref = create_key('sub-{subject}/{session}/sbref/sub-{subject}_{session}_acq-mbepi_dir-rl_sbref.{item:01d}')
+    mbep2d_topup_rl_sbref = create_key('sub-{subject}/{session}/fmap/sub-{subject}_{session}_acq-mbepi_dir-rl_sbref.{item:01d}')
 
     mbep2d_bold = create_key('sub-{subject}/{session}/func/sub-{subject}_{session}_task-rest_acq-mbepi_bold.{item:01d}')
-    mbep2d_bold_sbref = create_key('sub-{subject}/{session}/sbref/sub-{subject}_{session}_task-rest_acq-mbepi_sbref.{item:01d}')
+    mbep2d_bold_sbref = create_key('sub-{subject}/{session}/func/sub-{subject}_{session}_task-rest_acq-mbepi_sbref.{item:01d}')
 
     # NODDI DTI
     noddi_dti_ap = create_key('sub-{subject}/{session}/dwi/sub-{subject}_{session}_acq-apNoddi_run-{item:01d}_dwi.{item:01d}')
-    noddi_dti_ap_sbref = create_key('sub-{subject}/{session}/sbref/sub-{subject}_{session}_acq-apNoddi_run-{item:01d}_sbref.{item:01d}')
+    noddi_dti_ap_sbref = create_key('sub-{subject}/{session}/dwi/sub-{subject}_{session}_acq-apNoddi_run-{item:01d}_sbref.{item:01d}')
 
     noddi_dti_pa_topup = create_key('sub-{subject}/{session}/dwi/sub-{subject}_{session}_acq-paNoddi_run-{item:01d}_dwi.{item:01d}')
-    noddi_dti_pa_topup_sbref = create_key('sub-{subject}/{session}/sbref/sub-{subject}_{session}_acq-paNoddi_run-{item:01d}_sbref.{item:01d}')
+    noddi_dti_pa_topup_sbref = create_key('sub-{subject}/{session}/dwi/sub-{subject}_{session}_acq-paNoddi_run-{item:01d}_sbref.{item:01d}')
 
     # Quantitative Susceptibility Mapping
     qsm_magnitude = create_key('sub-{subject}/{session}/swi/sub-{subject}_{session}_part-mag_GRE.{item:01d}')
