@@ -5,8 +5,7 @@ import sys
 import os
 import errno
 
-
-STUDY_LIST = ('cenc', 'hfpef', 'imove', 'infinite',  'mcf', 'synergy', )
+STUDY_LIST = ('cenc', 'hfpef', 'imove', 'infinite', 'mcf', 'synergy',)
 TIC_PATH = os.getenv('TIC_PATH')
 TIC_INIT_PATH = os.getenv('TIC_INIT_PATH')
 
@@ -30,12 +29,11 @@ def symlink_force(target, link_name):
 
 
 def main():
-
     for ii in STUDY_LIST:
         symlink_force(os.path.join(TIC_PATH, 'studies', ii, f'{ii}_init.sh'),
-                      os.path.join(TIC_INIT_PATH,  f'{ii}_init.sh'),
+                      os.path.join(TIC_INIT_PATH, f'{ii}_init.sh'),
                       )
 
 
 if __name__ == '__main__':
-   sys.exit(main())
+    sys.exit(main())
