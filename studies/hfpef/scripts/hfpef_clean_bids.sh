@@ -36,7 +36,7 @@ session_value=$2
 
 full_subject_session_value=sub-${subject_value}_ses-${session_value}
 
-session_dir=${$HFPEF_BIDS_PATH}/sub-${subject_value}/ses-${session_value}
+session_dir=${HFPEF_BIDS_PATH}/sub-${subject_value}/ses-${session_value}
 
 echo 
 echo "================================================================================="
@@ -68,8 +68,7 @@ echo
 
 find ${session_dir} -name "*.1.*" | xargs rename .1. .
 find ${session_dir} -name "*.nii.gz" -or -name "*.json"  | xargs chmod +w
-find ${session_dir} -type d | xargs chmod +w 
-
+# find ${session_dir} -type d | xargs chmod +w
 
 cd ${session_dir}/fmap
 
