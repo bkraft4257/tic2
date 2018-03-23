@@ -4,7 +4,7 @@
 
 echo
 echo $ACTIVE_STUDY
-echo 'ACTIVE_ACROSTIC_REGEX              = ' $ACTIVE_STUDY_REGEX
+echo 'ACTIVE_ACROSTIC_REGEX              = ' $ACTIVE_ACROSTIC_REGEX
 echo
 echo 'ACTIVE_SCRIPTS_PATH                = ' $ACTIVE_SCRIPTS_PATH
 echo 'ACTIVE_PATH                        = ' $ACTIVE_PATH
