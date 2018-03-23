@@ -2,3 +2,4 @@
 docs/build/
 .idea/workspace.xml
 _working
+tests/data/
