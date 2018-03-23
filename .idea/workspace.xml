@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="6f3e13b3-cd58-4c4d-98f6-1a68f8358bfb" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/studies/imove/scripts/imove_clean_bids.sh" afterPath="$PROJECT_DIR$/studies/imove/scripts/imove_clean_bids.sh" />
+      <change beforePath="$PROJECT_DIR$/studies/hfpef/scripts/hfpef_clean_bids.sh" afterPath="$PROJECT_DIR$/studies/hfpef/scripts/hfpef_clean_bids.sh" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -104,8 +104,8 @@
       <file leaf-file-name="imove_protocol.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/studies/imove/scripts/imove_protocol.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="498">
-              <caret line="361" column="0" lean-forward="true" selection-start-line="361" selection-start-column="0" selection-end-line="361" selection-end-column="0" />
+            <state relative-caret-position="566">
+              <caret line="228" column="71" lean-forward="true" selection-start-line="228" selection-start-column="71" selection-end-line="228" selection-end-column="71" />
               <folding />
             </state>
           </provider>
@@ -136,21 +136,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="hfpef_clean_bids.sh" pinned="false" current-in-tab="false">
+      <file leaf-file-name="hfpef_clean_bids.sh" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/studies/hfpef/scripts/hfpef_clean_bids.sh">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="646">
-              <caret line="71" column="0" lean-forward="true" selection-start-line="71" selection-start-column="0" selection-end-line="71" selection-end-column="0" />
+            <state relative-caret-position="327">
+              <caret line="38" column="14" lean-forward="false" selection-start-line="38" selection-start-column="14" selection-end-line="38" selection-end-column="14" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="imove_clean_bids.sh" pinned="false" current-in-tab="true">
+      <file leaf-file-name="imove_clean_bids.sh" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/studies/imove/scripts/imove_clean_bids.sh">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="804">
-              <caret line="212" column="0" lean-forward="true" selection-start-line="212" selection-start-column="0" selection-end-line="212" selection-end-column="0" />
+            <state relative-caret-position="515">
+              <caret line="195" column="64" lean-forward="true" selection-start-line="195" selection-start-column="64" selection-end-line="195" selection-end-column="64" />
               <folding />
             </state>
           </provider>
@@ -169,8 +169,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>heudicon</find>
-      <find />
       <find>echotime</find>
       <find>index</find>
       <find>run</find>
@@ -199,6 +197,8 @@
       <find>subject_only</find>
       <find>unstack</find>
       <find>sbref</find>
+      <find>panoddi</find>
+      <find>chmod</find>
     </findStrings>
     <replaceStrings>
       <replace>01d</replace>
@@ -226,7 +226,6 @@
       <list>
         <option value="$PROJECT_DIR$/studies/_new_study_template/hdc_protocol_template.py" />
         <option value="$PROJECT_DIR$/studies/hfpef/scripts/hfpef_protocol_v2b.py" />
-        <option value="$PROJECT_DIR$/studies/hfpef/scripts/hfpef_clean_bids.sh" />
         <option value="$PROJECT_DIR$/studies/hfpef/scripts/hfpef_clean_bids_2b.sh" />
         <option value="$PROJECT_DIR$/docs/source/other/heudiconv.rst.md" />
         <option value="$PROJECT_DIR$/bin/hdc_singularity.sh" />
@@ -275,6 +274,7 @@
         <option value="$PROJECT_DIR$/docs/source/other/quick_reference.md" />
         <option value="$PROJECT_DIR$/studies/imove/scripts/imove_protocol.py" />
         <option value="$PROJECT_DIR$/studies/imove/scripts/imove_clean_bids.sh" />
+        <option value="$PROJECT_DIR$/studies/hfpef/scripts/hfpef_clean_bids.sh" />
       </list>
     </option>
   </component>
@@ -502,13 +502,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1517948604886</updated>
-    </task>
-    <task id="LOCAL-00292" summary="Refactored plot_overlay.py so it is in the bin directory as a &#10;command line function.">
-      <created>1521475853052</created>
-      <option name="number" value="00292" />
-      <option name="presentableId" value="LOCAL-00292" />
-      <option name="project" value="LOCAL" />
-      <updated>1521475853053</updated>
     </task>
     <task id="LOCAL-00293" summary="Updated imove_protocol. &#10;&#10;1) sbref scans are written to their own subdirectory.  .bidsignore removes them from bids-validator.&#10;2) remove magnitude and phasediff from fmap.  These are no longer being acquired.">
       <created>1521480874476</created>
@@ -846,7 +839,14 @@
       <option name="project" value="LOCAL" />
       <updated>1521833372230</updated>
     </task>
-    <option name="localTasksCounter" value="341" />
+    <task id="LOCAL-00341" summary="Excluded swi from the last find.">
+      <created>1521833676435</created>
+      <option name="number" value="00341" />
+      <option name="presentableId" value="LOCAL-00341" />
+      <option name="project" value="LOCAL" />
+      <updated>1521833676436</updated>
+    </task>
+    <option name="localTasksCounter" value="342" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -955,7 +955,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Updated Synergy protocol to function correctly with hdc_singularity image." />
     <MESSAGE value="Updated Heudiconv singularity image from 0.3 to 0.5" />
     <MESSAGE value="Updated tic_info to display all the singularity images." />
     <MESSAGE value="Updated singularity image documentation.  &#10;Added ability to remove CR from DICOM images." />
@@ -980,7 +979,8 @@
     <MESSAGE value="Update imove protocol to include numbering." />
     <MESSAGE value="Deleted old files. Created an ACTIVE_ACROSTIC_REGEX environment variable." />
     <MESSAGE value="Updated Imove protocol.  Renamed hfpef_bids_clean.sh to hfpef_bids_clean.sh  to match alias." />
-    <option name="LAST_COMMIT_MESSAGE" value="Updated Imove protocol.  Renamed hfpef_bids_clean.sh to hfpef_bids_clean.sh  to match alias." />
+    <MESSAGE value="Excluded swi from the last find." />
+    <option name="LAST_COMMIT_MESSAGE" value="Excluded swi from the last find." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1410,26 +1410,26 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/studies/hfpef/scripts/hfpef_clean_bids.sh">
+    <entry file="file://$PROJECT_DIR$/studies/imove/scripts/imove_clean_bids.sh">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="646">
-          <caret line="71" column="0" lean-forward="true" selection-start-line="71" selection-start-column="0" selection-end-line="71" selection-end-column="0" />
+        <state relative-caret-position="515">
+          <caret line="195" column="64" lean-forward="true" selection-start-line="195" selection-start-column="64" selection-end-line="195" selection-end-column="64" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/studies/imove/scripts/imove_protocol.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="498">
-          <caret line="361" column="0" lean-forward="true" selection-start-line="361" selection-start-column="0" selection-end-line="361" selection-end-column="0" />
+        <state relative-caret-position="566">
+          <caret line="228" column="71" lean-forward="true" selection-start-line="228" selection-start-column="71" selection-end-line="228" selection-end-column="71" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/studies/imove/scripts/imove_clean_bids.sh">
+    <entry file="file://$PROJECT_DIR$/studies/hfpef/scripts/hfpef_clean_bids.sh">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="804">
-          <caret line="212" column="0" lean-forward="true" selection-start-line="212" selection-start-column="0" selection-end-line="212" selection-end-column="0" />
+        <state relative-caret-position="327">
+          <caret line="38" column="14" lean-forward="false" selection-start-line="38" selection-start-column="14" selection-end-line="38" selection-end-column="14" />
           <folding />
         </state>
       </provider>
