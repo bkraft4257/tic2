@@ -24,4 +24,4 @@ export HFPEF_SUBJECTS_DIR=${HFPEF_IMAGE_PROCESSING_PATH}/freesurfer
 
 export HFPEF_SINGULARITY_USER_BIND_PATHS="/gandg"
 
-export IMOVE_HFPEF_REGEX="hf[u|s][0-9]{3}"
+export HFPEF_ACROSTIC_REGEX="hf[u|s][0-9]{3}"
