@@ -1,6 +1,12 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
+"""
+Simple function to link study init files to init_<study>.sh in $TIC_PATH/studies/study/.  This script should be called
+when a new study has been added to the TIC_PATH has changed.
+
+"""
+
 import sys
 import os
 import errno
