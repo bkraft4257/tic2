@@ -14,7 +14,6 @@ session=ses-${session_id}
 
 netprep_input=${HFPEF_NETPREP_PATH}/${subject}/${session}/epi/input
 
-_task-rest_acq-epi_rec-fmap_bold_space
 bold_mni_preproc=$HFPEF_FMRIPREP_PATH/${subject}/${session}/func/${subject}_${session}_task-rest_acq-epi_rec-fmap_bold_space-MNI152NLin2009cAsym_preproc.nii.gz
 bold_confounds_tsv=$HFPEF_FMRIPREP_PATH/${subject}/${session}/func/${subject}_${session}_task-rest_acq-epi_bold_confounds.tsv
 
