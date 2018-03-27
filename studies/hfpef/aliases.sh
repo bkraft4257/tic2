@@ -12,8 +12,6 @@ alias hfpef_bids_clean='$HFPEF_SCRIPTS_PATH/hfpef_clean_bids_2b.sh'
 # hack.
 
 
-alias hfpef_gi_netprep_epi='$HFPEF_SCRIPTS_PATH/hfpef_gi_netprep_epi.sh'
+alias hfpef_gi_netprep_epi_fmap='$HFPEF_SCRIPTS_PATH/hfpef_gi_netprep_epi.sh'
 alias hfpef_gi_netprep_mbepi='$HFPEF_SCRIPTS_PATH/hfpef_gi_netprep_mbepi.sh'
-
 alias hfpef_gi_netprep='$HFPEF_SCRIPTS_PATH/hfpef_gi_netprep.sh'
-alias hfpef_netprep='/gandg/tic/nipype_workflows/netprep.py'
