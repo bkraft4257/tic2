@@ -419,13 +419,6 @@
       <option name="presentableId" value="Default" />
       <updated>1517948604886</updated>
     </task>
-    <task id="LOCAL-00298" summary="Updated mriqc">
-      <created>1521486620356</created>
-      <option name="number" value="00298" />
-      <option name="presentableId" value="LOCAL-00298" />
-      <option name="project" value="LOCAL" />
-      <updated>1521486620356</updated>
-    </task>
     <task id="LOCAL-00299" summary="Updated mriqc">
       <created>1521486939014</created>
       <option name="number" value="00299" />
@@ -762,7 +755,14 @@
       <option name="project" value="LOCAL" />
       <updated>1522178030727</updated>
     </task>
-    <option name="localTasksCounter" value="347" />
+    <task id="LOCAL-00347" summary="Updated hdc_protocol.py to dump out series_id.">
+      <created>1522178994449</created>
+      <option name="number" value="00347" />
+      <option name="presentableId" value="LOCAL-00347" />
+      <option name="project" value="LOCAL" />
+      <updated>1522178994449</updated>
+    </task>
+    <option name="localTasksCounter" value="348" />
     <servers />
   </component>
   <component name="TestHistory">
