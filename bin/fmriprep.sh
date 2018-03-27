@@ -38,3 +38,10 @@ nohup time /usr/local/bin/singularity run -w -B /cenc -B /gandg -B /bkraft1 \
                  $ACTIVE_APP_OUTPUT_PATH \
                  --work-dir $ACTIVE_APP_WORKING_PATH \
                  participant ${@} >> $log_file 2>&1 &
+
+echo "Waiting 30 seconds before checking out the log file"
+sleep 30
+
+cat $log_file
+
+echo
