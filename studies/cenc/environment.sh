@@ -20,6 +20,6 @@ export CENC_HEUDICONV_PROTOCOL=${CENC_SCRIPTS_PATH}/CENC_protocol.py
 
 export CENC_SUBJECTS_DIR=${CENC_IMAGE_PROCESSING_PATH}/freesurfer
 
-export CENC_SINGULARITY_USER_BIND_PATHS="/cenc -B /bkraft"
+export CENC_SINGULARITY_USER_BIND_PATHS="/cenc -B /gandg"
 
 export CENC_ACROSTIC_REGEX="hf[u|s][0-9]{3}"
