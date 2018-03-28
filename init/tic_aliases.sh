@@ -29,6 +29,9 @@ alias lstic='echo; echo $TIC_PATH; echo'
 alias fmriprep='/usr/local/bin/singularity run -w -B /cenc -B /gandg -B /bkraft1 $FMRIPREP_SINGULARITY_IMAGE'
 alias mriqc='/usr/local/bin/singularity run -w -B /cenc -B /gandg -B /bkraft1 $MRIQC_SINGULARITY_IMAGE'
 
+alias hdc_convert='/usr/local/bin/singularity run -w -B /cenc -B /gandg -B /bkraft1 $HDC_SINGULARITY_IMAGE -c dcm2niix '
+alias hdc_scan='/usr/local/bin/singularity run -w -B /cenc -B /gandg -B /bkraft1 $HDC_SINGULARITY_IMAGE -f /cenc/software/heudiconv/hdc_convertall.py -c none'
+
 alias ag='alias | grep'
 alias hg='history | grep '
 alias eg='env | grep '
