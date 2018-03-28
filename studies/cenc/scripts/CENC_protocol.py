@@ -16,8 +16,8 @@ def infotodict(seqinfo):
 
     """
 
-    t1 = create_key('anat/sub-{subject}_T1w')
-    t2 = create_key('anat/sub-{subject}_T2w')
+    t1 = create_key('anat/sub-{subject}_T1w.{item:02d}')
+    t2 = create_key('anat/sub-{subject}_T2w.{item:02d}')
     rest_fmri_ap = create_key('func/sub-{subject}_dir-ap_task-rest_run-{item:02d}_bold')
     rest_topup_ap = create_key('func/sub-{subject}_dir-ap_run-{item:02d}_bold')
     rest_topup_pa = create_key('func/sub-{subject}_dir-pa_run-{item:02d}_bold')
