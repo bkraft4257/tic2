@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6f3e13b3-cd58-4c4d-98f6-1a68f8358bfb" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/studies/_new_study_template/hdc_convertall.py" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/init/tic_aliases.sh" afterPath="$PROJECT_DIR$/init/tic_aliases.sh" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -62,26 +60,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="netprep.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/bin/netprep.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="4046">
-              <caret line="249" column="67" lean-forward="false" selection-start-line="249" selection-start-column="67" selection-end-line="249" selection-end-column="67" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="hfpef_gi_netprep.sh" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/studies/hfpef/scripts/hfpef_gi_netprep.sh">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="hfpef_conn_setup.sh" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/studies/hfpef/scripts/hfpef_conn_setup.sh">
           <provider selected="true" editor-type-id="text-editor">
@@ -92,11 +70,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="creating_new_study.md" pinned="false" current-in-tab="false">
+      <file leaf-file-name="creating_new_study.md" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/docs/source/other/creating_new_study.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="192">
+              <first_editor relative-caret-position="-745">
                 <caret line="12" column="70" lean-forward="false" selection-start-line="12" selection-start-column="70" selection-end-line="12" selection-end-column="70" />
                 <folding />
               </first_editor>
@@ -122,7 +100,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="tic_aliases.sh" pinned="false" current-in-tab="true">
+      <file leaf-file-name="tic_aliases.sh" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/init/tic_aliases.sh">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="393">
@@ -441,13 +419,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1517948604886</updated>
-    </task>
-    <task id="LOCAL-00303" summary="Updated mriqc">
-      <created>1521488605364</created>
-      <option name="number" value="00303" />
-      <option name="presentableId" value="LOCAL-00303" />
-      <option name="project" value="LOCAL" />
-      <updated>1521488605364</updated>
     </task>
     <task id="LOCAL-00304" summary="Updated mriqc.  There was a &amp;&gt; instead of &amp;&gt;&gt; bug in the code.">
       <created>1521734700736</created>
@@ -785,7 +756,14 @@
       <option name="project" value="LOCAL" />
       <updated>1522251135336</updated>
     </task>
-    <option name="localTasksCounter" value="352" />
+    <task id="LOCAL-00352" summary="Testing creating a new study.  hdc_scan and hdc_convert still needed.">
+      <created>1522251441257</created>
+      <option name="number" value="00352" />
+      <option name="presentableId" value="LOCAL-00352" />
+      <option name="project" value="LOCAL" />
+      <updated>1522251441257</updated>
+    </task>
+    <option name="localTasksCounter" value="353" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -1262,19 +1240,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/docs/source/other/creating_new_study.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="192">
-            <caret line="12" column="70" lean-forward="false" selection-start-line="12" selection-start-column="70" selection-end-line="12" selection-end-column="70" />
-            <folding />
-          </first_editor>
-          <second_editor>
-            <js_state />
-          </second_editor>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/docs/source/other/heudiconv.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
         <state split_layout="SPLIT">
@@ -1301,6 +1266,19 @@
         <state relative-caret-position="393">
           <caret line="32" column="86" lean-forward="false" selection-start-line="32" selection-start-column="86" selection-end-line="32" selection-end-column="86" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docs/source/other/creating_new_study.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="-745">
+            <caret line="12" column="70" lean-forward="false" selection-start-line="12" selection-start-column="70" selection-end-line="12" selection-end-column="70" />
+            <folding />
+          </first_editor>
+          <second_editor>
+            <js_state />
+          </second_editor>
         </state>
       </provider>
     </entry>
