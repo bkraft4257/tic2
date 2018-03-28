@@ -5,6 +5,8 @@
 echo
 echo $ACTIVE_STUDY
 echo
+echo 'ACTIVE_ACROSTIC_REGEX              = ' $ACTIVE_ACROSTIC_REGEX
+echo
 echo 'ACTIVE_SCRIPTS_PATH                = ' $ACTIVE_SCRIPTS_PATH
 echo 'ACTIVE_PATH                        = ' $ACTIVE_PATH
 echo 'ACTIVE_BIDS_PATH                   = ' $ACTIVE_BIDS_PATH

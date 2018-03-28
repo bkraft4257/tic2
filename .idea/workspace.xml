@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="6f3e13b3-cd58-4c4d-98f6-1a68f8358bfb" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/bin/processing_status.py" afterPath="$PROJECT_DIR$/bin/processing_status.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -14,7 +13,7 @@
   </component>
   <component name="CoverageDataManager">
     <SUITE FILE_PATH="coverage/tic_core$py_test_in_tests.coverage" NAME="py.test in tests Coverage Results" MODIFIED="1521219130892" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
-    <SUITE FILE_PATH="coverage/tic_core$py_test_in_test_plot_overlay_py.coverage" NAME="py.test in test_plot_overlay.py Coverage Results" MODIFIED="1521475279384" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
+    <SUITE FILE_PATH="coverage/tic_core$py_test_in_test_plot_overlay_py.coverage" NAME="py.test in test_plot_overlay.py Coverage Results" MODIFIED="1522099475199" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
     <SUITE FILE_PATH="coverage/tic_core$plot_overlay.coverage" NAME="plot_overlay Coverage Results" MODIFIED="1521475109051" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tic_core" />
   </component>
   <component name="DatabaseView">
@@ -34,95 +33,85 @@
       <file leaf-file-name="mriqc.sh" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/bin/mriqc.sh">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="600">
-              <caret line="60" column="0" lean-forward="true" selection-start-line="60" selection-start-column="0" selection-end-line="60" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="fmriprep.sh" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/bin/fmriprep.sh">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="663">
-              <caret line="39" column="53" lean-forward="true" selection-start-line="39" selection-start-column="47" selection-end-line="39" selection-end-column="53" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="bids_app_status.sh" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/studies/active/scripts/bids_app_status.sh">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
-              <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="plot_overlay.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/bin/plot_overlay.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="15" column="17" lean-forward="false" selection-start-line="15" selection-start-column="17" selection-end-line="15" selection-end-column="17" />
+            <state relative-caret-position="340">
+              <caret line="20" column="0" lean-forward="false" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="aliases.sh" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/studies/active/aliases.sh">
+        <entry file="file://$PROJECT_DIR$/studies/hfpef/aliases.sh">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="11" column="39" lean-forward="false" selection-start-line="11" selection-start-column="39" selection-end-line="11" selection-end-column="39" />
+            <state relative-caret-position="306">
+              <caret line="18" column="54" lean-forward="false" selection-start-line="18" selection-start-column="54" selection-end-line="18" selection-end-column="54" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="lnflatten.sh" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/bin/lnflatten.sh">
+      <file leaf-file-name="hfpef_gi_netprep_epi.sh" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/studies/hfpef/scripts/hfpef_gi_netprep_epi.sh">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state relative-caret-position="507">
+              <caret line="47" column="0" lean-forward="false" selection-start-line="46" selection-start-column="0" selection-end-line="47" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="processing_status.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/bin/processing_status.py">
+      <file leaf-file-name="hfpef_conn_setup.sh" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/studies/hfpef/scripts/hfpef_conn_setup.sh">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="291">
-              <caret line="204" column="17" lean-forward="false" selection-start-line="204" selection-start-column="17" selection-end-line="204" selection-end-column="17" />
+            <state relative-caret-position="408">
+              <caret line="24" column="39" lean-forward="false" selection-start-line="24" selection-start-column="39" selection-end-line="24" selection-end-column="39" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="tic_functions.sh" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/bin/tic_functions.sh">
+      <file leaf-file-name="creating_new_study.md" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/docs/source/other/creating_new_study.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="-745">
+                <caret line="12" column="70" lean-forward="false" selection-start-line="12" selection-start-column="70" selection-end-line="12" selection-end-column="70" />
+                <folding />
+              </first_editor>
+              <second_editor>
+                <js_state />
+              </second_editor>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="heudiconv.md" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/docs/source/other/heudiconv.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="-73">
+                <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+                <folding />
+              </first_editor>
+              <second_editor>
+                <js_state />
+              </second_editor>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="tic_aliases.sh" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/init/tic_aliases.sh">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="340">
-              <caret line="20" column="0" lean-forward="true" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
+            <state relative-caret-position="393">
+              <caret line="32" column="86" lean-forward="false" selection-start-line="32" selection-start-column="86" selection-end-line="32" selection-end-column="86" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="create_acrostic_list.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/bin/create_acrostic_list.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="672">
-              <caret line="61" column="96" lean-forward="false" selection-start-line="61" selection-start-column="96" selection-end-line="61" selection-end-column="96" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="create_acrostic_list.sh" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/bin/create_acrostic_list.sh">
+      <file leaf-file-name="hdc_convertall.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/studies/_new_study_template/hdc_convertall.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="0">
               <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -144,10 +133,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>heudicon</find>
-      <find />
-      <find>echotime</find>
-      <find>index</find>
       <find>run</find>
       <find>dwi</find>
       <find>aicq</find>
@@ -167,13 +152,17 @@
       <find>verbose</find>
       <find>display_mode</find>
       <find>_sbref</find>
-      <find>sbref</find>
       <find>rest_fmri_</find>
       <find>fmap</find>
       <find>app</find>
       <find>acrostic_session</find>
       <find>subject_only</find>
       <find>unstack</find>
+      <find>sbref</find>
+      <find>chmod</find>
+      <find>panoddi</find>
+      <find>netprep_input</find>
+      <find>applytransforms</find>
     </findStrings>
     <replaceStrings>
       <replace>01d</replace>
@@ -185,6 +174,7 @@
       <replace>$log_file</replace>
       <replace>tee -a</replace>
       <replace>$HFPEF_SCRIPTS_PATH/</replace>
+      <replace>conn_input</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -199,23 +189,8 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/docs/source/conf.py" />
-        <option value="$PROJECT_DIR$/bin/fmriprep.sh" />
-        <option value="$PROJECT_DIR$/docs/source/other/quick_reference.md" />
-        <option value="$PROJECT_DIR$/bin/as_list.sh" />
-        <option value="$PROJECT_DIR$/studies/_new_study_template/hdc_protocol_template.py" />
-        <option value="$PROJECT_DIR$/studies/hfpef/scripts/hfpef_protocol_v2b.py" />
-        <option value="$PROJECT_DIR$/studies/hfpef/scripts/hfpef_clean_bids.sh" />
-        <option value="$PROJECT_DIR$/studies/hfpef/scripts/hfpef_clean_bids_2b.sh" />
-        <option value="$PROJECT_DIR$/docs/source/other/heudiconv.rst.md" />
-        <option value="$PROJECT_DIR$/bin/hdc_singularity.sh" />
-        <option value="$PROJECT_DIR$/bin/hdc_look.py" />
-        <option value="$PROJECT_DIR$/studies/hfpef/environment.sh" />
-        <option value="$PROJECT_DIR$/studies/imove/environment.sh" />
-        <option value="$PROJECT_DIR$/init/tic_aliases.sh" />
         <option value="$PROJECT_DIR$/bin/hdc.sh" />
         <option value="$PROJECT_DIR$/bin/tic_bids_validator.sh" />
-        <option value="$PROJECT_DIR$/bin/active_study_info.sh" />
         <option value="$PROJECT_DIR$/docs/source/other/heudiconv.md" />
         <option value="$PROJECT_DIR$/init/tic_wake_aging1a_environment.sh" />
         <option value="$PROJECT_DIR$/bin/tic_info.sh" />
@@ -228,11 +203,8 @@
         <option value="$PROJECT_DIR$/studies/hfpef/scripts/hfpef_bids_clean.sh" />
         <option value="$PROJECT_DIR$/studies/synergy/scripts/syn_bids_clean.sh" />
         <option value="$PROJECT_DIR$/bin/hdc_clean.py" />
-        <option value="$PROJECT_DIR$/studies/hfpef/aliases.sh" />
-        <option value="$PROJECT_DIR$/studies/synergy/environment.sh" />
         <option value="$PROJECT_DIR$/studies/synergy/synergy_init.sh" />
         <option value="$PROJECT_DIR$/studies/synergy/scripts/syn_clean_bids.py" />
-        <option value="$PROJECT_DIR$/bin/study_switcher.py" />
         <option value="$PROJECT_DIR$/docs/source/for_developers/git.md" />
         <option value="$PROJECT_DIR$/docs/source/for_developers/creating_python_package.md" />
         <option value="$PROJECT_DIR$/tests/test_plot_overlay.py.java" />
@@ -242,14 +214,32 @@
         <option value="$PROJECT_DIR$/bin/plot_overlay.py" />
         <option value="$PROJECT_DIR$/tests/test_plot_overlay.py" />
         <option value="$PROJECT_DIR$/bin/clean_bids.sh" />
-        <option value="$PROJECT_DIR$/studies/imove/scripts/imove_protocol.py" />
-        <option value="$PROJECT_DIR$/studies/imove/scripts/imove_clean_bids.sh" />
         <option value="$PROJECT_DIR$/studies/hfpef/scripts/hfpef_bids_clean_2.py" />
         <option value="$PROJECT_DIR$/studies/active/scripts/bids_app_status.sh" />
         <option value="$PROJECT_DIR$/studies/active/aliases.sh" />
         <option value="$PROJECT_DIR$/bin/create_acrostic_list.py" />
-        <option value="$PROJECT_DIR$/bin/mriqc.sh" />
         <option value="$PROJECT_DIR$/bin/processing_status.py" />
+        <option value="$PROJECT_DIR$/bin/update_study_init_links.sh" />
+        <option value="$PROJECT_DIR$/bin/update_study_init_links.py" />
+        <option value="$PROJECT_DIR$/bin/active_study_info.sh" />
+        <option value="$PROJECT_DIR$/bin/study_switcher.py" />
+        <option value="$PROJECT_DIR$/studies/synergy/environment.sh" />
+        <option value="$PROJECT_DIR$/studies/infinite/environment.sh" />
+        <option value="$PROJECT_DIR$/studies/imove/environment.sh" />
+        <option value="$PROJECT_DIR$/studies/hfpef/environment.sh" />
+        <option value="$PROJECT_DIR$/docs/source/other/quick_reference.md" />
+        <option value="$PROJECT_DIR$/studies/imove/scripts/imove_protocol.py" />
+        <option value="$PROJECT_DIR$/studies/imove/scripts/imove_clean_bids.sh" />
+        <option value="$PROJECT_DIR$/studies/hfpef/scripts/hfpef_clean_bids.sh" />
+        <option value="$PROJECT_DIR$/bin/hdc_look.py" />
+        <option value="$PROJECT_DIR$/bin/fmriprep.sh" />
+        <option value="$PROJECT_DIR$/bin/mriqc.sh" />
+        <option value="$PROJECT_DIR$/studies/hfpef/scripts/hfpef_gi_netprep_epi.sh" />
+        <option value="$PROJECT_DIR$/studies/hfpef/aliases.sh" />
+        <option value="$PROJECT_DIR$/studies/hfpef/scripts/hfpef_conn_setup.sh" />
+        <option value="$PROJECT_DIR$/bin/netprep.py" />
+        <option value="$PROJECT_DIR$/docs/source/other/creating_new_study.md" />
+        <option value="$PROJECT_DIR$/init/tic_aliases.sh" />
       </list>
     </option>
   </component>
@@ -259,11 +249,11 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="-439" />
-    <option name="y" value="-1332" />
-    <option name="width" value="1631" />
-    <option name="height" value="1083" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="714" />
+    <option name="y" value="23" />
+    <option name="width" value="80" />
+    <option name="height" value="22" />
   </component>
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
@@ -271,7 +261,7 @@
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
       <flattenPackages />
-      <showMembers />
+      <showMembers ProjectPane="false" />
       <showModules />
       <showLibraryContents />
       <hideEmptyPackages />
@@ -283,6 +273,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scratches" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -293,25 +285,12 @@
             <path>
               <item name="tic_core" type="b2602c69:ProjectViewProjectNode" />
               <item name="tic_core" type="462c0819:PsiDirectoryNode" />
-              <item name="bin" type="462c0819:PsiDirectoryNode" />
+              <item name="init" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="tic_core" type="b2602c69:ProjectViewProjectNode" />
               <item name="tic_core" type="462c0819:PsiDirectoryNode" />
-              <item name="docs" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="tic_core" type="b2602c69:ProjectViewProjectNode" />
-              <item name="tic_core" type="462c0819:PsiDirectoryNode" />
-              <item name="docs" type="462c0819:PsiDirectoryNode" />
-              <item name="source" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="tic_core" type="b2602c69:ProjectViewProjectNode" />
-              <item name="tic_core" type="462c0819:PsiDirectoryNode" />
-              <item name="docs" type="462c0819:PsiDirectoryNode" />
-              <item name="source" type="462c0819:PsiDirectoryNode" />
-              <item name="for_developers" type="462c0819:PsiDirectoryNode" />
+              <item name="nipype_workflows" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="tic_core" type="b2602c69:ProjectViewProjectNode" />
@@ -322,78 +301,49 @@
               <item name="tic_core" type="b2602c69:ProjectViewProjectNode" />
               <item name="tic_core" type="462c0819:PsiDirectoryNode" />
               <item name="studies" type="462c0819:PsiDirectoryNode" />
-              <item name="active" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="tic_core" type="b2602c69:ProjectViewProjectNode" />
-              <item name="tic_core" type="462c0819:PsiDirectoryNode" />
-              <item name="studies" type="462c0819:PsiDirectoryNode" />
-              <item name="active" type="462c0819:PsiDirectoryNode" />
-              <item name="scripts" type="462c0819:PsiDirectoryNode" />
+              <item name="_new_study_template" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="tic_core" type="b2602c69:ProjectViewProjectNode" />
               <item name="tic_core" type="462c0819:PsiDirectoryNode" />
               <item name="studies" type="462c0819:PsiDirectoryNode" />
               <item name="hfpef" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="tic_core" type="b2602c69:ProjectViewProjectNode" />
-              <item name="tic_core" type="462c0819:PsiDirectoryNode" />
-              <item name="studies" type="462c0819:PsiDirectoryNode" />
-              <item name="hfpef" type="462c0819:PsiDirectoryNode" />
-              <item name="scripts" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="tic_core" type="b2602c69:ProjectViewProjectNode" />
-              <item name="tic_core" type="462c0819:PsiDirectoryNode" />
-              <item name="studies" type="462c0819:PsiDirectoryNode" />
-              <item name="imove" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="tic_core" type="b2602c69:ProjectViewProjectNode" />
-              <item name="tic_core" type="462c0819:PsiDirectoryNode" />
-              <item name="studies" type="462c0819:PsiDirectoryNode" />
-              <item name="imove" type="462c0819:PsiDirectoryNode" />
-              <item name="scripts" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="tic_core" type="b2602c69:ProjectViewProjectNode" />
-              <item name="tic_core" type="462c0819:PsiDirectoryNode" />
-              <item name="studies" type="462c0819:PsiDirectoryNode" />
-              <item name="synergy" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="tic_core" type="b2602c69:ProjectViewProjectNode" />
               <item name="tic_core" type="462c0819:PsiDirectoryNode" />
               <item name="tests" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="tic_core" type="b2602c69:ProjectViewProjectNode" />
+              <item name="tic_core" type="462c0819:PsiDirectoryNode" />
+              <item name="tic_core" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scratches" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="settings.editor.selected.configurable" value="vcs.Perforce" />
+    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
     <property name="SearchEverywhereHistoryKey" value="hdc.sh&#9;FILE&#9;file:///Users/bkraft/projects/tic_core/bin/hdc.sh&#10;study&#9;FILE&#9;file:///Users/bkraft/projects/tic_core/bin/study_switcher.py" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/bin" />
-      <recent name="$PROJECT_DIR$/studies/synergy/scripts" />
-      <recent name="$PROJECT_DIR$/studies/hfpef/scripts" />
-      <recent name="$PROJECT_DIR$/docs/source/other" />
-      <recent name="$PROJECT_DIR$/studies/imove/scripts" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/bin" />
       <recent name="$PROJECT_DIR$/tic_core" />
       <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/studies/active/scripts" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/studies/hfpef/scripts" />
+      <recent name="$PROJECT_DIR$/bin" />
+      <recent name="$PROJECT_DIR$/studies/synergy/scripts" />
+      <recent name="$PROJECT_DIR$/docs/source/other" />
+      <recent name="$PROJECT_DIR$/studies/imove/scripts" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -428,22 +378,6 @@
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
     </configuration>
-    <configuration name="py.test in test_plot_overlay.py" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tests" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="tic_core" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="_new_keywords" value="&quot;&quot;" />
-      <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;$PROJECT_DIR$/tests/test_plot_overlay.py&quot;" />
-      <option name="_new_targetType" value="&quot;PATH&quot;" />
-    </configuration>
     <configuration name="py.test in tests" type="tests" factoryName="py.test" singleton="true" temporary="true" nameIsGenerated="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -461,15 +395,14 @@
       <option name="_new_targetType" value="&quot;PATH&quot;" />
     </configuration>
     <list size="3">
-      <item index="0" class="java.lang.String" itemvalue="Python tests.py.test in tests" />
-      <item index="1" class="java.lang.String" itemvalue="Python.plot_overlay" />
+      <item index="0" class="java.lang.String" itemvalue="Python.plot_overlay" />
+      <item index="1" class="java.lang.String" itemvalue="Python tests.py.test in tests" />
       <item index="2" class="java.lang.String" itemvalue="Python tests.py.test in test_plot_overlay.py" />
     </list>
     <recent_temporary>
-      <list size="3">
-        <item index="0" class="java.lang.String" itemvalue="Python tests.py.test in test_plot_overlay.py" />
-        <item index="1" class="java.lang.String" itemvalue="Python.plot_overlay" />
-        <item index="2" class="java.lang.String" itemvalue="Python tests.py.test in tests" />
+      <list size="2">
+        <item index="0" class="java.lang.String" itemvalue="Python.plot_overlay" />
+        <item index="1" class="java.lang.String" itemvalue="Python tests.py.test in tests" />
       </list>
     </recent_temporary>
   </component>
@@ -486,209 +419,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1517948604886</updated>
-    </task>
-    <task id="LOCAL-00275" summary="Wrote new function to create acrostic.csv">
-      <created>1521150297871</created>
-      <option name="number" value="00275" />
-      <option name="presentableId" value="LOCAL-00275" />
-      <option name="project" value="LOCAL" />
-      <updated>1521150297871</updated>
-    </task>
-    <task id="LOCAL-00276" summary="Wrote new function to create acrostic.csv">
-      <created>1521150338488</created>
-      <option name="number" value="00276" />
-      <option name="presentableId" value="LOCAL-00276" />
-      <option name="project" value="LOCAL" />
-      <updated>1521150338488</updated>
-    </task>
-    <task id="LOCAL-00277" summary="Wrote new function to create acrostic.csv">
-      <created>1521150393833</created>
-      <option name="number" value="00277" />
-      <option name="presentableId" value="LOCAL-00277" />
-      <option name="project" value="LOCAL" />
-      <updated>1521150393833</updated>
-    </task>
-    <task id="LOCAL-00278" summary="Wrote new function to create acrostic.csv">
-      <created>1521150420665</created>
-      <option name="number" value="00278" />
-      <option name="presentableId" value="LOCAL-00278" />
-      <option name="project" value="LOCAL" />
-      <updated>1521150420665</updated>
-    </task>
-    <task id="LOCAL-00279" summary="Wrote new function to create acrostic.csv">
-      <created>1521150507757</created>
-      <option name="number" value="00279" />
-      <option name="presentableId" value="LOCAL-00279" />
-      <option name="project" value="LOCAL" />
-      <updated>1521150507757</updated>
-    </task>
-    <task id="LOCAL-00280" summary="Wrote new function to create acrostic.csv">
-      <created>1521150592000</created>
-      <option name="number" value="00280" />
-      <option name="presentableId" value="LOCAL-00280" />
-      <option name="project" value="LOCAL" />
-      <updated>1521150592000</updated>
-    </task>
-    <task id="LOCAL-00281" summary="Wrote new function to create acrostic.csv">
-      <created>1521150692951</created>
-      <option name="number" value="00281" />
-      <option name="presentableId" value="LOCAL-00281" />
-      <option name="project" value="LOCAL" />
-      <updated>1521150692951</updated>
-    </task>
-    <task id="LOCAL-00282" summary="Wrote new function to create acrostic.csv">
-      <created>1521150746883</created>
-      <option name="number" value="00282" />
-      <option name="presentableId" value="LOCAL-00282" />
-      <option name="project" value="LOCAL" />
-      <updated>1521150746883</updated>
-    </task>
-    <task id="LOCAL-00283" summary="Wrote new function to create acrostic.csv">
-      <created>1521151949208</created>
-      <option name="number" value="00283" />
-      <option name="presentableId" value="LOCAL-00283" />
-      <option name="project" value="LOCAL" />
-      <updated>1521151949208</updated>
-    </task>
-    <task id="LOCAL-00284" summary="Wrote new function to create acrostic.csv">
-      <created>1521152216528</created>
-      <option name="number" value="00284" />
-      <option name="presentableId" value="LOCAL-00284" />
-      <option name="project" value="LOCAL" />
-      <updated>1521152216528</updated>
-    </task>
-    <task id="LOCAL-00285" summary="Wrote new function to create acrostic.csv">
-      <created>1521152288629</created>
-      <option name="number" value="00285" />
-      <option name="presentableId" value="LOCAL-00285" />
-      <option name="project" value="LOCAL" />
-      <updated>1521152288629</updated>
-    </task>
-    <task id="LOCAL-00286" summary="Wrote new function to create acrostic.csv">
-      <created>1521152352431</created>
-      <option name="number" value="00286" />
-      <option name="presentableId" value="LOCAL-00286" />
-      <option name="project" value="LOCAL" />
-      <updated>1521152352431</updated>
-    </task>
-    <task id="LOCAL-00287" summary="Wrote new function to create acrostic.csv">
-      <created>1521152384174</created>
-      <option name="number" value="00287" />
-      <option name="presentableId" value="LOCAL-00287" />
-      <option name="project" value="LOCAL" />
-      <updated>1521152384174</updated>
-    </task>
-    <task id="LOCAL-00288" summary="Wrote new function to create acrostic.csv">
-      <created>1521152456333</created>
-      <option name="number" value="00288" />
-      <option name="presentableId" value="LOCAL-00288" />
-      <option name="project" value="LOCAL" />
-      <updated>1521152456333</updated>
-    </task>
-    <task id="LOCAL-00289" summary="Wrote new function to create acrostic.csv">
-      <created>1521208447271</created>
-      <option name="number" value="00289" />
-      <option name="presentableId" value="LOCAL-00289" />
-      <option name="project" value="LOCAL" />
-      <updated>1521208447271</updated>
-    </task>
-    <task id="LOCAL-00290" summary="Added plot_overlay to tic_core.">
-      <created>1521219605115</created>
-      <option name="number" value="00290" />
-      <option name="presentableId" value="LOCAL-00290" />
-      <option name="project" value="LOCAL" />
-      <updated>1521219605115</updated>
-    </task>
-    <task id="LOCAL-00291" summary="Added plot_overlay to tic_core.">
-      <created>1521221684373</created>
-      <option name="number" value="00291" />
-      <option name="presentableId" value="LOCAL-00291" />
-      <option name="project" value="LOCAL" />
-      <updated>1521221684373</updated>
-    </task>
-    <task id="LOCAL-00292" summary="Refactored plot_overlay.py so it is in the bin directory as a &#10;command line function.">
-      <created>1521475853052</created>
-      <option name="number" value="00292" />
-      <option name="presentableId" value="LOCAL-00292" />
-      <option name="project" value="LOCAL" />
-      <updated>1521475853053</updated>
-    </task>
-    <task id="LOCAL-00293" summary="Updated imove_protocol. &#10;&#10;1) sbref scans are written to their own subdirectory.  .bidsignore removes them from bids-validator.&#10;2) remove magnitude and phasediff from fmap.  These are no longer being acquired.">
-      <created>1521480874476</created>
-      <option name="number" value="00293" />
-      <option name="presentableId" value="LOCAL-00293" />
-      <option name="project" value="LOCAL" />
-      <updated>1521480874476</updated>
-    </task>
-    <task id="LOCAL-00294" summary="Updated imove_protocol. &#10;&#10;1) sbref scans are written to their own subdirectory.  .bidsignore removes them from bids-validator.&#10;2) remove magnitude and phasediff from fmap.  These are no longer being acquired.">
-      <created>1521481100469</created>
-      <option name="number" value="00294" />
-      <option name="presentableId" value="LOCAL-00294" />
-      <option name="project" value="LOCAL" />
-      <updated>1521481100469</updated>
-    </task>
-    <task id="LOCAL-00295" summary="Updated imove_protocol. &#10;&#10;1) sbref scans are written to their own subdirectory.  .bidsignore removes them from bids-validator.&#10;2) remove magnitude and phasediff from fmap.  These are no longer being acquired.">
-      <created>1521481119930</created>
-      <option name="number" value="00295" />
-      <option name="presentableId" value="LOCAL-00295" />
-      <option name="project" value="LOCAL" />
-      <updated>1521481119930</updated>
-    </task>
-    <task id="LOCAL-00296" summary="Updated imove_protocol. &#10;&#10;1) sbref scans are written to their own subdirectory.  .bidsignore removes them from bids-validator.&#10;2) remove magnitude and phasediff from fmap.  These are no longer being acquired.">
-      <created>1521481260422</created>
-      <option name="number" value="00296" />
-      <option name="presentableId" value="LOCAL-00296" />
-      <option name="project" value="LOCAL" />
-      <updated>1521481260422</updated>
-    </task>
-    <task id="LOCAL-00297" summary="Updated imove_protocol. &#10;&#10;1) sbref scans are written to their own subdirectory.  .bidsignore removes them from bids-validator.&#10;2) remove magnitude and phasediff from fmap.  These are no longer being acquired.">
-      <created>1521481678500</created>
-      <option name="number" value="00297" />
-      <option name="presentableId" value="LOCAL-00297" />
-      <option name="project" value="LOCAL" />
-      <updated>1521481678500</updated>
-    </task>
-    <task id="LOCAL-00298" summary="Updated mriqc">
-      <created>1521486620356</created>
-      <option name="number" value="00298" />
-      <option name="presentableId" value="LOCAL-00298" />
-      <option name="project" value="LOCAL" />
-      <updated>1521486620356</updated>
-    </task>
-    <task id="LOCAL-00299" summary="Updated mriqc">
-      <created>1521486939014</created>
-      <option name="number" value="00299" />
-      <option name="presentableId" value="LOCAL-00299" />
-      <option name="project" value="LOCAL" />
-      <updated>1521486939014</updated>
-    </task>
-    <task id="LOCAL-00300" summary="Updated mriqc">
-      <created>1521487221090</created>
-      <option name="number" value="00300" />
-      <option name="presentableId" value="LOCAL-00300" />
-      <option name="project" value="LOCAL" />
-      <updated>1521487221090</updated>
-    </task>
-    <task id="LOCAL-00301" summary="Updated mriqc">
-      <created>1521487535864</created>
-      <option name="number" value="00301" />
-      <option name="presentableId" value="LOCAL-00301" />
-      <option name="project" value="LOCAL" />
-      <updated>1521487535864</updated>
-    </task>
-    <task id="LOCAL-00302" summary="Updated mriqc">
-      <created>1521488491554</created>
-      <option name="number" value="00302" />
-      <option name="presentableId" value="LOCAL-00302" />
-      <option name="project" value="LOCAL" />
-      <updated>1521488491554</updated>
-    </task>
-    <task id="LOCAL-00303" summary="Updated mriqc">
-      <created>1521488605364</created>
-      <option name="number" value="00303" />
-      <option name="presentableId" value="LOCAL-00303" />
-      <option name="project" value="LOCAL" />
-      <updated>1521488605364</updated>
     </task>
     <task id="LOCAL-00304" summary="Updated mriqc.  There was a &amp;&gt; instead of &amp;&gt;&gt; bug in the code.">
       <created>1521734700736</created>
@@ -830,7 +560,210 @@
       <option name="project" value="LOCAL" />
       <updated>1521754401989</updated>
     </task>
-    <option name="localTasksCounter" value="324" />
+    <task id="LOCAL-00324" summary="Added switch to change study init links.">
+      <created>1521820044440</created>
+      <option name="number" value="00324" />
+      <option name="presentableId" value="LOCAL-00324" />
+      <option name="project" value="LOCAL" />
+      <updated>1521820044440</updated>
+    </task>
+    <task id="LOCAL-00325" summary="Added switch to change study init links.">
+      <created>1521820822571</created>
+      <option name="number" value="00325" />
+      <option name="presentableId" value="LOCAL-00325" />
+      <option name="project" value="LOCAL" />
+      <updated>1521820822571</updated>
+    </task>
+    <task id="LOCAL-00326" summary="Added switch to change study init links.">
+      <created>1521820841833</created>
+      <option name="number" value="00326" />
+      <option name="presentableId" value="LOCAL-00326" />
+      <option name="project" value="LOCAL" />
+      <updated>1521820841833</updated>
+    </task>
+    <task id="LOCAL-00327" summary="Added switch to change study init links.">
+      <created>1521821058441</created>
+      <option name="number" value="00327" />
+      <option name="presentableId" value="LOCAL-00327" />
+      <option name="project" value="LOCAL" />
+      <updated>1521821058441</updated>
+    </task>
+    <task id="LOCAL-00328" summary="Added switch to change study init links.">
+      <created>1521821159493</created>
+      <option name="number" value="00328" />
+      <option name="presentableId" value="LOCAL-00328" />
+      <option name="project" value="LOCAL" />
+      <updated>1521821159493</updated>
+    </task>
+    <task id="LOCAL-00329" summary="Added switch to change study init links.">
+      <created>1521821312537</created>
+      <option name="number" value="00329" />
+      <option name="presentableId" value="LOCAL-00329" />
+      <option name="project" value="LOCAL" />
+      <updated>1521821312537</updated>
+    </task>
+    <task id="LOCAL-00330" summary="Added switch to change study init links.">
+      <created>1521821614655</created>
+      <option name="number" value="00330" />
+      <option name="presentableId" value="LOCAL-00330" />
+      <option name="project" value="LOCAL" />
+      <updated>1521821614655</updated>
+    </task>
+    <task id="LOCAL-00331" summary="Update imove protocol to include numbering.">
+      <created>1521822280267</created>
+      <option name="number" value="00331" />
+      <option name="presentableId" value="LOCAL-00331" />
+      <option name="project" value="LOCAL" />
+      <updated>1521822280267</updated>
+    </task>
+    <task id="LOCAL-00332" summary="Update imove protocol to include numbering.">
+      <created>1521823012437</created>
+      <option name="number" value="00332" />
+      <option name="presentableId" value="LOCAL-00332" />
+      <option name="project" value="LOCAL" />
+      <updated>1521823012437</updated>
+    </task>
+    <task id="LOCAL-00333" summary="Deleted old files. Created an ACTIVE_ACROSTIC_REGEX environment variable.">
+      <created>1521824352352</created>
+      <option name="number" value="00333" />
+      <option name="presentableId" value="LOCAL-00333" />
+      <option name="project" value="LOCAL" />
+      <updated>1521824352352</updated>
+    </task>
+    <task id="LOCAL-00334" summary="Deleted old files. Created an ACTIVE_ACROSTIC_REGEX environment variable.">
+      <created>1521824452835</created>
+      <option name="number" value="00334" />
+      <option name="presentableId" value="LOCAL-00334" />
+      <option name="project" value="LOCAL" />
+      <updated>1521824452835</updated>
+    </task>
+    <task id="LOCAL-00335" summary="Deleted old files. Created an ACTIVE_ACROSTIC_REGEX environment variable.">
+      <created>1521824485281</created>
+      <option name="number" value="00335" />
+      <option name="presentableId" value="LOCAL-00335" />
+      <option name="project" value="LOCAL" />
+      <updated>1521824485281</updated>
+    </task>
+    <task id="LOCAL-00336" summary="Deleted old files. Created an ACTIVE_ACROSTIC_REGEX environment variable.">
+      <created>1521824570777</created>
+      <option name="number" value="00336" />
+      <option name="presentableId" value="LOCAL-00336" />
+      <option name="project" value="LOCAL" />
+      <updated>1521824570777</updated>
+    </task>
+    <task id="LOCAL-00337" summary="Deleted old files. Created an ACTIVE_ACROSTIC_REGEX environment variable.">
+      <created>1521824846710</created>
+      <option name="number" value="00337" />
+      <option name="presentableId" value="LOCAL-00337" />
+      <option name="project" value="LOCAL" />
+      <updated>1521824846710</updated>
+    </task>
+    <task id="LOCAL-00338" summary="Deleted old files. Created an ACTIVE_ACROSTIC_REGEX environment variable.">
+      <created>1521824973183</created>
+      <option name="number" value="00338" />
+      <option name="presentableId" value="LOCAL-00338" />
+      <option name="project" value="LOCAL" />
+      <updated>1521824973183</updated>
+    </task>
+    <task id="LOCAL-00339" summary="Deleted old files. Created an ACTIVE_ACROSTIC_REGEX environment variable.">
+      <created>1521829775036</created>
+      <option name="number" value="00339" />
+      <option name="presentableId" value="LOCAL-00339" />
+      <option name="project" value="LOCAL" />
+      <updated>1521829775036</updated>
+    </task>
+    <task id="LOCAL-00340" summary="Updated Imove protocol.  Renamed hfpef_bids_clean.sh to hfpef_bids_clean.sh  to match alias.">
+      <created>1521833372230</created>
+      <option name="number" value="00340" />
+      <option name="presentableId" value="LOCAL-00340" />
+      <option name="project" value="LOCAL" />
+      <updated>1521833372230</updated>
+    </task>
+    <task id="LOCAL-00341" summary="Excluded swi from the last find.">
+      <created>1521833676435</created>
+      <option name="number" value="00341" />
+      <option name="presentableId" value="LOCAL-00341" />
+      <option name="project" value="LOCAL" />
+      <updated>1521833676436</updated>
+    </task>
+    <task id="LOCAL-00342" summary="Fixed bug.  $HFPEF_BIDS_PATH had an extra $ within {}">
+      <created>1521834120573</created>
+      <option name="number" value="00342" />
+      <option name="presentableId" value="LOCAL-00342" />
+      <option name="project" value="LOCAL" />
+      <updated>1521834120573</updated>
+    </task>
+    <task id="LOCAL-00343" summary="Updated hdc_protocol.py to dump out series_id.">
+      <created>1521835471904</created>
+      <option name="number" value="00343" />
+      <option name="presentableId" value="LOCAL-00343" />
+      <option name="project" value="LOCAL" />
+      <updated>1521835471904</updated>
+    </task>
+    <task id="LOCAL-00344" summary="Updated hdc_protocol.py to dump out series_id.">
+      <created>1522177652104</created>
+      <option name="number" value="00344" />
+      <option name="presentableId" value="LOCAL-00344" />
+      <option name="project" value="LOCAL" />
+      <updated>1522177652104</updated>
+    </task>
+    <task id="LOCAL-00345" summary="Updated hdc_protocol.py to dump out series_id.">
+      <created>1522177754988</created>
+      <option name="number" value="00345" />
+      <option name="presentableId" value="LOCAL-00345" />
+      <option name="project" value="LOCAL" />
+      <updated>1522177754989</updated>
+    </task>
+    <task id="LOCAL-00346" summary="Updated hdc_protocol.py to dump out series_id.">
+      <created>1522178030727</created>
+      <option name="number" value="00346" />
+      <option name="presentableId" value="LOCAL-00346" />
+      <option name="project" value="LOCAL" />
+      <updated>1522178030727</updated>
+    </task>
+    <task id="LOCAL-00347" summary="Updated hdc_protocol.py to dump out series_id.">
+      <created>1522178994449</created>
+      <option name="number" value="00347" />
+      <option name="presentableId" value="LOCAL-00347" />
+      <option name="project" value="LOCAL" />
+      <updated>1522178994449</updated>
+    </task>
+    <task id="LOCAL-00348" summary="Added missing workflows.">
+      <created>1522184457793</created>
+      <option name="number" value="00348" />
+      <option name="presentableId" value="LOCAL-00348" />
+      <option name="project" value="LOCAL" />
+      <updated>1522184457793</updated>
+    </task>
+    <task id="LOCAL-00349" summary="Started working on CONN">
+      <created>1522186015177</created>
+      <option name="number" value="00349" />
+      <option name="presentableId" value="LOCAL-00349" />
+      <option name="project" value="LOCAL" />
+      <updated>1522186015177</updated>
+    </task>
+    <task id="LOCAL-00350" summary="Started working on CONN">
+      <created>1522186104830</created>
+      <option name="number" value="00350" />
+      <option name="presentableId" value="LOCAL-00350" />
+      <option name="project" value="LOCAL" />
+      <updated>1522186104830</updated>
+    </task>
+    <task id="LOCAL-00351" summary="Testing creating a new study.  hdc_scan and hdc_convert still needed.">
+      <created>1522251135336</created>
+      <option name="number" value="00351" />
+      <option name="presentableId" value="LOCAL-00351" />
+      <option name="project" value="LOCAL" />
+      <updated>1522251135336</updated>
+    </task>
+    <task id="LOCAL-00352" summary="Testing creating a new study.  hdc_scan and hdc_convert still needed.">
+      <created>1522251441257</created>
+      <option name="number" value="00352" />
+      <option name="presentableId" value="LOCAL-00352" />
+      <option name="project" value="LOCAL" />
+      <updated>1522251441257</updated>
+    </task>
+    <option name="localTasksCounter" value="353" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -866,18 +799,18 @@
     </history-entry>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-439" y="-1332" width="1631" height="1083" extended-state="0" />
+    <frame x="0" y="23" width="1440" height="877" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Key Promoter X" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Regex Tester" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.46725318" sideWeight="0.31681243" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.0" sideWeight="0.31681243" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.629776" sideWeight="0.68318754" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.50287354" sideWeight="0.48106593" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.21870883" sideWeight="0.49006623" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2838263" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23462088" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3297568" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="SciView" active="false" anchor="right" auto_hide="true" internal_type="DOCKED" type="FLOATING" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -889,7 +822,7 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3289183" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3281412" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
@@ -924,16 +857,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Added ability to change permission of json and gz files." />
-    <MESSAGE value="Updating HDC documentation and API" />
-    <MESSAGE value="Cleaned up HFPEF aliases, scripts, and protocols." />
-    <MESSAGE value="Updated bids-validator and alias bv to be more expressive." />
-    <MESSAGE value="Updated Synergy protocol to function correctly with hdc_singularity image." />
-    <MESSAGE value="Updated Heudiconv singularity image from 0.3 to 0.5" />
-    <MESSAGE value="Updated tic_info to display all the singularity images." />
-    <MESSAGE value="Updated singularity image documentation.  &#10;Added ability to remove CR from DICOM images." />
-    <MESSAGE value="Updated SYNERGY protocol." />
-    <MESSAGE value="Updated SYNERGY bids cleaning." />
     <MESSAGE value="Renamed synergy_clean_bids.sh to synergy_bids_clean.sh&#10;Removed some old scripts." />
     <MESSAGE value="Removed old aliases from Synergy" />
     <MESSAGE value="Updated hdc_clean.py to remove subject directory if it is empty." />
@@ -949,14 +872,24 @@
     <MESSAGE value="Updated create_acrostic_list.py to handle single session data.&#10;Updated processing_status.py to handle single session." />
     <MESSAGE value="Updated create_acrostic_list.py to write acrostic.csv, which contains columns letting &#10;you know which sessions have been scanned, and acrostic.list which just contains &#10;a list of acrostics with no header" />
     <MESSAGE value="Fixed bug when a file or files was selected that did not match bids convention." />
-    <option name="LAST_COMMIT_MESSAGE" value="Fixed bug when a file or files was selected that did not match bids convention." />
+    <MESSAGE value="Added switch to change study init links." />
+    <MESSAGE value="Update imove protocol to include numbering." />
+    <MESSAGE value="Deleted old files. Created an ACTIVE_ACROSTIC_REGEX environment variable." />
+    <MESSAGE value="Updated Imove protocol.  Renamed hfpef_bids_clean.sh to hfpef_bids_clean.sh  to match alias." />
+    <MESSAGE value="Excluded swi from the last find." />
+    <MESSAGE value="Fixed bug.  $HFPEF_BIDS_PATH had an extra $ within {}" />
+    <MESSAGE value="Updated hdc_protocol.py to dump out series_id." />
+    <MESSAGE value="Added missing workflows." />
+    <MESSAGE value="Started working on CONN" />
+    <MESSAGE value="Testing creating a new study.  hdc_scan and hdc_convert still needed." />
+    <option name="LAST_COMMIT_MESSAGE" value="Testing creating a new study.  hdc_scan and hdc_convert still needed." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/bin/hdc_look.py</url>
-          <line>21</line>
+          <line>23</line>
           <option name="timeStamp" value="2" />
         </line-breakpoint>
       </breakpoints>
@@ -965,61 +898,63 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/tests/overlay_y_011.png" />
-    <entry file="file://$PROJECT_DIR$/tests/overlay_y_008.png" />
-    <entry file="file://$PROJECT_DIR$/tests/overlay_y_000.png" />
-    <entry file="file://$PROJECT_DIR$/tests/overlay_y_003.png" />
-    <entry file="file://$PROJECT_DIR$/tests/overlay_y_001.png" />
-    <entry file="file://$PROJECT_DIR$/requirements.txt">
+    <entry file="file://$PROJECT_DIR$/bin/tic_info.sh">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="8" lean-forward="false" selection-start-line="3" selection-start-column="8" selection-end-line="3" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tic_core/plot_overlay.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-186">
-          <caret line="13" column="6" lean-forward="false" selection-start-line="13" selection-start-column="6" selection-end-line="13" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tests/overlay_y_004.png" />
-    <entry file="file://$PROJECT_DIR$/tests/overlay_y_017.png" />
-    <entry file="file://$PROJECT_DIR$/tests/overlay_z_012.png" />
-    <entry file="file://$PROJECT_DIR$/tests/overlay_z_016.png" />
-    <entry file="file://$PROJECT_DIR$/tests/overlay_z_021.png" />
-    <entry file="file://$PROJECT_DIR$/tests/overlay_z_029.png" />
-    <entry file="file://$PROJECT_DIR$/tests/overlay_y_024.png" />
-    <entry file="file://$PROJECT_DIR$/tests/overlay_y_012.png" />
-    <entry file="file://$PROJECT_DIR$/tests/overlay_y_005.png" />
-    <entry file="file://$PROJECT_DIR$/tests/overlay_z_026.png" />
-    <entry file="file://$PROJECT_DIR$/tests/overlay_z_024.png" />
-    <entry file="file://$PROJECT_DIR$/tests/overlay_z_013.png" />
-    <entry file="file://$PROJECT_DIR$/tests/overlay_y_002.png" />
-    <entry file="file://$PROJECT_DIR$/tests/overlay_ortho.png" />
-    <entry file="file://$PROJECT_DIR$/tests/test_plot_overlay.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="129">
-          <caret line="25" column="50" lean-forward="false" selection-start-line="25" selection-start-column="50" selection-end-line="25" selection-end-column="50" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/studies/hfpef/hfpef_init.sh">
+    <entry file="file://$PROJECT_DIR$/studies/active/scripts/bids_clean_2.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/studies/hfpef/environment.sh">
+    <entry file="file://$PROJECT_DIR$/studies/active/scripts/bids_app_status.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/studies/active/scripts/bids_clean.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/studies/active/aliases.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="39" lean-forward="false" selection-start-line="11" selection-start-column="39" selection-end-line="11" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/studies/active/scripts/environment.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-63">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bin/study_switcher.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="377">
+          <caret line="46" column="32" lean-forward="false" selection-start-line="46" selection-start-column="32" selection-end-line="46" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/studies/synergy/synergy_init.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/studies/infinite/infinite_init.sh">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -1028,6 +963,20 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/studies/synergy/environment.sh">
       <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="442">
+          <caret line="26" column="23" lean-forward="false" selection-start-line="26" selection-start-column="23" selection-end-line="26" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/studies/infinite/environment.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="476">
+          <caret line="28" column="0" lean-forward="true" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/studies/imove/imove_init.sh">
+      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
@@ -1035,78 +984,183 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/studies/imove/environment.sh">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="476">
+          <caret line="28" column="0" lean-forward="true" selection-start-line="27" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/studies/imove/aliases.sh">
+    <entry file="file://$PROJECT_DIR$/studies/hfpef/environment.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="442">
+          <caret line="26" column="45" lean-forward="false" selection-start-line="26" selection-start-column="45" selection-end-line="26" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docs/source/tic_setup.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="0">
+            <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          </first_editor>
+          <second_editor>
+            <js_state />
+          </second_editor>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docs/source/other/tic_documentation.rst">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/bin/hdc.sh">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="9" selection-end-column="4" />
+    <entry file="file://$PROJECT_DIR$/docs/source/other/studies.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="0">
+            <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          </first_editor>
+          <second_editor>
+            <js_state />
+          </second_editor>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/bin/clean_bids.sh">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="18" column="16" lean-forward="false" selection-start-line="18" selection-start-column="16" selection-end-line="18" selection-end-column="16" />
+    <entry file="file://$PROJECT_DIR$/docs/source/other/status_notes.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="0">
+            <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          </first_editor>
+          <second_editor>
+            <js_state />
+          </second_editor>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/studies/imove/scripts/imove_protocol.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="139">
-          <caret line="288" column="0" lean-forward="true" selection-start-line="288" selection-start-column="0" selection-end-line="288" selection-end-column="0" />
-          <folding />
+    <entry file="file://$PROJECT_DIR$/docs/source/other/singularity_images.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="0">
+            <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          </first_editor>
+          <second_editor>
+            <js_state />
+          </second_editor>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docs/source/other/quick_reference.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="297">
+            <caret line="87" column="2" lean-forward="false" selection-start-line="87" selection-start-column="2" selection-end-line="87" selection-end-column="2" />
+          </first_editor>
+          <second_editor>
+            <js_state />
+          </second_editor>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docs/source/other/imove.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="0">
+            <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          </first_editor>
+          <second_editor>
+            <js_state />
+          </second_editor>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/studies/imove/scripts/imove_clean_bids.sh">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="527">
-          <caret line="31" column="18" lean-forward="false" selection-start-line="31" selection-start-column="18" selection-end-line="31" selection-end-column="18" />
+        <state relative-caret-position="515">
+          <caret line="195" column="64" lean-forward="true" selection-start-line="195" selection-start-column="64" selection-end-line="195" selection-end-column="64" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/studies/hfpef/scripts/hfpef_bids_clean.sh">
+    <entry file="file://$PROJECT_DIR$/studies/hfpef/scripts/hfpef_clean_bids.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="646">
+          <caret line="38" column="14" lean-forward="false" selection-start-line="38" selection-start-column="14" selection-end-line="38" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/init/tic_wake_aging1a_environment.sh">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/studies/hfpef/scripts/hfpef_bids_clean_2.py" />
-    <entry file="file://$PROJECT_DIR$/studies/hfpef/scripts/hfpef_gi_netprep.sh">
+    <entry file="file://$PROJECT_DIR$/bin/hdc_look.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="18" column="29" lean-forward="false" selection-start-line="18" selection-start-column="29" selection-end-line="18" selection-end-column="29" />
+          <folding>
+            <element signature="e#122#135#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bin/clean_bids.sh">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/studies/hfpef/scripts/hfpef_gi_netprep_epi.sh">
+    <entry file="file://$PROJECT_DIR$/bin/active_study_info.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bin/hdc.sh">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/studies/hfpef/scripts/hfpef_gi_netprep_mbepi.sh">
+    <entry file="file://$PROJECT_DIR$/bin/fmriprep.sh">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+        <state relative-caret-position="697">
+          <caret line="41" column="0" lean-forward="false" selection-start-line="41" selection-start-column="0" selection-end-line="46" selection-end-column="4" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/studies/hfpef/scripts/hfpef_netprep.yaml">
+    <entry file="file://$PROJECT_DIR$/studies/imove/scripts/imove_protocol.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="6018">
+          <caret line="354" column="8" lean-forward="false" selection-start-line="354" selection-start-column="8" selection-end-line="354" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/workflows/test.py" />
+    <entry file="file://$PROJECT_DIR$/workflows/__init__.py" />
+    <entry file="file://$PROJECT_DIR$/tests/test" />
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/workflows/compcorr_qa.py" />
+    <entry file="file://$PROJECT_DIR$/workflows/fmri_fsl.py" />
+    <entry file="file://$PROJECT_DIR$/tests/test_plot_overlay.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/nipype_workflows/netprep.yaml.template">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -1122,99 +1176,109 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/studies/hfpef/scripts/hfpef_netprep_mbepi.yaml">
+    <entry file="file://$PROJECT_DIR$/studies/hfpef/scripts/hfpef_protocol.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" column="0" lean-forward="false" selection-start-line="15" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+        <state relative-caret-position="4284">
+          <caret line="252" column="16" lean-forward="false" selection-start-line="252" selection-start-column="16" selection-end-line="252" selection-end-column="16" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/bin/act.sh">
+    <entry file="file://$PROJECT_DIR$/studies/hfpef/scripts/hfpef_netprep.yaml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/studies/active/aliases.sh">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="39" lean-forward="false" selection-start-line="11" selection-start-column="39" selection-end-line="11" selection-end-column="39" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/studies/active/scripts/bids_app_status.sh">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bin/lnflatten.sh">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bin/fmriprep.sh">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="663">
-          <caret line="39" column="53" lean-forward="true" selection-start-line="39" selection-start-column="47" selection-end-line="39" selection-end-column="53" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bin/plot_overlay.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" column="17" lean-forward="false" selection-start-line="15" selection-start-column="17" selection-end-line="15" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bin/create_acrostic_list.sh">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bin/create_acrostic_list.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="672">
-          <caret line="61" column="96" lean-forward="false" selection-start-line="61" selection-start-column="96" selection-end-line="61" selection-end-column="96" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bin/tic_functions.sh">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="20" column="0" lean-forward="true" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/bin/mriqc.sh">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="600">
-          <caret line="60" column="0" lean-forward="true" selection-start-line="60" selection-start-column="0" selection-end-line="60" selection-end-column="0" />
+        <state relative-caret-position="340">
+          <caret line="20" column="0" lean-forward="false" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/bin/processing_status.py">
+    <entry file="file://$PROJECT_DIR$/studies/hfpef/scripts/hfpef_gi_netprep.sh">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="291">
-          <caret line="204" column="17" lean-forward="false" selection-start-line="204" selection-start-column="17" selection-end-line="204" selection-end-column="17" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/studies/hfpef/aliases.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="18" column="54" lean-forward="false" selection-start-line="18" selection-start-column="54" selection-end-line="18" selection-end-column="54" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/studies/hfpef/scripts/hfpef_conn_setup.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="24" column="39" lean-forward="false" selection-start-line="24" selection-start-column="39" selection-end-line="24" selection-end-column="39" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bin/netprep.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4046">
+          <caret line="249" column="67" lean-forward="false" selection-start-line="249" selection-start-column="67" selection-end-line="249" selection-end-column="67" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/studies/hfpef/scripts/hfpef_gi_netprep_epi.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="507">
+          <caret line="47" column="0" lean-forward="false" selection-start-line="46" selection-start-column="0" selection-end-line="47" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docs/source/other/heudiconv.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="-73">
+            <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <folding />
+          </first_editor>
+          <second_editor>
+            <js_state />
+          </second_editor>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/studies/_new_study_template/hdc_convertall.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/init/tic_aliases.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="393">
+          <caret line="32" column="86" lean-forward="false" selection-start-line="32" selection-start-column="86" selection-end-line="32" selection-end-column="86" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docs/source/other/creating_new_study.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="-745">
+            <caret line="12" column="70" lean-forward="false" selection-start-line="12" selection-start-column="70" selection-end-line="12" selection-end-column="70" />
+            <folding />
+          </first_editor>
+          <second_editor>
+            <js_state />
+          </second_editor>
         </state>
       </provider>
     </entry>

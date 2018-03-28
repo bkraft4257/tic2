@@ -11,10 +11,12 @@ import os
 import sys
 from colorama import Fore
 
+ACTIVE_ACROSTIC_REGEX = os.getenv('ACTIVE_ACROSTIC_REGEX')
+
 HDC_FILES = ['edit', 'auto', 'dicominfo']
 BIDS_PATH = os.path.abspath(os.getenv('ACTIVE_BIDS_PATH'))
 
-DISPLAY_COLUMNS = ['series_number', 'sequence_name', 'series_description',
+DISPLAY_COLUMNS = ['series_id', 'sequence_name', 'series_description',
                    'dim1', 'dim2', 'dim3', 'dim4',
                    'TR', 'TE', 'is_derived', 'is_motion_corrected']
 
@@ -99,7 +101,7 @@ if __name__ == '__main__':
 
     # parser.add_argument('tsv_filename', help='DICOM TSV info file created the heurdiconv.py')
 
-    parser.add_argument('-s', '--subject', help='Participant Label')
+    parser.add_argument('-s', '--subject', help='Participant Label', default=ACTIVE_ACROSTIC_REGEX)
     parser.add_argument('-ss', '--session', help='Session Label', default=1)
 
     parser.add_argument('-b', '--bids', help='BIDS path.  default=ACTIVE_BIDS_PATH', default=BIDS_PATH)
