@@ -1,4 +1,4 @@
-# Aliases
+# Aliases & Scripts
 
 Aliases are simple commands that are defined to help move among the various directories
 of the study.  They also provide a way to perform simple commands. An alias, unlike a
@@ -7,9 +7,10 @@ studies tic folder ($TIC_PATH/studies/<study>). Aliases that are common among al
 studies are defined in $TIC_PATH/init.
 
     tic_help - Launches the TIC Sphinx documentation.
-    tic_stat - Displays information about the current TIC session (tic_path, active_study, and subjects_dir)
+    tic_info - Displays information about the current TIC session (tic_path, active_study, and subjects_dir)
 
-    clean_bids  - Cleans a single subject and sessions bids directory.
+    asi - Displays information about the current active study.  This is a long list and most users
+    may find this to be information overload.
     
     cdas - change directory to active study main directory  
     cdb  - change directory to  BIDS directory  
@@ -17,12 +18,15 @@ studies are defined in $TIC_PATH/init.
     cdin - change directory to DICOM incoming directory  
     cdqc - change directory to QC directory
 
-These aliases allow you to quickly move between studies.
+These aliases allow you to quickly switch between studies by changing the active study.  All aliases
+and scripts are the same across all studies.
 
-    swh - Set Hfpef as the active study  
-    swi - Set Infinite as the active study  
-    swm - Set iMove as the active study
-    sws - Set Synergy as the active study
+    swh   - Set Hfpef as the active study  
+    swi   - Set Infinite as the active study  
+    swm   - Set iMove as the active study
+    sws   - Set Synergy as the active study
+    swc   - Set CENC as the active study
+    swmcf - Set MCF as the active study (I ran out of single letter designations that made sense.
 
 
 # Scripts
@@ -32,7 +36,6 @@ These aliases allow you to quickly move between studies.
 
 **fmriprep.sh**          - Runs fmriprep on a single subject.  
 **mriqc.sh**             - Runs MRI Quality Control on a single subject.  
-**mriqc_group.sh**       - Runs MRI Quality Control as a group on subjects in MRIQC directory.
 
 The scripts have been written to minimize the amount of stuff you have to remember for each study
 while allowing you flexibility to call scripts with various options. For example, the fmriprep.sh
@@ -54,7 +57,7 @@ fmriprep.sh --participant-label imove1061 --anat-only
 
 
 We are hoping this structure will allow simplicity for new users with flexibilty for experieneced
-users. Advanced
+users.
 
 
 # Quick Instructions
@@ -66,12 +69,12 @@ parameter that you are supposed to enter. I have expanded upon this convention b
 for each field.  For example to convert your DICOM images to NIFTI in the BIDS data structure you run the
 command
 
-    >> hdc_singularity.sh -s <bids_subject_value, hfs070> -ss < bids_session_value, 1 >
+    >> hdc.sh -s <bids_subject_value, hfs070> -ss < bids_session_value, 1 >
 
 The >> indicates the command prompt on the command line. It is not included in the command.  Each < > represents a variable.
 It contains two parts: a short description and then an example.  At the command line, you would just type the command
 
-    >> hdc_singularity.sh -s hfs070 -ss 1
+    >> hdc.sh -s hfs070 -ss 1
 
 to convert subject hfs070 session 1 and add it to the active study.
 
@@ -79,8 +82,12 @@ to convert subject hfs070 session 1 and add it to the active study.
 ### Convert DICOM images to NIFTI
 
 1. **cdin**
-1. **mv** <dicom_dicom_dir, **hf_s070_hf_s070** > < bids_subject_value, **hfs070** >
-1. **hdc.sh** -s <bids_subject_value, **hfs070** > -ss < bids_session_value, **1** >
+2. **mv** <dicom_dicom_dir, **hf_s070_hf_s070** > < bids_subject_value, **hfs070** >
+3. **hdc.sh** -s <bids_subject_value, **hfs070** > -ss < bids_session_value, **1** >
+
+**Note:** hdc uses -s as the optional parameter to specify the subject_value. fmriprep and mriqc uses
+the optional parameter --participant-label to specify the subject_value.  This inconsistency
+is a result of the BIDS Apps coming from multiple groups.
 
 ### Clean BIDS directory
 
