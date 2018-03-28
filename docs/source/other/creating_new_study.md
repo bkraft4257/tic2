@@ -10,7 +10,7 @@ create_new_study.py, to help adding a new study to the TIC repository.
 
 This script will create the directories (bids, image_processing,
 image_analysis, etc.) where you will store the new study's data and
-derivatives. The script will also create a <study_name> folder in the
+derivatives. The scri[fmri_fsl](../../../nipype_workflows/fmri_fsl.py)pt will also create a <study_name> folder in the
 specified TIC path.
 
 To create a new study in TIC you can run the command
