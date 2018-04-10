@@ -32,9 +32,11 @@ start_dir=$PWD
 subject_value=$1
 session_value=$2
 
+
+
 full_subject_session_value=sub-${subject_value}_ses-${session_value}
 
-session_dir=${start_dir}/sub-${subject_value}/ses-${session_value}
+session_dir=${HFPEF_BIDS_PATH}/sub-${subject_value}/ses-${session_value}
 
 echo 
 echo "================================================================================="
@@ -65,10 +67,10 @@ echo
 #chmod +w -R ${session_dir}
 
 find ${session_dir} -name "*.1.*" | xargs rename .1. .
-find ${session_dir} \( -name "*.gz" -or -name "*.json" \)| xargs chmod +w 
+find ${session_dir} -name "*.nii.gz" -or -name "*.json"  | xargs chmod +w
+# find ${session_dir} -type d | xargs chmod +w
 
 cd ${session_dir}/fmap
-
 
 # magnitude1 of the phasediff fieldmap does not require a json file according to BIDS. 
 # Since the JSON file will be almost identical to phasediff.json file and is not required
@@ -86,19 +88,35 @@ echo "Extract reference images for topup distortion correction"
 echo "--------------------------------------------------------"
 
 pcasl_topup_lr=${full_subject_session_value}_acq-pcasl_dir-lr_epi.nii.gz
-echo fslroi $pcasl_topup_lr
-fslroi $pcasl_topup_lr  $pcasl_topup_lr 0 3
+
+if [ -f $pcasl_topup_lr ] 
+then         
+   echo fslroi $pcasl_topup_lr
+   fslroi $pcasl_topup_lr  $pcasl_topup_lr 0 3
+else
+    echo "$pcasl_topup_lr file not found"
+fi
 
 # Keep only the first 1 volumes of dwi
 dwi_topup_ap=${full_subject_session_value}_acq-30ap_dir-ap_epi.nii.gz
+
+if [ -f $dwi_topup_ap ] 
+then         
 echo fslroi $dwi_topup_ap
 fslroi $dwi_topup_ap  $dwi_topup_ap 0 1
+else
+    echo "$dwi_topup_ap file not found"
+fi
 
 # Keep only the first 10 volumes of mbepi_rl
 mbepi_topup_rl=${full_subject_session_value}_acq-mbepi_dir-rl_epi.nii.gz
-echo fslroi $mbepi_topup_rl
-fslroi $mbepi_topup_rl  $mbepi_topup_rl 0 10
-
+if [ -f $mbepi_topup_rl ] 
+then         
+    echo fslroi $mbepi_topup_rl
+    fslroi $mbepi_topup_rl  $mbepi_topup_rl 0 10
+else
+    echo "$mbepi_topup_rl file not found"
+fi
 
 #--- Update JSON files to include Echo1, Echo2, and IntendedFor information -------------------------------------
 # Add Echo times for phase difference map
@@ -113,19 +131,25 @@ grep -H "EchoTime" $fmap_phasediff
 
 #--- Update JSON files to include IntendedFor information -------------------------------------
 
-sed -i 's%"AcquisitionMatrixPE": 64,%"IntendedFor": [ "ses-__session_value__/func/sub-__subject_value___ses-__session_value___task-rest_acq-epi_bold.nii.gz" ],\n  "AcquisitionMatrixPE": 64,%' \
+sed -i '/IntendedFor/d' *.json  # Remove Intended for from all JSON maps. The next portion of the shell script
+                                 # will add the IntendedFor back in. This eliminates the possibility of IntendedFor
+                                 # appearing multiple times.
+
+# epi fmap
+sed -i 's%"AcquisitionMatrixPE": 64,%"IntendedFor": [ "ses-__session_value__/func/sub-__subject_value___ses-__session_value___task-rest_acq-epi_rec-fmap_bold.nii.gz" ],\n  "AcquisitionMatrixPE": 64,%' \
      $fmap_phasediff
 
+# epi topup
 rest_topup_ap_json=${full_subject_session_value}_acq-epse_dir-ap_epi.json
 rest_topup_pa_json=${full_subject_session_value}_acq-epse_dir-pa_epi.json
 
-sed -i 's%"AcquisitionMatrixPE": 64,%"IntendedFor": [ "ses-__session_value__/func/sub-__subject_value___ses-__session_value___task-rest_acq-epi_bold.nii.gz" ],\n  "AcquisitionMatrixPE": 64,%' \
+sed -i 's%"AcquisitionMatrixPE": 64,%"IntendedFor": [ "ses-__session_value__/func/sub-__subject_value___ses-__session_value___task-rest_acq-epi_rec-topup_bold.nii.gz" ],\n  "AcquisitionMatrixPE": 64,%' \
      $rest_topup_ap_json
 
-sed -i 's%"AcquisitionMatrixPE": 64,%"IntendedFor": [ "ses-__session_value__/func/sub-__subject_value___ses-__session_value___task-rest_acq-epi_bold.nii.gz" ],\n  "AcquisitionMatrixPE": 64,%' \
+sed -i 's%"AcquisitionMatrixPE": 64,%"IntendedFor": [ "ses-__session_value__/func/sub-__subject_value___ses-__session_value___task-rest_acq-epi_rec-topup_bold.nii.gz" ],\n  "AcquisitionMatrixPE": 64,%' \
      $rest_topup_pa_json
 
-
+# mbepi topup
 mbepi_topup_lr_json=${full_subject_session_value}_acq-mbepi_dir-lr_epi.json
 mbepi_topup_rl_json=${full_subject_session_value}_acq-mbepi_dir-rl_epi.json
 
@@ -135,9 +159,9 @@ sed -i 's%"AcquisitionMatrixPE": 64,%"IntendedFor": [ "ses-__session_value__/fun
 sed -i 's%"AcquisitionMatrixPE": 64,%"IntendedFor": [ "ses-__session_value__/func/sub-__subject_value___ses-__session_value___task-rest_acq-mbepi_bold.nii.gz" ],\n  "AcquisitionMatrixPE": 64,%' \
      $mbepi_topup_rl_json
 
-
+# pcasl topup
 pcasl_topup_lr_json=${full_subject_session_value}_acq-pcasl_dir-lr_epi.json
-pcasl_topup_rl_json=${full_subject_session_value}_acq-pcasl_dir-lr_epi.json
+pcasl_topup_rl_json=${full_subject_session_value}_acq-pcasl_dir-rl_epi.json
 
 sed -i 's%"AcquisitionMatrixPE": 56,%"IntendedFor": [ "ses-__session_value__/func/sub-__subject_value___ses-__session_value___task-rest_acq-pcasl_bold.nii.gz" ],\n  "AcquisitionMatrixPE": 56,%' \
      $pcasl_topup_lr_json
@@ -145,15 +169,23 @@ sed -i 's%"AcquisitionMatrixPE": 56,%"IntendedFor": [ "ses-__session_value__/fun
 sed -i 's%"AcquisitionMatrixPE": 56,%"IntendedFor": [ "ses-__session_value__/func/sub-__subject_value___ses-__session_value___task-rest_acq-pcasl_bold.nii.gz" ],\n  "AcquisitionMatrixPE": 56,%' \
      $pcasl_topup_rl_json
 
-
+# dwi topup (This is not used in standard fmriprep.)
 dwi_topup_ap_json=${full_subject_session_value}_acq-30ap_dir-ap_epi.json
 dwi_topup_pa_json=${full_subject_session_value}_acq-30ap_dir-pa_epi.json
 
-sed -i 's%"AcquisitionMatrixPE": 112,%"IntendedFor": [ "ses-__session_value__/dwi/sub-__subject_value___ses-__session_value___acq-30ap_dwi.nii.gz" ],\n  "AcquisitionMatrixPE": 112,%' \
-     $dwi_topup_ap_json
+for ii in $dwi_topup_ap_json $dwi_topup_pa_json;
+do 
+    if [ -f $ii ] 
+    then         
+        sed -i 's%"AcquisitionMatrixPE": 112,%"IntendedFor": [ "ses-__session_value__/dwi/sub-__subject_value___ses-__session_value___acq-30ap_dwi.nii.gz" ],\n  "AcquisitionMatrixPE": 112,%' $ii
+    else
+        echo "$ii file not found."
+    fi  
+done
 
-sed -i 's%"AcquisitionMatrixPE": 112,%"IntendedFor": [ "ses-__session_value__/dwi/sub-__subject_value___ses-__session_value___acq-30ap_dwi.nii.gz" ],\n  "AcquisitionMatrixPE": 112,%' \
-     $dwi_topup_pa_json
+#sed -i 's%"AcquisitionMatrixPE": 112,%"IntendedFor": [ "ses-__session_value__/dwi/sub-__subject_value___ses-__session_value___acq-30ap_dwi.nii.gz" ],\n  "AcquisitionMatrixPE": 112,%' \
+#     $dwi_topup_pa_json
+
 
 # Replace __session__ with ${session_value} and __subject__ with ${subject_value}.
 #  I would prefer to do this in a single call. Unfortunately, I haven't worked out the syntax
@@ -162,10 +194,10 @@ sed -i 's#__session_value__#'${session_value}'#g' *.json
 sed -i 's#__subject_value__#'${subject_value}'#g' *.json
 
 # This awk script removed the second IntendedFor if script is run multiple times. This is a complete hack
-for ii in *.json; do
-    awk '/IntendedFor/&&c++>0 {next} 1' $ii > tmp.$ii
-    mv -f tmp.$ii $ii
-done
+#for ii in *.json; do
+#    awk '/IntendedFor/&&c++>0 {next} 1' $ii > tmp.$ii
+#    mv -f tmp.$ii $ii
+#done
 
 
 
@@ -175,7 +207,7 @@ echo "--------------------------------------------------------------------------
 grep -H "IntendedFor" *.json
 echo
 
-cd $start_dir 
+cd $HFPEF_BIDS_PATH
 
 #--- Reorient all images to match FSL orientation -------------------------------------------------
 echo "Reorienting all *.gz files with fslreorient2std"
@@ -183,7 +215,7 @@ echo "-----------------------------------------------"
 
 for ii in $(find $session_dir -name "*.gz"); do
     echo "reorienting $ii "
-    # fslreorient2std $ii $ii
+    fslreorient2std $ii $ii
 done
 
 #echo 
@@ -202,5 +234,6 @@ echo "--------------------------------------------------------------------------
 find $session_dir -name "*.[0-9]*"
 
 
-
 echo " "
+
+cd $start_dir

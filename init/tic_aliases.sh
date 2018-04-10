@@ -5,6 +5,7 @@ alias tic_make_docs='cd $TIC_PATH/docs/; make clean; make html; cd -; firefox $T
 alias dfgandg='echo; df -h /gandg/; echo'
 
 alias tic_help='firefox $TIC_PATH/docs/build/html/index.html&'
+alias tic_info='tic_info.sh'
 
 source $TIC_PATH/bin/tic_functions.sh
 
@@ -29,19 +30,7 @@ alias fmriprep='/usr/local/bin/singularity run -w -B /cenc -B /gandg -B /bkraft1
 alias mriqc='/usr/local/bin/singularity run -w -B /cenc -B /gandg -B /bkraft1 $MRIQC_SINGULARITY_IMAGE'
 
 alias hdc_convert='/usr/local/bin/singularity run -w -B /cenc -B /gandg -B /bkraft1 $HDC_SINGULARITY_IMAGE -c dcm2niix '
-
-alias hdc_find_repeats='find ${session_dir} -name \"*.[2-9].*\"' 
-alias hdc_find_1='find ${session_dir} -name \"*.[2-9].*\"'
-alias hdc_find_2='find ${session_dir} -name \"*.[2-9].*\"'
-alias hdc_rename_1='find ${session_dir} -name \"*.1.*\" | xargs rename .1. .' 
-
-alias hdc_scan='/usr/local/bin/singularity run -w -B /cenc -B /gandg -B /bkraft1 $HDC_SINGULARITY_IMAGE -f /cenc/software/heudiconv/hdc_convertall.py -c none'
-alias hdc_add_header='$HDC_PATH/hdc_add_header.py'
-alias hdc_csvlook='$HDC_PATH/hdc_csvlook.sh'
-alias hdc_pdlook='$HDC_PATH/hdc_pdlook.py'
-alias hdc_copy='cp $HDC_PATH/hdc_template.py .' 
-alias hdc_find_dcm='$HDC_PATH/hdc_find_dcm.sh' 
-alias hdc_find_dicom='$HDC_PATH/hdc_find_dcm.sh' 
+alias hdc_scan='/usr/local/bin/singularity run -w -B /cenc -B /gandg -B /bkraft1 $HDC_SINGULARITY_IMAGE -f $TIC_PATH/studies/_new_study_template/hdc_convertall.py -c none'
 
 alias ag='alias | grep'
 alias hg='history | grep '
