@@ -1,10 +1,13 @@
 #!/usr/bin/env bash
 
+umask 007
+
 echo
 echo 'active study = ' $ACTIVE_STUDY
 echo 'bids path    = ' $ACTIVE_BIDS_PATH
 echo 'protocol     = ' $ACTIVE_HEUDICONV_PROTOCOL
 echo 'pattern      = ' $ACTIVE_HEUDICONV_PATTERN
+echo 'umask        = ' $(umask -S)
 echo
 echo 'parameters   = ' $@
 echo

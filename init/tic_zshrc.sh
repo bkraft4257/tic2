@@ -19,12 +19,16 @@ export HOME_TIC_PATH=$TIC_INIT_PATH  # Done for backward compatibility.
 
 source ${TIC_INIT_PATH}/tic_wake_aging1a_environment.sh
 
-
 # TIC NIPYPE Workflows
 
 PATH=$TIC_PATH/bin/:$TIC_PATH/workflows:$PATH
+
+
+# Final TIC Python Setup
+export PYTHONPATH=$TIC_PATH/tic_core:$TIC_PATH/bin/:$PYTHONPATH
 PYTHONDONTWRITEBYTECODE=1
 
 umask 0002
+
 
  

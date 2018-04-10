@@ -90,34 +90,25 @@ fi
 
 # MATLAB and third Party Configuration 
 
-   MATLAB_PATH=/aging1/software/matlab/bin
+   MATLAB_PATH=/aging1/software/R2015a/bin
+   # MATLAB_PATH=/aging1/software/R2014b/bin
    export PATH=${MATLAB_PATH}:$PATH
 
    export SPM_PATH=${SOFTWARE_PATH}/SPM12
-   export CONN_PATH=${SOFTWARE_PATH}/conn/conn16a
+   export CONN_PATH=${SOFTWARE_PATH}/conn/conn18a
    export W2MHS_PATH=${SOFTWARE_PATH}/W2MHS/
-   export DPABI_PATH=${SOFTWARE_PATH}/dpabi/DPABI_V2.1_160415
-   export GRAPHVAR_PATH=${SOFTWARE_PATH}/graphvar/GraphVar_beta_v_06.2
-   export JSON_PATH=${SOFTWARE_PATH}/jsonlab/jsonlab-1.2
 
-   export MSK_MVO2_THOMPSON=${SOFTWARE_PATH}/mvo2_thompson/
-   export MSK_NCIGT=${SOFTWARE_PATH}/ncigt_fil_v2.2_20150119_x64_0/
-   export MSK_SHOGE=${SOFTWARE_PATH}/shoge/
-
-# HEUDICONV 
-
-export DCM2NIIX_PATH=/cenc/software/dcm2niix/build/bin
-export HDC_PATH=/cenc/software/heudiconv/
-export HDC_PYTHONPATH=$HDC_PATH/python/heudiconv/bin
+# HEUDICONV
+  
+export TIC_SOFTWARE_PATH=/aging1/software/
+export HDC_PATH=$TIC_SOFTWARE_PATH/heudiconv/
 
 # SINGULARITY IMAGES
 
-export FMRIPREP_PATH=/cenc/software/fmriprep/
+export FMRIPREP_PATH=$TIC_SOFTWARE_PATH/fmriprep/
 export FMRIPREP_SINGULARITY_IMAGE=$FMRIPREP_PATH/poldracklab_fmriprep_latest-2017-11-10-9ae650872d1e.img
-export MRIQC_SINGULARITY_IMAGE=/cenc/software/mriqc/poldracklab_mriqc_latest-2017-08-30-f54388a6fb57.img
-
-# export HDC_SINGULARITY_IMAGE=/cenc/software/heudiconv/nipy_heudiconv-2017-09-26-6bef64b746f6.img
-export HDC_SINGULARITY_IMAGE=/cenc/software/heudiconv/nipy_heudiconv-2018-03-02-bf4d6e1d4d0e.img
+export MRIQC_SINGULARITY_IMAGE=$TIC_SOFTWARE_PATH/mriqc/poldracklab_mriqc_latest-2017-08-30-f54388a6fb57.img
+export HDC_SINGULARITY_IMAGE=$TIC_SOFTWARE_PATH/heudiconv/nipy_heudiconv-2018-03-02-bf4d6e1d4d0e.img
 
 export ANTS_CORTICAL_THICKNESS_SINGULARITY_IMAGE='/cenc/software/bids_apps/antsCorticalThickness/bids_antscorticalthickness-2017-10-14-95aa110c26f8.img'
 
