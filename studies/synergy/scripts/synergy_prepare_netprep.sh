@@ -10,7 +10,7 @@ confound_columns=1,2,13,14,15,16,17,18,24,25,26,27,28,29
 netprep_input=${SYNERGY_NETPREP_PATH}/${subject}/${session}/netprep/input
 
 mkdir -p ${netprep_input}
-cp ${SYNERGY_SCRIPTS_PATH}/netprep_synergy.yaml ${netprep_input}/netprep_synergy.yaml
+cp ${SYNERGY_SCRIPTS_PATH}/netprep.yaml ${netprep_input}/netprep_synergy.yaml
 
 bold_mni_preproc=$SYNERGY_FMRIPREP_PATH/${subject}/${session}/func/${subject}_${session}_task-rest_acq-epi_bold_space-MNI152NLin2009cAsym_preproc.nii.gz
 t1w_gm_probtissue=$SYNERGY_FMRIPREP_PATH/${subject}/${session}/anat/${subject}_${session}_T1w_class-GM_probtissue.nii.gz

@@ -35,8 +35,8 @@ session_dir=${SYNERGY_BIDS_PATH}/sub-${subject_value}/ses-${session_value}
 echo 
 echo "================================================================================="
 echo
-echo "session_value = " $subject_value 
-echo "subject_value = " $session_value
+echo "subject_value = " $subject_value
+echo "session_value = " $session_value
 echo
 echo "session_dir   = " $session_dir
 echo
