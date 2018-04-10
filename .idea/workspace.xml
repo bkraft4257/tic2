@@ -2,18 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6f3e13b3-cd58-4c4d-98f6-1a68f8358bfb" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/docs/source/other/aliases.md" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/docs/source/other/scripts.md" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/docs/source/other/quick_reference.md" afterPath="$PROJECT_DIR$/docs/source/other/quick_reference.md" />
-      <change beforePath="$PROJECT_DIR$/studies/synergy/environment.sh" afterPath="$PROJECT_DIR$/studies/synergy/environment.sh" />
-      <change beforePath="$PROJECT_DIR$/studies/synergy/scripts/prepare_netprep_synergy.sh" afterPath="$PROJECT_DIR$/studies/synergy/scripts/synergy_prepare_netprep.sh" />
-      <change beforePath="$PROJECT_DIR$/studies/synergy/scripts/syn_bids.cfg" afterPath="$PROJECT_DIR$/studies/synergy/scripts/synergy_bids.cfg" />
-      <change beforePath="$PROJECT_DIR$/studies/synergy/scripts/syn_bids_clean.sh" afterPath="$PROJECT_DIR$/studies/synergy/scripts/synergy_clean_bids.sh" />
-      <change beforePath="$PROJECT_DIR$/studies/synergy/scripts/syn_clean_bids.py" afterPath="$PROJECT_DIR$/studies/synergy/scripts/synergy_clean_bids.py" />
-      <change beforePath="$PROJECT_DIR$/studies/synergy/scripts/syn_gi_netprep.sh" afterPath="$PROJECT_DIR$/studies/synergy/scripts/synergy_gi_netprep.sh" />
-      <change beforePath="$PROJECT_DIR$/studies/synergy/scripts/syn_netprep.yaml" afterPath="$PROJECT_DIR$/studies/synergy/scripts/synergy_netprep.yaml" />
-      <change beforePath="$PROJECT_DIR$/studies/synergy/scripts/synergy_environment.sh" afterPath="" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -41,21 +30,6 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="scripts.md" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/docs/source/other/scripts.md">
-          <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
-            <state split_layout="SPLIT">
-              <first_editor relative-caret-position="374">
-                <caret line="22" column="58" lean-forward="false" selection-start-line="22" selection-start-column="58" selection-end-line="22" selection-end-column="58" />
-                <folding />
-              </first_editor>
-              <second_editor>
-                <js_state />
-              </second_editor>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="synergy_bids.cfg" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/studies/synergy/scripts/synergy_bids.cfg">
           <provider selected="true" editor-type-id="text-editor">
@@ -66,21 +40,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="environment.sh" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/studies/synergy/environment.sh">
+      <file leaf-file-name="fmriprep.sh" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/bin/fmriprep.sh">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="289">
-              <caret line="17" column="63" lean-forward="false" selection-start-line="17" selection-start-column="63" selection-end-line="17" selection-end-column="63" />
+            <state relative-caret-position="663">
+              <caret line="39" column="53" lean-forward="false" selection-start-line="39" selection-start-column="47" selection-end-line="39" selection-end-column="53" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="synergy_protocol.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/studies/synergy/scripts/synergy_protocol.py">
+      <file leaf-file-name="environment.sh" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/studies/synergy/environment.sh">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state relative-caret-position="289">
+              <caret line="17" column="63" lean-forward="false" selection-start-line="17" selection-start-column="63" selection-end-line="17" selection-end-column="63" />
               <folding />
             </state>
           </provider>
@@ -138,6 +112,16 @@
       </file>
       <file leaf-file-name="synergy_init.sh" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/studies/synergy/synergy_init.sh">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="howto_create_a_python_projects.rst" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/docs/source/for_developers/howto_create_a_python_projects.rst">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="0">
               <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -483,13 +467,6 @@
       <option name="presentableId" value="Default" />
       <updated>1517948604886</updated>
     </task>
-    <task id="LOCAL-00275" summary="Wrote new function to create acrostic.csv">
-      <created>1521150297871</created>
-      <option name="number" value="00275" />
-      <option name="presentableId" value="LOCAL-00275" />
-      <option name="project" value="LOCAL" />
-      <updated>1521150297871</updated>
-    </task>
     <task id="LOCAL-00276" summary="Wrote new function to create acrostic.csv">
       <created>1521150338488</created>
       <option name="number" value="00276" />
@@ -826,7 +803,14 @@
       <option name="project" value="LOCAL" />
       <updated>1521754401989</updated>
     </task>
-    <option name="localTasksCounter" value="324" />
+    <task id="LOCAL-00324" summary="Fixing synergy_bids_clean.sh bug.  This is naming and environment variable issue. &#10;Also renamed syn to synergy.">
+      <created>1523390151992</created>
+      <option name="number" value="00324" />
+      <option name="presentableId" value="LOCAL-00324" />
+      <option name="project" value="LOCAL" />
+      <updated>1523390151993</updated>
+    </task>
+    <option name="localTasksCounter" value="325" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -920,7 +904,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Added ability to change permission of json and gz files." />
     <MESSAGE value="Updating HDC documentation and API" />
     <MESSAGE value="Cleaned up HFPEF aliases, scripts, and protocols." />
     <MESSAGE value="Updated bids-validator and alias bv to be more expressive." />
@@ -945,7 +928,8 @@
     <MESSAGE value="Updated create_acrostic_list.py to handle single session data.&#10;Updated processing_status.py to handle single session." />
     <MESSAGE value="Updated create_acrostic_list.py to write acrostic.csv, which contains columns letting &#10;you know which sessions have been scanned, and acrostic.list which just contains &#10;a list of acrostics with no header" />
     <MESSAGE value="Fixed bug when a file or files was selected that did not match bids convention." />
-    <option name="LAST_COMMIT_MESSAGE" value="Fixed bug when a file or files was selected that did not match bids convention." />
+    <MESSAGE value="Fixing synergy_bids_clean.sh bug.  This is naming and environment variable issue. &#10;Also renamed syn to synergy." />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixing synergy_bids_clean.sh bug.  This is naming and environment variable issue. &#10;Also renamed syn to synergy." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -961,13 +945,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/tests/test_plot_overlay.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="129">
-          <caret line="25" column="50" lean-forward="false" selection-start-line="25" selection-start-column="50" selection-end-line="25" selection-end-column="50" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/studies/imove/environment.sh">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -1149,13 +1126,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/bin/fmriprep.sh">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="663">
-          <caret line="39" column="53" lean-forward="false" selection-start-line="39" selection-start-column="47" selection-end-line="39" selection-end-column="53" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/bin/hdc_look.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -1314,14 +1284,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/studies/synergy/scripts/synergy_clean_bids.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="663">
-          <caret line="41" column="0" lean-forward="false" selection-start-line="41" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/studies/synergy/scripts/synergy_clean_bids.sh">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="629">
@@ -1334,6 +1296,30 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="289">
           <caret line="17" column="63" lean-forward="false" selection-start-line="17" selection-start-column="63" selection-end-line="17" selection-end-column="63" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/studies/synergy/scripts/synergy_clean_bids.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="663">
+          <caret line="41" column="0" lean-forward="false" selection-start-line="41" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docs/source/for_developers/howto_create_a_python_projects.rst">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bin/fmriprep.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="663">
+          <caret line="39" column="53" lean-forward="false" selection-start-line="39" selection-start-column="47" selection-end-line="39" selection-end-column="53" />
           <folding />
         </state>
       </provider>
