@@ -1,0 +1,26 @@
+#Insight Transform File V1.0
+#Transform 0
+Transform: AffineTransform_double_3_3
+Parameters: 1.0 0.0 0.0   0.0 1.0 0.0   0.0 0.0 1.0   0.0 0.0 0.0
+FixedParameters: 0.0 0.0 0.0
+
+
+# https://www.neuro.polymtl.ca/tips_and_tricks/how_to_use_ants
+#
+#  T3d = [ a b c o
+#          d e f p
+#          g h i q
+#          0 0 0 1
+#        ]
+#
+# Insight Transform File V1.0
+# Transform 0
+# Transform: AffineTransform_double_3_3
+# Parameters: a b c d e f g h i o p q
+# FixedParameters: 0 0
+# The “o p q” are the “offset”, which actually is not given in the file.
+# The offset is computed from the 3×3 matrix (the first 9 parameters),
+# from the translation “l m n” (the last three parameters),
+# and from the center “x y z” (the three fixed parameters).
+#
+# To see how this is done, look at the code for ComputeOffset() itkMatrixOffsetTransformBase.hxx.
