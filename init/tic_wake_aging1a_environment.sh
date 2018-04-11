@@ -2,8 +2,8 @@
 
 # Set environment variables that are machine dependent.
 
-case $(hostname) in
-  aging1a | aging2a)
+case $(hostname -s) in
+  aging1a | aging2a | aging3a )
 	SOFTWARE_PATH=/aging1/software/
     ;;
 
