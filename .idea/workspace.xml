@@ -3,9 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="6f3e13b3-cd58-4c4d-98f6-1a68f8358bfb" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/init/tic_wake_aging1a_environment.sh" afterPath="$PROJECT_DIR$/init/tic_wake_aging1a_environment.sh" />
       <change beforePath="$PROJECT_DIR$/studies/cenc/environment.sh" afterPath="$PROJECT_DIR$/studies/cenc/environment.sh" />
-      <change beforePath="$PROJECT_DIR$/studies/synergy/scripts/synergy_netprep_gather_inputs.sh" afterPath="$PROJECT_DIR$/studies/synergy/scripts/synergy_netprep_gather_inputs.sh" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -126,8 +124,8 @@
       <file leaf-file-name="environment.sh" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/studies/cenc/environment.sh">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="14" column="32" lean-forward="true" selection-start-line="14" selection-start-column="32" selection-end-line="15" selection-end-column="32" />
+            <state relative-caret-position="204">
+              <caret line="12" column="39" lean-forward="false" selection-start-line="12" selection-start-column="39" selection-end-line="12" selection-end-column="39" />
               <folding />
             </state>
           </provider>
@@ -525,13 +523,6 @@
       <option name="presentableId" value="Default" />
       <updated>1517948604886</updated>
     </task>
-    <task id="LOCAL-00282" summary="Wrote new function to create acrostic.csv">
-      <created>1521150746883</created>
-      <option name="number" value="00282" />
-      <option name="presentableId" value="LOCAL-00282" />
-      <option name="project" value="LOCAL" />
-      <updated>1521150746883</updated>
-    </task>
     <task id="LOCAL-00283" summary="Wrote new function to create acrostic.csv">
       <created>1521151949208</created>
       <option name="number" value="00283" />
@@ -868,7 +859,14 @@
       <option name="project" value="LOCAL" />
       <updated>1523470872095</updated>
     </task>
-    <option name="localTasksCounter" value="331" />
+    <task id="LOCAL-00331" summary="Changed synergy filename in script to match file name changes.">
+      <created>1523480498959</created>
+      <option name="number" value="00331" />
+      <option name="presentableId" value="LOCAL-00331" />
+      <option name="project" value="LOCAL" />
+      <updated>1523480498959</updated>
+    </task>
+    <option name="localTasksCounter" value="332" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -1301,8 +1299,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/studies/cenc/environment.sh">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" column="32" lean-forward="true" selection-start-line="14" selection-start-column="32" selection-end-line="15" selection-end-column="32" />
+        <state relative-caret-position="204">
+          <caret line="12" column="39" lean-forward="false" selection-start-line="12" selection-start-column="39" selection-end-line="12" selection-end-column="39" />
           <folding />
         </state>
       </provider>
