@@ -54,7 +54,7 @@ source $TIC_PATH/studies/active/scripts/bids_app_status.sh
                  participant ${@} >> $log_file 2>&1 &
 
 
-echo "Waiting 30 seconds before checking out the log file"
+echo "Waiting 30 seconds before displaying the log file ..."
 sleep 30
 
 cat $log_file
