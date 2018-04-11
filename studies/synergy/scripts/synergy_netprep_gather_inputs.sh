@@ -28,7 +28,7 @@ fi
 
 
 mkdir -p ${netprep_input}
-cp ${SYNERGY_SCRIPTS_PATH}/synergy_netprep.yaml ${netprep_input}/netprep.yaml
+cp ${SYNERGY_SCRIPTS_PATH}/synergy_netprep.yaml ${netprep_input}/synergy_netprep.yaml
 
 
 ln -f ${bold_mni_preproc} ${netprep_input}/bold_mni_preproc.nii.gz

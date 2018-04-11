@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="6f3e13b3-cd58-4c4d-98f6-1a68f8358bfb" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/studies/hfpef/scripts/hfpef_gi_netprep_epi.sh" afterPath="$PROJECT_DIR$/studies/hfpef/scripts/hfpef_gi_netprep_epi.sh" />
       <change beforePath="$PROJECT_DIR$/studies/synergy/scripts/synergy_netprep_gather_inputs.sh" afterPath="$PROJECT_DIR$/studies/synergy/scripts/synergy_netprep_gather_inputs.sh" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -115,8 +114,8 @@
       <file leaf-file-name="synergy_netprep_gather_inputs.sh" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/studies/synergy/scripts/synergy_netprep_gather_inputs.sh">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="782">
-              <caret line="46" column="0" lean-forward="true" selection-start-line="46" selection-start-column="0" selection-end-line="46" selection-end-column="0" />
+            <state relative-caret-position="510">
+              <caret line="30" column="73" lean-forward="false" selection-start-line="30" selection-start-column="73" selection-end-line="30" selection-end-column="73" />
               <folding />
             </state>
           </provider>
@@ -503,13 +502,6 @@
       <option name="presentableId" value="Default" />
       <updated>1517948604886</updated>
     </task>
-    <task id="LOCAL-00280" summary="Wrote new function to create acrostic.csv">
-      <created>1521150592000</created>
-      <option name="number" value="00280" />
-      <option name="presentableId" value="LOCAL-00280" />
-      <option name="project" value="LOCAL" />
-      <updated>1521150592000</updated>
-    </task>
     <task id="LOCAL-00281" summary="Wrote new function to create acrostic.csv">
       <created>1521150692951</created>
       <option name="number" value="00281" />
@@ -846,7 +838,14 @@
       <option name="project" value="LOCAL" />
       <updated>1523470274036</updated>
     </task>
-    <option name="localTasksCounter" value="329" />
+    <task id="LOCAL-00329" summary="Changed synergy filename in script to match file name changes.">
+      <created>1523470799482</created>
+      <option name="number" value="00329" />
+      <option name="presentableId" value="LOCAL-00329" />
+      <option name="project" value="LOCAL" />
+      <updated>1523470799482</updated>
+    </task>
+    <option name="localTasksCounter" value="330" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -1282,14 +1281,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/studies/synergy/scripts/synergy_netprep.yaml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/studies/active/scripts/netprep_gather_inputs.sh">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="272">
@@ -1306,10 +1297,18 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/studies/synergy/scripts/synergy_netprep.yaml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/studies/synergy/scripts/synergy_netprep_gather_inputs.sh">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="782">
-          <caret line="46" column="0" lean-forward="true" selection-start-line="46" selection-start-column="0" selection-end-line="46" selection-end-column="0" />
+        <state relative-caret-position="510">
+          <caret line="30" column="73" lean-forward="false" selection-start-line="30" selection-start-column="73" selection-end-line="30" selection-end-column="73" />
           <folding />
         </state>
       </provider>
