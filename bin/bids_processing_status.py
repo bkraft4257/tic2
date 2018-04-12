@@ -171,7 +171,7 @@ def _display(in_df,
              noheader=False,
              ):
 
-    out_df = filter_rows(in_df, display_group=display_group)
+    out_df = filter_rows(in_df, display_group=display_group).reset_index(drop=True)
 
     if subject_only:
         out_df = out_df['subject'].copy()
