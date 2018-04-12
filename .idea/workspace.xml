@@ -68,10 +68,10 @@
         <entry file="file://$PROJECT_DIR$/bin/bids_processing_status.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="591">
-              <caret line="81" column="8" lean-forward="false" selection-start-line="81" selection-start-column="8" selection-end-line="81" selection-end-column="8" />
+              <caret line="81" column="0" lean-forward="true" selection-start-line="81" selection-start-column="0" selection-end-line="81" selection-end-column="0" />
               <folding>
                 <element signature="e#148#159#0" expanded="true" />
-                <element signature="e#4366#5033#0" expanded="false" />
+                <element signature="e#4312#4979#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -558,13 +558,6 @@
       <option name="presentableId" value="Default" />
       <updated>1517948604886</updated>
     </task>
-    <task id="LOCAL-00346" summary="Added operations for cleaning BIDS key/value pairs">
-      <created>1523546817367</created>
-      <option name="number" value="00346" />
-      <option name="presentableId" value="LOCAL-00346" />
-      <option name="project" value="LOCAL" />
-      <updated>1523546817367</updated>
-    </task>
     <task id="LOCAL-00347" summary="Added operations for cleaning BIDS key/value pairs">
       <created>1523546862999</created>
       <option name="number" value="00347" />
@@ -901,7 +894,14 @@
       <option name="project" value="LOCAL" />
       <updated>1523571361536</updated>
     </task>
-    <option name="localTasksCounter" value="395" />
+    <task id="LOCAL-00395" summary="Added ability to ignore session during search of bps.">
+      <created>1523571462379</created>
+      <option name="number" value="00395" />
+      <option name="presentableId" value="LOCAL-00395" />
+      <option name="project" value="LOCAL" />
+      <updated>1523571462379</updated>
+    </task>
+    <option name="localTasksCounter" value="396" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -1458,10 +1458,10 @@
     <entry file="file://$PROJECT_DIR$/bin/bids_processing_status.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="591">
-          <caret line="81" column="8" lean-forward="false" selection-start-line="81" selection-start-column="8" selection-end-line="81" selection-end-column="8" />
+          <caret line="81" column="0" lean-forward="true" selection-start-line="81" selection-start-column="0" selection-end-line="81" selection-end-column="0" />
           <folding>
             <element signature="e#148#159#0" expanded="true" />
-            <element signature="e#4366#5033#0" expanded="false" />
+            <element signature="e#4312#4979#0" expanded="false" />
           </folding>
         </state>
       </provider>
