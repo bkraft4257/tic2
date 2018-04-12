@@ -2,6 +2,7 @@
 
 # Aliases
 
+
 alias cdas='cd $ACTIVE_PATH; lsreport_function'
 alias cdb='cd $ACTIVE_BIDS_PATH; lsreport_function'
 alias cdin='cd $ACTIVE_PATH/incoming; lsreport_function'

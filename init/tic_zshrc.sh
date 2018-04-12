@@ -19,7 +19,7 @@ export TIC_PYTHONPATH=$TIC_PATH/:$TIC_PATH/bin
 export PYTHONPATH=$TIC_PYTHONPATH:$PYTHONPATH
 
 source $TIC_PATH/init/tic_aliases.sh
-source $TIC_STUDIES_PATH/study/active/aliases.sh
+source $TIC_STUDIES_PATH/active/aliases.sh
 
 export HOME_TIC_PATH=$TIC_INIT_PATH  # Done for backward compatibility.
 
