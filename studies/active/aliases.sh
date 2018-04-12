@@ -29,3 +29,5 @@ alias swc='study_switcher.py -s cenc; source $TIC_INIT_PATH/tic_study_switcher.s
 # Common environment variables used for ACTIVE scripts and such.
 
 export ACTIVE_HEUDICONV_PATTERN="{subject}/2*/*/*.DCM"
+
+
