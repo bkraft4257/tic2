@@ -49,14 +49,14 @@ def get_acrostic_list(acrostic_list_filename = get_acrostic_study_list_full_file
 def get_key_value_from_string(string,
                               acrostic_regex,
                               key_value_split_on=ops.BIDS_KEY_VALUE_SPLIT_ON):
+    key = None
+    value = None
 
-    m = re.search(acrostic_regex, string)
+    if acrostic_regex is not None:
+        m = re.search(acrostic_regex, string)
 
-    if m:
-        key,value =m.group(0).split(key_value_split_on)
-    else:
-        key = None
-        value = None
+        if m:
+            key,value =m.group(0).split(key_value_split_on)
 
     return key, value
 
@@ -201,7 +201,8 @@ def _rename_acrostic_list(in_df):
 def _get_subject_and_session_from_filenames(files, 
                                             subject_acrostic_regex, 
                                             session_acrostic_regex, 
-                                            verbose=False):
+                                            verbose=False,
+                                            ignore_session=False):
 
     df_files = pandas.DataFrame(columns=['subject', 'session', 'file'])
 
@@ -227,7 +228,12 @@ def _get_subject_and_session_from_filenames(files,
     # these because they are not the files you are looking for.   If they are you shouldn't be 
     # using this function.
 
-    df_files = df_files.dropna(subset=['subject', 'session'], axis=0)
+    dropna_subset = ['subject']
+
+    if session_acrostic_regex is not None:
+        dropna_subset += ['session']
+
+    df_files = df_files.dropna(subset=dropna_subset, axis=0)
 
     return df_files
 
@@ -254,7 +260,8 @@ def main():
     df_files = _get_subject_and_session_from_filenames(files,
                                                        subject_key_value,
                                                        session_key_value,
-                                                       in_args.verbose)
+                                                       in_args.verbose,
+                                                       )
 
     try:
         df_files_2 = df_files.set_index(['subject', 'session']).unstack()
