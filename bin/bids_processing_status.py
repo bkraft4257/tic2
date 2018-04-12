@@ -262,7 +262,7 @@ def main():
     except ValueError:
         print(f'\n{Fore.RED}Unable to stack. {Fore.WHITE}\n')
 
-        with pd.option_context('display.max_rows', in_args.display_max_rows):
+        with pandas.option_context('display.max_rows', in_args.display_max_rows):
             print(df_files)
 
         print('\n\nNumber of files detected per subject and session\n')
