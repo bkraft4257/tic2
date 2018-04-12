@@ -127,8 +127,8 @@
       <file leaf-file-name="bids_processing_status.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/bin/bids_processing_status.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="304">
-              <caret line="268" column="86" lean-forward="false" selection-start-line="268" selection-start-column="86" selection-end-line="268" selection-end-column="86" />
+            <state relative-caret-position="348">
+              <caret line="268" column="81" lean-forward="false" selection-start-line="268" selection-start-column="81" selection-end-line="268" selection-end-column="81" />
               <folding>
                 <element signature="e#148#159#0" expanded="true" />
                 <element signature="e#4309#4976#0" expanded="false" />
@@ -535,13 +535,6 @@
       <option name="presentableId" value="Default" />
       <updated>1517948604886</updated>
     </task>
-    <task id="LOCAL-00326" summary="Updated synergy aliases and filenames.">
-      <created>1523469766373</created>
-      <option name="number" value="00326" />
-      <option name="presentableId" value="LOCAL-00326" />
-      <option name="project" value="LOCAL" />
-      <updated>1523469766373</updated>
-    </task>
     <task id="LOCAL-00327" summary="Changed synergy filename in script to match file name changes.">
       <created>1523469965316</created>
       <option name="number" value="00327" />
@@ -878,7 +871,14 @@
       <option name="project" value="LOCAL" />
       <updated>1523556382094</updated>
     </task>
-    <option name="localTasksCounter" value="375" />
+    <task id="LOCAL-00375" summary="Added operations for cleaning BIDS key/value pairs">
+      <created>1523556440146</created>
+      <option name="number" value="00375" />
+      <option name="presentableId" value="LOCAL-00375" />
+      <option name="project" value="LOCAL" />
+      <updated>1523556440146</updated>
+    </task>
+    <option name="localTasksCounter" value="376" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -1414,8 +1414,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/bin/bids_processing_status.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="304">
-          <caret line="268" column="86" lean-forward="false" selection-start-line="268" selection-start-column="86" selection-end-line="268" selection-end-column="86" />
+        <state relative-caret-position="348">
+          <caret line="268" column="81" lean-forward="false" selection-start-line="268" selection-start-column="81" selection-end-line="268" selection-end-column="81" />
           <folding>
             <element signature="e#148#159#0" expanded="true" />
             <element signature="e#4309#4976#0" expanded="false" />
