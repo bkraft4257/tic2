@@ -62,6 +62,25 @@ def get_key_value_from_string(string,
     return key, value
 
 
+def _add_prefix_to_bids_key_value_if_necessary(in_key_value, bids_key, bids_delimiter='-'):
+    """
+    Add BIDS KEY if it doesn't exist.  Key should not contain the BIDS delimiter.
+
+    :param in_key_value:
+    :param bids_key:
+    :return:
+
+    """
+
+    if in_key_value[0:4] == bids_key + bids_delimiter:
+        out_key_value = in_key_value
+
+    else:
+        out_key_value = bids_key + bids_delimiter + in_key_value
+
+    return out_key_value
+
+
 def _argparse():
     """ Get command line arguments.
 
@@ -213,8 +232,8 @@ def main():
 
     df_acrostic_list = get_acrostic_list(in_args.acrostic_list)
 
-    subject_key_value = ops.clean_bids_key_value(in_args.subject, 'sub')
-    session_key_value = ops.clean_bids_key_value(in_args.subject, 'ses')
+    subject_key_value = _add_prefix_to_bids_key_value_if_necessary(in_args.subject, 'sub')
+    session_key_value = _add_prefix_to_bids_key_value_if_necessary(in_args.session, 'ses')
 
     df_files = _get_subject_and_session_from_filenames(files,
                                                        subject_key_value,
