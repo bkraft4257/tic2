@@ -207,7 +207,7 @@ def _clean_argparse_key_value(key_value, key='sub', key_value_split_on=BIDS_KEY_
         out_key_value = key_value
 
     else:
-        sys.exit(f'BIDS requires that there be only one {key_value_split_on}. \n Please check key-value pair {key_value}'.)
+        sys.exit(f'BIDS requires that there be only one {key_value_split_on}. \n Please check key-value pair {key_value}.')
 
     return out_key_value
 
