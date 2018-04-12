@@ -279,10 +279,17 @@ def main():
         with pandas.option_context('display.max_rows', in_args.display_max_rows):
             print(df_files)
 
-        print('\n\nNumber of files detected per subject and session\n')
-        print(df_files.groupby(['subject', 'session']).file.count().to_frame().unstack().fillna(0).astype(int))
-        print('\n\n')
-        sys.exit()
+        if session_key_value is None:
+            print('\n\nNumber of files detected per subject\n')
+            print(df_files.groupby(['subject']).file.count().to_frame().unstack().fillna(0).astype(int))
+            print('\n\n')
+            sys.exit()
+        else:
+            print('\n\nNumber of files detected per subject and session\n')
+            print(df_files.groupby(['subject', 'session']).file.count().to_frame().unstack().fillna(0).astype(int))
+            print('\n\n')
+            sys.exit()
+
 
     df_full_list = (_rename_acrostic_list(df_acrostic_list)
                     .reset_index()
