@@ -130,6 +130,9 @@ def _argparse():
 
     in_args = parser.parse_args()
 
+    if in_args.session.lower() == 'none':
+        in_args.session = None
+
     return in_args
 
 
