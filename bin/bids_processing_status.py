@@ -71,14 +71,14 @@ def _add_prefix_to_bids_key_value_if_necessary(in_key_value, bids_key, bids_deli
 
     """
 
-    if in_key_value is not None:
-        if in_key_value[0:4] == bids_key + bids_delimiter:
-            out_key_value = in_key_value
+    if in_key_value is None:
+        return None
 
-        else:
-            out_key_value = bids_key + bids_delimiter + in_key_value
-    else:
+    if in_key_value[0:4] == bids_key + bids_delimiter:
         out_key_value = in_key_value
+
+    else:
+        out_key_value = bids_key + bids_delimiter + in_key_value
 
     return out_key_value
 
