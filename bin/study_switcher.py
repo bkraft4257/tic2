@@ -36,8 +36,6 @@ def _write_study_switcher_script(active_study,
         file.write(f'# TIC Study Switcher Script\n')
         file.write(f'# =========================\n\n')
 
-        file.write(f"echo 'Previous active study' = $ACTIVE_STUDY\n\n")
-
         file.write(f'export ACTIVE_STUDY={active_study}\n')
         file.write(f'export ACTIVE_ACROSTIC_REGEX=${active_study}_ACROSTIC_REGEX\n')
         file.write(f'export ACTIVE_SCRIPTS_PATH=${active_study}_SCRIPTS_PATH \n')
@@ -67,7 +65,7 @@ def _write_study_switcher_script(active_study,
         file.write(f'export ACTIVE_FMRIPREP_PATH=${active_study}_FMRIPREP_PATH\n')
         file.write(f'export ACTIVE_NETPREP_PATH=${active_study}_NETPREP_PATH\n')
 
-        file.write(f'source $TIC_INIT_PATH/{active_study.lower()}_init.sh')
+        file.write(f'source $TIC_INIT_PATH/{active_study.lower()}_init.sh\n\n')
 
         file.write(f"echo 'Current active study' = $ACTIVE_STUDY\n\n")
 
