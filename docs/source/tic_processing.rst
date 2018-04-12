@@ -43,8 +43,9 @@ The high level view of the TIC directory structure is
         /hfpef
         /infinite
         /synergy
+        /...
 
-    ./workflows
+    ./tic_core
 
 **bin** - contains executable Python and Bash scripts. When the TIC
 environment is setup correctly the $TIC_PATH/bin is added to your
@@ -62,6 +63,13 @@ easily be created and added to the TIC HTML page by writing in Markdown
 or Restructed test and adding these documents to the Sphinx Index.
 Additional information will be provided on how one may contribute to the
 TIC documentation.
+
+**studies** - contains functions for the individual studies.  The active study
+is unique in that it contains functions that will be used across multiple studies but are
+applied according to the environment variable $ACTIVE_STUDY.
+
+**tic_core** - contains functions that are used by the python scripts.
+
 
 :ref:`_tic_documentation-overview`
 
