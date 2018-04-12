@@ -30,7 +30,7 @@ alias bps_fmriprep_t1w="bps 'sub*/**/func/*T1w_preproc.nii.gz'"
 function bps_fmriprep_t1w()
     {
 
-    search_string='sub*/**/anat/*T1w_preproc.nii.gz'
+    local search_string='sub*/**/anat/*T1w_preproc.nii.gz'
 
     echo
     echo 'bps ' $search_string
@@ -44,7 +44,7 @@ function bps_fmriprep_t1w()
 function bps_fmriprep_bold()
     {
 
-    search_string='sub*/**/func/*_preproc.nii.gz'
+    local search_string='sub*/**/func/*_preproc.nii.gz'
 
     echo
     echo 'bps ' $search_string
