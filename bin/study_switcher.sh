@@ -9,6 +9,8 @@ echo "$params" | grep -q "\-d"
 
 if [ $? -ne 0 ];then
     source $TIC_INIT_PATH/tic_study_switcher.sh
-    echo '\n\tACTIVE_STUDY is now' $ACTIVE_STUDY
+
+    echo
+    echo '    ACTIVE_STUDY is now' $ACTIVE_STUDY
     echo
 fi
