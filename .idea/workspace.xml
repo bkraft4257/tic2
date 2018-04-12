@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="6f3e13b3-cd58-4c4d-98f6-1a68f8358bfb" name="Default" comment="Added operations for cleaning BIDS key/value pairs">
+    <list default="true" id="6f3e13b3-cd58-4c4d-98f6-1a68f8358bfb" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/bin/processing_status.py" afterPath="$PROJECT_DIR$/bin/bids_processing_status.py" />
       <change beforePath="$PROJECT_DIR$/bin/study_switcher.py" afterPath="$PROJECT_DIR$/bin/study_switcher.py" />
-      <change beforePath="$PROJECT_DIR$/init/tic_aliases.sh" afterPath="$PROJECT_DIR$/init/tic_aliases.sh" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -124,21 +122,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="tic_aliases.sh" pinned="false" current-in-tab="true">
+      <file leaf-file-name="tic_aliases.sh" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/init/tic_aliases.sh">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="6" column="37" lean-forward="false" selection-start-line="6" selection-start-column="37" selection-end-line="6" selection-end-column="37" />
+            <state relative-caret-position="680">
+              <caret line="40" column="23" lean-forward="true" selection-start-line="40" selection-start-column="23" selection-end-line="40" selection-end-column="23" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="study_switcher.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="study_switcher.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/bin/study_switcher.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="639">
-              <caret line="70" column="0" lean-forward="true" selection-start-line="70" selection-start-column="0" selection-end-line="70" selection-end-column="0" />
+            <state relative-caret-position="401">
+              <caret line="56" column="0" lean-forward="false" selection-start-line="56" selection-start-column="0" selection-end-line="56" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -261,8 +259,8 @@
         <option value="$PROJECT_DIR$/tests/test_plot_overlay.py" />
         <option value="$PROJECT_DIR$/tests/test_processing_status.py" />
         <option value="$PROJECT_DIR$/bin/processing_status.py" />
-        <option value="$PROJECT_DIR$/bin/study_switcher.py" />
         <option value="$PROJECT_DIR$/init/tic_aliases.sh" />
+        <option value="$PROJECT_DIR$/bin/study_switcher.py" />
       </list>
     </option>
   </component>
@@ -494,13 +492,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1517948604886</updated>
-    </task>
-    <task id="LOCAL-00301" summary="Updated mriqc">
-      <created>1521487535864</created>
-      <option name="number" value="00301" />
-      <option name="presentableId" value="LOCAL-00301" />
-      <option name="project" value="LOCAL" />
-      <updated>1521487535864</updated>
     </task>
     <task id="LOCAL-00302" summary="Updated mriqc">
       <created>1521488491554</created>
@@ -838,7 +829,14 @@
       <option name="project" value="LOCAL" />
       <updated>1523547344078</updated>
     </task>
-    <option name="localTasksCounter" value="350" />
+    <task id="LOCAL-00350" summary="Added operations for cleaning BIDS key/value pairs">
+      <created>1523548830313</created>
+      <option name="number" value="00350" />
+      <option name="presentableId" value="LOCAL-00350" />
+      <option name="project" value="LOCAL" />
+      <updated>1523548830313</updated>
+    </task>
+    <option name="localTasksCounter" value="351" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -1330,18 +1328,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/bin/study_switcher.py">
+    <entry file="file://$PROJECT_DIR$/init/tic_aliases.sh">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="639">
-          <caret line="70" column="0" lean-forward="true" selection-start-line="70" selection-start-column="0" selection-end-line="70" selection-end-column="0" />
+        <state relative-caret-position="680">
+          <caret line="40" column="23" lean-forward="true" selection-start-line="40" selection-start-column="23" selection-end-line="40" selection-end-column="23" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/init/tic_aliases.sh">
+    <entry file="file://$PROJECT_DIR$/bin/study_switcher.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="37" lean-forward="false" selection-start-line="6" selection-start-column="37" selection-end-line="6" selection-end-column="37" />
+        <state relative-caret-position="401">
+          <caret line="56" column="0" lean-forward="false" selection-start-line="56" selection-start-column="0" selection-end-line="56" selection-end-column="0" />
           <folding />
         </state>
       </provider>
