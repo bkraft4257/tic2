@@ -17,14 +17,12 @@ alias asi='active_study_info.sh'
 
 alias bv='tic_bids_validator.sh'
 
-alias sw='study_switcher.sh'
-
 # Common environment variables used for ACTIVE scripts and such.
 
 export ACTIVE_HEUDICONV_PATTERN="{subject}/2*/*/*.DCM"
 
 
-function myfunc()
+function sw()
 {
     if study_switcher.py $@; then
 
