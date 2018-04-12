@@ -78,8 +78,6 @@ def _add_prefix_to_bids_key_value_if_necessary(in_key_value, bids_key, bids_deli
     else:
         out_key_value = bids_key + bids_delimiter + in_key_value
 
-    print(out_key_value)
-
     return out_key_value
 
 
@@ -258,13 +256,13 @@ def main():
         print('\n\n')
         sys.exit()
 
-    print(df_files_2)
-
     df_full_list = (_rename_acrostic_list(df_acrostic_list)
                     .reset_index()
                     .merge(df_files_2.reset_index(), how='left', on='subject')
                     .fillna(False)
                     )
+
+    print(df_full_list)
 
     _display(df_full_list.pipe(_clean_nan,
                                nan_option=in_args.nan),
