@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="6f3e13b3-cd58-4c4d-98f6-1a68f8358bfb" name="Default" comment="">
+    <list default="true" id="6f3e13b3-cd58-4c4d-98f6-1a68f8358bfb" name="Default" comment="Trying to simplify bids_processing_status with functions.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/bin/bids_processing_status.py" afterPath="$PROJECT_DIR$/bin/bids_processing_status.py" />
-      <change beforePath="$PROJECT_DIR$/studies/active/aliases.sh" afterPath="$PROJECT_DIR$/studies/active/aliases.sh" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -68,11 +67,11 @@
       <file leaf-file-name="bids_processing_status.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/bin/bids_processing_status.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="234">
-              <caret line="231" column="19" lean-forward="true" selection-start-line="231" selection-start-column="19" selection-end-line="231" selection-end-column="19" />
+            <state relative-caret-position="402">
+              <caret line="232" column="41" lean-forward="false" selection-start-line="232" selection-start-column="41" selection-end-line="232" selection-end-column="41" />
               <folding>
                 <element signature="e#148#159#0" expanded="true" />
-                <element signature="e#4159#4826#0" expanded="false" />
+                <element signature="e#4188#4855#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -559,13 +558,6 @@
       <option name="presentableId" value="Default" />
       <updated>1517948604886</updated>
     </task>
-    <task id="LOCAL-00343" summary="Added operations for cleaning BIDS key/value pairs">
-      <created>1523546608053</created>
-      <option name="number" value="00343" />
-      <option name="presentableId" value="LOCAL-00343" />
-      <option name="project" value="LOCAL" />
-      <updated>1523546608053</updated>
-    </task>
     <task id="LOCAL-00344" summary="Added operations for cleaning BIDS key/value pairs">
       <created>1523546646272</created>
       <option name="number" value="00344" />
@@ -902,7 +894,14 @@
       <option name="project" value="LOCAL" />
       <updated>1523570155899</updated>
     </task>
-    <option name="localTasksCounter" value="392" />
+    <task id="LOCAL-00392" summary="Trying to simplify bids_processing_status with functions.">
+      <created>1523570537518</created>
+      <option name="number" value="00392" />
+      <option name="presentableId" value="LOCAL-00392" />
+      <option name="project" value="LOCAL" />
+      <updated>1523570537518</updated>
+    </task>
+    <option name="localTasksCounter" value="393" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -1458,11 +1457,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/bin/bids_processing_status.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="234">
-          <caret line="231" column="19" lean-forward="true" selection-start-line="231" selection-start-column="19" selection-end-line="231" selection-end-column="19" />
+        <state relative-caret-position="402">
+          <caret line="232" column="41" lean-forward="false" selection-start-line="232" selection-start-column="41" selection-end-line="232" selection-end-column="41" />
           <folding>
             <element signature="e#148#159#0" expanded="true" />
-            <element signature="e#4159#4826#0" expanded="false" />
+            <element signature="e#4188#4855#0" expanded="false" />
           </folding>
         </state>
       </provider>
