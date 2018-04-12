@@ -49,7 +49,7 @@ def get_acrostic_list(acrostic_list_filename = get_acrostic_study_list_full_file
 
 def get_key_value_from_string(string,
                               acrostic_regex,
-                              key_value_split_on=tic_core.ops.BIDS_KEY_VALUE_SPLIT_ON):
+                              key_value_split_on=ops.BIDS_KEY_VALUE_SPLIT_ON):
 
     m = re.search(acrostic_regex, string)
 
