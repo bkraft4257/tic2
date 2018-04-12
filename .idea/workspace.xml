@@ -124,8 +124,8 @@
       <file leaf-file-name="processing_status.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/bin/processing_status.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="371">
-              <caret line="228" column="73" lean-forward="true" selection-start-line="228" selection-start-column="73" selection-end-line="228" selection-end-column="73" />
+            <state relative-caret-position="266">
+              <caret line="209" column="121" lean-forward="false" selection-start-line="209" selection-start-column="121" selection-end-line="209" selection-end-column="121" />
               <folding />
             </state>
           </provider>
@@ -523,13 +523,6 @@
       <option name="presentableId" value="Default" />
       <updated>1517948604886</updated>
     </task>
-    <task id="LOCAL-00286" summary="Wrote new function to create acrostic.csv">
-      <created>1521152352431</created>
-      <option name="number" value="00286" />
-      <option name="presentableId" value="LOCAL-00286" />
-      <option name="project" value="LOCAL" />
-      <updated>1521152352431</updated>
-    </task>
     <task id="LOCAL-00287" summary="Wrote new function to create acrostic.csv">
       <created>1521152384174</created>
       <option name="number" value="00287" />
@@ -866,7 +859,14 @@
       <option name="project" value="LOCAL" />
       <updated>1523541485435</updated>
     </task>
-    <option name="localTasksCounter" value="335" />
+    <task id="LOCAL-00335" summary="Added some protection for subject and session inputs from argparse.">
+      <created>1523542438583</created>
+      <option name="number" value="00335" />
+      <option name="presentableId" value="LOCAL-00335" />
+      <option name="project" value="LOCAL" />
+      <updated>1523542438583</updated>
+    </task>
+    <option name="localTasksCounter" value="336" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -960,7 +960,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Updated tic_info to display all the singularity images." />
     <MESSAGE value="Updated singularity image documentation.  &#10;Added ability to remove CR from DICOM images." />
     <MESSAGE value="Updated SYNERGY protocol." />
     <MESSAGE value="Updated SYNERGY bids cleaning." />
@@ -985,7 +984,8 @@
     <MESSAGE value="Changed synergy filename in script to match file name changes." />
     <MESSAGE value="Added *_ACT_PATH to environments.&#10;Added MCF_CONN_PATH to mcf study." />
     <MESSAGE value="Added ACTIVE_ACROSTIC_REGEX as default to processing_status.py&#10;Updated environment variables to include *_CONN_PATH (hfpef)" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added ACTIVE_ACROSTIC_REGEX as default to processing_status.py&#10;Updated environment variables to include *_CONN_PATH (hfpef)" />
+    <MESSAGE value="Added some protection for subject and session inputs from argparse." />
+    <option name="LAST_COMMIT_MESSAGE" value="Added some protection for subject and session inputs from argparse." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1327,8 +1327,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/bin/processing_status.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="371">
-          <caret line="228" column="73" lean-forward="true" selection-start-line="228" selection-start-column="73" selection-end-line="228" selection-end-column="73" />
+        <state relative-caret-position="266">
+          <caret line="209" column="121" lean-forward="false" selection-start-line="209" selection-start-column="121" selection-end-line="209" selection-end-column="121" />
           <folding />
         </state>
       </provider>
