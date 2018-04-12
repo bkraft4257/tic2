@@ -3,11 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="6f3e13b3-cd58-4c4d-98f6-1a68f8358bfb" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/bin/__init__.py" afterPath="$PROJECT_DIR$/bin/__init__.py" />
-      <change beforePath="$PROJECT_DIR$/bin/plot_overlay.py" afterPath="$PROJECT_DIR$/bin/plot_overlay.py" />
-      <change beforePath="$PROJECT_DIR$/bin/study_switcher.sh" afterPath="$PROJECT_DIR$/bin/study_switcher.sh" />
-      <change beforePath="$PROJECT_DIR$/bin/update_study_init_links.py" afterPath="$PROJECT_DIR$/bin/update_study_init_links.py" />
-      <change beforePath="$PROJECT_DIR$/studies/active/aliases.sh" afterPath="$PROJECT_DIR$/studies/active/aliases.sh" />
+      <change beforePath="$PROJECT_DIR$/bin/study_switcher.py" afterPath="$PROJECT_DIR$/bin/study_switcher.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -58,21 +54,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="study_switcher.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="study_switcher.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/bin/study_switcher.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="33">
-              <caret line="9" column="3" lean-forward="true" selection-start-line="9" selection-start-column="3" selection-end-line="9" selection-end-column="3" />
+            <state relative-caret-position="566">
+              <caret line="119" column="12" lean-forward="false" selection-start-line="119" selection-start-column="12" selection-end-line="119" selection-end-column="12" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="aliases.sh" pinned="false" current-in-tab="true">
+      <file leaf-file-name="aliases.sh" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/studies/active/aliases.sh">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="340">
-              <caret line="20" column="0" lean-forward="false" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
+            <state relative-caret-position="306">
+              <caret line="18" column="0" lean-forward="true" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -131,8 +127,8 @@
       <file leaf-file-name="study_switcher.sh" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/bin/study_switcher.sh">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="34">
-              <caret line="2" column="20" lean-forward="true" selection-start-line="2" selection-start-column="20" selection-end-line="2" selection-end-column="20" />
+            <state relative-caret-position="51">
+              <caret line="3" column="40" lean-forward="false" selection-start-line="3" selection-start-column="22" selection-end-line="3" selection-end-column="40" />
               <folding />
             </state>
           </provider>
@@ -151,8 +147,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>echotim</find>
-      <find>bv</find>
       <find>IMOVE</find>
       <find>singulary</find>
       <find>bids_app</find>
@@ -181,6 +175,8 @@
       <find>split</find>
       <find>BIDS</find>
       <find>summary</find>
+      <find>default_study</find>
+      <find>DEFAULT_STUDY_CHOICE</find>
     </findStrings>
     <replaceStrings>
       <replace>01d</replace>
@@ -254,9 +250,9 @@
         <option value="$PROJECT_DIR$/bin/processing_status.py" />
         <option value="$PROJECT_DIR$/init/tic_aliases.sh" />
         <option value="$PROJECT_DIR$/bin/lnflatten.sh" />
-        <option value="$PROJECT_DIR$/bin/study_switcher.py" />
         <option value="$PROJECT_DIR$/bin/study_switcher.sh" />
         <option value="$PROJECT_DIR$/studies/active/aliases.sh" />
+        <option value="$PROJECT_DIR$/bin/study_switcher.py" />
       </list>
     </option>
   </component>
@@ -499,13 +495,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1517948604886</updated>
-    </task>
-    <task id="LOCAL-00308" summary="Updated processing_status.py by including to_string instead of my own formatting.">
-      <created>1521738637925</created>
-      <option name="number" value="00308" />
-      <option name="presentableId" value="LOCAL-00308" />
-      <option name="project" value="LOCAL" />
-      <updated>1521738637925</updated>
     </task>
     <task id="LOCAL-00309" summary="Updated processing_status.py by including to_string instead of my own formatting.">
       <created>1521738988172</created>
@@ -843,7 +832,14 @@
       <option name="project" value="LOCAL" />
       <updated>1523552272248</updated>
     </task>
-    <option name="localTasksCounter" value="357" />
+    <task id="LOCAL-00357" summary="Added operations for cleaning BIDS key/value pairs">
+      <created>1523552390819</created>
+      <option name="number" value="00357" />
+      <option name="presentableId" value="LOCAL-00357" />
+      <option name="project" value="LOCAL" />
+      <updated>1523552390819</updated>
+    </task>
+    <option name="localTasksCounter" value="358" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -1351,26 +1347,26 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/bin/study_switcher.py">
+    <entry file="file://$PROJECT_DIR$/studies/active/aliases.sh">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="33">
-          <caret line="9" column="3" lean-forward="true" selection-start-line="9" selection-start-column="3" selection-end-line="9" selection-end-column="3" />
+        <state relative-caret-position="306">
+          <caret line="18" column="0" lean-forward="true" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/bin/study_switcher.sh">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="20" lean-forward="true" selection-start-line="2" selection-start-column="20" selection-end-line="2" selection-end-column="20" />
+        <state relative-caret-position="51">
+          <caret line="3" column="40" lean-forward="false" selection-start-line="3" selection-start-column="22" selection-end-line="3" selection-end-column="40" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/studies/active/aliases.sh">
+    <entry file="file://$PROJECT_DIR$/bin/study_switcher.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="20" column="0" lean-forward="false" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
+        <state relative-caret-position="566">
+          <caret line="119" column="12" lean-forward="false" selection-start-line="119" selection-start-column="12" selection-end-line="119" selection-end-column="12" />
           <folding />
         </state>
       </provider>
