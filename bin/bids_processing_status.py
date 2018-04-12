@@ -239,6 +239,9 @@ def main():
     files = glob.glob(in_args.file_pattern,
                       recursive=not in_args.glob_current_directory_only)
 
+    if in_args.verbose:
+        print(files)
+
     if len(files) == 0:
         print(f'No files were found given with your glob string {in_args.file_pattern}')
         sys.exit()
