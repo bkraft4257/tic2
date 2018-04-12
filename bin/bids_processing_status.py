@@ -265,7 +265,7 @@ def main():
         print(df_files)
         print('\n\n')
 
-        print(df_files.groupby(['subject', 'session']).file.count())
+        print(df_files.groupby(['subject', 'session']).file.count().to_frame())
         print('\n\n')
         sys.exit()
 

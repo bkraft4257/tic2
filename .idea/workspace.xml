@@ -127,8 +127,8 @@
       <file leaf-file-name="bids_processing_status.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/bin/bids_processing_status.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="301">
-              <caret line="175" column="17" lean-forward="false" selection-start-line="175" selection-start-column="17" selection-end-line="175" selection-end-column="17" />
+            <state relative-caret-position="353">
+              <caret line="267" column="78" lean-forward="false" selection-start-line="267" selection-start-column="78" selection-end-line="267" selection-end-column="78" />
               <folding>
                 <element signature="e#148#159#0" expanded="true" />
                 <element signature="e#4176#4843#0" expanded="false" />
@@ -535,13 +535,6 @@
       <option name="presentableId" value="Default" />
       <updated>1517948604886</updated>
     </task>
-    <task id="LOCAL-00322" summary="Fixed bug when a file or files was selected that did not match bids convention.">
-      <created>1521751359999</created>
-      <option name="number" value="00322" />
-      <option name="presentableId" value="LOCAL-00322" />
-      <option name="project" value="LOCAL" />
-      <updated>1521751359999</updated>
-    </task>
     <task id="LOCAL-00323" summary="Fixed bug when a file or files was selected that did not match bids convention.">
       <created>1521754401989</created>
       <option name="number" value="00323" />
@@ -878,7 +871,14 @@
       <option name="project" value="LOCAL" />
       <updated>1523555868579</updated>
     </task>
-    <option name="localTasksCounter" value="371" />
+    <task id="LOCAL-00371" summary="Added operations for cleaning BIDS key/value pairs">
+      <created>1523555920653</created>
+      <option name="number" value="00371" />
+      <option name="presentableId" value="LOCAL-00371" />
+      <option name="project" value="LOCAL" />
+      <updated>1523555920653</updated>
+    </task>
+    <option name="localTasksCounter" value="372" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -1414,8 +1414,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/bin/bids_processing_status.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="301">
-          <caret line="175" column="17" lean-forward="false" selection-start-line="175" selection-start-column="17" selection-end-line="175" selection-end-column="17" />
+        <state relative-caret-position="353">
+          <caret line="267" column="78" lean-forward="false" selection-start-line="267" selection-start-column="78" selection-end-line="267" selection-end-column="78" />
           <folding>
             <element signature="e#148#159#0" expanded="true" />
             <element signature="e#4176#4843#0" expanded="false" />
