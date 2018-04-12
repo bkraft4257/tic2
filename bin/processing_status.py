@@ -245,8 +245,6 @@ def main():
         df_files_2 = df_files.set_index(['subject', 'session']).unstack()
         df_files_2.columns = [f'ses-{x+1}_processed' for x in range(len(df_files_2.columns))]
 
-    print(df_files_2)
-
     except ValueError:
         print(f'\n{Fore.RED}Unable to stack. {Fore.WHITE}\n')
         print(df_files)
@@ -255,6 +253,8 @@ def main():
         print(df_files.groupby(['subject', 'session']).file.count())
         print('\n\n')
         sys.exit()
+
+    print(df_files_2)
 
     df_full_list = (_rename_acrostic_list(df_acrostic_list)
                     .reset_index()
