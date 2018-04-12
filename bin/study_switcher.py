@@ -5,7 +5,7 @@
 Writes a bash script to TIC_INIT_PATH.  This function is often called with an alias that calls this function
 and then sources the bash script.  For example,
 
-alias swh='study_switcher.py -s hfpef; source $TIC_INIT_PATH/tic_study_switcher.sh'
+alias swh='study_switcher.py hfpef; source $TIC_INIT_PATH/tic_study_switcher.sh'
 
 """
 
@@ -17,10 +17,10 @@ STUDY_CHOICES = ['hfpef', 'synergy', 'infinite', 'cenc', 'imove', 'mcf']
 DEFAULT_STUDY_CHOICE = 'hfpef'
 
 STUDY_SWITCHER_OUTPUT_FILENAME = os.path.abspath(os.path.join(os.getenv('TIC_INIT_PATH'),
-                                           'tic_study_switcher.sh'))
+                                                              'tic_study_switcher.sh'))
 
 DEFAULT_STUDY_SWITCHER_OUTPUT_FILENAME = os.path.abspath(os.path.join(os.getenv('TIC_INIT_PATH'),
-                                          'tic_default_study.sh'))
+                                                                      'tic_default_study.sh'))
 
 
 def _write_study_switcher_script(active_study,
@@ -36,7 +36,7 @@ def _write_study_switcher_script(active_study,
         file.write(f'# TIC Study Switcher Script\n')
         file.write(f'# =========================\n\n')
 
-        file.write(f'source $TIC_INIT_PATH/{active_study.lower()}_init.sh\n\n')
+        file.write(f'source $TIC_STUDIES_PATH/{active_study.lower()}/{active_study.lower()}_init.sh\n\n')
 
         file.write(f'export ACTIVE_STUDY={active_study}\n')
         file.write(f'export ACTIVE_ACROSTIC_REGEX=${active_study}_ACROSTIC_REGEX\n')
@@ -76,7 +76,7 @@ def _argparse():
 
     parser = argparse.ArgumentParser(prog='study_switcher')
 
-    parser.add_argument('-s','--study',
+    parser.add_argument('study',
                         help='Switch to a different study.',
                         choices=STUDY_CHOICES,
                         type=str,
