@@ -25,7 +25,7 @@ export ACTIVE_HEUDICONV_PATTERN="{subject}/2*/*/*.DCM"
 function bps_fmriprep_t1w()
     {
 
-    local search_string='sub*/**/anat/*T1w_preproc.nii.gz'
+    local search_string='sub*/**/*T1w_preproc.nii.gz'
 
     echo
     echo 'bps ' $search_string
