@@ -12,6 +12,9 @@ import sys
 import pandas
 import re
 from colorama import Fore
+
+print(sys.path)
+
 import tic_core
 
 pandas.set_option('display.max_columns', 500)

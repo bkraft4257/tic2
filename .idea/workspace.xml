@@ -2,13 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6f3e13b3-cd58-4c4d-98f6-1a68f8358bfb" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/bin/__init__.py" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/tests/test_processing_status.py" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/tic_core/ops.py" />
-      <change beforePath="$PROJECT_DIR$/.idea/tic_core.iml" afterPath="$PROJECT_DIR$/.idea/tic_core.iml" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/bin/processing_status.py" afterPath="$PROJECT_DIR$/bin/processing_status.py" />
-      <change beforePath="$PROJECT_DIR$/tests/test_plot_overlay.py" afterPath="$PROJECT_DIR$/tests/test_plot_overlay.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -69,21 +64,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="environment.sh" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/studies/infinite/environment.sh">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="11" column="50" lean-forward="false" selection-start-line="11" selection-start-column="50" selection-end-line="11" selection-end-column="50" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="processing_status.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/bin/processing_status.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="338">
-              <caret line="55" column="13" lean-forward="false" selection-start-line="55" selection-start-column="13" selection-end-line="55" selection-end-column="13" />
+            <state relative-caret-position="255">
+              <caret line="15" column="14" lean-forward="false" selection-start-line="15" selection-start-column="14" selection-end-line="15" selection-end-column="14" />
               <folding>
                 <element signature="e#148#159#0" expanded="true" />
               </folding>
@@ -142,6 +127,16 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="170">
               <caret line="10" column="90" lean-forward="false" selection-start-line="10" selection-start-column="4" selection-end-line="10" selection-end-column="90" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="tic_info.sh" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/bin/tic_info.sh">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -516,13 +511,6 @@
       <option name="presentableId" value="Default" />
       <updated>1517948604886</updated>
     </task>
-    <task id="LOCAL-00288" summary="Wrote new function to create acrostic.csv">
-      <created>1521152456333</created>
-      <option name="number" value="00288" />
-      <option name="presentableId" value="LOCAL-00288" />
-      <option name="project" value="LOCAL" />
-      <updated>1521152456333</updated>
-    </task>
     <task id="LOCAL-00289" summary="Wrote new function to create acrostic.csv">
       <created>1521208447271</created>
       <option name="number" value="00289" />
@@ -859,7 +847,14 @@
       <option name="project" value="LOCAL" />
       <updated>1523542468966</updated>
     </task>
-    <option name="localTasksCounter" value="337" />
+    <task id="LOCAL-00337" summary="Added operations for cleaning BIDS key/value pairs">
+      <created>1523543678912</created>
+      <option name="number" value="00337" />
+      <option name="presentableId" value="LOCAL-00337" />
+      <option name="project" value="LOCAL" />
+      <updated>1523543678912</updated>
+    </task>
+    <option name="localTasksCounter" value="338" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -953,7 +948,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Updated singularity image documentation.  &#10;Added ability to remove CR from DICOM images." />
     <MESSAGE value="Updated SYNERGY protocol." />
     <MESSAGE value="Updated SYNERGY bids cleaning." />
     <MESSAGE value="Renamed synergy_clean_bids.sh to synergy_bids_clean.sh&#10;Removed some old scripts." />
@@ -978,7 +972,8 @@
     <MESSAGE value="Added *_ACT_PATH to environments.&#10;Added MCF_CONN_PATH to mcf study." />
     <MESSAGE value="Added ACTIVE_ACROSTIC_REGEX as default to processing_status.py&#10;Updated environment variables to include *_CONN_PATH (hfpef)" />
     <MESSAGE value="Added some protection for subject and session inputs from argparse." />
-    <option name="LAST_COMMIT_MESSAGE" value="Added some protection for subject and session inputs from argparse." />
+    <MESSAGE value="Added operations for cleaning BIDS key/value pairs" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added operations for cleaning BIDS key/value pairs" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -999,7 +994,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/studies/synergy/scripts/synergy_gi_netprep.sh" />
     <entry file="file://$PROJECT_DIR$/studies/synergy/scripts/synergy_bids.cfg" />
     <entry file="file://$PROJECT_DIR$/studies/synergy/scripts/synergy_prepare_netprep.sh" />
     <entry file="file://$PROJECT_DIR$/studies/synergy/synergy_init.sh">
@@ -1314,14 +1308,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tic_core/ops.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="90" lean-forward="false" selection-start-line="10" selection-start-column="4" selection-end-line="10" selection-end-column="90" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/tic_core/plot_overlay.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -1342,10 +1328,26 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/tic_core/ops.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="90" lean-forward="false" selection-start-line="10" selection-start-column="4" selection-end-line="10" selection-end-column="90" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bin/tic_info.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/bin/processing_status.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="338">
-          <caret line="55" column="13" lean-forward="false" selection-start-line="55" selection-start-column="13" selection-end-line="55" selection-end-column="13" />
+        <state relative-caret-position="255">
+          <caret line="15" column="14" lean-forward="false" selection-start-line="15" selection-start-column="14" selection-end-line="15" selection-end-column="14" />
           <folding>
             <element signature="e#148#159#0" expanded="true" />
           </folding>
