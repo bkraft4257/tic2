@@ -134,12 +134,24 @@ def _argparse():
 
 
 def filter_rows(in_df, display_group='both'):
+    """
+    Filter rows that belong to requested display group.
+
+    :param in_df:
+
+    :param display_group: Displays files that were found, missing, or both.  This allows users to generate a list of files that
+    need to be processed.
+
+    :return:
+
+
+    """
 
     all_columns = list(in_df.columns.values)
     r = re.compile('.*_processed$')
     search_columns = list(filter(r.match, all_columns))
     
-    keep_rows= in_df[search_columns].any(axis=1)
+    keep_rows = in_df[search_columns].any(axis=1)
 
     if display_group == 'found':
         out_df = in_df[ keep_rows ].copy()
@@ -227,8 +239,6 @@ def main():
     files = glob.glob(in_args.file_pattern,
                       recursive=not in_args.glob_current_directory_only)
 
-    print(files)
-
     if len(files) == 0:
         print(f'No files were found given with your glob string {in_args.file_pattern}')
         sys.exit()
@@ -261,8 +271,6 @@ def main():
                     .merge(df_files_2.reset_index(), how='left', on='subject')
                     .fillna(False)
                     )
-
-    print(df_full_list)
 
     _display(df_full_list.pipe(_clean_nan,
                                nan_option=in_args.nan),
