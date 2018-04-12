@@ -173,6 +173,7 @@ def _display(in_df,
 
     out_df = filter_rows(in_df, display_group=display_group).reset_index(drop=True)
 
+    print('out_df')
     print(out_df)
 
     if subject_only:
