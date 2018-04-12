@@ -18,9 +18,12 @@ alias dfgandg='echo; df -h /gandg/; echo'
 alias catlast='ls -1drt * | tail -1 | xargs cat'
 alias cl='ls -1drt * | tail -1 | xargs cat'
 
+alias cdtb='cd $TIC_PATH/bin; lsreport_function'
+alias cdts='cd $TIC_STUDIES_PATH; lsreport_function'
 alias cdtic='cd $TIC_PATH; lsreport_function'
-alias cdtemplates='cd $TEMPLATES_PATH; lsreport_function'
 
+
+alias cdtemplates='cd $TEMPLATES_PATH; lsreport_function'
 alias cdixi='cd $TEMPLATE_IXI; lsreport_function'
 alias cdinia='cd $TEMPLATE_INIA19; lsreport_function'
 alias cdmni='cd $TEMPLATE_MNI; lsreport_function'
@@ -30,7 +33,6 @@ alias cdsd='cd $SUBJECTS_DIR; lsreport_function'
 alias cda='echo; echo $PWD; cd $(pwd -P); echo $PWD; echo; ls; echo'
 
 alias retic='source $TIC_PATH/init/tic_aliases.sh'
-alias lstic='echo; echo $TIC_PATH; echo'
 
 alias fmriprep='/usr/local/bin/singularity run -w -B /cenc -B /gandg -B /bkraft1 $FMRIPREP_SINGULARITY_IMAGE'
 alias mriqc='/usr/local/bin/singularity run -w -B /cenc -B /gandg -B /bkraft1 $MRIQC_SINGULARITY_IMAGE'
