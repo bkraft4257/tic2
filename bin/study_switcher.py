@@ -35,7 +35,7 @@ def _write_study_switcher_script(active_study,
         file.write(f'# TIC Study Switcher Script\n')
         file.write(f'# =========================\n\n')
 
-        file.write(f'source $TIC_STUDIES_PATH/{active_study.lower()}/{active_study.lower()}_init.sh\n\n')
+        file.write(f'source $TIC_STUDIES_PATH/{active_study.lower()}/init.sh\n\n')
 
         file.write(f'export ACTIVE_STUDY={active_study}\n')
         file.write(f'export ACTIVE_ACROSTIC_REGEX=${active_study}_ACROSTIC_REGEX\n')
