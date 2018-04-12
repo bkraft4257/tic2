@@ -17,6 +17,8 @@ pandas.set_option('display.max_columns', 500)
 pandas.set_option('display.width', 1000)
 pandas.set_option('display.max_colwidth',200)
 
+BIDS_KEY_VALUE_SPLIT_ON = '-'
+
 # TODO Study Choices should be a common variable that is imported.
 
 
@@ -45,7 +47,7 @@ def get_acrostic_list(acrostic_list_filename = get_acrostic_study_list_full_file
     return df_acrostic_list
 
 
-def get_key_value_from_string(string, acrostic_regex, key_value_split_on='-'):
+def get_key_value_from_string(string, acrostic_regex, key_value_split_on=BIDS_KEY_VALUE_SPLIT_ON):
 
     m = re.search(acrostic_regex, string)
 
@@ -157,8 +159,10 @@ def _clean_nan(in_df, nan_option, nan_fill='not_found'):
 
     return out_df
 
+
 def _rename_acrostic_list(in_df):
     return in_df.rename(columns=lambda x: re.sub(r'(ses-\d)',r'\1_scanned',x))
+
 
 def _get_subject_and_session_from_filenames(files, 
                                             subject_acrostic_regex, 
@@ -181,7 +185,7 @@ def _get_subject_and_session_from_filenames(files,
     # files.  It would be nice if a warning was issues. 
 
     if verbose:
-        print('\n List of files found with subject and session information beforing cleaning.\n')
+        print('\n List of files found with subject and session information before cleaning.\n')
         print(df_files)
         print('\n\n')
 
@@ -192,6 +196,21 @@ def _get_subject_and_session_from_filenames(files,
     df_files = df_files.dropna(subset=['subject', 'session'],axis=0)
 
     return df_files
+
+
+def _clean_argparse_key_value(key_value, key='sub', key_value_split_on=BIDS_KEY_VALUE_SPLIT_ON):
+
+    if key_value.count(key_value_split_on) == 0:
+        out_key_value = f'{key}-{key_value}'
+
+    elif key_value.count(key_value_split_on) == 1:
+        out_key_value = key_value
+
+    else:
+        sys.exit(f'BIDS requires that there be only one {key_value_split_on}. \n Please check key-value pair {key_value}'.)
+
+    return out_key_value
+
 
 
 def main():
@@ -207,9 +226,12 @@ def main():
 
     df_acrostic_list = get_acrostic_list(in_args.acrostic_list)
 
-    df_files = _get_subject_and_session_from_filenames(files, 
-                                                       in_args.subject,
-                                                       in_args.session, 
+    subject_key_value = _clean_argparse_key_value(in_args.subject, 'sub')
+    session_key_value = _clean_argparse_key_value(in_args.subject, 'ses')
+
+    df_files = _get_subject_and_session_from_filenames(files,
+                                                       subject_key_value,
+                                                       session_key_value,
                                                        in_args.verbose)
 
     try:
