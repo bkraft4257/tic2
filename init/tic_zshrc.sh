@@ -23,19 +23,18 @@ source $TIC_STUDIES_PATH/study/active/aliases.sh
 
 export HOME_TIC_PATH=$TIC_INIT_PATH  # Done for backward compatibility.
 
-source ${TIC_INIT_PATH}/tic_wake_aging1a_environment.sh
+source ${TIC_INIT_PATH}/tic_environment.sh
 
 # TIC NIPYPE Workflows
 
 PATH=$TIC_PATH/bin/:$TIC_PATH/workflows:$PATH
 
-
 # Final TIC Python Setup
 
 PYTHONDONTWRITEBYTECODE=1
 
-umask 0002 # u=rwx,g=rwx,o=rx
-#umask 0007 # u=rwx,g=rwx,o=
+#umask 0002 # u=rwx,g=rwx,o=rx
+umask 0007 # u=rwx,g=rwx,o=
 
 
  
