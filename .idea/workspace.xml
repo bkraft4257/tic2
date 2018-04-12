@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="6f3e13b3-cd58-4c4d-98f6-1a68f8358bfb" name="Default" comment="">
+    <list default="true" id="6f3e13b3-cd58-4c4d-98f6-1a68f8358bfb" name="Default" comment="Added operations for cleaning BIDS key/value pairs">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/bin/processing_status.py" afterPath="$PROJECT_DIR$/bin/processing_status.py" />
+      <change beforePath="$PROJECT_DIR$/bin/processing_status.py" afterPath="$PROJECT_DIR$/bin/bids_processing_status.py" />
+      <change beforePath="$PROJECT_DIR$/bin/study_switcher.py" afterPath="$PROJECT_DIR$/bin/study_switcher.py" />
+      <change beforePath="$PROJECT_DIR$/init/tic_aliases.sh" afterPath="$PROJECT_DIR$/init/tic_aliases.sh" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -34,31 +36,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="environment.sh" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/studies/cenc/environment.sh">
+      <file leaf-file-name="bids_processing_status.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/bin/bids_processing_status.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="6" column="35" lean-forward="false" selection-start-line="6" selection-start-column="35" selection-end-line="6" selection-end-column="35" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="environment.sh" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/studies/hfpef/environment.sh">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="14" column="0" lean-forward="false" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="processing_status.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/bin/processing_status.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="199">
-              <caret line="92" column="53" lean-forward="false" selection-start-line="92" selection-start-column="53" selection-end-line="92" selection-end-column="53" />
+            <state relative-caret-position="641">
+              <caret line="118" column="35" lean-forward="false" selection-start-line="118" selection-start-column="35" selection-end-line="118" selection-end-column="35" />
               <folding>
                 <element signature="e#148#159#0" expanded="true" />
               </folding>
@@ -142,6 +124,26 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="tic_aliases.sh" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/init/tic_aliases.sh">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="102">
+              <caret line="6" column="37" lean-forward="false" selection-start-line="6" selection-start-column="37" selection-end-line="6" selection-end-column="37" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="study_switcher.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/bin/study_switcher.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="639">
+              <caret line="70" column="0" lean-forward="true" selection-start-line="70" selection-start-column="0" selection-end-line="70" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
     </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
@@ -155,7 +157,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>aicq</find>
       <find>echotim</find>
       <find>bv</find>
       <find>IMOVE</find>
@@ -185,6 +186,7 @@
       <find>NETPR</find>
       <find>split</find>
       <find>BIDS</find>
+      <find>summary</find>
     </findStrings>
     <replaceStrings>
       <replace>01d</replace>
@@ -210,7 +212,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/docs/source/other/singularity_images.md" />
         <option value="$PROJECT_DIR$/bin/dicom_rm_cr.py" />
         <option value="$PROJECT_DIR$/bin/isdicom.py" />
         <option value="$PROJECT_DIR$/studies/synergy/scripts/synergy_protocol_singularity.py" />
@@ -250,7 +251,6 @@
         <option value="$PROJECT_DIR$/studies/synergy/scripts/synergy_netprep_gather_inputs.sh" />
         <option value="$PROJECT_DIR$/init/tic_wake_aging1a_environment.sh" />
         <option value="$PROJECT_DIR$/studies/mcf/environment.sh" />
-        <option value="$PROJECT_DIR$/bin/study_switcher.py" />
         <option value="$PROJECT_DIR$/studies/synergy/environment.sh" />
         <option value="$PROJECT_DIR$/studies/infinite/environment.sh" />
         <option value="$PROJECT_DIR$/studies/imove/environment.sh" />
@@ -261,6 +261,8 @@
         <option value="$PROJECT_DIR$/tests/test_plot_overlay.py" />
         <option value="$PROJECT_DIR$/tests/test_processing_status.py" />
         <option value="$PROJECT_DIR$/bin/processing_status.py" />
+        <option value="$PROJECT_DIR$/bin/study_switcher.py" />
+        <option value="$PROJECT_DIR$/init/tic_aliases.sh" />
       </list>
     </option>
   </component>
@@ -273,7 +275,7 @@
   <component name="ProjectFrameBounds">
     <option name="x" value="-361" />
     <option name="y" value="-1381" />
-    <option name="width" value="1813" />
+    <option name="width" value="2292" />
     <option name="height" value="1307" />
   </component>
   <component name="ProjectLevelVcsManager">
@@ -306,6 +308,11 @@
               <item name="tic_core" type="b2602c69:ProjectViewProjectNode" />
               <item name="tic_core" type="462c0819:PsiDirectoryNode" />
               <item name="bin" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="tic_core" type="b2602c69:ProjectViewProjectNode" />
+              <item name="tic_core" type="462c0819:PsiDirectoryNode" />
+              <item name="init" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="tic_core" type="b2602c69:ProjectViewProjectNode" />
@@ -487,13 +494,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1517948604886</updated>
-    </task>
-    <task id="LOCAL-00300" summary="Updated mriqc">
-      <created>1521487221090</created>
-      <option name="number" value="00300" />
-      <option name="presentableId" value="LOCAL-00300" />
-      <option name="project" value="LOCAL" />
-      <updated>1521487221090</updated>
     </task>
     <task id="LOCAL-00301" summary="Updated mriqc">
       <created>1521487535864</created>
@@ -831,7 +831,14 @@
       <option name="project" value="LOCAL" />
       <updated>1523547243828</updated>
     </task>
-    <option name="localTasksCounter" value="349" />
+    <task id="LOCAL-00349" summary="Added operations for cleaning BIDS key/value pairs">
+      <created>1523547344078</created>
+      <option name="number" value="00349" />
+      <option name="presentableId" value="LOCAL-00349" />
+      <option name="project" value="LOCAL" />
+      <updated>1523547344078</updated>
+    </task>
+    <option name="localTasksCounter" value="350" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -867,7 +874,7 @@
     </history-entry>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-361" y="-1381" width="1813" height="1307" extended-state="0" />
+    <frame x="-361" y="-1381" width="2292" height="1307" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Key Promoter X" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -878,7 +885,7 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.50287354" sideWeight="0.48106593" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32968882" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.21870883" sideWeight="0.49006623" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2653868" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20888889" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3297568" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="SciView" active="false" anchor="right" auto_hide="true" internal_type="DOCKED" type="FLOATING" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -992,13 +999,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="278">
           <caret line="89" column="25" lean-forward="false" selection-start-line="89" selection-start-column="25" selection-end-line="89" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/init/tic_aliases.sh">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -1226,14 +1226,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/bin/study_switcher.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="705">
-          <caret line="47" column="52" lean-forward="true" selection-start-line="47" selection-start-column="52" selection-end-line="47" selection-end-column="52" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/studies/infinite/environment.sh">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
@@ -1328,13 +1320,29 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/bin/processing_status.py">
+    <entry file="file://$PROJECT_DIR$/bin/bids_processing_status.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="199">
-          <caret line="92" column="53" lean-forward="false" selection-start-line="92" selection-start-column="53" selection-end-line="92" selection-end-column="53" />
+        <state relative-caret-position="641">
+          <caret line="118" column="35" lean-forward="false" selection-start-line="118" selection-start-column="35" selection-end-line="118" selection-end-column="35" />
           <folding>
             <element signature="e#148#159#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bin/study_switcher.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="639">
+          <caret line="70" column="0" lean-forward="true" selection-start-line="70" selection-start-column="0" selection-end-line="70" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/init/tic_aliases.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="37" lean-forward="false" selection-start-line="6" selection-start-column="37" selection-end-line="6" selection-end-column="37" />
+          <folding />
         </state>
       </provider>
     </entry>

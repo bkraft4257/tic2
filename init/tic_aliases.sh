@@ -1,13 +1,19 @@
 #!/usr/bin/env bash
 
-alias tic_make_docs='cd $TIC_PATH/docs/; make clean; make html; cd -; firefox $TIC_PATH/docs/build/html/index.html&'
+# TIC Functions
 
-alias dfgandg='echo; df -h /gandg/; echo'
+source $TIC_PATH/bin/tic_functions.sh
+
+alias bps='bids_processing_status.py'
 
 alias tic_help='firefox $TIC_PATH/docs/build/html/index.html&'
 alias tic_info='tic_info.sh'
 
-source $TIC_PATH/bin/tic_functions.sh
+alias tic_update='cd $TIC_PATH; git pull; cd -; rehash'
+alias tic_make_docs='cd $TIC_PATH/docs/; make clean; make html; cd -; firefox $TIC_PATH/docs/build/html/index.html&'
+
+
+alias dfgandg='echo; df -h /gandg/; echo'
 
 alias catlast='ls -1drt * | tail -1 | xargs cat'
 alias cl='ls -1drt * | tail -1 | xargs cat'
