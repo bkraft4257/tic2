@@ -8,6 +8,7 @@ alias bps='bids_processing_status.py'
 
 alias tic_help='firefox $TIC_PATH/docs/build/html/index.html&'
 alias tic_info='tic_info.sh'
+alias tsi='tic_info.sh'  # Duplicated alias to match alias asi
 
 alias tic_update='cd $TIC_PATH; git pull; cd -; rehash'
 alias tic_make_docs='cd $TIC_PATH/docs/; make clean; make html; cd -; firefox $TIC_PATH/docs/build/html/index.html&'
@@ -62,5 +63,3 @@ alias fsvall='fslview_all_function'
 
 alias lnflatten='${TIC_PATH}/lnflatten.sh'
 alias cpflatten='${TIC_PATH}/cpflatten.sh'
-
-source ${TIC_PATH}/studies/active/aliases.sh

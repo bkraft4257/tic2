@@ -256,7 +256,7 @@ def main():
         df_files_2.columns = [f'ses-{x+1}_processed' for x in range(len(df_files_2.columns))]
 
     except ValueError:
-        print(f'\n{Fore.RED}Unable to stack. {Fore.WHITE} More than one file found per subject per session.\n')
+        print(f'\n{Fore.RED}Unable to stack. {Fore.WHITE} More than one file found per subject per session.∆\n')
 
         with pandas.option_context('display.max_rows', in_args.display_max_rows):
             print(df_files)
