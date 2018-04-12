@@ -3,7 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="6f3e13b3-cd58-4c4d-98f6-1a68f8358bfb" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/bin/acrostic_list.py" afterPath="$PROJECT_DIR$/bin/acrostic_list.py" />
+      <change beforePath="$PROJECT_DIR$/bin/bids_processing_status.py" afterPath="$PROJECT_DIR$/bin/bids_processing_status.py" />
+      <change beforePath="$PROJECT_DIR$/bin/ls_participants.sh" afterPath="$PROJECT_DIR$/bin/ls_participants.sh" />
+      <change beforePath="$PROJECT_DIR$/studies/active/aliases.sh" afterPath="$PROJECT_DIR$/studies/active/aliases.sh" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -34,41 +36,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="tic_zshrc.sh" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/init/tic_zshrc.sh">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="357">
-              <caret line="21" column="25" lean-forward="false" selection-start-line="21" selection-start-column="25" selection-end-line="21" selection-end-column="25" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="aliases.sh" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/studies/active/aliases.sh">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="4" column="0" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.rst" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/docs/source/index.rst">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="18" column="30" lean-forward="true" selection-start-line="18" selection-start-column="30" selection-end-line="18" selection-end-column="30" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="tic_aliases.sh" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/init/tic_aliases.sh">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="802">
-              <caret line="65" column="0" lean-forward="true" selection-start-line="65" selection-start-column="0" selection-end-line="65" selection-end-column="0" />
+            <state relative-caret-position="51">
+              <caret line="3" column="0" lean-forward="true" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -94,24 +66,24 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="acrostic_list.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="acrostic_list.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/bin/acrostic_list.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="68">
-              <caret line="4" column="70" lean-forward="false" selection-start-line="4" selection-start-column="70" selection-end-line="4" selection-end-column="70" />
+              <caret line="4" column="69" lean-forward="false" selection-start-line="4" selection-start-column="69" selection-end-line="4" selection-end-column="69" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="bids_processing_status.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="bids_processing_status.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/bin/bids_processing_status.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="285">
-              <caret line="258" column="108" lean-forward="false" selection-start-line="258" selection-start-column="108" selection-end-line="258" selection-end-column="108" />
+            <state relative-caret-position="833">
+              <caret line="134" column="18" lean-forward="false" selection-start-line="134" selection-start-column="18" selection-end-line="134" selection-end-column="18" />
               <folding>
                 <element signature="e#148#159#0" expanded="true" />
-                <element signature="e#4136#4803#0" expanded="false" />
+                <element signature="e#4192#4859#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -132,6 +104,26 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="425">
               <caret line="25" column="61" lean-forward="true" selection-start-line="25" selection-start-column="45" selection-end-line="25" selection-end-column="61" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="fmriprep.sh" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/bin/fmriprep.sh">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="tic_info.sh" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/bin/tic_info.sh">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -205,7 +197,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/studies/synergy/synergy_init.sh" />
         <option value="$PROJECT_DIR$/studies/synergy/scripts/syn_clean_bids.py" />
         <option value="$PROJECT_DIR$/docs/source/for_developers/git.md" />
         <option value="$PROJECT_DIR$/docs/source/for_developers/creating_python_package.md" />
@@ -247,15 +238,16 @@
         <option value="$PROJECT_DIR$/bin/lnflatten.sh" />
         <option value="$PROJECT_DIR$/bin/study_switcher.sh" />
         <option value="$PROJECT_DIR$/bin/study_switcher.py" />
-        <option value="$PROJECT_DIR$/bin/bids_processing_status.py" />
         <option value="$PROJECT_DIR$/docs/source/tic_processing.rst" />
         <option value="$PROJECT_DIR$/init/tic_aliases.sh" />
         <option value="$PROJECT_DIR$/init/tic_zshrc.sh" />
-        <option value="$PROJECT_DIR$/studies/active/aliases.sh" />
         <option value="$PROJECT_DIR$/bin/ls_participants.sh" />
         <option value="$PROJECT_DIR$/bin/create_acrostic_list.py" />
         <option value="$PROJECT_DIR$/bin/clean_bids.sh" />
         <option value="$PROJECT_DIR$/bin/acrostic_list.py" />
+        <option value="$PROJECT_DIR$/bin/tic_prep.sh" />
+        <option value="$PROJECT_DIR$/studies/active/aliases.sh" />
+        <option value="$PROJECT_DIR$/bin/bids_processing_status.py" />
       </list>
     </option>
   </component>
@@ -552,13 +544,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1517948604886</updated>
-    </task>
-    <task id="LOCAL-00337" summary="Added operations for cleaning BIDS key/value pairs">
-      <created>1523543678912</created>
-      <option name="number" value="00337" />
-      <option name="presentableId" value="LOCAL-00337" />
-      <option name="project" value="LOCAL" />
-      <updated>1523543678912</updated>
     </task>
     <task id="LOCAL-00338" summary="Added operations for cleaning BIDS key/value pairs">
       <created>1523545181175</created>
@@ -896,7 +881,14 @@
       <option name="project" value="LOCAL" />
       <updated>1523567468467</updated>
     </task>
-    <option name="localTasksCounter" value="386" />
+    <task id="LOCAL-00386" summary="Simple test.">
+      <created>1523567540869</created>
+      <option name="number" value="00386" />
+      <option name="presentableId" value="LOCAL-00386" />
+      <option name="project" value="LOCAL" />
+      <updated>1523567540869</updated>
+    </task>
+    <option name="localTasksCounter" value="387" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -990,7 +982,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Renamed synergy_clean_bids.sh to synergy_bids_clean.sh&#10;Removed some old scripts." />
     <MESSAGE value="Removed old aliases from Synergy" />
     <MESSAGE value="Updated hdc_clean.py to remove subject directory if it is empty." />
     <MESSAGE value="Removed all scripts." />
@@ -1015,7 +1006,8 @@
     <MESSAGE value="Added operations for cleaning BIDS key/value pairs" />
     <MESSAGE value="Added way to display participants list." />
     <MESSAGE value="Updated create_acrostic_list.py. Renamed to acrostic_list.py" />
-    <option name="LAST_COMMIT_MESSAGE" value="Updated create_acrostic_list.py. Renamed to acrostic_list.py" />
+    <MESSAGE value="Simple test." />
+    <option name="LAST_COMMIT_MESSAGE" value="Simple test." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1036,22 +1028,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/studies/synergy/aliases.sh">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="0" lean-forward="false" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/studies/synergy/scripts/synergy_bids_clean.sh">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/studies/synergy/scripts/syn_clean_bids.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -1204,14 +1180,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/bin/update_study_init_links.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bin/tic_info.sh">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -1397,30 +1365,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/studies/active/aliases.sh">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="0" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bin/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bin/ls_participants.sh">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="0" lean-forward="false" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/bin/clean_bids.sh">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="340">
@@ -1437,22 +1381,70 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/bin/bids_processing_status.py">
+    <entry file="file://$PROJECT_DIR$/bin/ls_participants.sh">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="258" column="108" lean-forward="false" selection-start-line="258" selection-start-column="108" selection-end-line="258" selection-end-column="108" />
-          <folding>
-            <element signature="e#148#159#0" expanded="true" />
-            <element signature="e#4136#4803#0" expanded="false" />
-          </folding>
+        <state relative-caret-position="85">
+          <caret line="5" column="0" lean-forward="false" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bin/fmriprep.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/bin/acrostic_list.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
-          <caret line="4" column="70" lean-forward="false" selection-start-line="4" selection-start-column="70" selection-end-line="4" selection-end-column="70" />
+          <caret line="4" column="69" lean-forward="false" selection-start-line="4" selection-start-column="69" selection-end-line="4" selection-end-column="69" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bin/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bin/tic_info.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bin/tic_prep.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="0" lean-forward="true" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/studies/active/aliases.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="0" lean-forward="true" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bin/bids_processing_status.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="833">
+          <caret line="134" column="18" lean-forward="false" selection-start-line="134" selection-start-column="18" selection-end-line="134" selection-end-column="18" />
+          <folding>
+            <element signature="e#148#159#0" expanded="true" />
+            <element signature="e#4192#4859#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
