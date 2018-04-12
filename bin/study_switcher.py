@@ -113,7 +113,7 @@ def main():
 
     if in_args.verbose or in_args.study is None:
 
-        print(f'\n\n{output_filename} .... \n\n')
+        print(f'\n\n>> cat {output_filename} .... \n\n')
 
         with open(output_filename, 'r') as file:
             print(file.read())
