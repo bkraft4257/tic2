@@ -128,10 +128,6 @@ def _argparse():
                         choices=['found', 'missing', 'both'],
                         default='both')
 
-    parser.add_argument('--drop_missing', help='Drop files that were found from list.',
-                        action='store_true',
-                        default=False)
-
     return parser.parse_args()
 
 
