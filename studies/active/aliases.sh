@@ -22,11 +22,6 @@ alias bv='tic_bids_validator.sh'
 
 export ACTIVE_HEUDICONV_PATTERN="{subject}/2*/*/*.DCM"
 
-
-alias bps_fmriprep_bold="bps 'sub*/**/func/*bold*preproc.nii.gz\'"
-alias bps_fmriprep_t1w="bps 'sub*/**/func/*T1w_preproc.nii.gz'"
-
-
 function bps_fmriprep_t1w()
     {
 
