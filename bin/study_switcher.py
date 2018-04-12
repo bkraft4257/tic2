@@ -45,10 +45,13 @@ def _write_study_switcher_script(active_study,
         file.write(f'export ACTIVE_BIDS_PATH=${active_study}_BIDS_PATH\n')
         file.write(f'export ACTIVE_IMAGE_ANALYSIS_PATH=${active_study}_IMAGE_ANALYSIS_PATH\n')
         file.write(f'export ACTIVE_IMAGE_PROCESSING_PATH=${active_study}_IMAGE_PROCESSING_PATH\n')
-        file.write(f'export ACTIVE_IMAGE_PROCESSING_LOG_PATH=${active_study}_IMAGE_PROCESSING_LOG_PATH\n')
+        file.write(f'export ACTIVE_IMAGE_PROCESSING_LOG_PATH=${active_study}_IMAGE_PROCESSING_LOG_PATH\n\n')
+
         file.write(f'export ACTIVE_MRIQC_PATH=${active_study}_MRIQC_PATH\n')
         file.write(f'export ACTIVE_FMRIPREP_PATH=${active_study}_FMRIPREP_PATH\n')
         file.write(f'export ACTIVE_NETPREP_PATH=${active_study}_NETPREP_PATH\n')
+        file.write(f'export ACTIVE_ACT_PATH=${active_study}_ACT_PATH\n')
+        file.write(f'export ACTIVE_CONN_PATH=${active_study}_CONN_PATH\n')
 
         file.write(f'export ACTIVE_BIDS_CONFIG_FILE=${active_study}_BIDS_CONFIG_FILE\n')
         file.write(f'export ACTIVE_HEUDICONV_PROTOCOL=${active_study}_HEUDICONV_PROTOCOL\n')
@@ -90,6 +93,7 @@ def _argparse():
 
     return parser.parse_args()
 
+
 def _select_output_file(default_flag):
 
     if default_flag:
@@ -98,6 +102,7 @@ def _select_output_file(default_flag):
         output_file = STUDY_SWITCHER_OUTPUT_FILENAME;
 
     return output_file
+
 
 def main():
 
