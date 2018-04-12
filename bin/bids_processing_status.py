@@ -19,7 +19,6 @@ pandas.set_option('display.max_columns', 500)
 pandas.set_option('display.width', 1000)
 pandas.set_option('display.max_colwidth',200)
 
-
 # TODO Study Choices should be a common variable that is imported.
 
 
@@ -98,6 +97,9 @@ def _argparse():
     parser.add_argument('-a', '--acrostic_list', help='Acrostic List',
                         default=get_acrostic_study_list_full_filename())
 
+    parser.add_argument('--display_max_rows', help='Display a maximum number of rows',
+                        type=int, default=20)
+
     parser.add_argument('--glob_current_directory_only', help='Recursive boolean flag for glob',
                         action='store_true',
                         default=False)
@@ -173,9 +175,6 @@ def _display(in_df,
 
     out_df = filter_rows(in_df, display_group=display_group).reset_index(drop=True)
 
-    print('out_df')
-    print(out_df)
-
     if subject_only:
         out_df = out_df['subject'].copy()
 
@@ -230,7 +229,7 @@ def _get_subject_and_session_from_filenames(files,
     # these because they are not the files you are looking for.   If they are you shouldn't be 
     # using this function.
 
-    df_files = df_files.dropna(subset=['subject', 'session'],axis=0)
+    df_files = df_files.dropna(subset=['subject', 'session'], axis=0)
 
     return df_files
 
@@ -262,9 +261,11 @@ def main():
 
     except ValueError:
         print(f'\n{Fore.RED}Unable to stack. {Fore.WHITE}\n')
-        print(df_files)
-        print('\n\n')
 
+        with pd.option_context('display.max_rows', in_args.display_max_rows):
+            print(df_files)
+
+        print('\n\nNumber of files detected per subject and session\n')
         print(df_files.groupby(['subject', 'session']).file.count().to_frame())
         print('\n\n')
         sys.exit()
