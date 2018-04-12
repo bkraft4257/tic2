@@ -130,8 +130,6 @@ def _argparse():
 
     in_args = parser.parse_args()
 
-    print(in_args.file_pattern)
-
     return in_args
 
 
