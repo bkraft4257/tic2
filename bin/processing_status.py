@@ -154,17 +154,18 @@ def filter_rows(in_df, display_group='both'):
 
 
 def _display(in_df,
-            display_group='both',
-            subject_only=False,
-            noheader=False,
-            ):
+             display_group='both',
+             subject_only=False,
+             noheader=False,
+             ):
 
     out_df = filter_rows(in_df, display_group=display_group)
 
     if subject_only:
         out_df = out_df['subject'].copy()
 
-    print(out_df.to_string(index=False, header=(not noheader)))
+    print(out_df.to_string(index=False,
+                           header=(not noheader)))
 
 
 def _clean_nan(in_df, nan_option, nan_fill='not_found'):
@@ -244,6 +245,8 @@ def main():
         df_files_2 = df_files.set_index(['subject', 'session']).unstack()
         df_files_2.columns = [f'ses-{x+1}_processed' for x in range(len(df_files_2.columns))]
 
+    print(df_files_2)
+
     except ValueError:
         print(f'\n{Fore.RED}Unable to stack. {Fore.WHITE}\n')
         print(df_files)
@@ -259,11 +262,12 @@ def main():
                     .fillna(False)
                     )
 
-    _display(df_full_list.pipe(_clean_nan, nan_option=in_args.nan),
-                 display_group=in_args.display_group,
-                 subject_only=in_args.subject_only,
-                 noheader=in_args.noheader,
-                 )
+    _display(df_full_list.pipe(_clean_nan,
+                               nan_option=in_args.nan),
+             display_group=in_args.display_group,
+             subject_only=in_args.subject_only,
+             noheader=in_args.noheader,
+             )
 
     if in_args.summary:
 
