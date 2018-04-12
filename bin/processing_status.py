@@ -13,9 +13,7 @@ import pandas
 import re
 from colorama import Fore
 
-print(sys.path)
-
-import tic_core
+import tic_core.ops as ops
 
 pandas.set_option('display.max_columns', 500)
 pandas.set_option('display.width', 1000)
@@ -215,8 +213,8 @@ def main():
 
     df_acrostic_list = get_acrostic_list(in_args.acrostic_list)
 
-    subject_key_value = tic_core.clean_bids_key_value(in_args.subject, 'sub')
-    session_key_value = tic_core.clean_bids_key_value(in_args.subject, 'ses')
+    subject_key_value = ops.clean_bids_key_value(in_args.subject, 'sub')
+    session_key_value = ops.clean_bids_key_value(in_args.subject, 'ses')
 
     df_files = _get_subject_and_session_from_filenames(files,
                                                        subject_key_value,
