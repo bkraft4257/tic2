@@ -4,7 +4,7 @@
 
 export CENC_SCRIPTS_PATH=${TIC_PATH}/studies/cenc/scripts
 
-export CENC_PATH=/cenc/new2018/cenc/
+export CENC_PATH=/cenc/new2018/cenc
 export CENC_BIDS_PATH=${CENC_PATH}/bids
 export CENC_IMAGE_ANALYSIS_PATH=${CENC_PATH}/image_analysis
 export CENC_IMAGE_PROCESSING_PATH=${CENC_PATH}/image_processing

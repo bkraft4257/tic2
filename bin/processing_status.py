@@ -22,6 +22,7 @@ pandas.set_option('display.max_colwidth',200)
 
 ACROSTIC_LIST_FILENAME = 'acrostic.csv'
 ACTIVE_BIDS_PATH = os.getenv('ACTIVE_BIDS_PATH')
+ACTIVE_ACROSTIC_REGEX = os.getenv('ACTIVE_ACROSTIC_REGEX')
 
 
 def get_acrostic_study_list_full_filename(active_study_bids_path=ACTIVE_BIDS_PATH,
