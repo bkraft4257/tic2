@@ -266,7 +266,7 @@ def main():
             print(df_files)
 
         print('\n\nNumber of files detected per subject and session\n')
-        print(df_files.groupby(['subject', 'session']).file.count().to_frame().unstack().fillna().astype(int))
+        print(df_files.groupby(['subject', 'session']).file.count().to_frame().unstack().fillna(0).astype(int))
         print('\n\n')
         sys.exit()
 
