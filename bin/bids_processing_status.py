@@ -128,7 +128,11 @@ def _argparse():
                         choices=['found', 'missing', 'both'],
                         default='both')
 
-    return parser.parse_args()
+    in_args = parser.parse_args()
+
+    print(in_args.file_pattern)
+
+    return in_args
 
 
 def filter_rows(in_df, display_group='both'):
