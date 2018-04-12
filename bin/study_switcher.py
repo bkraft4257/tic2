@@ -14,7 +14,6 @@ import argparse
 import sys
 
 STUDY_CHOICES = ['hfpef', 'synergy', 'infinite', 'cenc', 'imove', 'mcf']
-DEFAULT_STUDY_CHOICE = 'hfpef'
 
 STUDY_SWITCHER_OUTPUT_FILENAME = os.path.abspath(os.path.join(os.getenv('TIC_INIT_PATH'),
                                                               'tic_study_switcher.sh'))
@@ -66,8 +65,6 @@ def _write_study_switcher_script(active_study,
         file.write(f'export ACTIVE_ACT_PATH=${active_study}_ACT_PATH\n')
         file.write(f'export ACTIVE_FMRIPREP_PATH=${active_study}_FMRIPREP_PATH\n')
         file.write(f'export ACTIVE_NETPREP_PATH=${active_study}_NETPREP_PATH\n')
-
-        file.write(f"echo 'Current active study' = $ACTIVE_STUDY\n\n")
 
 
 def _argparse():
