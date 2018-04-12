@@ -157,7 +157,7 @@ def filter_rows(in_df, display_group='both'):
         out_df = in_df[ keep_rows ].copy()
 
     elif display_group == 'missing':
-        out_df = in_df[ ~keep_rows ].copy()
+        out_df = in_df[~keep_rows].copy()
 
     else:
         out_df = in_df.copy()
@@ -172,6 +172,8 @@ def _display(in_df,
              ):
 
     out_df = filter_rows(in_df, display_group=display_group).reset_index(drop=True)
+
+    print(out_df)
 
     if subject_only:
         out_df = out_df['subject'].copy()
