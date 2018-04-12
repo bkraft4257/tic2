@@ -29,7 +29,6 @@ function bps_fmriprep_t1w()
 
     echo
     echo 'bps ' $search_string
-    echo $PWD
     echo
 
     bids_processing_status.py $search_string
@@ -43,7 +42,6 @@ function bps_fmriprep_bold()
 
     echo
     echo 'bps ' $search_string
-    echo $PWD
     echo
 
     bids_processing_status.py $search_string
