@@ -67,6 +67,8 @@ def _write_study_switcher_script(active_study,
         file.write(f'export ACTIVE_FMRIPREP_PATH=${active_study}_FMRIPREP_PATH\n')
         file.write(f'export ACTIVE_NETPREP_PATH=${active_study}_NETPREP_PATH\n')
 
+        file.write(f'source $TIC_INIT_PATH/{active_study.lower()}_init.sh')
+
         file.write(f"echo 'Current active study' = $ACTIVE_STUDY\n\n")
 
 
