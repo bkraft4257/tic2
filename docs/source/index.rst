@@ -9,17 +9,18 @@ Welcome to TIC's documentation!
 Contents:
 
 .. toctree::
-   :maxdepth: 1
+   :maxdepth: 2
 
    tic_welcome.md
    tic_setup.md
    tic_processing.md
    other/tic_documentation.rst
-   other/studies.md
-   other/creating_new_study.md
    other/quick_reference.rst
    other/alias.md
    other/functions_and_scripts.md
+
+   other/studies.md
+   other/creating_new_study.md
 
 Indices and tables
 ==================
