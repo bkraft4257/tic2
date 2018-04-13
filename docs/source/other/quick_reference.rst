@@ -22,12 +22,12 @@ Convert DICOM images to NIFTI
 -----------------------------
 After you have downloaded the DICOM images from the PACS you go to the ACTIVE_STUDY incoming directory.
 
-```
->> cdin
->> mv <dicom_dicom_dir, hf_s070_hf_s070 > < bids_subject_value, hfs070 >
->> hdc.sh -s <bids_subject_value, hfs070 > -ss < bids_session_value, 1 >
->> hdc_look.py -s <bids_subject_value, hfs070 > -ss < bids_session_value, 1 >
-```
+    .. code-block:: console
+        >> cdin
+        >> mv <dicom_dicom_dir, hf_s070_hf_s070 > < bids_subject_value, hfs070 >
+        >> hdc.sh -s <bids_subject_value, hfs070 > -ss < bids_session_value, 1 >
+        >> hdc_look.py -s <bids_subject_value, hfs070 > -ss < bids_session_value, 1 >
+
 
 hdc.sh calls the heudiconv singularity image.
 hdc_look.py is not absolutely necessary but it allows you to view what has been converted by heudiconv.
@@ -49,20 +49,18 @@ d. Reorients the images to standard FSL orientation with fslreorient2std.
 
 The cleaning process is done for all studies with 
 
-```
->> cdb
->> clean_bids.sh <subject_value, hfs070> <session_value, 1 >
-```
+    .. code-block:: console
+        >> cdb
+        >> clean_bids.sh <subject_value, hfs070> <session_value, 1 >
+
 
 At the end of the cleaning processing the clean_bids.sh script will search for any files containing
 *.[2-9].*.  If these files are found then you will need to make a decision of which files to keep.
 Once you have decided which files to keep just rename them to remove ".[2-9]".  I usually do this
 with the rename command.
 
-```
->> rename .2. . *
-```
-
+    .. code-block:: console
+        >> rename .2. . *
 
 
 
@@ -99,9 +97,8 @@ Other files that may need to be modified according to the situation is participa
 
 The bv script will also refresh the acrostic.list and acrostic.csv files every time it is called. 
 
-```
->> bv
-```
+    .. code-block:: console
+        >> bv
 
 MRI Quality Control
 -------------------
@@ -110,7 +107,7 @@ of the mriqc singularity image with the command "mriqc -h"
 
     .. code-block:: console
 
-        mriqc.sh --participant-label < subject_value, hfs070 >
+        >> mriqc.sh --participant-label < subject_value, hfs070 >
 
 
 
@@ -130,9 +127,9 @@ fmriprep has three primary functions.
 1. Normalizes the anatomical and functional images to the same space.
 1. Measures but does not apply the temporal components in the gray matter, CSF, and white matter.
 
-```
->> fmriprep.sh --force-syn --participant-label < subject_value, hfs070 >
-```
+    .. code-block:: console
+        >> fmriprep.sh --force-syn --participant-label < subject_value, hfs070 >
+
 
 **REMEMBER**: Just because you ran the script doesn't mean it completed. YOU HAVE TO LOOK.
 
