@@ -115,10 +115,15 @@ if __name__ == '__main__':
 
     hdc_info_path = os.path.join(os.path.abspath(in_args.bids), '.heudiconv', in_args.subject, f'ses-{in_args.session}', 'info')
 
-    edit_text_filename = os.path.join(hdc_info_path, f'{in_args.subject}_ses-{in_args.session}.edit.txt')
-    auto_text_filename = os.path.join(hdc_info_path, f'{in_args.subject}_ses-{in_args.session}.auto.txt')
-    dicominfo_tsv_filename = os.path.join(hdc_info_path, f'dicominfo_ses-{in_args.session}.tsv')
+    if in_args.session is None:
+        bids_session = ''
+    else:
+        bids_session = f'_ses-{in_args.session}'
 
+    edit_text_filename = os.path.join(hdc_info_path, f'{in_args.subject}{bids_session}.edit.txt')
+    auto_text_filename = os.path.join(hdc_info_path, f'{in_args.subject}{bids_session}.auto.txt')
+    dicominfo_tsv_filename = os.path.join(hdc_info_path, f'dicominfo{bids_session}.tsv')
+i
     try:
         if 'dicominfo' in HDC_FILES:
             dicominfo_tsv_filename = _read_dicominfo_tsv(dicominfo_tsv_filename)
