@@ -2,8 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6f3e13b3-cd58-4c4d-98f6-1a68f8358bfb" name="Default" comment="">
+      <change beforePath="" afterPath="$PROJECT_DIR$/studies/mcf/hdc_protocol_template.py" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/bin/hdc_look.py" afterPath="$PROJECT_DIR$/bin/hdc_look.py" />
+      <change beforePath="$PROJECT_DIR$/studies/hfpef/scripts/hfpef_protocol.py" afterPath="$PROJECT_DIR$/studies/hfpef/scripts/hfpef_protocol.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -34,38 +35,6 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="quick_reference.rst" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/docs/source/other/quick_reference.rst">
-          <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
-            <state split_layout="SPLIT">
-              <first_editor relative-caret-position="105">
-                <caret line="148" column="10" lean-forward="false" selection-start-line="148" selection-start-column="10" selection-end-line="148" selection-end-column="10" />
-                <folding />
-              </first_editor>
-              <second_editor>
-                <js_state />
-              </second_editor>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="functions_and_scripts.md" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/docs/source/other/functions_and_scripts.md">
-          <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
-            <state split_layout="SPLIT">
-              <first_editor relative-caret-position="561">
-                <caret line="33" column="0" lean-forward="false" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
-                <folding>
-                  <marker date="1523629724331" expanded="true" signature="882:1916" ph="..." />
-                </folding>
-              </first_editor>
-              <second_editor>
-                <js_state />
-              </second_editor>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="bids_processing_status.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/bin/bids_processing_status.py">
           <provider selected="true" editor-type-id="text-editor">
@@ -74,36 +43,6 @@
               <folding>
                 <element signature="e#4312#4979#0" expanded="false" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.rst" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/docs/source/index.rst">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="environment.sh" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/studies/mcf/environment.sh">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="6" column="33" lean-forward="false" selection-start-line="6" selection-start-column="33" selection-end-line="6" selection-end-column="33" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="environment.sh" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/studies/infinite/environment.sh">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="510">
-              <caret line="30" column="44" lean-forward="true" selection-start-line="28" selection-start-column="0" selection-end-line="30" selection-end-column="44" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -161,11 +100,61 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="hdc_look.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="hdc_look.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/bin/hdc_look.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="635">
               <caret line="129" column="0" lean-forward="true" selection-start-line="129" selection-start-column="0" selection-end-line="129" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="hdc_protocol_template.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/studies/_new_study_template/hdc_protocol_template.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-2328">
+              <caret line="21" column="0" lean-forward="true" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="hdc_convertall.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/studies/_new_study_template/hdc_convertall.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="374">
+              <caret line="22" column="0" lean-forward="false" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="hfpef_bids.cfg" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/studies/hfpef/scripts/hfpef_bids.cfg">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="hfpef_protocol.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/studies/hfpef/scripts/hfpef_protocol.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1531">
+              <caret line="244" column="62" lean-forward="true" selection-start-line="244" selection-start-column="62" selection-end-line="244" selection-end-column="62" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="hdc_protocol_template.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/studies/mcf/hdc_protocol_template.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1965">
+              <caret line="289" column="35" lean-forward="true" selection-start-line="289" selection-start-column="35" selection-end-line="289" selection-end-column="35" />
               <folding />
             </state>
           </provider>
@@ -184,7 +173,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>display</find>
       <find>verbose</find>
       <find>display_mode</find>
       <find>_sbref</find>
@@ -214,6 +202,7 @@
       <find>key_value</find>
       <find>**</find>
       <find>mriqc</find>
+      <find>pre</find>
     </findStrings>
     <replaceStrings>
       <replace>01d</replace>
@@ -226,6 +215,7 @@
       <replace>tee -a</replace>
       <replace>$HFPEF_SCRIPTS_PATH/</replace>
       <replace>fmriprep</replace>
+      <replace>post</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -240,8 +230,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/bin/plot_overlay.py" />
-        <option value="$PROJECT_DIR$/studies/imove/scripts/imove_protocol.py" />
         <option value="$PROJECT_DIR$/studies/imove/scripts/imove_clean_bids.sh" />
         <option value="$PROJECT_DIR$/studies/hfpef/scripts/hfpef_bids_clean_2.py" />
         <option value="$PROJECT_DIR$/studies/active/scripts/bids_app_status.sh" />
@@ -291,6 +279,8 @@
         <option value="$PROJECT_DIR$/studies/mcf/environment.sh" />
         <option value="$PROJECT_DIR$/docs/source/other/faq.md" />
         <option value="$PROJECT_DIR$/bin/hdc_look.py" />
+        <option value="$PROJECT_DIR$/studies/hfpef/scripts/hfpef_protocol.py" />
+        <option value="$PROJECT_DIR$/studies/mcf/hdc_protocol_template.py" />
       </list>
     </option>
   </component>
@@ -345,25 +335,18 @@
             <path>
               <item name="tic_core" type="b2602c69:ProjectViewProjectNode" />
               <item name="tic_core" type="462c0819:PsiDirectoryNode" />
-              <item name="docs" type="462c0819:PsiDirectoryNode" />
-              <item name="source" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="tic_core" type="b2602c69:ProjectViewProjectNode" />
-              <item name="tic_core" type="462c0819:PsiDirectoryNode" />
-              <item name="docs" type="462c0819:PsiDirectoryNode" />
-              <item name="source" type="462c0819:PsiDirectoryNode" />
-              <item name="other" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="tic_core" type="b2602c69:ProjectViewProjectNode" />
-              <item name="tic_core" type="462c0819:PsiDirectoryNode" />
               <item name="init" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="tic_core" type="b2602c69:ProjectViewProjectNode" />
               <item name="tic_core" type="462c0819:PsiDirectoryNode" />
               <item name="studies" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="tic_core" type="b2602c69:ProjectViewProjectNode" />
+              <item name="tic_core" type="462c0819:PsiDirectoryNode" />
+              <item name="studies" type="462c0819:PsiDirectoryNode" />
+              <item name="_new_study_template" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="tic_core" type="b2602c69:ProjectViewProjectNode" />
@@ -412,6 +395,13 @@
               <item name="tic_core" type="b2602c69:ProjectViewProjectNode" />
               <item name="tic_core" type="462c0819:PsiDirectoryNode" />
               <item name="studies" type="462c0819:PsiDirectoryNode" />
+              <item name="mcf" type="462c0819:PsiDirectoryNode" />
+              <item name="scripts" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="tic_core" type="b2602c69:ProjectViewProjectNode" />
+              <item name="tic_core" type="462c0819:PsiDirectoryNode" />
+              <item name="studies" type="462c0819:PsiDirectoryNode" />
               <item name="synergy" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -444,11 +434,11 @@
       <recent name="$PROJECT_DIR$/studies/active/scripts" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/studies/mcf" />
       <recent name="$PROJECT_DIR$/docs/source/other" />
       <recent name="$PROJECT_DIR$/studies/active/scripts" />
       <recent name="$PROJECT_DIR$/studies/mcf/scripts" />
       <recent name="$PROJECT_DIR$/bin" />
-      <recent name="$PROJECT_DIR$/studies/synergy/scripts" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -592,13 +582,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1517948604886</updated>
-    </task>
-    <task id="LOCAL-00384" summary="Added way to display participants list.">
-      <created>1523566880191</created>
-      <option name="number" value="00384" />
-      <option name="presentableId" value="LOCAL-00384" />
-      <option name="project" value="LOCAL" />
-      <updated>1523566880191</updated>
     </task>
     <task id="LOCAL-00385" summary="Updated create_acrostic_list.py. Renamed to acrostic_list.py">
       <created>1523567468467</created>
@@ -936,7 +919,14 @@
       <option name="project" value="LOCAL" />
       <updated>1523652772460</updated>
     </task>
-    <option name="localTasksCounter" value="433" />
+    <task id="LOCAL-00433" summary="Updated hdc_look.py to ignore session. This is important when trying to read a hdc_scan">
+      <created>1523652941320</created>
+      <option name="number" value="00433" />
+      <option name="presentableId" value="LOCAL-00433" />
+      <option name="project" value="LOCAL" />
+      <updated>1523652941320</updated>
+    </task>
+    <option name="localTasksCounter" value="434" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -1076,35 +1066,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/tic_core/ops.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="131">
-          <caret line="10" column="4" lean-forward="false" selection-start-line="10" selection-start-column="4" selection-end-line="10" selection-end-column="4" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bin/update_study_init_links.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bin/lnflatten.sh">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="13" column="2" lean-forward="false" selection-start-line="13" selection-start-column="2" selection-end-line="40" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/studies/synergy/init.sh">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/studies/mcf/init.sh">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -1323,14 +1284,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/studies/hfpef/scripts/hfpef_protocol.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="294">
-          <caret line="333" column="4" lean-forward="false" selection-start-line="333" selection-start-column="4" selection-end-line="333" selection-end-column="4" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/docs/source/other/ants_cortical_thickness.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
         <state split_layout="SPLIT">
@@ -1528,6 +1481,46 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="635">
           <caret line="129" column="0" lean-forward="true" selection-start-line="129" selection-start-column="0" selection-end-line="129" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/studies/hfpef/scripts/hfpef_bids.cfg">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/studies/_new_study_template/hdc_convertall.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="22" column="0" lean-forward="false" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/studies/hfpef/scripts/hfpef_protocol.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1531">
+          <caret line="244" column="62" lean-forward="true" selection-start-line="244" selection-start-column="62" selection-end-line="244" selection-end-column="62" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/studies/_new_study_template/hdc_protocol_template.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2328">
+          <caret line="21" column="0" lean-forward="true" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/studies/mcf/hdc_protocol_template.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1965">
+          <caret line="289" column="35" lean-forward="true" selection-start-line="289" selection-start-column="35" selection-end-line="289" selection-end-column="35" />
           <folding />
         </state>
       </provider>
