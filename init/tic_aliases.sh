@@ -12,7 +12,8 @@ alias tic_info='tic_info.sh'
 alias tsi='tic_info.sh'  # Duplicated alias to match alias asi
 
 alias tic_update='cd $TIC_PATH; git pull; cd -; rehash'
-alias tic_make_docs='cd $TIC_PATH/docs/; make clean; make html; cd -; firefox $TIC_PATH/docs/build/html/index.html&'
+
+alias tic_make_docs='cd $TIC_PATH; git pull; cd -; rehash; cd $TIC_PATH/docs/; make clean; make html; cd -; firefox $TIC_PATH/docs/build/html/index.html&'
 
 
 alias dfgandg='echo; df -h /gandg/; echo'
