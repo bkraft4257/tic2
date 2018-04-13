@@ -7,7 +7,7 @@ session_value=$2
 
 full_subject_session_value=sub-${subject_value}_ses-${session_value}
 
-session_dir=${BIDS_PATH}/sub-${subject_value}/ses-${session_value}
+session_dir=${ACTIVE_BIDS_PATH}/sub-${subject_value}/ses-${session_value}
 
 echo 
 echo "================================================================================="
