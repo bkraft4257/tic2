@@ -18,8 +18,8 @@ It contains two parts: a short description and then an example.  At the command 
 to convert subject hfs070 session 1 and add it to the active study.
 
 
-### Convert DICOM images to NIFTI
-
+Convert DICOM images to NIFTI
+-----------------------------
 After you have downloaded the DICOM images from the PACS you go to the ACTIVE_STUDY incoming directory.
 
 ```
@@ -37,8 +37,8 @@ You may edit heudiconv's sub-<subject_value>_ses-<session_value>.edit.txt to cor
 the optional parameter --participant-label to specify the subject_value.  This inconsistency
 is a result of the BIDS Apps being created by different groups.
 
-### Clean BIDS directory
-
+Clean BIDS directory
+--------------------
 Once the DICOM images have been converted the BIDS directory needs to be cleaned.  The cleaning process
 is specific to each study.  However, cleaning primarily does three things:
 
@@ -66,8 +66,8 @@ with the rename command.
 
 
 
-### Check if BIDS directory is still valid
-
+Check if BIDS directory is still valid
+--------------------------------------
 For an ongoing study this is complicated. Here is the bids-validator help
 
 
@@ -103,8 +103,8 @@ The bv script will also refresh the acrostic.list and acrostic.csv files every t
 >> bv
 ```
 
-### MRI Quality Control
-
+MRI Quality Control
+-------------------
 mriqc.sh is a script that simplifies calling the mriqc singularity image. You can see all of the options 
 of the mriqc singularity image with the command "mriqc -h"
 
@@ -116,8 +116,8 @@ of the mriqc singularity image with the command "mriqc -h"
 
 
 
-### Preprocessing Anatomical and Functional Images
-
+Preprocessing Anatomical and Functional Images
+----------------------------------------------
 fmriprep.sh is a script that simplifies calling the fmriprep singularity image. You can see all of the options 
 of the fmriprep singularity image with the command "fmriprep -h"
 
