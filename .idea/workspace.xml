@@ -165,8 +165,8 @@
       <file leaf-file-name="hdc_look.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/bin/hdc_look.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="593">
-              <caret line="132" column="60" lean-forward="false" selection-start-line="132" selection-start-column="60" selection-end-line="132" selection-end-column="60" />
+            <state relative-caret-position="578">
+              <caret line="133" column="121" lean-forward="false" selection-start-line="133" selection-start-column="121" selection-end-line="133" selection-end-column="121" />
               <folding>
                 <element signature="e#122#135#0" expanded="true" />
               </folding>
@@ -588,13 +588,6 @@
       <option name="presentableId" value="Default" />
       <updated>1517948604886</updated>
     </task>
-    <task id="LOCAL-00353" summary="Added operations for cleaning BIDS key/value pairs">
-      <created>1523551425705</created>
-      <option name="number" value="00353" />
-      <option name="presentableId" value="LOCAL-00353" />
-      <option name="project" value="LOCAL" />
-      <updated>1523551425705</updated>
-    </task>
     <task id="LOCAL-00354" summary="Added operations for cleaning BIDS key/value pairs">
       <created>1523552088704</created>
       <option name="number" value="00354" />
@@ -931,7 +924,14 @@
       <option name="project" value="LOCAL" />
       <updated>1523627046273</updated>
     </task>
-    <option name="localTasksCounter" value="402" />
+    <task id="LOCAL-00402" summary="Dog fooding and updating documentation.">
+      <created>1523627140974</created>
+      <option name="number" value="00402" />
+      <option name="presentableId" value="LOCAL-00402" />
+      <option name="project" value="LOCAL" />
+      <updated>1523627140974</updated>
+    </task>
+    <option name="localTasksCounter" value="403" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -1493,8 +1493,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/bin/hdc_look.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="593">
-          <caret line="132" column="60" lean-forward="false" selection-start-line="132" selection-start-column="60" selection-end-line="132" selection-end-column="60" />
+        <state relative-caret-position="578">
+          <caret line="133" column="121" lean-forward="false" selection-start-line="133" selection-start-column="121" selection-end-line="133" selection-end-column="121" />
           <folding>
             <element signature="e#122#135#0" expanded="true" />
           </folding>
