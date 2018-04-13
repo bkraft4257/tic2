@@ -123,7 +123,7 @@ if __name__ == '__main__':
     edit_text_filename = os.path.join(hdc_info_path, f'{in_args.subject}{bids_session}.edit.txt')
     auto_text_filename = os.path.join(hdc_info_path, f'{in_args.subject}{bids_session}.auto.txt')
     dicominfo_tsv_filename = os.path.join(hdc_info_path, f'dicominfo{bids_session}.tsv')
-i
+
     try:
         if 'dicominfo' in HDC_FILES:
             dicominfo_tsv_filename = _read_dicominfo_tsv(dicominfo_tsv_filename)
