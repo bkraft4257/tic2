@@ -1,4 +1,5 @@
-# Quick Reference
+Quick Reference
+===============
 
 These quick instructions are intended to serve as a reminder on how to process a data set.  Each
 step assumes that the previous steps have been completed and are correct. The commands are written
