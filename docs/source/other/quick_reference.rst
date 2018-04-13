@@ -144,7 +144,12 @@ Checking what has been processed
 
     .. code-block:: console
 
-        bps_fmriprep_bold
+        >> bps_fmriprep_bold
+
+
+    .. code-block:: console
+
+        >> bps_fmriprep_t1w
 
 
 
