@@ -24,3 +24,6 @@ export MCF_HEUDICONV_PROTOCOL=${MCF_SCRIPTS_PATH}/mcf_protocol.py
 
 export MCF_SUBJECTS_DIR=${MCF_IMAGE_PROCESSING_PATH}/freesurfer
 
+export MCF_SINGULARITY_USER_BIND_PATHS="/bkraft1"
+
+export MCF_ACROSTIC_REGEX="mcf[0-9]{4}"
