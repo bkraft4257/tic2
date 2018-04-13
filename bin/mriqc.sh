@@ -10,7 +10,12 @@ APP_SINGULARITY_IMAGE=$MRIQC_SINGULARITY_IMAGE
 app=mriqc
 study_prefix=$(echo "${ACTIVE_STUDY,,}")
 
-parameters=$(echo $@ | sed -e 's/-ss/--participant-label/')
+# mriqc.sh and fmriprep.sh uses --participant-label and hdc.sh uses -s to indicated the subject acrostic.
+# I am using sed as a hack to replace -s with --participant-label.  This allows people to use the shorter
+# -s.
+#
+
+parameters=$(echo $@ | sed -e 's/-s /--participant-label /')
 
 # create the output and work directories parallel to BIDS hierarchy, not inside it
 
