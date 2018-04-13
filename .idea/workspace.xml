@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="6f3e13b3-cd58-4c4d-98f6-1a68f8358bfb" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/init/tic_aliases.sh" afterPath="$PROJECT_DIR$/init/tic_aliases.sh" />
+      <change beforePath="$PROJECT_DIR$/docs/source/other/quick_reference.rst" afterPath="$PROJECT_DIR$/docs/source/other/quick_reference.rst" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -34,12 +34,12 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="quick_reference.rst" pinned="false" current-in-tab="false">
+      <file leaf-file-name="quick_reference.rst" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/docs/source/other/quick_reference.rst">
           <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="225">
-                <caret line="111" column="0" lean-forward="true" selection-start-line="111" selection-start-column="0" selection-end-line="111" selection-end-column="0" />
+              <first_editor relative-caret-position="-640">
+                <caret line="63" column="0" lean-forward="true" selection-start-line="63" selection-start-column="0" selection-end-line="63" selection-end-column="0" />
                 <folding />
               </first_editor>
               <second_editor>
@@ -64,11 +64,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="tic_aliases.sh" pinned="false" current-in-tab="true">
+      <file leaf-file-name="tic_aliases.sh" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/init/tic_aliases.sh">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="214">
-              <caret line="15" column="59" lean-forward="false" selection-start-line="15" selection-start-column="59" selection-end-line="15" selection-end-column="59" />
+            <state relative-caret-position="843">
+              <caret line="52" column="43" lean-forward="true" selection-start-line="52" selection-start-column="43" selection-end-line="52" selection-end-column="43" />
               <folding />
             </state>
           </provider>
@@ -279,8 +279,8 @@
         <option value="$PROJECT_DIR$/docs/source/other/functions_and_scripts.md" />
         <option value="$PROJECT_DIR$/docs/source/other/studies.md" />
         <option value="$PROJECT_DIR$/docs/source/index.rst" />
-        <option value="$PROJECT_DIR$/docs/source/other/quick_reference.rst" />
         <option value="$PROJECT_DIR$/init/tic_aliases.sh" />
+        <option value="$PROJECT_DIR$/docs/source/other/quick_reference.rst" />
       </list>
     </option>
   </component>
@@ -582,13 +582,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1517948604886</updated>
-    </task>
-    <task id="LOCAL-00369" summary="Added operations for cleaning BIDS key/value pairs">
-      <created>1523555685496</created>
-      <option name="number" value="00369" />
-      <option name="presentableId" value="LOCAL-00369" />
-      <option name="project" value="LOCAL" />
-      <updated>1523555685496</updated>
     </task>
     <task id="LOCAL-00370" summary="Added operations for cleaning BIDS key/value pairs">
       <created>1523555868579</created>
@@ -926,7 +919,14 @@
       <option name="project" value="LOCAL" />
       <updated>1523631754644</updated>
     </task>
-    <option name="localTasksCounter" value="418" />
+    <task id="LOCAL-00418" summary="Dog fooding and updating documentation.">
+      <created>1523631808611</created>
+      <option name="number" value="00418" />
+      <option name="presentableId" value="LOCAL-00418" />
+      <option name="project" value="LOCAL" />
+      <updated>1523631808611</updated>
+    </task>
+    <option name="localTasksCounter" value="419" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -1491,19 +1491,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/docs/source/other/quick_reference.rst">
-      <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="225">
-            <caret line="111" column="0" lean-forward="true" selection-start-line="111" selection-start-column="0" selection-end-line="111" selection-end-column="0" />
-            <folding />
-          </first_editor>
-          <second_editor>
-            <js_state />
-          </second_editor>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/init/tic_initial_setup.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -1514,9 +1501,22 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/init/tic_aliases.sh">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="214">
-          <caret line="15" column="59" lean-forward="false" selection-start-line="15" selection-start-column="59" selection-end-line="15" selection-end-column="59" />
+        <state relative-caret-position="843">
+          <caret line="52" column="43" lean-forward="true" selection-start-line="52" selection-start-column="43" selection-end-line="52" selection-end-column="43" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docs/source/other/quick_reference.rst">
+      <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="-640">
+            <caret line="63" column="0" lean-forward="true" selection-start-line="63" selection-start-column="0" selection-end-line="63" selection-end-column="0" />
+            <folding />
+          </first_editor>
+          <second_editor>
+            <js_state />
+          </second_editor>
         </state>
       </provider>
     </entry>
