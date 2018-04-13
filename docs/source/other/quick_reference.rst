@@ -43,12 +43,12 @@ Clean BIDS directory
 Once the DICOM images have been converted the BIDS directory needs to be cleaned.  The cleaning process
 is specific to each study.  However, cleaning primarily does three things:
 
-a. Remove .1. from all filenames  
-b. FSL ROI topup files so the PA/AP or RL/LR have the same number of volumes.  
-c. Sets the IntendedFor field in the fmap json files to to apply the TOPUP/Field Map to the EPI data.  
-d. Reorients the images to standard FSL orientation with fslreorient2std.  
+a. Remove .1. from all filenames
+b. FSL ROI topup files so the PA/AP or RL/LR have the same number of volumes.
+c. Sets the IntendedFor field in the fmap json files to to apply the TOPUP/Field Map to the EPI data.
+d. Reorients the images to standard FSL orientation with fslreorient2std.
 
-The cleaning process is done for all studies with 
+The cleaning process is done for all studies with
 
     .. code-block:: console
 
@@ -90,15 +90,15 @@ Structure visit http://bids.neuroimaging.io
 
 The bids-validator behaviour can be modified through the files .bidsignore and the configuration
 file .bids.cfg.  Both files affect the validation in a similar fashion. .bidsignore was implemented after
---config optional parameter.  
+--config optional parameter.
 
-When you validate a BIDS directory with bv the contents of .bidsignore and .bids.cfg will be displayed  
+When you validate a BIDS directory with bv the contents of .bidsignore and .bids.cfg will be displayed
 so you can easily see what is being validated.  These files may need to be changed to accommodate the
-state of the study or the BIDS App being applied. 
+state of the study or the BIDS App being applied.
 
-Other files that may need to be modified according to the situation is participants.tsv. 
+Other files that may need to be modified according to the situation is participants.tsv.
 
-The bv script will also refresh the acrostic.list and acrostic.csv files every time it is called. 
+The bv script will also refresh the acrostic.list and acrostic.csv files every time it is called.
 
     .. code-block:: console
 
@@ -106,7 +106,7 @@ The bv script will also refresh the acrostic.list and acrostic.csv files every t
 
 MRI Quality Control
 -------------------
-mriqc.sh is a script that simplifies calling the mriqc singularity image. You can see all of the options 
+mriqc.sh is a script that simplifies calling the mriqc singularity image. You can see all of the options
 of the mriqc singularity image with the command "mriqc -h"
 
     .. code-block:: console
@@ -120,7 +120,7 @@ of the mriqc singularity image with the command "mriqc -h"
 
 Preprocessing Anatomical and Functional Images
 ----------------------------------------------
-fmriprep.sh is a script that simplifies calling the fmriprep singularity image. You can see all of the options 
+fmriprep.sh is a script that simplifies calling the fmriprep singularity image. You can see all of the options
 of the fmriprep singularity image with the command "fmriprep -h"
 
 fmriprep has three primary functions.
@@ -141,6 +141,43 @@ fmriprep has three primary functions.
 
 Checking what has been processed
 --------------------------------
+
+    .. code-block:: console
+
+        >> bps -h
+
+        usage: processing_status [-h] [-s SUBJECT] [-ss SESSION] [-a ACROSTIC_LIST]
+                                 [--display_max_rows DISPLAY_MAX_ROWS]
+                                 [--glob_current_directory_only] [-v] [-H]
+                                 [--subject_only] [--summary]
+                                 [--nan {drop,only,ignore}]
+                                 [--display_group {found,missing,both}]
+                                 file_pattern
+
+        positional arguments:
+          file_pattern          String file pattern to glob
+
+        optional arguments:
+          -h, --help            show this help message and exit
+          -s SUBJECT, --subject SUBJECT
+                                Regular expression subject acrostic
+          -ss SESSION, --session SESSION
+                                Regular expression session
+          -a ACROSTIC_LIST, --acrostic_list ACROSTIC_LIST
+                                Acrostic List
+          --display_max_rows DISPLAY_MAX_ROWS
+                                Display a maximum number of rows
+          --glob_current_directory_only
+                                Recursive boolean flag for glob
+          -v, --verbose         Turn on verbose mode.
+          -H, --noheader        Remove header from output
+          --subject_only        Only display subject
+          --summary             Display summary stats
+          --nan {drop,only,ignore}
+                                Remove NaNs from output
+          --display_group {found,missing,both}
+                                Display files that were found, missing, or both.
+                                Default is both.
 
     .. code-block:: console
 
