@@ -108,8 +108,9 @@ MRI Quality Control
 mriqc.sh is a script that simplifies calling the mriqc singularity image. You can see all of the options 
 of the mriqc singularity image with the command "mriqc -h"
 
-.. code-block:: console
-mriqc.sh --participant-label < subject_value, hfs070 >
+    .. code-block:: console
+
+    mriqc.sh --participant-label < subject_value, hfs070 >
 
 
 
