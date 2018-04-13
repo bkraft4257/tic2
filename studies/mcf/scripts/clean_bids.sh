@@ -38,7 +38,7 @@ echo "--------------------------------------------------------------------------
 grep -H "IntendedFor" *.json
 echo
 
-cd $BIDS_PATH
+cd $ACTIVE_BIDS_PATH
 
 #--- Reorient all images to match FSL orientation -------------------------------------------------
 echo "Reorienting all *.gz files with fslreorient2std"
