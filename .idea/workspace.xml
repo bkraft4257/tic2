@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6f3e13b3-cd58-4c4d-98f6-1a68f8358bfb" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/docs/source/other/faq.md" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/bin/hdc_look.py" afterPath="$PROJECT_DIR$/bin/hdc_look.py" />
     </list>
@@ -50,16 +49,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="tic_aliases.sh" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/init/tic_aliases.sh">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="95">
-              <caret line="8" column="78" lean-forward="false" selection-start-line="8" selection-start-column="78" selection-end-line="8" selection-end-column="78" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="functions_and_scripts.md" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/docs/source/other/functions_and_scripts.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
@@ -73,6 +62,18 @@
               <second_editor>
                 <js_state />
               </second_editor>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="bids_processing_status.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/bin/bids_processing_status.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="743">
+              <caret line="135" column="0" lean-forward="false" selection-start-line="135" selection-start-column="0" selection-end-line="136" selection-end-column="30" />
+              <folding>
+                <element signature="e#4312#4979#0" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -163,11 +164,9 @@
       <file leaf-file-name="hdc_look.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/bin/hdc_look.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="607">
-              <caret line="125" column="1" lean-forward="false" selection-start-line="125" selection-start-column="1" selection-end-line="125" selection-end-column="1" />
-              <folding>
-                <marker date="1523652054542" expanded="true" signature="3283:5540" ph="..." />
-              </folding>
+            <state relative-caret-position="444">
+              <caret line="119" column="0" lean-forward="true" selection-start-line="119" selection-start-column="0" selection-end-line="119" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -594,20 +593,6 @@
       <option name="presentableId" value="Default" />
       <updated>1517948604886</updated>
     </task>
-    <task id="LOCAL-00378" summary="Added operations for cleaning BIDS key/value pairs">
-      <created>1523556562309</created>
-      <option name="number" value="00378" />
-      <option name="presentableId" value="LOCAL-00378" />
-      <option name="project" value="LOCAL" />
-      <updated>1523556562309</updated>
-    </task>
-    <task id="LOCAL-00379" summary="Added operations for cleaning BIDS key/value pairs">
-      <created>1523556581189</created>
-      <option name="number" value="00379" />
-      <option name="presentableId" value="LOCAL-00379" />
-      <option name="project" value="LOCAL" />
-      <updated>1523556581189</updated>
-    </task>
     <task id="LOCAL-00380" summary="Added operations for cleaning BIDS key/value pairs">
       <created>1523556976796</created>
       <option name="number" value="00380" />
@@ -937,7 +922,21 @@
       <option name="project" value="LOCAL" />
       <updated>1523650518587</updated>
     </task>
-    <option name="localTasksCounter" value="427" />
+    <task id="LOCAL-00427" summary="Updated hdc_look.py to ignore session. This is important when trying to read a hdc_scan">
+      <created>1523652359388</created>
+      <option name="number" value="00427" />
+      <option name="presentableId" value="LOCAL-00427" />
+      <option name="project" value="LOCAL" />
+      <updated>1523652359388</updated>
+    </task>
+    <task id="LOCAL-00428" summary="Updated hdc_look.py to ignore session. This is important when trying to read a hdc_scan">
+      <created>1523652438245</created>
+      <option name="number" value="00428" />
+      <option name="presentableId" value="LOCAL-00428" />
+      <option name="project" value="LOCAL" />
+      <updated>1523652438245</updated>
+    </task>
+    <option name="localTasksCounter" value="429" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -1031,7 +1030,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Added file to check processing status." />
     <MESSAGE value="Wrote new function to create acrostic.csv" />
     <MESSAGE value="Added plot_overlay to tic_core." />
     <MESSAGE value="Refactored plot_overlay.py so it is in the bin directory as a &#10;command line function." />
@@ -1056,7 +1054,8 @@
     <MESSAGE value="Trying to simplify bids_processing_status with functions." />
     <MESSAGE value="Added ability to ignore session during search of bps." />
     <MESSAGE value="Dog fooding and updating documentation." />
-    <option name="LAST_COMMIT_MESSAGE" value="Dog fooding and updating documentation." />
+    <MESSAGE value="Updated hdc_look.py to ignore session. This is important when trying to read a hdc_scan" />
+    <option name="LAST_COMMIT_MESSAGE" value="Updated hdc_look.py to ignore session. This is important when trying to read a hdc_scan" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1276,17 +1275,6 @@
           <second_editor>
             <js_state />
           </second_editor>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bin/bids_processing_status.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="49">
-          <caret line="255" column="0" lean-forward="false" selection-start-line="255" selection-start-column="0" selection-end-line="255" selection-end-column="0" />
-          <folding>
-            <element signature="e#148#159#0" expanded="false" />
-            <element signature="e#4312#4979#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1526,13 +1514,21 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/bin/bids_processing_status.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="743">
+          <caret line="135" column="0" lean-forward="false" selection-start-line="135" selection-start-column="0" selection-end-line="136" selection-end-column="30" />
+          <folding>
+            <element signature="e#4312#4979#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/bin/hdc_look.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="607">
-          <caret line="125" column="1" lean-forward="false" selection-start-line="125" selection-start-column="1" selection-end-line="125" selection-end-column="1" />
-          <folding>
-            <marker date="1523652054542" expanded="true" signature="3283:5540" ph="..." />
-          </folding>
+        <state relative-caret-position="444">
+          <caret line="119" column="0" lean-forward="true" selection-start-line="119" selection-start-column="0" selection-end-line="119" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>

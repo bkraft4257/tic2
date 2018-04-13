@@ -115,6 +115,9 @@ if __name__ == '__main__':
 
     hdc_info_path = os.path.join(os.path.abspath(in_args.bids), '.heudiconv', in_args.subject, f'ses-{in_args.session}', 'info')
 
+    if in_args.session.lower() == 'none':
+        in_args.session = None
+
     if in_args.session is None:
         bids_session = ''
     else:
