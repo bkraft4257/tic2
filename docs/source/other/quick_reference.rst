@@ -110,6 +110,7 @@ of the mriqc singularity image with the command "mriqc -h"
 
 .. code-block:: console
 mriqc.sh --participant-label < subject_value, hfs070 >
+::
 
 **REMEMBER**: Just because you ran the script doesn't mean it completed. YOU HAVE TO LOOK.
 
