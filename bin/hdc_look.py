@@ -118,6 +118,8 @@ if __name__ == '__main__':
     if in_args.session.lower() == 'none':
         in_args.session = None
 
+    print(in_args.session)
+
     if in_args.session is None:
         bids_session = ''
     else:
