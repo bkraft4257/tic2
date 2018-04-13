@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="6f3e13b3-cd58-4c4d-98f6-1a68f8358bfb" name="Default" comment="">
+    <list default="true" id="6f3e13b3-cd58-4c4d-98f6-1a68f8358bfb" name="Default" comment="Draft of mcf_protcol">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/studies/mcf/scripts/mcf_protocol.py" afterPath="$PROJECT_DIR$/studies/mcf/scripts/mcf_protocol.py" />
+      <change beforePath="$PROJECT_DIR$/bin/mriqc.sh" afterPath="$PROJECT_DIR$/bin/mriqc.sh" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -42,34 +42,6 @@
               <folding>
                 <element signature="e#4312#4979#0" expanded="false" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="heudiconv.md" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/docs/source/other/heudiconv.md">
-          <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
-            <state split_layout="SPLIT">
-              <first_editor relative-caret-position="-7630">
-                <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-                <folding>
-                  <marker date="1521208630656" expanded="true" signature="6352:33419" ph="..." />
-                  <marker date="1521208630656" expanded="true" signature="7394:33419" ph="..." />
-                  <marker date="1521208630656" expanded="true" signature="7815:33419" ph="..." />
-                  <marker date="1521208630656" expanded="true" signature="7828:33419" ph="..." />
-                  <marker date="1521208630656" expanded="true" signature="11923:33419" ph="..." />
-                  <marker date="1521208630656" expanded="true" signature="11943:33419" ph="..." />
-                  <marker date="1521208630656" expanded="true" signature="23558:33419" ph="..." />
-                  <marker date="1521208630656" expanded="true" signature="24350:33419" ph="..." />
-                  <marker date="1521208630656" expanded="true" signature="24549:33419" ph="..." />
-                  <marker date="1521208630656" expanded="true" signature="24872:33419" ph="..." />
-                  <marker date="1521208630656" expanded="true" signature="25244:33419" ph="..." />
-                  <marker date="1521208630656" expanded="true" signature="26367:33419" ph="..." />
-                </folding>
-              </first_editor>
-              <second_editor>
-                <js_state />
-              </second_editor>
             </state>
           </provider>
         </entry>
@@ -139,7 +111,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="mcf_protocol.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="mcf_protocol.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/studies/mcf/scripts/mcf_protocol.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="-500">
@@ -159,6 +131,16 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="mriqc.sh" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/bin/mriqc.sh">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="119">
+              <caret line="7" column="0" lean-forward="true" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
     </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
@@ -172,7 +154,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>verbose</find>
       <find>display_mode</find>
       <find>_sbref</find>
       <find>sbref</find>
@@ -202,6 +183,7 @@
       <find>**</find>
       <find>mriqc</find>
       <find>pre</find>
+      <find>_run-{item:02d}</find>
     </findStrings>
     <replaceStrings>
       <replace>01d</replace>
@@ -237,7 +219,6 @@
         <option value="$PROJECT_DIR$/studies/synergy/scripts/syn_bids_clean.sh" />
         <option value="$PROJECT_DIR$/studies/synergy/scripts/prepare_netprep_synergy.sh" />
         <option value="$PROJECT_DIR$/studies/mcf/scripts/mcf_bids.cfg" />
-        <option value="$PROJECT_DIR$/bin/mriqc.sh" />
         <option value="$PROJECT_DIR$/bin/fmriprep.sh" />
         <option value="$PROJECT_DIR$/studies/synergy/aliases.sh" />
         <option value="$PROJECT_DIR$/studies/active/scripts/netprep_gather_inputs.sh" />
@@ -280,6 +261,7 @@
         <option value="$PROJECT_DIR$/studies/mcf/hdc_protocol_template.py" />
         <option value="$PROJECT_DIR$/studies/mcf/environment.sh" />
         <option value="$PROJECT_DIR$/studies/mcf/scripts/mcf_protocol.py" />
+        <option value="$PROJECT_DIR$/bin/mriqc.sh" />
       </list>
     </option>
   </component>
@@ -582,13 +564,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1517948604886</updated>
-    </task>
-    <task id="LOCAL-00391" summary="Trying to simplify bids_processing_status with functions.">
-      <created>1523570155899</created>
-      <option name="number" value="00391" />
-      <option name="presentableId" value="LOCAL-00391" />
-      <option name="project" value="LOCAL" />
-      <updated>1523570155899</updated>
     </task>
     <task id="LOCAL-00392" summary="Trying to simplify bids_processing_status with functions.">
       <created>1523570537518</created>
@@ -926,7 +901,14 @@
       <option name="project" value="LOCAL" />
       <updated>1523656151143</updated>
     </task>
-    <option name="localTasksCounter" value="440" />
+    <task id="LOCAL-00440" summary="Draft of mcf_protcol">
+      <created>1523656601919</created>
+      <option name="number" value="00440" />
+      <option name="presentableId" value="LOCAL-00440" />
+      <option name="project" value="LOCAL" />
+      <updated>1523656601919</updated>
+    </task>
+    <option name="localTasksCounter" value="441" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -1066,13 +1048,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/studies/mcf/init.sh">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/studies/infinite/init.sh">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -1521,6 +1496,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-500">
           <caret line="210" column="10" lean-forward="false" selection-start-line="210" selection-start-column="10" selection-end-line="210" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bin/mriqc.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="0" lean-forward="true" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
           <folding />
         </state>
       </provider>
