@@ -2,9 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6f3e13b3-cd58-4c4d-98f6-1a68f8358bfb" name="Default" comment="">
+      <change beforePath="" afterPath="$PROJECT_DIR$/studies/mcf/scripts/clean_bids.sh" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/bin/fmriprep.sh" afterPath="$PROJECT_DIR$/bin/fmriprep.sh" />
-      <change beforePath="$PROJECT_DIR$/bin/mriqc.sh" afterPath="$PROJECT_DIR$/bin/mriqc.sh" />
+      <change beforePath="$PROJECT_DIR$/studies/mcf/environment.sh" afterPath="$PROJECT_DIR$/studies/mcf/environment.sh" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -35,28 +35,6 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="bids_processing_status.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/bin/bids_processing_status.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="743">
-              <caret line="135" column="0" lean-forward="false" selection-start-line="135" selection-start-column="0" selection-end-line="136" selection-end-column="30" />
-              <folding>
-                <element signature="e#4312#4979#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="hdc_look.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/bin/hdc_look.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="635">
-              <caret line="129" column="0" lean-forward="true" selection-start-line="129" selection-start-column="0" selection-end-line="129" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="hdc_protocol_template.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/studies/_new_study_template/hdc_protocol_template.py">
           <provider selected="true" editor-type-id="text-editor">
@@ -72,26 +50,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="765">
               <caret line="45" column="42" lean-forward="true" selection-start-line="45" selection-start-column="29" selection-end-line="45" selection-end-column="42" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="hdc_convertall.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/studies/_new_study_template/hdc_convertall.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="374">
-              <caret line="22" column="0" lean-forward="false" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="hfpef_bids.cfg" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/studies/hfpef/scripts/hfpef_bids.cfg">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -117,21 +75,61 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="environment.sh" pinned="false" current-in-tab="false">
+      <file leaf-file-name="environment.sh" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/studies/mcf/environment.sh">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="442">
-              <caret line="26" column="58" lean-forward="false" selection-start-line="26" selection-start-column="58" selection-end-line="26" selection-end-column="58" />
+            <state relative-caret-position="510">
+              <caret line="30" column="37" lean-forward="false" selection-start-line="30" selection-start-column="37" selection-end-line="30" selection-end-column="37" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="mriqc.sh" pinned="false" current-in-tab="true">
+      <file leaf-file-name="mriqc.sh" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/bin/mriqc.sh">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="714">
-              <caret line="59" column="42" lean-forward="false" selection-start-line="59" selection-start-column="42" selection-end-line="59" selection-end-column="42" />
+            <state relative-caret-position="795">
+              <caret line="60" column="0" lean-forward="true" selection-start-line="60" selection-start-column="0" selection-end-line="60" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="hfpef_clean_bids.sh" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/studies/hfpef/scripts/hfpef_clean_bids.sh">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="clean_bids.sh" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/studies/mcf/scripts/clean_bids.sh">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="17">
+              <caret line="1" column="0" lean-forward="true" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="aliases.sh" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/studies/imove/aliases.sh">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="environment.sh" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/studies/imove/environment.sh">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="340">
+              <caret line="20" column="50" lean-forward="true" selection-start-line="20" selection-start-column="50" selection-end-line="20" selection-end-column="50" />
               <folding />
             </state>
           </provider>
@@ -150,7 +148,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>display_mode</find>
       <find>_sbref</find>
       <find>sbref</find>
       <find>rest_fmri_</find>
@@ -179,6 +176,7 @@
       <find>**</find>
       <find>mriqc</find>
       <find>pre</find>
+      <find>clean</find>
       <find>_run-{item:02d}</find>
     </findStrings>
     <replaceStrings>
@@ -207,7 +205,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/studies/hfpef/scripts/hfpef_bids_clean_2.py" />
         <option value="$PROJECT_DIR$/studies/active/scripts/bids_app_status.sh" />
         <option value="$PROJECT_DIR$/bin/active_study_info.sh" />
         <option value="$PROJECT_DIR$/docs/source/other/aliases.md" />
@@ -254,10 +251,11 @@
         <option value="$PROJECT_DIR$/bin/hdc_look.py" />
         <option value="$PROJECT_DIR$/studies/hfpef/scripts/hfpef_protocol.py" />
         <option value="$PROJECT_DIR$/studies/mcf/hdc_protocol_template.py" />
-        <option value="$PROJECT_DIR$/studies/mcf/environment.sh" />
         <option value="$PROJECT_DIR$/studies/mcf/scripts/mcf_protocol.py" />
         <option value="$PROJECT_DIR$/bin/fmriprep.sh" />
         <option value="$PROJECT_DIR$/bin/mriqc.sh" />
+        <option value="$PROJECT_DIR$/studies/mcf/scripts/clean_bids.sh" />
+        <option value="$PROJECT_DIR$/studies/mcf/environment.sh" />
       </list>
     </option>
   </component>
@@ -412,10 +410,10 @@
       <recent name="$PROJECT_DIR$/studies/active/scripts" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/studies/mcf/scripts" />
       <recent name="$PROJECT_DIR$/studies/mcf" />
       <recent name="$PROJECT_DIR$/docs/source/other" />
       <recent name="$PROJECT_DIR$/studies/active/scripts" />
-      <recent name="$PROJECT_DIR$/studies/mcf/scripts" />
       <recent name="$PROJECT_DIR$/bin" />
     </key>
   </component>
@@ -560,13 +558,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1517948604886</updated>
-    </task>
-    <task id="LOCAL-00397" summary="Added ability to ignore session during search of bps.">
-      <created>1523571622053</created>
-      <option name="number" value="00397" />
-      <option name="presentableId" value="LOCAL-00397" />
-      <option name="project" value="LOCAL" />
-      <updated>1523571622053</updated>
     </task>
     <task id="LOCAL-00398" summary="Added ability to ignore session during search of bps.">
       <created>1523571706192</created>
@@ -904,7 +895,14 @@
       <option name="project" value="LOCAL" />
       <updated>1523657396274</updated>
     </task>
-    <option name="localTasksCounter" value="446" />
+    <task id="LOCAL-00446" summary="Draft of mcf_protcol">
+      <created>1523657514620</created>
+      <option name="number" value="00446" />
+      <option name="presentableId" value="LOCAL-00446" />
+      <option name="project" value="LOCAL" />
+      <updated>1523657514620</updated>
+    </task>
+    <option name="localTasksCounter" value="447" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -1044,27 +1042,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/studies/infinite/init.sh">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/studies/imove/init.sh">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/studies/hfpef/init.sh">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/studies/cenc/init.sh">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -1206,14 +1183,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
           <caret line="11" column="30" lean-forward="false" selection-start-line="11" selection-start-column="30" selection-end-line="11" selection-end-column="30" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/studies/imove/environment.sh">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="30" lean-forward="false" selection-start-line="6" selection-start-column="30" selection-end-line="6" selection-end-column="30" />
           <folding />
         </state>
       </provider>
@@ -1472,22 +1441,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/studies/mcf/scripts/mcf_protocol.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-500">
-          <caret line="210" column="10" lean-forward="false" selection-start-line="210" selection-start-column="10" selection-end-line="210" selection-end-column="10" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/studies/mcf/environment.sh">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
-          <caret line="26" column="58" lean-forward="false" selection-start-line="26" selection-start-column="58" selection-end-line="26" selection-end-column="58" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/bin/fmriprep.sh">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="765">
@@ -1498,8 +1451,56 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/bin/mriqc.sh">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="714">
-          <caret line="59" column="42" lean-forward="false" selection-start-line="59" selection-start-column="42" selection-end-line="59" selection-end-column="42" />
+        <state relative-caret-position="795">
+          <caret line="60" column="0" lean-forward="true" selection-start-line="60" selection-start-column="0" selection-end-line="60" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/studies/hfpef/scripts/hfpef_clean_bids.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/studies/mcf/scripts/clean_bids.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" column="0" lean-forward="true" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/studies/imove/aliases.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/studies/imove/environment.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="20" column="50" lean-forward="true" selection-start-line="20" selection-start-column="50" selection-end-line="20" selection-end-column="50" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/studies/mcf/scripts/mcf_protocol.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-500">
+          <caret line="210" column="10" lean-forward="false" selection-start-line="210" selection-start-column="10" selection-end-line="210" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/studies/mcf/environment.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="510">
+          <caret line="30" column="37" lean-forward="false" selection-start-line="30" selection-start-column="37" selection-end-line="30" selection-end-column="37" />
           <folding />
         </state>
       </provider>
