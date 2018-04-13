@@ -21,7 +21,7 @@ export MCF_CONN_PATH=${MCF_IMAGE_PROCESSING_PATH}/conn
 
 export MCF_BIDS_CONFIG_FILE=${MCF_BIDS_PATH}/.bids.cfg
 export MCF_HEUDICONV_PROTOCOL=${MCF_SCRIPTS_PATH}/mcf_protocol.py
-export MCF_CLEAN_BIDS=${IMOVE_SCRIPTS_PATH}/clean_bids.sh
+export MCF_CLEAN_BIDS=${MCF_SCRIPTS_PATH}/clean_bids.sh
 
 
 export MCF_SUBJECTS_DIR=${MCF_IMAGE_PROCESSING_PATH}/freesurfer
