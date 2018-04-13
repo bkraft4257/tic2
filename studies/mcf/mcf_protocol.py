@@ -287,6 +287,6 @@ def infotodict(seqinfo):
             info[post_rest_ap_mbepi_sbref] = [s.series_id]
 
         if 'mbep2d_bold 3mm L>>R ' in s.series_id:
-            info[post_rest_ap_mbepi] = [s.series_id]
+            info[post_rest_ap_mbepii] = [s.series_id]
 
     return info

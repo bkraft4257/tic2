@@ -2,9 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6f3e13b3-cd58-4c4d-98f6-1a68f8358bfb" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/studies/mcf/hdc_protocol_template.py" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/studies/hfpef/scripts/hfpef_protocol.py" afterPath="$PROJECT_DIR$/studies/hfpef/scripts/hfpef_protocol.py" />
+      <change beforePath="$PROJECT_DIR$/studies/mcf/hdc_protocol_template.py" afterPath="$PROJECT_DIR$/studies/mcf/mcf_protocol.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -150,11 +149,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="hdc_protocol_template.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/studies/mcf/hdc_protocol_template.py">
+      <file leaf-file-name="mcf_protocol.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/studies/mcf/mcf_protocol.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1965">
-              <caret line="289" column="35" lean-forward="true" selection-start-line="289" selection-start-column="35" selection-end-line="289" selection-end-column="35" />
+            <state relative-caret-position="131">
+              <caret line="239" column="0" lean-forward="true" selection-start-line="239" selection-start-column="0" selection-end-line="239" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -583,13 +582,6 @@
       <option name="presentableId" value="Default" />
       <updated>1517948604886</updated>
     </task>
-    <task id="LOCAL-00385" summary="Updated create_acrostic_list.py. Renamed to acrostic_list.py">
-      <created>1523567468467</created>
-      <option name="number" value="00385" />
-      <option name="presentableId" value="LOCAL-00385" />
-      <option name="project" value="LOCAL" />
-      <updated>1523567468467</updated>
-    </task>
     <task id="LOCAL-00386" summary="Simple test.">
       <created>1523567540869</created>
       <option name="number" value="00386" />
@@ -926,7 +918,14 @@
       <option name="project" value="LOCAL" />
       <updated>1523652941320</updated>
     </task>
-    <option name="localTasksCounter" value="434" />
+    <task id="LOCAL-00434" summary="Updated hdc_look.py to ignore session. This is important when trying to read a hdc_scan">
+      <created>1523654638364</created>
+      <option name="number" value="00434" />
+      <option name="presentableId" value="LOCAL-00434" />
+      <option name="project" value="LOCAL" />
+      <updated>1523654638364</updated>
+    </task>
+    <option name="localTasksCounter" value="435" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -1517,10 +1516,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/studies/mcf/hdc_protocol_template.py">
+    <entry file="file://$PROJECT_DIR$/studies/mcf/mcf_protocol.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1965">
-          <caret line="289" column="35" lean-forward="true" selection-start-line="289" selection-start-column="35" selection-end-line="289" selection-end-column="35" />
+        <state relative-caret-position="131">
+          <caret line="239" column="0" lean-forward="true" selection-start-line="239" selection-start-column="0" selection-end-line="239" selection-end-column="0" />
           <folding />
         </state>
       </provider>
