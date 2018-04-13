@@ -188,27 +188,27 @@ def infotodict(seqinfo):
 
     bids_prefix = 'sub-{subject}/{session}/'
 
-    pre_rest_ap = create_key(bids_prefix + 'func/sub-{subject}_{session}_task-preRest_acq-epi_run-{item:02d}_bold')
-    pre_heat1_ap = create_key(bids_prefix + 'func/sub-{subject}_{session}_task-preHeat1_acq-epi_run-{item:02d}_bold')
-    pre_heat2_ap = create_key(bids_prefix + 'func/sub-{subject}_{session}_task-preHeat2_acq-epi_run-{item:02d}_bold')
+    pre_rest_ap = create_key(bids_prefix + 'func/sub-{subject}_{session}_task-preRest_acq-epi_bold.{item:02d}')
+    pre_heat1_ap = create_key(bids_prefix + 'func/sub-{subject}_{session}_task-preHeat1_acq-epi_bold.{item:02d}')
+    pre_heat2_ap = create_key(bids_prefix + 'func/sub-{subject}_{session}_task-preHeat2_acq-epi_bold.{item:02d}')
 
-    pre_topup_ap = create_key(bids_prefix + 'fmap/sub-{subject}_{session}_acq-preEpi_dir-ap_run-{item:02d}_bold')
-    pre_topup_pa = create_key(bids_prefix + 'fmap/sub-{subject}_{session}_acq-preEpi_dir-pa_run-{item:02d}_bold')
+    pre_topup_ap = create_key(bids_prefix + 'fmap/sub-{subject}_{session}_acq-preEpi_dir-ap_bold.{item:02d}')
+    pre_topup_pa = create_key(bids_prefix + 'fmap/sub-{subject}_{session}_acq-preEpi_dir-pa_bold.{item:02d}')
     
-    pre_fmap_magnitude1 = create_key(bids_prefix + 'fmap/sub-{subject}_{session}_acq-pre_run-{item:02d}_magnitude1')
-    pre_fmap_phasediff = create_key(bids_prefix + 'fmap/sub-{subject}_{session}_acq-pre_run-{item:02d}_phasediff')
+    pre_fmap_magnitude1 = create_key(bids_prefix + 'fmap/sub-{subject}_{session}_acq-pre_magnitude1.{item:02d}')
+    pre_fmap_phasediff = create_key(bids_prefix + 'fmap/sub-{subject}_{session}_acq-pre_phasediff.{item:02d}')
 
-    t1w = create_key(bids_prefix + 'anat/sub-{subject}_{session}_run-{item:02d}_T1w')
+    t1w = create_key(bids_prefix + 'anat/sub-{subject}_{session}_T1w')
 
-    post_heat1_ap = create_key(bids_prefix + 'func/sub-{subject}_{session}_task-postHeat3_acq-epi_run-{item:02d}_bold')
-    post_heat2_ap = create_key(bids_prefix + 'func/sub-{subject}_{session}_task-postHeat4_acq-epi_run-{item:02d}_bold')
-    post_rest_ap = create_key(bids_prefix + 'func/sub-{subject}_{session}_task-postRest_acq-epi_run-{item:02d}_bold')
+    post_heat1_ap = create_key(bids_prefix + 'func/sub-{subject}_{session}_task-postHeat3_acq-epi_bold.{item:02d}')
+    post_heat2_ap = create_key(bids_prefix + 'func/sub-{subject}_{session}_task-postHeat4_acq-epi_bold.{item:02d}')
+    post_rest_ap = create_key(bids_prefix + 'func/sub-{subject}_{session}_task-postRest_acq-epi_bold.{item:02d}')
 
-    post_topup_ap = create_key(bids_prefix + 'fmap/sub-{subject}_acq-postEpi_dir-ap_run-{item:02d}_bold')
-    post_topup_pa = create_key(bids_prefix + 'fmap/sub-{subject}_acq-postEpi_dir-pa_run-{item:02d}_bold')
+    post_topup_ap = create_key(bids_prefix + 'fmap/sub-{subject}_acq-postEpi_dir-ap_bold.{item:02d}')
+    post_topup_pa = create_key(bids_prefix + 'fmap/sub-{subject}_acq-postEpi_dir-pa_bold.{item:02d}')
 
-    post_rest_ap_mbepi = create_key(bids_prefix + 'func/sub-{subject}_{session}_task-postRest_acq-mbepi_run-{item:02d}_bold')
-    post_rest_ap_mbepi_sbref = create_key(bids_prefix + 'func/sub-{subject}_{session}_task-postRest_acq-mbepi_run-{item:02d}_sbref')
+    post_rest_ap_mbepi_sbref = create_key(bids_prefix + 'func/sub-{subject}_{session}_task-postRest_acq-mbepi_sbref.{item:02d}')
+    post_rest_ap_mbepi = create_key(bids_prefix + 'func/sub-{subject}_{session}_task-postRest_acq-mbepi_bold.{item:02d}')
 
     # Create an empty dictionary called info for each key
 
@@ -256,7 +256,7 @@ def infotodict(seqinfo):
 
         if (('Field_mapping 4X4X4 A>>P' in s.series_id) and
                 (s.TE == 4.92)):
-                info[pre_fmap_phasediff] = [s.series_id]
+                info[pre_fmap_magnitude1] = [s.series_id]
             
         if (('Field_mapping 4X4X4 A>>P' in s.series_id) and
                 (s.TE == 7.38)):
@@ -280,10 +280,11 @@ def infotodict(seqinfo):
         if 'post_topup_P>>A' in s.series_id:
             info[post_topup_pa] = [s.series_id]
 
-        if 'mbep2d_bold 3mm L>>R_SBRef' in s.series_id:
+        if (('mbep2d_bold 3mm L>>R' in s.series_id) and
+                (s.dim4 == 1)):
             info[post_rest_ap_mbepi_sbref] = [s.series_id]
 
-        if 'mbep2d_bold 3mm L>>R ' in s.series_id:
+        if 'mbep2d_bold 3mm L>>R' in s.series_id:
             info[post_rest_ap_mbepi] = [s.series_id]
 
     return info
