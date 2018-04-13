@@ -139,9 +139,12 @@ fmriprep has three primary functions.
 
 
 
-### Checking what has been processed
+Checking what has been processed
+--------------------------------
 
+    .. code-block:: console
 
+        bps_fmriprep_bold
 
 
 

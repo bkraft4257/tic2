@@ -6,7 +6,7 @@ source $TIC_PATH/bin/tic_functions.sh
 
 alias bps='bids_processing_status.py'
 
-alias tic_help='firefox $TIC_PATH/docs/build/html/index.html&'
+alias tic_help='firefox $TIC_PATH/docs/build/html/index.html > /dev/null 2>&1 &'
 
 alias tic_info='tic_info.sh'
 alias tsi='tic_info.sh'  # Duplicated alias to match alias asi
