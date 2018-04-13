@@ -9,7 +9,7 @@ Welcome to TIC's documentation!
 Contents:
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 1
 
    tic_welcome.md
    tic_setup.md
