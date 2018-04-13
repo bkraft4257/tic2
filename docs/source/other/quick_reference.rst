@@ -114,7 +114,6 @@ of the mriqc singularity image with the command "mriqc -h"
         >> mriqc.sh --participant-label < subject_value, hfs070 >
 
 
-
 **REMEMBER**: Just because you ran the script doesn't mean it completed. YOU HAVE TO LOOK.
 
 
@@ -132,7 +131,7 @@ fmriprep has three primary functions.
 1. Measures but does not apply the temporal components in the gray matter, CSF, and white matter.
 
     .. code-block:: console
-        
+
         >> fmriprep.sh --force-syn --participant-label < subject_value, hfs070 >
 
 
