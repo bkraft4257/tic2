@@ -10,7 +10,7 @@ APP_SINGULARITY_IMAGE=$MRIQC_SINGULARITY_IMAGE
 app=mriqc
 study_prefix=$(echo "${ACTIVE_STUDY,,}")
 
-parameters=$(echo $@ | sed -e 's/-ss/--participant-label')
+parameters=$(echo $@ | sed -e 's/-ss/--participant-label/')
 
 # create the output and work directories parallel to BIDS hierarchy, not inside it
 
