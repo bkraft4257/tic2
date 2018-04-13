@@ -24,7 +24,6 @@ log_file=${ACTIVE_IMAGE_PROCESSING_LOG_PATH}/${study_prefix}_${BIDS_APP}_${datet
 
 source $TIC_PATH/studies/active/scripts/bids_app_status.sh
 
-exit
 
 # NOTE: any -B mount points must exist in the container
 #       run "sudo singularity shell -s xx.img"  and create the mount points
