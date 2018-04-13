@@ -130,9 +130,8 @@ if __name__ == '__main__':
         if 'edit' in in_args.files:
             _display_text_file(edit_text_filename)
 
-            print(f'{Fore.YELLOW}\n\tIf {edit_text_filename} \n is incorrect, you may edit it in any text editor directly \n'
-                  f'\tand then run hdc.sh\n\n{Fore.WHITE}'
-                  f'\t\t>> cd ${BIDS_PATH}/.heudiconv/ses-{in_args.session}/info\n\n')
+            print(f'{Fore.YELLOW}\n\tIf {edit_text_filename}'
+                  f'\n\tis incorrect, you may edit it in any text editor directly and then rerun hdc.sh\n\n{Fore.WHITE}'
     except:
 
         print(Fore.RED + '\nFailed to run ... \n\n' + Fore.WHITE +
