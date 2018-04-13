@@ -142,8 +142,8 @@
       <file leaf-file-name="mcf_protocol.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/studies/mcf/scripts/mcf_protocol.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="481">
-              <caret line="210" column="56" lean-forward="false" selection-start-line="210" selection-start-column="56" selection-end-line="210" selection-end-column="56" />
+            <state relative-caret-position="-500">
+              <caret line="210" column="10" lean-forward="false" selection-start-line="210" selection-start-column="10" selection-end-line="210" selection-end-column="10" />
               <folding />
             </state>
           </provider>
@@ -583,13 +583,6 @@
       <option name="presentableId" value="Default" />
       <updated>1517948604886</updated>
     </task>
-    <task id="LOCAL-00390" summary="Trying to simplify bids_processing_status with functions.">
-      <created>1523570090031</created>
-      <option name="number" value="00390" />
-      <option name="presentableId" value="LOCAL-00390" />
-      <option name="project" value="LOCAL" />
-      <updated>1523570090031</updated>
-    </task>
     <task id="LOCAL-00391" summary="Trying to simplify bids_processing_status with functions.">
       <created>1523570155899</created>
       <option name="number" value="00391" />
@@ -926,7 +919,14 @@
       <option name="project" value="LOCAL" />
       <updated>1523655721408</updated>
     </task>
-    <option name="localTasksCounter" value="439" />
+    <task id="LOCAL-00439" summary="Draft of mcf_protcol">
+      <created>1523656151143</created>
+      <option name="number" value="00439" />
+      <option name="presentableId" value="LOCAL-00439" />
+      <option name="project" value="LOCAL" />
+      <updated>1523656151143</updated>
+    </task>
+    <option name="localTasksCounter" value="440" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -1519,8 +1519,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/studies/mcf/scripts/mcf_protocol.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="481">
-          <caret line="210" column="56" lean-forward="false" selection-start-line="210" selection-start-column="56" selection-end-line="210" selection-end-column="56" />
+        <state relative-caret-position="-500">
+          <caret line="210" column="10" lean-forward="false" selection-start-line="210" selection-start-column="10" selection-end-line="210" selection-end-column="10" />
           <folding />
         </state>
       </provider>
