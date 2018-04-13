@@ -11,17 +11,20 @@ studies are defined in $TIC_PATH/init.
 
     asi - Displays information about the current active study.  This is a long list and most users
     may find this to be information overload.
-    
-    cdas     - change directory to active study main directory
-    cdb      - change directory to  BIDS directory
+        
+    cdas        - change directory to active study main directory
+    cdb         - change directory to  BIDS directory
              
-    cdip     - change directory to image processing directory (fmriprep, netprep, etc.)
-    cdipl    - change directory to image processing log directory 
-    cdin     - change directory to DICOM incoming directory
+    cdip        - change directory to image processing directory (fmriprep, netprep, etc.)
+    cdipl       - change directory to image processing log directory 
+    cdin        - change directory to DICOM incoming directory
              
-    cdqc     - change directory to QC directory
-    cdqcmri  - change directory to MRIQC directory 
-    cdqcmril - change directory to MRIQC log directory 
+    cdqc        - change directory to QC directory
+    cdqcmri     - change directory to MRIQC directory 
+    cdqcmril    - change directory to MRIQC log directory 
+
+    bv          - Validate BIDS directory.  bv=bids-validator
+    bps         - An alias for bids_processing_status.py
 
 A bash function has been created to allow you to quickly switch between studies by changing the active study.  This function calls
 the python function study_switcher.py.  Both functions take arguments to control the functions behavior.
@@ -60,4 +63,3 @@ To set your default study.  Setting the default study produces no output unless 
     >> sw cenc -d
     >>
 ```
-

@@ -18,6 +18,8 @@ Contents:
    other/studies.md
    other/creating_new_study.md
    other/quick_reference.md
+   other/alias.md
+   other/functions_and_scripts.md
 
 Indices and tables
 ==================
