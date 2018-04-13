@@ -43,7 +43,7 @@ nohup time /usr/local/bin/singularity run -w -B /cenc -B /gandg -B /bkraft1 \
                  $ACTIVE_BIDS_PATH \
                  $ACTIVE_APP_OUTPUT_PATH \
                  --work-dir $ACTIVE_APP_WORKING_PATH \
-                 participant ${@} >> $log_file 2>&1 &
+                 participant ${parameters} >> $log_file 2>&1 &
 
 echo "Waiting 30 seconds before displaying the log file ..."
 sleep 30
