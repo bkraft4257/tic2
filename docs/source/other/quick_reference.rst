@@ -23,6 +23,7 @@ Convert DICOM images to NIFTI
 After you have downloaded the DICOM images from the PACS you go to the ACTIVE_STUDY incoming directory.
 
     .. code-block:: console
+
         >> cdin
         >> mv <dicom_dicom_dir, hf_s070_hf_s070 > < bids_subject_value, hfs070 >
         >> hdc.sh -s <bids_subject_value, hfs070 > -ss < bids_session_value, 1 >
@@ -50,6 +51,7 @@ d. Reorients the images to standard FSL orientation with fslreorient2std.
 The cleaning process is done for all studies with 
 
     .. code-block:: console
+
         >> cdb
         >> clean_bids.sh <subject_value, hfs070> <session_value, 1 >
 
@@ -60,6 +62,7 @@ Once you have decided which files to keep just rename them to remove ".[2-9]".  
 with the rename command.
 
     .. code-block:: console
+
         >> rename .2. . *
 
 
@@ -98,6 +101,7 @@ Other files that may need to be modified according to the situation is participa
 The bv script will also refresh the acrostic.list and acrostic.csv files every time it is called. 
 
     .. code-block:: console
+
         >> bv
 
 MRI Quality Control
@@ -128,6 +132,7 @@ fmriprep has three primary functions.
 1. Measures but does not apply the temporal components in the gray matter, CSF, and white matter.
 
     .. code-block:: console
+        
         >> fmriprep.sh --force-syn --participant-label < subject_value, hfs070 >
 
 
