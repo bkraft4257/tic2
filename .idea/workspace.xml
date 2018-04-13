@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="6f3e13b3-cd58-4c4d-98f6-1a68f8358bfb" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/studies/mcf/scripts/mcf_protocol.py" afterPath="$PROJECT_DIR$/studies/mcf/scripts/mcf_protocol.py" />
+      <change beforePath="$PROJECT_DIR$/studies/mcf/scripts/clean_bids.sh" afterPath="$PROJECT_DIR$/studies/mcf/scripts/clean_bids.sh" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -54,11 +54,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="mcf_protocol.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="mcf_protocol.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/studies/mcf/scripts/mcf_protocol.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="660">
-              <caret line="210" column="119" lean-forward="false" selection-start-line="210" selection-start-column="119" selection-end-line="210" selection-end-column="119" />
+            <state relative-caret-position="286">
+              <caret line="188" column="44" lean-forward="true" selection-start-line="188" selection-start-column="44" selection-end-line="188" selection-end-column="44" />
               <folding />
             </state>
           </provider>
@@ -94,11 +94,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="clean_bids.sh" pinned="false" current-in-tab="false">
+      <file leaf-file-name="clean_bids.sh" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/studies/mcf/scripts/clean_bids.sh">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="218">
-              <caret line="22" column="51" lean-forward="false" selection-start-line="22" selection-start-column="51" selection-end-line="22" selection-end-column="51" />
+              <caret line="22" column="30" lean-forward="false" selection-start-line="22" selection-start-column="30" selection-end-line="22" selection-end-column="30" />
               <folding />
             </state>
           </provider>
@@ -147,7 +147,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>_sbref</find>
       <find>sbref</find>
       <find>rest_fmri_</find>
       <find>fmap</find>
@@ -177,6 +176,7 @@
       <find>pre</find>
       <find>_run-{item:02d}</find>
       <find>clean</find>
+      <find>{item:02d}</find>
     </findStrings>
     <replaceStrings>
       <replace>01d</replace>
@@ -190,6 +190,7 @@
       <replace>$HFPEF_SCRIPTS_PATH/</replace>
       <replace>fmriprep</replace>
       <replace>post</replace>
+      <replace>{item:01d}</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -253,8 +254,8 @@
         <option value="$PROJECT_DIR$/bin/fmriprep.sh" />
         <option value="$PROJECT_DIR$/bin/mriqc.sh" />
         <option value="$PROJECT_DIR$/studies/mcf/environment.sh" />
-        <option value="$PROJECT_DIR$/studies/mcf/scripts/clean_bids.sh" />
         <option value="$PROJECT_DIR$/studies/mcf/scripts/mcf_protocol.py" />
+        <option value="$PROJECT_DIR$/studies/mcf/scripts/clean_bids.sh" />
       </list>
     </option>
   </component>
@@ -557,13 +558,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1517948604886</updated>
-    </task>
-    <task id="LOCAL-00404" summary="Dog fooding and updating documentation.">
-      <created>1523629848414</created>
-      <option name="number" value="00404" />
-      <option name="presentableId" value="LOCAL-00404" />
-      <option name="project" value="LOCAL" />
-      <updated>1523629848414</updated>
     </task>
     <task id="LOCAL-00405" summary="Dog fooding and updating documentation.">
       <created>1523629862664</created>
@@ -901,7 +895,14 @@
       <option name="project" value="LOCAL" />
       <updated>1523658329043</updated>
     </task>
-    <option name="localTasksCounter" value="453" />
+    <task id="LOCAL-00453" summary="Draft of mcf_protcol">
+      <created>1523658362308</created>
+      <option name="number" value="00453" />
+      <option name="presentableId" value="LOCAL-00453" />
+      <option name="project" value="LOCAL" />
+      <updated>1523658362308</updated>
+    </task>
+    <option name="localTasksCounter" value="454" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -1488,18 +1489,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/studies/mcf/scripts/clean_bids.sh">
+    <entry file="file://$PROJECT_DIR$/studies/mcf/scripts/mcf_protocol.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="218">
-          <caret line="22" column="51" lean-forward="false" selection-start-line="22" selection-start-column="51" selection-end-line="22" selection-end-column="51" />
+        <state relative-caret-position="286">
+          <caret line="188" column="44" lean-forward="true" selection-start-line="188" selection-start-column="44" selection-end-line="188" selection-end-column="44" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/studies/mcf/scripts/mcf_protocol.py">
+    <entry file="file://$PROJECT_DIR$/studies/mcf/scripts/clean_bids.sh">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="660">
-          <caret line="210" column="119" lean-forward="false" selection-start-line="210" selection-start-column="119" selection-end-line="210" selection-end-column="119" />
+        <state relative-caret-position="218">
+          <caret line="22" column="30" lean-forward="false" selection-start-line="22" selection-start-column="30" selection-end-line="22" selection-end-column="30" />
           <folding />
         </state>
       </provider>
