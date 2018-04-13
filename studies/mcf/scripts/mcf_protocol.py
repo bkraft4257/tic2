@@ -186,27 +186,29 @@ def infotodict(seqinfo):
         15       16-mbep2d_bold 3mm L>>R   epfid2d1_64        mbep2d_bold 3mm L>>R    72    64    64   263  1.090  30.00       False                False
     """
 
-    pre_rest_ap = create_key('func/sub-{subject}_{session}_task-preRest_acq-epi_run-{item:02d}_bold')
-    pre_heat1_ap = create_key('func/sub-{subject}_{session}_task-preHeat1_acq-epi_run-{item:02d}_bold')
-    pre_heat2_ap = create_key('func/sub-{subject}_{session}_task-preHeat2_acq-epi_run-{item:02d}_bold')
+    bids_prefix = 'sub-{subject}/{session}/'
 
-    pre_topup_ap = create_key('fmap/sub-{subject}_{session}_acq-preEpi_dir-ap_run-{item:02d}_bold')
-    pre_topup_pa = create_key('fmap/sub-{subject}_{session}_acq-preEpi_dir-pa_run-{item:02d}_bold')
+    pre_rest_ap = create_key(bids_prefix + 'func/sub-{subject}_{session}_task-preRest_acq-epi_run-{item:02d}_bold')
+    pre_heat1_ap = create_key(bids_prefix + 'func/sub-{subject}_{session}_task-preHeat1_acq-epi_run-{item:02d}_bold')
+    pre_heat2_ap = create_key(bids_prefix + 'func/sub-{subject}_{session}_task-preHeat2_acq-epi_run-{item:02d}_bold')
+
+    pre_topup_ap = create_key(bids_prefix + 'fmap/sub-{subject}_{session}_acq-preEpi_dir-ap_run-{item:02d}_bold')
+    pre_topup_pa = create_key(bids_prefix + 'fmap/sub-{subject}_{session}_acq-preEpi_dir-pa_run-{item:02d}_bold')
     
-    pre_fmap_magnitude1 = create_key('fmap/sub-{subject}_{session}_acq-pre_run-{item:02d}_magnitude1')
-    pre_fmap_phasediff = create_key('fmap/sub-{subject}_{session}_acq-pre_run-{item:02d}_phasediff')
+    pre_fmap_magnitude1 = create_key(bids_prefix + 'fmap/sub-{subject}_{session}_acq-pre_run-{item:02d}_magnitude1')
+    pre_fmap_phasediff = create_key(bids_prefix + 'fmap/sub-{subject}_{session}_acq-pre_run-{item:02d}_phasediff')
 
-    t1w = create_key('anat/sub-{subject}_{session}_run-{item:02d}_T1w')
+    t1w = create_key(bids_prefix + 'anat/sub-{subject}_{session}_run-{item:02d}_T1w')
 
-    post_heat1_ap = create_key('func/sub-{subject}_{session}_task-postHeat3_acq-epi_run-{item:02d}_bold')
-    post_heat2_ap = create_key('func/sub-{subject}_{session}_task-postHeat4_acq-epi_run-{item:02d}_bold')
-    post_rest_ap = create_key('func/sub-{subject}_{session}_task-postRest_acq-epi_run-{item:02d}_bold')
+    post_heat1_ap = create_key(bids_prefix + 'func/sub-{subject}_{session}_task-postHeat3_acq-epi_run-{item:02d}_bold')
+    post_heat2_ap = create_key(bids_prefix + 'func/sub-{subject}_{session}_task-postHeat4_acq-epi_run-{item:02d}_bold')
+    post_rest_ap = create_key(bids_prefix + 'func/sub-{subject}_{session}_task-postRest_acq-epi_run-{item:02d}_bold')
 
-    post_topup_ap = create_key('fmap/sub-{subject}_acq-postEpi_dir-ap_run-{item:02d}_bold')
-    post_topup_pa = create_key('fmap/sub-{subject}_acq-postEpi_dir-pa_run-{item:02d}_bold')
+    post_topup_ap = create_key(bids_prefix + 'fmap/sub-{subject}_acq-postEpi_dir-ap_run-{item:02d}_bold')
+    post_topup_pa = create_key(bids_prefix + 'fmap/sub-{subject}_acq-postEpi_dir-pa_run-{item:02d}_bold')
 
-    post_rest_ap_mbepi = create_key('func/sub-{subject}_{session}_task-postRest_acq-mbepi_run-{item:02d}_bold')
-    post_rest_ap_mbepi_sbref = create_key('func/sub-{subject}_{session}_task-postRest_acq-mbepi_run-{item:02d}_sbref')
+    post_rest_ap_mbepi = create_key(bids_prefix + 'func/sub-{subject}_{session}_task-postRest_acq-mbepi_run-{item:02d}_bold')
+    post_rest_ap_mbepi_sbref = create_key(bids_prefix + 'func/sub-{subject}_{session}_task-postRest_acq-mbepi_run-{item:02d}_sbref')
 
     # Create an empty dictionary called info for each key
 
