@@ -38,8 +38,8 @@
         <entry file="file://$PROJECT_DIR$/docs/source/other/quick_reference.rst">
           <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="17">
-                <caret line="1" column="2" lean-forward="false" selection-start-line="1" selection-start-column="2" selection-end-line="1" selection-end-column="2" />
+              <first_editor relative-caret-position="261">
+                <caret line="106" column="19" lean-forward="false" selection-start-line="106" selection-start-column="19" selection-end-line="106" selection-end-column="19" />
                 <folding />
               </first_editor>
               <second_editor>
@@ -588,13 +588,6 @@
       <option name="presentableId" value="Default" />
       <updated>1517948604886</updated>
     </task>
-    <task id="LOCAL-00362" summary="Added operations for cleaning BIDS key/value pairs">
-      <created>1523554049097</created>
-      <option name="number" value="00362" />
-      <option name="presentableId" value="LOCAL-00362" />
-      <option name="project" value="LOCAL" />
-      <updated>1523554049097</updated>
-    </task>
     <task id="LOCAL-00363" summary="Added operations for cleaning BIDS key/value pairs">
       <created>1523554082812</created>
       <option name="number" value="00363" />
@@ -931,7 +924,14 @@
       <option name="project" value="LOCAL" />
       <updated>1523630390929</updated>
     </task>
-    <option name="localTasksCounter" value="411" />
+    <task id="LOCAL-00411" summary="Dog fooding and updating documentation.">
+      <created>1523630474494</created>
+      <option name="number" value="00411" />
+      <option name="presentableId" value="LOCAL-00411" />
+      <option name="project" value="LOCAL" />
+      <updated>1523630474494</updated>
+    </task>
+    <option name="localTasksCounter" value="412" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -1514,8 +1514,8 @@
     <entry file="file://$PROJECT_DIR$/docs/source/other/quick_reference.rst">
       <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="17">
-            <caret line="1" column="2" lean-forward="false" selection-start-line="1" selection-start-column="2" selection-end-line="1" selection-end-column="2" />
+          <first_editor relative-caret-position="261">
+            <caret line="106" column="19" lean-forward="false" selection-start-line="106" selection-start-column="19" selection-end-line="106" selection-end-column="19" />
             <folding />
           </first_editor>
           <second_editor>
