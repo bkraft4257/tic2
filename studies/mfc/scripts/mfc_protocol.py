@@ -186,9 +186,13 @@ def infotodict(seqinfo):
 
     bids_prefix = 'sub-{subject}/{session}/'
 
-    pre_rest_ap = create_key(bids_prefix + 'func/sub-{subject}_{session}_task-preRest_acq-epi_bold.{item:01d}')
-    pre_heat1_ap = create_key(bids_prefix + 'func/sub-{subject}_{session}_task-preHeat1_acq-epi_bold.{item:01d}')
-    pre_heat2_ap = create_key(bids_prefix + 'func/sub-{subject}_{session}_task-preHeat2_acq-epi_bold.{item:01d}')
+    pre_rest_ap_fmap = create_key(bids_prefix + 'func/sub-{subject}_{session}_task-preRest_acq-epi_rec-fmap_bold.{item:01d}')
+    pre_heat1_ap_fmap = create_key(bids_prefix + 'func/sub-{subject}_{session}_task-preHeat1_acq-epi_rec-fmap_bold.{item:01d}')
+    pre_heat2_ap_fmap = create_key(bids_prefix + 'func/sub-{subject}_{session}_task-preHeat2_acq-epi_rec-fmap_bold.{item:01d}')
+
+    pre_rest_ap_topup = create_key(bids_prefix + 'func/sub-{subject}_{session}_task-preRest_acq-epi_rec-topup_bold.{item:01d}')
+    pre_heat1_ap_topup = create_key(bids_prefix + 'func/sub-{subject}_{session}_task-preHeat1_acq-epi_rec-topup_bold.{item:01d}')
+    pre_heat2_ap_topup = create_key(bids_prefix + 'func/sub-{subject}_{session}_task-preHeat2_acq-epi_rec-topup_bold.{item:01d}')
 
     pre_topup_ap = create_key(bids_prefix + 'fmap/sub-{subject}_{session}_acq-preEpi_dir-ap_bold.{item:01d}')
     pre_topup_pa = create_key(bids_prefix + 'fmap/sub-{subject}_{session}_acq-preEpi_dir-pa_bold.{item:01d}')
@@ -198,19 +202,26 @@ def infotodict(seqinfo):
 
     t1w = create_key(bids_prefix + 'anat/sub-{subject}_{session}_T1w')
 
-    post_heat1_ap = create_key(bids_prefix + 'func/sub-{subject}_{session}_task-postHeat3_acq-epi_bold.{item:01d}')
-    post_heat2_ap = create_key(bids_prefix + 'func/sub-{subject}_{session}_task-postHeat4_acq-epi_bold.{item:01d}')
-    post_rest_ap = create_key(bids_prefix + 'func/sub-{subject}_{session}_task-postRest_acq-epi_bold.{item:01d}')
+    post_heat1_ap_fmap = create_key(bids_prefix + 'func/sub-{subject}_{session}_task-postHeat3_acq-epi_rec-fmap_bold.{item:01d}')
+    post_heat2_ap_fmap = create_key(bids_prefix + 'func/sub-{subject}_{session}_task-postHeat4_acq-epi_rec-fmap_bold.{item:01d}')
+    post_rest_ap_fmap = create_key(bids_prefix + 'func/sub-{subject}_{session}_task-postRest_acq-epi_rec-fmap_bold.{item:01d}')
+
+    post_heat1_ap_topup = create_key(bids_prefix + 'func/sub-{subject}_{session}_task-postHeat3_acq-epi_rec-topup_bold.{item:01d}')
+    post_heat2_ap_topup = create_key(bids_prefix + 'func/sub-{subject}_{session}_task-postHeat4_acq-epi_rec-topup_bold.{item:01d}')
+    post_rest_ap_topup = create_key(bids_prefix + 'func/sub-{subject}_{session}_task-postRest_acq-epi_rec-topup_bold.{item:01d}')
 
     post_topup_ap = create_key(bids_prefix + 'fmap/sub-{subject}_acq-postEpi_dir-ap_bold.{item:01d}')
     post_topup_pa = create_key(bids_prefix + 'fmap/sub-{subject}_acq-postEpi_dir-pa_bold.{item:01d}')
 
-
     # Create an empty dictionary called info for each key
 
-    info = {pre_rest_ap: [],
-            pre_heat1_ap: [],
-            pre_heat2_ap: [],
+    info = {pre_rest_ap_fmap: [],
+            pre_heat1_ap_fmap: [],
+            pre_heat2_ap_fmap: [],
+
+            pre_rest_ap_topup: [],
+            pre_heat1_ap_topup: [],
+            pre_heat2_ap_topup: [],
 
             pre_topup_ap: [],
             pre_topup_pa: [],
@@ -220,9 +231,13 @@ def infotodict(seqinfo):
 
             t1w: [],
 
-            post_heat1_ap: [],
-            post_heat2_ap: [],
-            post_rest_ap: [],
+            post_heat1_ap_fmap: [],
+            post_heat2_ap_fmap: [],
+            post_rest_ap_fmap: [],
+
+            post_heat1_ap_topup: [],
+            post_heat2_ap_topup: [],
+            post_rest_ap_topup: [],
 
             post_topup_ap: [],
             post_topup_pa: [],
@@ -234,13 +249,16 @@ def infotodict(seqinfo):
     for idx, s in enumerate(seqinfo):
 
         if 'pre_rest' in s.series_id:
-                info[pre_rest_ap] = [s.series_id]
+                info[pre_rest_ap_fmap] = [s.series_id]
+                info[pre_rest_ap_topup] = [s.series_id]
 
         if 'pre+heat1' in s.series_id:
-                info[pre_heat1_ap] = [s.series_id]
+                info[pre_heat1_ap_fmap] = [s.series_id]
+                info[pre_heat1_ap_topup] = [s.series_id]
 
         if 'pre+heat2' in s.series_id:
-                info[pre_heat2_ap] = [s.series_id]
+                info[pre_heat2_ap_fmap] = [s.series_id]
+                info[pre_heat2_ap_topup] = [s.series_id]
 
         if 'pre_topup_A>>P' in s.series_id:
             info[pre_topup_ap] = [s.series_id]
@@ -260,13 +278,16 @@ def infotodict(seqinfo):
             info[t1w] = [s.series_id]
 
         if 'post_rest' in s.series_id:
-                info[post_rest_ap] = [s.series_id]
+                info[post_rest_ap_fmap] = [s.series_id]
+                info[post_rest_ap_topup] = [s.series_id]
 
         if 'post+heat3' in s.series_id:
-                info[post_heat1_ap] = [s.series_id]
+                info[post_heat1_ap_fmap] = [s.series_id]
+                info[post_heat1_ap_topup] = [s.series_id]
 
         if 'post+heat4' in s.series_id:
-                info[post_heat2_ap] = [s.series_id]
+                info[post_heat2_ap_fmap] = [s.series_id]
+                info[post_heat2_ap_topup] = [s.series_id]
 
         if 'post_topup_A>>P' in s.series_id:
             info[post_topup_ap] = [s.series_id]
