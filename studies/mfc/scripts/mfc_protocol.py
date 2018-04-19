@@ -195,8 +195,8 @@ def infotodict(seqinfo):
     pre_topup_ap = create_key(bids_prefix + 'fmap/sub-{subject}_{session}_acq-preEpi_dir-ap_bold.{item:01d}')
     pre_topup_pa = create_key(bids_prefix + 'fmap/sub-{subject}_{session}_acq-preEpi_dir-pa_bold.{item:01d}')
     
-    pre_fmap_magnitude1 = create_key(bids_prefix + 'fmap/sub-{subject}_{session}_acq-pre_magnitude1.{item:01d}')
-    pre_fmap_phasediff = create_key(bids_prefix + 'fmap/sub-{subject}_{session}_acq-pre_phasediff.{item:01d}')
+    pre_fmap_magnitude1 = create_key(bids_prefix + 'fmap/sub-{subject}_{session}_acq-pre_magnitude1') #.{item:01d}')
+    pre_fmap_phasediff = create_key(bids_prefix + 'fmap/sub-{subject}_{session}_acq-pre_phasediff')#.{item:01d}')
 
     t1w = create_key(bids_prefix + 'anat/sub-{subject}_{session}_T1w')
 
