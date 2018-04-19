@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="6f3e13b3-cd58-4c4d-98f6-1a68f8358bfb" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/studies/mfc/environment.sh" afterPath="$PROJECT_DIR$/studies/mfc/environment.sh" />
+      <change beforePath="$PROJECT_DIR$/studies/mfc/scripts/mfc_protocol.py" afterPath="$PROJECT_DIR$/studies/mfc/scripts/mfc_protocol.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -34,17 +34,17 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="mfc_protocol.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="mfc_protocol.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/studies/mfc/scripts/mfc_protocol.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="529">
-              <caret line="188" column="44" lean-forward="false" selection-start-line="188" selection-start-column="44" selection-end-line="188" selection-end-column="44" />
+            <state relative-caret-position="1172">
+              <caret line="256" column="58" lean-forward="false" selection-start-line="256" selection-start-column="58" selection-end-line="256" selection-end-column="58" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="environment.sh" pinned="false" current-in-tab="true">
+      <file leaf-file-name="environment.sh" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/studies/mfc/environment.sh">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="320">
@@ -147,7 +147,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>fmap</find>
       <find>app</find>
       <find>acrostic_session</find>
       <find>subject_only</find>
@@ -177,6 +176,7 @@
       <find>{item:02d}</find>
       <find>MCF_</find>
       <find>mcf</find>
+      <find>phasediff</find>
     </findStrings>
     <replaceStrings>
       <replace>01d</replace>
@@ -206,7 +206,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/docs/source/other/scripts.md" />
         <option value="$PROJECT_DIR$/studies/synergy/scripts/syn_bids_clean.sh" />
         <option value="$PROJECT_DIR$/studies/synergy/scripts/prepare_netprep_synergy.sh" />
         <option value="$PROJECT_DIR$/studies/mcf/scripts/mcf_bids.cfg" />
@@ -257,6 +256,7 @@
         <option value="$PROJECT_DIR$/studies/mfc/aliases.sh" />
         <option value="$PROJECT_DIR$/studies/mfc/init.sh" />
         <option value="$PROJECT_DIR$/studies/mfc/environment.sh" />
+        <option value="$PROJECT_DIR$/studies/mfc/scripts/mfc_protocol.py" />
       </list>
     </option>
   </component>
@@ -267,9 +267,9 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-276" />
-    <option name="y" value="-1174" />
-    <option name="width" value="1440" />
+    <option name="x" value="-137" />
+    <option name="y" value="-1372" />
+    <option name="width" value="1941" />
     <option name="height" value="877" />
   </component>
   <component name="ProjectLevelVcsManager">
@@ -559,13 +559,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1517948604886</updated>
-    </task>
-    <task id="LOCAL-00407" summary="Dog fooding and updating documentation.">
-      <created>1523630054411</created>
-      <option name="number" value="00407" />
-      <option name="presentableId" value="LOCAL-00407" />
-      <option name="project" value="LOCAL" />
-      <updated>1523630054411</updated>
     </task>
     <task id="LOCAL-00408" summary="Dog fooding and updating documentation.">
       <created>1523630169997</created>
@@ -903,7 +896,14 @@
       <option name="project" value="LOCAL" />
       <updated>1524142169607</updated>
     </task>
-    <option name="localTasksCounter" value="456" />
+    <task id="LOCAL-00456" summary="Switched MCF to MFC.  Oops.">
+      <created>1524142447789</created>
+      <option name="number" value="00456" />
+      <option name="presentableId" value="LOCAL-00456" />
+      <option name="project" value="LOCAL" />
+      <updated>1524142447790</updated>
+    </task>
+    <option name="localTasksCounter" value="457" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -939,7 +939,7 @@
     </history-entry>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-276" y="-1174" width="1440" height="877" extended-state="0" />
+    <frame x="-137" y="-1372" width="1941" height="877" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Key Promoter X" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -950,7 +950,7 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.50287354" sideWeight="0.48106593" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32968882" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19631094" sideWeight="0.49006623" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20243205" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1490258" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3297568" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="SciView" active="false" anchor="right" auto_hide="true" internal_type="DOCKED" type="FLOATING" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -997,7 +997,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Added plot_overlay to tic_core." />
     <MESSAGE value="Refactored plot_overlay.py so it is in the bin directory as a &#10;command line function." />
     <MESSAGE value="Updated imove_protocol. &#10;&#10;1) sbref scans are written to their own subdirectory.  .bidsignore removes them from bids-validator.&#10;2) remove magnitude and phasediff from fmap.  These are no longer being acquired." />
     <MESSAGE value="Updated mriqc" />
@@ -1022,7 +1021,8 @@
     <MESSAGE value="Dog fooding and updating documentation." />
     <MESSAGE value="Updated hdc_look.py to ignore session. This is important when trying to read a hdc_scan" />
     <MESSAGE value="Draft of mcf_protcol" />
-    <option name="LAST_COMMIT_MESSAGE" value="Draft of mcf_protcol" />
+    <MESSAGE value="Switched MCF to MFC.  Oops." />
+    <option name="LAST_COMMIT_MESSAGE" value="Switched MCF to MFC.  Oops." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1436,14 +1436,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/studies/mfc/scripts/mfc_protocol.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="529">
-          <caret line="188" column="44" lean-forward="false" selection-start-line="188" selection-start-column="44" selection-end-line="188" selection-end-column="44" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/studies/mfc/aliases.sh">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="51">
@@ -1464,6 +1456,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="320">
           <caret line="22" column="50" lean-forward="false" selection-start-line="22" selection-start-column="50" selection-end-line="22" selection-end-column="50" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/studies/mfc/scripts/mfc_protocol.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1172">
+          <caret line="256" column="58" lean-forward="false" selection-start-line="256" selection-start-column="58" selection-end-line="256" selection-end-column="58" />
           <folding />
         </state>
       </provider>

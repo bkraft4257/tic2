@@ -207,8 +207,6 @@ def infotodict(seqinfo):
     post_topup_ap = create_key(bids_prefix + 'fmap/sub-{subject}_acq-postEpi_dir-ap_bold.{item:01d}')
     post_topup_pa = create_key(bids_prefix + 'fmap/sub-{subject}_acq-postEpi_dir-pa_bold.{item:01d}')
 
-    post_rest_ap_mbepi_sbref = create_key(bids_prefix + 'func/sub-{subject}_{session}_task-postRest_acq-mbepi_sbref.{item:01d}')
-    post_rest_ap_mbepi = create_key(bids_prefix + 'func/sub-{subject}_{session}_task-postRest_acq-mbepi_bold.{item:01d}')
 
     # Create an empty dictionary called info for each key
 
@@ -231,15 +229,13 @@ def infotodict(seqinfo):
             post_topup_ap: [],
             post_topup_pa: [],
 
-            post_rest_ap_mbepi: [],
-            post_rest_ap_mbepi_sbref: []
             }
 
     # Loop over each sequence. Use if statements to determine which sequences should be linked to which key
 
     for idx, s in enumerate(seqinfo):
 
-        if 'pre_epi' in s.series_id:
+        if 'pre_rest' in s.series_id:
                 info[pre_rest_ap] = [s.series_id]
 
         if 'pre+heat1' in s.series_id:
@@ -265,7 +261,7 @@ def infotodict(seqinfo):
         if 'MPRAGE_GRAPPA2' in s.series_id:
             info[t1w] = [s.series_id]
 
-        if 'post_epi' in s.series_id:
+        if 'post_rest' in s.series_id:
                 info[post_rest_ap] = [s.series_id]
 
         if 'post+heat3' in s.series_id:
@@ -279,12 +275,5 @@ def infotodict(seqinfo):
 
         if 'post_topup_P>>A' in s.series_id:
             info[post_topup_pa] = [s.series_id]
-
-        if (('mbep2d_bold 3mm L>>R' in s.series_id) and
-                (s.dim4 == 1)):
-            info[post_rest_ap_mbepi_sbref] = [s.series_id]
-
-        if 'mbep2d_bold 3mm L>>R' in s.series_id:
-            info[post_rest_ap_mbepi] = [s.series_id]
 
     return info
