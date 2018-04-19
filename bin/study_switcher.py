@@ -13,7 +13,7 @@ import os
 import argparse
 import sys
 
-STUDY_CHOICES = ['hfpef', 'synergy', 'infinite', 'cenc', 'imove', 'mcf']
+STUDY_CHOICES = ['hfpef', 'synergy', 'infinite', 'cenc', 'imove', 'mfc']
 
 STUDY_SWITCHER_OUTPUT_FILENAME = os.path.abspath(os.path.join(os.getenv('TIC_INIT_PATH'),
                                                               'tic_study_switcher.sh'))
