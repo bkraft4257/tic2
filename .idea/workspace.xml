@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="6f3e13b3-cd58-4c4d-98f6-1a68f8358bfb" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/studies/mfc/scripts/clean_bids.sh" afterPath="$PROJECT_DIR$/studies/mfc/scripts/clean_bids.sh" />
       <change beforePath="$PROJECT_DIR$/studies/mfc/scripts/mfc_protocol.py" afterPath="$PROJECT_DIR$/studies/mfc/scripts/mfc_protocol.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -34,11 +35,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="mfc_protocol.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="mfc_protocol.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/studies/mfc/scripts/mfc_protocol.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="312">
-              <caret line="198" column="100" lean-forward="false" selection-start-line="198" selection-start-column="100" selection-end-line="198" selection-end-column="100" />
+            <state relative-caret-position="213">
+              <caret line="180" column="25" lean-forward="false" selection-start-line="180" selection-start-column="25" selection-end-line="180" selection-end-column="25" />
               <folding />
             </state>
           </provider>
@@ -54,11 +55,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="clean_bids.sh" pinned="false" current-in-tab="false">
+      <file leaf-file-name="clean_bids.sh" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/studies/mfc/scripts/clean_bids.sh">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="561">
-              <caret line="33" column="0" lean-forward="false" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
+            <state relative-caret-position="341">
+              <caret line="22" column="29" lean-forward="true" selection-start-line="22" selection-start-column="29" selection-end-line="22" selection-end-column="29" />
               <folding />
             </state>
           </provider>
@@ -206,7 +207,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/studies/synergy/scripts/syn_bids_clean.sh" />
         <option value="$PROJECT_DIR$/studies/synergy/scripts/prepare_netprep_synergy.sh" />
         <option value="$PROJECT_DIR$/studies/mcf/scripts/mcf_bids.cfg" />
         <option value="$PROJECT_DIR$/studies/synergy/aliases.sh" />
@@ -257,6 +257,7 @@
         <option value="$PROJECT_DIR$/studies/mfc/init.sh" />
         <option value="$PROJECT_DIR$/studies/mfc/environment.sh" />
         <option value="$PROJECT_DIR$/studies/mfc/scripts/mfc_protocol.py" />
+        <option value="$PROJECT_DIR$/studies/mfc/scripts/clean_bids.sh" />
       </list>
     </option>
   </component>
@@ -559,13 +560,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1517948604886</updated>
-    </task>
-    <task id="LOCAL-00409" summary="Dog fooding and updating documentation.">
-      <created>1523630374439</created>
-      <option name="number" value="00409" />
-      <option name="presentableId" value="LOCAL-00409" />
-      <option name="project" value="LOCAL" />
-      <updated>1523630374439</updated>
     </task>
     <task id="LOCAL-00410" summary="Dog fooding and updating documentation.">
       <created>1523630390929</created>
@@ -903,7 +897,14 @@
       <option name="project" value="LOCAL" />
       <updated>1524143678912</updated>
     </task>
-    <option name="localTasksCounter" value="458" />
+    <task id="LOCAL-00458" summary="Protocol testing. Encountered &quot;bug&quot; while converting phasediff image">
+      <created>1524143875783</created>
+      <option name="number" value="00458" />
+      <option name="presentableId" value="LOCAL-00458" />
+      <option name="project" value="LOCAL" />
+      <updated>1524143875783</updated>
+    </task>
+    <option name="localTasksCounter" value="459" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -997,7 +998,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Refactored plot_overlay.py so it is in the bin directory as a &#10;command line function." />
     <MESSAGE value="Updated imove_protocol. &#10;&#10;1) sbref scans are written to their own subdirectory.  .bidsignore removes them from bids-validator.&#10;2) remove magnitude and phasediff from fmap.  These are no longer being acquired." />
     <MESSAGE value="Updated mriqc" />
     <MESSAGE value="Updated mriqc.  There was a &amp;&gt; instead of &amp;&gt;&gt; bug in the code." />
@@ -1022,7 +1022,8 @@
     <MESSAGE value="Updated hdc_look.py to ignore session. This is important when trying to read a hdc_scan" />
     <MESSAGE value="Draft of mcf_protcol" />
     <MESSAGE value="Switched MCF to MFC.  Oops." />
-    <option name="LAST_COMMIT_MESSAGE" value="Switched MCF to MFC.  Oops." />
+    <MESSAGE value="Protocol testing. Encountered &quot;bug&quot; while converting phasediff image" />
+    <option name="LAST_COMMIT_MESSAGE" value="Protocol testing. Encountered &quot;bug&quot; while converting phasediff image" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1404,14 +1405,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/studies/mfc/scripts/clean_bids.sh">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="561">
-          <caret line="33" column="0" lean-forward="false" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/bin/identity.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -1424,14 +1417,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="206">
           <caret line="15" column="70" lean-forward="false" selection-start-line="15" selection-start-column="70" selection-end-line="15" selection-end-column="70" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/studies/mfc/scripts/mfc_bids.cfg">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -1460,10 +1445,26 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/studies/mfc/scripts/mfc_bids.cfg">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/studies/mfc/scripts/mfc_protocol.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="312">
-          <caret line="198" column="100" lean-forward="false" selection-start-line="198" selection-start-column="100" selection-end-line="198" selection-end-column="100" />
+        <state relative-caret-position="213">
+          <caret line="180" column="25" lean-forward="false" selection-start-line="180" selection-start-column="25" selection-end-line="180" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/studies/mfc/scripts/clean_bids.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="341">
+          <caret line="22" column="29" lean-forward="true" selection-start-line="22" selection-start-column="29" selection-end-line="22" selection-end-column="29" />
           <folding />
         </state>
       </provider>
