@@ -169,21 +169,19 @@ def infotodict(seqinfo):
     
                                    series_id sequence_name          series_description  dim1  dim2  dim3  dim4     TR     TE  is_derived  is_motion_corrected
         0                    1-localizer        *fl2d1                   localizer   192   192     3     1  0.020   5.00       False                False
-        1           2-pre_epi_A>>P 4X4X4  *epfid2d1_64          pre_epi_A>>P 4X4X4    64    64    35   177  2.000  25.00       False                False
-        2     3-pre+heat1_epi_A>>P 4X4X4  *epfid2d1_64    pre+heat1_epi_A>>P 4X4X4    64    64    35   177  2.000  25.00       False                False
-        3     4-pre+heat2_epi_A>>P 4X4X4  *epfid2d1_64    pre+heat2_epi_A>>P 4X4X4    64    64    35   177  2.000  25.00       False                False
+        1           2-pre_rest_A>>P 4X4X4  *epfid2d1_64          pre_epi_A>>P 4X4X4    64    64    35   177  2.000  25.00       False                False
+        2     3-pre+heat1_A>>P 4X4X4  *epfid2d1_64    pre+heat1_epi_A>>P 4X4X4    64    64    35   177  2.000  25.00       False                False
+        3     4-pre+heat2_A>>P 4X4X4  *epfid2d1_64    pre+heat2_epi_A>>P 4X4X4    64    64    35   177  2.000  25.00       False                False
         4               5-pre_topup_A>>P   *epse2d1_64              pre_topup_A>>P    64    64   140     1  2.400  38.00       False                False
         5               6-pre_topup_P>>A   *epse2d1_64              pre_topup_P>>A    64    64   140     1  2.400  38.00       False                False
         6     7-Field_mapping 4X4X4 A>>P       *fm2d2r    Field_mapping 4X4X4 A>>P    64    64    35     1  0.488   4.92       False                False
         7     8-Field_mapping 4X4X4 A>>P       *fm2d2r    Field_mapping 4X4X4 A>>P    64    64    35     1  0.488   7.38       False                False
         8               9-MPRAGE_GRAPPA2  *tfl3d1_16ns              MPRAGE_GRAPPA2   256   240   192     1  2.300   2.98       False                False
-        9   10-post+heat3_epi_A>>P 4X4X4  *epfid2d1_64   post+heat3_epi_A>>P 4X4X4    64    64    35   144  2.000  25.00       False                False
-        10  11-post+heat4_epi_A>>P 4X4X4  *epfid2d1_64   post+heat4_epi_A>>P 4X4X4    64    64    35   144  2.000  25.00       False                False
-        11        12-post_epi_A>>P 4X4X4  *epfid2d1_64         post_epi_A>>P 4X4X4    64    64    35   144  2.000  25.00       False                False
+        9   10-post+heat3_A>>P 4X4X4  *epfid2d1_64   post+heat3_epi_A>>P 4X4X4    64    64    35   144  2.000  25.00       False                False
+        10  11-post+heat4_A>>P 4X4X4  *epfid2d1_64   post+heat4_epi_A>>P 4X4X4    64    64    35   144  2.000  25.00       False                False
+        11        12-post_rest_A>>P 4X4X4  *epfid2d1_64         post_epi_A>>P 4X4X4    64    64    35   144  2.000  25.00       False                False
         12            13-post_topup_A>>P   *epse2d1_64             post_topup_A>>P    64    64   140     1  2.400  38.00       False                False
         13            14-post_topup_P>>A   *epse2d1_64             post_topup_P>>A    64    64   140     1  2.400  38.00       False                False
-        14       15-mbep2d_bold 3mm L>>R   epfid2d1_64  mbep2d_bold 3mm L>>R_SBRef    72    64    64     1  1.090  30.00       False                False
-        15       16-mbep2d_bold 3mm L>>R   epfid2d1_64        mbep2d_bold 3mm L>>R    72    64    64   263  1.090  30.00       False                False
     """
 
     bids_prefix = 'sub-{subject}/{session}/'

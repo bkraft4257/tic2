@@ -20,7 +20,7 @@ echo "session_dir   = " $session_dir
 #--- Remove .1., fmap/*.bval, fmap/*.bvec, fmap/*magnitude1*.json --------------------------------------------
 #chmod +w -R ${session_dir}
 
-find ${session_dir} -name "*.01.*" | xargs rename .01. .
+find ${session_dir} -name "*.1.*" | xargs rename .1. .
 find ${session_dir} -name "*.nii.gz" -or -name "*.json"  | xargs chmod +w
 
 cd ${session_dir}/fmap
