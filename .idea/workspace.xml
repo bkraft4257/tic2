@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="6f3e13b3-cd58-4c4d-98f6-1a68f8358bfb" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/studies/mfc/scripts/clean_bids.sh" afterPath="$PROJECT_DIR$/studies/mfc/scripts/clean_bids.sh" />
       <change beforePath="$PROJECT_DIR$/studies/mfc/scripts/mfc_protocol.py" afterPath="$PROJECT_DIR$/studies/mfc/scripts/mfc_protocol.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -35,11 +34,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="mfc_protocol.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="mfc_protocol.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/studies/mfc/scripts/mfc_protocol.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="213">
-              <caret line="180" column="25" lean-forward="false" selection-start-line="180" selection-start-column="25" selection-end-line="180" selection-end-column="25" />
+            <state relative-caret-position="442">
+              <caret line="276" column="43" lean-forward="true" selection-start-line="276" selection-start-column="43" selection-end-line="276" selection-end-column="43" />
               <folding />
             </state>
           </provider>
@@ -55,7 +54,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="clean_bids.sh" pinned="false" current-in-tab="true">
+      <file leaf-file-name="clean_bids.sh" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/studies/mfc/scripts/clean_bids.sh">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="341">
@@ -148,7 +147,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>app</find>
       <find>acrostic_session</find>
       <find>subject_only</find>
       <find>unstack</find>
@@ -178,6 +176,7 @@
       <find>MCF_</find>
       <find>mcf</find>
       <find>phasediff</find>
+      <find>fmap</find>
     </findStrings>
     <replaceStrings>
       <replace>01d</replace>
@@ -193,6 +192,7 @@
       <replace>post</replace>
       <replace>{item:01d}</replace>
       <replace>MFC_</replace>
+      <replace>topup</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -256,8 +256,8 @@
         <option value="$PROJECT_DIR$/studies/mfc/aliases.sh" />
         <option value="$PROJECT_DIR$/studies/mfc/init.sh" />
         <option value="$PROJECT_DIR$/studies/mfc/environment.sh" />
-        <option value="$PROJECT_DIR$/studies/mfc/scripts/mfc_protocol.py" />
         <option value="$PROJECT_DIR$/studies/mfc/scripts/clean_bids.sh" />
+        <option value="$PROJECT_DIR$/studies/mfc/scripts/mfc_protocol.py" />
       </list>
     </option>
   </component>
@@ -560,13 +560,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1517948604886</updated>
-    </task>
-    <task id="LOCAL-00410" summary="Dog fooding and updating documentation.">
-      <created>1523630390929</created>
-      <option name="number" value="00410" />
-      <option name="presentableId" value="LOCAL-00410" />
-      <option name="project" value="LOCAL" />
-      <updated>1523630390929</updated>
     </task>
     <task id="LOCAL-00411" summary="Dog fooding and updating documentation.">
       <created>1523630474494</created>
@@ -904,7 +897,14 @@
       <option name="project" value="LOCAL" />
       <updated>1524143875783</updated>
     </task>
-    <option name="localTasksCounter" value="459" />
+    <task id="LOCAL-00459" summary="Protocol testing. Encountered &quot;bug&quot; while converting phasediff image">
+      <created>1524144059738</created>
+      <option name="number" value="00459" />
+      <option name="presentableId" value="LOCAL-00459" />
+      <option name="project" value="LOCAL" />
+      <updated>1524144059738</updated>
+    </task>
+    <option name="localTasksCounter" value="460" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -1038,8 +1038,13 @@
           <line>10</line>
           <option name="timeStamp" value="5" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/studies/mfc/scripts/mfc_protocol.py</url>
+          <line>192</line>
+          <option name="timeStamp" value="6" />
+        </line-breakpoint>
       </breakpoints>
-      <option name="time" value="6" />
+      <option name="time" value="7" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -1453,18 +1458,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/studies/mfc/scripts/mfc_protocol.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="213">
-          <caret line="180" column="25" lean-forward="false" selection-start-line="180" selection-start-column="25" selection-end-line="180" selection-end-column="25" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/studies/mfc/scripts/clean_bids.sh">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="341">
           <caret line="22" column="29" lean-forward="true" selection-start-line="22" selection-start-column="29" selection-end-line="22" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/studies/mfc/scripts/mfc_protocol.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="442">
+          <caret line="276" column="43" lean-forward="true" selection-start-line="276" selection-start-column="43" selection-end-line="276" selection-end-column="43" />
           <folding />
         </state>
       </provider>
