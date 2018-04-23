@@ -62,20 +62,18 @@ def _find_functional_images(func_path):
 
     for jj in ['space-MNI152NLin2009cAsym_preproc.nii.gz', 'confounds.tsv']:
 
-        func_files = {}
+        func_files = []
 
-        for ii in TASKS:
+        for ii, ii_task in enumerate(TASKS):
 
-            search_string = f'{func_path}/*task-{ii}_acq-epi_rec-topup_bold_{jj}'
+            search_string = f'{func_path}/*task-{ii_task}_acq-epi_rec-topup_bold_{jj}'
             print(search_string)
 
             tmp = glob.glob(search_string)
             print(tmp)
 
-            func_files[ii] = {}
-
             if len(tmp) == 1:
-                func_files[ii].append(tmp)
+                func_files[ii].append(tmp[0])
 
     return func_files
 
