@@ -60,20 +60,32 @@ def _find_functional_images(func_path):
 
     """
 
-    func_files = {}
+    for jj in ['_space-MNI152NLin2009cAsym_preproc.nii.gz', '_bold_confounds.tsv']:
 
-    for ii in TASKS:
-        tmp = glob.glob(f'{func_path}/*task-{ii}_acq-epi_rec-topup_bold_space-MNI152NLin2009cAsym_preproc.nii.gz')
+        func_files = {}
 
-        if len(tmp) == 1:
-            func_files[ii] = tmp[0]
+        for ii in TASKS:
+            tmp = glob.glob(f'{func_path}/*task-{ii}_acq-epi_rec-topup_bold_{jj}')
 
-
+            if len(tmp) == 1:
+                func_files[ii].append(tmp[0])
 
     return func_files
 
 
 def _find_bold_confounds():
+    """
+
+    :return:
+
+     1	sub-mfc902_ses-1_task-postHeat3_acq-epi_rec-topup_bold_confounds.tsv
+     2	sub-mfc902_ses-1_task-postHeat4_acq-epi_rec-topup_bold_confounds.tsv
+     3	sub-mfc902_ses-1_task-postRest_acq-epi_rec-topup_bold_confounds.tsv
+     4	sub-mfc902_ses-1_task-preHeat1_acq-epi_rec-topup_bold_confounds.tsv
+     5	sub-mfc902_ses-1_task-preHeat2_acq-epi_rec-topup_bold_confounds.tsv
+     6	sub-mfc902_ses-1_task-preRest_acq-epi_rec-topup_bold_confounds.tsv
+    """
+
     pass
 
 
