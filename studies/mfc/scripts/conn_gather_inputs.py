@@ -65,7 +65,12 @@ def _find_functional_images(func_path):
         func_files = {}
 
         for ii in TASKS:
-            tmp = glob.glob(f'{func_path}/*task-{ii}_acq-epi_rec-topup_bold_{jj}')
+
+            search_string = f'{func_path}/*task-{ii}_acq-epi_rec-topup_bold_{jj}'
+            print(search_string)
+
+            tmp = glob.glob(search_string)
+            print(tmp)
 
             if len(tmp) == 1:
                 func_files[ii].append(tmp[0])
