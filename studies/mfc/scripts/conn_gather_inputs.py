@@ -60,10 +60,9 @@ def _find_functional_images(func_path):
 
     """
 
-    for jj in ['space-MNI152NLin2009cAsym_preproc.nii.gz', 'confounds.tsv']:
+    func_files = [[0]*6, [0]*2]
 
-        func_files = []
-
+    for jj, jj_bold in enumerate(['space-MNI152NLin2009cAsym_preproc.nii.gz', 'confounds.tsv']):
         for ii, ii_task in enumerate(TASKS):
 
             search_string = f'{func_path}/*task-{ii_task}_acq-epi_rec-topup_bold_{jj}'
@@ -73,7 +72,7 @@ def _find_functional_images(func_path):
             print(tmp)
 
             if len(tmp) == 1:
-                func_files[ii].append(tmp[0])
+                func_files[ii,jj] = tmp[0]
 
     return func_files
 
