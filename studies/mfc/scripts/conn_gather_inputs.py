@@ -9,6 +9,10 @@ import os
 import glob
 import pprint
 import sys
+import pandas
+
+from IPython.display import display
+
 import shutil
 
 SUBJECT = 'mfc902'
@@ -24,6 +28,13 @@ ANAT_PATH = os.path.join(SUBJECT_SESSION_PATH, 'anat')
 FUNC_PATH = os.path.join(SUBJECT_SESSION_PATH, 'func')
 
 TASKS = ['preRest', 'preHeat1', 'preHeat2', 'postHeat3', 'postHeat4', 'postRest']
+
+CONFOUNDS = ['X', 'Y', 'Z', 'RotX', 'RotY', 'RotZ']
+
+
+def _read_confounds(filename):
+    df_confounds = pandas.read_csv(filename, sep='\t')
+    display(df_confounds[CONFOUNDS])
 
 
 def _make_conn_directory(directory=CONN_PATH):
@@ -108,6 +119,8 @@ def main():
     func_files = _find_functional_images(SUBJECT, FUNC_PATH)
 
     pprint.pprint(func_files)
+
+    _read_confounds(func_files[0][2])
 
 
 if __name__ == '__main__':
