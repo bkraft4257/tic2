@@ -91,10 +91,10 @@ def _find_structural_images(subject, anat_path):
     anat_files = [0]*5
     anat_files[0] = f'{subject}'
 
-    anat_files[1] = glob.glob(f'{anat_path}/*_T1w_space-MNI152NLin2009cAsym_preproc.nii.gz')
+    anat_files[1] = glob.glob(f'{anat_path}/*_T1w_space-MNI152NLin2009cAsym_preproc.nii.gz')[0]
 
     for ii, ii_tissue_type in enumerate(['CSF', 'GM', 'WM'],2):
-        anat_files[ii] = glob.glob(f'{anat_path}/*T1w_space-MNI152NLin2009cAsym_class-{ii_tissue_type}_probtissue.nii.gz')
+        anat_files[ii] = glob.glob(f'{anat_path}/*T1w_space-MNI152NLin2009cAsym_class-{ii_tissue_type}_probtissue.nii.gz')[0]
 
     return anat_files
 
