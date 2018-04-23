@@ -72,8 +72,10 @@ def _find_functional_images(func_path):
             tmp = glob.glob(search_string)
             print(tmp)
 
+            func_files[ii] = {}
+
             if len(tmp) == 1:
-                func_files[ii] = tmp[0]
+                func_files[ii].append(tmp[0])
 
     return func_files
 
