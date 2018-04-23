@@ -60,10 +60,9 @@ def _find_functional_images(func_path):
 
     """
 
-    func_files = [[ 0 for jj in range(2)] for ii in range(6)]
-    print(func_files)
+    func_files = [[ 0 for jj in range(3)] for ii in range(6)]
 
-    for jj, jj_bold in enumerate(['space-MNI152NLin2009cAsym_preproc.nii.gz', 'confounds.tsv']):
+    for jj, jj_bold in enumerate(['space-MNI152NLin2009cAsym_preproc.nii.gz', 'confounds.tsv'], 1):
         for ii, ii_task in enumerate(TASKS):
 
             search_string = f'{func_path}/*task-{ii_task}_acq-epi_rec-topup_bold_{jj_bold}'
@@ -74,22 +73,6 @@ def _find_functional_images(func_path):
                 func_files[ii][jj] = tmp[0]
 
     return func_files
-
-
-def _find_bold_confounds():
-    """
-
-    :return:
-
-     1	sub-mfc902_ses-1_task-postHeat3_acq-epi_rec-topup_bold_confounds.tsv
-     2	sub-mfc902_ses-1_task-postHeat4_acq-epi_rec-topup_bold_confounds.tsv
-     3	sub-mfc902_ses-1_task-postRest_acq-epi_rec-topup_bold_confounds.tsv
-     4	sub-mfc902_ses-1_task-preHeat1_acq-epi_rec-topup_bold_confounds.tsv
-     5	sub-mfc902_ses-1_task-preHeat2_acq-epi_rec-topup_bold_confounds.tsv
-     6	sub-mfc902_ses-1_task-preRest_acq-epi_rec-topup_bold_confounds.tsv
-    """
-
-    pass
 
 
 def _find_structural_images(anat_path):
