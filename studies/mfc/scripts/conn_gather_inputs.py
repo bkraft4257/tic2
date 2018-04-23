@@ -34,7 +34,7 @@ CONFOUNDS = ['X', 'Y', 'Z', 'RotX', 'RotY', 'RotZ']
 
 def _read_confounds(filename):
     df_confounds = pandas.read_csv(filename, sep='\t')
-    display(df_confounds[CONFOUNDS])
+    return df_confounds
 
 
 def _write_confounds(in_df, filename):
