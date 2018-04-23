@@ -73,7 +73,7 @@ def _find_functional_images(func_path):
             print(tmp)
 
             if len(tmp) == 1:
-                func_files[ii].append(tmp[0])
+                func_files[ii] = tmp[0]
 
     return func_files
 
