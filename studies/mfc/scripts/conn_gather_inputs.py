@@ -38,8 +38,7 @@ def _read_confounds(filename, confounds):
 
 
 def _write_confounds(in_df, filename):
-    in_df.to_csv(filename)
-    display(in_df)
+    in_df.to_csv(filename, index=False)
 
 
 def _make_conn_directory(directory=CONN_PATH):
