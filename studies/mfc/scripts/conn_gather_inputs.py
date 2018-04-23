@@ -63,7 +63,12 @@ def _find_functional_images(func_path):
     func_files = {}
 
     for ii in TASKS:
-        func_files[ii] = glob.glob(f'{func_path}/*task-{ii}_acq-epi_rec-topup_bold_space-MNI152NLin2009cAsym_preproc.nii.gz')
+        tmp = glob.glob(f'{func_path}/*task-{ii}_acq-epi_rec-topup_bold_space-MNI152NLin2009cAsym_preproc.nii.gz')
+
+        if len(tmp) == 1:
+            func_files[ii] = tmp[0]
+
+
 
     return func_files
 
