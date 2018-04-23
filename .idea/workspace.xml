@@ -1,8 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="6f3e13b3-cd58-4c4d-98f6-1a68f8358bfb" name="Default" comment="">
+    <list default="true" id="6f3e13b3-cd58-4c4d-98f6-1a68f8358bfb" name="Default" comment="Added rec-fmap and rec-topup to EPI images so we can compare recon.">
+      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/docs/source/other/conn_batch_help.md" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/studies/mfc/scripts/conn_gather_inputs.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/tests/test_fmriprep_tools.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/tests/test_operations.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/tests/test_slack.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/tests/test_tic_io.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/tic_core/fmriprep_tools.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/tic_core/operations.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/tic_core/slack.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/tic_core/tic_io.py" />
+      <change beforePath="$PROJECT_DIR$/.idea/dictionaries/bkraft.xml" afterPath="$PROJECT_DIR$/.idea/dictionaries/bkraft.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/tic_core.iml" afterPath="$PROJECT_DIR$/.idea/tic_core.iml" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/studies/mfc/scripts/clean_bids.sh" afterPath="$PROJECT_DIR$/studies/mfc/scripts/clean_bids.sh" />
       <change beforePath="$PROJECT_DIR$/studies/mfc/scripts/mfc_protocol.py" afterPath="$PROJECT_DIR$/studies/mfc/scripts/mfc_protocol.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -15,10 +30,24 @@
   <component name="CoverageDataManager">
     <SUITE FILE_PATH="coverage/tic_core$py_test_for_test_processing_status_test_clean_bids_key_value_with_two_key_value_splitters.coverage" NAME="py.test for test_processing_status.test_clean_bids_key_value_with_two_key_value_splitters Coverage Results" MODIFIED="1523543313222" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
     <SUITE FILE_PATH="coverage/tic_core$py_test_in_tests.coverage" NAME="py.test in tests Coverage Results" MODIFIED="1521219130892" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
+    <SUITE FILE_PATH="coverage/tic_core$py_test_in_test_tic_io_py.coverage" NAME="py.test in test_tic_io.py Coverage Results" MODIFIED="1524403598979" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
+    <SUITE FILE_PATH="coverage/tic_core$py_test_for_test_fmriprep_tools_test_write_json_to_file.coverage" NAME="py.test for test_fmriprep_tools.test_write_json_to_file Coverage Results" MODIFIED="1524410191301" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
     <SUITE FILE_PATH="coverage/tic_core$py_test_in_test_plot_overlay_py.coverage" NAME="py.test in test_plot_overlay.py Coverage Results" MODIFIED="1521475279384" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
+    <SUITE FILE_PATH="coverage/tic_core$py_test_for_test_slack_test_webhook.coverage" NAME="py.test for test_slack.test_webhook Coverage Results" MODIFIED="1524397974880" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
     <SUITE FILE_PATH="coverage/tic_core$py_test_for_test_processing_status_test_clean_bids_key_value_with_sub_key.coverage" NAME="py.test for test_processing_status.test_clean_bids_key_value_with_sub_key Coverage Results" MODIFIED="1523543198656" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
-    <SUITE FILE_PATH="coverage/tic_core$plot_overlay.coverage" NAME="plot_overlay Coverage Results" MODIFIED="1521475109051" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tic_core" />
     <SUITE FILE_PATH="coverage/tic_core$py_test_in_test_processing_status_py.coverage" NAME="py.test in test_processing_status.py Coverage Results" MODIFIED="1523543380820" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
+    <SUITE FILE_PATH="coverage/tic_core$py_test_for_test_fmriprep_tools_test_create_echo_times_dict.coverage" NAME="py.test for test_fmriprep_tools.test_create_echo_times_dict Coverage Results" MODIFIED="1524408833224" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
+    <SUITE FILE_PATH="coverage/tic_core$py_test_in_test_fmriprep_tools_py.coverage" NAME="py.test in test_fmriprep_tools.py Coverage Results" MODIFIED="1524408658215" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
+    <SUITE FILE_PATH="coverage/tic_core$py_test_for_test_fmriprep_tools_test_write_json_to_file_from_dict.coverage" NAME="py.test for test_fmriprep_tools.test_write_json_to_file_from_dict Coverage Results" MODIFIED="1524412051289" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
+    <SUITE FILE_PATH="coverage/tic_core$py_test_for_test_fmriprep_tools_test_delete_key_from_dict_existing_key.coverage" NAME="py.test for test_fmriprep_tools.test_delete_key_from_dict_existing_key Coverage Results" MODIFIED="1524408017064" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
+    <SUITE FILE_PATH="coverage/tic_core$plot_overlay.coverage" NAME="plot_overlay Coverage Results" MODIFIED="1521475109051" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tic_core" />
+    <SUITE FILE_PATH="coverage/tic_core$py_test_for_test_operations_test_force_input_to_list.coverage" NAME="py.test for test_operations.test_force_input_to_list Coverage Results" MODIFIED="1524407012947" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
+    <SUITE FILE_PATH="coverage/tic_core$fmriprep_tools.coverage" NAME="fmriprep_tools Coverage Results" MODIFIED="1524407468952" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tic_core" />
+    <SUITE FILE_PATH="coverage/tic_core$py_test_for_test_fmriprep_tools_test_delete_key_from_dict.coverage" NAME="py.test for test_fmriprep_tools.test_delete_key_from_dict Coverage Results" MODIFIED="1524407803099" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
+    <SUITE FILE_PATH="coverage/tic_core$py_test_for_test_tic_io_test_get_config.coverage" NAME="py.test for test_tic_io.test_get_config Coverage Results" MODIFIED="1524400621383" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
+    <SUITE FILE_PATH="coverage/tic_core$py_test_for_test_fmriprep_tools_test_merge_dict_to_dict.coverage" NAME="py.test for test_fmriprep_tools.test_merge_dict_to_dict Coverage Results" MODIFIED="1524409346703" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
+    <SUITE FILE_PATH="coverage/tic_core$py_test_in_test_slack_py.coverage" NAME="py.test in test_slack.py Coverage Results" MODIFIED="1524402486807" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
+    <SUITE FILE_PATH="coverage/tic_core$py_test_for_test_slack_test_get_webhook.coverage" NAME="py.test for test_slack.test_get_webhook Coverage Results" MODIFIED="1524400541331" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
   </component>
   <component name="DatabaseView">
     <option name="SHOW_INTERMEDIATE" value="true" />
@@ -34,81 +63,79 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="mfc_protocol.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="mfc_protocol.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/studies/mfc/scripts/mfc_protocol.py">
           <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="40">
+              <caret line="182" column="23" lean-forward="false" selection-start-line="182" selection-start-column="23" selection-end-line="182" selection-end-column="23" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="test_processing_status.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/tests/test_processing_status.py">
+          <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="442">
-              <caret line="276" column="43" lean-forward="true" selection-start-line="276" selection-start-column="43" selection-end-line="276" selection-end-column="43" />
+              <caret line="28" column="55" lean-forward="false" selection-start-line="28" selection-start-column="3" selection-end-line="28" selection-end-column="55" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="environment.sh" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/studies/mfc/environment.sh">
+      <file leaf-file-name="test_slack.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/tests/test_slack.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="320">
-              <caret line="22" column="50" lean-forward="false" selection-start-line="22" selection-start-column="50" selection-end-line="22" selection-end-column="50" />
-              <folding />
+            <state relative-caret-position="187">
+              <caret line="14" column="35" lean-forward="false" selection-start-line="14" selection-start-column="24" selection-end-line="14" selection-end-column="35" />
+              <folding>
+                <element signature="e#57#68#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="clean_bids.sh" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/studies/mfc/scripts/clean_bids.sh">
+      <file leaf-file-name="fmriprep_tools.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/tic_core/fmriprep_tools.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="341">
-              <caret line="22" column="29" lean-forward="true" selection-start-line="22" selection-start-column="29" selection-end-line="22" selection-end-column="29" />
-              <folding />
+            <state relative-caret-position="1513">
+              <caret line="89" column="0" lean-forward="false" selection-start-line="89" selection-start-column="0" selection-end-line="89" selection-end-column="0" />
+              <folding>
+                <element signature="e#184#214#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="aliases.sh" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/studies/imove/aliases.sh">
+      <file leaf-file-name="test_fmriprep_tools.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/tests/test_fmriprep_tools.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
+            <state relative-caret-position="782">
+              <caret line="49" column="47" lean-forward="false" selection-start-line="49" selection-start-column="19" selection-end-line="49" selection-end-column="47" />
+              <folding>
+                <element signature="e#56#69#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="environment.sh" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/studies/imove/environment.sh">
+      <file leaf-file-name="operations.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/tic_core/operations.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="340">
-              <caret line="20" column="50" lean-forward="false" selection-start-line="20" selection-start-column="50" selection-end-line="20" selection-end-column="50" />
-              <folding />
+            <state relative-caret-position="170">
+              <caret line="11" column="32" lean-forward="false" selection-start-line="11" selection-start-column="32" selection-end-line="11" selection-end-column="32" />
+              <folding>
+                <element signature="e#150#173#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="study_switcher.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/bin/study_switcher.py">
+      <file leaf-file-name="test_operations.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/tests/test_operations.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="206">
-              <caret line="15" column="70" lean-forward="false" selection-start-line="15" selection-start-column="70" selection-end-line="15" selection-end-column="70" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="identity.txt" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/bin/identity.txt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="mfc_bids.cfg" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/studies/mfc/scripts/mfc_bids.cfg">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state relative-caret-position="578">
+              <caret line="34" column="61" lean-forward="false" selection-start-line="34" selection-start-column="61" selection-end-line="34" selection-end-column="61" />
               <folding />
             </state>
           </provider>
@@ -124,12 +151,29 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="init.sh" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/studies/mfc/init.sh">
+      <file leaf-file-name="conn_batch_help.md" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/docs/source/other/conn_batch_help.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="-6941">
+                <caret line="32" column="115" lean-forward="false" selection-start-line="32" selection-start-column="1" selection-end-line="32" selection-end-column="115" />
+                <folding />
+              </first_editor>
+              <second_editor>
+                <js_state />
+              </second_editor>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="conn_gather_inputs.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/studies/mfc/scripts/conn_gather_inputs.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="7" column="40" lean-forward="true" selection-start-line="7" selection-start-column="40" selection-end-line="7" selection-end-column="40" />
-              <folding />
+            <state relative-caret-position="1126">
+              <caret line="71" column="0" lean-forward="true" selection-start-line="71" selection-start-column="0" selection-end-line="71" selection-end-column="0" />
+              <folding>
+                <element signature="e#93#102#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -139,16 +183,14 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Markdown" />
         <option value="Python pytest" />
         <option value="Python Script" />
-        <option value="Markdown" />
       </list>
     </option>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>acrostic_session</find>
-      <find>subject_only</find>
       <find>unstack</find>
       <find>yaml</find>
       <find>netprep</find>
@@ -177,6 +219,8 @@
       <find>mcf</find>
       <find>phasediff</find>
       <find>fmap</find>
+      <find>json</find>
+      <find>IL_CONFIG_JSON</find>
     </findStrings>
     <replaceStrings>
       <replace>01d</replace>
@@ -193,6 +237,8 @@
       <replace>{item:01d}</replace>
       <replace>MFC_</replace>
       <replace>topup</replace>
+      <replace>TIC_PRIVATE_CONFIG_JSON</replace>
+      <replace>TIC_PRIVATE_CONFIG_JSON</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -207,20 +253,7 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/studies/synergy/scripts/prepare_netprep_synergy.sh" />
-        <option value="$PROJECT_DIR$/studies/mcf/scripts/mcf_bids.cfg" />
-        <option value="$PROJECT_DIR$/studies/synergy/aliases.sh" />
-        <option value="$PROJECT_DIR$/studies/active/scripts/netprep_gather_inputs.sh" />
-        <option value="$PROJECT_DIR$/studies/hfpef/scripts/hfpef_gi_netprep_epi.sh" />
-        <option value="$PROJECT_DIR$/studies/synergy/scripts/synergy_netprep_gather_inputs.sh" />
-        <option value="$PROJECT_DIR$/init/tic_wake_aging1a_environment.sh" />
-        <option value="$PROJECT_DIR$/studies/synergy/environment.sh" />
-        <option value="$PROJECT_DIR$/studies/infinite/environment.sh" />
-        <option value="$PROJECT_DIR$/studies/imove/environment.sh" />
-        <option value="$PROJECT_DIR$/studies/cenc/environment.sh" />
-        <option value="$PROJECT_DIR$/studies/hfpef/environment.sh" />
         <option value="$PROJECT_DIR$/tests/test_processing_status.py.java" />
-        <option value="$PROJECT_DIR$/tic_core/operations.py" />
         <option value="$PROJECT_DIR$/tests/test_plot_overlay.py" />
         <option value="$PROJECT_DIR$/tests/test_processing_status.py" />
         <option value="$PROJECT_DIR$/bin/processing_status.py" />
@@ -257,7 +290,20 @@
         <option value="$PROJECT_DIR$/studies/mfc/init.sh" />
         <option value="$PROJECT_DIR$/studies/mfc/environment.sh" />
         <option value="$PROJECT_DIR$/studies/mfc/scripts/clean_bids.sh" />
+        <option value="$PROJECT_DIR$/tests/test_slack_api.py" />
+        <option value="$PROJECT_DIR$/tic_core/configuration.py" />
+        <option value="$PROJECT_DIR$/tic_core/io.py" />
+        <option value="$PROJECT_DIR$/tests/test_slack.py" />
+        <option value="$PROJECT_DIR$/tic_core/tic_io.py" />
+        <option value="$PROJECT_DIR$/tic_core/slack.py" />
+        <option value="$PROJECT_DIR$/tests/test_tic_io.py" />
+        <option value="$PROJECT_DIR$/tests/operations.py.java" />
+        <option value="$PROJECT_DIR$/tic_core/operations.py" />
+        <option value="$PROJECT_DIR$/tests/test_operations.py" />
+        <option value="$PROJECT_DIR$/tests/test_fmriprep_tools.py" />
+        <option value="$PROJECT_DIR$/tic_core/fmriprep_tools.py" />
         <option value="$PROJECT_DIR$/studies/mfc/scripts/mfc_protocol.py" />
+        <option value="$PROJECT_DIR$/studies/mfc/scripts/conn_gather_inputs.py" />
       </list>
     </option>
   </component>
@@ -268,10 +314,10 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-137" />
-    <option name="y" value="-1372" />
-    <option name="width" value="1941" />
-    <option name="height" value="877" />
+    <option name="x" value="-412" />
+    <option name="y" value="-1357" />
+    <option name="width" value="2204" />
+    <option name="height" value="1308" />
   </component>
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
@@ -313,6 +359,12 @@
             <path>
               <item name="tic_core" type="b2602c69:ProjectViewProjectNode" />
               <item name="tic_core" type="462c0819:PsiDirectoryNode" />
+              <item name="docs" type="462c0819:PsiDirectoryNode" />
+              <item name="source" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="tic_core" type="b2602c69:ProjectViewProjectNode" />
+              <item name="tic_core" type="462c0819:PsiDirectoryNode" />
               <item name="init" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -324,49 +376,6 @@
               <item name="tic_core" type="b2602c69:ProjectViewProjectNode" />
               <item name="tic_core" type="462c0819:PsiDirectoryNode" />
               <item name="studies" type="462c0819:PsiDirectoryNode" />
-              <item name="_new_study_template" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="tic_core" type="b2602c69:ProjectViewProjectNode" />
-              <item name="tic_core" type="462c0819:PsiDirectoryNode" />
-              <item name="studies" type="462c0819:PsiDirectoryNode" />
-              <item name="active" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="tic_core" type="b2602c69:ProjectViewProjectNode" />
-              <item name="tic_core" type="462c0819:PsiDirectoryNode" />
-              <item name="studies" type="462c0819:PsiDirectoryNode" />
-              <item name="cenc" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="tic_core" type="b2602c69:ProjectViewProjectNode" />
-              <item name="tic_core" type="462c0819:PsiDirectoryNode" />
-              <item name="studies" type="462c0819:PsiDirectoryNode" />
-              <item name="hfpef" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="tic_core" type="b2602c69:ProjectViewProjectNode" />
-              <item name="tic_core" type="462c0819:PsiDirectoryNode" />
-              <item name="studies" type="462c0819:PsiDirectoryNode" />
-              <item name="hfpef" type="462c0819:PsiDirectoryNode" />
-              <item name="scripts" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="tic_core" type="b2602c69:ProjectViewProjectNode" />
-              <item name="tic_core" type="462c0819:PsiDirectoryNode" />
-              <item name="studies" type="462c0819:PsiDirectoryNode" />
-              <item name="imove" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="tic_core" type="b2602c69:ProjectViewProjectNode" />
-              <item name="tic_core" type="462c0819:PsiDirectoryNode" />
-              <item name="studies" type="462c0819:PsiDirectoryNode" />
-              <item name="infinite" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="tic_core" type="b2602c69:ProjectViewProjectNode" />
-              <item name="tic_core" type="462c0819:PsiDirectoryNode" />
-              <item name="studies" type="462c0819:PsiDirectoryNode" />
               <item name="mfc" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -375,12 +384,6 @@
               <item name="studies" type="462c0819:PsiDirectoryNode" />
               <item name="mfc" type="462c0819:PsiDirectoryNode" />
               <item name="scripts" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="tic_core" type="b2602c69:ProjectViewProjectNode" />
-              <item name="tic_core" type="462c0819:PsiDirectoryNode" />
-              <item name="studies" type="462c0819:PsiDirectoryNode" />
-              <item name="synergy" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="tic_core" type="b2602c69:ProjectViewProjectNode" />
@@ -401,22 +404,22 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PythonContentEntriesConfigurable" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
     <property name="SearchEverywhereHistoryKey" value="sws&#9;null&#9;null&#10;hdc.sh&#9;FILE&#9;file:///Users/bkraft/projects/tic_core/bin/hdc.sh&#10;study&#9;FILE&#9;file:///Users/bkraft/projects/tic_core/bin/study_switcher.py" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/tests" />
+      <recent name="$PROJECT_DIR$/studies/mcf/scripts" />
+      <recent name="$PROJECT_DIR$/studies/mcf" />
+      <recent name="$PROJECT_DIR$/docs/source/other" />
+      <recent name="$PROJECT_DIR$/studies/active/scripts" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/studies/mcf/scripts" />
       <recent name="$PROJECT_DIR$/tic_core" />
       <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/studies/active/scripts" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/studies/mcf/scripts" />
-      <recent name="$PROJECT_DIR$/studies/mcf" />
-      <recent name="$PROJECT_DIR$/docs/source/other" />
-      <recent name="$PROJECT_DIR$/studies/active/scripts" />
-      <recent name="$PROJECT_DIR$/bin" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -431,27 +434,8 @@
       </list>
     </option>
   </component>
-  <component name="RunManager">
-    <configuration name="plot_overlay" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tic_core" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="tic_core" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/tic_core/plot_overlay.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-    </configuration>
-    <configuration name="py.test for test_processing_status.test_clean_bids_key_value_with_sub_key" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Python tests.py.test for test_fmriprep_tools.test_write_json_to_file_from_dict">
+    <configuration name="py.test for test_fmriprep_tools.test_create_echo_times_dict" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs />
@@ -464,10 +448,10 @@
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
       <option name="_new_keywords" value="&quot;&quot;" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;test_processing_status.test_clean_bids_key_value_with_sub_key&quot;" />
+      <option name="_new_target" value="&quot;test_fmriprep_tools.test_create_echo_times_dict&quot;" />
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
     </configuration>
-    <configuration name="py.test for test_processing_status.test_clean_bids_key_value_with_two_key_value_splitters" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
+    <configuration name="py.test for test_fmriprep_tools.test_merge_dict_to_dict" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs />
@@ -480,8 +464,56 @@
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
       <option name="_new_keywords" value="&quot;&quot;" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;test_processing_status.test_clean_bids_key_value_with_two_key_value_splitters&quot;" />
+      <option name="_new_target" value="&quot;test_fmriprep_tools.test_merge_dict_to_dict&quot;" />
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+    </configuration>
+    <configuration name="py.test for test_fmriprep_tools.test_write_json_to_file" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tests" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="tic_core" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="_new_keywords" value="&quot;&quot;" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;test_fmriprep_tools.test_write_json_to_file&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+    </configuration>
+    <configuration name="py.test for test_fmriprep_tools.test_write_json_to_file_from_dict" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tests" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="tic_core" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="_new_keywords" value="&quot;&quot;" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;test_fmriprep_tools.test_write_json_to_file_from_dict&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+    </configuration>
+    <configuration name="py.test in test_fmriprep_tools.py" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tests" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="tic_core" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="_new_keywords" value="&quot;&quot;" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;$PROJECT_DIR$/tests/test_fmriprep_tools.py&quot;" />
+      <option name="_new_targetType" value="&quot;PATH&quot;" />
     </configuration>
     <configuration name="py.test in test_plot_overlay.py" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -515,35 +547,19 @@
       <option name="_new_target" value="&quot;$PROJECT_DIR$/tests/test_processing_status.py&quot;" />
       <option name="_new_targetType" value="&quot;PATH&quot;" />
     </configuration>
-    <configuration name="py.test in tests" type="tests" factoryName="py.test" singleton="true" temporary="true" nameIsGenerated="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs />
-      <option name="SDK_HOME" value="$PROJECT_DIR$/../tic_venv/bin/python" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tests" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="tic_core" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="_new_keywords" value="&quot;&quot;" />
-      <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;$PROJECT_DIR$/tests&quot;" />
-      <option name="_new_targetType" value="&quot;PATH&quot;" />
-    </configuration>
     <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="Python tests.py.test in tests" />
-      <item index="1" class="java.lang.String" itemvalue="Python.plot_overlay" />
-      <item index="2" class="java.lang.String" itemvalue="Python tests.py.test in test_plot_overlay.py" />
-      <item index="3" class="java.lang.String" itemvalue="Python tests.py.test for test_processing_status.test_clean_bids_key_value_with_sub_key" />
-      <item index="4" class="java.lang.String" itemvalue="Python tests.py.test for test_processing_status.test_clean_bids_key_value_with_two_key_value_splitters" />
+      <item index="0" class="java.lang.String" itemvalue="Python tests.py.test in test_plot_overlay.py" />
+      <item index="1" class="java.lang.String" itemvalue="Python tests.py.test in test_fmriprep_tools.py" />
+      <item index="2" class="java.lang.String" itemvalue="Python tests.py.test for test_fmriprep_tools.test_create_echo_times_dict" />
+      <item index="3" class="java.lang.String" itemvalue="Python tests.py.test for test_fmriprep_tools.test_merge_dict_to_dict" />
+      <item index="4" class="java.lang.String" itemvalue="Python tests.py.test for test_fmriprep_tools.test_write_json_to_file_from_dict" />
     </list>
     <recent_temporary>
       <list size="4">
-        <item index="0" class="java.lang.String" itemvalue="Python tests.py.test for test_processing_status.test_clean_bids_key_value_with_two_key_value_splitters" />
-        <item index="1" class="java.lang.String" itemvalue="Python tests.py.test for test_processing_status.test_clean_bids_key_value_with_sub_key" />
-        <item index="2" class="java.lang.String" itemvalue="Python tests.py.test in test_plot_overlay.py" />
-        <item index="3" class="java.lang.String" itemvalue="Python.plot_overlay" />
+        <item index="0" class="java.lang.String" itemvalue="Python tests.py.test for test_fmriprep_tools.test_write_json_to_file_from_dict" />
+        <item index="1" class="java.lang.String" itemvalue="Python tests.py.test for test_fmriprep_tools.test_merge_dict_to_dict" />
+        <item index="2" class="java.lang.String" itemvalue="Python tests.py.test for test_fmriprep_tools.test_create_echo_times_dict" />
+        <item index="3" class="java.lang.String" itemvalue="Python tests.py.test in test_fmriprep_tools.py" />
       </list>
     </recent_temporary>
   </component>
@@ -560,13 +576,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1517948604886</updated>
-    </task>
-    <task id="LOCAL-00411" summary="Dog fooding and updating documentation.">
-      <created>1523630474494</created>
-      <option name="number" value="00411" />
-      <option name="presentableId" value="LOCAL-00411" />
-      <option name="project" value="LOCAL" />
-      <updated>1523630474494</updated>
     </task>
     <task id="LOCAL-00412" summary="Dog fooding and updating documentation.">
       <created>1523630597803</created>
@@ -904,59 +913,66 @@
       <option name="project" value="LOCAL" />
       <updated>1524144059738</updated>
     </task>
-    <option name="localTasksCounter" value="460" />
+    <task id="LOCAL-00460" summary="Added rec-fmap and rec-topup to EPI images so we can compare recon.">
+      <created>1524144475946</created>
+      <option name="number" value="00460" />
+      <option name="presentableId" value="LOCAL-00460" />
+      <option name="project" value="LOCAL" />
+      <updated>1524144475946</updated>
+    </task>
+    <option name="localTasksCounter" value="461" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="py_test_for_test_processing_status_test_clean_bids_key_value_with_sub_key - 2018.04.12 at 10h 26m 20s.xml">
-      <configuration name="py.test for test_processing_status.test_clean_bids_key_value_with_sub_key" configurationId="tests" />
+    <history-entry file="py_test_for_test_fmriprep_tools_test_write_json_to_file - 2018.04.22 at 11h 16m 11s.xml">
+      <configuration name="py.test for test_fmriprep_tools.test_write_json_to_file" configurationId="tests" />
     </history-entry>
-    <history-entry file="py_test_for_test_processing_status_test_clean_bids_key_value_with_sub_key - 2018.04.12 at 10h 26m 32s.xml">
-      <configuration name="py.test for test_processing_status.test_clean_bids_key_value_with_sub_key" configurationId="tests" />
+    <history-entry file="py_test_for_test_fmriprep_tools_test_write_json_to_file - 2018.04.22 at 11h 16m 32s.xml">
+      <configuration name="py.test for test_fmriprep_tools.test_write_json_to_file" configurationId="tests" />
     </history-entry>
-    <history-entry file="py_test_for_test_processing_status_test_clean_bids_key_value_with_sub_key - 2018.04.12 at 10h 26m 38s.xml">
-      <configuration name="py.test for test_processing_status.test_clean_bids_key_value_with_sub_key" configurationId="tests" />
+    <history-entry file="py_test_for_test_fmriprep_tools_test_write_json_to_file_from_dict - 2018.04.22 at 11h 16m 36s.xml">
+      <configuration name="py.test for test_fmriprep_tools.test_write_json_to_file_from_dict" configurationId="tests" />
     </history-entry>
-    <history-entry file="py_test_for_test_processing_status_test_clean_bids_key_value_with_two_key_value_splitters - 2018.04.12 at 10h 27m 27s.xml">
-      <configuration name="py.test for test_processing_status.test_clean_bids_key_value_with_two_key_value_splitters" configurationId="tests" />
+    <history-entry file="py_test_for_test_fmriprep_tools_test_write_json_to_file_from_dict - 2018.04.22 at 11h 17m 04s.xml">
+      <configuration name="py.test for test_fmriprep_tools.test_write_json_to_file_from_dict" configurationId="tests" />
     </history-entry>
-    <history-entry file="py_test_for_test_processing_status_test_clean_bids_key_value_with_two_key_value_splitters - 2018.04.12 at 10h 28m 33s.xml">
-      <configuration name="py.test for test_processing_status.test_clean_bids_key_value_with_two_key_value_splitters" configurationId="tests" />
+    <history-entry file="py_test_for_test_fmriprep_tools_test_write_json_to_file_from_dict - 2018.04.22 at 11h 17m 38s.xml">
+      <configuration name="py.test for test_fmriprep_tools.test_write_json_to_file_from_dict" configurationId="tests" />
     </history-entry>
-    <history-entry file="py_test_in_test_processing_status_py - 2018.04.12 at 10h 26m 44s.xml">
-      <configuration name="py.test in test_processing_status.py" configurationId="tests" />
+    <history-entry file="py_test_for_test_fmriprep_tools_test_write_json_to_file_from_dict - 2018.04.22 at 11h 17m 55s.xml">
+      <configuration name="py.test for test_fmriprep_tools.test_write_json_to_file_from_dict" configurationId="tests" />
     </history-entry>
-    <history-entry file="py_test_in_test_processing_status_py - 2018.04.12 at 10h 28m 38s.xml">
-      <configuration name="py.test in test_processing_status.py" configurationId="tests" />
+    <history-entry file="py_test_for_test_fmriprep_tools_test_write_json_to_file_from_dict - 2018.04.22 at 11h 40m 52s.xml">
+      <configuration name="py.test for test_fmriprep_tools.test_write_json_to_file_from_dict" configurationId="tests" />
     </history-entry>
-    <history-entry file="py_test_in_test_processing_status_py - 2018.04.12 at 10h 29m 17s.xml">
-      <configuration name="py.test in test_processing_status.py" configurationId="tests" />
+    <history-entry file="py_test_for_test_fmriprep_tools_test_write_json_to_file_from_dict - 2018.04.22 at 11h 43m 08s.xml">
+      <configuration name="py.test for test_fmriprep_tools.test_write_json_to_file_from_dict" configurationId="tests" />
     </history-entry>
-    <history-entry file="py_test_in_test_processing_status_py - 2018.04.12 at 10h 29m 41s.xml">
-      <configuration name="py.test in test_processing_status.py" configurationId="tests" />
+    <history-entry file="py_test_for_test_fmriprep_tools_test_write_json_to_file_from_dict - 2018.04.22 at 11h 43m 25s.xml">
+      <configuration name="py.test for test_fmriprep_tools.test_write_json_to_file_from_dict" configurationId="tests" />
     </history-entry>
-    <history-entry file="py_test_in_tests - 2018.03.16 at 12h 52m 22s.xml">
-      <configuration name="py.test in tests" configurationId="tests" />
+    <history-entry file="py_test_for_test_fmriprep_tools_test_write_json_to_file_from_dict - 2018.04.22 at 11h 47m 32s.xml">
+      <configuration name="py.test for test_fmriprep_tools.test_write_json_to_file_from_dict" configurationId="tests" />
     </history-entry>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-137" y="-1372" width="1941" height="877" extended-state="0" />
+    <frame x="-412" y="-1357" width="2204" height="1308" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Key Promoter X" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Regex Tester" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32968882" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.46725318" sideWeight="0.31681243" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.20437342" sideWeight="0.68318754" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.45135567" sideWeight="0.68318754" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.50287354" sideWeight="0.48106593" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32968882" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19631094" sideWeight="0.49006623" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1490258" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3293461" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2799043" sideWeight="0.49006623" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.13691027" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3297568" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="SciView" active="false" anchor="right" auto_hide="true" internal_type="DOCKED" type="FLOATING" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39952153" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -998,7 +1014,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Updated imove_protocol. &#10;&#10;1) sbref scans are written to their own subdirectory.  .bidsignore removes them from bids-validator.&#10;2) remove magnitude and phasediff from fmap.  These are no longer being acquired." />
     <MESSAGE value="Updated mriqc" />
     <MESSAGE value="Updated mriqc.  There was a &amp;&gt; instead of &amp;&gt;&gt; bug in the code." />
     <MESSAGE value="Updated processing_status.py by including to_string instead of my own formatting." />
@@ -1023,7 +1038,8 @@
     <MESSAGE value="Draft of mcf_protcol" />
     <MESSAGE value="Switched MCF to MFC.  Oops." />
     <MESSAGE value="Protocol testing. Encountered &quot;bug&quot; while converting phasediff image" />
-    <option name="LAST_COMMIT_MESSAGE" value="Protocol testing. Encountered &quot;bug&quot; while converting phasediff image" />
+    <MESSAGE value="Added rec-fmap and rec-topup to EPI images so we can compare recon." />
+    <option name="LAST_COMMIT_MESSAGE" value="Added rec-fmap and rec-topup to EPI images so we can compare recon." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1043,100 +1059,17 @@
           <line>192</line>
           <option name="timeStamp" value="6" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/tic_core/fmriprep_tools.py</url>
+          <line>63</line>
+          <option name="timeStamp" value="8" />
+        </line-breakpoint>
       </breakpoints>
-      <option name="time" value="7" />
+      <option name="time" value="9" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/docs/source/tic_setup.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="0">
-            <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          </first_editor>
-          <second_editor>
-            <js_state />
-          </second_editor>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/docs/source/tic_processing.rst">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="333">
-          <caret line="48" column="0" lean-forward="true" selection-start-line="48" selection-start-column="0" selection-end-line="48" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/docs/source/tic_welcome.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="0">
-            <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          </first_editor>
-          <second_editor>
-            <js_state />
-          </second_editor>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/init/tic_zshrc.sh">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="21" column="25" lean-forward="false" selection-start-line="21" selection-start-column="25" selection-end-line="21" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bin/clean_bids.sh">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="20" column="25" lean-forward="false" selection-start-line="20" selection-start-column="25" selection-end-line="20" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bin/active_study_info.sh">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="25" column="61" lean-forward="true" selection-start-line="25" selection-start-column="45" selection-end-line="25" selection-end-column="61" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bin/ls_participants.sh">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="0" lean-forward="false" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bin/acrostic_list.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="69" lean-forward="false" selection-start-line="4" selection-start-column="69" selection-end-line="4" selection-end-column="69" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bin/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bin/tic_info.sh">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bin/tic_prep.sh" />
-    <entry file="file://$PROJECT_DIR$/bin/tic_functions.sh">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/bin/tic_bids_validator.sh">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -1374,7 +1307,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="765">
           <caret line="45" column="42" lean-forward="false" selection-start-line="45" selection-start-column="29" selection-end-line="45" selection-end-column="42" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1382,15 +1314,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1020">
           <caret line="60" column="0" lean-forward="false" selection-start-line="60" selection-start-column="0" selection-end-line="60" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/studies/hfpef/scripts/hfpef_clean_bids.sh">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1398,7 +1321,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1406,7 +1328,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="340">
           <caret line="20" column="50" lean-forward="false" selection-start-line="20" selection-start-column="50" selection-end-line="20" selection-end-column="50" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1414,15 +1335,132 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/bin/study_switcher.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="206">
+        <state relative-caret-position="221">
           <caret line="15" column="70" lean-forward="false" selection-start-line="15" selection-start-column="70" selection-end-line="15" selection-end-column="70" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/studies/mfc/init.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="40" lean-forward="false" selection-start-line="7" selection-start-column="40" selection-end-line="7" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/studies/mfc/environment.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="22" column="50" lean-forward="false" selection-start-line="22" selection-start-column="50" selection-end-line="22" selection-end-column="50" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/studies/mfc/scripts/mfc_bids.cfg">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/studies/mfc/scripts/clean_bids.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="850">
+          <caret line="50" column="17" lean-forward="false" selection-start-line="50" selection-start-column="17" selection-end-line="50" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/studies/hfpef/scripts/hfpef_clean_bids.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2465">
+          <caret line="145" column="82" lean-forward="false" selection-start-line="145" selection-start-column="55" selection-end-line="145" selection-end-column="82" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tic_core/slack.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="20" column="50" lean-forward="false" selection-start-line="20" selection-start-column="50" selection-end-line="20" selection-end-column="50" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/test_tic_io.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="490">
+          <caret line="30" column="72" lean-forward="false" selection-start-line="30" selection-start-column="72" selection-end-line="30" selection-end-column="72" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bin/ls_participants.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="0" lean-forward="false" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tic_core/tic_io.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="782">
+          <caret line="52" column="0" lean-forward="false" selection-start-line="52" selection-start-column="0" selection-end-line="58" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tic_core/operations.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="11" column="32" lean-forward="false" selection-start-line="11" selection-start-column="32" selection-end-line="11" selection-end-column="32" />
+          <folding>
+            <element signature="e#150#173#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/test_slack.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="14" column="35" lean-forward="false" selection-start-line="14" selection-start-column="24" selection-end-line="14" selection-end-column="35" />
+          <folding>
+            <element signature="e#57#68#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/test_processing_status.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="442">
+          <caret line="28" column="55" lean-forward="false" selection-start-line="28" selection-start-column="3" selection-end-line="28" selection-end-column="55" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/test_operations.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="578">
+          <caret line="34" column="61" lean-forward="false" selection-start-line="34" selection-start-column="61" selection-end-line="34" selection-end-column="61" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/test_fmriprep_tools.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="782">
+          <caret line="49" column="47" lean-forward="false" selection-start-line="49" selection-start-column="19" selection-end-line="49" selection-end-column="47" />
+          <folding>
+            <element signature="e#56#69#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tic_core/fmriprep_tools.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1513">
+          <caret line="89" column="0" lean-forward="false" selection-start-line="89" selection-start-column="0" selection-end-line="89" selection-end-column="0" />
+          <folding>
+            <element signature="e#184#214#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1434,43 +1472,34 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/studies/mfc/init.sh">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="40" lean-forward="true" selection-start-line="7" selection-start-column="40" selection-end-line="7" selection-end-column="40" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/studies/mfc/environment.sh">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="320">
-          <caret line="22" column="50" lean-forward="false" selection-start-line="22" selection-start-column="50" selection-end-line="22" selection-end-column="50" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/studies/mfc/scripts/mfc_bids.cfg">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/studies/mfc/scripts/clean_bids.sh">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="341">
-          <caret line="22" column="29" lean-forward="true" selection-start-line="22" selection-start-column="29" selection-end-line="22" selection-end-column="29" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/studies/mfc/scripts/mfc_protocol.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
-          <caret line="276" column="43" lean-forward="true" selection-start-line="276" selection-start-column="43" selection-end-line="276" selection-end-column="43" />
+        <state relative-caret-position="40">
+          <caret line="182" column="23" lean-forward="false" selection-start-line="182" selection-start-column="23" selection-end-line="182" selection-end-column="23" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docs/source/other/conn_batch_help.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="-6941">
+            <caret line="32" column="115" lean-forward="false" selection-start-line="32" selection-start-column="1" selection-end-line="32" selection-end-column="115" />
+            <folding />
+          </first_editor>
+          <second_editor>
+            <js_state />
+          </second_editor>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/studies/mfc/scripts/conn_gather_inputs.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1126">
+          <caret line="71" column="0" lean-forward="true" selection-start-line="71" selection-start-column="0" selection-end-line="71" selection-end-column="0" />
+          <folding>
+            <element signature="e#93#102#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

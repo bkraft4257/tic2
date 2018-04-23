@@ -20,6 +20,8 @@ echo "session_dir   = " $session_dir
 #--- Remove .1., fmap/*.bval, fmap/*.bvec, fmap/*magnitude1*.json --------------------------------------------
 #chmod +w -R ${session_dir}
 
+cd $ACTIVE_BIDS_PATH
+
 find ${session_dir} -name "*.1.*" | xargs rename .1. .
 find ${session_dir} -name "*.nii.gz" -or -name "*.json"  | xargs chmod +w
 
@@ -32,13 +34,32 @@ rm -rf *magnitude1.json
 
 
 
+
+
 echo
 echo "grep -H IntendedFor *.json"
 echo "-------------------------------------------------------------------------------------------------"
 grep -H "IntendedFor" *.json
 echo
 
-cd $ACTIVE_BIDS_PATH
+cd ${session_dir}/fmap
+
+# epi topup
+pre_topup_ap_json=${full_subject_session_value}_acq-preEpi_dir-ap_bold.json
+pre_topup_pa_json=${full_subject_session_value}_acq-preEpi_dir-ap_bold.json
+
+sed -i 's%"AcquisitionMatrixPE": 64,%"IntendedFor": [ "ses-__session_value__/func/sub-__subject_value___ses-__session_value___task-rest_acq-epi_rec-topup_bold.nii.gz" ],\n  "AcquisitionMatrixPE": 64,%' \
+     $rest_topup_ap_json
+
+sed -i 's%"AcquisitionMatrixPE": 64,%"IntendedFor": [ "ses-__session_value__/func/sub-__subject_value___ses-__session_value___task-rest_acq-epi_rec-topup_bold.nii.gz" ],\n  "AcquisitionMatrixPE": 64,%' \
+     $rest_topup_pa_json
+
+
+# Replace __session__ with ${session_value} and __subject__ with ${subject_value}.
+#  I would prefer to do this in a single call. Unfortunately, I haven't worked out the syntax
+
+sed -i 's#__session_value__#'${session_value}'#g' *.json
+sed -i 's#__subject_value__#'${subject_value}'#g' *.json
 
 #--- Reorient all images to match FSL orientation -------------------------------------------------
 echo "Reorienting all *.gz files with fslreorient2std"
