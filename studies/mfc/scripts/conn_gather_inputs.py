@@ -103,7 +103,7 @@ def _find_structural_images(subject, anat_path):
 def main():
     _make_conn_directory()
 
-    t1w, tissue_maps = _find_structural_images(ANAT_PATH)
+    t1w, tissue_maps = _find_structural_images(SUBJECT, ANAT_PATH)
     func_files = _find_functional_images(SUBJECT, FUNC_PATH)
 
     pprint.pprint(func_files)
