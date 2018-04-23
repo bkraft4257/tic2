@@ -7,6 +7,7 @@ Script for gathering inputs for CONN
 
 import os
 import glob
+import pprint
 import shutil
 
 SUBJECT = 'mfc902'
@@ -19,8 +20,9 @@ CONN_PATH = os.path.join(IMAGE_PROCESSING_PATH, 'conn')
 SUBJECT_SESSION_PATH = os.path.join(FMRIPREP_PATH, f'sub-{SUBJECT}', f'ses-{SESSION}')
 
 ANAT_PATH = os.path.join(SUBJECT_SESSION_PATH, 'anat')
-FMRI_PATH = os.path.join(SUBJECT_SESSION_PATH, 'fmri')
+FUNC_PATH = os.path.join(SUBJECT_SESSION_PATH, 'func')
 
+TASKS = ['preRest', 'preHeat1', 'preHeat2', 'postRest', 'postHeat3', 'postHeat4' ]
 
 def _make_conn_directory(directory=CONN_PATH):
     """
@@ -41,8 +43,27 @@ def _make_conn_directory(directory=CONN_PATH):
 # sub-mcf901_ses-1_task-postRest_acq-mbepi_bold_space-MNI152NLin2009cAsym_preproc.nii.gz
 
 
-def _find_functional_images(fmri_path):
-    pass
+def _find_functional_images(func_path):
+    """
+
+    :param fmri_path:
+    :return:
+
+     1	sub-mfc902_ses-1_task-postHeat3_acq-epi_rec-topup_bold_space-MNI152NLin2009cAsym_preproc.nii.gz
+     2	sub-mfc902_ses-1_task-postHeat4_acq-epi_rec-topup_bold_space-MNI152NLin2009cAsym_preproc.nii.gz
+     3	sub-mfc902_ses-1_task-postRest_acq-epi_rec-topup_bold_space-MNI152NLin2009cAsym_preproc.nii.gz
+     4	sub-mfc902_ses-1_task-preHeat1_acq-epi_rec-topup_bold_space-MNI152NLin2009cAsym_preproc.nii.gz
+     5	sub-mfc902_ses-1_task-preHeat2_acq-epi_rec-topup_bold_space-MNI152NLin2009cAsym_preproc.nii.gz
+     6	sub-mfc902_ses-1_task-preRest_acq-epi_rec-topup_bold_space-MNI152NLin2009cAsym_preproc.nii.gz
+
+    """
+
+    func_files = {}
+
+    for ii in TASKS:
+        func_files[ii] = glob.glob(f'{func_path}/*task-{ii}_acq-epi_rec-topup_bold_space-MNI152NLin2009cAsym_preproc.nii.gz')
+
+    return func_files
 
 
 def _find_bold_confounds():
@@ -66,6 +87,6 @@ if __name__ == '__main__':
     _make_conn_directory()
 
     t1w, tissue_maps = _find_structural_images(ANAT_PATH)
+    func_files = _find_functional_images(FUNC_PATH)
 
-    print(t1w)
-    print(tissue_maps)
+    pprint.pprint(func_files)
