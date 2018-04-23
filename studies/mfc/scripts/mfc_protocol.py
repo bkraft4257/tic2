@@ -194,8 +194,8 @@ def infotodict(seqinfo):
     pre_heat1_ap_topup = create_key(bids_prefix + 'func/sub-{subject}_{session}_task-preHeat1_acq-epi_rec-topup_bold.{item:01d}')
     pre_heat2_ap_topup = create_key(bids_prefix + 'func/sub-{subject}_{session}_task-preHeat2_acq-epi_rec-topup_bold.{item:01d}')
 
-    pre_topup_ap = create_key(bids_prefix + 'fmap/sub-{subject}_{session}_acq-preEpi_dir-ap_bold.{item:01d}')
-    pre_topup_pa = create_key(bids_prefix + 'fmap/sub-{subject}_{session}_acq-preEpi_dir-pa_bold.{item:01d}')
+    pre_topup_ap = create_key(bids_prefix + 'fmap/sub-{subject}_{session}_acq-preEpi_dir-ap_epi.{item:01d}')
+    pre_topup_pa = create_key(bids_prefix + 'fmap/sub-{subject}_{session}_acq-preEpi_dir-pa_epi.{item:01d}')
     
     pre_fmap_magnitude1 = create_key(bids_prefix + 'fmap/sub-{subject}_{session}_acq-pre_magnitude1') #.{item:01d}')
     pre_fmap_phasediff = create_key(bids_prefix + 'fmap/sub-{subject}_{session}_acq-pre_phasediff')#.{item:01d}')
@@ -210,8 +210,8 @@ def infotodict(seqinfo):
     post_heat2_ap_topup = create_key(bids_prefix + 'func/sub-{subject}_{session}_task-postHeat4_acq-epi_rec-topup_bold.{item:01d}')
     post_rest_ap_topup = create_key(bids_prefix + 'func/sub-{subject}_{session}_task-postRest_acq-epi_rec-topup_bold.{item:01d}')
 
-    post_topup_ap = create_key(bids_prefix + 'fmap/sub-{subject}_acq-postEpi_dir-ap_bold.{item:01d}')
-    post_topup_pa = create_key(bids_prefix + 'fmap/sub-{subject}_acq-postEpi_dir-pa_bold.{item:01d}')
+    post_topup_ap = create_key(bids_prefix + 'fmap/sub-{subject}_{session}_acq-postEpi_dir-ap_epi.{item:01d}')
+    post_topup_pa = create_key(bids_prefix + 'fmap/sub-{subject}_{session}_acq-postEpi_dir-pa_epi.{item:01d}')
 
     # Create an empty dictionary called info for each key
 
