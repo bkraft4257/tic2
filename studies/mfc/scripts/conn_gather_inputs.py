@@ -45,7 +45,7 @@ def _make_conn_directory(directory=CONN_PATH):
 # sub-mcf901_ses-1_task-postRest_acq-mbepi_bold_space-MNI152NLin2009cAsym_preproc.nii.gz
 
 
-def _find_functional_images(func_path):
+def _find_functional_images(subject, func_path=FUNC_PATH):
     """
 
     :param func_path:
@@ -64,6 +64,8 @@ def _find_functional_images(func_path):
 
     for jj, jj_bold in enumerate(['space-MNI152NLin2009cAsym_preproc.nii.gz', 'confounds.tsv'], 1):
         for ii, ii_task in enumerate(TASKS):
+
+            func_files[ii][0] = f'{subject}_{ii_task}'
 
             search_string = f'{func_path}/*task-{ii_task}_acq-epi_rec-topup_bold_{jj_bold}'
 
@@ -96,7 +98,7 @@ def main():
     _make_conn_directory()
 
     t1w, tissue_maps = _find_structural_images(ANAT_PATH)
-    func_files = _find_functional_images(FUNC_PATH)
+    func_files = _find_functional_images(SUBJECT, FUNC_PATH)
 
     pprint.pprint(func_files)
 
