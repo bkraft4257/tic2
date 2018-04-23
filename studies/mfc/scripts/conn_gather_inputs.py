@@ -60,7 +60,7 @@ def _find_functional_images(func_path):
 
     """
 
-    for jj in ['_space-MNI152NLin2009cAsym_preproc.nii.gz', '_bold_confounds.tsv']:
+    for jj in ['space-MNI152NLin2009cAsym_preproc.nii.gz', 'bold_confounds.tsv']:
 
         func_files = {}
 
