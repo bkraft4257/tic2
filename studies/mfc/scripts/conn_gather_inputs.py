@@ -32,8 +32,8 @@ TASKS = ['preRest', 'preHeat1', 'preHeat2', 'postHeat3', 'postHeat4', 'postRest'
 CONFOUNDS = ['X', 'Y', 'Z', 'RotX', 'RotY', 'RotZ']
 
 
-def _read_confounds(filename):
-    df_confounds = pandas.read_csv(filename, sep='\t')
+def _read_confounds(filename, confounds):
+    df_confounds = pandas.read_csv(filename, sep='\t', usecols=confounds)
     return df_confounds
 
 
@@ -125,8 +125,10 @@ def main():
 
     pprint.pprint(func_files)
 
-    df_confounds = _read_confounds(func_files[0][2])
-    _write_confounds(df_confounds[CONFOUNDS], 'confounds.csv')
+    df_confounds = _read_confounds(func_files[0][2], CONFOUNDS)
+    display(df_confounds)
+
+    _write_confounds(df_confounds, 'confounds.csv')
 
 
 if __name__ == '__main__':
