@@ -89,22 +89,23 @@ def _find_structural_images(subject, anat_path):
     :return:
     """
 
-    anat_files = _pre_allocate_2d_list(2, 4)
+    anat_files = [0]*5
+    anat_files[0] = f'{subject}'
 
-    t1w = glob.glob(f'{anat_path}/*_T1w_space-MNI152NLin2009cAsym_preproc.nii.gz')
+    anat_files[1] = glob.glob(f'{anat_path}/*_T1w_space-MNI152NLin2009cAsym_preproc.nii.gz')
 
-    tissue_maps = []
+    for ii, ii_tissue_type in enumerate(['CSF', 'GM', 'WM'],2):
+        anat_files[ii] = glob.glob(f'{anat_path}/*T1w_space-MNI152NLin2009cAsym_class-{ii}_probtissue.nii.gz')
 
-    for ii in ['CSF', 'GM', 'WM']:
-        tissue_maps.append(glob.glob(f'{anat_path}/*T1w_space-MNI152NLin2009cAsym_class-{ii}_probtissue.nii.gz'))
-
-    return t1w, tissue_maps
+    return anat_files
 
 
 def main():
     _make_conn_directory()
 
-    t1w, tissue_maps = _find_structural_images(SUBJECT, ANAT_PATH)
+    anat_files = _find_structural_images(SUBJECT, ANAT_PATH)
+    pprint.pprint(anat_files)
+
     func_files = _find_functional_images(SUBJECT, FUNC_PATH)
 
     pprint.pprint(func_files)
