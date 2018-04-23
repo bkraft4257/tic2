@@ -1,24 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="6f3e13b3-cd58-4c4d-98f6-1a68f8358bfb" name="Default" comment="Added rec-fmap and rec-topup to EPI images so we can compare recon.">
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/docs/source/other/conn_batch_help.md" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/studies/mfc/scripts/conn_gather_inputs.py" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/tests/test_fmriprep_tools.py" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/tests/test_operations.py" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/tests/test_slack.py" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/tests/test_tic_io.py" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/tic_core/fmriprep_tools.py" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/tic_core/operations.py" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/tic_core/slack.py" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/tic_core/tic_io.py" />
-      <change beforePath="$PROJECT_DIR$/.idea/dictionaries/bkraft.xml" afterPath="$PROJECT_DIR$/.idea/dictionaries/bkraft.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/tic_core.iml" afterPath="$PROJECT_DIR$/.idea/tic_core.iml" />
+    <list default="true" id="6f3e13b3-cd58-4c4d-98f6-1a68f8358bfb" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/studies/mfc/scripts/clean_bids.sh" afterPath="$PROJECT_DIR$/studies/mfc/scripts/clean_bids.sh" />
-      <change beforePath="$PROJECT_DIR$/studies/mfc/scripts/mfc_protocol.py" afterPath="$PROJECT_DIR$/studies/mfc/scripts/mfc_protocol.py" />
+      <change beforePath="$PROJECT_DIR$/studies/mfc/scripts/conn_gather_inputs.py" afterPath="$PROJECT_DIR$/studies/mfc/scripts/conn_gather_inputs.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -169,8 +154,8 @@
       <file leaf-file-name="conn_gather_inputs.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/studies/mfc/scripts/conn_gather_inputs.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1126">
-              <caret line="71" column="0" lean-forward="true" selection-start-line="71" selection-start-column="0" selection-end-line="71" selection-end-column="0" />
+            <state relative-caret-position="531">
+              <caret line="36" column="75" lean-forward="true" selection-start-line="36" selection-start-column="75" selection-end-line="36" selection-end-column="75" />
               <folding>
                 <element signature="e#93#102#0" expanded="true" />
               </folding>
@@ -577,13 +562,6 @@
       <option name="presentableId" value="Default" />
       <updated>1517948604886</updated>
     </task>
-    <task id="LOCAL-00412" summary="Dog fooding and updating documentation.">
-      <created>1523630597803</created>
-      <option name="number" value="00412" />
-      <option name="presentableId" value="LOCAL-00412" />
-      <option name="project" value="LOCAL" />
-      <updated>1523630597803</updated>
-    </task>
     <task id="LOCAL-00413" summary="Dog fooding and updating documentation.">
       <created>1523631460917</created>
       <option name="number" value="00413" />
@@ -920,7 +898,14 @@
       <option name="project" value="LOCAL" />
       <updated>1524144475946</updated>
     </task>
-    <option name="localTasksCounter" value="461" />
+    <task id="LOCAL-00461" summary="Started with CONN scripts for MFC">
+      <created>1524515538767</created>
+      <option name="number" value="00461" />
+      <option name="presentableId" value="LOCAL-00461" />
+      <option name="project" value="LOCAL" />
+      <updated>1524515538768</updated>
+    </task>
+    <option name="localTasksCounter" value="462" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -1014,7 +999,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Updated mriqc" />
     <MESSAGE value="Updated mriqc.  There was a &amp;&gt; instead of &amp;&gt;&gt; bug in the code." />
     <MESSAGE value="Updated processing_status.py by including to_string instead of my own formatting." />
     <MESSAGE value="Updated create_acrostic_list.py to handle single session data.&#10;Updated processing_status.py to handle single session." />
@@ -1039,7 +1023,8 @@
     <MESSAGE value="Switched MCF to MFC.  Oops." />
     <MESSAGE value="Protocol testing. Encountered &quot;bug&quot; while converting phasediff image" />
     <MESSAGE value="Added rec-fmap and rec-topup to EPI images so we can compare recon." />
-    <option name="LAST_COMMIT_MESSAGE" value="Added rec-fmap and rec-topup to EPI images so we can compare recon." />
+    <MESSAGE value="Started with CONN scripts for MFC" />
+    <option name="LAST_COMMIT_MESSAGE" value="Started with CONN scripts for MFC" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1370,6 +1355,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="850">
           <caret line="50" column="17" lean-forward="false" selection-start-line="50" selection-start-column="17" selection-end-line="50" selection-end-column="17" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1384,6 +1370,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="340">
           <caret line="20" column="50" lean-forward="false" selection-start-line="20" selection-start-column="50" selection-end-line="20" selection-end-column="50" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1391,6 +1378,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="490">
           <caret line="30" column="72" lean-forward="false" selection-start-line="30" selection-start-column="72" selection-end-line="30" selection-end-column="72" />
+          <folding>
+            <element signature="e#57#66#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1405,6 +1395,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="782">
           <caret line="52" column="0" lean-forward="false" selection-start-line="52" selection-start-column="0" selection-end-line="58" selection-end-column="0" />
+          <folding>
+            <element signature="e#55#64#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1495,8 +1488,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/studies/mfc/scripts/conn_gather_inputs.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1126">
-          <caret line="71" column="0" lean-forward="true" selection-start-line="71" selection-start-column="0" selection-end-line="71" selection-end-column="0" />
+        <state relative-caret-position="531">
+          <caret line="36" column="75" lean-forward="true" selection-start-line="36" selection-start-column="75" selection-end-line="36" selection-end-column="75" />
           <folding>
             <element signature="e#93#102#0" expanded="true" />
           </folding>
