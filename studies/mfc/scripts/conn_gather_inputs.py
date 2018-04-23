@@ -51,12 +51,12 @@ def _find_bold_confounds():
 
 def _find_structural_images(anat_path):
 
-    t1w = glob.glob( f'{anat_path}/*_T1w_space-MNI152NLin2009cAsym_preproc.nii.gz')
+    t1w = glob.glob(f'{anat_path}/*_T1w_space-MNI152NLin2009cAsym_preproc.nii.gz')
 
     tissue_maps = []
 
     for ii in ['CSF', 'GM', 'WM']:
-        tissue_maps.append(glob.glob( f'{anat_path}/*T1w_space-MNI152NLin2009cAsym_class-{ii}_probtissue.nii.gz'))
+        tissue_maps.append(glob.glob(f'{anat_path}/*T1w_space-MNI152NLin2009cAsym_class-{ii}_probtissue.nii.gz'))
 
     return t1w, tissue_maps
 
