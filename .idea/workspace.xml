@@ -154,8 +154,8 @@
       <file leaf-file-name="conn_gather_inputs.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/studies/mfc/scripts/conn_gather_inputs.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="190">
-              <caret line="25" column="80" lean-forward="false" selection-start-line="25" selection-start-column="80" selection-end-line="25" selection-end-column="80" />
+            <state relative-caret-position="517">
+              <caret line="96" column="125" lean-forward="false" selection-start-line="96" selection-start-column="125" selection-end-line="96" selection-end-column="125" />
               <folding>
                 <element signature="e#93#102#0" expanded="true" />
               </folding>
@@ -562,13 +562,6 @@
       <option name="presentableId" value="Default" />
       <updated>1517948604886</updated>
     </task>
-    <task id="LOCAL-00443" summary="Draft of mcf_protcol">
-      <created>1523657249944</created>
-      <option name="number" value="00443" />
-      <option name="presentableId" value="LOCAL-00443" />
-      <option name="project" value="LOCAL" />
-      <updated>1523657249944</updated>
-    </task>
     <task id="LOCAL-00444" summary="Draft of mcf_protcol">
       <created>1523657366468</created>
       <option name="number" value="00444" />
@@ -905,7 +898,14 @@
       <option name="project" value="LOCAL" />
       <updated>1524518545368</updated>
     </task>
-    <option name="localTasksCounter" value="492" />
+    <task id="LOCAL-00492" summary="Started with CONN scripts for MFC">
+      <created>1524518580618</created>
+      <option name="number" value="00492" />
+      <option name="presentableId" value="LOCAL-00492" />
+      <option name="project" value="LOCAL" />
+      <updated>1524518580618</updated>
+    </task>
+    <option name="localTasksCounter" value="493" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -1488,8 +1488,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/studies/mfc/scripts/conn_gather_inputs.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="25" column="80" lean-forward="false" selection-start-line="25" selection-start-column="80" selection-end-line="25" selection-end-column="80" />
+        <state relative-caret-position="517">
+          <caret line="96" column="125" lean-forward="false" selection-start-line="96" selection-start-column="125" selection-end-line="96" selection-end-column="125" />
           <folding>
             <element signature="e#93#102#0" expanded="true" />
           </folding>
