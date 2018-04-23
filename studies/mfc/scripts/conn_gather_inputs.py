@@ -65,7 +65,7 @@ if __name__ == '__main__':
 
     _make_conn_directory()
 
-    t1w, tissue_maps = _find_structural_images(anat_path)
+    t1w, tissue_maps = _find_structural_images(ANAT_PATH)
 
     print(t1w)
     print(tissue_maps)
