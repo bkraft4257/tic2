@@ -23,7 +23,7 @@ SUBJECT_SESSION_PATH = os.path.join(FMRIPREP_PATH, f'sub-{SUBJECT}', f'ses-{SESS
 ANAT_PATH = os.path.join(SUBJECT_SESSION_PATH, 'anat')
 FUNC_PATH = os.path.join(SUBJECT_SESSION_PATH, 'func')
 
-TASKS = ['preRest', 'preHeat1', 'preHeat2', 'postRest', 'postHeat3', 'postHeat4' ]
+TASKS = ['preRest', 'preHeat1', 'preHeat2', 'postHeat3', 'postHeat4', 'postRest']
 
 
 def _make_conn_directory(directory=CONN_PATH):
