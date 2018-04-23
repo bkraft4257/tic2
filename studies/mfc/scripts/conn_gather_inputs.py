@@ -8,6 +8,7 @@ Script for gathering inputs for CONN
 import os
 import glob
 import pprint
+import sys
 import shutil
 
 SUBJECT = 'mfc902'
@@ -23,6 +24,7 @@ ANAT_PATH = os.path.join(SUBJECT_SESSION_PATH, 'anat')
 FUNC_PATH = os.path.join(SUBJECT_SESSION_PATH, 'func')
 
 TASKS = ['preRest', 'preHeat1', 'preHeat2', 'postRest', 'postHeat3', 'postHeat4' ]
+
 
 def _make_conn_directory(directory=CONN_PATH):
     """
@@ -46,7 +48,7 @@ def _make_conn_directory(directory=CONN_PATH):
 def _find_functional_images(func_path):
     """
 
-    :param fmri_path:
+    :param func_path:
     :return:
 
      1	sub-mfc902_ses-1_task-postHeat3_acq-epi_rec-topup_bold_space-MNI152NLin2009cAsym_preproc.nii.gz
@@ -71,6 +73,11 @@ def _find_bold_confounds():
 
 
 def _find_structural_images(anat_path):
+    """
+
+    :param anat_path:
+    :return:
+    """
 
     t1w = glob.glob(f'{anat_path}/*_T1w_space-MNI152NLin2009cAsym_preproc.nii.gz')
 
@@ -82,11 +89,14 @@ def _find_structural_images(anat_path):
     return t1w, tissue_maps
 
 
-if __name__ == '__main__':
-
+def main():
     _make_conn_directory()
 
     t1w, tissue_maps = _find_structural_images(ANAT_PATH)
     func_files = _find_functional_images(FUNC_PATH)
 
     pprint.pprint(func_files)
+
+
+if __name__ == '__main__':
+    sys.exit(main())
