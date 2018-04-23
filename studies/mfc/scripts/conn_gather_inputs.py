@@ -127,7 +127,7 @@ def main():
     df_confounds = _read_confounds(func_files[0][2], CONFOUNDS)
     display(df_confounds)
 
-    _write_confounds(df_confounds, 'confounds.csv')
+    _write_confounds(df_confounds.round(6), 'confounds.csv')
 
 
 if __name__ == '__main__':
