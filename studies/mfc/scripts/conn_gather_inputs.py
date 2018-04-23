@@ -65,7 +65,7 @@ def _find_functional_images(func_path):
     for jj, jj_bold in enumerate(['space-MNI152NLin2009cAsym_preproc.nii.gz', 'confounds.tsv']):
         for ii, ii_task in enumerate(TASKS):
 
-            search_string = f'{func_path}/*task-{ii_task}_acq-epi_rec-topup_bold_{jj}'
+            search_string = f'{func_path}/*task-{ii_task}_acq-epi_rec-topup_bold_{jj_task}'
             print(search_string)
 
             tmp = glob.glob(search_string)
