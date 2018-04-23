@@ -45,6 +45,10 @@ def _make_conn_directory(directory=CONN_PATH):
 # sub-mcf901_ses-1_task-postRest_acq-mbepi_bold_space-MNI152NLin2009cAsym_preproc.nii.gz
 
 
+def _pre_allocate_2d_list(dim1, dim2):
+    return [[ 0 for jj in range(dim2)] for ii in range(dim1)]
+
+
 def _find_functional_images(subject, func_path=FUNC_PATH):
     """
 
@@ -60,7 +64,7 @@ def _find_functional_images(subject, func_path=FUNC_PATH):
 
     """
 
-    func_files = [[ 0 for jj in range(3)] for ii in range(6)]
+    func_files = _pre_allocate_2d_list(3, 6)
 
     for jj, jj_bold in enumerate(['space-MNI152NLin2009cAsym_preproc.nii.gz', 'confounds.tsv'], 1):
         for ii, ii_task in enumerate(TASKS):
@@ -77,12 +81,14 @@ def _find_functional_images(subject, func_path=FUNC_PATH):
     return func_files
 
 
-def _find_structural_images(anat_path):
+def _find_structural_images(subject, anat_path):
     """
 
     :param anat_path:
     :return:
     """
+
+    anat_files = _pre_allocate_2d_list(2, 4)
 
     t1w = glob.glob(f'{anat_path}/*_T1w_space-MNI152NLin2009cAsym_preproc.nii.gz')
 
