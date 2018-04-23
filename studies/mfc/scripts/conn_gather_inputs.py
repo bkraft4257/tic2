@@ -37,6 +37,11 @@ def _read_confounds(filename):
     display(df_confounds[CONFOUNDS])
 
 
+def _write_confounds(in_df, filename):
+    in_df.to_csv(filename)
+    display(in_df)
+
+
 def _make_conn_directory(directory=CONN_PATH):
     """
     Make CONN directory if it doesn't exist
@@ -120,7 +125,8 @@ def main():
 
     pprint.pprint(func_files)
 
-    _read_confounds(func_files[0][2])
+    df_confounds = _read_confounds(func_files[0][2])
+    _write_confounds(df_confounds[CONFOUNDS], 'confounds.csv')
 
 
 if __name__ == '__main__':
