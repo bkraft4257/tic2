@@ -65,7 +65,6 @@ def _find_functional_images(subject, func_path=FUNC_PATH):
     """
 
     func_files = _pre_allocate_2d_list(6,3)
-    print(func_files)
 
     for jj, jj_bold in enumerate(['space-MNI152NLin2009cAsym_preproc.nii.gz', 'confounds.tsv'], 1):
         for ii, ii_task in enumerate(TASKS):
