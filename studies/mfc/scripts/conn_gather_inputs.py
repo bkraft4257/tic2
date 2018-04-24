@@ -155,10 +155,7 @@ def main():
     _make_conn_directory()
 
     for ii in ['csf', 'wm', 'gm', 't1']:
-
-        if GATHER_DICT[ii].type == 'confound':
-            _copy_file(GATHER_DICT[ii], SUBJECT_SESSION_PATH)
-        else:
+        _copy_file(GATHER_DICT[ii], SUBJECT_SESSION_PATH)
 
 
 if __name__ == '__main__':
