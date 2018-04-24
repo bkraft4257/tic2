@@ -10,6 +10,7 @@ import glob
 import pprint
 import sys
 import pandas
+from collections import namedtuple
 
 from IPython.display import display
 
@@ -31,6 +32,37 @@ TASKS = ['preRest', 'preHeat1', 'preHeat2', 'postHeat3', 'postHeat4', 'postRest'
 
 CONFOUNDS = ['X', 'Y', 'Z', 'RotX', 'RotY', 'RotZ']
 
+GATHER = namedtuple('Gather', ['name', 'type', 'glob_string', 'suffix', ])
+
+
+GATHER_DICT = dict()
+
+GATHER_DICT['csf'] = GATHER('csf', 'anat', '/anat/*_T1w_space-MNI152NLin2009cAsym_class-CSF_probtissue.nii.gz',  'csf.nii.gz')
+GATHER_DICT['wm'] = GATHER('wm', 'anat', '/anat/*_T1w_space-MNI152NLin2009cAsym_class-WM_probtissue.nii.gz',  'wm.nii.gz')
+GATHER_DICT['gm'] = GATHER('gm', 'anat', '/anat/*_T1w_space-MNI152NLin2009cAsym_class-GM_probtissue.nii.gz', 'gm.nii.gz')
+GATHER_DICT['t1'] = GATHER('t1', 'anat', '/anat/*_T1w_space-MNI152NLin2009cAsym_preproc.nii.gz', 't1w.nii.gz')
+
+
+GATHER_DICT['pre_neutral_1'] = GATHER('pre_neutral_1',
+                                      'fmri',
+                                      '_task-preNeutral1_acq-epi_rec-topup_bold_space-MNI152NLin2009cAsym_preproc.nii.gz',
+                                      'pre_neutral_1.nii.gz')
+
+GATHER_DICT['pre_neutral_1_confounds'] = GATHER('pre_neutral_1',
+                                                'confounds',
+                                                '_task-preNeutral1_acq-epi_rec-topup_bold_confounds.csv',
+                                                'pre_neutral_1.csv')
+
+GATHER_DICT['pre_heat_1'] = GATHER('pre_heat_1',
+                                   'fmri',
+                                   '_task-preHeat1_acq-epi_rec-topup_bold_space-MNI152NLin2009cAsym_preproc.nii.gz',
+                                   'pre_heat_1.nii.gz')
+
+GATHER_DICT['pre_heat_1_confounds'] = GATHER('pre_heat_1',
+                                             'confounds',
+                                             '_task-preHeat1_acq-epi_rec-topup_bold_confounds.csv',
+                                             'pre_heat_1.csv')
+
 
 def _read_confounds(filename, confounds):
     df_confounds = pandas.read_csv(filename, sep='\t', usecols=confounds)
@@ -51,17 +83,9 @@ def _make_conn_directory(directory=CONN_PATH):
     if not os.path.exists(directory):
         os.makedirs(directory)
 
-# sub-mcf901_ses-1_T1w_space-MNI152NLin2009cAsym_preproc.nii.gz
-# sub-mcf901_ses-1_T1w_space-MNI152NLin2009cAsym_class-CSF_probtissue.nii.gz
-# sub-mcf901_ses-1_T1w_space-MNI152NLin2009cAsym_class-GM_probtissue.nii.gz
-# sub-mcf901_ses-1_T1w_space-MNI152NLin2009cAsym_class-WM_probtissue.nii.gz
-
-# sub-mcf901_ses-1_task-postRest_acq-mbepi_bold_confounds.txt~
-# sub-mcf901_ses-1_task-postRest_acq-mbepi_bold_space-MNI152NLin2009cAsym_preproc.nii.gz
-
 
 def _pre_allocate_2d_list(dim1, dim2):
-    return [[ 0 for jj in range(dim2)] for ii in range(dim1)]
+    return [[0 for jj in range(dim2)] for ii in range(dim1)]
 
 
 def _find_functional_images(subject, func_path=FUNC_PATH):
@@ -96,6 +120,23 @@ def _find_functional_images(subject, func_path=FUNC_PATH):
     return func_files
 
 
+def _find_file(glob_string, directory):
+
+    file_found = glob.glob(f'{directory}/{glob_string}')
+
+    if len(file_found) > 1:
+        sys.exit('Found more than 1 file. Revise glob string.')
+
+    return file_found[0]
+
+
+def _copy_file(gather, directory):
+    found_file = _find_file(gather.glob_string, directory)
+    print(found_file)
+
+    return
+
+
 def _find_structural_images(subject, anat_path):
     """
 
@@ -117,17 +158,8 @@ def _find_structural_images(subject, anat_path):
 def main():
     _make_conn_directory()
 
-    anat_files = _find_structural_images(SUBJECT, ANAT_PATH)
-    pprint.pprint(anat_files)
-
-    func_files = _find_functional_images(SUBJECT, FUNC_PATH)
-
-    pprint.pprint(func_files)
-
-    df_confounds = _read_confounds(func_files[0][2], CONFOUNDS)
-    display(df_confounds)
-
-    _write_confounds(df_confounds.round(6), 'confounds.csv')
+    for ii in ['csf', 'wm', 'gm', 'csf']:
+        _copy_file(GATHER_DICT[ii], SUBJECT_SESSION_PATH)
 
 
 if __name__ == '__main__':
