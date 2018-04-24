@@ -154,7 +154,7 @@ def _find_structural_images(subject, anat_path):
 def main():
     _make_conn_directory()
 
-    for ii in GATHER_DICT.keys:
+    for ii in GATHER_DICT.keys():
 
         print(ii)
 
