@@ -245,6 +245,7 @@ def _argparse():
 
     parser.add_argument('-ss', '--session',
                         help='Regular expression session ',
+                        type=str,
                         default=1)
 
     parser.add_argument('-v', '--verbose', help='Turn on verbose mode.',
