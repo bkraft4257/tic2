@@ -26,104 +26,72 @@ TASKS = ['preRest', 'preHeat1', 'preHeat2', 'postHeat3', 'postHeat4', 'postRest'
 
 CONFOUNDS = ['X', 'Y', 'Z', 'RotX', 'RotY', 'RotZ']
 
-ANAT_NT = namedtuple('ANAT_NT', ['name', 'type', 'glob_string', 'out_filename'])
-FUNC_NT = namedtuple('FUNC_NT', ['name', 'type', 'func_glob_string', 'mask_glob_string', 'out_filename', ])
-CONFOUNDS_NT = namedtuple('CONFOUNDS_NT', ['name', 'type', 'glob_string', 'out_filename', ])
+ANAT_NT = namedtuple('ANAT_NT', ['glob_string', 'out_filename', ])
+FUNC_NT = namedtuple('FUNC_NT', ['func_glob_string', 'mask_glob_string', 'out_filename', ])
+CONFOUNDS_NT = namedtuple('CONFOUNDS_NT', ['glob_string', 'out_filename', ])
 
 ANAT_DICT = dict()
-ANAT_DICT['csf'] = ANAT_NT('csf', 'anat', '/anat/*_T1w_space-MNI152NLin2009cAsym_class-CSF_probtissue.nii.gz', 'csf.nii.gz')
-ANAT_DICT['wm'] = ANAT_NT('wm', 'anat', '/anat/*_T1w_space-MNI152NLin2009cAsym_class-WM_probtissue.nii.gz', 'wm.nii.gz')
-ANAT_DICT['gm'] = ANAT_NT('gm', 'anat', '/anat/*_T1w_space-MNI152NLin2009cAsym_class-GM_probtissue.nii.gz', 'gm.nii.gz')
-ANAT_DICT['t1'] = ANAT_NT('t1', 'anat', '/anat/*_T1w_space-MNI152NLin2009cAsym_preproc.nii.gz', 't1w.nii.gz')
+ANAT_DICT['csf'] = ANAT_NT('/anat/*_T1w_space-MNI152NLin2009cAsym_class-CSF_probtissue.nii.gz', 'csf.nii.gz')
+ANAT_DICT['wm'] = ANAT_NT('/anat/*_T1w_space-MNI152NLin2009cAsym_class-WM_probtissue.nii.gz', 'wm.nii.gz')
+ANAT_DICT['gm'] = ANAT_NT('/anat/*_T1w_space-MNI152NLin2009cAsym_class-GM_probtissue.nii.gz', 'gm.nii.gz')
+ANAT_DICT['t1'] = ANAT_NT('/anat/*_T1w_space-MNI152NLin2009cAsym_preproc.nii.gz', 't1w.nii.gz')
 
 FUNC_DICT = dict()
-FUNC_DICT['pre_neutral_1'] = FUNC_NT('pre_neutral_1',
-                                     'fmri',
-                                     '/func/*_task-preRest_acq-epi_rec-topup_bold_space-MNI152NLin2009cAsym_preproc.nii.gz',
+FUNC_DICT['pre_neutral_1'] = FUNC_NT('/func/*_task-preRest_acq-epi_rec-topup_bold_space-MNI152NLin2009cAsym_preproc.nii.gz',
                                      '/func/*_task-preRest_acq-epi_rec-topup_bold_space-MNI152NLin2009cAsym_brainmask.nii.gz',
                                      'pre_neutral_1.nii.gz')
 
-FUNC_DICT['pre_neutral_2'] = FUNC_NT('pre_neutral_2',
-                                     'fmri',
-                                     '/func/*_task-preRest_acq-epi_rec-topup_bold_space-MNI152NLin2009cAsym_preproc.nii.gz',
+FUNC_DICT['pre_neutral_2'] = FUNC_NT('/func/*_task-preRest_acq-epi_rec-topup_bold_space-MNI152NLin2009cAsym_preproc.nii.gz',
                                      '/func/*_task-preRest_acq-epi_rec-topup_bold_space-MNI152NLin2009cAsym_brainmask.nii.gz',
                                      'pre_neutral_2.nii.gz')
 
-FUNC_DICT['post_neutral_3'] = FUNC_NT('post_neutral_3',
-                                      'fmri',
-                                      '/func/*_task-postRest_acq-epi_rec-topup_bold_space-MNI152NLin2009cAsym_preproc.nii.gz',
+FUNC_DICT['post_neutral_3'] = FUNC_NT('/func/*_task-postRest_acq-epi_rec-topup_bold_space-MNI152NLin2009cAsym_preproc.nii.gz',
                                       '/func/*_task-postRest_acq-epi_rec-topup_bold_space-MNI152NLin2009cAsym_brainmask.nii.gz',
-                                      'pre_neutral_2.nii.gz')
+                                      'post_neutral_2.nii.gz')
 
-FUNC_DICT['post_neutral_4'] = FUNC_NT('post_neutral_4',
-                                      'fmri',
-                                      '/func/*_task-postRest_acq-epi_rec-topup_bold_space-MNI152NLin2009cAsym_preproc.nii.gz',
+FUNC_DICT['post_neutral_4'] = FUNC_NT('/func/*_task-postRest_acq-epi_rec-topup_bold_space-MNI152NLin2009cAsym_preproc.nii.gz',
                                       '/func/*_task-postRest_acq-epi_rec-topup_bold_space-MNI152NLin2009cAsym_brainmask.nii.gz',
-                                      'pre_neutral_2.nii.gz')
+                                      'post_neutral_4.nii.gz')
 
-FUNC_DICT['pre_heat_1'] = FUNC_NT('pre_heat_1',
-                                  'fmri',
-                                  '/func/*_task-preHeat1_acq-epi_rec-topup_bold_space-MNI152NLin2009cAsym_preproc.nii.gz',
+FUNC_DICT['pre_heat_1'] = FUNC_NT('/func/*_task-preHeat1_acq-epi_rec-topup_bold_space-MNI152NLin2009cAsym_preproc.nii.gz',
                                   '/func/*_task-preHeat1_acq-epi_rec-topup_bold_space-MNI152NLin2009cAsym_brainmask.nii.gz',
                                   'pre_heat_1.nii.gz')
 
-FUNC_DICT['pre_heat_2'] = FUNC_NT('pre_heat_2',
-                                  'fmri',
-                                  '/func/*_task-preHeat2_acq-epi_rec-topup_bold_space-MNI152NLin2009cAsym_preproc.nii.gz',
+FUNC_DICT['pre_heat_2'] = FUNC_NT('/func/*_task-preHeat2_acq-epi_rec-topup_bold_space-MNI152NLin2009cAsym_preproc.nii.gz',
                                   '/func/*_task-preHeat2_acq-epi_rec-topup_bold_space-MNI152NLin2009cAsym_brainmask.nii.gz',
                                   'pre_heat_2.nii.gz')
 
-FUNC_DICT['post_heat_3'] = FUNC_NT('post_heat_3',
-                                   'fmri',
-                                   '/func/*_task-postHeat3_acq-epi_rec-topup_bold_space-MNI152NLin2009cAsym_preproc.nii.gz',
+FUNC_DICT['post_heat_3'] = FUNC_NT('/func/*_task-postHeat3_acq-epi_rec-topup_bold_space-MNI152NLin2009cAsym_preproc.nii.gz',
                                    '/func/*_task-postHeat3_acq-epi_rec-topup_bold_space-MNI152NLin2009cAsym_brainmask.nii.gz',
                                    'post_heat_3.nii.gz')
 
-FUNC_DICT['post_heat_4'] = FUNC_NT('post_heat_4',
-                                   'fmri',
-                                   '/func/*_task-postHeat4_acq-epi_rec-topup_bold_space-MNI152NLin2009cAsym_preproc.nii.gz',
+FUNC_DICT['post_heat_4'] = FUNC_NT('/func/*_task-postHeat4_acq-epi_rec-topup_bold_space-MNI152NLin2009cAsym_preproc.nii.gz',
                                    '/func/*_task-postHeat4_acq-epi_rec-topup_bold_space-MNI152NLin2009cAsym_brainmask.nii.gz',
                                    'post_heat_4.nii.gz')
 
 CONFOUNDS_DICT = dict()
-CONFOUNDS_DICT['pre_neutral_1'] = CONFOUNDS_NT('pre_neutral_1',
-                                               'confounds',
-                                               '/func/*_task-preRest_acq-epi_rec-topup_bold_confounds.tsv',
+CONFOUNDS_DICT['pre_neutral_1'] = CONFOUNDS_NT('/func/*_task-preRest_acq-epi_rec-topup_bold_confounds.tsv',
                                                'pre_neutral_1_confounds.csv')
 
-CONFOUNDS_DICT['pre_neutral_2'] = CONFOUNDS_NT('pre_neutral_2',
-                                               'confounds',
-                                               '/func/*_task-preRest_acq-epi_rec-topup_bold_confounds.tsv',
+CONFOUNDS_DICT['pre_neutral_2'] = CONFOUNDS_NT('/func/*_task-preRest_acq-epi_rec-topup_bold_confounds.tsv',
                                                'pre_neutral_2_confounds.csv')
 
-CONFOUNDS_DICT['post_neutral_3'] = CONFOUNDS_NT('post_neutral_3',
-                                                'confounds',
-                                                '/func/*_task-postRest_acq-epi_rec-topup_bold_confounds.tsv',
+CONFOUNDS_DICT['post_neutral_3'] = CONFOUNDS_NT('/func/*_task-postRest_acq-epi_rec-topup_bold_confounds.tsv',
                                                 'pre_neutral_3_confounds.csv')
 
-CONFOUNDS_DICT['post_neutral_4'] = CONFOUNDS_NT('post_neutral_4',
-                                                'confounds',
-                                                '/func/*_task-postRest_acq-epi_rec-topup_bold_confounds.tsv',
+CONFOUNDS_DICT['post_neutral_4'] = CONFOUNDS_NT('/func/*_task-postRest_acq-epi_rec-topup_bold_confounds.tsv',
                                                 'pre_neutral_4_confounds.csv')
 
-CONFOUNDS_DICT['pre_heat_1'] = CONFOUNDS_NT('pre_heat_1',
-                                            'confounds',
-                                            '/func/*_task-preHeat1_acq-epi_rec-topup_bold_confounds.tsv',
+CONFOUNDS_DICT['pre_heat_1'] = CONFOUNDS_NT('/func/*_task-preHeat1_acq-epi_rec-topup_bold_confounds.tsv',
                                             'pre_heat_1_confounds.csv')
 
-CONFOUNDS_DICT['pre_heat_2'] = CONFOUNDS_NT('pre_heat_2',
-                                            'confounds',
-                                            '/func/*_task-preHeat2_acq-epi_rec-topup_bold_confounds.tsv',
+CONFOUNDS_DICT['pre_heat_2'] = CONFOUNDS_NT('/func/*_task-preHeat2_acq-epi_rec-topup_bold_confounds.tsv',
                                             'pre_heat_2_confounds.csv')
 
-CONFOUNDS_DICT['post_heat_3'] = CONFOUNDS_NT('post_heat_3',
-                                             'confounds',
-                                             '/func/*_task-postHeat3_acq-epi_rec-topup_bold_confounds.tsv',
+CONFOUNDS_DICT['post_heat_3'] = CONFOUNDS_NT('/func/*_task-postHeat3_acq-epi_rec-topup_bold_confounds.tsv',
                                              'post_heat_3_confounds.csv')
 
-CONFOUNDS_DICT['post_heat_4'] = CONFOUNDS_NT('post_heat_4',
-                                             'confounds',
-                                             '/func/*_task-postHeat4_acq-epi_rec-topup_bold_confounds.tsv',
+CONFOUNDS_DICT['post_heat_4'] = CONFOUNDS_NT('/func/*_task-postHeat4_acq-epi_rec-topup_bold_confounds.tsv',
                                              'post_heat_4_confounds.csv')
 
 
