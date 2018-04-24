@@ -169,9 +169,10 @@ def _gather_func_file(gather,
                   out_file=output_file )
 
 
-
 def main():
     _make_conn_directory()
+
+    # Process Anatomical Images
 
     for ii in ANAT_DICT.keys():
 
@@ -186,8 +187,7 @@ def main():
         except ValueError:
             print(f'Unknown key {ii}')
 
-
-
+    # Process Functional Images
     for ii in FUNC_DICT.keys():
 
         print(ii)
@@ -200,7 +200,6 @@ def main():
 
         except ValueError:
             print(f'Unknown key {ii}')
-
 
 
 if __name__ == '__main__':
