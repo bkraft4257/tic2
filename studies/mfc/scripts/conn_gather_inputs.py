@@ -34,9 +34,9 @@ TASKS = ['preRest', 'preHeat1', 'preHeat2', 'postHeat3', 'postHeat4', 'postRest'
 
 CONFOUNDS = ['X', 'Y', 'Z', 'RotX', 'RotY', 'RotZ']
 
-ANAT_NT = namedtuple('ANAT_NT', ['name', 'type', 'glob_string', 'copy_to_filename'])
-FUNC_NT = namedtuple('FUNC_NT', ['name', 'type', 'func_glob_string', 'mask_glob_string', 'func_copy_to_filename',])
-CONFOUNDS_NT = namedtuple('CONFOUNDS_NT', ['name', 'type', 'glob_string', 'func_copy_to_filename',])
+ANAT_NT = namedtuple('ANAT_NT', ['name', 'type', 'glob_string', 'out_filename'])
+FUNC_NT = namedtuple('FUNC_NT', ['name', 'type', 'func_glob_string', 'mask_glob_string', 'out_filename',])
+CONFOUNDS_NT = namedtuple('CONFOUNDS_NT', ['name', 'type', 'glob_string', 'out_filename',])
 
 ANAT_DICT = dict()
 ANAT_DICT['csf'] = ANAT_NT('csf', 'anat', '/anat/*_T1w_space-MNI152NLin2009cAsym_class-CSF_probtissue.nii.gz',  'csf.nii.gz')
@@ -99,6 +99,10 @@ def _find_file(glob_string, directory):
     return file_found[0]
 
 
+def _create_full_output_filename(copy_to_directory, subject, session, out_fiename):
+    return os.path.join(copy_to_directory, f'sub-{subject}_ses-{session}_{gather.out_filename}')
+
+
 def _gather_confounds_file(gather,
                            subject,
                            session,
@@ -108,6 +112,8 @@ def _gather_confounds_file(gather,
     """
 
     :param gather:
+    :param subject:
+    :param session:
     :param search_directory:
     :param copy_to_directory:
     :param confounds:
@@ -115,7 +121,7 @@ def _gather_confounds_file(gather,
     """
 
     found_file = _find_file(gather.glob_string, search_directory)
-    _extract_confounds(found_file, os.path.join(copy_to_directory, f'sub-{subject}_ses-{session}_{gather.copy_to_filename}'), confounds)
+    _extract_confounds(found_file, _create_full_output_filename(copy_to_directory, subject, session, gather.out_filename), confounds)
 
     return
 
@@ -136,7 +142,7 @@ def _gather_anat_file(gather,
     """
 
     found_file = _find_file(gather.glob_string, search_directory)
-    shutil.copy(found_file, os.path.join(copy_to_directory, f'sub-{subject}_ses-{session}_{gather.copy_to_filename}'))
+    shutil.copy(found_file, _create_full_output_filename(copy_to_directory, subject, session, gather.out_filename))
 
 
 def _gather_func_file(gather,
@@ -156,7 +162,7 @@ def _gather_func_file(gather,
 
     func_found_file = _find_file(gather.func_glob_string, search_directory)
     mask_found_file = _find_file(gather.mask_glob_string, search_directory)
-    output_file = os.path.join(copy_to_directory, f'sub-{subject}_ses-{session}_{gather.copy_to_filename}')
+    output_file = _create_full_output_filename(copy_to_directory, subject, session, gather.out_filename)
 
     print('\n')
     print(func_found_file)
