@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6f3e13b3-cd58-4c4d-98f6-1a68f8358bfb" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/dictionaries/bkraft.xml" afterPath="$PROJECT_DIR$/.idea/dictionaries/bkraft.xml" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/studies/mfc/scripts/conn_gather_inputs.py" afterPath="$PROJECT_DIR$/studies/mfc/scripts/conn_gather_inputs.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -51,24 +51,24 @@
       <file leaf-file-name="conn_gather_inputs.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/studies/mfc/scripts/conn_gather_inputs.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="123">
-              <caret line="184" column="17" lean-forward="true" selection-start-line="184" selection-start-column="17" selection-end-line="184" selection-end-column="17" />
+            <state relative-caret-position="594">
+              <caret line="143" column="0" lean-forward="true" selection-start-line="143" selection-start-column="0" selection-end-line="143" selection-end-column="0" />
               <folding>
                 <element signature="n#!!doc" expanded="false" />
                 <element signature="e#47#91#1" expanded="false" />
                 <element signature="e#93#108#0" expanded="true" />
-                <element signature="e#2235#2440#0" expanded="false" />
-                <element signature="e#2235#2331#1" expanded="false" />
-                <element signature="e#2489#2582#0" expanded="false" />
-                <element signature="e#2628#2684#0" expanded="false" />
-                <element signature="e#2738#2877#0" expanded="false" />
-                <element signature="e#2738#2807#1" expanded="false" />
-                <element signature="e#2925#3270#0" expanded="false" />
-                <element signature="e#3362#3447#0" expanded="false" />
-                <element signature="e#3711#4089#0" expanded="false" />
-                <element signature="e#3711#3876#1" expanded="false" />
-                <element signature="e#4304#4429#1" expanded="false" />
-                <element signature="e#4827#4952#1" expanded="false" />
+                <element signature="e#7535#7740#0" expanded="false" />
+                <element signature="e#7535#7631#1" expanded="false" />
+                <element signature="e#7789#7882#0" expanded="false" />
+                <element signature="e#7928#7984#0" expanded="false" />
+                <element signature="e#8038#8177#0" expanded="false" />
+                <element signature="e#8038#8107#1" expanded="false" />
+                <element signature="e#8225#8570#0" expanded="false" />
+                <element signature="e#8662#8747#0" expanded="false" />
+                <element signature="e#9011#9389#0" expanded="false" />
+                <element signature="e#9011#9176#1" expanded="false" />
+                <element signature="e#9604#9729#1" expanded="false" />
+                <element signature="e#10127#10252#1" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -227,6 +227,7 @@
       <replace>topup</replace>
       <replace>TIC_PRIVATE_CONFIG_JSON</replace>
       <replace>post_</replace>
+      <replace>heat</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -583,13 +584,6 @@
       <option name="presentableId" value="Default" />
       <updated>1517948604886</updated>
     </task>
-    <task id="LOCAL-00481" summary="Started with CONN scripts for MFC">
-      <created>1524517662479</created>
-      <option name="number" value="00481" />
-      <option name="presentableId" value="LOCAL-00481" />
-      <option name="project" value="LOCAL" />
-      <updated>1524517662479</updated>
-    </task>
     <task id="LOCAL-00482" summary="Started with CONN scripts for MFC">
       <created>1524517693554</created>
       <option name="number" value="00482" />
@@ -926,7 +920,14 @@
       <option name="project" value="LOCAL" />
       <updated>1524604568326</updated>
     </task>
-    <option name="localTasksCounter" value="530" />
+    <task id="LOCAL-00530" summary="Started with CONN scripts for MFC">
+      <created>1524604634133</created>
+      <option name="number" value="00530" />
+      <option name="presentableId" value="LOCAL-00530" />
+      <option name="project" value="LOCAL" />
+      <updated>1524604634133</updated>
+    </task>
+    <option name="localTasksCounter" value="531" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -1497,24 +1498,24 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/studies/mfc/scripts/conn_gather_inputs.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="123">
-          <caret line="184" column="17" lean-forward="true" selection-start-line="184" selection-start-column="17" selection-end-line="184" selection-end-column="17" />
+        <state relative-caret-position="594">
+          <caret line="143" column="0" lean-forward="true" selection-start-line="143" selection-start-column="0" selection-end-line="143" selection-end-column="0" />
           <folding>
             <element signature="n#!!doc" expanded="false" />
             <element signature="e#47#91#1" expanded="false" />
             <element signature="e#93#108#0" expanded="true" />
-            <element signature="e#2235#2440#0" expanded="false" />
-            <element signature="e#2235#2331#1" expanded="false" />
-            <element signature="e#2489#2582#0" expanded="false" />
-            <element signature="e#2628#2684#0" expanded="false" />
-            <element signature="e#2738#2877#0" expanded="false" />
-            <element signature="e#2738#2807#1" expanded="false" />
-            <element signature="e#2925#3270#0" expanded="false" />
-            <element signature="e#3362#3447#0" expanded="false" />
-            <element signature="e#3711#4089#0" expanded="false" />
-            <element signature="e#3711#3876#1" expanded="false" />
-            <element signature="e#4304#4429#1" expanded="false" />
-            <element signature="e#4827#4952#1" expanded="false" />
+            <element signature="e#7535#7740#0" expanded="false" />
+            <element signature="e#7535#7631#1" expanded="false" />
+            <element signature="e#7789#7882#0" expanded="false" />
+            <element signature="e#7928#7984#0" expanded="false" />
+            <element signature="e#8038#8177#0" expanded="false" />
+            <element signature="e#8038#8107#1" expanded="false" />
+            <element signature="e#8225#8570#0" expanded="false" />
+            <element signature="e#8662#8747#0" expanded="false" />
+            <element signature="e#9011#9389#0" expanded="false" />
+            <element signature="e#9011#9176#1" expanded="false" />
+            <element signature="e#9604#9729#1" expanded="false" />
+            <element signature="e#10127#10252#1" expanded="false" />
           </folding>
         </state>
       </provider>
