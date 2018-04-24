@@ -212,12 +212,12 @@ def gather_func_files():
 
 
 def gather_confounds_files():
-    for ii in CON_DICT.keys():
+    for ii in CONFOUNDS_DICT.keys():
         try:
-            _gather_func_file(FUNC_DICT[ii],
-                              SUBJECT,
-                              SESSION,
-                              SUBJECT_SESSION_PATH)
+            _gather_confounds_file(CONFOUNDS_DICT[ii],
+                                   SUBJECT,
+                                   SESSION,
+                                   SUBJECT_SESSION_PATH)
 
         except ValueError:
             print(f'Unknown key {ii}')
