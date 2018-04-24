@@ -45,12 +45,12 @@ GATHER_DICT['t1'] = GATHER('t1', 'anat', '/anat/*_T1w_space-MNI152NLin2009cAsym_
 
 GATHER_DICT['pre_neutral_1'] = GATHER('pre_neutral_1',
                                       'fmri',
-                                      '_task-preNeutral1_acq-epi_rec-topup_bold_space-MNI152NLin2009cAsym_preproc.nii.gz',
+                                      '/func/*_task-preNeutral1_acq-epi_rec-topup_bold_space-MNI152NLin2009cAsym_preproc.nii.gz',
                                       'pre_neutral_1.nii.gz')
 
 GATHER_DICT['pre_neutral_1_confounds'] = GATHER('pre_neutral_1',
                                                 'confounds',
-                                                '_task-preNeutral1_acq-epi_rec-topup_bold_confounds.csv',
+                                                '/func/*_task-preNeutral1_acq-epi_rec-topup_bold_confounds.csv',
                                                 'pre_neutral_1.csv')
 
 GATHER_DICT['pre_heat_1'] = GATHER('pre_heat_1',
