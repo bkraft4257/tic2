@@ -15,6 +15,8 @@ from collections import namedtuple
 from IPython.display import display
 
 import shutil
+import nipype.interfaces.fsl as fsl          # fsl
+
 
 SUBJECT = 'mfc902'
 SESSION = 1
@@ -32,36 +34,22 @@ TASKS = ['preRest', 'preHeat1', 'preHeat2', 'postHeat3', 'postHeat4', 'postRest'
 
 CONFOUNDS = ['X', 'Y', 'Z', 'RotX', 'RotY', 'RotZ']
 
-GATHER = namedtuple('Gather', ['name', 'type', 'glob_string', 'copy_to_filename', ])
+ANAT_NT = namedtuple('ANAT_NT', ['name', 'type', 'glob_string', 'copy_to_filename'])
+FUNC_NT = namedtuple('FUNC_NT', ['name', 'type', 'func_glob_string', 'mask_glob_string', 'func_copy_to_filename',])
+CONFOUNDS_NT = namedtuple('CONFOUNDS_NT', ['name', 'type', 'glob_string', 'func_copy_to_filename',])
 
+ANAT_DICT = dict()
+ANAT_DICT['csf'] = ANAT_NT('csf', 'anat', '/anat/*_T1w_space-MNI152NLin2009cAsym_class-CSF_probtissue.nii.gz',  'csf.nii.gz')
+ANAT_DICT['wm'] = ANAT_NT('wm', 'anat', '/anat/*_T1w_space-MNI152NLin2009cAsym_class-WM_probtissue.nii.gz',  'wm.nii.gz')
+ANAT_DICT['gm'] = ANAT_NT('gm', 'anat', '/anat/*_T1w_space-MNI152NLin2009cAsym_class-GM_probtissue.nii.gz', 'gm.nii.gz')
+ANAT_DICT['t1'] = ANAT_NT('t1', 'anat', '/anat/*_T1w_space-MNI152NLin2009cAsym_preproc.nii.gz', 't1w.nii.gz')
 
-GATHER_DICT = dict()
-
-GATHER_DICT['csf'] = GATHER('csf', 'anat', '/anat/*_T1w_space-MNI152NLin2009cAsym_class-CSF_probtissue.nii.gz',  'csf.nii.gz')
-GATHER_DICT['wm'] = GATHER('wm', 'anat', '/anat/*_T1w_space-MNI152NLin2009cAsym_class-WM_probtissue.nii.gz',  'wm.nii.gz')
-GATHER_DICT['gm'] = GATHER('gm', 'anat', '/anat/*_T1w_space-MNI152NLin2009cAsym_class-GM_probtissue.nii.gz', 'gm.nii.gz')
-GATHER_DICT['t1'] = GATHER('t1', 'anat', '/anat/*_T1w_space-MNI152NLin2009cAsym_preproc.nii.gz', 't1w.nii.gz')
-
-
-GATHER_DICT['pre_neutral_1'] = GATHER('pre_neutral_1',
-                                      'fmri',
-                                      '/func/*_task-preRest_acq-epi_rec-topup_bold_space-MNI152NLin2009cAsym_preproc.nii.gz',
-                                      'pre_neutral_1.nii.gz')
-
-GATHER_DICT['pre_neutral_1_confounds'] = GATHER('pre_neutral_1',
-                                                'confounds',
-                                                '/func/*_task-preRest_acq-epi_rec-topup_bold_confounds.tsv',
-                                                'pre_neutral_1.csv')
-
-GATHER_DICT['pre_heat_1'] = GATHER('pre_heat_1',
-                                   'fmri',
-                                   '/func/*_task-preHeat1_acq-epi_rec-topup_bold_space-MNI152NLin2009cAsym_preproc.nii.gz',
-                                   'pre_heat_1.nii.gz')
-
-GATHER_DICT['pre_heat_1_confounds'] = GATHER('pre_heat_1',
-                                             'confounds',
-                                             '/func/*_task-preHeat1_acq-epi_rec-topup_bold_confounds.tsv',
-                                             'pre_heat_1.csv')
+FUNC_DICT = dict()
+FUNC_DICT['pre_neutral_1'] = FUNC_NT('pre_neutral_1',
+                                     'fmri',
+                                     '/func/*_task-preRest_acq-epi_rec-topup_bold_space-MNI152NLin2009cAsym_preproc.nii.gz',
+                                     '/func/*_task-preRest_acq-epi_rec-topup_bold_space-MNI152NLin2009cAsym_mask.nii.gz',
+                                     'pre_neutral_1.nii.gz')
 
 
 def _extract_confounds(in_filename, out_filename, confounds):
@@ -111,12 +99,12 @@ def _find_file(glob_string, directory):
     return file_found[0]
 
 
-def _copy_file(gather,
-               subject,
-               session,
-               search_directory,
-               copy_to_directory=CONN_PATH,
-               confounds=CONFOUNDS):
+def _gather_confounds_file(gather,
+                           subject,
+                           session,
+                           search_directory,
+                           copy_to_directory=CONN_PATH,
+                           confounds=CONFOUNDS):
     """
 
     :param gather:
@@ -127,49 +115,92 @@ def _copy_file(gather,
     """
 
     found_file = _find_file(gather.glob_string, search_directory)
-
-    if gather.type == 'confounds':
-        _extract_confounds(found_file, os.path.join(copy_to_directory, gather.copy_to_filename), confounds)
-
-    else:
-        shutil.copy(found_file, os.path.join(copy_to_directory, f'{subject}_{session}_{gather.copy_to_filename}'))
+    _extract_confounds(found_file, os.path.join(copy_to_directory, f'sub-{subject}_ses-{session}_{gather.copy_to_filename}'), confounds)
 
     return
 
 
-def _find_structural_images(subject, anat_path):
+def _gather_anat_file(gather,
+                      subject,
+                      session,
+                      search_directory,
+                      copy_to_directory=CONN_PATH,
+                      ):
     """
 
-    :param anat_path:
+    :param gather:
+    :param search_directory:
+    :param copy_to_directory:
+    :param confounds:
     :return:
     """
 
-    anat_files = [0]*5
-    anat_files[0] = f'{subject}'
+    found_file = _find_file(gather.glob_string, search_directory)
+    shutil.copy(found_file, os.path.join(copy_to_directory, f'sub-{subject}_ses-{session}_{gather.copy_to_filename}'))
 
-    anat_files[1] = glob.glob(f'{anat_path}/*_T1w_space-MNI152NLin2009cAsym_preproc.nii.gz')[0]
 
-    for ii, ii_tissue_type in enumerate(['CSF', 'GM', 'WM'],2):
-        anat_files[ii] = glob.glob(f'{anat_path}/*T1w_space-MNI152NLin2009cAsym_class-{ii_tissue_type}_probtissue.nii.gz')[0]
+def _gather_func_file(gather,
+                      subject,
+                      session,
+                      search_directory,
+                      copy_to_directory=CONN_PATH,
+                      ):
+    """
 
-    return anat_files
+    :param gather:
+    :param search_directory:
+    :param copy_to_directory:
+    :param confounds:
+    :return:
+    """
+
+    func_found_file = _find_file(gather.func_glob_string, search_directory)
+    mask_found_file = _find_file(gather.mask_glob_string, search_directory)
+    output_file = os.path.join(copy_to_directory, f'sub-{subject}_ses-{session}_{gather.copy_to_filename}')
+
+    print('\n')
+    print(func_found_file)
+    print(mask_found_file)
+    print(output_file)
+    print('\n')
+
+    fsl.ApplyMask(in_file=func_found_file,
+                  mask_file=mask_found_file,
+                  out_file=output_file )
+
 
 
 def main():
     _make_conn_directory()
 
-    for ii in GATHER_DICT.keys():
+    for ii in ANAT_DICT.keys():
 
         print(ii)
 
         try:
-            _copy_file(GATHER_DICT[ii],
-                       SUBJECT,
-                       SESSION,
-                       SUBJECT_SESSION_PATH)
+            _gather_anat_file(ANAT_DICT[ii],
+                              SUBJECT,
+                              SESSION,
+                              SUBJECT_SESSION_PATH)
 
         except ValueError:
             print(f'Unknown key {ii}')
+
+
+
+    for ii in FUNC_DICT.keys():
+
+        print(ii)
+
+        try:
+            _gather_func_file(FUNC_DICT[ii],
+                              SUBJECT,
+                              SESSION,
+                              SUBJECT_SESSION_PATH)
+
+        except ValueError:
+            print(f'Unknown key {ii}')
+
 
 
 if __name__ == '__main__':
