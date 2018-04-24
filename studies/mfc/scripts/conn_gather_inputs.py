@@ -154,8 +154,15 @@ def _find_structural_images(subject, anat_path):
 def main():
     _make_conn_directory()
 
-    for ii in ['csf', 'wm', 'gm', 't1']:
-        _copy_file(GATHER_DICT[ii], SUBJECT_SESSION_PATH)
+    for ii in GATHER_DICT.keys:
+
+        print(ii)
+
+        try:
+            _copy_file(GATHER_DICT[ii], SUBJECT_SESSION_PATH)
+
+        except ValueError:
+            print(f'Unknown key {ii}')
 
 
 if __name__ == '__main__':
