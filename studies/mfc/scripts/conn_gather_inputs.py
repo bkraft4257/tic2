@@ -32,7 +32,7 @@ TASKS = ['preRest', 'preHeat1', 'preHeat2', 'postHeat3', 'postHeat4', 'postRest'
 
 CONFOUNDS = ['X', 'Y', 'Z', 'RotX', 'RotY', 'RotZ']
 
-GATHER = namedtuple('Gather', ['name', 'type', 'glob_string', 'suffix', ])
+GATHER = namedtuple('Gather', ['name', 'type', 'glob_string', 'copy_to_filename', ])
 
 
 GATHER_DICT = dict()
@@ -130,8 +130,10 @@ def _find_file(glob_string, directory):
     return file_found[0]
 
 
-def _copy_file(gather, directory):
-    found_file = _find_file(gather.glob_string, directory)
+def _copy_file(gather, search_directory, copy_to_directory=CONN_PATH):
+    found_file = _find_file(gather.glob_string, search_directory)
+    shutil.copy(found_file, os.path.join(copy_to_directory, gather.copy_to_filename))
+
     print(found_file)
 
     return
