@@ -24,8 +24,6 @@ FMRIPREP_PATH = os.getenv('ACTIVE_FMRIPREP_PATH')
 CONN_PATH = os.path.join(IMAGE_PROCESSING_PATH, 'conn')
 
 
-ANAT_PATH = os.path.join(SUBJECT_SESSION_PATH, 'anat')
-FUNC_PATH = os.path.join(SUBJECT_SESSION_PATH, 'func')
 
 TASKS = ['preRest', 'preHeat1', 'preHeat2', 'postHeat3', 'postHeat4', 'postRest']
 
@@ -222,11 +220,13 @@ def gather_confounds_files(subject, session):
 
 def main():
 
-    global SUBJECT_SESSION_PATH
+    global SUBJECT_SESSION_PATH, ANAT_PATH, FUNC_PATH
 
     in_params = _argparse()
 
     SUBJECT_SESSION_PATH = os.path.join(FMRIPREP_PATH, f'sub-{in_args.subject}', f'ses-{in_args.session}')
+    ANAT_PATH = os.path.join(SUBJECT_SESSION_PATH, 'anat')
+    FUNC_PATH = os.path.join(SUBJECT_SESSION_PATH, 'func')
 
     _make_conn_directory()
     gather_anat_files()
