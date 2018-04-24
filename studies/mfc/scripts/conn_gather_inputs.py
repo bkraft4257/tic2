@@ -99,8 +99,8 @@ def _find_file(glob_string, directory):
     return file_found[0]
 
 
-def _create_full_output_filename(copy_to_directory, subject, session, out_fiename):
-    return os.path.join(copy_to_directory, f'sub-{subject}_ses-{session}_{gather.out_filename}')
+def _create_full_output_filename(copy_to_directory, subject, session, out_filename):
+    return os.path.join(copy_to_directory, f'sub-{subject}_ses-{session}_{out_filename}')
 
 
 def _gather_confounds_file(gather,
