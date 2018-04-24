@@ -64,6 +64,21 @@ GATHER_DICT['pre_heat_1_confounds'] = GATHER('pre_heat_1',
                                              'pre_heat_1.csv')
 
 
+def _extract_confounds(in_filename, out_filename, confounds):
+    """
+
+    :param in_filename:
+    :param out_filename:
+    :param confounds:
+    :return:
+    """
+
+    df_confounds = _read_confounds(in_filename, confounds)
+    _write_confounds(df_confounds, out_filename)
+
+
+
+
 def _read_confounds(filename, confounds):
     df_confounds = pandas.read_csv(filename, sep='\t', usecols=confounds)
     return df_confounds
@@ -84,42 +99,6 @@ def _make_conn_directory(directory=CONN_PATH):
         os.makedirs(directory)
 
 
-def _pre_allocate_2d_list(dim1, dim2):
-    return [[0 for jj in range(dim2)] for ii in range(dim1)]
-
-
-def _find_functional_images(subject, func_path=FUNC_PATH):
-    """
-
-    :param func_path:
-    :return:
-
-     1	sub-mfc902_ses-1_task-postHeat3_acq-epi_rec-topup_bold_space-MNI152NLin2009cAsym_preproc.nii.gz
-     2	sub-mfc902_ses-1_task-postHeat4_acq-epi_rec-topup_bold_space-MNI152NLin2009cAsym_preproc.nii.gz
-     3	sub-mfc902_ses-1_task-postRest_acq-epi_rec-topup_bold_space-MNI152NLin2009cAsym_preproc.nii.gz
-     4	sub-mfc902_ses-1_task-preHeat1_acq-epi_rec-topup_bold_space-MNI152NLin2009cAsym_preproc.nii.gz
-     5	sub-mfc902_ses-1_task-preHeat2_acq-epi_rec-topup_bold_space-MNI152NLin2009cAsym_preproc.nii.gz
-     6	sub-mfc902_ses-1_task-preRest_acq-epi_rec-topup_bold_space-MNI152NLin2009cAsym_preproc.nii.gz
-
-    """
-
-    func_files = _pre_allocate_2d_list(6,3)
-
-    for jj, jj_bold in enumerate(['space-MNI152NLin2009cAsym_preproc.nii.gz', 'confounds.tsv'], 1):
-        for ii, ii_task in enumerate(TASKS):
-
-            func_files[ii][0] = f'{subject}_{ii_task}'
-
-            search_string = f'{func_path}/*task-{ii_task}_acq-epi_rec-topup_bold_{jj_bold}'
-
-            tmp = glob.glob(search_string)
-
-            if len(tmp) == 1:
-                func_files[ii][jj] = tmp[0]
-
-    return func_files
-
-
 def _find_file(glob_string, directory):
 
     file_found = glob.glob(f'{directory}/{glob_string}')
@@ -130,11 +109,26 @@ def _find_file(glob_string, directory):
     return file_found[0]
 
 
-def _copy_file(gather, search_directory, copy_to_directory=CONN_PATH):
-    found_file = _find_file(gather.glob_string, search_directory)
-    shutil.copy(found_file, os.path.join(copy_to_directory, gather.copy_to_filename))
+def _copy_file(gather,
+               search_directory,
+               copy_to_directory=CONN_PATH,
+               confounds = CONFOUNDS):
+    """
 
-    print(found_file)
+    :param gather:
+    :param search_directory:
+    :param copy_to_directory:
+    :param confounds:
+    :return:
+    """
+
+    found_file = _find_file(gather.glob_string, search_directory)
+
+    if gather.type == 'confounds':
+        _extract_confounds(found_file, os.path.join(copy_to_directory, gather.copy_to_filename), confounds)
+
+    else:
+        shutil.copy(found_file, os.path.join(copy_to_directory, gather.copy_to_filename))
 
     return
 
@@ -160,8 +154,11 @@ def _find_structural_images(subject, anat_path):
 def main():
     _make_conn_directory()
 
-    for ii in ['csf', 'wm', 'gm', 'csf']:
-        _copy_file(GATHER_DICT[ii], SUBJECT_SESSION_PATH)
+    for ii in ['csf', 'wm', 'gm', 't1']:
+
+        if GATHER_DICT[ii].type == 'confound':
+            _copy_file(GATHER_DICT[ii], SUBJECT_SESSION_PATH)
+        else:
 
 
 if __name__ == '__main__':
