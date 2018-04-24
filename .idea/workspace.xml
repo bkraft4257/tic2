@@ -155,7 +155,7 @@
         <entry file="file://$PROJECT_DIR$/studies/mfc/scripts/conn_gather_inputs.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="375">
-              <caret line="62" column="94" lean-forward="true" selection-start-line="62" selection-start-column="94" selection-end-line="62" selection-end-column="94" />
+              <caret line="62" column="53" lean-forward="false" selection-start-line="62" selection-start-column="53" selection-end-line="62" selection-end-column="53" />
               <folding>
                 <element signature="e#93#102#0" expanded="true" />
               </folding>
@@ -562,13 +562,6 @@
       <option name="presentableId" value="Default" />
       <updated>1517948604886</updated>
     </task>
-    <task id="LOCAL-00463" summary="Started with CONN scripts for MFC">
-      <created>1524515753261</created>
-      <option name="number" value="00463" />
-      <option name="presentableId" value="LOCAL-00463" />
-      <option name="project" value="LOCAL" />
-      <updated>1524515753261</updated>
-    </task>
     <task id="LOCAL-00464" summary="Started with CONN scripts for MFC">
       <created>1524516279670</created>
       <option name="number" value="00464" />
@@ -905,7 +898,14 @@
       <option name="project" value="LOCAL" />
       <updated>1524600307913</updated>
     </task>
-    <option name="localTasksCounter" value="512" />
+    <task id="LOCAL-00512" summary="Started with CONN scripts for MFC">
+      <created>1524600365052</created>
+      <option name="number" value="00512" />
+      <option name="presentableId" value="LOCAL-00512" />
+      <option name="project" value="LOCAL" />
+      <updated>1524600365052</updated>
+    </task>
+    <option name="localTasksCounter" value="513" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -1481,7 +1481,7 @@
     <entry file="file://$PROJECT_DIR$/studies/mfc/scripts/conn_gather_inputs.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="375">
-          <caret line="62" column="94" lean-forward="true" selection-start-line="62" selection-start-column="94" selection-end-line="62" selection-end-column="94" />
+          <caret line="62" column="53" lean-forward="false" selection-start-line="62" selection-start-column="53" selection-end-line="62" selection-end-column="53" />
           <folding>
             <element signature="e#93#102#0" expanded="true" />
           </folding>
