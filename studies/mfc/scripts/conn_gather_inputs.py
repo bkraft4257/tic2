@@ -50,7 +50,7 @@ GATHER_DICT['pre_neutral_1'] = GATHER('pre_neutral_1',
 
 GATHER_DICT['pre_neutral_1_confounds'] = GATHER('pre_neutral_1',
                                                 'confounds',
-                                                '/func/*_task-preRest_acq-epi_rec-topup_bold_confounds.csv',
+                                                '/func/*_task-preRest_acq-epi_rec-topup_bold_confounds.tsv',
                                                 'pre_neutral_1.csv')
 
 GATHER_DICT['pre_heat_1'] = GATHER('pre_heat_1',
@@ -60,7 +60,7 @@ GATHER_DICT['pre_heat_1'] = GATHER('pre_heat_1',
 
 GATHER_DICT['pre_heat_1_confounds'] = GATHER('pre_heat_1',
                                              'confounds',
-                                             '_task-preHeat1_acq-epi_rec-topup_bold_confounds.csv',
+                                             '_task-preHeat1_acq-epi_rec-topup_bold_confounds.tsv',
                                              'pre_heat_1.csv')
 
 
@@ -114,7 +114,7 @@ def _find_file(glob_string, directory):
 def _copy_file(gather,
                search_directory,
                copy_to_directory=CONN_PATH,
-               confounds = CONFOUNDS):
+               confounds=CONFOUNDS):
     """
 
     :param gather:
