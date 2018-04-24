@@ -170,11 +170,13 @@ def _gather_func_file(gather,
     print(output_file)
     print('\n')
 
-    fsl.ApplyMask(in_file=func_found_file,
+    masker = fsl.ApplyMask(in_file=func_found_file,
                   mask_file=mask_found_file,
                   out_file=output_file,
                   ignore_exception=True)
 
+    print(masker.cmd)
+    masker.run()
 
 def main():
     _make_conn_directory()
