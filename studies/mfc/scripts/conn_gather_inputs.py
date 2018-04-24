@@ -112,6 +112,8 @@ def _find_file(glob_string, directory):
 
 
 def _copy_file(gather,
+               subject,
+               session,
                search_directory,
                copy_to_directory=CONN_PATH,
                confounds=CONFOUNDS):
@@ -130,7 +132,7 @@ def _copy_file(gather,
         _extract_confounds(found_file, os.path.join(copy_to_directory, gather.copy_to_filename), confounds)
 
     else:
-        shutil.copy(found_file, os.path.join(copy_to_directory, gather.copy_to_filename))
+        shutil.copy(found_file, os.path.join(copy_to_directory, f'{subject}_{session}_{gather.copy_to_filename}'))
 
     return
 
@@ -161,7 +163,10 @@ def main():
         print(ii)
 
         try:
-            _copy_file(GATHER_DICT[ii], SUBJECT_SESSION_PATH)
+            _copy_file(GATHER_DICT[ii],
+                       SUBJECT,
+                       SESSION,
+                       SUBJECT_SESSION_PATH)
 
         except ValueError:
             print(f'Unknown key {ii}')
