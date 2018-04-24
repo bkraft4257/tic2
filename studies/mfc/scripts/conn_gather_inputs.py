@@ -5,6 +5,7 @@
 Script for gathering inputs for CONN
 """
 
+import argparse
 import os
 import glob
 import pprint
@@ -18,14 +19,10 @@ import shutil
 import nipype.interfaces.fsl as fsl          # fsl
 
 
-SUBJECT = 'mfc902'
-SESSION = 1
-
 IMAGE_PROCESSING_PATH = os.getenv('ACTIVE_IMAGE_PROCESSING_PATH')
 FMRIPREP_PATH = os.getenv('ACTIVE_FMRIPREP_PATH')
 CONN_PATH = os.path.join(IMAGE_PROCESSING_PATH, 'conn')
 
-SUBJECT_SESSION_PATH = os.path.join(FMRIPREP_PATH, f'sub-{SUBJECT}', f'ses-{SESSION}')
 
 ANAT_PATH = os.path.join(SUBJECT_SESSION_PATH, 'anat')
 FUNC_PATH = os.path.join(SUBJECT_SESSION_PATH, 'func')
@@ -184,54 +181,82 @@ def _gather_func_file(gather,
     masker.run()
 
 
-def gather_anat_files():
+def gather_anat_files(subject, session):
 
     for ii in ANAT_DICT.keys():
         print(ii)
 
         try:
             _gather_anat_file(ANAT_DICT[ii],
-                              SUBJECT,
-                              SESSION,
+                              subject,
+                              session,
                               SUBJECT_SESSION_PATH)
 
         except ValueError:
             print(f'Unknown key {ii}')
 
 
-def gather_func_files():
+def gather_func_files(subject, session):
     for ii in FUNC_DICT.keys():
         try:
             _gather_func_file(FUNC_DICT[ii],
-                              SUBJECT,
-                              SESSION,
+                              subject,
+                              session,
                               SUBJECT_SESSION_PATH)
 
         except ValueError:
             print(f'Unknown key {ii}')
 
 
-def gather_confounds_files():
+def gather_confounds_files(subject, session):
     for ii in CONFOUNDS_DICT.keys():
         try:
             _gather_confounds_file(CONFOUNDS_DICT[ii],
-                                   SUBJECT,
-                                   SESSION,
+                                   subject,
+                                   session,
                                    SUBJECT_SESSION_PATH)
 
         except ValueError:
             print(f'Unknown key {ii}')
 
 
-
-
-
-
 def main():
+
+    global SUBJECT_SESSION_PATH
+
+    in_params = _argparse()
+
+    SUBJECT_SESSION_PATH = os.path.join(FMRIPREP_PATH, f'sub-{in_args.subject}', f'ses-{in_args.session}')
+
     _make_conn_directory()
     gather_anat_files()
     gather_func_files()
     gather_confounds_files()
+
+
+
+def _argparse():
+    """ Get command line arguments.
+    """
+
+    parser = argparse.ArgumentParser(prog='processing_status')
+
+    parser.add_argument('subject', help='Regular expression subject acrostic')
+
+    parser.add_argument('-ss', '--session',
+                        help='Regular expression session ',
+                        default=1)
+
+    parser.add_argument('-v', '--verbose', help='Turn on verbose mode.',
+                        action='store_true',
+                        default=False)
+
+    in_args = parser.parse_args()
+
+    if in_args.session.lower() == 'none':
+        in_args.session = None
+
+    return in_args
 
 
 if __name__ == '__main__':
