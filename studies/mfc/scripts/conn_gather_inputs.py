@@ -229,9 +229,9 @@ def main():
     FUNC_PATH = os.path.join(SUBJECT_SESSION_PATH, 'func')
 
     _make_conn_directory()
-    gather_anat_files()
-    gather_func_files()
-    gather_confounds_files()
+    gather_anat_files(in_args.subject, in_args.session)
+    gather_func_files(in_args.subject, in_args.session)
+    gather_confounds_files(in_args.subject, in_args.session)
 
 
 
