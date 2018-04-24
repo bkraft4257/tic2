@@ -103,7 +103,10 @@ def _find_file(glob_string, directory):
 
     file_found = glob.glob(f'{directory}/{glob_string}')
 
-    if len(file_found) > 1:
+    if len(file_found) == 0:
+        sys.exit('File not found. Revise glob string.')
+
+    elif len(file_found) > 1:
         sys.exit('Found more than 1 file. Revise glob string.')
 
     return file_found[0]
