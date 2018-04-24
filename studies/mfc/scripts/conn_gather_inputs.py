@@ -51,6 +51,12 @@ FUNC_DICT['pre_neutral_1'] = FUNC_NT('pre_neutral_1',
                                      '/func/*_task-preRest_acq-epi_rec-topup_bold_space-MNI152NLin2009cAsym_brainmask.nii.gz',
                                      'pre_neutral_1.nii.gz')
 
+CONFOUNDS_DICT = dict()
+CONFOUNDS_DICT['pre_neutral_1'] = CONFOUNDS_NT('pre_neutral_1',
+                                               'confounds',
+                                               '/func/*_task-preRest_acq-epi_rec-topup_bold_confounds.tsv',
+                                               'pre_neutral_1_confounds.csv')
+
 
 def _extract_confounds(in_filename, out_filename, confounds):
     """
@@ -171,20 +177,16 @@ def _gather_func_file(gather,
     print('\n')
 
     masker = fsl.ApplyMask(in_file=func_found_file,
-                  mask_file=mask_found_file,
-                  out_file=output_file,
-                  ignore_exception=True)
+                           mask_file=mask_found_file,
+                           out_file=output_file,
+                           ignore_exception=True)
 
-    print(masker.cmd)
     masker.run()
 
-def main():
-    _make_conn_directory()
 
-    # Process Anatomical Images
+def gather_anat_files():
 
     for ii in ANAT_DICT.keys():
-
         print(ii)
 
         try:
@@ -196,11 +198,9 @@ def main():
         except ValueError:
             print(f'Unknown key {ii}')
 
-    # Process Functional Images
+
+def gather_func_files():
     for ii in FUNC_DICT.keys():
-
-        print(ii)
-
         try:
             _gather_func_file(FUNC_DICT[ii],
                               SUBJECT,
@@ -209,6 +209,29 @@ def main():
 
         except ValueError:
             print(f'Unknown key {ii}')
+
+
+def gather_confounds_files():
+    for ii in CON_DICT.keys():
+        try:
+            _gather_func_file(FUNC_DICT[ii],
+                              SUBJECT,
+                              SESSION,
+                              SUBJECT_SESSION_PATH)
+
+        except ValueError:
+            print(f'Unknown key {ii}')
+
+
+
+
+
+
+def main():
+    _make_conn_directory()
+    gather_anat_files()
+    gather_func_files()
+    gather_confounds_files()
 
 
 if __name__ == '__main__':

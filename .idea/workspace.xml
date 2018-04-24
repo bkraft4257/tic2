@@ -66,10 +66,34 @@
       <file leaf-file-name="conn_gather_inputs.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/studies/mfc/scripts/conn_gather_inputs.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="226">
-              <caret line="178" column="16" lean-forward="false" selection-start-line="178" selection-start-column="16" selection-end-line="178" selection-end-column="16" />
+            <state relative-caret-position="362">
+              <caret line="224" column="0" lean-forward="true" selection-start-line="224" selection-start-column="0" selection-end-line="224" selection-end-column="0" />
               <folding>
-                <element signature="e#93#102#0" expanded="true" />
+                <element signature="n#!!doc" expanded="false" />
+                <element signature="e#47#91#1" expanded="false" />
+                <element signature="e#2448#2653#0" expanded="false" />
+                <element signature="e#2448#2544#1" expanded="false" />
+                <element signature="e#2702#2795#0" expanded="false" />
+                <element signature="e#2841#2897#0" expanded="false" />
+                <element signature="e#2951#3090#0" expanded="false" />
+                <element signature="e#2951#3020#1" expanded="false" />
+                <element signature="e#3138#3483#0" expanded="false" />
+                <element signature="e#3575#3660#0" expanded="false" />
+                <element signature="e#3924#4302#0" expanded="false" />
+                <element signature="e#3924#4089#1" expanded="false" />
+                <element signature="e#4517#4825#0" expanded="false" />
+                <element signature="e#4517#4642#1" expanded="false" />
+                <element signature="e#5040#5757#0" expanded="false" />
+                <element signature="e#5040#5165#1" expanded="false" />
+                <element signature="e#5790#6091#0" expanded="false" />
+                <element signature="e#5826#6091#0" expanded="false" />
+                <element signature="e#5862#6024#0" expanded="false" />
+                <element signature="e#6123#6405#0" expanded="false" />
+                <element signature="e#6159#6405#0" expanded="false" />
+                <element signature="e#6176#6338#0" expanded="false" />
+                <element signature="e#6442#6723#0" expanded="false" />
+                <element signature="e#6477#6723#0" expanded="false" />
+                <element signature="e#6494#6656#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -574,13 +598,6 @@
       <option name="presentableId" value="Default" />
       <updated>1517948604886</updated>
     </task>
-    <task id="LOCAL-00472" summary="Started with CONN scripts for MFC">
-      <created>1524517155908</created>
-      <option name="number" value="00472" />
-      <option name="presentableId" value="LOCAL-00472" />
-      <option name="project" value="LOCAL" />
-      <updated>1524517155908</updated>
-    </task>
     <task id="LOCAL-00473" summary="Started with CONN scripts for MFC">
       <created>1524517169200</created>
       <option name="number" value="00473" />
@@ -917,7 +934,14 @@
       <option name="project" value="LOCAL" />
       <updated>1524603005450</updated>
     </task>
-    <option name="localTasksCounter" value="521" />
+    <task id="LOCAL-00521" summary="Started with CONN scripts for MFC">
+      <created>1524603328688</created>
+      <option name="number" value="00521" />
+      <option name="presentableId" value="LOCAL-00521" />
+      <option name="project" value="LOCAL" />
+      <updated>1524603328688</updated>
+    </task>
+    <option name="localTasksCounter" value="522" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -1487,10 +1511,34 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/studies/mfc/scripts/conn_gather_inputs.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="226">
-          <caret line="178" column="16" lean-forward="false" selection-start-line="178" selection-start-column="16" selection-end-line="178" selection-end-column="16" />
+        <state relative-caret-position="362">
+          <caret line="224" column="0" lean-forward="true" selection-start-line="224" selection-start-column="0" selection-end-line="224" selection-end-column="0" />
           <folding>
-            <element signature="e#93#102#0" expanded="true" />
+            <element signature="n#!!doc" expanded="false" />
+            <element signature="e#47#91#1" expanded="false" />
+            <element signature="e#2448#2653#0" expanded="false" />
+            <element signature="e#2448#2544#1" expanded="false" />
+            <element signature="e#2702#2795#0" expanded="false" />
+            <element signature="e#2841#2897#0" expanded="false" />
+            <element signature="e#2951#3090#0" expanded="false" />
+            <element signature="e#2951#3020#1" expanded="false" />
+            <element signature="e#3138#3483#0" expanded="false" />
+            <element signature="e#3575#3660#0" expanded="false" />
+            <element signature="e#3924#4302#0" expanded="false" />
+            <element signature="e#3924#4089#1" expanded="false" />
+            <element signature="e#4517#4825#0" expanded="false" />
+            <element signature="e#4517#4642#1" expanded="false" />
+            <element signature="e#5040#5757#0" expanded="false" />
+            <element signature="e#5040#5165#1" expanded="false" />
+            <element signature="e#5790#6091#0" expanded="false" />
+            <element signature="e#5826#6091#0" expanded="false" />
+            <element signature="e#5862#6024#0" expanded="false" />
+            <element signature="e#6123#6405#0" expanded="false" />
+            <element signature="e#6159#6405#0" expanded="false" />
+            <element signature="e#6176#6338#0" expanded="false" />
+            <element signature="e#6442#6723#0" expanded="false" />
+            <element signature="e#6477#6723#0" expanded="false" />
+            <element signature="e#6494#6656#0" expanded="false" />
           </folding>
         </state>
       </provider>
