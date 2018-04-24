@@ -47,7 +47,7 @@ FUNC_DICT['pre_neutral_2'] = FUNC_NT('/func/*_task-preRest_acq-epi_rec-topup_bol
 
 FUNC_DICT['post_neutral_3'] = FUNC_NT('/func/*_task-postRest_acq-epi_rec-topup_bold_space-MNI152NLin2009cAsym_preproc.nii.gz',
                                       '/func/*_task-postRest_acq-epi_rec-topup_bold_space-MNI152NLin2009cAsym_brainmask.nii.gz',
-                                      'post_neutral_2.nii.gz')
+                                      'post_neutral_3.nii.gz')
 
 FUNC_DICT['post_neutral_4'] = FUNC_NT('/func/*_task-postRest_acq-epi_rec-topup_bold_space-MNI152NLin2009cAsym_preproc.nii.gz',
                                       '/func/*_task-postRest_acq-epi_rec-topup_bold_space-MNI152NLin2009cAsym_brainmask.nii.gz',
