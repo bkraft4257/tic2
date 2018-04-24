@@ -48,7 +48,7 @@ FUNC_DICT = dict()
 FUNC_DICT['pre_neutral_1'] = FUNC_NT('pre_neutral_1',
                                      'fmri',
                                      '/func/*_task-preRest_acq-epi_rec-topup_bold_space-MNI152NLin2009cAsym_preproc.nii.gz',
-                                     '/func/*_task-preRest_acq-epi_rec-topup_bold_space-MNI152NLin2009cAsym_mask.nii.gz',
+                                     '/func/*_task-preRest_acq-epi_rec-topup_bold_space-MNI152NLin2009cAsym_brainmask.nii.gz',
                                      'pre_neutral_1.nii.gz')
 
 
