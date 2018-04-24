@@ -222,7 +222,7 @@ def main():
 
     global SUBJECT_SESSION_PATH, ANAT_PATH, FUNC_PATH
 
-    in_params = _argparse()
+    in_args = _argparse()
 
     SUBJECT_SESSION_PATH = os.path.join(FMRIPREP_PATH, f'sub-{in_args.subject}', f'ses-{in_args.session}')
     ANAT_PATH = os.path.join(SUBJECT_SESSION_PATH, 'anat')
