@@ -8,15 +8,13 @@ Script for gathering inputs for CONN
 import argparse
 import os
 import glob
-import pprint
 import sys
 import pandas
 from collections import namedtuple
 
-from IPython.display import display
-
 import shutil
 import nipype.interfaces.fsl as fsl  # fsl
+
 
 IMAGE_PROCESSING_PATH = os.getenv('ACTIVE_IMAGE_PROCESSING_PATH')
 FMRIPREP_PATH = os.getenv('ACTIVE_FMRIPREP_PATH')
@@ -77,10 +75,10 @@ CONFOUNDS_DICT['pre_neutral_2'] = CONFOUNDS_NT('/func/*_task-preRest_acq-epi_rec
                                                'pre_neutral_2_confounds.csv')
 
 CONFOUNDS_DICT['post_neutral_3'] = CONFOUNDS_NT('/func/*_task-postRest_acq-epi_rec-topup_bold_confounds.tsv',
-                                                'pre_neutral_3_confounds.csv')
+                                                'post_neutral_3_confounds.csv')
 
 CONFOUNDS_DICT['post_neutral_4'] = CONFOUNDS_NT('/func/*_task-postRest_acq-epi_rec-topup_bold_confounds.tsv',
-                                                'pre_neutral_4_confounds.csv')
+                                                'post_neutral_4_confounds.csv')
 
 CONFOUNDS_DICT['pre_heat_1'] = CONFOUNDS_NT('/func/*_task-preHeat1_acq-epi_rec-topup_bold_confounds.tsv',
                                             'pre_heat_1_confounds.csv')
