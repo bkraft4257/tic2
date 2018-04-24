@@ -55,12 +55,12 @@ GATHER_DICT['pre_neutral_1_confounds'] = GATHER('pre_neutral_1',
 
 GATHER_DICT['pre_heat_1'] = GATHER('pre_heat_1',
                                    'fmri',
-                                   '_task-preHeat1_acq-epi_rec-topup_bold_space-MNI152NLin2009cAsym_preproc.nii.gz',
+                                   '/func/*_task-preHeat1_acq-epi_rec-topup_bold_space-MNI152NLin2009cAsym_preproc.nii.gz',
                                    'pre_heat_1.nii.gz')
 
 GATHER_DICT['pre_heat_1_confounds'] = GATHER('pre_heat_1',
                                              'confounds',
-                                             '_task-preHeat1_acq-epi_rec-topup_bold_confounds.tsv',
+                                             '/func/*_task-preHeat1_acq-epi_rec-topup_bold_confounds.tsv',
                                              'pre_heat_1.csv')
 
 
