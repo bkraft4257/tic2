@@ -272,7 +272,7 @@ def _gather_func_file(gather,
 def gather_anat_files(subject, session):
 
     for ii in ANAT_DICT.keys():
-        print(ii)tic
+        print(ii)
 
         try:
             _gather_anat_file(ANAT_DICT[ii],
