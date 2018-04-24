@@ -172,7 +172,8 @@ def _gather_func_file(gather,
 
     fsl.ApplyMask(in_file=func_found_file,
                   mask_file=mask_found_file,
-                  out_file=output_file )
+                  out_file=output_file,
+                  ignore_exception=True)
 
 
 def main():
