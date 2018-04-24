@@ -101,13 +101,14 @@ def _make_conn_directory(directory=CONN_PATH):
 
 def _find_file(glob_string, directory):
 
-    file_found = glob.glob(f'{directory}/{glob_string}')
+    glob_full_string = f'{directory}/{glob_string}'
+    file_found = glob.glob(glob_full_string)
 
     if len(file_found) == 0:
-        sys.exit('File not found. Revise glob string.')
+        sys.exit(f'File not found. Revise glob string. \n {glob_full_string}')
 
     elif len(file_found) > 1:
-        sys.exit('Found more than 1 file. Revise glob string.')
+        sys.exit(f'Found more than 1 file. Revise glob string. \n {glob_full_string}')
 
     return file_found[0]
 
