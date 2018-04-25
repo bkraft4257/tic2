@@ -1,0 +1,86 @@
+
+confounds: ['X', 'Y', 'Z', 'RotX', 'RotY', 'RotZ']
+
+anat:
+  t1w:
+    glob_string: '/anat/*_T1w_space-MNI152NLin2009cAsym_preproc.nii.gz'
+    out_filename: 't1w.nii.gz'
+
+  csf:
+    glob_string: '/anat/*_T1w_space-MNI152NLin2009cAsym_class-CSF_probtissue.nii.gz'
+    out_filename: 'csf.nii.gz'
+
+  gm:
+    glob_string: '/anat/*_T1w_space-MNI152NLin2009cAsym_class-GM_probtissue.nii.gz'
+    out_filename: 'gm.nii.gz'
+
+  wm:
+    glob_string: '/anat/*_T1w_space-MNI152NLin2009cAsym_class-WM_probtissue.nii.gz'
+    out_filename: 'wm.nii.gz'
+
+
+#ANAT_DICT = dict()
+#ANAT_DICT['csf'] = ANAT_NT('/anat/*_T1w_space-MNI152NLin2009cAsym_class-CSF_probtissue.nii.gz', 'csf.nii.gz')
+#ANAT_DICT['wm'] = ANAT_NT('/anat/*_T1w_space-MNI152NLin2009cAsym_class-WM_probtissue.nii.gz', 'wm.nii.gz')
+#ANAT_DICT['gm'] = ANAT_NT('/anat/*_T1w_space-MNI152NLin2009cAsym_class-GM_probtissue.nii.gz', 'gm.nii.gz')
+#ANAT_DICT['t1'] = ANAT_NT('/anat/*_T1w_space-MNI152NLin2009cAsym_preproc.nii.gz', 't1w.nii.gz')
+#
+#
+#FUNC_DICT = dict()
+#FUNC_DICT['pre_neutral_1'] = FUNC_NT('/func/*_task-preRest_acq-epi_rec-topup_bold_space-MNI152NLin2009cAsym_preproc.nii.gz',
+#                                     '/func/*_task-preRest_acq-epi_rec-topup_bold_space-MNI152NLin2009cAsym_brainmask.nii.gz',
+#                                     'pre_neutral_1.nii.gz')
+#
+#FUNC_DICT['pre_neutral_2'] = FUNC_NT('/func/*_task-preRest_acq-epi_rec-topup_bold_space-MNI152NLin2009cAsym_preproc.nii.gz',
+#                                     '/func/*_task-preRest_acq-epi_rec-topup_bold_space-MNI152NLin2009cAsym_brainmask.nii.gz',
+#                                     'pre_neutral_2.nii.gz')
+#
+#FUNC_DICT['post_neutral_3'] = FUNC_NT('/func/*_task-postRest_acq-epi_rec-topup_bold_space-MNI152NLin2009cAsym_preproc.nii.gz',
+#                                      '/func/*_task-postRest_acq-epi_rec-topup_bold_space-MNI152NLin2009cAsym_brainmask.nii.gz',
+#                                      'post_neutral_3.nii.gz')
+#
+#FUNC_DICT['post_neutral_4'] = FUNC_NT('/func/*_task-postRest_acq-epi_rec-topup_bold_space-MNI152NLin2009cAsym_preproc.nii.gz',
+#                                      '/func/*_task-postRest_acq-epi_rec-topup_bold_space-MNI152NLin2009cAsym_brainmask.nii.gz',
+#                                      'post_neutral_4.nii.gz')
+#
+#FUNC_DICT['pre_heat_1'] = FUNC_NT('/func/*_task-preHeat1_acq-epi_rec-topup_bold_space-MNI152NLin2009cAsym_preproc.nii.gz',
+#                                  '/func/*_task-preHeat1_acq-epi_rec-topup_bold_space-MNI152NLin2009cAsym_brainmask.nii.gz',
+#                                  'pre_heat_1.nii.gz')
+#
+#FUNC_DICT['pre_heat_2'] = FUNC_NT('/func/*_task-preHeat2_acq-epi_rec-topup_bold_space-MNI152NLin2009cAsym_preproc.nii.gz',
+#                                  '/func/*_task-preHeat2_acq-epi_rec-topup_bold_space-MNI152NLin2009cAsym_brainmask.nii.gz',
+#                                  'pre_heat_2.nii.gz')
+#
+#FUNC_DICT['post_heat_3'] = FUNC_NT('/func/*_task-postHeat3_acq-epi_rec-topup_bold_space-MNI152NLin2009cAsym_preproc.nii.gz',
+#                                   '/func/*_task-postHeat3_acq-epi_rec-topup_bold_space-MNI152NLin2009cAsym_brainmask.nii.gz',
+#                                   'post_heat_3.nii.gz')
+#
+#FUNC_DICT['post_heat_4'] = FUNC_NT('/func/*_task-postHeat4_acq-epi_rec-topup_bold_space-MNI152NLin2009cAsym_preproc.nii.gz',
+#                                   '/func/*_task-postHeat4_acq-epi_rec-topup_bold_space-MNI152NLin2009cAsym_brainmask.nii.gz',
+#                                   'post_heat_4.nii.gz')
+#
+#
+#CONFOUNDS_DICT = dict()
+#CONFOUNDS_DICT['pre_neutral_1'] = CONFOUNDS_NT('/func/*_task-preRest_acq-epi_rec-topup_bold_confounds.tsv',
+#                                               'pre_neutral_1_confounds.csv')
+#
+#CONFOUNDS_DICT['pre_neutral_2'] = CONFOUNDS_NT('/func/*_task-preRest_acq-epi_rec-topup_bold_confounds.tsv',
+#                                               'pre_neutral_2_confounds.csv')
+#
+#CONFOUNDS_DICT['post_neutral_3'] = CONFOUNDS_NT('/func/*_task-postRest_acq-epi_rec-topup_bold_confounds.tsv',
+#                                                'post_neutral_3_confounds.csv')
+#
+#CONFOUNDS_DICT['post_neutral_4'] = CONFOUNDS_NT('/func/*_task-postRest_acq-epi_rec-topup_bold_confounds.tsv',
+#                                                'post_neutral_4_confounds.csv')
+#
+#CONFOUNDS_DICT['pre_heat_1'] = CONFOUNDS_NT('/func/*_task-preHeat1_acq-epi_rec-topup_bold_confounds.tsv',
+#                                            'pre_heat_1_confounds.csv')
+#
+#CONFOUNDS_DICT['pre_heat_2'] = CONFOUNDS_NT('/func/*_task-preHeat2_acq-epi_rec-topup_bold_confounds.tsv',
+#                                            'pre_heat_2_confounds.csv')
+#
+#CONFOUNDS_DICT['post_heat_3'] = CONFOUNDS_NT('/func/*_task-postHeat3_acq-epi_rec-topup_bold_confounds.tsv',
+#                                             'post_heat_3_confounds.csv')
+#
+#CONFOUNDS_DICT['post_heat_4'] = CONFOUNDS_NT('/func/*_task-postHeat4_acq-epi_rec-topup_bold_confounds.tsv',
+#                                             'post_heat_4_confounds.csv')

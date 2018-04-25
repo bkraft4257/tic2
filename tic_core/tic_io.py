@@ -5,6 +5,8 @@
 """
 import os
 import json
+import yaml
+import pprint
 
 
 def get_config(json_config=None):
@@ -58,3 +60,19 @@ def get_config(json_config=None):
         raise
 
     return json_data
+
+
+def read_yaml(yaml_filename, verbose=False):
+    """
+    :param yaml_filename:  YAML input file for netprep workflow
+    :param verbose:  boolean flag to dump out contents of YAML file to stdout.
+    :return: cfg, a dictionary created from a safe_load of the specified YAML file.
+    """
+    with open(yaml_filename, 'r') as yaml_file:
+        cfg = yaml.safe_load(yaml_file)
+
+    if verbose:
+        pp = pprint.PrettyPrinter(indent=4)
+        pp.pprint(cfg)
+
+    return cfg
