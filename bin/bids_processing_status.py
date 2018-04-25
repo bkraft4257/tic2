@@ -273,6 +273,11 @@ def main():
         df_files_2 = df_files.set_index(['subject', 'session']).unstack()
         df_files_2.columns = [f'ses-{x+1}_processed' for x in range(len(df_files_2.columns))]
 
+        if in_args.verbose:
+            print('\n List of files after stacking.\n')
+            print(df_files_2)
+            print('\n\n')
+
     except ValueError:
 
         if session_key_value is None:
@@ -294,12 +299,16 @@ def main():
             print('\n\n')
             sys.exit()
 
-
     df_full_list = (_rename_acrostic_list(df_acrostic_list)
                     .reset_index()
                     .merge(df_files_2.reset_index(), how='left', on='subject')
                     .fillna(False)
                     )
+
+    if in_args.verbose:
+        print('\n List of files after cleaning.\n')
+        print(df_files_2)
+        print('\n\n')
 
     _display(df_full_list.pipe(_clean_nan,
                                nan_option=in_args.nan),
