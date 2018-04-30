@@ -202,9 +202,12 @@ def infotodict(seqinfo):
 
     pre_topup_ap = create_key(bids_prefix + 'fmap/sub-{subject}_{session}_acq-preEpi_dir-ap_epi.{item:01d}')
     pre_topup_pa = create_key(bids_prefix + 'fmap/sub-{subject}_{session}_acq-preEpi_dir-pa_epi.{item:01d}')
-    
-    pre_fmap_magnitude1 = create_key(bids_prefix + 'fmap/sub-{subject}_{session}_acq-pre_magnitude1') #.{item:01d}')
-    pre_fmap_phasediff = create_key(bids_prefix + 'fmap/sub-{subject}_{session}_acq-pre_phasediff')#.{item:01d}')
+
+    # The item was commented out for Phase Difference field maps.  Conversion did not work correctly. I removed  the item number to try to
+    # isolate the problem.
+
+    pre_fmap_magnitude1 = create_key(bids_prefix + 'fmap/sub-{subject}_{session}_acq-pre_magnitude1.{item:01d}')
+    pre_fmap_phasediff = create_key(bids_prefix + 'fmap/sub-{subject}_{session}_acq-pre_phasediff.{item:01d}')
 
     t1w = create_key(bids_prefix + 'anat/sub-{subject}_{session}_T1w')
 
