@@ -167,32 +167,38 @@ def infotodict(seqinfo):
     """
     MCF Pilot Protocol acquired on Friday April 13th
     
-                                   series_id sequence_name          series_description  dim1  dim2  dim3  dim4     TR     TE  is_derived  is_motion_corrected
-        0                    1-localizer        *fl2d1                   localizer   192   192     3     1  0.020   5.00       False                False
-        1           2-pre_rest_A>>P 4X4X4  *epfid2d1_64          pre_epi_A>>P 4X4X4    64    64    35   177  2.000  25.00       False                False
-        2     3-pre+heat1_A>>P 4X4X4  *epfid2d1_64    pre+heat1_epi_A>>P 4X4X4    64    64    35   177  2.000  25.00       False                False
-        3     4-pre+heat2_A>>P 4X4X4  *epfid2d1_64    pre+heat2_epi_A>>P 4X4X4    64    64    35   177  2.000  25.00       False                False
-        4               5-pre_topup_A>>P   *epse2d1_64              pre_topup_A>>P    64    64   140     1  2.400  38.00       False                False
-        5               6-pre_topup_P>>A   *epse2d1_64              pre_topup_P>>A    64    64   140     1  2.400  38.00       False                False
-        6     7-Field_mapping 4X4X4 A>>P       *fm2d2r    Field_mapping 4X4X4 A>>P    64    64    35     1  0.488   4.92       False                False
-        7     8-Field_mapping 4X4X4 A>>P       *fm2d2r    Field_mapping 4X4X4 A>>P    64    64    35     1  0.488   7.38       False                False
-        8               9-MPRAGE_GRAPPA2  *tfl3d1_16ns              MPRAGE_GRAPPA2   256   240   192     1  2.300   2.98       False                False
-        9   10-post+heat3_A>>P 4X4X4  *epfid2d1_64   post+heat3_epi_A>>P 4X4X4    64    64    35   144  2.000  25.00       False                False
-        10  11-post+heat4_A>>P 4X4X4  *epfid2d1_64   post+heat4_epi_A>>P 4X4X4    64    64    35   144  2.000  25.00       False                False
-        11        12-post_rest_A>>P 4X4X4  *epfid2d1_64         post_epi_A>>P 4X4X4    64    64    35   144  2.000  25.00       False                False
-        12            13-post_topup_A>>P   *epse2d1_64             post_topup_A>>P    64    64   140     1  2.400  38.00       False                False
-        13            14-post_topup_P>>A   *epse2d1_64             post_topup_P>>A    64    64   140     1  2.400  38.00       False                False
+    >>> hdc_look.py -s mfc001 -ss 1
+                                      series_id sequence_name                series_description  dim1  dim2  dim3  dim4     TR     TE  is_derived  is_motion_corrected
+        0                           1-localizer        *fl2d1                         localizer   192   192     3     1  0.020   5.00       False                False
+        1     2-pre_Neutral1_A>>P Resting 4X4X4  *epfid2d1_64   pre_Neutral1_A>>P Resting 4X4X4    64    64    35   148  2.000  25.00       False                False
+        2                      3-pre_topup_A>>P   *epse2d1_64                    pre_topup_A>>P    64    64   140     1  2.400  38.00       False                False
+        3                      4-pre_topup_P>>A   *epse2d1_64                    pre_topup_P>>A    64    64   140     1  2.400  38.00       False                False
+        4            5-Field_mapping 4X4X4 A>>P       *fm2d2r          Field_mapping 4X4X4 A>>P    64    64    35     1  0.488   4.92       False                False
+        5            6-Field_mapping 4X4X4 A>>P       *fm2d2r          Field_mapping 4X4X4 A>>P    64    64    35     1  0.488   7.38       False                False
+        6                7-pre+heat1_A>>P 4X4X4  *epfid2d1_64              pre+heat1_A>>P 4X4X4    64    64    35   148  2.000  25.00       False                False
+        7     8-pre_Neutral2_A>>P Resting 4X4X4  *epfid2d1_64   pre_Neutral2_A>>P Resting 4X4X4    64    64    35   148  2.000  25.00       False                False
+        8                9-pre+heat2_A>>P 4X4X4  *epfid2d1_64              pre+heat2_A>>P 4X4X4    64    64    35   148  2.000  25.00       False                False
+        9                     10-MPRAGE_GRAPPA2  *tfl3d1_16ns                    MPRAGE_GRAPPA2   256   240   192     1  2.300   2.98       False                False
+        10  11-post_Neutral3_A>>P Resting 4X4X4  *epfid2d1_64  post_Neutral3_A>>P Resting 4X4X4    64    64    35   148  2.000  25.00       False                False
+        11             12-post+heat3_A>>P 4X4X4  *epfid2d1_64             post+heat3_A>>P 4X4X4    64    64    35   148  2.000  25.00       False                False
+        12  13-post_Neutral4_A>>P Resting 4X4X4  *epfid2d1_64  post_Neutral4_A>>P Resting 4X4X4    64    64    35   148  2.000  25.00       False                False
+        13             14-post+heat4_A>>P 4X4X4  *epfid2d1_64             post+heat4_A>>P 4X4X4    64    64    35   148  2.000  25.00       False                False
+        14                   15-post_topup_A>>P   *epse2d1_64                   post_topup_A>>P    64    64   140     1  2.400  38.00       False                False
+        15                   16-post_topup_P>>A   *epse2d1_64                   post_topup_P>>A    64    64   140     1  2.400  38.00       False                False
+    
     """
 
     bids_prefix = 'sub-{subject}/{session}/'
 
-    pre_rest_ap_fmap = create_key(bids_prefix + 'func/sub-{subject}_{session}_task-preRest_acq-epi_rec-fmap_bold.{item:01d}')
+    pre_neutral1_ap_fmap = create_key(bids_prefix + 'func/sub-{subject}_{session}_task-preNeutral1_acq-epi_rec-fmap_bold.{item:01d}')
     pre_heat1_ap_fmap = create_key(bids_prefix + 'func/sub-{subject}_{session}_task-preHeat1_acq-epi_rec-fmap_bold.{item:01d}')
     pre_heat2_ap_fmap = create_key(bids_prefix + 'func/sub-{subject}_{session}_task-preHeat2_acq-epi_rec-fmap_bold.{item:01d}')
+    pre_neutral2_ap_fmap = create_key(bids_prefix + 'func/sub-{subject}_{session}_task-preNeutral2_acq-epi_rec-fmap_bold.{item:01d}')
 
-    pre_rest_ap_topup = create_key(bids_prefix + 'func/sub-{subject}_{session}_task-preRest_acq-epi_rec-topup_bold.{item:01d}')
+    pre_neutral1_ap_topup = create_key(bids_prefix + 'func/sub-{subject}_{session}_task-preNeutral1_acq-epi_rec-topup_bold.{item:01d}')
     pre_heat1_ap_topup = create_key(bids_prefix + 'func/sub-{subject}_{session}_task-preHeat1_acq-epi_rec-topup_bold.{item:01d}')
     pre_heat2_ap_topup = create_key(bids_prefix + 'func/sub-{subject}_{session}_task-preHeat2_acq-epi_rec-topup_bold.{item:01d}')
+    pre_neutral2_ap_topup = create_key(bids_prefix + 'func/sub-{subject}_{session}_task-preNeutral2_acq-epi_rec-topup_bold.{item:01d}')
 
     pre_topup_ap = create_key(bids_prefix + 'fmap/sub-{subject}_{session}_acq-preEpi_dir-ap_epi.{item:01d}')
     pre_topup_pa = create_key(bids_prefix + 'fmap/sub-{subject}_{session}_acq-preEpi_dir-pa_epi.{item:01d}')
@@ -202,26 +208,30 @@ def infotodict(seqinfo):
 
     t1w = create_key(bids_prefix + 'anat/sub-{subject}_{session}_T1w')
 
-    post_heat1_ap_fmap = create_key(bids_prefix + 'func/sub-{subject}_{session}_task-postHeat3_acq-epi_rec-fmap_bold.{item:01d}')
-    post_heat2_ap_fmap = create_key(bids_prefix + 'func/sub-{subject}_{session}_task-postHeat4_acq-epi_rec-fmap_bold.{item:01d}')
-    post_rest_ap_fmap = create_key(bids_prefix + 'func/sub-{subject}_{session}_task-postRest_acq-epi_rec-fmap_bold.{item:01d}')
+    post_neutral3_ap_fmap = create_key(bids_prefix + 'func/sub-{subject}_{session}_task-postNeutral3_acq-epi_rec-fmap_bold.{item:01d}')
+    post_heat3_ap_fmap = create_key(bids_prefix + 'func/sub-{subject}_{session}_task-postHeat3_acq-epi_rec-fmap_bold.{item:01d}')
+    post_heat4_ap_fmap = create_key(bids_prefix + 'func/sub-{subject}_{session}_task-postHeat4_acq-epi_rec-fmap_bold.{item:01d}')
+    post_neutral4_ap_fmap = create_key(bids_prefix + 'func/sub-{subject}_{session}_task-postNeutral4_acq-epi_rec-fmap_bold.{item:01d}')
 
-    post_heat1_ap_topup = create_key(bids_prefix + 'func/sub-{subject}_{session}_task-postHeat3_acq-epi_rec-topup_bold.{item:01d}')
-    post_heat2_ap_topup = create_key(bids_prefix + 'func/sub-{subject}_{session}_task-postHeat4_acq-epi_rec-topup_bold.{item:01d}')
-    post_rest_ap_topup = create_key(bids_prefix + 'func/sub-{subject}_{session}_task-postRest_acq-epi_rec-topup_bold.{item:01d}')
+    post_neutral3_ap_topup = create_key(bids_prefix + 'func/sub-{subject}_{session}_task-postNeutral3_acq-epi_rec-topup_bold.{item:01d}')
+    post_heat3_ap_topup = create_key(bids_prefix + 'func/sub-{subject}_{session}_task-postHeat3_acq-epi_rec-topup_bold.{item:01d}')
+    post_heat4_ap_topup = create_key(bids_prefix + 'func/sub-{subject}_{session}_task-postHeat4_acq-epi_rec-topup_bold.{item:01d}')
+    post_neutral4_ap_topup = create_key(bids_prefix + 'func/sub-{subject}_{session}_task-postNeutral4_acq-epi_rec-topup_bold.{item:01d}')
 
     post_topup_ap = create_key(bids_prefix + 'fmap/sub-{subject}_{session}_acq-postEpi_dir-ap_epi.{item:01d}')
     post_topup_pa = create_key(bids_prefix + 'fmap/sub-{subject}_{session}_acq-postEpi_dir-pa_epi.{item:01d}')
 
     # Create an empty dictionary called info for each key
 
-    info = {pre_rest_ap_fmap: [],
+    info = {pre_neutral1_ap_fmap: [],
             pre_heat1_ap_fmap: [],
             pre_heat2_ap_fmap: [],
+            pre_neutral2_ap_fmap: [],
 
-            pre_rest_ap_topup: [],
+            pre_neutral1_ap_topup: [],
             pre_heat1_ap_topup: [],
             pre_heat2_ap_topup: [],
+            pre_neutral2_ap_topup: [],
 
             pre_topup_ap: [],
             pre_topup_pa: [],
@@ -231,13 +241,15 @@ def infotodict(seqinfo):
 
             t1w: [],
 
-            post_heat1_ap_fmap: [],
-            post_heat2_ap_fmap: [],
-            post_rest_ap_fmap: [],
+            post_neutral3_ap_fmap: [],
+            post_heat3_ap_fmap: [],
+            post_heat4_ap_fmap: [],
+            post_neutral4_ap_fmap: [],
 
-            post_heat1_ap_topup: [],
-            post_heat2_ap_topup: [],
-            post_rest_ap_topup: [],
+            post_neutral3_ap_topup: [],
+            post_heat3_ap_topup: [],
+            post_heat4_ap_topup: [],
+            post_neutral4_ap_topup: [],
 
             post_topup_ap: [],
             post_topup_pa: [],
@@ -248,9 +260,9 @@ def infotodict(seqinfo):
 
     for idx, s in enumerate(seqinfo):
 
-        if 'pre_rest' in s.series_id:
-                info[pre_rest_ap_fmap] = [s.series_id]
-                info[pre_rest_ap_topup] = [s.series_id]
+        if 'pre_Neutral1' in s.series_id:
+                info[pre_neutral1_ap_fmap] = [s.series_id]
+                info[pre_neutral1_ap_topup] = [s.series_id]
 
         if 'pre+heat1' in s.series_id:
                 info[pre_heat1_ap_fmap] = [s.series_id]
@@ -259,6 +271,10 @@ def infotodict(seqinfo):
         if 'pre+heat2' in s.series_id:
                 info[pre_heat2_ap_fmap] = [s.series_id]
                 info[pre_heat2_ap_topup] = [s.series_id]
+
+        if 'pre_Neutral2' in s.series_id:
+                info[pre_neutral2_ap_fmap] = [s.series_id]
+                info[pre_neutral2_ap_topup] = [s.series_id]
 
         if 'pre_topup_A>>P' in s.series_id:
             info[pre_topup_ap] = [s.series_id]
@@ -277,17 +293,21 @@ def infotodict(seqinfo):
         if 'MPRAGE_GRAPPA2' in s.series_id:
             info[t1w] = [s.series_id]
 
-        if 'post_rest' in s.series_id:
-                info[post_rest_ap_fmap] = [s.series_id]
-                info[post_rest_ap_topup] = [s.series_id]
+        if 'post_Neutral3' in s.series_id:
+                info[post_neutral3_ap_fmap] = [s.series_id]
+                info[post_neutral3_ap_topup] = [s.series_id]
 
         if 'post+heat3' in s.series_id:
-                info[post_heat1_ap_fmap] = [s.series_id]
-                info[post_heat1_ap_topup] = [s.series_id]
+                info[post_heat3_ap_fmap] = [s.series_id]
+                info[post_heat3_ap_topup] = [s.series_id]
 
         if 'post+heat4' in s.series_id:
-                info[post_heat2_ap_fmap] = [s.series_id]
-                info[post_heat2_ap_topup] = [s.series_id]
+                info[post_heat4_ap_fmap] = [s.series_id]
+                info[post_heat4_ap_topup] = [s.series_id]
+
+        if 'post_Neutral4' in s.series_id:
+                info[post_neutral4_ap_fmap] = [s.series_id]
+                info[post_neutral4_ap_topup] = [s.series_id]
 
         if 'post_topup_A>>P' in s.series_id:
             info[post_topup_ap] = [s.series_id]

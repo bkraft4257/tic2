@@ -101,3 +101,34 @@ def write_json_to_file_from_dict(in_dict, filename):
     with open(filename, 'w') as outfile:
         outfile.write(json.dumps(parsed, indent=4, sort_keys=True, separators=(',', ': ')))
 
+
+# ---------------------------------------------------------------------------------------------------------------------------------------------
+
+def extract_confounds(in_filename, out_filename, confounds):
+    """
+
+    :param in_filename:
+    :param out_filename:
+    :param confounds:
+    :return:
+    """
+
+    df_confounds = read_confounds(in_filename, confounds)
+    write_confounds(df_confounds, out_filename)
+
+
+def read_confounds(filename, confounds):
+    """
+    Read fmriprep confound file.
+
+    :param filename:
+    :param confounds:
+    :return:
+    """
+    df_confounds = pandas.read_csv(filename, sep='\t', usecols=confounds)
+    return df_confounds
+
+
+def write_confounds(in_df, filename):
+
+    in_df.to_csv(filename, index=False, float_format='%.6f')
