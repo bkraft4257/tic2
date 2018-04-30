@@ -11,44 +11,40 @@ import glob
 import sys
 import pandas
 import tic_io
+from tic_core import  operations
 import pprint
 from collections import namedtuple
 
 import shutil
 import nipype.interfaces.fsl as fsl  # fsl
 
-YAML_CONFIG_FILENAME_DEFAULT = os.path.join(os.path.dirname(os.path.realpath(__file__)), 'conn_gather_inputs.yaml')
+YAML_CONFIG_FILENAME_DEFAULT = os.path.join(os.path.dirname(os.path.realpath(__file__)), 'netprep_gather_inputs.yaml')
 
 IMAGE_PROCESSING_PATH = os.path.join(os.getenv('ACTIVE_IMAGE_PROCESSING_PATH'))
 FMRIPREP_PATH = os.path.join(os.getenv('ACTIVE_FMRIPREP_PATH'))
-CONN_PATH = os.path.join(os.getenv('ACTIVE_CONN_PATH'))
+NETPREP_PATH = os.path.join(os.getenv('ACTIVE_NETPREP_PATH'))
 
 
-def _extract_confounds(in_filename, out_filename, confounds):
+def _make_directory(directory=NETPREP_PATH):
     """
+    Make directory if it doesn't exist
 
-    :param in_filename:
-    :param out_filename:
-    :param confounds:
+    :param directory: A string or list of strings to create directory.  Each string must be an absolute or relative path.
     :return:
     """
 
-    df_confounds = _read_confounds(in_filename, confounds)
-    _write_confounds(df_confounds, out_filename)
+    for ii in  operations.force_type_to_list(directory):
 
+        try:
+            if not os.path.exists(ii):
+                os.makedirs(ii)
 
-def _read_confounds(filename, confounds):
-    df_confounds = pandas.read_csv(filename, sep='\t', usecols=confounds)
-    return df_confounds
+        except:
+            sys.exit(f'Unable to make directory {ii}')
 
-
-def _write_confounds(in_df, filename):
-    in_df.to_csv(filename, index=False, float_format='%.6f')
-
-
-def _make_conn_directory(directory=CONN_PATH):
+def _make_netprep_subject_input_directory(directory=NETPREP_PATH):
     """
-    Make CONN directory if it doesn't exist
+    Make NETPREP directory if it doesn't exist
 
     :return:
     """
@@ -214,15 +210,14 @@ def main():
     in_args = _argparse()
 
     SUBJECT_SESSION_PATH = os.path.join(FMRIPREP_PATH, f'sub-{in_args.subject}', f'ses-{in_args.session}')
+    NETPREP_INPUT_PATH = os.path.join(SUBJECT_SESSION_PATH, 'netprep', f'sub-{in_args.subject}', f'ses-{in_args.session}', 'input')
+
     ANAT_PATH = os.path.join(SUBJECT_SESSION_PATH, 'anat')
     FUNC_PATH = os.path.join(SUBJECT_SESSION_PATH, 'func')
 
-    _make_conn_directory()
+    _make_directory(NETPREP_INPUT_PATH)
 
-    conn_inputs = tic_io.read_yaml(in_args.yaml_filename, in_args.verbose)
-
-    gather_anat_files(conn_inputs['anat'], in_args.subject, in_args.session)
-    gather_func_files(conn_inputs['func'], in_args.subject, in_args.session, conn_inputs['func_confounds'])
+    netprep_config = tic_io.read_yaml(in_args.yaml_filename, in_args.verbose)
 
     return
 
@@ -231,20 +226,17 @@ def _argparse():
     """ Get command line arguments.
     """
 
-    parser = argparse.ArgumentParser(prog='conn_gather_inputs')
-
+    parser = argparse.ArgumentParser(prog='netprep_gather_inputs')
 
     parser.add_argument('subject', help='BIDS subject value')
-
-    parser.add_argument('--yaml_filename', help='YAML configuration file',
-                        default=YAML_CONFIG_FILENAME_DEFAULT)
-
-
 
     parser.add_argument('-ss', '--session',
                         help='BIDS session value',
                         type=str,
                         default='1')
+
+    parser.add_argument('--yaml_filename', help='YAML configuration file',
+                        default=YAML_CONFIG_FILENAME_DEFAULT)
 
     parser.add_argument('-v', '--verbose', help='Turn on verbose mode.',
                         action='store_true',
