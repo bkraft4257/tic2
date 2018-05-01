@@ -38,13 +38,25 @@ source $TIC_PATH/studies/active/scripts/bids_app_status.sh
 # Redirect both to a file:
 # command &> out
 
-nohup time /usr/local/bin/singularity run -w -B /cenc -B /gandg -B /bkraft1 \
-                 $APP_SINGULARITY_IMAGE \
-                 $ACTIVE_BIDS_PATH \
-                 $ACTIVE_APP_OUTPUT_PATH \
-                 participant \
-                 -v --work-dir $ACTIVE_APP_WORKING_PATH \
-                  ${parameters} >> $log_file 2>&1 &
+
+# run it in the background so that it continues if user logs out
+cmd="act_full_command=$SINGULARITY_COMMAND \
+                      $ANTS_CORTICAL_THICKNESS_SINGULARITY_IMAGE \
+                      $ACTIVE_BIDS_PATH \
+                      $ACTIVE_ACT_OUTPUT_PATH \
+                      participant $parameters"
+
+echo
+echo $cmd > $log_file
+echo
+
+#nohup time /usr/local/bin/singularity run -w -B /cenc -B /gandg -B /bkraft1 \
+
+nohup time $SINGULARITY_COMMAND \
+           $APP_SINGULARITY_IMAGE \
+           $ACTIVE_BIDS_PATH \
+           $ACTIVE_APP_OUTPUT_PATH \
+           participant $parameters > $log_file 2>&1 &
 
 echo "Waiting 30 seconds before displaying the log file ..."
 sleep 30
