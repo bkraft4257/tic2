@@ -1,14 +1,13 @@
-#!/usr/bin/env bash
+#!/bin/bash
 
-
-BIDS_APP=ants_cortical_thickness
-
-ACTIVE_APP_OUTPUT_PATH=$ACTIVE_IMAGE_PROCESSING_PATH/act
-APP_SINGULARITY_IMAGE=$ANTS_CORTICAL_THICKNESS_SINGULARITY_IMAGE
-
-ACTIVE_APP_WORKING_PATH=$ACTIVE_IMAGE_PROCESSING_PATH/_working
+BIDS_APP='mriqc'
+ACTIVE_APP_WORKING_PATH=$ACTIVE_MRIQC_PATH/_working
+ACTIVE_IMAGE_PROCESSING_LOG_PATH=$ACTIVE_MRIQC_PATH/logs
+ACTIVE_APP_OUTPUT_PATH=$ACTIVE_MRIQC_PATH
+APP_SINGULARITY_IMAGE=$MRIQC_SINGULARITY_IMAGE
 
 # Convert to lower case
+app=mriqc
 study_prefix=$(echo "${ACTIVE_STUDY,,}")
 
 # mriqc.sh and fmriprep.sh uses --participant-label and hdc.sh uses -s to indicated the subject acrostic.
@@ -25,6 +24,7 @@ log_file=${ACTIVE_IMAGE_PROCESSING_LOG_PATH}/${study_prefix}_${BIDS_APP}_${datet
 
 source $TIC_PATH/studies/active/scripts/bids_app_status.sh
 
+
 # NOTE: any -B mount points must exist in the container
 #       run "sudo singularity shell -s xx.img"  and create the mount points
 
@@ -40,25 +40,25 @@ source $TIC_PATH/studies/active/scripts/bids_app_status.sh
 
 
 # run it in the background so that it continues if user logs out
-cmd="act_full_command=$SINGULARITY_COMMAND \
-                      $ANTS_CORTICAL_THICKNESS_SINGULARITY_IMAGE \
-                      $ACTIVE_BIDS_PATH \
-                      $ACTIVE_ACT_OUTPUT_PATH \
-                      participant $parameters"
+# I was having problems with running the command from a variable. I am not certain why.
+# As an intermediate step i save the file to a variable and then run the variable. This
+# is why I don't use the $SINGULARITY_COMMAND in when running the BIDS_APP
+#
 
-echo
-echo $cmd | tee $log_file
-echo
-echo "-----------------------------------------------------------------------------------------------"
-echo
+#full_command=$SINGULARITY_COMMAND \
+#                 $APP_SINGULARITY_IMAGE \
+#                 $ACTIVE_BIDS_PATH \
+#                 $ACTIVE_APP_OUTPUT_PATH \
+#                  --work-dir $ACTIVE_APP_WORKING_PATH \
+#                 group ${@} >> $log_file 2>&1 &
 
-#nohup time /usr/local/bin/singularity run -w -B /cenc -B /gandg -B /bkraft1 \
+/usr/local/bin/singularity run -w -B /cenc -B /gandg -B /bkraft1 \
+                 $APP_SINGULARITY_IMAGE \
+                 $ACTIVE_BIDS_PATH \
+                 $ACTIVE_APP_OUTPUT_PATH \
+                 --work-dir $ACTIVE_APP_WORKING_PATH \
+                 group ${parameters} >> $log_file 2>&1 &
 
-nohup time $SINGULARITY_COMMAND \
-           $APP_SINGULARITY_IMAGE \
-           $ACTIVE_BIDS_PATH \
-           $ACTIVE_APP_OUTPUT_PATH \
-           participant $parameters > $log_file 2>&1 &
 
 echo "Waiting 30 seconds before displaying the log file ..."
 sleep 30
@@ -66,3 +66,7 @@ sleep 30
 cat $log_file
 
 echo
+
+
+
+
