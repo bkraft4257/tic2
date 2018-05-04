@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/env bash
 
 BIDS_APP='mriqc'
 ACTIVE_APP_WORKING_PATH=$ACTIVE_MRIQC_PATH/_working
