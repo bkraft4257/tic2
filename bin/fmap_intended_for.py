@@ -8,7 +8,8 @@ Create a list of functional files to be included in
 import sys
 import argparse
 
-import tic_core
+from tic_core import fmriprep_tools
+
 
 def _argparse():
 
@@ -28,7 +29,7 @@ def _argparse():
 def main():
 
     in_args = _argparse()
-    tic_core.print_intended_for_from_list(in_args.func_ifiles)
+    fmriprep_tools.print_intended_for_from_list(in_args.func_ifiles)
 
 
 if __name__ == '__main__':

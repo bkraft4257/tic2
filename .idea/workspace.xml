@@ -146,8 +146,8 @@
       <file leaf-file-name="fmap_intended_for.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/bin/fmap_intended_for.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="459">
-              <caret line="27" column="11" lean-forward="true" selection-start-line="27" selection-start-column="11" selection-end-line="27" selection-end-column="11" />
+            <state relative-caret-position="527">
+              <caret line="31" column="18" lean-forward="false" selection-start-line="31" selection-start-column="18" selection-end-line="31" selection-end-column="18" />
               <folding>
                 <element signature="e#108#118#0" expanded="true" />
               </folding>
@@ -640,13 +640,6 @@
       <option name="presentableId" value="Default" />
       <updated>1517948604886</updated>
     </task>
-    <task id="LOCAL-00502" summary="Started with CONN scripts for MFC">
-      <created>1524597925435</created>
-      <option name="number" value="00502" />
-      <option name="presentableId" value="LOCAL-00502" />
-      <option name="project" value="LOCAL" />
-      <updated>1524597925435</updated>
-    </task>
     <task id="LOCAL-00503" summary="Started with CONN scripts for MFC">
       <created>1524599455828</created>
       <option name="number" value="00503" />
@@ -983,7 +976,14 @@
       <option name="project" value="LOCAL" />
       <updated>1525470389900</updated>
     </task>
-    <option name="localTasksCounter" value="551" />
+    <task id="LOCAL-00551" summary="Added fmap_intended_for.py to simplify updating fieldmap json files.">
+      <created>1525470473481</created>
+      <option name="number" value="00551" />
+      <option name="presentableId" value="LOCAL-00551" />
+      <option name="project" value="LOCAL" />
+      <updated>1525470473481</updated>
+    </task>
+    <option name="localTasksCounter" value="552" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -1538,8 +1538,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/bin/fmap_intended_for.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
-          <caret line="27" column="11" lean-forward="true" selection-start-line="27" selection-start-column="11" selection-end-line="27" selection-end-column="11" />
+        <state relative-caret-position="527">
+          <caret line="31" column="18" lean-forward="false" selection-start-line="31" selection-start-column="18" selection-end-line="31" selection-end-column="18" />
           <folding>
             <element signature="e#108#118#0" expanded="true" />
           </folding>
