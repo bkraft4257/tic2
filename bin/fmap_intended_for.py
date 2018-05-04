@@ -11,6 +11,7 @@ import argparse
 import tic_core
 
 def _argparse():
+
     """ Get command line arguments.
     """
 
@@ -24,7 +25,7 @@ def _argparse():
     return in_args
 
 
-def main():k
+def main():
 
     in_args = _argparse()
     tic_core.print_intended_for_from_list(in_args.func_ifiles)
