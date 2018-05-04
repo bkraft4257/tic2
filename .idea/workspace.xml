@@ -3,8 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="6f3e13b3-cd58-4c4d-98f6-1a68f8358bfb" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/bin/fmap_intended_for.py" afterPath="$PROJECT_DIR$/bin/fmap_intended_for.py" />
-      <change beforePath="$PROJECT_DIR$/tests/test_fmriprep_tools.py" afterPath="$PROJECT_DIR$/tests/test_fmriprep_tools.py" />
       <change beforePath="$PROJECT_DIR$/tic_core/fmriprep_tools.py" afterPath="$PROJECT_DIR$/tic_core/fmriprep_tools.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -167,11 +165,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="fmriprep_tools.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="fmriprep_tools.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/tic_core/fmriprep_tools.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="375">
-              <caret line="138" column="21" lean-forward="false" selection-start-line="138" selection-start-column="4" selection-end-line="138" selection-end-column="21" />
+            <state relative-caret-position="511">
+              <caret line="144" column="0" lean-forward="false" selection-start-line="144" selection-start-column="0" selection-end-line="144" selection-end-column="0" />
               <folding>
                 <element signature="e#184#214#0" expanded="true" />
               </folding>
@@ -179,11 +177,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="test_fmriprep_tools.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="test_fmriprep_tools.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/tests/test_fmriprep_tools.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="358">
-              <caret line="64" column="53" lean-forward="false" selection-start-line="64" selection-start-column="53" selection-end-line="64" selection-end-column="53" />
+              <caret line="64" column="67" lean-forward="true" selection-start-line="64" selection-start-column="67" selection-end-line="64" selection-end-column="67" />
               <folding>
                 <element signature="e#56#69#0" expanded="true" />
               </folding>
@@ -316,9 +314,9 @@
         <option value="$PROJECT_DIR$/init/tic_aliases.sh" />
         <option value="$PROJECT_DIR$/studies/mfc/aliases.sh" />
         <option value="$PROJECT_DIR$/studies/active/aliases.sh" />
-        <option value="$PROJECT_DIR$/tic_core/fmriprep_tools.py" />
         <option value="$PROJECT_DIR$/bin/fmap_intended_for.py" />
         <option value="$PROJECT_DIR$/tests/test_fmriprep_tools.py" />
+        <option value="$PROJECT_DIR$/tic_core/fmriprep_tools.py" />
       </list>
     </option>
   </component>
@@ -641,13 +639,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1517948604886</updated>
-    </task>
-    <task id="LOCAL-00508" summary="Started with CONN scripts for MFC">
-      <created>1524600100731</created>
-      <option name="number" value="00508" />
-      <option name="presentableId" value="LOCAL-00508" />
-      <option name="project" value="LOCAL" />
-      <updated>1524600100731</updated>
     </task>
     <task id="LOCAL-00509" summary="Started with CONN scripts for MFC">
       <created>1524600153154</created>
@@ -985,7 +976,14 @@
       <option name="project" value="LOCAL" />
       <updated>1525470799188</updated>
     </task>
-    <option name="localTasksCounter" value="557" />
+    <task id="LOCAL-00557" summary="Added fmap_intended_for.py to simplify updating fieldmap json files.">
+      <created>1525470921053</created>
+      <option name="number" value="00557" />
+      <option name="presentableId" value="LOCAL-00557" />
+      <option name="project" value="LOCAL" />
+      <updated>1525470921053</updated>
+    </task>
+    <option name="localTasksCounter" value="558" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -1028,7 +1026,7 @@
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Regex Tester" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32968882" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.46725318" sideWeight="0.31681243" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32437122" sideWeight="0.68318754" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32437122" sideWeight="0.68318754" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.50287354" sideWeight="0.48106593" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3293461" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.20121422" sideWeight="0.49006623" order="7" side_tool="false" content_ui="tabs" />
@@ -1518,12 +1516,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tic_core/fmriprep_tools.py">
+    <entry file="file://$PROJECT_DIR$/tests/test_fmriprep_tools.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="138" column="21" lean-forward="false" selection-start-line="138" selection-start-column="4" selection-end-line="138" selection-end-column="21" />
+        <state relative-caret-position="358">
+          <caret line="64" column="67" lean-forward="true" selection-start-line="64" selection-start-column="67" selection-end-line="64" selection-end-column="67" />
           <folding>
-            <element signature="e#184#214#0" expanded="true" />
+            <element signature="e#56#69#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1538,12 +1536,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tests/test_fmriprep_tools.py">
+    <entry file="file://$PROJECT_DIR$/tic_core/fmriprep_tools.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="358">
-          <caret line="64" column="53" lean-forward="false" selection-start-line="64" selection-start-column="53" selection-end-line="64" selection-end-column="53" />
+        <state relative-caret-position="511">
+          <caret line="144" column="0" lean-forward="false" selection-start-line="144" selection-start-column="0" selection-end-line="144" selection-end-column="0" />
           <folding>
-            <element signature="e#56#69#0" expanded="true" />
+            <element signature="e#184#214#0" expanded="true" />
           </folding>
         </state>
       </provider>
