@@ -6,6 +6,7 @@
 
 import pytest
 import pprint
+import os
 
 from tic_core import fmriprep_tools
 
@@ -48,3 +49,32 @@ def test_delete_key_from_dict_not_a_dictionary():
 
 def test_write_json_to_file_from_dict():
     fmriprep_tools.write_json_to_file_from_dict({'Key1':  1, 'Key2': 2, 'Key3': 3}, 'test_output.json')
+
+
+def test_strip_func_from_string():
+
+    files = ["/bkraft1/studies/mfc/bids/sub-mfc006/ses-1/fmap/../func/sub-mfc006_ses-1_task-preHeat2_acq-epi_rec-fmap_bold.nii.gz",
+             "/bkraft1/studies/mfc/bids/sub-mfc006/ses-1/fmap/../func/sub-mfc006_ses-1_task-postHeat4_acq-epi_rec-fmap_bold.nii.gz",
+             "/bkraft1/studies/mfc/bids/sub-mfc006/ses-1/fmap/../func/sub-mfc006_ses-1_task-postNeutral4_acq-epi_rec-fmap_bold.nii.gz",
+             "/bkraft1/studies/mfc/bids/sub-mfc006/ses-1/fmap/../func/sub-mfc006_ses-1_task-preHeat1_acq-epi_rec-fmap_bold.nii.gz",
+             "/bkraft1/studies/mfc/bids/sub-mfc006/ses-1/fmap/../func/sub-mfc006_ses-1_task-postHeat3_acq-epi_rec-fmap_bold.nii.gz",
+             "/bkraft1/studies/mfc/bids/sub-mfc006/ses-1/fmap/../func/sub-mfc006_ses-1_task-preNeutral2_acq-epi_rec-fmap_bold.nii.gz",
+             "/bkraft1/studies/mfc/bids/sub-mfc006/ses-1/fmap/../func/sub-mfc006_ses-1_task-preNeutral1_acq-epi_rec-fmap_bold.nii.gz",
+             "/bkraft1/studies/mfc/bids/sub-mfc006/ses-1/fmap/../func/sub-mfc006_ses-1_task-postNeutral3_acq-epi_rec-fmap_bold.nii.gz"]
+
+    fmriprep_tools.strip_func_from_string(files)
+
+
+def test_print_intended_for_from_list():
+
+    files = ["ses-1/func/sub-mfc006_ses-1_task-preHeat2_acq-epi_rec-fmap_bold.nii.gz",
+             "ses-1/func/sub-mfc006_ses-1_task-postHeat4_acq-epi_rec-fmap_bold.nii.gz",
+             "ses-1/func/sub-mfc006_ses-1_task-postNeutral4_acq-epi_rec-fmap_bold.nii.gz",
+             "ses-1/func/sub-mfc006_ses-1_task-preHeat1_acq-epi_rec-fmap_bold.nii.gz",
+             "ses-1/func/sub-mfc006_ses-1_task-postHeat3_acq-epi_rec-fmap_bold.nii.gz",
+             "ses-1/func/sub-mfc006_ses-1_task-preNeutral2_acq-epi_rec-fmap_bold.nii.gz",
+             "ses-1/func/sub-mfc006_ses-1_task-preNeutral1_acq-epi_rec-fmap_bold.nii.gz",
+             "ses-1/func/sub-mfc006_ses-1_task-postNeutral3_acq-epi_rec-fmap_bold.nii.gz"]
+
+    fmriprep_tools.print_intended_for_from_list(files)
+
