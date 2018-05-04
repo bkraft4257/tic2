@@ -145,7 +145,7 @@ def print_intended_for_from_list(files):
     print(f'\n\n\t"IntendedFor": ["{files[0]}",')
 
     for ii_file in files[1:-1]:
-        print(f'\t\t\t\t\t"{ii_file}",')
+        print(f'\t\t\t"{ii_file}",')
 
-    print(f'\t\t\t\t\t"{files[-1]}"],\n')
+    print(f'\t\t\t"{files[-1]}"],\n')
 
