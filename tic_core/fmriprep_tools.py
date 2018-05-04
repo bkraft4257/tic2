@@ -10,6 +10,8 @@ from typing import List, Union
 
 import json
 import pprint
+import re
+import os
 
 from tic_core import operations
 
@@ -132,3 +134,20 @@ def read_confounds(filename, confounds):
 def write_confounds(in_df, filename):
 
     in_df.to_csv(filename, index=False, float_format='%.6f')
+
+
+def strip_func_from_string(files):
+
+    for ii_file in files:
+        print(re.sub('^.+?ses-', 'ses-', os.path.abspath(ii_file), 1))
+
+
+def print_intended_for_from_list(files):
+
+    print(f'\n\n\t"IntendedFor": ["{files[0]}",')
+
+    for ii_file in files[1:-1]:
+        print(f'\t\t\t\t\t"{ii_file}",')
+
+    print(f'\t\t\t\t\t"{files[-1]}"],\n')
+

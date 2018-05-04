@@ -6,9 +6,9 @@ Create a list of functional files to be included in
 """
 
 import sys
-import glob
 import argparse
 
+import tic_core
 
 def _argparse():
     """ Get command line arguments.
@@ -24,23 +24,11 @@ def _argparse():
     return in_args
 
 
-def _print_intended_for_from_list(files):
-
-    print(f'"IntendedFor":["{files[0]}",')
-
-    for ii_file in enumerate(files[1:-1]):
-        print(f'"{ii_file}",')
-
-    print(f'"{files[-1]}"],')
-
-
-def main():
+def main():k
 
     in_args = _argparse()
-    _print_intended_for_from_list(in_args.func_files)
+    tic_core.print_intended_for_from_list(in_args.func_ifiles)
 
 
-
-
-    if __name__ == '__main__':
+if __name__ == '__main__':
     sys.exit(main())
