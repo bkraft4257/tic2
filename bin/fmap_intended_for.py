@@ -29,7 +29,8 @@ def _argparse():
 def main():
 
     in_args = _argparse()
-    fmriprep_tools.print_intended_for_from_list(in_args.func_files)
+    stripped_files = fmriprep_tools.lstrip_to_ses_key(in_args.func_files)
+    fmriprep_tools.print_intended_for_from_list(stripped_files)
 
 
 if __name__ == '__main__':

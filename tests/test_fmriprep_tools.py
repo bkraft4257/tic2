@@ -62,9 +62,10 @@ def test_strip_func_from_string():
              "/bkraft1/studies/mfc/bids/sub-mfc006/ses-1/fmap/../func/sub-mfc006_ses-1_task-preNeutral1_acq-epi_rec-fmap_bold.nii.gz",
              "/bkraft1/studies/mfc/bids/sub-mfc006/ses-1/fmap/../func/sub-mfc006_ses-1_task-postNeutral3_acq-epi_rec-fmap_bold.nii.gz"]
 
-    stripped_files = fmriprep_tools.strip_func_from_string(files)
+    stripped_files = fmriprep_tools.lstrip_to_ses_key(files)
 
     print(stripped_files)
+
 
 def test_print_intended_for_from_list():
 

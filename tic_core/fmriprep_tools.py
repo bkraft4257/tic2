@@ -136,7 +136,7 @@ def write_confounds(in_df, filename):
     in_df.to_csv(filename, index=False, float_format='%.6f')
 
 
-def strip_func_from_string(files):
+def lstrip_to_ses_key(files):
     return [re.sub('^.+?ses-', 'ses-', os.path.abspath(x), 1) for x in files]
 
 
