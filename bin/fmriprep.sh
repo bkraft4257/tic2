@@ -38,7 +38,7 @@ source $TIC_PATH/studies/active/scripts/bids_app_status.sh
 # Redirect both to a file:
 # command &> out
 
-nohup time /usr/local/bin/singularity run -w -B /cenc -B /gandg -B /bkraft1 \
+nohup time /usr/local/bin/singularity run -w $ACTIVE_SINGULARITY_USER_BIND_PATHS \
                  $APP_SINGULARITY_IMAGE \
                  $ACTIVE_BIDS_PATH \
                  $ACTIVE_APP_OUTPUT_PATH \

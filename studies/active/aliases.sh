@@ -2,6 +2,11 @@
 
 # Aliases
 
+alias sed_for_fmap='sed "s#../#\"ses-1/#" | sed "s#.gz#.gz\",#"'
+
+alias bids_f2="find $ACTIVE_BIDS_PATH  -name '*.[2-9].*'"
+alias bids_f1="find $ACTIVE_BIDS_PATH  -name '*.1.*'"
+alias bids_f~="find $ACTIVE_BIDS_PATH  -name '*~'"
 
 alias cdas='cd $ACTIVE_PATH; lsreport_function'
 alias cdb='cd $ACTIVE_BIDS_PATH; lsreport_function'
