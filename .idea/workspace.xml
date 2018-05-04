@@ -168,8 +168,8 @@
       <file leaf-file-name="fmriprep_tools.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/tic_core/fmriprep_tools.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="596">
-              <caret line="149" column="23" lean-forward="false" selection-start-line="149" selection-start-column="23" selection-end-line="149" selection-end-column="23" />
+            <state relative-caret-position="443">
+              <caret line="140" column="0" lean-forward="true" selection-start-line="140" selection-start-column="0" selection-end-line="140" selection-end-column="0" />
               <folding>
                 <element signature="e#184#214#0" expanded="true" />
               </folding>
@@ -640,13 +640,6 @@
       <option name="presentableId" value="Default" />
       <updated>1517948604886</updated>
     </task>
-    <task id="LOCAL-00512" summary="Started with CONN scripts for MFC">
-      <created>1524600365052</created>
-      <option name="number" value="00512" />
-      <option name="presentableId" value="LOCAL-00512" />
-      <option name="project" value="LOCAL" />
-      <updated>1524600365052</updated>
-    </task>
     <task id="LOCAL-00513" summary="Started with CONN scripts for MFC">
       <created>1524600401181</created>
       <option name="number" value="00513" />
@@ -983,7 +976,14 @@
       <option name="project" value="LOCAL" />
       <updated>1525471202937</updated>
     </task>
-    <option name="localTasksCounter" value="561" />
+    <task id="LOCAL-00561" summary="Added fmap_intended_for.py to simplify updating fieldmap json files.">
+      <created>1525471309057</created>
+      <option name="number" value="00561" />
+      <option name="presentableId" value="LOCAL-00561" />
+      <option name="project" value="LOCAL" />
+      <updated>1525471309057</updated>
+    </task>
+    <option name="localTasksCounter" value="562" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -1538,8 +1538,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/tic_core/fmriprep_tools.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="596">
-          <caret line="149" column="23" lean-forward="false" selection-start-line="149" selection-start-column="23" selection-end-line="149" selection-end-column="23" />
+        <state relative-caret-position="443">
+          <caret line="140" column="0" lean-forward="true" selection-start-line="140" selection-start-column="0" selection-end-line="140" selection-end-column="0" />
           <folding>
             <element signature="e#184#214#0" expanded="true" />
           </folding>
