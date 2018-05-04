@@ -147,7 +147,7 @@
         <entry file="file://$PROJECT_DIR$/bin/fmap_intended_for.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="527">
-              <caret line="31" column="18" lean-forward="false" selection-start-line="31" selection-start-column="18" selection-end-line="31" selection-end-column="18" />
+              <caret line="31" column="61" lean-forward="true" selection-start-line="31" selection-start-column="61" selection-end-line="31" selection-end-column="61" />
               <folding>
                 <element signature="e#108#118#0" expanded="true" />
               </folding>
@@ -640,13 +640,6 @@
       <option name="presentableId" value="Default" />
       <updated>1517948604886</updated>
     </task>
-    <task id="LOCAL-00503" summary="Started with CONN scripts for MFC">
-      <created>1524599455828</created>
-      <option name="number" value="00503" />
-      <option name="presentableId" value="LOCAL-00503" />
-      <option name="project" value="LOCAL" />
-      <updated>1524599455829</updated>
-    </task>
     <task id="LOCAL-00504" summary="Started with CONN scripts for MFC">
       <created>1524599828045</created>
       <option name="number" value="00504" />
@@ -983,7 +976,14 @@
       <option name="project" value="LOCAL" />
       <updated>1525470473481</updated>
     </task>
-    <option name="localTasksCounter" value="552" />
+    <task id="LOCAL-00552" summary="Added fmap_intended_for.py to simplify updating fieldmap json files.">
+      <created>1525470567252</created>
+      <option name="number" value="00552" />
+      <option name="presentableId" value="LOCAL-00552" />
+      <option name="project" value="LOCAL" />
+      <updated>1525470567252</updated>
+    </task>
+    <option name="localTasksCounter" value="553" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -1539,7 +1539,7 @@
     <entry file="file://$PROJECT_DIR$/bin/fmap_intended_for.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="527">
-          <caret line="31" column="18" lean-forward="false" selection-start-line="31" selection-start-column="18" selection-end-line="31" selection-end-column="18" />
+          <caret line="31" column="61" lean-forward="true" selection-start-line="31" selection-start-column="61" selection-end-line="31" selection-end-column="61" />
           <folding>
             <element signature="e#108#118#0" expanded="true" />
           </folding>
