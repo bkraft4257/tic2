@@ -137,7 +137,7 @@ def write_confounds(in_df, filename):
 
 
 def strip_func_from_string(files):
-    return [ re.sub('^.+?ses-', 'ses-', os.path.abspath(x), 1) for x in files]
+    return [re.sub('^.+?ses-', 'ses-', os.path.abspath(x), 1) for x in files]
 
 
 def print_intended_for_from_list(files):
