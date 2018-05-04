@@ -144,6 +144,8 @@ def strip_func_from_string(files):
 
 def print_intended_for_from_list(files):
 
+    print(files)
+
     print(f'\n\n\t"IntendedFor": ["{files[0]}",')
 
     for ii_file in files[1:-1]:
