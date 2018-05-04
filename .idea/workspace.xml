@@ -2,14 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6f3e13b3-cd58-4c4d-98f6-1a68f8358bfb" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/bin/fmap_intended_for.py" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/bin/act.sh" afterPath="$PROJECT_DIR$/bin/act.sh" />
-      <change beforePath="$PROJECT_DIR$/bin/fmriprep.sh" afterPath="$PROJECT_DIR$/bin/fmriprep.sh" />
-      <change beforePath="$PROJECT_DIR$/bin/mriqc.sh" afterPath="$PROJECT_DIR$/bin/mriqc.sh" />
-      <change beforePath="$PROJECT_DIR$/bin/mriqc_group.sh" afterPath="$PROJECT_DIR$/bin/mriqc_group.sh" />
-      <change beforePath="$PROJECT_DIR$/studies/active/aliases.sh" afterPath="$PROJECT_DIR$/studies/active/aliases.sh" />
-      <change beforePath="$PROJECT_DIR$/studies/mfc/aliases.sh" afterPath="$PROJECT_DIR$/studies/mfc/aliases.sh" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -19,29 +12,32 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/tic_core$py_test_for_test_processing_status_test_clean_bids_key_value_with_two_key_value_splitters.coverage" NAME="py.test for test_processing_status.test_clean_bids_key_value_with_two_key_value_splitters Coverage Results" MODIFIED="1523543313222" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
     <SUITE FILE_PATH="coverage/tic_core$py_test_in_tests.coverage" NAME="py.test in tests Coverage Results" MODIFIED="1521219130892" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
-    <SUITE FILE_PATH="coverage/tic_core$py_test_in_test_tic_io_py.coverage" NAME="py.test in test_tic_io.py Coverage Results" MODIFIED="1524403598979" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
     <SUITE FILE_PATH="coverage/tic_core$py_test_in_test_conn_gather_inputs_py__1_.coverage" NAME="test_conn_gather_inputs.py Coverage Results" MODIFIED="1524676234977" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/.." />
-    <SUITE FILE_PATH="coverage/tic_core$py_test_for_test_fmriprep_tools_test_write_json_to_file.coverage" NAME="py.test for test_fmriprep_tools.test_write_json_to_file Coverage Results" MODIFIED="1524410191301" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
-    <SUITE FILE_PATH="coverage/tic_core$py_test_in_test_plot_overlay_py.coverage" NAME="py.test in test_plot_overlay.py Coverage Results" MODIFIED="1521475279384" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
+    <SUITE FILE_PATH="coverage/tic_core$py_test_for_test_fmriprep_tools_test_print_intended_for_from_list.coverage" NAME="py.test for test_fmriprep_tools.test_print_intended_for_from_list Coverage Results" MODIFIED="1525470222812" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
     <SUITE FILE_PATH="coverage/tic_core$py_test_for_test_slack_test_webhook.coverage" NAME="py.test for test_slack.test_webhook Coverage Results" MODIFIED="1524397974880" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
     <SUITE FILE_PATH="coverage/tic_core$py_test_for_test_conn_gather_inputs_test_conn_gather_inputs_read_yaml.coverage" NAME="py.test for test_conn_gather_inputs.test_conn_gather_inputs_read_yaml Coverage Results" MODIFIED="1524676434348" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
     <SUITE FILE_PATH="coverage/tic_core$py_test_for_test_processing_status_test_clean_bids_key_value_with_sub_key.coverage" NAME="py.test for test_processing_status.test_clean_bids_key_value_with_sub_key Coverage Results" MODIFIED="1523543198656" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
-    <SUITE FILE_PATH="coverage/tic_core$py_test_for_test_conn_gather_inputs_test_conn_gather_inputs_read_yaml_from_main.coverage" NAME="py.test for test_conn_gather_inputs.test_conn_gather_inputs_read_yaml_from_main Coverage Results" MODIFIED="1524676954575" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
     <SUITE FILE_PATH="coverage/tic_core$py_test_in_test_processing_status_py.coverage" NAME="py.test in test_processing_status.py Coverage Results" MODIFIED="1523543380820" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
-    <SUITE FILE_PATH="coverage/tic_core$py_test_in_test_conn_gather_inputs_py.coverage" NAME="py.test in test_conn_gather_inputs.py Coverage Results" MODIFIED="1524674309557" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests/data" />
-    <SUITE FILE_PATH="coverage/tic_core$py_test_for_test_fmriprep_tools_test_create_echo_times_dict.coverage" NAME="py.test for test_fmriprep_tools.test_create_echo_times_dict Coverage Results" MODIFIED="1524408833224" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
-    <SUITE FILE_PATH="coverage/tic_core$py_test_in_test_fmriprep_tools_py.coverage" NAME="py.test in test_fmriprep_tools.py Coverage Results" MODIFIED="1524408658215" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
     <SUITE FILE_PATH="coverage/tic_core$py_test_for_test_fmriprep_tools_test_write_json_to_file_from_dict.coverage" NAME="py.test for test_fmriprep_tools.test_write_json_to_file_from_dict Coverage Results" MODIFIED="1524412051289" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
     <SUITE FILE_PATH="coverage/tic_core$py_test_for_test_fmriprep_tools_test_delete_key_from_dict_existing_key.coverage" NAME="py.test for test_fmriprep_tools.test_delete_key_from_dict_existing_key Coverage Results" MODIFIED="1524408017064" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
-    <SUITE FILE_PATH="coverage/tic_core$plot_overlay.coverage" NAME="plot_overlay Coverage Results" MODIFIED="1521475109051" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tic_core" />
     <SUITE FILE_PATH="coverage/tic_core$py_test_for_test_operations_test_force_input_to_list.coverage" NAME="py.test for test_operations.test_force_input_to_list Coverage Results" MODIFIED="1524407012947" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
+    <SUITE FILE_PATH="coverage/tic_core$py_test_for_test_tic_io_test_get_config.coverage" NAME="py.test for test_tic_io.test_get_config Coverage Results" MODIFIED="1524400621383" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
+    <SUITE FILE_PATH="coverage/tic_core$py_test_in_test_slack_py.coverage" NAME="py.test in test_slack.py Coverage Results" MODIFIED="1524402486807" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
+    <SUITE FILE_PATH="coverage/tic_core$py_test_for_test_fmriprep_tools_test_strip_func_from_string.coverage" NAME="py.test for test_fmriprep_tools.test_strip_func_from_string Coverage Results" MODIFIED="1525469932659" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
+    <SUITE FILE_PATH="coverage/tic_core$py_test_for_test_processing_status_test_clean_bids_key_value_with_two_key_value_splitters.coverage" NAME="py.test for test_processing_status.test_clean_bids_key_value_with_two_key_value_splitters Coverage Results" MODIFIED="1523543313222" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
+    <SUITE FILE_PATH="coverage/tic_core$py_test_in_test_tic_io_py.coverage" NAME="py.test in test_tic_io.py Coverage Results" MODIFIED="1524403598979" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
+    <SUITE FILE_PATH="coverage/tic_core$py_test_for_test_fmriprep_tools_test_write_json_to_file.coverage" NAME="py.test for test_fmriprep_tools.test_write_json_to_file Coverage Results" MODIFIED="1524410191301" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
+    <SUITE FILE_PATH="coverage/tic_core$py_test_in_test_plot_overlay_py.coverage" NAME="py.test in test_plot_overlay.py Coverage Results" MODIFIED="1521475279384" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
+    <SUITE FILE_PATH="coverage/tic_core$py_test_for_test_conn_gather_inputs_test_conn_gather_inputs_read_yaml_from_main.coverage" NAME="py.test for test_conn_gather_inputs.test_conn_gather_inputs_read_yaml_from_main Coverage Results" MODIFIED="1524676954575" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
+    <SUITE FILE_PATH="coverage/tic_core$py_test_in_test_conn_gather_inputs_py.coverage" NAME="py.test in test_conn_gather_inputs.py Coverage Results" MODIFIED="1524674309557" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests/data" />
+    <SUITE FILE_PATH="coverage/tic_core$py_test_for_test_fmriprep_tools_test_create_echo_times_dict.coverage" NAME="py.test for test_fmriprep_tools.test_create_echo_times_dict Coverage Results" MODIFIED="1524408833224" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
+    <SUITE FILE_PATH="coverage/tic_core$py_test_in_test_fmriprep_tools_py.coverage" NAME="py.test in test_fmriprep_tools.py Coverage Results" MODIFIED="1525470110038" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
+    <SUITE FILE_PATH="coverage/tic_core$py_test_for_test_fmriprep_tools_test_print_intended_for.coverage" NAME="py.test for test_fmriprep_tools.test_print_intended_for Coverage Results" MODIFIED="1525468366102" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
+    <SUITE FILE_PATH="coverage/tic_core$plot_overlay.coverage" NAME="plot_overlay Coverage Results" MODIFIED="1521475109051" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tic_core" />
     <SUITE FILE_PATH="coverage/tic_core$fmriprep_tools.coverage" NAME="fmriprep_tools Coverage Results" MODIFIED="1524407468952" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tic_core" />
     <SUITE FILE_PATH="coverage/tic_core$py_test_for_test_fmriprep_tools_test_delete_key_from_dict.coverage" NAME="py.test for test_fmriprep_tools.test_delete_key_from_dict Coverage Results" MODIFIED="1524407803099" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
-    <SUITE FILE_PATH="coverage/tic_core$py_test_for_test_tic_io_test_get_config.coverage" NAME="py.test for test_tic_io.test_get_config Coverage Results" MODIFIED="1524400621383" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
     <SUITE FILE_PATH="coverage/tic_core$py_test_for_test_fmriprep_tools_test_merge_dict_to_dict.coverage" NAME="py.test for test_fmriprep_tools.test_merge_dict_to_dict Coverage Results" MODIFIED="1524409346703" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
-    <SUITE FILE_PATH="coverage/tic_core$py_test_in_test_slack_py.coverage" NAME="py.test in test_slack.py Coverage Results" MODIFIED="1524402486807" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
     <SUITE FILE_PATH="coverage/tic_core$py_test_for_test_slack_test_get_webhook.coverage" NAME="py.test for test_slack.test_get_webhook Coverage Results" MODIFIED="1524400541331" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
   </component>
   <component name="DatabaseView">
@@ -63,26 +59,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="275">
               <caret line="40" column="0" lean-forward="false" selection-start-line="40" selection-start-column="0" selection-end-line="45" selection-end-column="62" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="aliases.sh" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/studies/active/aliases.sh">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="4" column="64" lean-forward="false" selection-start-line="4" selection-start-column="6" selection-end-line="4" selection-end-column="64" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="aliases.sh" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/studies/mfc/aliases.sh">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="5" column="0" lean-forward="false" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -169,8 +145,8 @@
       <file leaf-file-name="fmap_intended_for.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/bin/fmap_intended_for.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="371">
-              <caret line="39" column="47" lean-forward="false" selection-start-line="39" selection-start-column="47" selection-end-line="39" selection-end-column="47" />
+            <state relative-caret-position="578">
+              <caret line="34" column="0" lean-forward="true" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
               <folding>
                 <element signature="e#108#118#0" expanded="true" />
               </folding>
@@ -184,6 +160,30 @@
             <state relative-caret-position="204">
               <caret line="229" column="0" lean-forward="false" selection-start-line="229" selection-start-column="0" selection-end-line="261" selection-end-column="20" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="fmriprep_tools.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/tic_core/fmriprep_tools.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="341">
+              <caret line="136" column="0" lean-forward="true" selection-start-line="136" selection-start-column="0" selection-end-line="136" selection-end-column="0" />
+              <folding>
+                <element signature="e#184#214#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="test_fmriprep_tools.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/tests/test_fmriprep_tools.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="596">
+              <caret line="78" column="47" lean-forward="false" selection-start-line="78" selection-start-column="19" selection-end-line="78" selection-end-column="47" />
+              <folding>
+                <element signature="e#56#69#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -288,7 +288,6 @@
         <option value="$PROJECT_DIR$/tests/test_tic_io.py" />
         <option value="$PROJECT_DIR$/tests/operations.py.java" />
         <option value="$PROJECT_DIR$/tests/test_operations.py" />
-        <option value="$PROJECT_DIR$/tests/test_fmriprep_tools.py" />
         <option value="$PROJECT_DIR$/docs/source/other/conn.md" />
         <option value="$PROJECT_DIR$/studies/mfc/scripts/mfc_task.txt" />
         <option value="$PROJECT_DIR$/bin/bids_processing_status.py" />
@@ -302,7 +301,6 @@
         <option value="$PROJECT_DIR$/studies/mfc/scripts/conn_gather_inputs.yaml" />
         <option value="$PROJECT_DIR$/tic_core/fmriprep_support_functions.py" />
         <option value="$PROJECT_DIR$/tic_core/tic_io.py" />
-        <option value="$PROJECT_DIR$/tic_core/fmriprep_tools.py" />
         <option value="$PROJECT_DIR$/bin/netprep_gather_inputs.py" />
         <option value="$PROJECT_DIR$/bin/conn_gather_inputs.py" />
         <option value="$PROJECT_DIR$/tic_core/operations.py" />
@@ -315,6 +313,8 @@
         <option value="$PROJECT_DIR$/init/tic_aliases.sh" />
         <option value="$PROJECT_DIR$/studies/mfc/aliases.sh" />
         <option value="$PROJECT_DIR$/studies/active/aliases.sh" />
+        <option value="$PROJECT_DIR$/tests/test_fmriprep_tools.py" />
+        <option value="$PROJECT_DIR$/tic_core/fmriprep_tools.py" />
         <option value="$PROJECT_DIR$/bin/fmap_intended_for.py" />
       </list>
     </option>
@@ -326,9 +326,10 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="y" value="23" />
-    <option name="width" value="1440" />
-    <option name="height" value="877" />
+    <option name="x" value="-393" />
+    <option name="y" value="-1406" />
+    <option name="width" value="2061" />
+    <option name="height" value="1271" />
   </component>
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
@@ -404,6 +405,11 @@
             <path>
               <item name="tic_core" type="b2602c69:ProjectViewProjectNode" />
               <item name="tic_core" type="462c0819:PsiDirectoryNode" />
+              <item name="tests" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="tic_core" type="b2602c69:ProjectViewProjectNode" />
+              <item name="tic_core" type="462c0819:PsiDirectoryNode" />
               <item name="tic_core" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -456,23 +462,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python tests.py.test for test_conn_gather_inputs.test_conn_gather_inputs_read_yaml_from_main">
-    <configuration name="py.test for test_conn_gather_inputs.test_conn_gather_inputs_read_yaml" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tests" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="tic_core" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="_new_keywords" value="&quot;&quot;" />
-      <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;test_conn_gather_inputs.test_conn_gather_inputs_read_yaml&quot;" />
-      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
-    </configuration>
+  <component name="RunManager" selected="Python tests.py.test for test_fmriprep_tools.test_print_intended_for_from_list">
     <configuration name="py.test for test_conn_gather_inputs.test_conn_gather_inputs_read_yaml_from_main" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -489,7 +479,7 @@
       <option name="_new_target" value="&quot;test_conn_gather_inputs.test_conn_gather_inputs_read_yaml_from_main&quot;" />
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
     </configuration>
-    <configuration name="py.test for test_fmriprep_tools.test_merge_dict_to_dict" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
+    <configuration name="py.test for test_fmriprep_tools.test_print_intended_for" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs />
@@ -502,7 +492,39 @@
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
       <option name="_new_keywords" value="&quot;&quot;" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;test_fmriprep_tools.test_merge_dict_to_dict&quot;" />
+      <option name="_new_target" value="&quot;test_fmriprep_tools.test_print_intended_for&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+    </configuration>
+    <configuration name="py.test for test_fmriprep_tools.test_print_intended_for_from_list" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tests" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="tic_core" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="_new_keywords" value="&quot;&quot;" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;test_fmriprep_tools.test_print_intended_for_from_list&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+    </configuration>
+    <configuration name="py.test for test_fmriprep_tools.test_strip_func_from_string" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tests" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="tic_core" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="_new_keywords" value="&quot;&quot;" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;test_fmriprep_tools.test_strip_func_from_string&quot;" />
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
     </configuration>
     <configuration name="py.test for test_fmriprep_tools.test_write_json_to_file" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
@@ -521,7 +543,7 @@
       <option name="_new_target" value="&quot;test_fmriprep_tools.test_write_json_to_file&quot;" />
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
     </configuration>
-    <configuration name="py.test for test_fmriprep_tools.test_write_json_to_file_from_dict" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
+    <configuration name="py.test in test_fmriprep_tools.py" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs />
@@ -534,8 +556,8 @@
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
       <option name="_new_keywords" value="&quot;&quot;" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;test_fmriprep_tools.test_write_json_to_file_from_dict&quot;" />
-      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <option name="_new_target" value="&quot;$PROJECT_DIR$/tests/test_fmriprep_tools.py&quot;" />
+      <option name="_new_targetType" value="&quot;PATH&quot;" />
     </configuration>
     <configuration name="py.test in test_plot_overlay.py" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -585,19 +607,21 @@
       <option name="_new_target" value="&quot;$PROJECT_DIR$/tests/test_conn_gather_inputs.py&quot;" />
       <option name="_new_targetType" value="&quot;PATH&quot;" />
     </configuration>
-    <list size="5">
+    <list size="6">
       <item index="0" class="java.lang.String" itemvalue="Python tests.py.test in test_plot_overlay.py" />
-      <item index="1" class="java.lang.String" itemvalue="Python tests.py.test for test_fmriprep_tools.test_merge_dict_to_dict" />
-      <item index="2" class="java.lang.String" itemvalue="Python tests.py.test for test_fmriprep_tools.test_write_json_to_file_from_dict" />
-      <item index="3" class="java.lang.String" itemvalue="Python tests.py.test for test_conn_gather_inputs.test_conn_gather_inputs_read_yaml_from_main" />
-      <item index="4" class="java.lang.String" itemvalue="Python tests.py.test for test_conn_gather_inputs.test_conn_gather_inputs_read_yaml" />
+      <item index="1" class="java.lang.String" itemvalue="Python tests.py.test for test_conn_gather_inputs.test_conn_gather_inputs_read_yaml_from_main" />
+      <item index="2" class="java.lang.String" itemvalue="Python tests.py.test for test_fmriprep_tools.test_print_intended_for" />
+      <item index="3" class="java.lang.String" itemvalue="Python tests.py.test for test_fmriprep_tools.test_strip_func_from_string" />
+      <item index="4" class="java.lang.String" itemvalue="Python tests.py.test in test_fmriprep_tools.py" />
+      <item index="5" class="java.lang.String" itemvalue="Python tests.py.test for test_fmriprep_tools.test_print_intended_for_from_list" />
     </list>
     <recent_temporary>
-      <list size="4">
-        <item index="0" class="java.lang.String" itemvalue="Python tests.py.test for test_conn_gather_inputs.test_conn_gather_inputs_read_yaml_from_main" />
-        <item index="1" class="java.lang.String" itemvalue="Python tests.py.test for test_conn_gather_inputs.test_conn_gather_inputs_read_yaml" />
-        <item index="2" class="java.lang.String" itemvalue="Python tests.py.test for test_fmriprep_tools.test_write_json_to_file_from_dict" />
-        <item index="3" class="java.lang.String" itemvalue="Python tests.py.test for test_fmriprep_tools.test_merge_dict_to_dict" />
+      <list size="5">
+        <item index="0" class="java.lang.String" itemvalue="Python tests.py.test for test_fmriprep_tools.test_print_intended_for_from_list" />
+        <item index="1" class="java.lang.String" itemvalue="Python tests.py.test in test_fmriprep_tools.py" />
+        <item index="2" class="java.lang.String" itemvalue="Python tests.py.test for test_fmriprep_tools.test_strip_func_from_string" />
+        <item index="3" class="java.lang.String" itemvalue="Python tests.py.test for test_fmriprep_tools.test_print_intended_for" />
+        <item index="4" class="java.lang.String" itemvalue="Python tests.py.test for test_conn_gather_inputs.test_conn_gather_inputs_read_yaml_from_main" />
       </list>
     </recent_temporary>
   </component>
@@ -614,20 +638,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1517948604886</updated>
-    </task>
-    <task id="LOCAL-00499" summary="Started with CONN scripts for MFC">
-      <created>1524519331026</created>
-      <option name="number" value="00499" />
-      <option name="presentableId" value="LOCAL-00499" />
-      <option name="project" value="LOCAL" />
-      <updated>1524519331026</updated>
-    </task>
-    <task id="LOCAL-00500" summary="Started with CONN scripts for MFC">
-      <created>1524519433435</created>
-      <option name="number" value="00500" />
-      <option name="presentableId" value="LOCAL-00500" />
-      <option name="project" value="LOCAL" />
-      <updated>1524519433435</updated>
     </task>
     <task id="LOCAL-00501" summary="Started with CONN scripts for MFC">
       <created>1524597857071</created>
@@ -958,54 +968,68 @@
       <option name="project" value="LOCAL" />
       <updated>1525199816182</updated>
     </task>
-    <option name="localTasksCounter" value="548" />
+    <task id="LOCAL-00548" summary="Added fmap_intended_for.py to simplify updating fieldmap json files.">
+      <created>1525468106019</created>
+      <option name="number" value="00548" />
+      <option name="presentableId" value="LOCAL-00548" />
+      <option name="project" value="LOCAL" />
+      <updated>1525468106021</updated>
+    </task>
+    <task id="LOCAL-00549" summary="Added fmap_intended_for.py to simplify updating fieldmap json files.">
+      <created>1525470268387</created>
+      <option name="number" value="00549" />
+      <option name="presentableId" value="LOCAL-00549" />
+      <option name="project" value="LOCAL" />
+      <updated>1525470268387</updated>
+    </task>
+    <option name="localTasksCounter" value="550" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="py_test_for_test_conn_gather_inputs_test_conn_gather_inputs_read_yaml_from_main - 2018.04.25 at 13h 16m 20s.xml">
-      <configuration name="py.test for test_conn_gather_inputs.test_conn_gather_inputs_read_yaml_from_main" configurationId="tests" />
+    <history-entry file="py_test_for_test_fmriprep_tools_test_print_intended_for_from_list - 2018.05.04 at 17h 41m 55s.xml">
+      <configuration name="py.test for test_fmriprep_tools.test_print_intended_for_from_list" configurationId="tests" />
     </history-entry>
-    <history-entry file="py_test_for_test_conn_gather_inputs_test_conn_gather_inputs_read_yaml_from_main - 2018.04.25 at 13h 16m 29s.xml">
-      <configuration name="py.test for test_conn_gather_inputs.test_conn_gather_inputs_read_yaml_from_main" configurationId="tests" />
+    <history-entry file="py_test_for_test_fmriprep_tools_test_print_intended_for_from_list - 2018.05.04 at 17h 42m 15s.xml">
+      <configuration name="py.test for test_fmriprep_tools.test_print_intended_for_from_list" configurationId="tests" />
     </history-entry>
-    <history-entry file="py_test_for_test_conn_gather_inputs_test_conn_gather_inputs_read_yaml_from_main - 2018.04.25 at 13h 16m 59s.xml">
-      <configuration name="py.test for test_conn_gather_inputs.test_conn_gather_inputs_read_yaml_from_main" configurationId="tests" />
+    <history-entry file="py_test_for_test_fmriprep_tools_test_print_intended_for_from_list - 2018.05.04 at 17h 42m 43s.xml">
+      <configuration name="py.test for test_fmriprep_tools.test_print_intended_for_from_list" configurationId="tests" />
     </history-entry>
-    <history-entry file="py_test_for_test_conn_gather_inputs_test_conn_gather_inputs_read_yaml_from_main - 2018.04.25 at 13h 17m 40s.xml">
-      <configuration name="py.test for test_conn_gather_inputs.test_conn_gather_inputs_read_yaml_from_main" configurationId="tests" />
+    <history-entry file="py_test_for_test_fmriprep_tools_test_print_intended_for_from_list - 2018.05.04 at 17h 42m 50s.xml">
+      <configuration name="py.test for test_fmriprep_tools.test_print_intended_for_from_list" configurationId="tests" />
     </history-entry>
-    <history-entry file="py_test_for_test_conn_gather_inputs_test_conn_gather_inputs_read_yaml_from_main - 2018.04.25 at 13h 18m 38s.xml">
-      <configuration name="py.test for test_conn_gather_inputs.test_conn_gather_inputs_read_yaml_from_main" configurationId="tests" />
+    <history-entry file="py_test_for_test_fmriprep_tools_test_print_intended_for_from_list - 2018.05.04 at 17h 43m 08s.xml">
+      <configuration name="py.test for test_fmriprep_tools.test_print_intended_for_from_list" configurationId="tests" />
     </history-entry>
-    <history-entry file="py_test_for_test_conn_gather_inputs_test_conn_gather_inputs_read_yaml_from_main - 2018.04.25 at 13h 18m 47s.xml">
-      <configuration name="py.test for test_conn_gather_inputs.test_conn_gather_inputs_read_yaml_from_main" configurationId="tests" />
+    <history-entry file="py_test_for_test_fmriprep_tools_test_print_intended_for_from_list - 2018.05.04 at 17h 43m 19s.xml">
+      <configuration name="py.test for test_fmriprep_tools.test_print_intended_for_from_list" configurationId="tests" />
     </history-entry>
-    <history-entry file="py_test_for_test_conn_gather_inputs_test_conn_gather_inputs_read_yaml_from_main - 2018.04.25 at 13h 20m 53s.xml">
-      <configuration name="py.test for test_conn_gather_inputs.test_conn_gather_inputs_read_yaml_from_main" configurationId="tests" />
+    <history-entry file="py_test_for_test_fmriprep_tools_test_print_intended_for_from_list - 2018.05.04 at 17h 43m 30s.xml">
+      <configuration name="py.test for test_fmriprep_tools.test_print_intended_for_from_list" configurationId="tests" />
     </history-entry>
-    <history-entry file="py_test_for_test_conn_gather_inputs_test_conn_gather_inputs_read_yaml_from_main - 2018.04.25 at 13h 21m 15s.xml">
-      <configuration name="py.test for test_conn_gather_inputs.test_conn_gather_inputs_read_yaml_from_main" configurationId="tests" />
+    <history-entry file="py_test_for_test_fmriprep_tools_test_print_intended_for_from_list - 2018.05.04 at 17h 43m 43s.xml">
+      <configuration name="py.test for test_fmriprep_tools.test_print_intended_for_from_list" configurationId="tests" />
     </history-entry>
-    <history-entry file="py_test_for_test_conn_gather_inputs_test_conn_gather_inputs_read_yaml_from_main - 2018.04.25 at 13h 21m 49s.xml">
-      <configuration name="py.test for test_conn_gather_inputs.test_conn_gather_inputs_read_yaml_from_main" configurationId="tests" />
+    <history-entry file="py_test_in_test_fmriprep_tools_py - 2018.05.04 at 17h 41m 29s.xml">
+      <configuration name="py.test in test_fmriprep_tools.py" configurationId="tests" />
     </history-entry>
-    <history-entry file="py_test_for_test_conn_gather_inputs_test_conn_gather_inputs_read_yaml_from_main - 2018.04.25 at 13h 22m 38s.xml">
-      <configuration name="py.test for test_conn_gather_inputs.test_conn_gather_inputs_read_yaml_from_main" configurationId="tests" />
+    <history-entry file="py_test_in_test_fmriprep_tools_py - 2018.05.04 at 17h 41m 50s.xml">
+      <configuration name="py.test in test_fmriprep_tools.py" configurationId="tests" />
     </history-entry>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1440" height="877" extended-state="0" />
+    <frame x="-393" y="-1406" width="2061" height="1271" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Key Promoter X" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Regex Tester" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32968882" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.46725318" sideWeight="0.31681243" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.49317563" sideWeight="0.68318754" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32437122" sideWeight="0.68318754" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.50287354" sideWeight="0.48106593" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3293461" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20158103" sideWeight="0.49006623" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26180258" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20121422" sideWeight="0.49006623" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18127786" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3297568" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="SciView" active="false" anchor="right" auto_hide="true" internal_type="DOCKED" type="FLOATING" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1052,7 +1076,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Fixing synergy_bids_clean.sh bug.  This is naming and environment variable issue. &#10;Also renamed syn to synergy." />
     <MESSAGE value="Added swc to switch to cenc study" />
     <MESSAGE value="Updated synergy aliases and filenames." />
     <MESSAGE value="Changed synergy filename in script to match file name changes." />
@@ -1077,7 +1100,8 @@
     <MESSAGE value="Updated MFC protocol to include Neutrals." />
     <MESSAGE value="Debugging item:01d for phasediff field maps." />
     <MESSAGE value="Updated ACT" />
-    <option name="LAST_COMMIT_MESSAGE" value="Updated ACT" />
+    <MESSAGE value="Added fmap_intended_for.py to simplify updating fieldmap json files." />
+    <option name="LAST_COMMIT_MESSAGE" value="Added fmap_intended_for.py to simplify updating fieldmap json files." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1099,7 +1123,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/tic_core/fmriprep_tools.py</url>
-          <line>63</line>
+          <line>65</line>
           <option name="timeStamp" value="8" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
@@ -1153,13 +1177,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="398">
           <caret line="34" column="61" lean-forward="false" selection-start-line="34" selection-start-column="61" selection-end-line="34" selection-end-column="61" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tests/test_fmriprep_tools.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="432">
-          <caret line="49" column="47" lean-forward="false" selection-start-line="49" selection-start-column="19" selection-end-line="49" selection-end-column="47" />
         </state>
       </provider>
     </entry>
@@ -1263,14 +1280,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/tic_core/fmriprep_support_functions.py" />
-    <entry file="file://$PROJECT_DIR$/tic_core/fmriprep_tools.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="984">
-          <caret line="134" column="0" lean-forward="false" selection-start-line="134" selection-start-column="0" selection-end-line="134" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/tic_core/tic_io.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="712">
@@ -1506,10 +1515,30 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/tests/test_fmriprep_tools.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="596">
+          <caret line="78" column="47" lean-forward="false" selection-start-line="78" selection-start-column="19" selection-end-line="78" selection-end-column="47" />
+          <folding>
+            <element signature="e#56#69#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tic_core/fmriprep_tools.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="341">
+          <caret line="136" column="0" lean-forward="true" selection-start-line="136" selection-start-column="0" selection-end-line="136" selection-end-column="0" />
+          <folding>
+            <element signature="e#184#214#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/bin/fmap_intended_for.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="371">
-          <caret line="39" column="47" lean-forward="false" selection-start-line="39" selection-start-column="47" selection-end-line="39" selection-end-column="47" />
+        <state relative-caret-position="578">
+          <caret line="34" column="0" lean-forward="true" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
           <folding>
             <element signature="e#108#118#0" expanded="true" />
           </folding>
