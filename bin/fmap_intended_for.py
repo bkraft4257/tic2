@@ -29,7 +29,7 @@ def _argparse():
 def main():
 
     in_args = _argparse()
-    fmriprep_tools.print_intended_for_from_list(in_args.func_ifiles)
+    fmriprep_tools.print_intended_for_from_list(in_args.func_files)
 
 
 if __name__ == '__main__':
