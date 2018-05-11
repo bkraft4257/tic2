@@ -40,19 +40,12 @@ source $TIC_PATH/studies/active/scripts/bids_app_status.sh
 
 
 # run it in the background so that it continues if user logs out
-cmd="act_full_command=$SINGULARITY_COMMAND \
-                      $ANTS_CORTICAL_THICKNESS_SINGULARITY_IMAGE \
-                      $ACTIVE_BIDS_PATH \
-                      $ACTIVE_ACT_OUTPUT_PATH \
-                      participant $parameters"
+export FULL_BIDS_APP_COMMAND="act_full_command=$SINGULARITY_COMMAND \
+ $ANTS_CORTICAL_THICKNESS_SINGULARITY_IMAGE \
+ $ACTIVE_BIDS_PATH \
+ $ACTIVE_ACT_OUTPUT_PATH \
+ participant $parameters"
 
-echo
-echo $cmd | tee $log_file
-echo
-echo "-----------------------------------------------------------------------------------------------"
-echo
-
-#nohup time /usr/local/bin/singularity run -w -B /cenc -B /gandg -B /bkraft1 \
 
 nohup time $SINGULARITY_COMMAND \
            $APP_SINGULARITY_IMAGE \

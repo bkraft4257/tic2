@@ -3,7 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="6f3e13b3-cd58-4c4d-98f6-1a68f8358bfb" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/bin/mriqc.sh" afterPath="$PROJECT_DIR$/bin/mriqc.sh" />
+      <change beforePath="$PROJECT_DIR$/bin/act.sh" afterPath="$PROJECT_DIR$/bin/act.sh" />
+      <change beforePath="$PROJECT_DIR$/bin/tic_info.sh" afterPath="$PROJECT_DIR$/bin/tic_info.sh" />
+      <change beforePath="$PROJECT_DIR$/docs/source/other/singularity_images.md" afterPath="$PROJECT_DIR$/docs/source/other/singularity_images.md" />
+      <change beforePath="$PROJECT_DIR$/init/tic_wake_aging1a_environment.sh" afterPath="$PROJECT_DIR$/init/tic_wake_aging1a_environment.sh" />
       <change beforePath="$PROJECT_DIR$/studies/active/scripts/bids_app_status.sh" afterPath="$PROJECT_DIR$/studies/active/scripts/bids_app_status.sh" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -59,18 +62,8 @@
       <file leaf-file-name="fmriprep.sh" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/bin/fmriprep.sh">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="19">
-              <caret line="31" column="57" lean-forward="true" selection-start-line="31" selection-start-column="57" selection-end-line="31" selection-end-column="57" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="fmap_intended_for.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/bin/fmap_intended_for.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="205">
-              <caret line="45" column="49" lean-forward="false" selection-start-line="45" selection-start-column="23" selection-end-line="45" selection-end-column="49" />
+            <state relative-caret-position="445">
+              <caret line="41" column="30" lean-forward="true" selection-start-line="41" selection-start-column="30" selection-end-line="41" selection-end-column="30" />
               <folding />
             </state>
           </provider>
@@ -98,61 +91,56 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="bids_processing_status.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/bin/bids_processing_status.py">
+      <file leaf-file-name="act.sh" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/bin/act.sh">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state relative-caret-position="68">
+              <caret line="41" column="0" lean-forward="false" selection-start-line="41" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="active_study_info.sh" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/bin/active_study_info.sh">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="dicom_rm_cr.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/bin/dicom_rm_cr.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="create_new_study.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/bin/create_new_study.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1221">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="netprep.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/bin/netprep.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="390">
-              <caret line="572" column="0" lean-forward="true" selection-start-line="569" selection-start-column="0" selection-end-line="572" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="bids_app_status.sh" pinned="false" current-in-tab="true">
+      <file leaf-file-name="bids_app_status.sh" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/studies/active/scripts/bids_app_status.sh">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="248">
-              <caret line="20" column="0" lean-forward="false" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
+            <state relative-caret-position="282">
+              <caret line="22" column="122" lean-forward="false" selection-start-line="22" selection-start-column="122" selection-end-line="22" selection-end-column="122" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="acrostic_list.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/bin/acrostic_list.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="singularity_images.md" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/docs/source/other/singularity_images.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="533">
+                <caret line="106" column="77" lean-forward="false" selection-start-line="106" selection-start-column="77" selection-end-line="106" selection-end-column="77" />
+                <folding />
+              </first_editor>
+              <second_editor>
+                <js_state />
+              </second_editor>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="tic_wake_aging1a_environment.sh" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/init/tic_wake_aging1a_environment.sh">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="564">
+              <caret line="116" column="0" lean-forward="true" selection-start-line="115" selection-start-column="0" selection-end-line="116" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -235,9 +223,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/docs/source/other/functions_and_scripts.md" />
-        <option value="$PROJECT_DIR$/docs/source/other/studies.md" />
-        <option value="$PROJECT_DIR$/docs/source/index.rst" />
         <option value="$PROJECT_DIR$/docs/source/other/quick_reference.rst" />
         <option value="$PROJECT_DIR$/docs/source/other/faq.md" />
         <option value="$PROJECT_DIR$/bin/hdc_look.py" />
@@ -276,7 +261,6 @@
         <option value="$PROJECT_DIR$/studies/mfc/scripts/mfc_protocol.py" />
         <option value="$PROJECT_DIR$/bin/act_v2.sh" />
         <option value="$PROJECT_DIR$/bin/mriqc_group.sh" />
-        <option value="$PROJECT_DIR$/bin/act.sh" />
         <option value="$PROJECT_DIR$/init/tic_aliases.sh" />
         <option value="$PROJECT_DIR$/studies/mfc/aliases.sh" />
         <option value="$PROJECT_DIR$/studies/active/aliases.sh" />
@@ -286,6 +270,10 @@
         <option value="$PROJECT_DIR$/tic_core/fmriprep_tools.py" />
         <option value="$PROJECT_DIR$/bin/mriqc.sh" />
         <option value="$PROJECT_DIR$/studies/active/scripts/bids_app_status.sh" />
+        <option value="$PROJECT_DIR$/bin/act.sh" />
+        <option value="$PROJECT_DIR$/init/tic_wake_aging1a_environment.sh" />
+        <option value="$PROJECT_DIR$/bin/tic_info.sh" />
+        <option value="$PROJECT_DIR$/docs/source/other/singularity_images.md" />
       </list>
     </option>
   </component>
@@ -331,6 +319,24 @@
               <item name="tic_core" type="b2602c69:ProjectViewProjectNode" />
               <item name="tic_core" type="462c0819:PsiDirectoryNode" />
               <item name="bin" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="tic_core" type="b2602c69:ProjectViewProjectNode" />
+              <item name="tic_core" type="462c0819:PsiDirectoryNode" />
+              <item name="docs" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="tic_core" type="b2602c69:ProjectViewProjectNode" />
+              <item name="tic_core" type="462c0819:PsiDirectoryNode" />
+              <item name="docs" type="462c0819:PsiDirectoryNode" />
+              <item name="source" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="tic_core" type="b2602c69:ProjectViewProjectNode" />
+              <item name="tic_core" type="462c0819:PsiDirectoryNode" />
+              <item name="docs" type="462c0819:PsiDirectoryNode" />
+              <item name="source" type="462c0819:PsiDirectoryNode" />
+              <item name="other" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="tic_core" type="b2602c69:ProjectViewProjectNode" />
@@ -598,13 +604,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1517948604886</updated>
-    </task>
-    <task id="LOCAL-00523" summary="Started with CONN scripts for MFC">
-      <created>1524603798438</created>
-      <option name="number" value="00523" />
-      <option name="presentableId" value="LOCAL-00523" />
-      <option name="project" value="LOCAL" />
-      <updated>1524603798438</updated>
     </task>
     <task id="LOCAL-00524" summary="Started with CONN scripts for MFC">
       <created>1524604349678</created>
@@ -942,7 +941,14 @@
       <option name="project" value="LOCAL" />
       <updated>1526064373342</updated>
     </task>
-    <option name="localTasksCounter" value="572" />
+    <task id="LOCAL-00572" summary="Updated fmap_intended_for.py to include echo_times and work for a single file.">
+      <created>1526065100814</created>
+      <option name="number" value="00572" />
+      <option name="presentableId" value="LOCAL-00572" />
+      <option name="project" value="LOCAL" />
+      <updated>1526065100814</updated>
+    </task>
+    <option name="localTasksCounter" value="573" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -984,7 +990,7 @@
       <window_info id="Key Promoter X" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Regex Tester" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32968882" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.46640316" sideWeight="0.31681243" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.46640316" sideWeight="0.31681243" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.38877338" sideWeight="0.68318754" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.50287354" sideWeight="0.48106593" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3293461" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -1097,27 +1103,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/tests/test_processing_status.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="58">
-          <caret line="28" column="55" lean-forward="false" selection-start-line="28" selection-start-column="3" selection-end-line="28" selection-end-column="55" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/requirements.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/studies/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/studies/mfc/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -1356,19 +1341,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/docs/source/other/singularity_images.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="0">
-            <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-            <folding />
-          </first_editor>
-          <second_editor>
-            <js_state />
-          </second_editor>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/docs/source/other/ants_cortical_thickness.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
         <state split_layout="SPLIT">
@@ -1402,22 +1374,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="561">
           <caret line="33" column="0" lean-forward="false" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bin/act.sh">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="17" column="0" lean-forward="false" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bin/active_study_info.sh">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -1472,14 +1428,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/bin/fmriprep.sh">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="19">
-          <caret line="31" column="57" lean-forward="true" selection-start-line="31" selection-start-column="57" selection-end-line="31" selection-end-column="57" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/bin/mriqc.sh">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="154">
@@ -1490,9 +1438,70 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/studies/active/scripts/bids_app_status.sh">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="248">
-          <caret line="20" column="0" lean-forward="false" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
+        <state relative-caret-position="282">
+          <caret line="22" column="122" lean-forward="false" selection-start-line="22" selection-start-column="122" selection-end-line="22" selection-end-column="122" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bin/act.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="41" column="0" lean-forward="false" selection-start-line="41" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bin/acrostic_list.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bin/fmriprep.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="445">
+          <caret line="41" column="30" lean-forward="true" selection-start-line="41" selection-start-column="30" selection-end-line="41" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bin/tic_info.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="45" lean-forward="false" selection-start-line="8" selection-start-column="45" selection-end-line="8" selection-end-column="45" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bin/active_study_info.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="18" column="0" lean-forward="false" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/init/tic_wake_aging1a_environment.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="564">
+          <caret line="116" column="0" lean-forward="true" selection-start-line="115" selection-start-column="0" selection-end-line="116" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docs/source/other/singularity_images.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="533">
+            <caret line="106" column="77" lean-forward="false" selection-start-line="106" selection-start-column="77" selection-end-line="106" selection-end-column="77" />
+            <folding />
+          </first_editor>
+          <second_editor>
+            <js_state />
+          </second_editor>
         </state>
       </provider>
     </entry>
