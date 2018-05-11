@@ -16,7 +16,7 @@ def _argparse():
     """ Get command line arguments.
     """
 
-    parser = argparse.ArgumentParser(prog='conn_gather_inputs')
+    parser = argparse.ArgumentParser(prog='fmap_intended_for')
 
     parser.add_argument('func_files', nargs='*',
                         help='BIDS functional files')
