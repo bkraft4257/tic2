@@ -17,7 +17,6 @@ echo 'log file               = ' $log_file | tee -a $log_file
 echo ' ' | tee -a $log_file
 echo 'parameters             = ' ${parameters}  | tee -a $log_file
 echo ' ' | tee -a $log_file
-echo ' ' | tee -a $log_file
 echo  $FULL_BIDS_APP_COMMAND | tee -a $log_file
 echo ' ' | tee -a $log_file
 echo "-----------------------------------------------------------------------------------------------"  | tee -a $log_file
