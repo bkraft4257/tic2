@@ -159,7 +159,6 @@ def print_intended_for_from_list(files):
 def print_echo_times_from_list(echo_times):
 
     if len(echo_times) > 0:
-        print('\n')
-        for ii, jj in enumerate(echo_times):
-            print(f'"EchoTime{ii}": "{jj}",')
+        for ii, jj in enumerate(echo_times,1):
+            print(f'  "EchoTime{ii}": "{jj}",')
         print('\n')
