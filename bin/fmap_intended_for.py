@@ -21,6 +21,12 @@ def _argparse():
     parser.add_argument('func_files', nargs='*',
                         help='BIDS functional files')
 
+    parser.add_argument('-e', "--echo_times",
+                        nargs='*',
+                        type=float,
+                        help="Echo Times",
+                        default=[0.00492, 0.00738])
+
     in_args = parser.parse_args()
 
     return in_args
@@ -31,7 +37,7 @@ def main():
     in_args = _argparse()
     stripped_files = fmriprep_tools.lstrip_to_ses_key(in_args.func_files)
     fmriprep_tools.print_intended_for_from_list(stripped_files)
-
+    fmriprep_tools.print_echo_times_from_list(in_args.echo_times)
 
 if __name__ == '__main__':
     sys.exit(main())

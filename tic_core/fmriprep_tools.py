@@ -142,6 +142,31 @@ def lstrip_to_ses_key(files):
 
 def print_intended_for_from_list(files):
 
+    if len(files) == 1:
+
+        print(f'\n\n  "IntendedFor": "{files}",')
+
+    else:
+
+        print(f'\n\n  "IntendedFor": ["{files[0]}",')
+
+        for ii_file in files[1:-1]:
+            print(f'                  "{ii_file}",')
+
+        print(f'                  "{files[-1]}"],\n')
+
+
+def print_echo_times_from_list(echo_times):
+
+    if len(echo_times) > 0:
+        print('\n')
+        for ii, jj in enumerate(echo_times):
+            print(f'\n\n  "EchoTime{ii}": "{jj}",')
+        print('\n')
+
+
+def print_intended_for_from_list(files):
+
     print(f'\n\n  "IntendedFor": ["{files[0]}",')
 
     for ii_file in files[1:-1]:
