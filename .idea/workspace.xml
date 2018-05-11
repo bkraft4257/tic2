@@ -4,10 +4,6 @@
     <list default="true" id="6f3e13b3-cd58-4c4d-98f6-1a68f8358bfb" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/bin/act.sh" afterPath="$PROJECT_DIR$/bin/act.sh" />
-      <change beforePath="$PROJECT_DIR$/bin/tic_info.sh" afterPath="$PROJECT_DIR$/bin/tic_info.sh" />
-      <change beforePath="$PROJECT_DIR$/docs/source/other/singularity_images.md" afterPath="$PROJECT_DIR$/docs/source/other/singularity_images.md" />
-      <change beforePath="$PROJECT_DIR$/init/tic_wake_aging1a_environment.sh" afterPath="$PROJECT_DIR$/init/tic_wake_aging1a_environment.sh" />
-      <change beforePath="$PROJECT_DIR$/studies/active/scripts/bids_app_status.sh" afterPath="$PROJECT_DIR$/studies/active/scripts/bids_app_status.sh" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -91,11 +87,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="act.sh" pinned="false" current-in-tab="false">
+      <file leaf-file-name="act.sh" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/bin/act.sh">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="41" column="0" lean-forward="false" selection-start-line="41" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
+            <state relative-caret-position="451">
+              <caret line="45" column="25" lean-forward="true" selection-start-line="45" selection-start-column="25" selection-end-line="45" selection-end-column="25" />
               <folding />
             </state>
           </provider>
@@ -121,7 +117,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="singularity_images.md" pinned="false" current-in-tab="true">
+      <file leaf-file-name="singularity_images.md" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/docs/source/other/singularity_images.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
             <state split_layout="SPLIT">
@@ -270,10 +266,10 @@
         <option value="$PROJECT_DIR$/tic_core/fmriprep_tools.py" />
         <option value="$PROJECT_DIR$/bin/mriqc.sh" />
         <option value="$PROJECT_DIR$/studies/active/scripts/bids_app_status.sh" />
-        <option value="$PROJECT_DIR$/bin/act.sh" />
         <option value="$PROJECT_DIR$/init/tic_wake_aging1a_environment.sh" />
         <option value="$PROJECT_DIR$/bin/tic_info.sh" />
         <option value="$PROJECT_DIR$/docs/source/other/singularity_images.md" />
+        <option value="$PROJECT_DIR$/bin/act.sh" />
       </list>
     </option>
   </component>
@@ -604,13 +600,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1517948604886</updated>
-    </task>
-    <task id="LOCAL-00524" summary="Started with CONN scripts for MFC">
-      <created>1524604349678</created>
-      <option name="number" value="00524" />
-      <option name="presentableId" value="LOCAL-00524" />
-      <option name="project" value="LOCAL" />
-      <updated>1524604349678</updated>
     </task>
     <task id="LOCAL-00525" summary="Started with CONN scripts for MFC">
       <created>1524604420237</created>
@@ -948,7 +937,14 @@
       <option name="project" value="LOCAL" />
       <updated>1526065100814</updated>
     </task>
-    <option name="localTasksCounter" value="573" />
+    <task id="LOCAL-00573" summary="Added Tracula to BIDS Apps.">
+      <created>1526068970129</created>
+      <option name="number" value="00573" />
+      <option name="presentableId" value="LOCAL-00573" />
+      <option name="project" value="LOCAL" />
+      <updated>1526068970129</updated>
+    </task>
+    <option name="localTasksCounter" value="574" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -1042,7 +1038,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Updated synergy aliases and filenames." />
     <MESSAGE value="Changed synergy filename in script to match file name changes." />
     <MESSAGE value="Added *_ACT_PATH to environments.&#10;Added MCF_CONN_PATH to mcf study." />
     <MESSAGE value="Added ACTIVE_ACROSTIC_REGEX as default to processing_status.py&#10;Updated environment variables to include *_CONN_PATH (hfpef)" />
@@ -1067,7 +1062,8 @@
     <MESSAGE value="Updated ACT" />
     <MESSAGE value="Added fmap_intended_for.py to simplify updating fieldmap json files." />
     <MESSAGE value="Updated fmap_intended_for.py to include echo_times and work for a single file." />
-    <option name="LAST_COMMIT_MESSAGE" value="Updated fmap_intended_for.py to include echo_times and work for a single file." />
+    <MESSAGE value="Added Tracula to BIDS Apps." />
+    <option name="LAST_COMMIT_MESSAGE" value="Added Tracula to BIDS Apps." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1444,14 +1440,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/bin/act.sh">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="41" column="0" lean-forward="false" selection-start-line="41" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/bin/acrostic_list.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -1502,6 +1490,14 @@
           <second_editor>
             <js_state />
           </second_editor>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bin/act.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="451">
+          <caret line="45" column="25" lean-forward="true" selection-start-line="45" selection-start-column="25" selection-end-line="45" selection-end-column="25" />
+          <folding />
         </state>
       </provider>
     </entry>

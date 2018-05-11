@@ -23,7 +23,6 @@ parameters=$(echo $@ | sed -e 's/-s /--participant-label /')
 datetime_stamp=`date '+d%Y%m%d_%H:%M:%S'`
 log_file=${ACTIVE_IMAGE_PROCESSING_LOG_PATH}/${study_prefix}_${BIDS_APP}_${datetime_stamp}.log
 
-source $TIC_PATH/studies/active/scripts/bids_app_status.sh
 
 # NOTE: any -B mount points must exist in the container
 #       run "sudo singularity shell -s xx.img"  and create the mount points
@@ -46,6 +45,11 @@ export FULL_BIDS_APP_COMMAND="act_full_command=$SINGULARITY_COMMAND \
  $ACTIVE_ACT_OUTPUT_PATH \
  participant $parameters"
 
+# Write information to log file
+source $TIC_PATH/studies/active/scripts/bids_app_status.sh
+
+
+# Run BIDS App
 
 nohup time $SINGULARITY_COMMAND \
            $APP_SINGULARITY_IMAGE \
