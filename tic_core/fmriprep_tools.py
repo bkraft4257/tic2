@@ -161,5 +161,5 @@ def print_echo_times_from_list(echo_times):
     if len(echo_times) > 0:
         print('\n')
         for ii, jj in enumerate(echo_times):
-            print(f'\n\n  "EchoTime{ii}": "{jj}",')
+            print(f'"EchoTime{ii}": "{jj}",')
         print('\n')
