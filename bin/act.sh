@@ -40,7 +40,8 @@ log_file=${ACTIVE_IMAGE_PROCESSING_LOG_PATH}/${study_prefix}_${BIDS_APP}_${datet
 
 # run it in the background so that it continues if user logs out
 export FULL_BIDS_APP_COMMAND="act_full_command=$SINGULARITY_COMMAND \
- $ANTS_CORTICAL_THICKNESS_SINGULARITY_IMAGE \
+ $APP_SINGULARITY_IMAGE \
+ $ACTIVE_SINGULARITY_USER_BIND_PATHS \
  $ACTIVE_BIDS_PATH \
  $ACTIVE_ACT_OUTPUT_PATH \
  participant $parameters"
@@ -53,6 +54,7 @@ source $TIC_PATH/studies/active/scripts/bids_app_status.sh
 
 nohup time $SINGULARITY_COMMAND \
            $APP_SINGULARITY_IMAGE \
+           $ACTIVE_SINGULARITY_USER_BIND_PATHS \
            $ACTIVE_BIDS_PATH \
            $ACTIVE_APP_OUTPUT_PATH \
            participant $parameters > $log_file 2>&1 &
