@@ -27,5 +27,5 @@ export MFC_CLEAN_BIDS=${MFC_SCRIPTS_PATH}/clean_bids.sh
 export MFC_SUBJECTS_DIR=${MFC_IMAGE_PROCESSING_PATH}/freesurfer
 
 export MFC_SINGULARITY_USER_BIND_PATHS="/bkraft1 -B /gandg"
-
+       
 export MFC_ACROSTIC_REGEX="mfc[0-9]{3}"
