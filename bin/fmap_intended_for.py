@@ -39,5 +39,6 @@ def main():
     fmriprep_tools.print_intended_for_from_list(stripped_files)
     fmriprep_tools.print_echo_times_from_list(in_args.echo_times)
 
+
 if __name__ == '__main__':
     sys.exit(main())

@@ -78,11 +78,9 @@
       <file leaf-file-name="fmap_intended_for.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/bin/fmap_intended_for.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="287">
-              <caret line="24" column="34" lean-forward="true" selection-start-line="24" selection-start-column="34" selection-end-line="24" selection-end-column="34" />
-              <folding>
-                <element signature="e#108#118#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="542">
+              <caret line="39" column="65" lean-forward="true" selection-start-line="39" selection-start-column="65" selection-end-line="39" selection-end-column="65" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -593,13 +591,6 @@
       <option name="presentableId" value="Default" />
       <updated>1517948604886</updated>
     </task>
-    <task id="LOCAL-00517" summary="Started with CONN scripts for MFC">
-      <created>1524602517670</created>
-      <option name="number" value="00517" />
-      <option name="presentableId" value="LOCAL-00517" />
-      <option name="project" value="LOCAL" />
-      <updated>1524602517670</updated>
-    </task>
     <task id="LOCAL-00518" summary="Started with CONN scripts for MFC">
       <created>1524602720525</created>
       <option name="number" value="00518" />
@@ -936,7 +927,14 @@
       <option name="project" value="LOCAL" />
       <updated>1526063936577</updated>
     </task>
-    <option name="localTasksCounter" value="566" />
+    <task id="LOCAL-00566" summary="Updated fmap_intended_for.py to include echo_times and work for a single file.">
+      <created>1526064060339</created>
+      <option name="number" value="00566" />
+      <option name="presentableId" value="LOCAL-00566" />
+      <option name="project" value="LOCAL" />
+      <updated>1526064060339</updated>
+    </task>
+    <option name="localTasksCounter" value="567" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -1483,11 +1481,9 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/bin/fmap_intended_for.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="287">
-          <caret line="24" column="34" lean-forward="true" selection-start-line="24" selection-start-column="34" selection-end-line="24" selection-end-column="34" />
-          <folding>
-            <element signature="e#108#118#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="542">
+          <caret line="39" column="65" lean-forward="true" selection-start-line="39" selection-start-column="65" selection-end-line="39" selection-end-column="65" />
+          <folding />
         </state>
       </provider>
     </entry>
