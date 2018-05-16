@@ -54,7 +54,7 @@ with the fmriprep with the command
 You can switch to another study with the command study_switcher.py by
 doing the following
 
-     >>> study_switcher.py -s synergy
+     >>> study_switcher.py synergy
      >>> source $TIC_INIT_PATH/tic_study_switcher.sh
      >>> echo $ACTIVE_STUDY
 
@@ -68,17 +68,12 @@ and then we source this file. Since it is tiresome to type these
 commands we have created aliases to switch between different studies.
 
 ```
->>> swh   
-Previous active study = SYNERGY  
-Current active study = HFPEF
-   
->>> swi   
-   Previous active study = HFPEF 
-   Current active study = INFINITE
-   
->>> sws 
-   Previous active study = INFINITE   
-   Current active study = SYNERGY  
+>>> sw hfpef   
+    ACTIVE_STUDY is now HFPEF   
+
+>>> sw imove   
+    ACTIVE_STUDY is now IMOVE
+
 ```
 
 Our goal is to write all scripts and functions to operate on the Active
@@ -136,13 +131,3 @@ each study this page will serve as a set of guidelines.
                 
         scripts/
         templates/
-
-## Aliases
-
-
-
-## Scripts
-
-
-
-## Design Details

@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/bin/env bash
 
 
 BIDS_APP=fmriprep
@@ -10,7 +10,13 @@ ACTIVE_APP_WORKING_PATH=$ACTIVE_APP_OUTPUT_PATH/_working
 
 # Convert to lower case
 study_prefix=$(echo "${ACTIVE_STUDY,,}")
-parameters=${@}
+
+# mriqc.sh and fmriprep.sh uses --participant-label and hdc.sh uses -s to indicated the subject acrostic.
+# I am using sed as a hack to replace -s with --participant-label.  This allows people to use the shorter
+# -s.
+#
+
+parameters=$(echo $@ | sed -e 's/-s /--participant-label /')
 
 # create the output and work directories parallel to BIDS hierarchy, not inside it
 
@@ -32,14 +38,14 @@ source $TIC_PATH/studies/active/scripts/bids_app_status.sh
 # Redirect both to a file:
 # command &> out
 
-nohup time /usr/local/bin/singularity run -w -B /cenc -B /gandg -B /bkraft1 \
+nohup time /usr/local/bin/singularity run -w -B $ACTIVE_SINGULARITY_USER_BIND_PATHS \
                  $APP_SINGULARITY_IMAGE \
                  $ACTIVE_BIDS_PATH \
                  $ACTIVE_APP_OUTPUT_PATH \
                  --work-dir $ACTIVE_APP_WORKING_PATH \
-                 participant ${@} >> $log_file 2>&1 &
+                 participant ${parameters} >> $log_file 2>&1 &
 
-echo "Waiting 30 seconds before checking out the log file"
+echo "Waiting 30 seconds before displaying the log file ..."
 sleep 30
 
 cat $log_file
