@@ -2,6 +2,8 @@
   <dictionary name="bkraft">
     <words>
       <w>absjoin</w>
+      <w>anat</w>
+      <w>basetype</w>
       <w>bashrc</w>
       <w>dicominfo</w>
       <w>heudiconv</w>
@@ -12,6 +14,7 @@
       <w>newstudy</w>
       <w>ortho</w>
       <w>pcasl</w>
+      <w>webhook</w>
       <w>zshrc</w>
     </words>
   </dictionary>

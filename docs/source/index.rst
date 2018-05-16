@@ -15,9 +15,12 @@ Contents:
    tic_setup.md
    tic_processing.md
    other/tic_documentation.rst
+   other/quick_reference.rst
+   other/alias.md
+   other/functions_and_scripts.md
+
    other/studies.md
    other/creating_new_study.md
-   other/quick_reference.md
 
 Indices and tables
 ==================

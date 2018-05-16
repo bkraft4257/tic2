@@ -242,7 +242,7 @@ def infotodict(seqinfo):
     rest_mbepi = create_key('sub-{subject}/{session}/func/sub-{subject}_{session}_task-rest_acq-mbepi_bold.{item:01d}')
     rest_mbepi_sbref = create_key('sub-{subject}/{session}/func/sub-{subject}_{session}_task-rest_acq-mbepi_sbref.{item:01d}')
 
-    rest_mbepi_topup_rl = create_key('sub-{subject}/{session}//fmap/sub-{subject}_{session}_'
+    rest_mbepi_topup_rl = create_key('sub-{subject}/{session}/fmap/sub-{subject}_{session}_'
                                      'acq-mbepi_dir-rl_epi.{item:01d}')
 
     rest_mbepi_topup_lr = create_key('sub-{subject}/{session}/fmap/sub-{subject}_{session}'
