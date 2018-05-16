@@ -25,6 +25,10 @@ def _argparse():
                         action="store_true",
                         default=False)
 
+    parser.add_argument("-c", "--create", help="Create acrostic list",
+                        action="store_true",
+                        default=False)
+
     parser.add_argument("-s", "--summary", help="Display acrostic summary by session.",
                         action="store_true",
                         default=False)
@@ -37,9 +41,11 @@ def _argparse():
     return parser.parse_args()
 
 
-def main():
+def _read_acrostic_list(filename):
+    return pandas.read_csv(filename)
 
-    in_args = _argparse()
+
+def _create_acrostic_list(acrostic_list_default_filename, acrostic_csv_default_filename):
 
     df0 = pandas.DataFrame({'directory': glob.glob(os.path.join(ACTIVE_BIDS_PATH, 'sub-*', 'ses-*'))})
     df0.directory = df0.directory.str.replace(ACTIVE_BIDS_PATH, '')
@@ -55,11 +61,24 @@ def main():
     df = df.set_index(['subject', 'session']).unstack().fillna(False)
     df.columns = df.columns.get_level_values(1)
 
+    df.to_csv(acrostic_csv_default_filename)
+    df.reset_index()['subject'].to_csv(acrostic_list_default_filename, header=False, index=False)
+
+    return df
+
+
+def main():
+
+    in_args = _argparse()
+
     acrostic_csv_default_filename = os.path.join(ACTIVE_BIDS_PATH, f'{in_args.out_base_filename}.csv')
     acrostic_list_default_filename = os.path.join(ACTIVE_BIDS_PATH, f'{in_args.out_base_filename}.list')
 
-    df.to_csv(acrostic_csv_default_filename)
-    df.reset_index()['subject'].to_csv(acrostic_list_default_filename, header=False, index=False)
+    if in_args.create:
+        _create_acrostic_list(acrostic_list_default_filename,
+                              acrostic_csv_default_filename)
+
+    df = _read_acrostic_list(acrostic_csv_default_filename)
 
     if in_args.verbose:
         print(df)

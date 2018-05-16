@@ -113,11 +113,20 @@ if __name__ == '__main__':
 
     in_args = parser.parse_args()
 
-    hdc_info_path = os.path.join(os.path.abspath(in_args.bids), '.heudiconv', in_args.subject, f'ses-{in_args.session}', 'info')
+    if in_args.session.lower() == 'none':
+        in_args.session = None
 
-    edit_text_filename = os.path.join(hdc_info_path, f'{in_args.subject}_ses-{in_args.session}.edit.txt')
-    auto_text_filename = os.path.join(hdc_info_path, f'{in_args.subject}_ses-{in_args.session}.auto.txt')
-    dicominfo_tsv_filename = os.path.join(hdc_info_path, f'dicominfo_ses-{in_args.session}.tsv')
+    if in_args.session is None:
+        bids_session = ''
+        hdc_info_path = os.path.join(os.path.abspath(in_args.bids), '.heudiconv', in_args.subject, 'info')
+
+    else:
+        bids_session = f'_ses-{in_args.session}'
+        hdc_info_path = os.path.join(os.path.abspath(in_args.bids), '.heudiconv', in_args.subject, f'ses-{in_args.session}', 'info')
+
+    edit_text_filename = os.path.join(hdc_info_path, f'{in_args.subject}{bids_session}.edit.txt')
+    auto_text_filename = os.path.join(hdc_info_path, f'{in_args.subject}{bids_session}.auto.txt')
+    dicominfo_tsv_filename = os.path.join(hdc_info_path, f'dicominfo{bids_session}.tsv')
 
     try:
         if 'dicominfo' in HDC_FILES:
@@ -130,6 +139,8 @@ if __name__ == '__main__':
         if 'edit' in in_args.files:
             _display_text_file(edit_text_filename)
 
+            print(f'{Fore.YELLOW}\n\tIf {edit_text_filename}'
+                  f'\n\tis incorrect, you may edit it in any text editor directly and then rerun hdc.sh\n\n{Fore.WHITE}')
     except:
 
         print(Fore.RED + '\nFailed to run ... \n\n' + Fore.WHITE +
