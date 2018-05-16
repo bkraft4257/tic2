@@ -13,6 +13,8 @@ import pandas
 import re
 from colorama import Fore
 
+import tic_core.ops as ops
+
 pandas.set_option('display.max_columns', 500)
 pandas.set_option('display.width', 1000)
 pandas.set_option('display.max_colwidth',200)
@@ -22,6 +24,7 @@ pandas.set_option('display.max_colwidth',200)
 
 ACROSTIC_LIST_FILENAME = 'acrostic.csv'
 ACTIVE_BIDS_PATH = os.getenv('ACTIVE_BIDS_PATH')
+ACTIVE_ACROSTIC_REGEX = os.getenv('ACTIVE_ACROSTIC_REGEX')
 
 
 def get_acrostic_study_list_full_filename(active_study_bids_path=ACTIVE_BIDS_PATH,
@@ -40,21 +43,44 @@ def get_acrostic_list(acrostic_list_filename = get_acrostic_study_list_full_file
     except FileNotFoundError:
         print('File Not Found Error')
 
-
     return df_acrostic_list
 
 
-def get_key_value_from_string(string, acrostic_regex, key_value_split_on='-'):
+def get_key_value_from_string(string,
+                              acrostic_regex,
+                              key_value_split_on=ops.BIDS_KEY_VALUE_SPLIT_ON):
+    key = None
+    value = None
 
-    m = re.search(acrostic_regex, string)
+    if acrostic_regex is not None:
+        m = re.search(acrostic_regex, string)
 
-    if m:
-        key,value =m.group(0).split(key_value_split_on)
-    else:
-        key = None
-        value = None
+        if m:
+            key,value =m.group(0).split(key_value_split_on)
 
     return key, value
+
+
+def _add_prefix_to_bids_key_value_if_necessary(in_key_value, bids_key, bids_delimiter='-'):
+    """
+    Add BIDS KEY if it doesn't exist.  Key should not contain the BIDS delimiter.
+
+    :param in_key_value:
+    :param bids_key:
+    :return:
+
+    """
+
+    if in_key_value is None:
+        return None
+
+    if in_key_value[0:4] == bids_key + bids_delimiter:
+        out_key_value = in_key_value
+
+    else:
+        out_key_value = bids_key + bids_delimiter + in_key_value
+
+    return out_key_value
 
 
 def _argparse():
@@ -66,13 +92,16 @@ def _argparse():
     parser.add_argument('file_pattern', help='String file pattern to glob')
 
     parser.add_argument('-s', '--subject', help='Regular expression subject acrostic',
-                        default='sub-imove[0-9]{4}')
+                        default=ACTIVE_ACROSTIC_REGEX)
 
     parser.add_argument('-ss', '--session', help='Regular expression session ',
                         default='ses-[0-9]')
 
     parser.add_argument('-a', '--acrostic_list', help='Acrostic List',
                         default=get_acrostic_study_list_full_filename())
+
+    parser.add_argument('--display_max_rows', help='Display a maximum number of rows',
+                        type=int, default=20)
 
     parser.add_argument('--glob_current_directory_only', help='Recursive boolean flag for glob',
                         action='store_true',
@@ -102,26 +131,39 @@ def _argparse():
                         choices=['found', 'missing', 'both'],
                         default='both')
 
-    parser.add_argument('--drop_missing', help='Drop files that were found from list.',
-                        action='store_true',
-                        default=False)
+    in_args = parser.parse_args()
 
-    return parser.parse_args()
+    if in_args.session.lower() == 'none':
+        in_args.session = None
+
+    return in_args
 
 
 def filter_rows(in_df, display_group='both'):
+    """
+    Filter rows that belong to requested display group.
+
+    :param in_df:
+
+    :param display_group: Displays files that were found, missing, or both.  This allows users to generate a list of files that
+    need to be processed.
+
+    :return:
+
+
+    """
 
     all_columns = list(in_df.columns.values)
     r = re.compile('.*_processed$')
     search_columns = list(filter(r.match, all_columns))
     
-    keep_rows= in_df[search_columns].any(axis=1)
+    keep_rows = in_df[search_columns].any(axis=1)
 
     if display_group == 'found':
         out_df = in_df[ keep_rows ].copy()
 
     elif display_group == 'missing':
-        out_df = in_df[ ~keep_rows ].copy()
+        out_df = in_df[~keep_rows].copy()
 
     else:
         out_df = in_df.copy()
@@ -130,17 +172,18 @@ def filter_rows(in_df, display_group='both'):
 
 
 def _display(in_df,
-            display_group='both',
-            subject_only=False,
-            noheader=False,
-            ):
+             display_group='both',
+             subject_only=False,
+             noheader=False,
+             ):
 
-    out_df = filter_rows(in_df, display_group=display_group)
+    out_df = filter_rows(in_df, display_group=display_group).reset_index(drop=True)
 
     if subject_only:
         out_df = out_df['subject'].copy()
 
-    print(out_df.to_string(index=False, header=(not noheader)))
+    print(out_df.to_string(index=False,
+                           header=(not noheader)))
 
 
 def _clean_nan(in_df, nan_option, nan_fill='not_found'):
@@ -156,13 +199,16 @@ def _clean_nan(in_df, nan_option, nan_fill='not_found'):
 
     return out_df
 
+
 def _rename_acrostic_list(in_df):
     return in_df.rename(columns=lambda x: re.sub(r'(ses-\d)',r'\1_scanned',x))
+
 
 def _get_subject_and_session_from_filenames(files, 
                                             subject_acrostic_regex, 
                                             session_acrostic_regex, 
-                                            verbose=False):
+                                            verbose=False,
+                                            ignore_session=False):
 
     df_files = pandas.DataFrame(columns=['subject', 'session', 'file'])
 
@@ -180,7 +226,7 @@ def _get_subject_and_session_from_filenames(files,
     # files.  It would be nice if a warning was issues. 
 
     if verbose:
-        print('\n List of files found with subject and session information beforing cleaning.\n')
+        print('\n List of files found with subject and session information before cleaning.\n')
         print(df_files)
         print('\n\n')
 
@@ -188,7 +234,12 @@ def _get_subject_and_session_from_filenames(files,
     # these because they are not the files you are looking for.   If they are you shouldn't be 
     # using this function.
 
-    df_files = df_files.dropna(subset=['subject', 'session'],axis=0)
+    dropna_subset = ['subject']
+
+    if session_acrostic_regex is not None:
+        dropna_subset += ['session']
+
+    df_files = df_files.dropna(subset=dropna_subset, axis=0)
 
     return df_files
 
@@ -200,29 +251,53 @@ def main():
     files = glob.glob(in_args.file_pattern,
                       recursive=not in_args.glob_current_directory_only)
 
+    if in_args.verbose:
+        print(files)
+
     if len(files) == 0:
         print(f'No files were found given with your glob string {in_args.file_pattern}')
         sys.exit()
 
     df_acrostic_list = get_acrostic_list(in_args.acrostic_list)
 
-    df_files = _get_subject_and_session_from_filenames(files, 
-                                                       in_args.subject,
-                                                       in_args.session, 
-                                                       in_args.verbose)
+    subject_key_value = _add_prefix_to_bids_key_value_if_necessary(in_args.subject, 'sub')
+    session_key_value = _add_prefix_to_bids_key_value_if_necessary(in_args.session, 'ses')
+
+    df_files = _get_subject_and_session_from_filenames(files,
+                                                       subject_key_value,
+                                                       session_key_value,
+                                                       in_args.verbose,
+                                                       )
 
     try:
         df_files_2 = df_files.set_index(['subject', 'session']).unstack()
         df_files_2.columns = [f'ses-{x+1}_processed' for x in range(len(df_files_2.columns))]
 
-    except ValueError:
-        print(f'\n{Fore.RED}Unable to stack. {Fore.WHITE}\n')
-        print(df_files)
-        print('\n\n')
+        if in_args.verbose:
+            print('\n List of files after stacking.\n')
+            print(df_files_2)
+            print('\n\n')
 
-        print(df_files.groupby(['subject', 'session']).file.count())
-        print('\n\n')
-        sys.exit()
+    except ValueError:
+
+        if session_key_value is None:
+            print(f'\n{Fore.RED}Unable to stack. {Fore.WHITE} More than one file found per subject.\n')
+        else:
+            print(f'\n{Fore.RED}Unable to stack. {Fore.WHITE} More than one file found per subject per session.\n')
+
+        with pandas.option_context('display.max_rows', in_args.display_max_rows):
+            print(df_files)
+
+        if session_key_value is None:
+            print('\n\nNumber of files detected per subject\n')
+            print(df_files.groupby(['subject']).file.count().to_frame().unstack().fillna(0).astype(int))
+            print('\n\n')
+            sys.exit()
+        else:
+            print('\n\nNumber of files detected per subject and session\n')
+            print(df_files.groupby(['subject', 'session']).file.count().to_frame().unstack().fillna(0).astype(int))
+            print('\n\n')
+            sys.exit()
 
     df_full_list = (_rename_acrostic_list(df_acrostic_list)
                     .reset_index()
@@ -230,11 +305,17 @@ def main():
                     .fillna(False)
                     )
 
-    _display(df_full_list.pipe(_clean_nan, nan_option=in_args.nan),
-                 display_group=in_args.display_group,
-                 subject_only=in_args.subject_only,
-                 noheader=in_args.noheader,
-                 )
+    if in_args.verbose:
+        print('\n List of files after cleaning.\n')
+        print(df_files_2)
+        print('\n\n')
+
+    _display(df_full_list.pipe(_clean_nan,
+                               nan_option=in_args.nan),
+             display_group=in_args.display_group,
+             subject_only=in_args.subject_only,
+             noheader=in_args.noheader,
+             )
 
     if in_args.summary:
 

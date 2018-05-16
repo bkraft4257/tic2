@@ -1,23 +1,27 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
-
-ANTS_CORTICAL_THICKNESS_SINGULARITY_IMAGE='/cenc/software/bids_apps/antsCorticalThickness/bids_antscorticalthickness-2017-10-14-95aa110c26f8.img'
 
 BIDS_APP=ants_cortical_thickness
 
 ACTIVE_APP_OUTPUT_PATH=$ACTIVE_IMAGE_PROCESSING_PATH/act
 APP_SINGULARITY_IMAGE=$ANTS_CORTICAL_THICKNESS_SINGULARITY_IMAGE
-ACTIVE_APP_WORKING_PATH=$ACTIVE_APP_OUTPUT_PATH/_working
+
+ACTIVE_APP_WORKING_PATH=$ACTIVE_IMAGE_PROCESSING_PATH/_working
 
 # Convert to lower case
 study_prefix=$(echo "${ACTIVE_STUDY,,}")
+
+# mriqc.sh and fmriprep.sh uses --participant-label and hdc.sh uses -s to indicated the subject acrostic.
+# I am using sed as a hack to replace -s with --participant-label.  This allows people to use the shorter
+# -s.
+#
+
+parameters=$(echo $@ | sed -e 's/-s /--participant-label /')
 
 # create the output and work directories parallel to BIDS hierarchy, not inside it
 
 datetime_stamp=`date '+d%Y%m%d_%H:%M:%S'`
 log_file=${ACTIVE_IMAGE_PROCESSING_LOG_PATH}/${study_prefix}_${BIDS_APP}_${datetime_stamp}.log
-
-source ${TIC_PATH}/studies/active/scripts/bids_app_status.sh
 
 
 # NOTE: any -B mount points must exist in the container
@@ -35,27 +39,29 @@ source ${TIC_PATH}/studies/active/scripts/bids_app_status.sh
 
 
 # run it in the background so that it continues if user logs out
-cmd="act_full_command=$SINGULARITY_COMMAND \
-     $ANTS_CORTICAL_THICKNESS_SINGULARITY_IMAGE \
-                 $ACTIVE_BIDS_PATH \
-                 $ACTIVE_ACT_OUTPUT_PATH \
-                 participant ${@}"
+export FULL_BIDS_APP_COMMAND="act_full_command=$SINGULARITY_COMMAND \
+ $ACTIVE_SINGULARITY_USER_BIND_PATHS \
+ $APP_SINGULARITY_IMAGE \
+ $ACTIVE_BIDS_PATH \
+ $ACTIVE_ACT_OUTPUT_PATH \
+ participant $parameters"
 
-echo
-echo $cmd > $log_file
-echo
+# Write information to log file
+source $TIC_PATH/studies/active/scripts/bids_app_status.sh
 
-#nohup time /usr/local/bin/singularity run -w -B /cenc -B /gandg -B /bkraft1 \
+
+# Run BIDS App
 
 nohup time $SINGULARITY_COMMAND \
+           $ACTIVE_SINGULARITY_USER_BIND_PATHS \
            $APP_SINGULARITY_IMAGE \
            $ACTIVE_BIDS_PATH \
            $ACTIVE_APP_OUTPUT_PATH \
-           participant ${@} > $log_file 2>&1 &
+           participant $parameters > $log_file 2>&1 &
 
+echo "Waiting 30 seconds before displaying the log file ..."
+sleep 30
 
+cat $log_file
 
-
-
-
-
+echo

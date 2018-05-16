@@ -18,3 +18,5 @@ echo
 
 $ACTIVE_CLEAN_BIDS $@
 
+acrostic_list.py --create
+

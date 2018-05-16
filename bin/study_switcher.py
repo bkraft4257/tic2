@@ -5,7 +5,7 @@
 Writes a bash script to TIC_INIT_PATH.  This function is often called with an alias that calls this function
 and then sources the bash script.  For example,
 
-alias swh='study_switcher.py -s hfpef; source $TIC_INIT_PATH/tic_study_switcher.sh'
+alias swh='study_switcher.py hfpef; source $TIC_INIT_PATH/tic_study_switcher.sh'
 
 """
 
@@ -13,14 +13,13 @@ import os
 import argparse
 import sys
 
-STUDY_CHOICES = ['hfpef', 'synergy', 'infinite', 'cenc', 'imove']
-DEFAULT_STUDY_CHOICE = 'hfpef'
+STUDY_CHOICES = ['hfpef', 'synergy', 'infinite', 'cenc', 'imove', 'mfc']
 
 STUDY_SWITCHER_OUTPUT_FILENAME = os.path.abspath(os.path.join(os.getenv('TIC_INIT_PATH'),
-                                           'tic_study_switcher.sh'))
+                                                              'tic_study_switcher.sh'))
 
 DEFAULT_STUDY_SWITCHER_OUTPUT_FILENAME = os.path.abspath(os.path.join(os.getenv('TIC_INIT_PATH'),
-                                          'tic_default_study.sh'))
+                                                                      'tic_default_study.sh'))
 
 
 def _write_study_switcher_script(active_study,
@@ -36,7 +35,7 @@ def _write_study_switcher_script(active_study,
         file.write(f'# TIC Study Switcher Script\n')
         file.write(f'# =========================\n\n')
 
-        file.write(f"echo 'Previous active study' = $ACTIVE_STUDY\n\n")
+        file.write(f'source $TIC_STUDIES_PATH/{active_study.lower()}/init.sh\n\n')
 
         file.write(f'export ACTIVE_STUDY={active_study}\n')
         file.write(f'export ACTIVE_ACROSTIC_REGEX=${active_study}_ACROSTIC_REGEX\n')
@@ -45,10 +44,14 @@ def _write_study_switcher_script(active_study,
         file.write(f'export ACTIVE_BIDS_PATH=${active_study}_BIDS_PATH\n')
         file.write(f'export ACTIVE_IMAGE_ANALYSIS_PATH=${active_study}_IMAGE_ANALYSIS_PATH\n')
         file.write(f'export ACTIVE_IMAGE_PROCESSING_PATH=${active_study}_IMAGE_PROCESSING_PATH\n')
-        file.write(f'export ACTIVE_IMAGE_PROCESSING_LOG_PATH=${active_study}_IMAGE_PROCESSING_LOG_PATH\n')
+        file.write(f'export ACTIVE_IMAGE_PROCESSING_LOG_PATH=${active_study}_IMAGE_PROCESSING_LOG_PATH\n\n')
+        file.write(f'export ACTIVE_QC_PATH=${active_study}_QC_PATH\n')
+
         file.write(f'export ACTIVE_MRIQC_PATH=${active_study}_MRIQC_PATH\n')
         file.write(f'export ACTIVE_FMRIPREP_PATH=${active_study}_FMRIPREP_PATH\n')
         file.write(f'export ACTIVE_NETPREP_PATH=${active_study}_NETPREP_PATH\n')
+        file.write(f'export ACTIVE_ACT_PATH=${active_study}_ACT_PATH\n')
+        file.write(f'export ACTIVE_CONN_PATH=${active_study}_CONN_PATH\n')
 
         file.write(f'export ACTIVE_BIDS_CONFIG_FILE=${active_study}_BIDS_CONFIG_FILE\n')
         file.write(f'export ACTIVE_HEUDICONV_PROTOCOL=${active_study}_HEUDICONV_PROTOCOL\n')
@@ -64,8 +67,6 @@ def _write_study_switcher_script(active_study,
         file.write(f'export ACTIVE_FMRIPREP_PATH=${active_study}_FMRIPREP_PATH\n')
         file.write(f'export ACTIVE_NETPREP_PATH=${active_study}_NETPREP_PATH\n')
 
-        file.write(f"echo 'Current active study' = $ACTIVE_STUDY\n\n")
-
 
 def _argparse():
     # Parsing Arguments
@@ -73,7 +74,7 @@ def _argparse():
 
     parser = argparse.ArgumentParser(prog='study_switcher')
 
-    parser.add_argument('-s','--study',
+    parser.add_argument('study',
                         help='Switch to a different study.',
                         choices=STUDY_CHOICES,
                         type=str,
@@ -90,6 +91,7 @@ def _argparse():
 
     return parser.parse_args()
 
+
 def _select_output_file(default_flag):
 
     if default_flag:
@@ -98,6 +100,7 @@ def _select_output_file(default_flag):
         output_file = STUDY_SWITCHER_OUTPUT_FILENAME;
 
     return output_file
+
 
 def main():
 
@@ -111,7 +114,7 @@ def main():
 
     if in_args.verbose or in_args.study is None:
 
-        print(f'\n\n{output_filename} .... \n\n')
+        print(f'\n\n>> cat {output_filename} .... \n\n')
 
         with open(output_filename, 'r') as file:
             print(file.read())
