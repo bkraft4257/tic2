@@ -190,8 +190,8 @@ def _nilearn_remove_confounds(in_file,
             out_correlation_matrix = os.path.abspath(out_correlation_matrix)
 
             print(correlation_matrix.shape)
-            print(correlation_matrix[1:subsample:-1].shape)
-            sio.savemat(out_correlation_matrix, {'correlation_matrix': correlation_matrix[1:subsample:-1]})
+            print(correlation_matrix[::subsample, ::subsample].shape)
+            sio.savemat(out_correlation_matrix, {f'correlation_matrix_ss{subsample}': correlation_matrix[::subsample, ::subsample]})
 
         return out_correlation_matrix
 
