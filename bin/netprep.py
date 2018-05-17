@@ -129,7 +129,8 @@ def _nilearn_remove_confounds(in_file,
                               t_r=None,
                               detrend=True,
                               out_filename='fmri_confounds_removed.nii.gz',
-                              out_correlation_matrix='correlation_matrix.mat'
+                              out_correlation_matrix='correlation_matrix.mat',
+                              subsample=8,
                               ):
     """
 
@@ -187,7 +188,7 @@ def _nilearn_remove_confounds(in_file,
 
         if out_correlation_matrix is not None:
             out_correlation_matrix = os.path.abspath(out_correlation_matrix)
-            sio.savemat(out_correlation_matrix, {'correlation_matrix': correlation_matrix})
+            sio.savemat(out_correlation_matrix, {'correlation_matrix': correlation_matrix(1:subsample:end,1:subsample:end)})
 
         return out_correlation_matrix
 
@@ -327,6 +328,7 @@ def init_netprep_wf(netprep_io, verbose):
     nilearn_keep_confounds.inputs.t_r = netprep_io['nilearn_nifti_masker']['t_r']
     nilearn_keep_confounds.inputs.low_pass = netprep_io['nilearn_nifti_masker']['low_pass']
     nilearn_keep_confounds.inputs.high_pass = netprep_io['nilearn_nifti_masker']['high_pass']
+    nilearn_keep_confounds.inputs.subsample = netprep_io['nilearn_nifti_masker']['subsample']
 
     # --- Compare correlation matrix histograms
     #
