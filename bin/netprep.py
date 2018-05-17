@@ -182,7 +182,7 @@ def _nilearn_remove_confounds(in_file,
 
     # NiPype requires that import statements and function definitions are defined within the calling function.
 
-    def _calc_correlation_matrix(data, out_correlation_matrix=None, kind='correlation'):
+    def _calc_correlation_matrix(data, out_correlation_matrix=None, kind='correlation', subsample=subsample):
         correlation_measure = ConnectivityMeasure(kind=kind)
         correlation_matrix = (correlation_measure.fit_transform([data])[0])
 
@@ -190,7 +190,9 @@ def _nilearn_remove_confounds(in_file,
             out_correlation_matrix = os.path.abspath(out_correlation_matrix)
 
             print(correlation_matrix.shape)
+            print(subsample)
             print(correlation_matrix[::subsample, ::subsample].shape)
+
             sio.savemat(out_correlation_matrix, {f'correlation_matrix': correlation_matrix[::subsample, ::subsample]})
 
         return out_correlation_matrix
@@ -213,7 +215,7 @@ def _nilearn_remove_confounds(in_file,
     nibabel.save(nifti_masker.inverse_transform(fmri_confounds_removed), os.path.abspath(out_filename))
 
     # Calculate correlation matrix
-    out_correlation_matrix = _calc_correlation_matrix(fmri_confounds_removed, out_correlation_matrix, kind=kind)
+    out_correlation_matrix = _calc_correlation_matrix(fmri_confounds_removed, out_correlation_matrix, kind=kind, subsample=subsample)
 
     # It is very important that filenames returned from NiPype workflow functions have absolute filenames.
     # IF they don't they will not be saved to nodes base directory.
