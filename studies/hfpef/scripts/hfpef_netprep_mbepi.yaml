@@ -17,7 +17,7 @@ nilearn_nifti_masker:
         low_pass:
         high_pass:
         t_r:
-        subsample: 64
+        subsample: 8
 
 
 # YAML inputs explained:
