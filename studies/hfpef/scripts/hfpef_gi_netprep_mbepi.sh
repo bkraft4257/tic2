@@ -31,7 +31,7 @@ fi
 
 
 mkdir -p ${netprep_input}
-cp ${HFPEF_SCRIPTS_PATH}/hfpef_netprep.yaml ${netprep_input}/hfpef_netprep.yaml
+cp ${HFPEF_SCRIPTS_PATH}/hfpef_netprep_mbepi.yaml ${netprep_input}/hfpef_netprep.yaml
 
 ln -f ${bold_mni_preproc} ${netprep_input}/bold_mni_preproc.nii.gz
 ln -f ${t1w_gm_probtissue} ${netprep_input}/t1w_mni_gm_probtissue.nii.gz
