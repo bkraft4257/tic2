@@ -317,7 +317,8 @@ def init_netprep_wf(netprep_io, verbose):
                                                                          'kind',
                                                                          'standardize',
                                                                          'smoothing_fwhm',
-                                                                         'detrend'
+                                                                         'detrend',
+                                                                         'subsample'
                                                                          ],
                                                             output_names=['out_filename',
                                                                           'correlation_matrix'
