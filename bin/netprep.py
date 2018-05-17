@@ -130,7 +130,7 @@ def _nilearn_remove_confounds(in_file,
                               detrend=True,
                               out_filename='fmri_confounds_removed.nii.gz',
                               out_correlation_matrix='correlation_matrix.mat',
-                              subsample=32,
+                              subsample=8,
                               ):
     """
 
@@ -191,7 +191,7 @@ def _nilearn_remove_confounds(in_file,
 
             print(correlation_matrix.shape)
             print(correlation_matrix[::subsample, ::subsample].shape)
-            sio.savemat(out_correlation_matrix, {f'correlation_matrix_ss{subsample}': correlation_matrix[::subsample, ::subsample]})
+            sio.savemat(out_correlation_matrix, {f'correlation_matrix': correlation_matrix[::subsample, ::subsample]})
 
         return out_correlation_matrix
 
