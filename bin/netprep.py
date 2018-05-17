@@ -30,7 +30,7 @@ identity_transform = os.path.join(os.path.dirname(os.path.realpath(__file__)), '
 
 def _nilearn_compare_compcorr(correlation_matrix1_filename,
                               correlation_matrix2_filename,
-                              subsample=64,
+                              subsample=1,
                               verbose=False
                               ):
     """
@@ -130,7 +130,7 @@ def _nilearn_remove_confounds(in_file,
                               detrend=True,
                               out_filename='fmri_confounds_removed.nii.gz',
                               out_correlation_matrix='correlation_matrix.mat',
-                              subsample=8,
+                              subsample=32,
                               ):
     """
 
@@ -188,6 +188,10 @@ def _nilearn_remove_confounds(in_file,
 
         if out_correlation_matrix is not None:
             out_correlation_matrix = os.path.abspath(out_correlation_matrix)
+
+            print(correlation_matrix.size())
+            print(correlation_matrix[1:subsample:-1,1:subsample:-1].size())
+
             sio.savemat(out_correlation_matrix, {'correlation_matrix': correlation_matrix[1:subsample:-1,1:subsample:-1]})
 
         return out_correlation_matrix
