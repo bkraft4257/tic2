@@ -29,7 +29,7 @@ fi
 
 
 mkdir -p ${netprep_input}
-cp ${HFPEF_SCRIPTS_PATH}/hfpef_netprep.yaml ${netprep_input}/hfpef_netprep.yaml
+cp ${HFPEF_SCRIPTS_PATH}/hfpef_netprep_epi.yaml ${netprep_input}/hfpef_netprep.yaml
 
 
 ln -f ${bold_mni_preproc} ${netprep_input}/bold_mni_preproc.nii.gz
