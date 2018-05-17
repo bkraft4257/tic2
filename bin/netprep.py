@@ -281,7 +281,8 @@ def init_netprep_wf(netprep_io, verbose):
                                                                            'detrend',
                                                                            't_r',
                                                                            'low_pass',
-                                                                           'high_pass'
+                                                                           'high_pass',
+                                                                           'subsample'
                                                                            ],
                                                               output_names=['out_filename',
                                                                             'correlation_matrix'
@@ -299,6 +300,7 @@ def init_netprep_wf(netprep_io, verbose):
     nilearn_remove_confounds.inputs.t_r = netprep_io['nilearn_nifti_masker']['t_r']
     nilearn_remove_confounds.inputs.low_pass = netprep_io['nilearn_nifti_masker']['low_pass']
     nilearn_remove_confounds.inputs.high_pass = netprep_io['nilearn_nifti_masker']['high_pass']
+    nilearn_remove_confounds.inputs.subsample = netprep_io['nilearn_nifti_masker']['subsample']
 
     # --- nilearn preprocessing without regressing out confounds.
     #
