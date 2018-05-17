@@ -30,7 +30,7 @@ identity_transform = os.path.join(os.path.dirname(os.path.realpath(__file__)), '
 
 def _nilearn_compare_compcorr(correlation_matrix1_filename,
                               correlation_matrix2_filename,
-                              subsample=32,
+                              subsample=64,
                               verbose=False
                               ):
     """
