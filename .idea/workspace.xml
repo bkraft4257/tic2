@@ -98,8 +98,8 @@
       <file leaf-file-name="netprep.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/bin/netprep.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="872">
-              <caret line="321" column="76" lean-forward="true" selection-start-line="321" selection-start-column="76" selection-end-line="321" selection-end-column="76" />
+            <state relative-caret-position="907">
+              <caret line="217" column="132" lean-forward="false" selection-start-line="217" selection-start-column="132" selection-end-line="217" selection-end-column="132" />
               <folding />
             </state>
           </provider>
@@ -169,8 +169,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>drop_missing</find>
-      <find>remove nans</find>
       <find>nan</find>
       <find>unable</find>
       <find>print</find>
@@ -199,6 +197,8 @@
       <find>confounds_fou</find>
       <find>CONN_PATH</find>
       <find>fmap</find>
+      <find>print(</find>
+      <find>keep_confounds</find>
     </findStrings>
     <replaceStrings>
       <replace>01d</replace>
@@ -618,13 +618,6 @@
       <option name="presentableId" value="Default" />
       <updated>1517948604886</updated>
     </task>
-    <task id="LOCAL-00536" summary="Started with CONN scripts for MFC">
-      <created>1524606573641</created>
-      <option name="number" value="00536" />
-      <option name="presentableId" value="LOCAL-00536" />
-      <option name="project" value="LOCAL" />
-      <updated>1524606573641</updated>
-    </task>
     <task id="LOCAL-00537" summary="Updated BPS for debugging.">
       <created>1524665907278</created>
       <option name="number" value="00537" />
@@ -961,7 +954,14 @@
       <option name="project" value="LOCAL" />
       <updated>1526587286822</updated>
     </task>
-    <option name="localTasksCounter" value="585" />
+    <task id="LOCAL-00585" summary="Increased default subsampling from 32 to 64">
+      <created>1526587409717</created>
+      <option name="number" value="00585" />
+      <option name="presentableId" value="LOCAL-00585" />
+      <option name="project" value="LOCAL" />
+      <updated>1526587409717</updated>
+    </task>
+    <option name="localTasksCounter" value="586" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -1531,8 +1531,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/bin/netprep.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="872">
-          <caret line="321" column="76" lean-forward="true" selection-start-line="321" selection-start-column="76" selection-end-line="321" selection-end-column="76" />
+        <state relative-caret-position="907">
+          <caret line="217" column="132" lean-forward="false" selection-start-line="217" selection-start-column="132" selection-end-line="217" selection-end-column="132" />
           <folding />
         </state>
       </provider>
