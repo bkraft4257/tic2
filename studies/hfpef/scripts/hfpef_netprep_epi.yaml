@@ -4,7 +4,7 @@
 netprep_methods_dir: ../methods
 
 
-fmri: epi_bold_mni_preproc.nii.gz
+fmri: bold_mni_preproc.nii.gz
 
 gm_probmap: t1w_mni_gm_probtissue.nii.gz
 gm_mask_threshold: 0.51
