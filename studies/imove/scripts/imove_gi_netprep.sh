@@ -17,7 +17,7 @@ session=ses-${session_id}
 
 
 echo
-echo "hfpef_gi_netprep_epi.sh =============================================================================="
+echo "imove_gi_netprep_epi.sh =============================================================================="
 echo
 
 $IMOVE_SCRIPTS_PATH/imove_gi_netprep_epi.sh $subject_id  $session_id
@@ -25,7 +25,7 @@ $IMOVE_SCRIPTS_PATH/imove_gi_netprep_epi.sh $subject_id  $session_id
 
 
 echo
-echo "hfpef_gi_netprep_mbepi.sh =============================================================================="
+echo "imove_gi_netprep_mbepi.sh =============================================================================="
 echo
 
 $IMOVE_SCRIPTS_PATH/imove_gi_netprep_mbepi.sh $subject_id  $session_id
