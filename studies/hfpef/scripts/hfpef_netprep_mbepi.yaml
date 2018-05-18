@@ -73,6 +73,11 @@ nilearn_nifti_masker:
 #       t_r: float, Repetition time, in second (sampling period). This parameter must
 #                   be defined if lowpass or highpass are defined.
 #
+#       subsample: int, Subsampling of Correlation Matrix for comparing remove_confounds vs. keep_confounds.
+#                       Subsampling is done when the correlation_matrix is saved in Matlab format.  This is
+#                       necessary to avoid the 4Gb file size for mat files, which can occur for multiband epi.  
+#
+#
 # netprep.py Outputs explained:
 #  
 #   The netprep workflow takes a 4D fMRI NIFTI file and performs basic preprocessing to
