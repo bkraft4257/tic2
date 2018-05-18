@@ -5,7 +5,5 @@ alias reimove='source $IMOVE_SCRIPTS_PATH/../aliases.sh'
 
 # When creating this alias you will need to update the study_switcher.py to include the imove
 # name.
-alias sw_imove='study_switcher.py -s imove; source $TIC_INIT_PATH/tic_study_switcher.sh'
 
-alias hdc_imove='$IMOVE_SCRIPTS_PATH/hdc_imove.sh'
-
+alias imove_netprep_gi='$IMOVE_SCRIPTS_PATH/imove_gi_netprep.sh'
