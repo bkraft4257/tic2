@@ -1,11 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="6f3e13b3-cd58-4c4d-98f6-1a68f8358bfb" name="Default" comment="Increased default subsampling from 32 to 64">
+    <list default="true" id="6f3e13b3-cd58-4c4d-98f6-1a68f8358bfb" name="Default" comment="">
+      <change beforePath="" afterPath="$PROJECT_DIR$/studies/imove/scripts/imove_gi_netprep.sh" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/studies/imove/scripts/imove_gi_netprep_epi.sh" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/studies/imove/scripts/imove_gi_netprep_mbepi.sh" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/studies/imove/scripts/imove_netprep_epi.yaml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/studies/imove/scripts/imove_netprep_mbepi.yaml" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/studies/hfpef/scripts/hfpef_netprep_mbepi.yaml" afterPath="$PROJECT_DIR$/studies/hfpef/scripts/hfpef_netprep_mbepi.yaml" />
-      <change beforePath="$PROJECT_DIR$/studies/synergy/scripts/synergy_netprep.yaml" afterPath="$PROJECT_DIR$/studies/synergy/scripts/synergy_netprep.yaml" />
-      <change beforePath="$PROJECT_DIR$/studies/synergy/scripts/synergy_netprep_gather_inputs.sh" afterPath="$PROJECT_DIR$/studies/synergy/scripts/synergy_netprep_gather_inputs.sh" />
+      <change beforePath="$PROJECT_DIR$/studies/hfpef/scripts/hfpef_gi_netprep_epi.sh" afterPath="$PROJECT_DIR$/studies/hfpef/scripts/hfpef_gi_netprep_epi.sh" />
+      <change beforePath="$PROJECT_DIR$/studies/hfpef/scripts/hfpef_gi_netprep_mbepi.sh" afterPath="$PROJECT_DIR$/studies/hfpef/scripts/hfpef_gi_netprep_mbepi.sh" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -57,31 +61,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="netprep_gather_inputs.yaml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/bin/netprep_gather_inputs.yaml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="11" column="0" lean-forward="false" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="hfpef_gi_netprep_epi.sh" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/studies/hfpef/scripts/hfpef_gi_netprep_epi.sh">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="629">
-              <caret line="37" column="0" lean-forward="true" selection-start-line="34" selection-start-column="0" selection-end-line="37" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="netprep.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/bin/netprep.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="5236">
-              <caret line="319" column="83" lean-forward="false" selection-start-line="319" selection-start-column="83" selection-end-line="319" selection-end-column="83" />
+            <state relative-caret-position="680">
+              <caret line="40" column="0" lean-forward="true" selection-start-line="40" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -90,58 +74,68 @@
       <file leaf-file-name="hfpef_gi_netprep_mbepi.sh" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/studies/hfpef/scripts/hfpef_gi_netprep_mbepi.sh">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="51">
-              <caret line="3" column="77" lean-forward="true" selection-start-line="3" selection-start-column="77" selection-end-line="3" selection-end-column="77" />
+            <state relative-caret-position="663">
+              <caret line="39" column="0" lean-forward="false" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="hfpef_netprep_epi.yaml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/studies/hfpef/scripts/hfpef_netprep_epi.yaml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="357">
-              <caret line="21" column="0" lean-forward="true" selection-start-line="20" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="hfpef_netprep_mbepi.yaml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/studies/hfpef/scripts/hfpef_netprep_mbepi.yaml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="678">
-              <caret line="77" column="111" lean-forward="false" selection-start-line="77" selection-start-column="111" selection-end-line="77" selection-end-column="111" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="prepare_netprep_synergy.sh" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/studies/synergy/scripts/prepare_netprep_synergy.sh">
+      <file leaf-file-name="imove_gi_netprep.sh" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/studies/imove/scripts/imove_gi_netprep.sh">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="102">
-              <caret line="6" column="0" lean-forward="true" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
+              <caret line="6" column="20" lean-forward="false" selection-start-line="6" selection-start-column="20" selection-end-line="6" selection-end-column="21" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="synergy_netprep_gather_inputs.sh" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/studies/synergy/scripts/synergy_netprep_gather_inputs.sh">
+      <file leaf-file-name="imove_gi_netprep_epi.sh" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/studies/imove/scripts/imove_gi_netprep_epi.sh">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="914">
-              <caret line="57" column="3" lean-forward="true" selection-start-line="57" selection-start-column="3" selection-end-line="57" selection-end-column="3" />
+            <state relative-caret-position="626">
+              <caret line="40" column="0" lean-forward="true" selection-start-line="39" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="hfpef_netprep.yaml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/studies/hfpef/scripts/hfpef_netprep.yaml">
+      <file leaf-file-name="imove_netprep_mbepi.yaml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/studies/imove/scripts/imove_netprep_mbepi.yaml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="16" column="17" lean-forward="true" selection-start-line="16" selection-start-column="17" selection-end-line="16" selection-end-column="17" />
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="imove_netprep_epi.yaml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/studies/imove/scripts/imove_netprep_epi.yaml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="imove_gi_netprep_mbepi.sh" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/studies/imove/scripts/imove_gi_netprep_mbepi.sh">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="680">
+              <caret line="40" column="0" lean-forward="false" selection-start-line="40" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="synergy_protocol.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/studies/synergy/scripts/synergy_protocol.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -152,6 +146,16 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="119">
               <caret line="7" column="20" lean-forward="false" selection-start-line="7" selection-start-column="20" selection-end-line="7" selection-end-column="20" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="synergy_netprep_gather_inputs.sh" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/studies/synergy/scripts/synergy_netprep_gather_inputs.sh">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="680">
+              <caret line="42" column="0" lean-forward="true" selection-start-line="41" selection-start-column="0" selection-end-line="42" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -171,9 +175,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>nan</find>
-      <find>unable</find>
-      <find>print</find>
       <find>key_value</find>
       <find>**</find>
       <find>mriqc</find>
@@ -201,6 +202,9 @@
       <find>fmap</find>
       <find>print(</find>
       <find>keep_confounds</find>
+      <find>HFPEF_NETPREP_PATH</find>
+      <find>hfpef</find>
+      <find>HFPEF</find>
     </findStrings>
     <replaceStrings>
       <replace>01d</replace>
@@ -220,6 +224,9 @@
       <replace>post_</replace>
       <replace>heat</replace>
       <replace>topup</replace>
+      <replace>IMOVE_NETPREP_PATH</replace>
+      <replace>imove</replace>
+      <replace>IMOVE</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -234,9 +241,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/studies/mfc/scripts/clean_bids.sh" />
-        <option value="$PROJECT_DIR$/tests/test_slack_api.py" />
-        <option value="$PROJECT_DIR$/tic_core/configuration.py" />
         <option value="$PROJECT_DIR$/tests/test_slack.py" />
         <option value="$PROJECT_DIR$/tic_core/slack.py" />
         <option value="$PROJECT_DIR$/tests/test_tic_io.py" />
@@ -278,13 +282,16 @@
         <option value="$PROJECT_DIR$/bin/netprep_gather_inputs.yaml" />
         <option value="$PROJECT_DIR$/bin/netprep_gather_inputs.py" />
         <option value="$PROJECT_DIR$/bin/netprep.py" />
-        <option value="$PROJECT_DIR$/studies/hfpef/scripts/hfpef_gi_netprep_epi.sh" />
-        <option value="$PROJECT_DIR$/studies/hfpef/scripts/hfpef_gi_netprep_mbepi.sh" />
         <option value="$PROJECT_DIR$/studies/hfpef/scripts/hfpef_netprep.yaml" />
         <option value="$PROJECT_DIR$/studies/hfpef/scripts/hfpef_netprep_epi.yaml" />
         <option value="$PROJECT_DIR$/studies/hfpef/scripts/hfpef_netprep_mbepi.yaml" />
         <option value="$PROJECT_DIR$/studies/synergy/scripts/synergy_netprep.yaml" />
         <option value="$PROJECT_DIR$/studies/synergy/scripts/synergy_netprep_gather_inputs.sh" />
+        <option value="$PROJECT_DIR$/studies/imove/scripts/imove_gi_netprep.sh" />
+        <option value="$PROJECT_DIR$/studies/imove/scripts/imove_gi_netprep_epi.sh" />
+        <option value="$PROJECT_DIR$/studies/imove/scripts/imove_gi_netprep_mbepi.sh" />
+        <option value="$PROJECT_DIR$/studies/hfpef/scripts/hfpef_gi_netprep_mbepi.sh" />
+        <option value="$PROJECT_DIR$/studies/hfpef/scripts/hfpef_gi_netprep_epi.sh" />
       </list>
     </option>
   </component>
@@ -376,6 +383,19 @@
               <item name="tic_core" type="b2602c69:ProjectViewProjectNode" />
               <item name="tic_core" type="462c0819:PsiDirectoryNode" />
               <item name="studies" type="462c0819:PsiDirectoryNode" />
+              <item name="imove" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="tic_core" type="b2602c69:ProjectViewProjectNode" />
+              <item name="tic_core" type="462c0819:PsiDirectoryNode" />
+              <item name="studies" type="462c0819:PsiDirectoryNode" />
+              <item name="imove" type="462c0819:PsiDirectoryNode" />
+              <item name="scripts" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="tic_core" type="b2602c69:ProjectViewProjectNode" />
+              <item name="tic_core" type="462c0819:PsiDirectoryNode" />
+              <item name="studies" type="462c0819:PsiDirectoryNode" />
               <item name="infinite" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -420,19 +440,19 @@
     <property name="SearchEverywhereHistoryKey" value="read_config&#9;null&#9;null&#10;YAML&#9;FILE&#9;file:///Users/bkraft/projects/tic_core/studies/active/scripts/netprep_mbepi.yaml&#10;sws&#9;null&#9;null&#10;hdc.sh&#9;FILE&#9;file:///Users/bkraft/projects/tic_core/bin/hdc.sh&#10;study&#9;FILE&#9;file:///Users/bkraft/projects/tic_core/bin/study_switcher.py" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/bin" />
-      <recent name="$PROJECT_DIR$/tests/data" />
-      <recent name="$PROJECT_DIR$/tests" />
-      <recent name="$PROJECT_DIR$/studies/mcf/scripts" />
-      <recent name="$PROJECT_DIR$/studies/mcf" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/../bin" />
       <recent name="$PROJECT_DIR$/tic_core" />
       <recent name="$PROJECT_DIR$/tests" />
       <recent name="$PROJECT_DIR$/studies/mcf/scripts" />
       <recent name="$PROJECT_DIR$" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/studies/imove/scripts" />
+      <recent name="$PROJECT_DIR$/bin" />
+      <recent name="$PROJECT_DIR$/tests/data" />
+      <recent name="$PROJECT_DIR$/tests" />
+      <recent name="$PROJECT_DIR$/studies/mcf/scripts" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -619,13 +639,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1517948604886</updated>
-    </task>
-    <task id="LOCAL-00542" summary="Debugging item:01d for phasediff field maps.">
-      <created>1525094956589</created>
-      <option name="number" value="00542" />
-      <option name="presentableId" value="LOCAL-00542" />
-      <option name="project" value="LOCAL" />
-      <updated>1525094956589</updated>
     </task>
     <task id="LOCAL-00543" summary="Updated ACT">
       <created>1525118048410</created>
@@ -963,7 +976,14 @@
       <option name="project" value="LOCAL" />
       <updated>1526589013952</updated>
     </task>
-    <option name="localTasksCounter" value="591" />
+    <task id="LOCAL-00591" summary="Fixed Synergy Netprep scripts">
+      <created>1526659668544</created>
+      <option name="number" value="00591" />
+      <option name="presentableId" value="LOCAL-00591" />
+      <option name="project" value="LOCAL" />
+      <updated>1526659668544</updated>
+    </task>
+    <option name="localTasksCounter" value="592" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -1010,7 +1030,7 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.50287354" sideWeight="0.48106593" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3293461" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.20121422" sideWeight="0.49006623" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24025974" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24025974" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3297568" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="SciView" active="false" anchor="right" auto_hide="true" internal_type="DOCKED" type="FLOATING" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1057,7 +1077,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Added ACTIVE_ACROSTIC_REGEX as default to processing_status.py&#10;Updated environment variables to include *_CONN_PATH (hfpef)" />
     <MESSAGE value="Added some protection for subject and session inputs from argparse." />
     <MESSAGE value="Added operations for cleaning BIDS key/value pairs" />
     <MESSAGE value="Added way to display participants list." />
@@ -1082,7 +1101,8 @@
     <MESSAGE value="Added Tracula to BIDS Apps." />
     <MESSAGE value="Fixed bug in YAML file" />
     <MESSAGE value="Increased default subsampling from 32 to 64" />
-    <option name="LAST_COMMIT_MESSAGE" value="Increased default subsampling from 32 to 64" />
+    <MESSAGE value="Fixed Synergy Netprep scripts" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixed Synergy Netprep scripts" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1118,63 +1138,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/bin/ls_participants.sh">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="0" lean-forward="false" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bin/mriqc_group.sh">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="918">
-          <caret line="54" column="73" lean-forward="false" selection-start-line="54" selection-start-column="73" selection-end-line="54" selection-end-column="73" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/init/tic_aliases.sh">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/docs/source/other/wiki_fmriprep.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="-385">
-            <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          </first_editor>
-          <second_editor>
-            <js_state />
-          </second_editor>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/docs/source/other/wiki_nipype_workflows.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="-300">
-            <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          </first_editor>
-          <second_editor>
-            <js_state />
-          </second_editor>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/docs/source/other/wiki_hfpef.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="-521">
-            <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          </first_editor>
-          <second_editor>
-            <js_state />
-          </second_editor>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/docs/source/other/heudiconv.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
         <state split_layout="SPLIT">
@@ -1404,13 +1367,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/studies/synergy/scripts/synergy_protocol.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-453">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/studies/hfpef/scripts/hfpef_protocol.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-478">
@@ -1422,14 +1378,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2958">
           <caret line="184" column="49" lean-forward="false" selection-start-line="184" selection-start-column="49" selection-end-line="184" selection-end-column="49" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/studies/hfpef/scripts/hfpef_gi_netprep.sh">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -1466,14 +1414,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/studies/synergy/scripts/synergy_netprep.yaml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="20" lean-forward="false" selection-start-line="7" selection-start-column="20" selection-end-line="7" selection-end-column="20" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/studies/synergy/scripts/prepare_netprep_synergy.sh">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
@@ -1498,26 +1438,98 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/studies/hfpef/scripts/hfpef_gi_netprep_mbepi.sh">
+    <entry file="file://$PROJECT_DIR$/studies/hfpef/scripts/hfpef_gi_netprep.sh">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="51">
-          <caret line="3" column="77" lean-forward="true" selection-start-line="3" selection-start-column="77" selection-end-line="3" selection-end-column="77" />
+          <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/studies/hfpef/scripts/hfpef_gi_netprep_epi.sh">
+    <entry file="file://$PROJECT_DIR$/studies/imove/scripts/hfpef_netprep.yaml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="629">
-          <caret line="37" column="0" lean-forward="true" selection-start-line="34" selection-start-column="0" selection-end-line="37" selection-end-column="0" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/studies/imove/scripts/imove_netprep_mbepi.yaml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/studies/synergy/scripts/synergy_protocol.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/studies/synergy/scripts/synergy_netprep.yaml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="20" lean-forward="false" selection-start-line="7" selection-start-column="20" selection-end-line="7" selection-end-column="20" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/studies/synergy/scripts/synergy_netprep_gather_inputs.sh">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="914">
-          <caret line="57" column="3" lean-forward="true" selection-start-line="57" selection-start-column="3" selection-end-line="57" selection-end-column="3" />
+        <state relative-caret-position="680">
+          <caret line="42" column="0" lean-forward="true" selection-start-line="41" selection-start-column="0" selection-end-line="42" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/studies/imove/scripts/imove_gi_netprep.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="20" lean-forward="false" selection-start-line="6" selection-start-column="20" selection-end-line="6" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/studies/hfpef/scripts/hfpef_gi_netprep_mbepi.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="663">
+          <caret line="39" column="0" lean-forward="false" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/studies/hfpef/scripts/hfpef_gi_netprep_epi.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="680">
+          <caret line="40" column="0" lean-forward="true" selection-start-line="40" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/studies/imove/scripts/imove_netprep_epi.yaml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/studies/imove/scripts/imove_gi_netprep_mbepi.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="680">
+          <caret line="40" column="0" lean-forward="false" selection-start-line="40" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/studies/imove/scripts/imove_gi_netprep_epi.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="626">
+          <caret line="40" column="0" lean-forward="true" selection-start-line="39" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
           <folding />
         </state>
       </provider>
