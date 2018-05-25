@@ -2,10 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6f3e13b3-cd58-4c4d-98f6-1a68f8358bfb" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/bin/clean_bids.py" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/studies/hfpef/scripts/hfpef_protocol.py" afterPath="$PROJECT_DIR$/studies/hfpef/scripts/hfpef_protocol.py" />
-      <change beforePath="$PROJECT_DIR$/studies/infinite/scripts/inf_netprep_gi.sh" afterPath="$PROJECT_DIR$/studies/infinite/scripts/inf_netprep_gi.sh" />
+      <change beforePath="$PROJECT_DIR$/bin/clean_bids.py" afterPath="$PROJECT_DIR$/bin/clean_bids.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -140,8 +138,8 @@
       <file leaf-file-name="clean_bids.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/bin/clean_bids.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="474">
-              <caret line="55" column="0" lean-forward="true" selection-start-line="55" selection-start-column="0" selection-end-line="55" selection-end-column="0" />
+            <state relative-caret-position="109">
+              <caret line="16" column="7" lean-forward="true" selection-start-line="16" selection-start-column="7" selection-end-line="16" selection-end-column="7" />
               <folding>
                 <element signature="e#78#93#0" expanded="true" />
               </folding>
@@ -644,13 +642,6 @@
       <option name="presentableId" value="Default" />
       <updated>1517948604886</updated>
     </task>
-    <task id="LOCAL-00547" summary="Updated ACT">
-      <created>1525199816182</created>
-      <option name="number" value="00547" />
-      <option name="presentableId" value="LOCAL-00547" />
-      <option name="project" value="LOCAL" />
-      <updated>1525199816182</updated>
-    </task>
     <task id="LOCAL-00548" summary="Added fmap_intended_for.py to simplify updating fieldmap json files.">
       <created>1525468106019</created>
       <option name="number" value="00548" />
@@ -987,7 +978,14 @@
       <option name="project" value="LOCAL" />
       <updated>1526663250590</updated>
     </task>
-    <option name="localTasksCounter" value="596" />
+    <task id="LOCAL-00596" summary="Updated IMOVE netprep">
+      <created>1527262465086</created>
+      <option name="number" value="00596" />
+      <option name="presentableId" value="LOCAL-00596" />
+      <option name="project" value="LOCAL" />
+      <updated>1527262465088</updated>
+    </task>
+    <option name="localTasksCounter" value="597" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -1508,8 +1506,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/bin/clean_bids.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="474">
-          <caret line="55" column="0" lean-forward="true" selection-start-line="55" selection-start-column="0" selection-end-line="55" selection-end-column="0" />
+        <state relative-caret-position="109">
+          <caret line="16" column="7" lean-forward="true" selection-start-line="16" selection-start-column="7" selection-end-line="16" selection-end-column="7" />
           <folding>
             <element signature="e#78#93#0" expanded="true" />
           </folding>

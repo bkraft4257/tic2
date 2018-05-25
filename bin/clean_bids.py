@@ -18,13 +18,7 @@ def _argparse():
 
     parser = argparse.ArgumentParser(prog='conn_gather_inputs')
 
-
     parser.add_argument('subject', help='BIDS subject value')
-
-    parser.add_argument('--yaml_filename', help='YAML configuration file',
-                        default=YAML_CONFIG_FILENAME_DEFAULT)
-
-
 
     parser.add_argument('-ss', '--session',
                         help='BIDS session value',
