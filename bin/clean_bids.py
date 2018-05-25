@@ -37,6 +37,11 @@ def _argparse():
 
 
 def _rename_hdc_item__numbers(start_directory=None):
+    """
+
+    :param start_directory:
+    :return:
+    """
 
     if start_directory is None:
         start_directory = './'
