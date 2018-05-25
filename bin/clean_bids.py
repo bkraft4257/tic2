@@ -11,7 +11,6 @@ import os
 import sys
 
 
-
 def _argparse():
     """ Get command line arguments.
     """
