@@ -43,7 +43,11 @@ def _rename_hdc_item__numbers(start_directory=None):
 
     files = []
     for ext in ('.nii.gz', '*.json'):
-        files.extend(glob.glob(os.path.join(f'{start_directory}', '**', f'*.1.{ext}')))
+
+        glob_string = os.path.join(f'{start_directory}', '**', f'*.1.{ext}')
+        print(glob_string)
+
+        files.extend(glob.glob(glob_string))
 
     print(files)
 
