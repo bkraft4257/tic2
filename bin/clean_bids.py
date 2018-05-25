@@ -44,7 +44,7 @@ def _rename_hdc_item__numbers(start_directory=None):
     """
 
     if start_directory is None:
-        start_directory = './'
+        start_directory = ''
 
     files = []
     for ext in ('nii.gz', 'json'):
