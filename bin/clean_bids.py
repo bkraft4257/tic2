@@ -37,8 +37,8 @@ def _argparse():
                        default=False)
 
     group.add_argument('-u', '--unlock', help='Enable write permission to *.nii.gz and *.json files',
-                       action='store_false',
-                       default=True)
+                       action='store_true',
+                       default=False)
 
     in_args = parser.parse_args()
 
