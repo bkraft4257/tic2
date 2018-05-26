@@ -37,6 +37,22 @@ def _argparse():
     return in_args
 
 
+def _list_hdc_item_number_2(start_directory=None):
+
+    if start_directory is None:
+        start_directory = '.'
+
+    files = []
+    for ext in ('nii.gz', 'json'):
+        glob_string = os.path.join(f'{start_directory}', '**', '**', f'*.[0-9].{ext}')
+        files.extend(glob.glob(glob_string, recursive=True))
+
+    for ii, ii_file in enumerate(files):
+        print(f'{ii}) {ii_file}')
+
+    print('\n')
+
+
 def _rename_hdc_item_number_1(start_directory=None):
     """
 
@@ -53,9 +69,36 @@ def _rename_hdc_item_number_1(start_directory=None):
         files.extend(glob.glob(glob_string, recursive=True))
 
     for ii, ii_file in enumerate(files):
-        os.rename(ii_file,
-                  ii_file.replace('.1.', '.')
-                  )
+        try:
+            os.rename(ii_file,
+                      ii_file.replace('.1.', '.')
+                      )
+        except FileNotFoundError:
+            pass  # Ignore file not found errors
+
+
+def _rename_hdc_item_number_1(start_directory=None):
+    """
+
+    :param start_directory:
+    :return:
+    """
+
+    if start_directory is None:
+        start_directory = '.'
+
+    files = []
+    for ext in ('nii.gz', 'json'):
+        glob_string = os.path.join(f'{start_directory}', '**', '**', f'*.1.{ext}')
+        files.extend(glob.glob(glob_string, recursive=True))
+
+    for ii, ii_file in enumerate(files):
+        try:
+            os.rename(ii_file,
+                      ii_file.replace('.1.', '.')
+                      )
+        except FileNotFoundError:
+            pass  # Ignore file not found errors
 
 
 def _remove_backup_files(start_directory=None):
@@ -78,7 +121,7 @@ def main():
 
     _rename_hdc_item_number_1()
     _remove_backup_files()
-
+    _list_hdc_item_number_2(start_directory=None)
 
 if __name__ == '__main__':
     sys.exit(main())
