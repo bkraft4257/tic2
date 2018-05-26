@@ -166,6 +166,7 @@ def set_write_permissions(start_directory, lock=True):
 
 def _clean_bids(start_directory, lock, unlock):
 
+    print(start_directory)
     _rename_hdc_item_number_1(start_directory)
     _remove_files(start_directory)
     _list_hdc_item_number_2(start_directory)
