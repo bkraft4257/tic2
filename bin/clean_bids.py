@@ -20,7 +20,7 @@ def _argparse():
 
     parser = argparse.ArgumentParser(prog='clean_bids')
 
-    parser.add_argument('-s', 'subject', help='BIDS subject value', default=None)
+    parser.add_argument('-s', '--subject', help='BIDS subject value', default=None)
 
     parser.add_argument('-ss', '--session',
                         help='BIDS session value',
