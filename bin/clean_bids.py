@@ -212,7 +212,7 @@ def main():
     print(in_args.sessions)
 
     subjects = force_to_list(in_args.subject, 'str')
-    sessions = force_to_list(in_args.sessions, 'str')
+    sessions = force_to_list(in_args.session, 'str')
 
     for ii_subject in subjects:
 
