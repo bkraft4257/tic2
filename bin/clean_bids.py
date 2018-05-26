@@ -107,13 +107,13 @@ def _rename_hdc_item_number_1(start_directory=None):
             pass  # Ignore file not found errors
 
 
-def _remove_backup_files(start_directory=None):
+def _remove_files(start_directory=None):
 
     if start_directory is None:
         start_directory = '.'
 
     files = []
-    for ii_glob_pattern in ['*~']:
+    for ii_glob_pattern in ['*~', '*magnitude1.json']:
         glob_string = os.path.join(f'{start_directory}', '**', ii_glob_pattern)
         files.extend(glob.glob(glob_string, recursive=True))
 
@@ -134,7 +134,7 @@ def main():
     print(start_directory)
 
     _rename_hdc_item_number_1(start_directory)
-    _remove_backup_files(start_directory)
+    _remove_files(start_directory)
     _list_hdc_item_number_2(start_directory)
 
 
