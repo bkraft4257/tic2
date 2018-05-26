@@ -208,20 +208,17 @@ def main():
 
     in_args = _argparse()
 
-    print(in_args.subject)
-    print(in_args.session)
+    # subjects = force_to_list(in_args.subject, str)
+    # sessions = force_to_list(in_args.session, str)
 
-    subjects = force_to_list(in_args.subject, str)
-    sessions = force_to_list(in_args.session, str)
-
-    for ii_subject in subjects:
+    for ii_subject in in_args.subject:
 
         if ii_subject is None:
             start_directory = ACTIVE_BIDS_PATH
             _clean_bids(start_directory, in_args.lock, in_args.unlock)
 
         else:
-            for ii_session in sessions:
+            for ii_session in in_args.session:
                 start_directory = os.path.abspath(os.path.join(ACTIVE_BIDS_PATH,
                                                                f'sub-{ii_subject}',
                                                                f'ses-{ii_session}'
