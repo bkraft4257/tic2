@@ -32,14 +32,13 @@ def _argparse():
                         default=False)
 
     group = parser.add_mutually_exclusive_group(required=False)
-    parser.add_argument('-l', '--lock', help='Disable write permission to *.nii.gz and *.json files',
-                        action='store_true',
-                        default=False)
+    group.add_argument('-l', '--lock', help='Disable write permission to *.nii.gz and *.json files',
+                       action='store_true',
+                       default=False)
 
-    parser.add_argument('-u', '--unlock', help='Enable write permission to *.nii.gz and *.json files',
-                        action='store_false',
-                        default=True)
-
+    group.add_argument('-u', '--unlock', help='Enable write permission to *.nii.gz and *.json files',
+                       action='store_false',
+                       default=True)
 
     in_args = parser.parse_args()
 
@@ -181,7 +180,7 @@ def main():
                                                    )
                                       )
 
-    print(start_directory)
+    print(in_args)
 
     _rename_hdc_item_number_1(start_directory)
     _remove_files(start_directory)
