@@ -141,11 +141,11 @@ def _set_write_permissions_of_file(file, lock=True):
     current_permissions = stat.S_IMODE(os.lstat(file).st_mode)
 
     if lock:
-        set_writing = ~stat.S_IWUSR & ~stat.S_IWGRP & ~stat.S_IWOTH
+        set_writing = ~stat.S_IWUSR & ~stat.S_IWGRP
         os.chmod(file, current_permissions & set_writing)
 
     else:
-        set_writing = stat.S_IWUSR | stat.S_IWGRP | stat.S_IWOTH
+        set_writing = stat.S_IWUSR | stat.S_IWGRP
         os.chmod(file, current_permissions | set_writing)
 
     print(f'{file}: {current_permissions}, {set_writing}, {current_permissions & set_writing}')
