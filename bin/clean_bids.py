@@ -138,15 +138,16 @@ def _set_write_permissions_of_file(file, lock=True):
     Params:
         path:  The path whose permissions to alter.
     """
-    if lock:
-        set_writing = ~stat.S_IWUSR & ~stat.S_IWGRP & ~stat.S_IWOTH
-    else:
-        set_writing = stat.S_IWUSR & stat.S_IWGRP & stat.S_IWOTH
 
     current_permissions = stat.S_IMODE(os.lstat(file).st_mode)
-    print(f'{file}: {current_permissions}, {set_writing}, {current_permissions & set_writing}\n')
 
-    os.chmod(file, current_permissions & set_writing)
+    if lock:
+        set_writing = ~stat.S_IWUSR & ~stat.S_IWGRP & ~stat.S_IWOTH
+        os.chmod(file, current_permissions & set_writing)
+
+    else:
+        set_writing = stat.S_IWUSR & stat.S_IWGRP & stat.S_IWOTH
+        os.chmod(file, current_permissions | set_writing)
 
 
 def get_files(start_directory, file_glob_strings):
