@@ -45,7 +45,7 @@ def _rename_hdc_item_number_1(start_directory=None):
     """
 
     if start_directory is None:
-        start_directory = ''
+        start_directory = '.'
 
     files = []
     for ext in ('nii.gz', 'json'):
@@ -61,7 +61,7 @@ def _rename_hdc_item_number_1(start_directory=None):
 def _remove_backup_files(start_directory=None):
 
     if start_directory is None:
-        start_directory = ''
+        start_directory = '.'
 
     files = []
     for ii_glob_pattern in ['*~']:
