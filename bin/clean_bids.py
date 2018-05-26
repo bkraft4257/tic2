@@ -9,6 +9,7 @@ import argparse
 import glob
 import os
 import sys
+import stat
 
 ACTIVE_BIDS_PATH = os.environ['ACTIVE_BIDS_PATH']
 
@@ -29,6 +30,16 @@ def _argparse():
     parser.add_argument('-v', '--verbose', help='Turn on verbose mode.',
                         action='store_true',
                         default=False)
+
+    group = parser.add_mutually_exclusive_group(required=False)
+    parser.add_argument('-l', '--lock', help='Disable write permission to *.nii.gz and *.json files',
+                        action='store_true',
+                        default=False)
+
+    parser.add_argument('-u', '--unlock', help='Enable write permission to *.nii.gz and *.json files',
+                        action='store_false',
+                        default=True)
+
 
     in_args = parser.parse_args()
 
@@ -121,6 +132,38 @@ def _remove_files(start_directory=None):
         os.remove(ii_file)
 
 
+def _set_write_permissions_of_file(file, lock=True):
+    """Remove write permissions from this path, while keeping all other permissions intact.
+
+    Params:
+        path:  The path whose permissions to alter.
+    """
+    if lock:
+        set_writing = ~stat.S_IWUSR & ~stat.S_IWGRP & ~stat.S_IWOTH
+    else:
+        set_writing = stat.S_IWUSR & stat.S_IWGRP & stat.S_IWOTH
+
+    current_permissions = stat.S_IMODE(os.lstat(path).st_mode)
+    os.chmod(file, current_permissions & set_writing)
+
+
+def get_files(start_directory, file_glob_strings):
+    files = []
+    for ext in file_glob_strings:
+        glob_string = os.path.join(f'{start_directory}', '**',  ext)
+        files.extend(glob.glob(glob_string, recursive=True))
+
+    return files
+
+
+def set_write_permissions(start_directory, lock=True):
+
+    files = get_files(start_directory, ['*.nii.gz', '*.json'])
+
+    for ii_file in files:
+        _set_write_permissions_of_file(ii_file, lock=lock)
+
+
 def main():
 
     in_args = _argparse()
@@ -136,6 +179,12 @@ def main():
     _rename_hdc_item_number_1(start_directory)
     _remove_files(start_directory)
     _list_hdc_item_number_2(start_directory)
+
+    if in_args.lock:
+        set_write_permissions(start_directory, lock=True)
+
+    if in_args.unlock:
+        set_write_permissions(start_directory, lock=False)
 
 
 if __name__ == '__main__':
