@@ -98,8 +98,8 @@
       <file leaf-file-name="clean_bids.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/bin/clean_bids.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="358">
-              <caret line="36" column="30" lean-forward="false" selection-start-line="36" selection-start-column="30" selection-end-line="36" selection-end-column="30" />
+            <state relative-caret-position="363">
+              <caret line="147" column="51" lean-forward="false" selection-start-line="147" selection-start-column="51" selection-end-line="147" selection-end-column="51" />
               <folding>
                 <element signature="e#78#93#0" expanded="true" />
               </folding>
@@ -609,13 +609,6 @@
       <option name="presentableId" value="Default" />
       <updated>1517948604886</updated>
     </task>
-    <task id="LOCAL-00577" summary="Fixed bug in YAML file">
-      <created>1526584643925</created>
-      <option name="number" value="00577" />
-      <option name="presentableId" value="LOCAL-00577" />
-      <option name="project" value="LOCAL" />
-      <updated>1526584643926</updated>
-    </task>
     <task id="LOCAL-00578" summary="Increased default subsampling from 32 to 64">
       <created>1526585570406</created>
       <option name="number" value="00578" />
@@ -952,7 +945,14 @@
       <option name="project" value="LOCAL" />
       <updated>1527362560839</updated>
     </task>
-    <option name="localTasksCounter" value="626" />
+    <task id="LOCAL-00626" summary="Moving clean_bids to python. Updated permissions.">
+      <created>1527362593757</created>
+      <option name="number" value="00626" />
+      <option name="presentableId" value="LOCAL-00626" />
+      <option name="project" value="LOCAL" />
+      <updated>1527362593757</updated>
+    </task>
+    <option name="localTasksCounter" value="627" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -1473,8 +1473,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/bin/clean_bids.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="358">
-          <caret line="36" column="30" lean-forward="false" selection-start-line="36" selection-start-column="30" selection-end-line="36" selection-end-column="30" />
+        <state relative-caret-position="363">
+          <caret line="147" column="51" lean-forward="false" selection-start-line="147" selection-start-column="51" selection-end-line="147" selection-end-column="51" />
           <folding>
             <element signature="e#78#93#0" expanded="true" />
           </folding>
