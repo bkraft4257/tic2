@@ -85,16 +85,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="hfpef_netprep.yaml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/studies/hfpef/scripts/hfpef_netprep.yaml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="16" column="17" lean-forward="false" selection-start-line="16" selection-start-column="17" selection-end-line="16" selection-end-column="17" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="tic_functions.sh" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/bin/tic_functions.sh">
           <provider selected="true" editor-type-id="text-editor">
@@ -105,54 +95,24 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="netprep_gather_inputs.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/bin/netprep_gather_inputs.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2941">
-              <caret line="184" column="7" lean-forward="false" selection-start-line="184" selection-start-column="7" selection-end-line="184" selection-end-column="7" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="imove_protocol.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/studies/imove/scripts/imove_protocol.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="4148">
-              <caret line="244" column="19" lean-forward="false" selection-start-line="244" selection-start-column="19" selection-end-line="244" selection-end-column="19" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="environment.sh" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/studies/imove/environment.sh">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="5" column="0" lean-forward="true" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="clean_bids.sh" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/bin/clean_bids.sh">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="clean_bids.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/bin/clean_bids.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="390">
-              <caret line="123" column="49" lean-forward="false" selection-start-line="123" selection-start-column="49" selection-end-line="123" selection-end-column="49" />
+            <state relative-caret-position="194">
+              <caret line="50" column="11" lean-forward="false" selection-start-line="50" selection-start-column="11" selection-end-line="50" selection-end-column="11" />
               <folding>
                 <element signature="e#78#93#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="inf_clean_bids.sh" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/studies/infinite/scripts/inf_clean_bids.sh">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="2105">
+              <caret line="191" column="0" lean-forward="false" selection-start-line="188" selection-start-column="0" selection-end-line="191" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -649,13 +609,6 @@
       <option name="presentableId" value="Default" />
       <updated>1517948604886</updated>
     </task>
-    <task id="LOCAL-00563" summary="Added fmap_intended_for.py to simplify updating fieldmap json files.">
-      <created>1525471773536</created>
-      <option name="number" value="00563" />
-      <option name="presentableId" value="LOCAL-00563" />
-      <option name="project" value="LOCAL" />
-      <updated>1525471773536</updated>
-    </task>
     <task id="LOCAL-00564" summary="Added fmap_intended_for.py to simplify updating fieldmap json files.">
       <created>1525472161901</created>
       <option name="number" value="00564" />
@@ -992,7 +945,14 @@
       <option name="project" value="LOCAL" />
       <updated>1527359630487</updated>
     </task>
-    <option name="localTasksCounter" value="612" />
+    <task id="LOCAL-00612" summary="Moving clean_bids to python. Updated permissions.">
+      <created>1527359890705</created>
+      <option name="number" value="00612" />
+      <option name="presentableId" value="LOCAL-00612" />
+      <option name="project" value="LOCAL" />
+      <updated>1527359890705</updated>
+    </task>
+    <option name="localTasksCounter" value="613" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -1147,13 +1107,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/bin/bids_processing_status.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/bin/dicom_rm_cr.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -1510,10 +1463,18 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/studies/infinite/scripts/inf_clean_bids.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2105">
+          <caret line="191" column="0" lean-forward="false" selection-start-line="188" selection-start-column="0" selection-end-line="191" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/bin/clean_bids.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="390">
-          <caret line="123" column="49" lean-forward="false" selection-start-line="123" selection-start-column="49" selection-end-line="123" selection-end-column="49" />
+        <state relative-caret-position="194">
+          <caret line="50" column="11" lean-forward="false" selection-start-line="50" selection-start-column="11" selection-end-line="50" selection-end-column="11" />
           <folding>
             <element signature="e#78#93#0" expanded="true" />
           </folding>
