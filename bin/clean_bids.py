@@ -149,6 +149,10 @@ def _set_write_permissions_of_file(file, lock=True):
         set_writing = stat.S_IWUSR & stat.S_IWGRP & stat.S_IWOTH
         os.chmod(file, current_permissions | set_writing)
 
+    print(f'{file}: {current_permissions}, {set_writing}, {current_permissions & set_writing}')
+
+
+
 
 def get_files(start_directory, file_glob_strings):
     files = []
