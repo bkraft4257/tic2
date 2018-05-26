@@ -10,7 +10,7 @@ import glob
 import os
 import sys
 
-ACTIVE_BIDS_DIRECTORY = os.env('ACTIVE_BIDS_DIRECTORY')
+ACTIVE_BIDS_PATH = os.environ['ACTIVE_BIDS_PATH']
 
 
 def _argparse():
@@ -125,7 +125,7 @@ def main():
 
     in_args = _argparse()
 
-    start_directory = os.path.abspath(os.path.join(ACTIVE_BIDS_DIRECTORY,
+    start_directory = os.path.abspath(os.path.join(ACTIVE_BIDS_PATH,
                                                    f'sub-{in_args}',
                                                    f'ses-{in_args.session}'
                                                    )
