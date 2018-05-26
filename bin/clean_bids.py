@@ -11,8 +11,31 @@ import os
 import sys
 import stat
 
+from collections import Iterable
+
+
 ACTIVE_BIDS_PATH = os.environ['ACTIVE_BIDS_PATH']
 
+
+def force_to_list(inp, basetype=int):
+    """
+
+    :param inp:
+    :param basetype:
+    :return:
+
+    https://stackoverflow.com/questions/20095244/how-do-i-check-if-input-is-a-number-in-python
+    """
+
+    if not isinstance(inp, Iterable) or isinstance(inp, basetype):
+        out_list = [inp]  # use just `str` in py3.x
+    else:
+        out_list = [x for x in inp]
+
+#    for item in inp:  # use `yield from inp` in py3.x
+#        yield item
+
+    return out_list
 
 def _argparse():
     """ Get command line arguments.
@@ -20,13 +43,16 @@ def _argparse():
 
     parser = argparse.ArgumentParser(prog='clean_bids')
 
-    parser.add_argument('-s', '--subject', help='BIDS subject value', default=None)
+    parser.add_argument('-s', '--subject', help='BIDS subject value',
+                        nargs='*',
+                        type=str,
+                        default=None)
 
     parser.add_argument('-ss', '--session',
                         help='BIDS session value',
                         nargs='*',
                         type=str,
-                        default='1')
+                        default=['1'])
 
     parser.add_argument('-v', '--verbose', help='Turn on verbose mode.',
                         action='store_true',
@@ -182,14 +208,17 @@ def main():
 
     in_args = _argparse()
 
-    for ii_subject in in_args.subject:
+    subjects = force_to_list(in_args.subject, 'str')
+    sessions = force_to_list(in_args.sessions, 'str')
+
+    for ii_subject in subjects:
 
         if ii_subject is None:
             start_directory = ACTIVE_BIDS_PATH
             _clean_bids(start_directory, in_args.lock, in_args.unlock)
 
         else:
-            for ii_session in in_args.subject:
+            for ii_session in sessions:
                 start_directory = os.path.abspath(os.path.join(ACTIVE_BIDS_PATH,
                                                                f'sub-{ii_subject}',
                                                                f'ses-{ii_session}'
