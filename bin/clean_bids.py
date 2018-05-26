@@ -47,14 +47,15 @@ def _list_hdc_item_number_2(start_directory=None):
         glob_string = os.path.join(f'{start_directory}', '**', '**', f'*.[0-9].{ext}')
         files.extend(glob.glob(glob_string, recursive=True))
 
-    print('\nLooking for repeated scans one last time.')
-    print('If you see something reported here you must CHOOSE which images you want to use.')
-    print('--------------------------------------------------------------------------------\n')
+    if len(files) > 0
+        print('\nList of repeated scans.')
+        print('If repeated scans are found you must CHOOSE which files you want to use for processing.')
+        print('-------------------------------------------------------------------------------------\n')
 
-    for ii, ii_file in enumerate(files):
-        print(f'{ii}) {ii_file}')
+        for ii, ii_file in enumerate(files):
+            print(f'{ii}) {ii_file}')
 
-    print('\n')
+        print('\n')
 
 
 def _rename_hdc_item_number_1(start_directory=None):
