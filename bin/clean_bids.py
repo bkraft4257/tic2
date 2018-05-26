@@ -10,7 +10,8 @@ import glob
 import os
 import sys
 
-ACTIVE_BIDS_DIRECTORY = os.environ('ACTIVE_BIDS_DIRECTORY')
+ACTIVE_BIDS_DIRECTORY = os.env('ACTIVE_BIDS_DIRECTORY')
+
 
 def _argparse():
     """ Get command line arguments.
