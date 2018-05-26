@@ -20,12 +20,12 @@ def _argparse():
 
     parser = argparse.ArgumentParser(prog='clean_bids')
 
-    parser.add_argument('subject', help='BIDS subject value')
+    parser.add_argument('-s', 'subject', help='BIDS subject value', default=None)
 
     parser.add_argument('-ss', '--session',
                         help='BIDS session value',
-                        type=str,
-                        default='1')
+                        nargs='*',
+                        default=1)
 
     parser.add_argument('-v', '--verbose', help='Turn on verbose mode.',
                         action='store_true',
@@ -81,7 +81,7 @@ def _rename_hdc_item_number_1(start_directory=None):
 
     files = []
     for ext in ('nii.gz', 'json'):
-        glob_string = os.path.join(f'{start_directory}', '**', '**', f'*.1.{ext}')
+        glob_string = os.path.join(f'{start_directory}', '**', f'*.1.{ext}')
         files.extend(glob.glob(glob_string, recursive=True))
 
     for ii, ii_file in enumerate(files):
@@ -148,8 +148,6 @@ def _set_write_permissions_of_file(file, lock=True):
         set_writing = stat.S_IWUSR | stat.S_IWGRP
         os.chmod(file, current_permissions | set_writing)
 
-    print(f'{file}: {current_permissions}, {set_writing}, {current_permissions & set_writing}')
-
 
 def get_files(start_directory, file_glob_strings):
     files = []
@@ -168,27 +166,37 @@ def set_write_permissions(start_directory, lock=True):
         _set_write_permissions_of_file(ii_file, lock=lock)
 
 
-def main():
-
-    in_args = _argparse()
-
-    start_directory = os.path.abspath(os.path.join(ACTIVE_BIDS_PATH,
-                                                   f'sub-{in_args.subject}',
-                                                   f'ses-{in_args.session}'
-                                                   )
-                                      )
-
-    print(in_args)
+def _clean_bids(start_directory, lock, unlock):
 
     _rename_hdc_item_number_1(start_directory)
     _remove_files(start_directory)
     _list_hdc_item_number_2(start_directory)
 
-    if in_args.lock:
+    if lock:
         set_write_permissions(start_directory, lock=True)
 
-    if in_args.unlock:
+    if unlock:
         set_write_permissions(start_directory, lock=False)
+
+
+def main():
+
+    in_args = _argparse()
+
+    for ii_subject in in_args.subject:
+
+        if ii_subject is None:
+            start_directory = ACTIVE_BIDS_PATH
+            _clean_bids(start_directory, in_args.lock, in_args.unlock)
+
+        else:
+            for ii_session in in_args.subject:
+                start_directory = os.path.abspath(os.path.join(ACTIVE_BIDS_PATH,
+                                                               f'sub-{ii_subject}',
+                                                               f'ses-{ii_session}'
+                                                               )
+                                                  )
+                _clean_bids(start_directory, in_args.lock, in_args.unlock)
 
 
 if __name__ == '__main__':
