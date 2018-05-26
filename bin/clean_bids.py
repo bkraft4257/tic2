@@ -9,6 +9,7 @@ import argparse
 import glob
 import os
 import sys
+import shutil
 
 
 def _argparse():
@@ -51,8 +52,10 @@ def _rename_hdc_item__numbers(start_directory=None):
         glob_string = os.path.join(f'{start_directory}', '**', '**', f'*.1.{ext}')
         files.extend(glob.glob(glob_string, recursive=True))
 
-    for ii_file in files:
-        print(ii_file)
+    for ii, ii_file in enumerate(files):
+        print(f'{ii}) {ii_file}')
+        print(f"\t{ii_file.replace('.1.','.')}")
+        print('\n')
 
 
 def main():
