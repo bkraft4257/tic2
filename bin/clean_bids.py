@@ -126,7 +126,7 @@ def main():
     in_args = _argparse()
 
     start_directory = os.path.abspath(os.path.join(ACTIVE_BIDS_PATH,
-                                                   f'sub-{in_args}',
+                                                   f'sub-{in_args.subject}',
                                                    f'ses-{in_args.session}'
                                                    )
                                       )

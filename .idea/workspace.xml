@@ -98,8 +98,8 @@
       <file leaf-file-name="clean_bids.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/bin/clean_bids.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="268">
-              <caret line="127" column="67" lean-forward="false" selection-start-line="127" selection-start-column="67" selection-end-line="127" selection-end-column="67" />
+            <state relative-caret-position="194">
+              <caret line="124" column="0" lean-forward="true" selection-start-line="124" selection-start-column="0" selection-end-line="124" selection-end-column="0" />
               <folding>
                 <element signature="e#78#93#0" expanded="true" />
               </folding>
@@ -609,13 +609,6 @@
       <option name="presentableId" value="Default" />
       <updated>1517948604886</updated>
     </task>
-    <task id="LOCAL-00568" summary="Updated fmap_intended_for.py to include echo_times and work for a single file.">
-      <created>1526064164629</created>
-      <option name="number" value="00568" />
-      <option name="presentableId" value="LOCAL-00568" />
-      <option name="project" value="LOCAL" />
-      <updated>1526064164629</updated>
-    </task>
     <task id="LOCAL-00569" summary="Updated fmap_intended_for.py to include echo_times and work for a single file.">
       <created>1526064234232</created>
       <option name="number" value="00569" />
@@ -952,7 +945,14 @@
       <option name="project" value="LOCAL" />
       <updated>1527360295971</updated>
     </task>
-    <option name="localTasksCounter" value="617" />
+    <task id="LOCAL-00617" summary="Moving clean_bids to python. Updated permissions.">
+      <created>1527360364229</created>
+      <option name="number" value="00617" />
+      <option name="presentableId" value="LOCAL-00617" />
+      <option name="project" value="LOCAL" />
+      <updated>1527360364229</updated>
+    </task>
+    <option name="localTasksCounter" value="618" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -1473,8 +1473,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/bin/clean_bids.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="268">
-          <caret line="127" column="67" lean-forward="false" selection-start-line="127" selection-start-column="67" selection-end-line="127" selection-end-column="67" />
+        <state relative-caret-position="194">
+          <caret line="124" column="0" lean-forward="true" selection-start-line="124" selection-start-column="0" selection-end-line="124" selection-end-column="0" />
           <folding>
             <element signature="e#78#93#0" expanded="true" />
           </folding>
