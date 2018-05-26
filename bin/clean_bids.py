@@ -52,7 +52,7 @@ def _rename_hdc_item__numbers(start_directory=None):
         glob_string = os.path.join(f'{start_directory}', '**', '**', f'*.1.{ext}')
         print(glob_string)
 
-        files.extend(glob.glob(glob_string))
+        files.extend(glob.glob(glob_string, recursive=True))
 
     print(files)
 
