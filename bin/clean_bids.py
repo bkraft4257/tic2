@@ -9,8 +9,8 @@ import argparse
 import glob
 import os
 import sys
-import shutil
 
+ACTIVE_BIDS_DIRECTORY = os.environ('ACTIVE_BIDS_DIRECTORY')
 
 def _argparse():
     """ Get command line arguments.
@@ -47,7 +47,7 @@ def _list_hdc_item_number_2(start_directory=None):
         glob_string = os.path.join(f'{start_directory}', '**', '**', f'*.[0-9].{ext}')
         files.extend(glob.glob(glob_string, recursive=True))
 
-    if len(files) > 0
+    if len(files) > 0:
         print('\nList of repeated scans.')
         print('If repeated scans are found you must CHOOSE which files you want to use for processing.')
         print('-------------------------------------------------------------------------------------\n')
@@ -124,9 +124,18 @@ def main():
 
     in_args = _argparse()
 
-    _rename_hdc_item_number_1()
-    _remove_backup_files()
-    _list_hdc_item_number_2(start_directory=None)
+    start_directory = os.path.abspath(os.path.join(ACTIVE_BIDS_DIRECTORY,
+                                                   f'sub-{in_args}',
+                                                   f'ses-{in_args.session}'
+                                                   )
+                                      )
+
+    print(start_directory)
+
+    _rename_hdc_item_number_1(start_directory)
+    _remove_backup_files(start_directory)
+    _list_hdc_item_number_2(start_directory)
+
 
 if __name__ == '__main__':
     sys.exit(main())
