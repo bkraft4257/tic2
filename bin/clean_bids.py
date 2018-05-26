@@ -37,7 +37,7 @@ def _argparse():
     return in_args
 
 
-def _rename_hdc_item__numbers(start_directory=None):
+def _rename_hdc_item_number_1(start_directory=None):
     """
 
     :param start_directory:
@@ -53,16 +53,31 @@ def _rename_hdc_item__numbers(start_directory=None):
         files.extend(glob.glob(glob_string, recursive=True))
 
     for ii, ii_file in enumerate(files):
-        print(f'{ii}) {ii_file}')
-        print(f"\t{ii_file.replace('.1.','.')}")
-        print('\n')
+        os.rename(ii_file,
+                  ii_file.replace('.1.', '.')
+                  )
+
+
+def _remove_backup_files(start_directory=None):
+
+    if start_directory is None:
+        start_directory = ''
+
+    files = []
+    for ii_glob_pattern in ['*~']:
+        glob_string = os.path.join(f'{start_directory}', '**', ii_glob_pattern)
+        files.extend(glob.glob(glob_string, recursive=True))
+
+    for ii, ii_file in enumerate(files):
+        os.remove(ii_file)
 
 
 def main():
 
     in_args = _argparse()
 
-    _rename_hdc_item__numbers()
+    _rename_hdc_item_number_1()
+    _remove_backup_files()
 
 
 if __name__ == '__main__':
