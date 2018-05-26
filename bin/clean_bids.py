@@ -209,7 +209,7 @@ def main():
     in_args = _argparse()
 
     print(in_args.subject)
-    print(in_args.sessions)
+    print(in_args.session)
 
     subjects = force_to_list(in_args.subject, 'str')
     sessions = force_to_list(in_args.session, 'str')
