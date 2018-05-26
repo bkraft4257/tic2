@@ -46,7 +46,7 @@ def _argparse():
     parser.add_argument('-s', '--subject', help='BIDS subject value',
                         nargs='*',
                         type=str,
-                        default=None)
+                        default=[None])
 
     parser.add_argument('-ss', '--session',
                         help='BIDS session value',
