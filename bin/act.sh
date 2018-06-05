@@ -57,7 +57,7 @@ nohup time $SINGULARITY_COMMAND \
            $APP_SINGULARITY_IMAGE \
            $ACTIVE_BIDS_PATH \
            $ACTIVE_APP_OUTPUT_PATH \
-           participant $parameters > $log_file 2>&1 &
+           $parameters > $log_file 2>&1 &
 
 echo "Waiting 30 seconds before displaying the log file ..."
 sleep 30
