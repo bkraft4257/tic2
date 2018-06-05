@@ -4,7 +4,7 @@
 
 export IMOVE_SCRIPTS_PATH=${TIC_PATH}/studies/imove/scripts
 
-export IMOVE_PATH=/gandg/imove
+export IMOVE_PATH=/gandg/imove_trial
 export IMOVE_BIDS_PATH=${IMOVE_PATH}/bids
 export IMOVE_IMAGE_ANALYSIS_PATH=${IMOVE_PATH}/image_analysis
 export IMOVE_IMAGE_PROCESSING_PATH=${IMOVE_PATH}/image_processing
