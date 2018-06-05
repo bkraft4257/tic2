@@ -23,7 +23,18 @@ parameters=$(echo $@ | sed -e 's/-s /--participant-label /')
 datetime_stamp=`date '+d%Y%m%d_%H:%M:%S'`
 log_file=${ACTIVE_IMAGE_PROCESSING_LOG_PATH}/${study_prefix}_${BIDS_APP}_${datetime_stamp}.log
 
+
+# run it in the background so that it continues if user logs out
+export FULL_BIDS_APP_COMMAND="nohup time /usr/local/bin/singularity run -w -B $ACTIVE_SINGULARITY_USER_BIND_PATHS \
+  $APP_SINGULARITY_IMAGE \
+  $ACTIVE_BIDS_PATH \
+  $ACTIVE_APP_OUTPUT_PATH \
+  --work-dir $ACTIVE_APP_WORKING_PATH \
+  participant ${parameters} >> $log_file 2>&1 &"
+
+# Write information to log file
 source $TIC_PATH/studies/active/scripts/bids_app_status.sh
+
 
 # NOTE: any -B mount points must exist in the container
 #       run "sudo singularity shell -s xx.img"  and create the mount points
