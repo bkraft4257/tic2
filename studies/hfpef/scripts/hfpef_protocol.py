@@ -239,8 +239,8 @@ def infotodict(seqinfo):
 
     # Rest Multiband EPI with TOPUP reconstruction
 
-    rest_mbepi = create_key('sub-{subject}/{session}/func/sub-{subject}_{session}_task-rest_acq-mbepi_bold.{item:01d}')
-    rest_mbepi_sbref = create_key('sub-{subject}/{session}/func/sub-{subject}_{session}_task-rest_acq-mbepi_sbref.{item:01d}')
+    rest_mbepi = create_key('sub-{subject}/{session}/func/sub-{subject}_{session}_task-restmbepi_acq-mbepi_bold.{item:01d}')
+    rest_mbepi_sbref = create_key('sub-{subject}/{session}/func/sub-{subject}_{session}_task-restmbepi_acq-mbepi_sbref.{item:01d}')
 
     rest_mbepi_topup_rl = create_key('sub-{subject}/{session}/fmap/sub-{subject}_{session}_'
                                      'acq-mbepi_dir-rl_epi.{item:01d}')
@@ -250,7 +250,7 @@ def infotodict(seqinfo):
 
     # Rest EPI with TOPUP reconstruction
 
-    rest_epi_topup = create_key('sub-{subject}/{session}/func/sub-{subject}_{session}_task-rest'
+    rest_epi_topup = create_key('sub-{subject}/{session}/func/sub-{subject}_{session}_task-restepitopup'
                                 '_acq-epi_rec-topup_bold.{item:01d}')
 
     rest_epi_topup_ap = create_key('sub-{subject}/{session}/fmap/sub-{subject}_{session}_acq-epse_dir-ap_epi.{item:01d}')
@@ -259,7 +259,7 @@ def infotodict(seqinfo):
 
     # Rest EPI with fieldmap reconstruction
 
-    rest_epi_fmap = create_key('sub-{subject}/{session}/func/sub-{subject}_{session}_task-rest'
+    rest_epi_fmap = create_key('sub-{subject}/{session}/func/sub-{subject}_{session}_task-restepifmap'
                                '_acq-epi_rec-fmap_bold.{item:01d}')
 
     fmap_magnitude1 = create_key('sub-{subject}/{session}/fmap/sub-{subject}_{session}_acq-bold_magnitude1.{item:01d}')
@@ -278,7 +278,7 @@ def infotodict(seqinfo):
                                          '_acq-co2pcasl_dir-lr_epi.{item:01d}')
 
     # pCASL REST
-    pcasl_rest_rl = create_key('sub-{subject}/{session}/func/sub-{subject}_{session}_task-rest_acq-pcasl_bold.{item:01d}')
+    pcasl_rest_rl = create_key('sub-{subject}/{session}/func/sub-{subject}_{session}_task-restpcasl_acq-pcasl_bold.{item:01d}')
 
     pcasl_rest_topup_rl = create_key('sub-{subject}/{session}/fmap/sub-{subject}_{session}_acq-pcasl_dir-rl_epi.{item:01d}')
 
