@@ -5,7 +5,7 @@ netprep_methods_dir: ../methods
 
 fmri: bold_mni_preproc.nii.gz
 
-gm_probmap: t1w_gm_probtissue.nii.gz
+gm_probmap: t1w_mni_gm_probtissue.nii.gz
 gm_mask_threshold: 0.51
 
 nilearn_nifti_masker:
@@ -16,7 +16,8 @@ nilearn_nifti_masker:
         detrend: True
         low_pass:
         high_pass:
-        t_r:  
+        t_r:
+        subsample: 4
 
 
 # YAML inputs explained:

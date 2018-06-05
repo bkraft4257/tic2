@@ -4,22 +4,23 @@ anat:
   t1w:
     glob_string: '/anat/*_T1w_space-MNI152NLin2009cAsym_preproc.nii.gz'
 
-  csf:
-    glob_string: '/anat/*_T1w_space-MNI152NLin2009cAsym_class-CSF_probtissue.nii.gz'
-
   gm:
     glob_string: '/anat/*_T1w_space-MNI152NLin2009cAsym_class-GM_probtissue.nii.gz'
-
-  wm:
-    glob_string: '/anat/*_T1w_space-MNI152NLin2009cAsym_class-WM_probtissue.nii.gz'
 
 
 func_confounds: ['X', 'Y', 'Z', 'RotX', 'RotY', 'RotZ']
 
 func:
-  pre_neutral_1:
-    base_glob_string: '/func/*_task-preRest_acq-epi_rec-topup_bold_'
+  epi:
+    input_dir: 'epi/inputs'
+    base_glob_string: '/func/*task-rest_acq-epi_rec-topup_bold*'
     func_glob_string: 'space-MNI152NLin2009cAsym_preproc.nii.gz'
     mask_glob_string: 'space-MNI152NLin2009cAsym_brainmask.nii.gz'
+    confounds_glob_string: 'confounds.tsv'
 
+  mbepi:
+    input_dir: 'mbepi/inputs'
+    base_glob_string: '/func/*task-rest_acq-mbepi_rec-topup_bold*'
+    func_glob_string: 'space-MNI152NLin2009cAsym_preproc.nii.gz'
+    mask_glob_string: 'space-MNI152NLin2009cAsym_brainmask.nii.gz'
     confounds_glob_string: 'confounds.tsv'
