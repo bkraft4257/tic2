@@ -39,7 +39,7 @@ log_file=${ACTIVE_IMAGE_PROCESSING_LOG_PATH}/${study_prefix}_${BIDS_APP}_${datet
 
 
 # run it in the background so that it continues if user logs out
-export FULL_BIDS_APP_COMMAND="act_full_command=$SINGULARITY_COMMAND \
+export FULL_BIDS_APP_COMMAND="nohup time $SINGULARITY_COMMAND \
  $ACTIVE_SINGULARITY_USER_BIND_PATHS \
  $APP_SINGULARITY_IMAGE \
  $ACTIVE_BIDS_PATH $ACTIVE_APP_OUTPUT_PATH \
@@ -50,11 +50,6 @@ source $TIC_PATH/studies/active/scripts/bids_app_status.sh
 
 
 # Run BIDS App
-
-echo
-echo $ACTIVE_BIDS_PATH
-echo $ACTIVE_APP_OUTPUT_PATH
-echo
 
 nohup time $SINGULARITY_COMMAND \
            $ACTIVE_SINGULARITY_USER_BIND_PATHS \

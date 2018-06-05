@@ -4,6 +4,8 @@
     <list default="true" id="6f3e13b3-cd58-4c4d-98f6-1a68f8358bfb" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/bin/act.sh" afterPath="$PROJECT_DIR$/bin/act.sh" />
+      <change beforePath="$PROJECT_DIR$/bin/fmriprep.sh" afterPath="$PROJECT_DIR$/bin/fmriprep.sh" />
+      <change beforePath="$PROJECT_DIR$/bin/mriqc.sh" afterPath="$PROJECT_DIR$/bin/mriqc.sh" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -55,16 +57,6 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="fmap_intended_for.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/bin/fmap_intended_for.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="663">
-              <caret line="42" column="47" lean-forward="false" selection-start-line="42" selection-start-column="19" selection-end-line="42" selection-end-column="47" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="fmriprep_tools.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/tic_core/fmriprep_tools.py">
           <provider selected="true" editor-type-id="text-editor">
@@ -85,11 +77,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="mriqc.sh" pinned="false" current-in-tab="true">
+      <file leaf-file-name="mriqc.sh" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/bin/mriqc.sh">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="281">
-              <caret line="28" column="58" lean-forward="true" selection-start-line="28" selection-start-column="58" selection-end-line="28" selection-end-column="58" />
+            <state relative-caret-position="424">
+              <caret line="64" column="12" lean-forward="false" selection-start-line="64" selection-start-column="12" selection-end-line="64" selection-end-column="12" />
               <folding />
             </state>
           </provider>
@@ -105,11 +97,15 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="fmriprep.sh" pinned="false" current-in-tab="false">
+      <file leaf-file-name="fmriprep.sh" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/bin/fmriprep.sh">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="442">
-              <caret line="26" column="0" lean-forward="false" selection-start-line="25" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
+            <state relative-caret-position="202">
+              <caret line="28" column="1" lean-forward="false" selection-start-line="28" selection-start-column="1" selection-end-line="28" selection-end-column="1" />
+              <caret line="29" column="1" lean-forward="false" selection-start-line="29" selection-start-column="1" selection-end-line="29" selection-end-column="1" />
+              <caret line="30" column="1" lean-forward="false" selection-start-line="30" selection-start-column="1" selection-end-line="30" selection-end-column="1" />
+              <caret line="31" column="1" lean-forward="false" selection-start-line="31" selection-start-column="1" selection-end-line="31" selection-end-column="1" />
+              <caret line="32" column="1" lean-forward="false" selection-start-line="32" selection-start-column="1" selection-end-line="32" selection-end-column="1" />
               <folding />
             </state>
           </provider>
@@ -148,8 +144,18 @@
       <file leaf-file-name="act.sh" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/bin/act.sh">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="18" column="51" lean-forward="false" selection-start-line="18" selection-start-column="51" selection-end-line="18" selection-end-column="51" />
+            <state relative-caret-position="256">
+              <caret line="40" column="0" lean-forward="false" selection-start-line="40" selection-start-column="0" selection-end-line="49" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="mriqc_group.sh" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/bin/mriqc_group.sh">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -254,7 +260,6 @@
         <option value="$PROJECT_DIR$/studies/mfc/aliases.sh" />
         <option value="$PROJECT_DIR$/studies/active/aliases.sh" />
         <option value="$PROJECT_DIR$/tests/test_fmriprep_tools.py" />
-        <option value="$PROJECT_DIR$/bin/fmriprep.sh" />
         <option value="$PROJECT_DIR$/bin/fmap_intended_for.py" />
         <option value="$PROJECT_DIR$/init/tic_wake_aging1a_environment.sh" />
         <option value="$PROJECT_DIR$/bin/tic_info.sh" />
@@ -283,9 +288,10 @@
         <option value="$PROJECT_DIR$/bin/clean_bids.py" />
         <option value="$PROJECT_DIR$/tic_core/fmriprep_tools.py" />
         <option value="$PROJECT_DIR$/bin/active_study_info.sh" />
-        <option value="$PROJECT_DIR$/bin/mriqc.sh" />
         <option value="$PROJECT_DIR$/studies/cenc/environment.sh" />
+        <option value="$PROJECT_DIR$/bin/mriqc.sh" />
         <option value="$PROJECT_DIR$/bin/act.sh" />
+        <option value="$PROJECT_DIR$/bin/fmriprep.sh" />
       </list>
     </option>
   </component>
@@ -570,13 +576,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1517948604886</updated>
-    </task>
-    <task id="LOCAL-00603" summary="Moving clean_bids to python. Updated permissions.">
-      <created>1527263573915</created>
-      <option name="number" value="00603" />
-      <option name="presentableId" value="LOCAL-00603" />
-      <option name="project" value="LOCAL" />
-      <updated>1527263573915</updated>
     </task>
     <task id="LOCAL-00604" summary="Moving clean_bids to python. Updated permissions.">
       <created>1527263615025</created>
@@ -914,7 +913,14 @@
       <option name="project" value="LOCAL" />
       <updated>1528227209250</updated>
     </task>
-    <option name="localTasksCounter" value="652" />
+    <task id="LOCAL-00652" summary="Moving clean_bids to python. Updated permissions.">
+      <created>1528227266594</created>
+      <option name="number" value="00652" />
+      <option name="presentableId" value="LOCAL-00652" />
+      <option name="project" value="LOCAL" />
+      <updated>1528227266594</updated>
+    </task>
+    <option name="localTasksCounter" value="653" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -1069,13 +1075,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/studies/active/scripts/bids_app_status.sh">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="13" column="0" lean-forward="false" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="68" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/bin/acrostic_list.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -1386,14 +1385,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/bin/fmriprep.sh">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
-          <caret line="26" column="0" lean-forward="false" selection-start-line="25" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/studies/hfpef/environment.sh">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="221">
@@ -1426,18 +1417,38 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/bin/act.sh">
+    <entry file="file://$PROJECT_DIR$/bin/mriqc_group.sh">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="18" column="51" lean-forward="false" selection-start-line="18" selection-start-column="51" selection-end-line="18" selection-end-column="51" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/bin/mriqc.sh">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="281">
-          <caret line="28" column="58" lean-forward="true" selection-start-line="28" selection-start-column="58" selection-end-line="28" selection-end-column="58" />
+        <state relative-caret-position="424">
+          <caret line="64" column="12" lean-forward="false" selection-start-line="64" selection-start-column="12" selection-end-line="64" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bin/act.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="256">
+          <caret line="40" column="0" lean-forward="false" selection-start-line="40" selection-start-column="0" selection-end-line="49" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bin/fmriprep.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="202">
+          <caret line="28" column="1" lean-forward="false" selection-start-line="28" selection-start-column="1" selection-end-line="28" selection-end-column="1" />
+          <caret line="29" column="1" lean-forward="false" selection-start-line="29" selection-start-column="1" selection-end-line="29" selection-end-column="1" />
+          <caret line="30" column="1" lean-forward="false" selection-start-line="30" selection-start-column="1" selection-end-line="30" selection-end-column="1" />
+          <caret line="31" column="1" lean-forward="false" selection-start-line="31" selection-start-column="1" selection-end-line="31" selection-end-column="1" />
+          <caret line="32" column="1" lean-forward="false" selection-start-line="32" selection-start-column="1" selection-end-line="32" selection-end-column="1" />
           <folding />
         </state>
       </provider>
