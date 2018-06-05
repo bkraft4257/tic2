@@ -14,12 +14,11 @@ session=ses-${session_id}
 
 netprep_input=${HFPEF_NETPREP_PATH}/${subject}/${session}/mbepi/input
 
-
-
 bold_mni_preproc=$HFPEF_FMRIPREP_PATH/${subject}/${session}/func/${subject}_${session}_task-rest_acq-mbepi_bold_space-MNI152NLin2009cAsym_preproc.nii.gz
 bold_confounds_tsv=$HFPEF_FMRIPREP_PATH/${subject}/${session}/func/${subject}_${session}_task-rest_acq-mbepi_bold_confounds.tsv
 
-t1w_gm_probtissue=$HFPEF_FMRIPREP_PATH/${subject}/${session}/anat/${subject}_${session}_T1w_class-GM_probtissue.nii.gz
+t1w_mni_gm_probtissue=$HFPEF_FMRIPREP_PATH/${subject}/${session}/anat/${subject}_${session}_T1w_space-MNI152NLin2009cAsym_class-GM_probtissue.nii.gz
+t1w_mni=$HFPEF_FMRIPREP_PATH/${subject}/${session}/anat/${subject}_${session}_T1w_space-MNI152NLin2009cAsym_preproc.nii.gz
 
 grep_results=$(grep NonSteadyStateOutlier00 $bold_confounds_tsv)
 
@@ -31,10 +30,13 @@ fi
 
 
 mkdir -p ${netprep_input}
-cp ${HFPEF_SCRIPTS_PATH}/hfpef_netprep.yaml ${netprep_input}/hfpef_netprep.yaml
+cp ${HFPEF_SCRIPTS_PATH}/hfpef_netprep_mbepi.yaml ${netprep_input}/hfpef_netprep.yaml
 
 ln -f ${bold_mni_preproc} ${netprep_input}/bold_mni_preproc.nii.gz
-ln -f ${t1w_gm_probtissue} ${netprep_input}/t1w_gm_probtissue.nii.gz
+ln -f ${t1w_mni_gm_probtissue} ${netprep_input}/t1w_mni_gm_probtissue.nii.gz
+ln -f ${t1w_mni} ${netprep_input}/t1w_mni_preproc.nii.gz
+
+fslmaths ${netprep_input}/bold_mni_preproc.nii.gz -Tmean ${netprep_input}/mean_bold_mni_preproc.nii.gz
 
 echo
 csvcut -t -n ${bold_confounds_tsv}

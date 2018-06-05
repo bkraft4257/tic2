@@ -30,7 +30,7 @@ identity_transform = os.path.join(os.path.dirname(os.path.realpath(__file__)), '
 
 def _nilearn_compare_compcorr(correlation_matrix1_filename,
                               correlation_matrix2_filename,
-                              subsample=32,
+                              subsample=1,
                               verbose=False
                               ):
     """
@@ -129,7 +129,8 @@ def _nilearn_remove_confounds(in_file,
                               t_r=None,
                               detrend=True,
                               out_filename='fmri_confounds_removed.nii.gz',
-                              out_correlation_matrix='correlation_matrix.mat'
+                              out_correlation_matrix='correlation_matrix.mat',
+                              subsample=8,
                               ):
     """
 
@@ -181,13 +182,18 @@ def _nilearn_remove_confounds(in_file,
 
     # NiPype requires that import statements and function definitions are defined within the calling function.
 
-    def _calc_correlation_matrix(data, out_correlation_matrix=None, kind='correlation'):
+    def _calc_correlation_matrix(data, out_correlation_matrix=None, kind='correlation', subsample=subsample):
         correlation_measure = ConnectivityMeasure(kind=kind)
         correlation_matrix = (correlation_measure.fit_transform([data])[0])
 
         if out_correlation_matrix is not None:
             out_correlation_matrix = os.path.abspath(out_correlation_matrix)
-            sio.savemat(out_correlation_matrix, {'correlation_matrix': correlation_matrix})
+
+            print(correlation_matrix.shape)
+            print(subsample)
+            print(correlation_matrix[::subsample, ::subsample].shape)
+
+            sio.savemat(out_correlation_matrix, {f'correlation_matrix': correlation_matrix[::subsample, ::subsample]})
 
         return out_correlation_matrix
 
@@ -209,7 +215,7 @@ def _nilearn_remove_confounds(in_file,
     nibabel.save(nifti_masker.inverse_transform(fmri_confounds_removed), os.path.abspath(out_filename))
 
     # Calculate correlation matrix
-    out_correlation_matrix = _calc_correlation_matrix(fmri_confounds_removed, out_correlation_matrix, kind=kind)
+    out_correlation_matrix = _calc_correlation_matrix(fmri_confounds_removed, out_correlation_matrix, kind=kind, subsample=subsample)
 
     # It is very important that filenames returned from NiPype workflow functions have absolute filenames.
     # IF they don't they will not be saved to nodes base directory.
@@ -277,7 +283,8 @@ def init_netprep_wf(netprep_io, verbose):
                                                                            'detrend',
                                                                            't_r',
                                                                            'low_pass',
-                                                                           'high_pass'
+                                                                           'high_pass',
+                                                                           'subsample'
                                                                            ],
                                                               output_names=['out_filename',
                                                                             'correlation_matrix'
@@ -295,6 +302,7 @@ def init_netprep_wf(netprep_io, verbose):
     nilearn_remove_confounds.inputs.t_r = netprep_io['nilearn_nifti_masker']['t_r']
     nilearn_remove_confounds.inputs.low_pass = netprep_io['nilearn_nifti_masker']['low_pass']
     nilearn_remove_confounds.inputs.high_pass = netprep_io['nilearn_nifti_masker']['high_pass']
+    nilearn_remove_confounds.inputs.subsample = netprep_io['nilearn_nifti_masker']['subsample']
 
     # --- nilearn preprocessing without regressing out confounds.
     #
@@ -309,7 +317,8 @@ def init_netprep_wf(netprep_io, verbose):
                                                                          'kind',
                                                                          'standardize',
                                                                          'smoothing_fwhm',
-                                                                         'detrend'
+                                                                         'detrend',
+                                                                         'subsample'
                                                                          ],
                                                             output_names=['out_filename',
                                                                           'correlation_matrix'
@@ -327,6 +336,7 @@ def init_netprep_wf(netprep_io, verbose):
     nilearn_keep_confounds.inputs.t_r = netprep_io['nilearn_nifti_masker']['t_r']
     nilearn_keep_confounds.inputs.low_pass = netprep_io['nilearn_nifti_masker']['low_pass']
     nilearn_keep_confounds.inputs.high_pass = netprep_io['nilearn_nifti_masker']['high_pass']
+    nilearn_keep_confounds.inputs.subsample = netprep_io['nilearn_nifti_masker']['subsample']
 
     # --- Compare correlation matrix histograms
     #

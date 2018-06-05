@@ -6,12 +6,6 @@ if [[ $# -lt 1 ]]; then
 
    exit 0
 fi
-#subject=${1}
-#session=${2-"ses-1"}
-
-#subject_id=$(echo ${subject} | sed 's/^sub-//')
-#session_id=$(echo ${session} | sed 's/^ses-//')
-
 
 subject_id=${1}
 session_id=${2-1}
@@ -26,7 +20,9 @@ bold_confounds_tsv=$INFINITE_FMRIPREP_PATH/${subject}/${session}/func/${subject}
 
 bold_confounds_csv=${netprep_input}/bold_confounds.csv
 
-t1w_gm_probtissue=$INFINITE_FMRIPREP_PATH/${subject}/anat/${subject}_T1w_space-MNI152NLin2009cAsym_class-GM_probtissue.nii.gz
+t1w_mni_gm_probtissue=$INFINITE_FMRIPREP_PATH/${subject}/anat/${subject}_T1w_space-MNI152NLin2009cAsym_class-GM_probtissue.nii.gz
+t1w_mni=$INFINITE_FMRIPREP_PATH/${subject}/${session}/anat/${subject}_${session}_T1w_space-MNI152NLin2009cAsym_preproc.nii.gz
+
 grep_results=$(grep NonSteadyStateOutlier $bold_confounds_tsv)
 
 if [[ -z $grep_results ]]; then
@@ -41,7 +37,8 @@ mkdir -p ${netprep_input}
 cp ${INFINITE_SCRIPTS_PATH}/inf_netprep.yaml ${netprep_input}/inf_netprep.yaml
 
 ln -f ${bold_mni_preproc} ${netprep_input}/bold_mni_preproc.nii.gz
-ln -f ${t1w_gm_probtissue} ${netprep_input}/t1w_gm_probtissue.nii.gz
+ln -f ${t1w_mni_gm_probtissue} ${netprep_input}/t1w_mni_gm_probtissue.nii.gz
+ln -f ${t1w_mni} ${netprep_input}/t1w_mni.nii.gz
 
 echo
 
