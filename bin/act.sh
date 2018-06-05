@@ -42,7 +42,7 @@ log_file=${ACTIVE_IMAGE_PROCESSING_LOG_PATH}/${study_prefix}_${BIDS_APP}_${datet
 export FULL_BIDS_APP_COMMAND="act_full_command=$SINGULARITY_COMMAND \
  $ACTIVE_SINGULARITY_USER_BIND_PATHS \
  $APP_SINGULARITY_IMAGE \
- $ACTIVE_BIDS_PATH $ACTIVE_ACT_OUTPUT_PATH \
+ $ACTIVE_BIDS_PATH $ACTIVE_APP_OUTPUT_PATH \
  participant $parameters"
 
 # Write information to log file
