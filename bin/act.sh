@@ -16,7 +16,7 @@ study_prefix=$(echo "${ACTIVE_STUDY,,}")
 # -s.
 #
 
-parameters=$(echo $@ | sed -e 's/-s /--participant-label /')
+parameters=$(echo $@ | sed -e 's/-s /--participant_label /')
 
 # create the output and work directories parallel to BIDS hierarchy, not inside it
 
