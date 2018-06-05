@@ -1,7 +1,7 @@
 #!/bin/bash
 
 if [[ $# -lt 1 ]]; then
-   echo "Usage: hfpef_gi_netprep.sh <subject_value,hfs070> <session_value,1>"
+   echo "Usage: imove_gi_netprep.sh <subject_value,hfs070> <session_value,1>"
    echo "You may only enter one subject value and session value at a time."
 
    exit 0
@@ -12,12 +12,13 @@ session_id=${2-1}
 subject=sub-${subject_id}
 session=ses-${session_id}
 
-netprep_input=${HFPEF_NETPREP_PATH}/${subject}/${session}/epi/input
+netprep_input=${IMOVE_NETPREP_PATH}/${subject}/${session}/epi/input
 
-bold_mni_preproc=$HFPEF_FMRIPREP_PATH/${subject}/${session}/func/${subject}_${session}_task-rest_acq-epi_rec-fmap_bold_space-MNI152NLin2009cAsym_preproc.nii.gz
-bold_confounds_tsv=$HFPEF_FMRIPREP_PATH/${subject}/${session}/func/${subject}_${session}_task-rest_acq-epi_rec-fmap_bold_confounds.tsv
-t1w_mni_gm_probtissue=$HFPEF_FMRIPREP_PATH/${subject}/${session}/anat/${subject}_${session}_T1w_space-MNI152NLin2009cAsym_class-GM_probtissue.nii.gz
-t1w_mni=$HFPEF_FMRIPREP_PATH/${subject}/${session}/anat/${subject}_${session}_T1w_space-MNI152NLin2009cAsym_preproc.nii.gz
+bold_mni_preproc=$IMOVE_FMRIPREP_PATH/${subject}/${session}/func/${subject}_${session}_task-rest_acq-epi_rec-topup_bold_space-MNI152NLin2009cAsym_preproc.nii.gz
+bold_confounds_tsv=$IMOVE_FMRIPREP_PATH/${subject}/${session}/func/${subject}_${session}_task-rest_acq-epi_rec-topup_bold_confounds.tsv
+
+t1w_mni_gm_probtissue=$IMOVE_FMRIPREP_PATH/${subject}/${session}/anat/${subject}_${session}_T1w_space-MNI152NLin2009cAsym_class-GM_probtissue.nii.gz
+t1w_mni=$IMOVE_FMRIPREP_PATH/${subject}/${session}/anat/${subject}_${session}_T1w_space-MNI152NLin2009cAsym_preproc.nii.gz
 
 grep_results=$(grep NonSteadyStateOutlier00 $bold_confounds_tsv)
 
@@ -29,7 +30,7 @@ fi
 
 
 mkdir -p ${netprep_input}
-cp ${HFPEF_SCRIPTS_PATH}/hfpef_netprep_epi.yaml ${netprep_input}/hfpef_netprep.yaml
+cp ${IMOVE_SCRIPTS_PATH}/imove_netprep_epi.yaml ${netprep_input}/imove_netprep.yaml
 
 
 ln -f ${bold_mni_preproc} ${netprep_input}/bold_mni_preproc.nii.gz

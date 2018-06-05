@@ -33,7 +33,7 @@ def _make_directory(directory=NETPREP_PATH):
     :return:
     """
 
-    for ii in  operations.force_type_to_list(directory):
+    for ii in operations.force_type_to_list(directory):
 
         try:
             if not os.path.exists(ii):
@@ -209,15 +209,18 @@ def main():
 
     in_args = _argparse()
 
-    SUBJECT_SESSION_PATH = os.path.join(FMRIPREP_PATH, f'sub-{in_args.subject}', f'ses-{in_args.session}')
-    NETPREP_INPUT_PATH = os.path.join(SUBJECT_SESSION_PATH, 'netprep', f'sub-{in_args.subject}', f'ses-{in_args.session}', 'input')
+    fmriprep_subject_session_path = os.path.join(FMRIPREP_PATH, f'sub-{in_args.subject}', f'ses-{in_args.session}')
+    netprep_input_path = os.path.join(NETPREP_PATH, f'sub-{in_args.subject}', f'ses-{in_args.session}')
 
-    ANAT_PATH = os.path.join(SUBJECT_SESSION_PATH, 'anat')
-    FUNC_PATH = os.path.join(SUBJECT_SESSION_PATH, 'func')
+    ANAT_PATH = os.path.join(fmriprep_subject_session_path, 'anat')
+    FUNC_PATH = os.path.join(fmriprep_subject_session_path, 'func')
 
-    _make_directory(NETPREP_INPUT_PATH)
+    _make_directory(NETPREP_PATH)
 
     netprep_config = tic_io.read_yaml(in_args.yaml_filename, in_args.verbose)
+
+    for ii in netprep_config['func'].keys():
+        print(ii)
 
     return
 
