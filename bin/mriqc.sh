@@ -1,5 +1,7 @@
 #!/bin/env bash
 
+# TODO : Should create the logs directory if it doesn't exist.
+
 BIDS_APP='mriqc'
 ACTIVE_APP_WORKING_PATH=$ACTIVE_MRIQC_PATH/_working
 ACTIVE_IMAGE_PROCESSING_LOG_PATH=$ACTIVE_MRIQC_PATH/logs
@@ -47,12 +49,12 @@ source $TIC_PATH/studies/active/scripts/bids_app_status.sh
 # is why I don't use the $SINGULARITY_COMMAND in when running the BIDS_APP
 #
 
-export FULL_BIDS_APP_COMMAND=$SINGULARITY_COMMAND \
- $APP_SINGULARITY_IMAGE \
- $ACTIVE_BIDS_PATH \
- $ACTIVE_APP_OUTPUT_PATH \
- --work-dir $ACTIVE_APP_WORKING_PATH \
- participant ${@} >> $log_file 2>&1 &
+#export FULL_BIDS_APP_COMMAND=$SINGULARITY_COMMAND \
+# $APP_SINGULARITY_IMAGE \
+# $ACTIVE_BIDS_PATH \
+# $ACTIVE_APP_OUTPUT_PATH \
+# --work-dir $ACTIVE_APP_WORKING_PATH \
+# participant ${@} >> $log_file 2>&1 &
 
 /usr/local/bin/singularity run -w -B $ACTIVE_SINGULARITY_USER_BIND_PATHS \
                  $APP_SINGULARITY_IMAGE \
