@@ -15,6 +15,9 @@ study_prefix=$(echo "${ACTIVE_STUDY,,}")
 # I am using sed as a hack to replace -s with --participant-label.  This allows people to use the shorter
 # -s.
 #
+# **VERY IMPORTANT** ACT use participant_label (notice the underscore) instead of participant-label (notice
+# the hyphen) mriqc and fmriprep.
+#
 
 parameters=$(echo $@ | sed -e 's/-s /--participant_label /')
 
@@ -57,9 +60,11 @@ nohup time $SINGULARITY_COMMAND \
            $ACTIVE_BIDS_PATH  $ACTIVE_APP_OUTPUT_PATH \
            participant $parameters >> $log_file 2>&1 &
 
-echo "Waiting 30 seconds before displaying the log file ..."
-sleep 30
-
-cat $log_file
+# We are going to skip looking at the log file.  It doesn't write any logs in the first 30 seconds
+#
+#echo "Waiting 30 seconds before displaying the log file ..."
+#sleep 30
+#
+#cat $log_file
 
 echo
