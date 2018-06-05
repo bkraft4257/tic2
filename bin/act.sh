@@ -51,6 +51,11 @@ source $TIC_PATH/studies/active/scripts/bids_app_status.sh
 
 # Run BIDS App
 
+echo
+echo $ACTIVE_BIDS_PATH
+echo $ACTIVE_APP_OUTPUT_PATH
+echo
+
 nohup time $SINGULARITY_COMMAND \
            $ACTIVE_SINGULARITY_USER_BIND_PATHS \
            $APP_SINGULARITY_IMAGE \
