@@ -144,7 +144,7 @@ def print_intended_for_from_list(files):
 
     if len(files) == 1:
 
-        print(f'\n\n  "IntendedFor": "{files}",')
+        print(f'\n\n  "IntendedFor": "{files[0]}",')
 
     else:
 
