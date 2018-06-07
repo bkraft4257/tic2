@@ -144,21 +144,32 @@ def print_intended_for_from_list(files):
 
     if len(files) == 1:
 
-        print(f'\n\n  "IntendedFor": "{files[0]}",')
+        intended_for = f'\n\n  "IntendedFor": "{files[0]}",'
 
     else:
 
-        print(f'\n\n  "IntendedFor": ["{files[0]}",')
+        intended_for = f'\n\n  "IntendedFor": ["{files[0]}",'
 
         for ii_file in files[1:-1]:
-            print(f'                  "{ii_file}",')
+            intended_for += f'\n                  "{ii_file}",'
 
-        print(f'                  "{files[-1]}"],\n')
+        intended_for += f'\n                  "{files[-1]}"],\n'
+
+    print(intended_for)
+
+    return intended_for
 
 
 def print_echo_times_from_list(echo_times):
 
+    echo_time_string = ''
+
     if len(echo_times) > 0:
         for ii, jj in enumerate(echo_times,1):
-            print(f'  "EchoTime{ii}": "{jj}",')
-        print('\n')
+            echo_time_string += f'  "EchoTime{ii}": "{jj}",'
+
+            echo_time_string += f'\n'
+
+        print(echo_time_string)
+
+    return echo_time_string

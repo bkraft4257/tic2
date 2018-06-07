@@ -27,6 +27,8 @@ def _argparse():
                         help="Echo Times",
                         default=[0.00492, 0.00738])
 
+    parser.add_argument('-o', '--output', help='Output file')
+
     parser.add_argument("-f", "--fmap", help="Boolean flag to display EchoTime.",
                         action="store_true",
                         default=False)
