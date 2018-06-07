@@ -155,8 +155,6 @@ def print_intended_for_from_list(files):
 
         intended_for += f'\n                  "{files[-1]}"],\n'
 
-    print(intended_for)
-
     return intended_for
 
 
@@ -169,7 +167,5 @@ def print_echo_times_from_list(echo_times):
             echo_time_string += f'  "EchoTime{ii}": "{jj}",'
 
             echo_time_string += f'\n'
-
-        print(echo_time_string)
 
     return echo_time_string
