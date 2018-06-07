@@ -144,11 +144,11 @@ def print_intended_for_from_list(files):
 
     if len(files) == 1:
 
-        intended_for = f'\n\n  "IntendedFor": "{files[0]}",'
+        intended_for = f'  "IntendedFor": "{files[0]}",'
 
     else:
 
-        intended_for = f'\n\n  "IntendedFor": ["{files[0]}",'
+        intended_for = f'  "IntendedFor": ["{files[0]}",'
 
         for ii_file in files[1:-1]:
             intended_for += f'\n                  "{ii_file}",'
