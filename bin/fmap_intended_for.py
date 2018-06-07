@@ -41,8 +41,8 @@ def _write_intended_for(intended_for_string,
 
             if ii == 1:
                 new.write(intended_for_string)
-            else:
-                new.write(ii_line)
+
+            new.write(ii_line)
 
     return
 
