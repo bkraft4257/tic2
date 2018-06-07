@@ -37,11 +37,7 @@ def _write_echo_times(echo_time_string,
 
 def _write_intended_for(intended_for_string,
                         input_file,
-                        output_file=None,
-                        overwrite=False):
-
-    if overwrite:
-        output_file = input_file + '.new'
+                        output_file):
 
     with open(input_file) as old, open(output_file, 'w') as new:
 
@@ -51,9 +47,6 @@ def _write_intended_for(intended_for_string,
                 new.write(intended_for_string)
             else:
                 new.write(ii_line)
-
-    if overwrite:
-        shutil.move(output_file, input_file)
 
     return
 
@@ -99,9 +92,6 @@ def _argparse():
 
 def _core(func_files, input_file, output_file,  echo_times, overwrite_flag, fmap_flag,verbose):
 
-    if output_file is None:
-        output_file = input_file + '.new'
-
     if verbose:
         print('\n')
         print(f'Input file     : {input_file}')
@@ -117,12 +107,9 @@ def _core(func_files, input_file, output_file,  echo_times, overwrite_flag, fmap
     if verbose:
         print(intended_for_string)
 
-    if input_file is not None:
-
-        _write_intended_for(intended_for_string,
-                            input_file=input_file,
-                            output_file=output_file,
-                            overwrite=overwrite_flag)
+    _write_intended_for(intended_for_string,
+                        input_file=input_file,
+                        output_file=output_file)
 
     if fmap_flag:
 
@@ -136,14 +123,21 @@ def _core(func_files, input_file, output_file,  echo_times, overwrite_flag, fmap
         if verbose:
             print(echo_time_string)
 
+    if overwrite_flag:
+        shutil.move(output_file, input_file)
+
 
 def main():
     in_args = _argparse()
 
     for ii_input_file in in_args.input_file:
+
+        if in_args.output_file is None:
+            output_file = ii_input_file + '.new'
+
         _core(func_files=in_args.func_files,
               input_file=ii_input_file,
-              output_file=in_args.output_file,
+              output_file=output_file,
               echo_times=in_args.echo_times,
               overwrite_flag=in_args.overwrite,
               fmap_flag=in_args.fmap,

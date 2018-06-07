@@ -58,8 +58,8 @@
       <file leaf-file-name="fmap_intended_for.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/bin/fmap_intended_for.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="235">
-              <caret line="106" column="47" lean-forward="false" selection-start-line="106" selection-start-column="47" selection-end-line="106" selection-end-column="47" />
+            <state relative-caret-position="416">
+              <caret line="117" column="8" lean-forward="true" selection-start-line="117" selection-start-column="8" selection-end-line="117" selection-end-column="8" />
               <folding>
                 <element signature="e#108#118#0" expanded="true" />
               </folding>
@@ -592,13 +592,6 @@
       <option name="presentableId" value="Default" />
       <updated>1517948604886</updated>
     </task>
-    <task id="LOCAL-00614" summary="Moving clean_bids to python. Updated permissions.">
-      <created>1527360113195</created>
-      <option name="number" value="00614" />
-      <option name="presentableId" value="LOCAL-00614" />
-      <option name="project" value="LOCAL" />
-      <updated>1527360113195</updated>
-    </task>
     <task id="LOCAL-00615" summary="Moving clean_bids to python. Updated permissions.">
       <created>1527360269916</created>
       <option name="number" value="00615" />
@@ -935,7 +928,14 @@
       <option name="project" value="LOCAL" />
       <updated>1528406168104</updated>
     </task>
-    <option name="localTasksCounter" value="663" />
+    <task id="LOCAL-00663" summary="Added ability for multiple input files.">
+      <created>1528406648967</created>
+      <option name="number" value="00663" />
+      <option name="presentableId" value="LOCAL-00663" />
+      <option name="project" value="LOCAL" />
+      <updated>1528406648967</updated>
+    </task>
+    <option name="localTasksCounter" value="664" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -1029,7 +1029,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Trying to simplify bids_processing_status with functions." />
     <MESSAGE value="Added ability to ignore session during search of bps." />
     <MESSAGE value="Dog fooding and updating documentation." />
     <MESSAGE value="Updated hdc_look.py to ignore session. This is important when trying to read a hdc_scan" />
@@ -1054,7 +1053,8 @@
     <MESSAGE value="Moving clean_bids to python. Updated permissions." />
     <MESSAGE value="Updated intended for to produce a single string to be written to file. &#10;This is just the first step." />
     <MESSAGE value="Converted string to a single string to be printed." />
-    <option name="LAST_COMMIT_MESSAGE" value="Converted string to a single string to be printed." />
+    <MESSAGE value="Added ability for multiple input files." />
+    <option name="LAST_COMMIT_MESSAGE" value="Added ability for multiple input files." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1454,8 +1454,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/bin/fmap_intended_for.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="235">
-          <caret line="106" column="47" lean-forward="false" selection-start-line="106" selection-start-column="47" selection-end-line="106" selection-end-column="47" />
+        <state relative-caret-position="416">
+          <caret line="117" column="8" lean-forward="true" selection-start-line="117" selection-start-column="8" selection-end-line="117" selection-end-column="8" />
           <folding>
             <element signature="e#108#118#0" expanded="true" />
           </folding>
