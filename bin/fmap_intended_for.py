@@ -11,14 +11,11 @@ import shutil
 
 from tic_core import fmriprep_tools
 
+OUTPUT_FILE_SUFFIX = '.new'
 
 def _write_echo_times(echo_time_string,
                       input_file,
-                      output_file=None,
-                      overwrite=False):
-
-    if output_file is None:
-        output_file = input_file + '.new'
+                      output_file):
 
     with open(input_file) as old, open(output_file, 'w') as new:
 
@@ -29,8 +26,7 @@ def _write_echo_times(echo_time_string,
             else:
                 new.write(ii_line)
 
-    if overwrite:
-        shutil.move(output_file, input_file)
+    shutil.move(output_file, input_file)
 
     return
 
@@ -117,8 +113,8 @@ def _core(func_files, input_file, output_file,  echo_times, overwrite_flag, fmap
 
         _write_echo_times(echo_time_string,
                           input_file=output_file,
-                          output_file=output_file,
-                          overwrite=True)
+                          output_file=output_file + OUTPUT_FILE_SUFFIX
+                          )
 
         if verbose:
             print(echo_time_string)
@@ -133,7 +129,7 @@ def main():
     for ii_input_file in in_args.input_file:
 
         if in_args.output_file is None:
-            output_file = ii_input_file + '.new'
+            output_file = ii_input_file + OUTPUT_FILE_SUFFIX
 
         _core(func_files=in_args.func_files,
               input_file=ii_input_file,
