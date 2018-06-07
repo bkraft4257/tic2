@@ -73,7 +73,7 @@ def main():
     if in_args.input_file is not None:
         _write_intended_for(insert_string,
                             input_file=in_args.input_file,
-                            output_file=in_args.outpuf_file)
+                            output_file=in_args.output_file)
 
     print(insert_string)
 
