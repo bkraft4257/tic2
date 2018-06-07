@@ -21,7 +21,7 @@ def _write_echo_times(echo_time_string,
 
         for ii, ii_line in enumerate(old):
 
-            if ii_line.contains('"EchoTime":'):
+            if '"EchoTime":' in ii_line:
                 new.write(echo_time_string)
             else:
                 new.write(ii_line)
