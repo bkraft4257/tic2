@@ -8,6 +8,7 @@ Russ Poldrack's group.  https://fmriprep.readthedocs.io/en/latest/
 
 from typing import List, Union
 
+import pandas
 import json
 import pprint
 import re
