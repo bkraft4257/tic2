@@ -42,10 +42,13 @@ def main():
 
     in_args = _argparse()
     stripped_files = fmriprep_tools.lstrip_to_ses_key(in_args.func_files)
-    fmriprep_tools.print_intended_for_from_list(stripped_files)
+
+    insert_string = fmriprep_tools.print_intended_for_from_list(stripped_files)
 
     if in_args.fmap:
-        fmriprep_tools.print_echo_times_from_list(in_args.echo_times)
+        insert_string = fmriprep_tools.print_echo_times_from_list(in_args.echo_times)
+
+    print(insert_string)
 
 
 if __name__ == '__main__':
