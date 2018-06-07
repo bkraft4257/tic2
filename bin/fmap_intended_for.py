@@ -68,22 +68,28 @@ def _argparse():
     parser.add_argument('func_files', nargs='*',
                         help='BIDS functional files')
 
-    parser.add_argument('-e', "--echo_times",
+    parser.add_argument('-e', '--echo_times',
                         nargs='*',
                         type=float,
-                        help="Echo Times",
+                        help='Echo Times',
                         default=[0.00492, 0.00738])
 
-    parser.add_argument('-i', '--input_file', help='BIDS fmap json file',  default=None)
+    parser.add_argument('-i', '--input_file',
+                        nargs='*',
+                        help='BIDS fmap json file',  default=None)
 
-    parser.add_argument("-f", "--fmap", help="Boolean flag to display EchoTime.",
-                        action="store_true",
+    parser.add_argument('-f', '--fmap', help='Boolean flag to display EchoTime.',
+                        action='store_true',
                         default=False)
 
     parser.add_argument('-o', '--output_file', help='Output file', default=None)
 
-    parser.add_argument("--overwrite", help="Boolean flag to overwrite FMAP JSON file.",
-                        action="store_true",
+    parser.add_argument('--overwrite', help='Boolean flag to overwrite FMAP JSON file.',
+                        action='store_true',
+                        default=False)
+
+    parser.add_argument('-v', '--verbose', help='Verbose flag to display to stdout.',
+                        action='store_true',
                         default=False)
 
     in_args = parser.parse_args()
@@ -91,15 +97,25 @@ def _argparse():
     return in_args
 
 
-def _core(func_files, input_file, output_file,  echo_times, overwrite_flag, fmap_flag,):
+def _core(func_files, input_file, output_file,  echo_times, overwrite_flag, fmap_flag,verbose):
 
     if output_file is None:
         output_file = input_file + '.new'
 
+    if verbose:
+        print('\n')
+        print(f'Input file     : {input_file}')
+        print(f'Output file    : {output_file}')
+        print(f'fmap_flag      : {fmap_flag}')
+        print(f'overwrite_flag : {overwrite_flag}')
+        print('\n')
+
     stripped_files = fmriprep_tools.lstrip_to_ses_key(func_files)
 
     intended_for_string = fmriprep_tools.print_intended_for_from_list(stripped_files)
-    print(intended_for_string)
+
+    if verbose:
+        print(intended_for_string)
 
     if input_file is not None:
 
@@ -117,18 +133,21 @@ def _core(func_files, input_file, output_file,  echo_times, overwrite_flag, fmap
                           output_file=output_file,
                           overwrite=True)
 
-        print(echo_time_string)
+        if verbose:
+            print(echo_time_string)
 
 
 def main():
     in_args = _argparse()
 
-    _core(func_files=in_args.func_files,
-          input_file=in_args.input_file,
-          output_file=in_args.output_file,
-          echo_times=in_args.echo_times,
-          overwrite_flag=in_args.overwrite,
-          fmap_flag=in_args.fmap, )
+    for ii_input_file in in_args.input_file:
+        _core(func_files=in_args.func_files,
+              input_file=ii_input_file,
+              output_file=in_args.output_file,
+              echo_times=in_args.echo_times,
+              overwrite_flag=in_args.overwrite,
+              fmap_flag=in_args.fmap,
+              verbose=in_args.verbose)
 
 
 if __name__ == '__main__':
