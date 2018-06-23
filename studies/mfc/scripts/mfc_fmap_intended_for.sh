@@ -23,3 +23,8 @@ find ../func/ -name "*fmap*.nii.gz"       | sort | xargs fmap_intended_for.py -i
 
 echo
 echo
+
+grep -i \"PhaseEncodingDirection\" *.json
+
+echo
+echo
