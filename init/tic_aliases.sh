@@ -4,6 +4,8 @@
 
 source $TIC_PATH/bin/tic_functions.sh
 
+alias commac='comm $ACTIVE_BIDS_PATH/acrostic.list'
+
 alias bps='bids_processing_status.py'
 
 alias tic_help='firefox $TIC_PATH/docs/build/html/index.html > /dev/null 2>&1 &'

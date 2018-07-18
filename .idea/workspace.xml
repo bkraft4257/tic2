@@ -1,10 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="6f3e13b3-cd58-4c4d-98f6-1a68f8358bfb" name="Default" comment="Added script to run intended for MFC.">
-      <change beforePath="" afterPath="$PROJECT_DIR$/studies/mfc/scripts/mfc_fmap_intended_for.py" />
+    <list default="true" id="6f3e13b3-cd58-4c4d-98f6-1a68f8358bfb" name="Default" comment="">
+      <change beforePath="" afterPath="$PROJECT_DIR$/bin/excel_to_csv.py" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/studies/mfc/scripts/mfc_fmap_intended_for.sh" afterPath="$PROJECT_DIR$/studies/mfc/scripts/mfc_fmap_intended_for.sh" />
+      <change beforePath="$PROJECT_DIR$/init/tic_aliases.sh" afterPath="$PROJECT_DIR$/init/tic_aliases.sh" />
+      <change beforePath="$PROJECT_DIR$/tests/data/brainomics_localizer/brainomics_data/S01/c_map_left_auditory_&amp;_visual_click_vs_right_auditory&amp;visual_click.nii.gz" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/tests/data/brainomics_localizer/brainomics_data/S01/design_matrix.json" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/tests/data/brainomics_localizer/brainomics_data/S01/left_auditory_&amp;_visual_click_vs_right_auditory&amp;visual_click.json" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/tests/data/brainomics_localizer/brainomics_data/S01/t_map_left_auditory_&amp;_visual_click_vs_right_auditory&amp;visual_click.nii.gz" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/tests/data/brainomics_localizer/brainomics_data/S02/c_map_left_auditory_&amp;_visual_click_vs_right_auditory&amp;visual_click.nii.gz" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/tests/data/brainomics_localizer/brainomics_data/S02/design_matrix.json" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/tests/data/brainomics_localizer/brainomics_data/S02/left_auditory_&amp;_visual_click_vs_right_auditory&amp;visual_click.json" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/tests/data/brainomics_localizer/brainomics_data/S02/t_map_left_auditory_&amp;_visual_click_vs_right_auditory&amp;visual_click.nii.gz" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/tests/data/brainomics_localizer/cubicwebexport.csv" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/tests/data/brainomics_localizer/cubicwebexport2.csv" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/tests/data/smith_2009/PNAS_Smith09_bm10.nii.gz" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/tests/data/smith_2009/PNAS_Smith09_rsn10.nii.gz" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/tests/data/smith_2009/bm20.nii.gz" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/tests/data/smith_2009/bm70.nii.gz" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/tests/data/smith_2009/rsn20.nii.gz" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/tests/data/smith_2009/rsn70.nii.gz" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/tests/data/spm/avg305T1.nii.gz" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/tests/data/spm/single_subj_T1.nii.gz" afterPath="" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -59,31 +77,11 @@
       <file leaf-file-name="fmap_intended_for.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/bin/fmap_intended_for.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1222">
-              <caret line="37" column="58" lean-forward="false" selection-start-line="37" selection-start-column="58" selection-end-line="37" selection-end-column="58" />
+            <state relative-caret-position="2057">
+              <caret line="125" column="0" lean-forward="false" selection-start-line="125" selection-start-column="0" selection-end-line="143" selection-end-column="20" />
               <folding>
                 <element signature="e#108#118#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="act.sh" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/bin/act.sh">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="595">
-              <caret line="35" column="1" lean-forward="false" selection-start-line="35" selection-start-column="1" selection-end-line="35" selection-end-column="1" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="mriqc_group.sh" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/bin/mriqc_group.sh">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -121,8 +119,8 @@
       <file leaf-file-name="mfc_fmap_intended_for.sh" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/studies/mfc/scripts/mfc_fmap_intended_for.sh">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="106">
-              <caret line="7" column="0" lean-forward="true" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+            <state relative-caret-position="119">
+              <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -138,26 +136,46 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="netprep.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/bin/netprep.py">
+      <file leaf-file-name="mfc_fmap_intended_for.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/studies/mfc/scripts/mfc_fmap_intended_for.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="19" column="0" lean-forward="false" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
+            <state relative-caret-position="34">
+              <caret line="2" column="89" lean-forward="false" selection-start-line="2" selection-start-column="89" selection-end-line="2" selection-end-column="89" />
               <folding>
-                <element signature="e#87#100#0" expanded="true" />
+                <element signature="e#383#394#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="mfc_fmap_intended_for.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/studies/mfc/scripts/mfc_fmap_intended_for.py">
+      <file leaf-file-name="excel_to_csv.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/bin/excel_to_csv.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="34">
-              <caret line="2" column="90" lean-forward="false" selection-start-line="2" selection-start-column="90" selection-end-line="2" selection-end-column="90" />
+            <state relative-caret-position="357">
+              <caret line="21" column="0" lean-forward="false" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
               <folding>
-                <element signature="e#384#395#0" expanded="true" />
+                <element signature="e#94#107#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="acrostic_list.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/bin/acrostic_list.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="221">
+              <caret line="17" column="0" lean-forward="false" selection-start-line="17" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="tic_aliases.sh" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/init/tic_aliases.sh">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="187">
+              <caret line="11" column="0" lean-forward="true" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -243,7 +261,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/tests/data/conn_gather_inputs_test.yaml" />
         <option value="$PROJECT_DIR$/tests/data/mfc/conn_gather_inputs_test.yaml" />
         <option value="$PROJECT_DIR$/studies/mfc/scripts/conn_gather_inputs.py" />
         <option value="$PROJECT_DIR$/tests/test_conn_gather_inputs.py" />
@@ -256,7 +273,6 @@
         <option value="$PROJECT_DIR$/studies/mfc/scripts/mfc_protocol.py" />
         <option value="$PROJECT_DIR$/bin/act_v2.sh" />
         <option value="$PROJECT_DIR$/bin/mriqc_group.sh" />
-        <option value="$PROJECT_DIR$/init/tic_aliases.sh" />
         <option value="$PROJECT_DIR$/studies/active/aliases.sh" />
         <option value="$PROJECT_DIR$/tests/test_fmriprep_tools.py" />
         <option value="$PROJECT_DIR$/init/tic_wake_aging1a_environment.sh" />
@@ -294,6 +310,8 @@
         <option value="$PROJECT_DIR$/studies/mfc/aliases.sh" />
         <option value="$PROJECT_DIR$/studies/mfc/scripts/mfc_fmap_intended_for.sh" />
         <option value="$PROJECT_DIR$/studies/mfc/scripts/mfc_fmap_intended_for.py" />
+        <option value="$PROJECT_DIR$/bin/excel_to_csv.py" />
+        <option value="$PROJECT_DIR$/init/tic_aliases.sh" />
       </list>
     </option>
   </component>
@@ -336,11 +354,6 @@
             <path>
               <item name="tic_core" type="b2602c69:ProjectViewProjectNode" />
               <item name="tic_core" type="462c0819:PsiDirectoryNode" />
-              <item name="bin" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="tic_core" type="b2602c69:ProjectViewProjectNode" />
-              <item name="tic_core" type="462c0819:PsiDirectoryNode" />
               <item name="docs" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -358,19 +371,6 @@
               <item name="tic_core" type="b2602c69:ProjectViewProjectNode" />
               <item name="tic_core" type="462c0819:PsiDirectoryNode" />
               <item name="studies" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="tic_core" type="b2602c69:ProjectViewProjectNode" />
-              <item name="tic_core" type="462c0819:PsiDirectoryNode" />
-              <item name="studies" type="462c0819:PsiDirectoryNode" />
-              <item name="mfc" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="tic_core" type="b2602c69:ProjectViewProjectNode" />
-              <item name="tic_core" type="462c0819:PsiDirectoryNode" />
-              <item name="studies" type="462c0819:PsiDirectoryNode" />
-              <item name="mfc" type="462c0819:PsiDirectoryNode" />
-              <item name="scripts" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="tic_core" type="b2602c69:ProjectViewProjectNode" />
@@ -596,13 +596,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1517948604886</updated>
-    </task>
-    <task id="LOCAL-00623" summary="Moving clean_bids to python. Updated permissions.">
-      <created>1527362385676</created>
-      <option name="number" value="00623" />
-      <option name="presentableId" value="LOCAL-00623" />
-      <option name="project" value="LOCAL" />
-      <updated>1527362385676</updated>
     </task>
     <task id="LOCAL-00624" summary="Moving clean_bids to python. Updated permissions.">
       <created>1527362423265</created>
@@ -940,7 +933,14 @@
       <option name="project" value="LOCAL" />
       <updated>1529427072348</updated>
     </task>
-    <option name="localTasksCounter" value="672" />
+    <task id="LOCAL-00672" summary="Added script to run intended for MFC.">
+      <created>1529756741511</created>
+      <option name="number" value="00672" />
+      <option name="presentableId" value="LOCAL-00672" />
+      <option name="project" value="LOCAL" />
+      <updated>1529756741511</updated>
+    </task>
+    <option name="localTasksCounter" value="673" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -986,8 +986,8 @@
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.38877338" sideWeight="0.68318754" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.50287354" sideWeight="0.48106593" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3293461" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2002635" sideWeight="0.49006623" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.27825466" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.6666667" sideWeight="0.49006623" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.28540772" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3297568" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="SciView" active="false" anchor="right" auto_hide="true" internal_type="DOCKED" type="FLOATING" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1095,27 +1095,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/studies/infinite/scripts/inf_fmriprep.sh">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/studies/infinite/scripts/inf_protocol.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1225">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/studies/synergy/scripts/prepare_netprep_synergy.sh">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="0" lean-forward="true" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/studies/hfpef/scripts/hfpef_netprep_mbepi.yaml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="678">
@@ -1276,9 +1255,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
           <caret line="19" column="0" lean-forward="false" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
-          <folding>
-            <element signature="e#87#100#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1393,7 +1369,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="595">
           <caret line="35" column="1" lean-forward="false" selection-start-line="35" selection-start-column="1" selection-end-line="35" selection-end-column="1" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1437,20 +1412,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/bin/fmap_intended_for.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1222">
-          <caret line="37" column="58" lean-forward="false" selection-start-line="37" selection-start-column="58" selection-end-line="37" selection-end-column="58" />
-          <folding>
-            <element signature="e#108#118#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/studies/mfc/scripts/mfc_fmap_intended_for.sh">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="106">
-          <caret line="7" column="0" lean-forward="true" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+        <state relative-caret-position="119">
+          <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -1458,10 +1423,46 @@
     <entry file="file://$PROJECT_DIR$/studies/mfc/scripts/mfc_fmap_intended_for.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
-          <caret line="2" column="90" lean-forward="false" selection-start-line="2" selection-start-column="90" selection-end-line="2" selection-end-column="90" />
+          <caret line="2" column="89" lean-forward="false" selection-start-line="2" selection-start-column="89" selection-end-line="2" selection-end-column="89" />
           <folding>
-            <element signature="e#384#395#0" expanded="true" />
+            <element signature="e#383#394#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bin/acrostic_list.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="17" column="0" lean-forward="false" selection-start-line="17" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bin/fmap_intended_for.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2057">
+          <caret line="125" column="0" lean-forward="false" selection-start-line="125" selection-start-column="0" selection-end-line="143" selection-end-column="20" />
+          <folding>
+            <element signature="e#108#118#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bin/excel_to_csv.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="21" column="0" lean-forward="false" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
+          <folding>
+            <element signature="e#94#107#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/init/tic_aliases.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="0" lean-forward="true" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
