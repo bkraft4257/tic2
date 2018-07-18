@@ -70,65 +70,65 @@ def infotodict(seqinfo):
         if (('mprage' in s.series_description) and
                 (s.dim3 == 176) and
                 (s.dim4 == 1)):
-                info[t1] = [s.series_id]
+                info[t1].append(s.series_id)
 
         if (('flair' in s.series_description) and
                 (s.dim3 == 176) and
                 (s.dim4 == 1)):
-                info[t2] = [s.series_id]
+                info[t2].append(s.series_id)
 
         if (('rest A>>P' in s.series_description) and
                 (s.dim3 == 48) and
                 (s.dim4 == 200)):
-                info[rest_fmri_ap] = [s.series_id]
+                info[rest_fmri_ap].append(s.series_id)
 
         if ('rest_topup_A>>P' in s.series_description):
-                info[rest_topup_ap] = [s.series_id]
+                info[rest_topup_ap].append(s.series_id)
 
         if ('rest_topup_P>>A' in s.series_description):
-                info[rest_topup_pa] = [s.series_id]
+                info[rest_topup_pa].append(s.series_id)
 
         if (('sag_mt' in s.series_description) and
                 (s.dim3 == 120) and
                 (s.dim4 == 1)):
-                info[mt] = [s.series_id]
+                info[mt].append(s.series_id)
 
         if ('pcasl A>>P' in s.series_description):
-                info[pcasl_ap] = [s.series_id]
+                info[pcasl_ap].append(s.series_id)
 
         if ('pcasl_topup_A>>P' in s.series_description):
-                info[pcasl_topup_ap] = [s.series_id]
+                info[pcasl_topup_ap].append(s.series_id)
 
         if ('pcasl_topup_P>>A' in s.series_description):
-                info[pcasl_topup_pa] = [s.series_id]
+                info[pcasl_topup_pa].append(s.series_id)
 
         if (('Mag' in s.series_description) and
             ('swi3d' in s.sequence_name) and
             (s.dim1 == 192)):
-                info[swi_mag] = [s.series_id]
+                info[swi_mag].append(s.series_id)
             
         if (('Pha' in s.series_description) and
             ('swi3d' in s.sequence_name) and
             (s.dim1 == 192)):
-                info[swi_pha] = [s.series_id]
+                info[swi_pha].append(s.series_id)
             
         if (('mIP' in s.series_description) and
             ('swi3d' in s.sequence_name) and
             (s.dim1 == 192)):
-                info[swi_mip] = [s.series_id]
+                info[swi_mip].append(s.series_id)
             
         if (('SWI' in s.series_description) and
             ('swi3d' in s.sequence_name) and
             (s.dim1 == 192)):
-                info[swi] = [s.series_id]
+                info[swi].append(s.series_id)
 
         if (('ax_grass_64' in s.series_description) and
             (s.TE == 5.19)):
-                info[fmap_mag1] = [s.series_id]
+                info[fmap_mag1].append(s.series_id)
 
         if (('ax_grass_64' in s.series_description) and
             (s.TE == 7.65)):
-                info[fmap_phdiff] = [s.series_id]
+                info[fmap_phdiff].append(s.series_id)
 
             
     return info
