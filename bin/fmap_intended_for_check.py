@@ -41,7 +41,7 @@ def check_intended_for_files_exist(func_nii_gz):
     ii_func_nii_gz_filename = os.path.join('..', '..', json_full_filename)
     ii_func_nii_gz_exists = os.path.isfile(ii_func_nii_gz_filename)
 
-    return  ii_func_nii_gz_filename,  json_full_filename,  ii_func_nii_gz_exists
+    return ii_func_nii_gz_filename,  json_full_filename,  ii_func_nii_gz_exists
 
 
 def check_intended_for_files_exist(json_files, verbose= False):
@@ -59,7 +59,8 @@ def check_intended_for_files_exist(json_files, verbose= False):
             ii_func_intended_for = json_file['IntendedFor']
 
             for ii_func_nii_gz in ii_func_intended_for:
-                json_intended_for_dataframe.append(check_intended_for_files_exist(ii_func_nii_gz))
+                ii_fmap_json, json_full_filename, ii_func_nii_gz_exists = check_intended_for_files_exist(ii_func_nii_gz)
+                json_intended_for_dataframe.append( ii_fmap_json, json_full_filename, ii_func_nii_gz_exists)
 
         except:
             json_intended_for_dataframe.append(('', json_file, 'Missing IntendedFor'))
