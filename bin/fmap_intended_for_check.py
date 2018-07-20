@@ -60,10 +60,10 @@ def check_intended_for_files_exist(json_files, verbose= False):
 
             for ii_func_nii_gz in ii_func_intended_for:
                 ii_fmap_json, json_full_filename, ii_func_nii_gz_exists = check_intended_for_files_exist(ii_func_nii_gz)
-                json_intended_for_dataframe.append( ii_fmap_json, json_full_filename, ii_func_nii_gz_exists)
+                json_intended_for_dataframe.append(ii_fmap_json, json_full_filename, ii_func_nii_gz_exists)
 
         except:
-            json_intended_for_dataframe.append(('', ii_fmap_json, 'Missing IntendedFor'))
+            json_intended_for_dataframe.append((ii_fmap_json, '', 'Missing IntendedFor'))
 
     df = pandas.DataFrame.from_records(json_intended_for_dataframe, columns=columns)
 
