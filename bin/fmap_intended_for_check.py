@@ -36,6 +36,14 @@ def _argparse():
     return in_args
 
 
+def check_intended_for_files_exist(func_nii_gz):
+    json_full_filename = os.path.abspath(os.path.join('..', '..', func_nii_gz))
+    ii_func_nii_gz_filename = os.path.join('..', '..', json_full_filename)
+    ii_func_nii_gz_exists = os.path.isfile(ii_func_nii_gz_filename)
+
+    return  ii_func_nii_gz_filename,  json_full_filename,  ii_func_nii_gz_exists
+
+
 def check_intended_for_files_exist(json_files, verbose= False):
     """
 
@@ -46,14 +54,14 @@ def check_intended_for_files_exist(json_files, verbose= False):
 
     for ii_fmap_json in json_files:
         json_file = json.load(open(ii_fmap_json))
-        ii_func_intended_for = json_file['IntendedFor']
+
+        try:
+            ii_func_intended_for = json_file['IntendedFor']
+        except:
+            json_intended_for_dataframe.append(ii_func_nii_gz, '', 'Missing IntendedFor')
 
         for ii_func_nii_gz in ii_func_intended_for:
-
-            json_full_filename = os.path.abspath(os.path.join('..', '..', ii_func_nii_gz))
-            ii_func_nii_gz_filename = os.path.join('..', '..', json_full_filename)
-            ii_func_nii_gz_exists = os.path.isfile(ii_func_nii_gz_filename)
-            json_intended_for_dataframe.append((ii_fmap_json, json_full_filename, ii_func_nii_gz_exists))
+            json_intended_for_dataframe.append(check_intended_for_files_exist(ii_func_nii_gz))
 
     df = pandas.DataFrame.from_records(json_intended_for_dataframe, columns=columns)
     df['relative_filename'] = df.json_intended_for.str.split('ses-[0-9]', 1, expand=True)[1]
