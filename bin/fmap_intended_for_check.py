@@ -44,6 +44,18 @@ def check_intended_for_files_exist(func_nii_gz):
     return ii_func_nii_gz_filename,  json_full_filename,  ii_func_nii_gz_exists
 
 
+def _split_json_intended_for(x):
+
+    try:
+        y = x.str.split('ses-[0-9]', 1, expand=True)[1]
+        y = x[1:]
+
+    except:
+        y = ''
+
+    return y
+
+
 def check_intended_for_files_exist(json_files, verbose= False):
     """
 
@@ -67,8 +79,7 @@ def check_intended_for_files_exist(json_files, verbose= False):
 
     df = pandas.DataFrame.from_records(json_intended_for_dataframe, columns=columns)
 
-    df['relative_filename'] = df.json_intended_for.str.split('ses-[0-9]', 1, expand=True)[1]
-    df['relative_filename'] = df.relative_filename.apply(lambda x: x[1:])
+    df['relative_filename'] = df.json_intended_for.apply(lambda x: _split_json_intended_for(x))
 
     df = df[['exists', 'relative_filename', ]]
 
