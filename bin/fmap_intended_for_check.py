@@ -63,14 +63,14 @@ def check_intended_for_files_exist(json_files, verbose= False):
                 json_intended_for_dataframe.append( ii_fmap_json, json_full_filename, ii_func_nii_gz_exists)
 
         except:
-            json_intended_for_dataframe.append(('', json_file, 'Missing IntendedFor'))
+            json_intended_for_dataframe.append(('', ii_fmap_json, 'Missing IntendedFor'))
 
     df = pandas.DataFrame.from_records(json_intended_for_dataframe, columns=columns)
 
-    # df['relative_filename'] = df.json_intended_for.str.split('ses-[0-9]', 1, expand=True)[1]
-    # df['relative_filename'] = df.relative_filename.apply(lambda x: x[1:])
-    #
-    # df = df[['exists', 'relative_filename', ]]
+    df['relative_filename'] = df.json_intended_for.str.split('ses-[0-9]', 1, expand=True)[1]
+    df['relative_filename'] = df.relative_filename.apply(lambda x: x[1:])
+
+    df = df[['exists', 'relative_filename', ]]
 
     if verbose:
         with pandas.option_context('max_colwidth', 200):
