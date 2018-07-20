@@ -57,11 +57,13 @@ def check_intended_for_files_exist(json_files, verbose= False):
 
         try:
             ii_func_intended_for = json_file['IntendedFor']
+
+            for ii_func_nii_gz in ii_func_intended_for:
+                json_intended_for_dataframe.append(check_intended_for_files_exist(ii_func_nii_gz))
+
         except:
             json_intended_for_dataframe.append(('', json_file, 'Missing IntendedFor'))
 
-        for ii_func_nii_gz in ii_func_intended_for:
-            json_intended_for_dataframe.append(check_intended_for_files_exist(ii_func_nii_gz))
 
     df = pandas.DataFrame.from_records(json_intended_for_dataframe, columns=columns)
     df['relative_filename'] = df.json_intended_for.str.split('ses-[0-9]', 1, expand=True)[1]
