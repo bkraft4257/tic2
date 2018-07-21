@@ -162,8 +162,8 @@
       <file leaf-file-name="fmap_intended_for_check.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/bin/fmap_intended_for_check.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="330">
-              <caret line="82" column="1" lean-forward="false" selection-start-line="82" selection-start-column="1" selection-end-line="82" selection-end-column="1" />
+            <state relative-caret-position="296">
+              <caret line="80" column="0" lean-forward="true" selection-start-line="80" selection-start-column="0" selection-end-line="80" selection-end-column="0" />
               <folding>
                 <element signature="e#56#71#0" expanded="true" />
               </folding>
@@ -593,13 +593,6 @@
       <option name="presentableId" value="Default" />
       <updated>1517948604886</updated>
     </task>
-    <task id="LOCAL-00637" summary="Moving clean_bids to python. Updated permissions.">
-      <created>1527364314283</created>
-      <option name="number" value="00637" />
-      <option name="presentableId" value="LOCAL-00637" />
-      <option name="project" value="LOCAL" />
-      <updated>1527364314283</updated>
-    </task>
     <task id="LOCAL-00638" summary="Moving clean_bids to python. Updated permissions.">
       <created>1527364330095</created>
       <option name="number" value="00638" />
@@ -936,7 +929,14 @@
       <option name="project" value="LOCAL" />
       <updated>1532167110446</updated>
     </task>
-    <option name="localTasksCounter" value="686" />
+    <task id="LOCAL-00686" summary="Added a function to check if the IntendedFor files in the json file point&#10;a file that exists.">
+      <created>1532167224866</created>
+      <option name="number" value="00686" />
+      <option name="presentableId" value="LOCAL-00686" />
+      <option name="project" value="LOCAL" />
+      <updated>1532167224866</updated>
+    </task>
+    <option name="localTasksCounter" value="687" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -1469,8 +1469,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/bin/fmap_intended_for_check.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="82" column="1" lean-forward="false" selection-start-line="82" selection-start-column="1" selection-end-line="82" selection-end-column="1" />
+        <state relative-caret-position="296">
+          <caret line="80" column="0" lean-forward="true" selection-start-line="80" selection-start-column="0" selection-end-line="80" selection-end-column="0" />
           <folding>
             <element signature="e#56#71#0" expanded="true" />
           </folding>
