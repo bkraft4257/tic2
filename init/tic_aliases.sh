@@ -4,6 +4,9 @@
 
 source $TIC_PATH/bin/tic_functions.sh
 
+alias fif='fmap_intended_for.py'
+alias fifc='fmap_intended_for_check.py'
+
 alias commac='comm $ACTIVE_BIDS_PATH/acrostic.list'
 
 alias bps='bids_processing_status.py'
