@@ -9,11 +9,19 @@ import json
 import os
 import pandas
 import sys
+import re
 from IPython.display import display
 
 
 columns = ('json_file', 'json_intended_for', 'exists')
 json_intended_for_dataframe = []
+
+def _split_json_intended_for(x):
+
+    try:
+        return re.compile(r'ses-[0-9]').split(x,1)[1]
+    except:
+        return ''
 
 
 def _argparse():
@@ -27,6 +35,7 @@ def _argparse():
                         nargs='*',
                         help='BIDS functional files')
 
+    parser.add_argument('-w', '--display_width', default=200, type=int)
     parser.add_argument('-v', '--verbose', help='Verbose flag to display to stdout.',
                         action='store_true',
                         default=False)
@@ -36,7 +45,8 @@ def _argparse():
     return in_args
 
 
-def check_intended_for_files_exist(func_nii_gz):
+def _check_intended_for_files_exist(func_nii_gz):
+
     json_full_filename = os.path.abspath(os.path.join('..', '..', func_nii_gz))
     ii_func_nii_gz_filename = os.path.join('..', '..', json_full_filename)
     ii_func_nii_gz_exists = os.path.isfile(ii_func_nii_gz_filename)
@@ -44,19 +54,7 @@ def check_intended_for_files_exist(func_nii_gz):
     return ii_func_nii_gz_filename,  json_full_filename,  ii_func_nii_gz_exists
 
 
-def _split_json_intended_for(x):
-
-    try:
-        y = x.str.split('ses-[0-9]', 1, expand=True)[1]
-        y = x[1:]
-
-    except:
-        y = ''
-
-    return y
-
-
-def check_intended_for_files_exist(json_files, verbose= False):
+def check_intended_for_files_exist(json_files, verbose= False, display_width=200):
     """
 
     :param json_files:
@@ -71,11 +69,11 @@ def check_intended_for_files_exist(json_files, verbose= False):
             ii_func_intended_for = json_file['IntendedFor']
 
             for ii_func_nii_gz in ii_func_intended_for:
-                ii_fmap_json, json_full_filename, ii_func_nii_gz_exists = check_intended_for_files_exist(ii_func_nii_gz)
-                json_intended_for_dataframe.append(ii_fmap_json, json_full_filename, ii_func_nii_gz_exists)
+                ii_func_nii_gz_filename,  json_full_filename,  ii_func_nii_gz_exists = _check_intended_for_files_exist(ii_func_nii_gz)
+                json_intended_for_dataframe.append((ii_fmap_json, json_full_filename, ii_func_nii_gz_exists))
 
         except:
-            json_intended_for_dataframe.append((ii_fmap_json, '', 'Missing IntendedFor'))
+            json_intended_for_dataframe.append((ii_fmap_json, '', 'Missing'))
 
     df = pandas.DataFrame.from_records(json_intended_for_dataframe, columns=columns)
 
@@ -84,10 +82,10 @@ def check_intended_for_files_exist(json_files, verbose= False):
     df = df[['exists', 'relative_filename', ]]
 
     if verbose:
-        with pandas.option_context('max_colwidth', 200):
-            print('\n')
+        print('\n')
+        with pandas.option_context('display.width', display_width, 'display.max_colwidth', 200):
             display(df)
-            print('\n')
+        print('\n')
 
     return df
 
@@ -95,7 +93,7 @@ def check_intended_for_files_exist(json_files, verbose= False):
 def main():
 
     in_args = _argparse()
-    check_intended_for_files_exist(in_args.fmap_json_files, verbose=in_args.verbose)
+    check_intended_for_files_exist(in_args.fmap_json_files, verbose=in_args.verbose, display_width=in_args.display_width)
 
 
 if __name__ == '__main__':
