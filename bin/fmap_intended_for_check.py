@@ -79,7 +79,8 @@ def check_intended_for_files_exist(json_files, verbose= False, display_width=200
 
     df['relative_filename'] = df.json_intended_for.apply(lambda x: _split_json_intended_for(x))
 
-    df = df[['exists', 'relative_filename', ]]
+
+#    df = df[['relative_filename', 'exists']]
 
     if verbose:
         print('\n')
