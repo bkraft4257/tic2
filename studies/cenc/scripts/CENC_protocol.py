@@ -1,7 +1,6 @@
 #
 # Questions for Bob:
-#   1. Should I use {session}? It seems some hdc_XX scripts look for it in the path
-#   2. How to specify dki/dti/dwi?
+#   1. How to specify dki/dti/dwi?
 #   
 
 def create_key(template, outtype=('nii.gz','dicom'), annotation_classes=None):
@@ -21,23 +20,29 @@ def infotodict(seqinfo):
 
     """
 
-    t1 = create_key('anat/sub-{subject}_T1w.{item:02d}')
-    t2 = create_key('anat/sub-{subject}_T2w.{item:02d}')
+    t1 = create_key('sub-{subject}/{session}/anat/sub-{subject}_{session}_T1w.{item:01d}')
+    t2 = create_key('sub-{subject}/{session}/anat/sub-{subject}_{session}_T2w.{item:01d}')
 
-    rest_fmri_ap = create_key('func/sub-{subject}_dir-ap_task-rest_run-{item:02d}_bold')
-    rest_topup_ap = create_key('fmap/sub-{subject}_topup_ap_bold.{item:02d}')
-    rest_topup_pa = create_key('fmap/sub-{subject}_topup_pa_bold.{item:02d}')
+    rest_fmri_ap = create_key('sub-{subject}/{session}/func/sub-{subject}_{session}_task-rest_bold.{item:01d}')
+    rest_topup_ap = create_key('sub-{subject}/{session}/fmap/sub-{subject}_{session}_acq-resttopup_dir-ap_epi.{item:01d}')
+    rest_topup_pa = create_key('sub-{subject}/{session}/fmap/sub-{subject}_{session}_acq-resttopup_dir-pa_epi.{item:01d}')
 
-    mt = create_key('anat/sub-{subject}_MT.{item:02d}')
+    mt = create_key('sub-{subject}/{session}/anat/sub-{subject}_{session}_acq-mt.{item:01d}')
 
-    pcasl_ap = create_key('func/sub-{subject}_pcasl_ap.{item:02d}')
-    pcasl_topup_ap = create_key('fmap/sub-{subject}_topup-ap_pcasl.{item:02d}')
-    pcasl_topup_pa = create_key('fmap/sub-{subject}_topup-pa_pcasl.{item:02d}')
+    pcasl_ap = create_key('sub-{subject}/{session}/func/sub-{subject}_{session}_task-restpcasl_acq-pcasl_bold.{item:01d}')
+    pcasl_topup_ap = create_key('sub-{subject}/{session}/fmap/sub-{subject}_{session}_acq-pcasltopup_dir-ap_epi.{item:01d}')
+    pcasl_topup_pa = create_key('sub-{subject}/{session}/fmap/sub-{subject}_{session}_acq-pcasltopup_dir-pa_epi.{item:01d}')
 
-    swi_mag = create_key('swi/sub-{subject}_swi_mag.{item:02d}')
-    swi_pha = create_key('swi/sub-{subject}_swi_pha.{item:02d}')
-    swi_mip = create_key('swi/sub-{subject}_swi_mip.{item:02d}')
-    swi     = create_key('swi/sub-{subject}_swi.{item:02d}')
+    swi_mag = create_key('sub-{subject}/{session}/swi/sub-{subject}_{session}_acq-swi_part-mag_GRE.{item:01d}')
+    swi_pha = create_key('sub-{subject}/{session}/swi/sub-{subject}_{session}_acq-swi_part-phase_GRE.{item:01d}')
+    swi_mip = create_key('sub-{subject}/{session}/swi/sub-{subject}_{session}_swimip.{item:01d}')
+    swi     = create_key('sub-{subject}/{session}/swi/sub-{subject}_{session}_swi.{item:01d}')
+
+
+    fmap_mag1 = create_key('sub-{subject}/{session}/fmap/sub-{subject}_{session}_acq-gre_magnitude1.{item:01d}')
+    fmap_phdiff = create_key('sub-{subject}/{session}/fmap/sub-{subject}_{session}_acq-gre_phasediff.{item:01d}')
+
+
 
 ########################
 
@@ -53,7 +58,9 @@ def infotodict(seqinfo):
             swi_mag: [],
             swi_pha: [],
             swi_mip: [],
-            swi: []
+            swi: [],
+            fmap_mag1: [],
+            fmap_phdiff: []
             }
 
     # Loop over each sequence. Use if statements to determine which sequences should be linked to which key
@@ -63,57 +70,66 @@ def infotodict(seqinfo):
         if (('mprage' in s.series_description) and
                 (s.dim3 == 176) and
                 (s.dim4 == 1)):
-                info[t1] = [s.series_id]
+                info[t1].append(s.series_id)
 
         if (('flair' in s.series_description) and
                 (s.dim3 == 176) and
                 (s.dim4 == 1)):
-                info[t2] = [s.series_id]
+                info[t2].append(s.series_id)
 
         if (('rest A>>P' in s.series_description) and
                 (s.dim3 == 48) and
                 (s.dim4 == 200)):
-                info[rest_fmri_ap] = [s.series_id]
+                info[rest_fmri_ap].append(s.series_id)
 
         if ('rest_topup_A>>P' in s.series_description):
-                info[rest_topup_ap] = [s.series_id]
+                info[rest_topup_ap].append(s.series_id)
 
         if ('rest_topup_P>>A' in s.series_description):
-                info[rest_topup_pa] = [s.series_id]
+                info[rest_topup_pa].append(s.series_id)
 
         if (('sag_mt' in s.series_description) and
                 (s.dim3 == 120) and
                 (s.dim4 == 1)):
-                info[mt] = [s.series_id]
+                info[mt].append(s.series_id)
 
         if ('pcasl A>>P' in s.series_description):
-                info[pcasl_ap] = [s.series_id]
+                info[pcasl_ap].append(s.series_id)
 
         if ('pcasl_topup_A>>P' in s.series_description):
-                info[pcasl_topup_ap] = [s.series_id]
+                info[pcasl_topup_ap].append(s.series_id)
 
         if ('pcasl_topup_P>>A' in s.series_description):
-                info[pcasl_topup_pa] = [s.series_id]
+                info[pcasl_topup_pa].append(s.series_id)
 
         if (('Mag' in s.series_description) and
             ('swi3d' in s.sequence_name) and
             (s.dim1 == 192)):
-                info[swi_mag] = [s.series_id]
+                info[swi_mag].append(s.series_id)
             
         if (('Pha' in s.series_description) and
             ('swi3d' in s.sequence_name) and
             (s.dim1 == 192)):
-                info[swi_pha] = [s.series_id]
+                info[swi_pha].append(s.series_id)
             
         if (('mIP' in s.series_description) and
             ('swi3d' in s.sequence_name) and
             (s.dim1 == 192)):
-                info[swi_mip] = [s.series_id]
+                info[swi_mip].append(s.series_id)
             
         if (('SWI' in s.series_description) and
             ('swi3d' in s.sequence_name) and
             (s.dim1 == 192)):
-                info[swi] = [s.series_id]
+                info[swi].append(s.series_id)
+
+        if (('ax_grass_64' in s.series_description) and
+            (s.TE == 5.19)):
+                info[fmap_mag1].append(s.series_id)
+
+        if (('ax_grass_64' in s.series_description) and
+            (s.TE == 7.65)):
+                info[fmap_phdiff].append(s.series_id)
+
             
     return info
 
