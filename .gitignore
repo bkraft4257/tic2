@@ -1,5 +1,10 @@
 *~
-docs/build/
 .idea/workspace.xml
+docs/build/
+.idea/
 _working
 tests/data/
+.cache
+.pycache
+__pycache__
+.pytest_cache/

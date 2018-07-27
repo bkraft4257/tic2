@@ -4,6 +4,13 @@
 
 source $TIC_PATH/bin/tic_functions.sh
 
+
+alias gpl='grep parameters *.log'
+alias fif='fmap_intended_for.py'
+alias fifc='fmap_intended_for_check.py'
+
+alias commac='comm $ACTIVE_BIDS_PATH/acrostic.list'
+
 alias bps='bids_processing_status.py'
 
 alias tic_help='firefox $TIC_PATH/docs/build/html/index.html > /dev/null 2>&1 &'
