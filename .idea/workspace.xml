@@ -2,9 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6f3e13b3-cd58-4c4d-98f6-1a68f8358bfb" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/studies/hfpef/scripts/hfpef_fmap_intended_for.sh" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/studies/hfpef/aliases.sh" afterPath="$PROJECT_DIR$/studies/hfpef/aliases.sh" />
+      <change beforePath="$PROJECT_DIR$/bin/clean_bids.py" afterPath="$PROJECT_DIR$/bin/clean_bids.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -56,21 +55,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="environment.sh" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/studies/hfpef/environment.sh">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="13" column="0" lean-forward="false" selection-start-line="12" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="aliases.sh" pinned="false" current-in-tab="true">
+      <file leaf-file-name="aliases.sh" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/studies/hfpef/aliases.sh">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="289">
-              <caret line="17" column="41" lean-forward="false" selection-start-line="17" selection-start-column="41" selection-end-line="17" selection-end-column="41" />
+            <state relative-caret-position="306">
+              <caret line="18" column="0" lean-forward="false" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -80,7 +69,7 @@
         <entry file="file://$PROJECT_DIR$/studies/hfpef/scripts/hfpef_protocol.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="515">
-              <caret line="437" column="0" lean-forward="true" selection-start-line="437" selection-start-column="0" selection-end-line="437" selection-end-column="0" />
+              <caret line="437" column="0" lean-forward="false" selection-start-line="437" selection-start-column="0" selection-end-line="437" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -90,7 +79,7 @@
         <entry file="file://$PROJECT_DIR$/studies/synergy/scripts/synergy_protocol.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="282">
-              <caret line="217" column="46" lean-forward="true" selection-start-line="217" selection-start-column="16" selection-end-line="217" selection-end-column="46" />
+              <caret line="217" column="46" lean-forward="false" selection-start-line="217" selection-start-column="16" selection-end-line="217" selection-end-column="46" />
               <folding />
             </state>
           </provider>
@@ -120,7 +109,7 @@
         <entry file="file://$PROJECT_DIR$/studies/mfc/aliases.sh">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="85">
-              <caret line="5" column="0" lean-forward="true" selection-start-line="4" selection-start-column="1" selection-end-line="5" selection-end-column="0" />
+              <caret line="5" column="0" lean-forward="false" selection-start-line="4" selection-start-column="1" selection-end-line="5" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -151,6 +140,16 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="0">
               <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="clean_bids.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/bin/clean_bids.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="471">
+              <caret line="136" column="16" lean-forward="false" selection-start-line="136" selection-start-column="16" selection-end-line="136" selection-end-column="16" />
               <folding />
             </state>
           </provider>
@@ -269,7 +268,6 @@
         <option value="$PROJECT_DIR$/studies/imove/scripts/imove_gi_netprep_mbepi.sh" />
         <option value="$PROJECT_DIR$/studies/infinite/scripts/inf_netprep_gi.sh" />
         <option value="$PROJECT_DIR$/studies/imove/environment.sh" />
-        <option value="$PROJECT_DIR$/bin/clean_bids.py" />
         <option value="$PROJECT_DIR$/bin/active_study_info.sh" />
         <option value="$PROJECT_DIR$/studies/cenc/environment.sh" />
         <option value="$PROJECT_DIR$/tic_core/fmriprep_tools.py" />
@@ -289,6 +287,7 @@
         <option value="$PROJECT_DIR$/studies/hfpef/scripts/hfpef_protocol.py" />
         <option value="$PROJECT_DIR$/studies/mfc/scripts/mfc_protocol.py" />
         <option value="$PROJECT_DIR$/studies/hfpef/aliases.sh" />
+        <option value="$PROJECT_DIR$/bin/clean_bids.py" />
       </list>
     </option>
   </component>
@@ -355,19 +354,6 @@
               <item name="tic_core" type="b2602c69:ProjectViewProjectNode" />
               <item name="tic_core" type="462c0819:PsiDirectoryNode" />
               <item name="studies" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="tic_core" type="b2602c69:ProjectViewProjectNode" />
-              <item name="tic_core" type="462c0819:PsiDirectoryNode" />
-              <item name="studies" type="462c0819:PsiDirectoryNode" />
-              <item name="hfpef" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="tic_core" type="b2602c69:ProjectViewProjectNode" />
-              <item name="tic_core" type="462c0819:PsiDirectoryNode" />
-              <item name="studies" type="462c0819:PsiDirectoryNode" />
-              <item name="hfpef" type="462c0819:PsiDirectoryNode" />
-              <item name="scripts" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="tic_core" type="b2602c69:ProjectViewProjectNode" />
@@ -618,13 +604,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1517948604886</updated>
-    </task>
-    <task id="LOCAL-00642" summary="Moving clean_bids to python. Updated permissions.">
-      <created>1527364734713</created>
-      <option name="number" value="00642" />
-      <option name="presentableId" value="LOCAL-00642" />
-      <option name="project" value="LOCAL" />
-      <updated>1527364734713</updated>
     </task>
     <task id="LOCAL-00643" summary="Moving clean_bids to python. Updated permissions.">
       <created>1528221370613</created>
@@ -962,7 +941,14 @@
       <option name="project" value="LOCAL" />
       <updated>1534880556621</updated>
     </task>
-    <option name="localTasksCounter" value="691" />
+    <task id="LOCAL-00691" summary="Added a hpef_fmap_intended_for.sh script. This still needs to be developed and&#10;tested.">
+      <created>1534881667865</created>
+      <option name="number" value="00691" />
+      <option name="presentableId" value="LOCAL-00691" />
+      <option name="project" value="LOCAL" />
+      <updated>1534881667865</updated>
+    </task>
+    <option name="localTasksCounter" value="692" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -1056,7 +1042,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Added rec-fmap and rec-topup to EPI images so we can compare recon." />
     <MESSAGE value="Started with CONN scripts for MFC" />
     <MESSAGE value="Updated BPS for debugging." />
     <MESSAGE value="Added conn_gather_inputs.py" />
@@ -1081,7 +1066,8 @@
     <MESSAGE value="Added alias to list particiant in fmriprep logs. This is helpful for matching up log file to &#10;the participant." />
     <MESSAGE value="Updated fieldmap to have a more descriptive column name." />
     <MESSAGE value="Fixed bug in HFPEF and MFC protocols. Series_ids are now appended instead &#10;set equal to info dict." />
-    <option name="LAST_COMMIT_MESSAGE" value="Fixed bug in HFPEF and MFC protocols. Series_ids are now appended instead &#10;set equal to info dict." />
+    <MESSAGE value="Added a hpef_fmap_intended_for.sh script. This still needs to be developed and&#10;tested." />
+    <option name="LAST_COMMIT_MESSAGE" value="Added a hpef_fmap_intended_for.sh script. This still needs to be developed and&#10;tested." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1201,13 +1187,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/bin/clean_bids.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="177">
-          <caret line="194" column="0" lean-forward="false" selection-start-line="194" selection-start-column="0" selection-end-line="194" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/bin/active_study_info.sh">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="238">
@@ -1299,7 +1278,7 @@
         <state relative-caret-position="17">
           <caret line="1" column="23" lean-forward="false" selection-start-line="1" selection-start-column="23" selection-end-line="1" selection-end-column="23" />
           <folding>
-            <element signature="e#80#95#0" expanded="true" />
+            <element signature="e#80#95#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1351,7 +1330,7 @@
         <state relative-caret-position="1394">
           <caret line="86" column="0" lean-forward="false" selection-start-line="49" selection-start-column="0" selection-end-line="86" selection-end-column="0" />
           <folding>
-            <element signature="e#108#118#0" expanded="true" />
+            <element signature="e#108#118#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1369,7 +1348,7 @@
         <state relative-caret-position="364">
           <caret line="84" column="19" lean-forward="false" selection-start-line="84" selection-start-column="19" selection-end-line="84" selection-end-column="19" />
           <folding>
-            <element signature="e#56#71#0" expanded="true" />
+            <element signature="e#56#71#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1449,7 +1428,7 @@
     <entry file="file://$PROJECT_DIR$/studies/synergy/scripts/synergy_protocol.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="282">
-          <caret line="217" column="46" lean-forward="true" selection-start-line="217" selection-start-column="16" selection-end-line="217" selection-end-column="46" />
+          <caret line="217" column="46" lean-forward="false" selection-start-line="217" selection-start-column="16" selection-end-line="217" selection-end-column="46" />
           <folding />
         </state>
       </provider>
@@ -1457,7 +1436,7 @@
     <entry file="file://$PROJECT_DIR$/studies/hfpef/scripts/hfpef_protocol.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="515">
-          <caret line="437" column="0" lean-forward="true" selection-start-line="437" selection-start-column="0" selection-end-line="437" selection-end-column="0" />
+          <caret line="437" column="0" lean-forward="false" selection-start-line="437" selection-start-column="0" selection-end-line="437" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -1505,15 +1484,23 @@
     <entry file="file://$PROJECT_DIR$/studies/mfc/aliases.sh">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
-          <caret line="5" column="0" lean-forward="true" selection-start-line="4" selection-start-column="1" selection-end-line="5" selection-end-column="0" />
+          <caret line="5" column="0" lean-forward="false" selection-start-line="4" selection-start-column="1" selection-end-line="5" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/studies/hfpef/aliases.sh">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="17" column="41" lean-forward="false" selection-start-line="17" selection-start-column="41" selection-end-line="17" selection-end-column="41" />
+        <state relative-caret-position="306">
+          <caret line="18" column="0" lean-forward="false" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bin/clean_bids.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="471">
+          <caret line="136" column="16" lean-forward="false" selection-start-line="136" selection-start-column="16" selection-end-line="136" selection-end-column="16" />
           <folding />
         </state>
       </provider>

@@ -133,6 +133,8 @@ def _rename_hdc_item_number_1(start_directory=None):
         files.extend(glob.glob(glob_string, recursive=True))
 
     for ii, ii_file in enumerate(files):
+
+        print(ii)
         try:
             os.rename(ii_file,
                       ii_file.replace('.1.', '.')
