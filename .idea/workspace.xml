@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="6f3e13b3-cd58-4c4d-98f6-1a68f8358bfb" name="Default" comment="Fixed bug in HFPEF protocol where images">
+    <list default="true" id="6f3e13b3-cd58-4c4d-98f6-1a68f8358bfb" name="Default" comment="">
+      <change beforePath="" afterPath="$PROJECT_DIR$/studies/hfpef/scripts/hfpef_fmap_intended_for.sh" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/studies/hfpef/scripts/hfpef_protocol.py" afterPath="$PROJECT_DIR$/studies/hfpef/scripts/hfpef_protocol.py" />
-      <change beforePath="$PROJECT_DIR$/studies/mfc/scripts/mfc_protocol.py" afterPath="$PROJECT_DIR$/studies/mfc/scripts/mfc_protocol.py" />
+      <change beforePath="$PROJECT_DIR$/studies/hfpef/aliases.sh" afterPath="$PROJECT_DIR$/studies/hfpef/aliases.sh" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -56,56 +56,6 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="act.sh" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/bin/act.sh">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="244">
-              <caret line="25" column="34" lean-forward="true" selection-start-line="25" selection-start-column="34" selection-end-line="25" selection-end-column="34" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="mriqc.sh" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/bin/mriqc.sh">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="209">
-              <caret line="21" column="29" lean-forward="true" selection-start-line="21" selection-start-column="29" selection-end-line="21" selection-end-column="29" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="hdc.sh" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/bin/hdc.sh">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="tic_bids_validator.sh" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/bin/tic_bids_validator.sh">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="tic_functions.sh" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/bin/tic_functions.sh">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="16" column="10" lean-forward="false" selection-start-line="16" selection-start-column="10" selection-end-line="16" selection-end-column="10" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="environment.sh" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/studies/hfpef/environment.sh">
           <provider selected="true" editor-type-id="text-editor">
@@ -116,11 +66,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="aliases.sh" pinned="false" current-in-tab="false">
+      <file leaf-file-name="aliases.sh" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/studies/hfpef/aliases.sh">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="15" column="0" lean-forward="false" selection-start-line="14" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+            <state relative-caret-position="289">
+              <caret line="17" column="41" lean-forward="false" selection-start-line="17" selection-start-column="41" selection-end-line="17" selection-end-column="41" />
               <folding />
             </state>
           </provider>
@@ -146,11 +96,61 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="mfc_protocol.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="mfc_protocol.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/studies/mfc/scripts/mfc_protocol.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="464">
               <caret line="319" column="53" lean-forward="false" selection-start-line="319" selection-start-column="53" selection-end-line="319" selection-end-column="53" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="hfpef_clean_bids.sh" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/studies/hfpef/scripts/hfpef_clean_bids.sh">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="aliases.sh" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/studies/mfc/aliases.sh">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="85">
+              <caret line="5" column="0" lean-forward="true" selection-start-line="4" selection-start-column="1" selection-end-line="5" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="mfc_fmap_intended_for.sh" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/studies/mfc/scripts/mfc_fmap_intended_for.sh">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="119">
+              <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="mfc_fmap_intended_for.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/studies/mfc/scripts/mfc_fmap_intended_for.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="34">
+              <caret line="2" column="89" lean-forward="false" selection-start-line="2" selection-start-column="89" selection-end-line="2" selection-end-column="89" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="hfpef_fmap_intended_for.sh" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/studies/hfpef/scripts/hfpef_fmap_intended_for.sh">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -263,7 +263,6 @@
         <option value="$PROJECT_DIR$/studies/synergy/scripts/synergy_netprep_gather_inputs.sh" />
         <option value="$PROJECT_DIR$/studies/hfpef/scripts/hfpef_gi_netprep_mbepi.sh" />
         <option value="$PROJECT_DIR$/studies/hfpef/scripts/hfpef_gi_netprep_epi.sh" />
-        <option value="$PROJECT_DIR$/studies/hfpef/aliases.sh" />
         <option value="$PROJECT_DIR$/studies/imove/aliases.sh" />
         <option value="$PROJECT_DIR$/studies/imove/scripts/imove_gi_netprep.sh" />
         <option value="$PROJECT_DIR$/studies/imove/scripts/imove_gi_netprep_epi.sh" />
@@ -289,6 +288,7 @@
         <option value="$PROJECT_DIR$/bin/fmriprep.sh" />
         <option value="$PROJECT_DIR$/studies/hfpef/scripts/hfpef_protocol.py" />
         <option value="$PROJECT_DIR$/studies/mfc/scripts/mfc_protocol.py" />
+        <option value="$PROJECT_DIR$/studies/hfpef/aliases.sh" />
       </list>
     </option>
   </component>
@@ -419,19 +419,19 @@
     <property name="SearchEverywhereHistoryKey" value="read_config&#9;null&#9;null&#10;YAML&#9;FILE&#9;file:///Users/bkraft/projects/tic_core/studies/active/scripts/netprep_mbepi.yaml&#10;sws&#9;null&#9;null&#10;hdc.sh&#9;FILE&#9;file:///Users/bkraft/projects/tic_core/bin/hdc.sh&#10;study&#9;FILE&#9;file:///Users/bkraft/projects/tic_core/bin/study_switcher.py" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/studies/mfc/scripts" />
-      <recent name="$PROJECT_DIR$/studies/imove/scripts" />
-      <recent name="$PROJECT_DIR$/bin" />
-      <recent name="$PROJECT_DIR$/tests/data" />
-      <recent name="$PROJECT_DIR$/tests" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/../bin" />
       <recent name="$PROJECT_DIR$/tic_core" />
       <recent name="$PROJECT_DIR$/tests" />
       <recent name="$PROJECT_DIR$/studies/mcf/scripts" />
       <recent name="$PROJECT_DIR$" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/studies/hfpef/scripts" />
+      <recent name="$PROJECT_DIR$/studies/mfc/scripts" />
+      <recent name="$PROJECT_DIR$/studies/imove/scripts" />
+      <recent name="$PROJECT_DIR$/bin" />
+      <recent name="$PROJECT_DIR$/tests/data" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -618,13 +618,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1517948604886</updated>
-    </task>
-    <task id="LOCAL-00641" summary="Moving clean_bids to python. Updated permissions.">
-      <created>1527364502112</created>
-      <option name="number" value="00641" />
-      <option name="presentableId" value="LOCAL-00641" />
-      <option name="project" value="LOCAL" />
-      <updated>1527364502112</updated>
     </task>
     <task id="LOCAL-00642" summary="Moving clean_bids to python. Updated permissions.">
       <created>1527364734713</created>
@@ -962,7 +955,14 @@
       <option name="project" value="LOCAL" />
       <updated>1532168680592</updated>
     </task>
-    <option name="localTasksCounter" value="690" />
+    <task id="LOCAL-00690" summary="Fixed bug in HFPEF and MFC protocols. Series_ids are now appended instead &#10;set equal to info dict.">
+      <created>1534880556621</created>
+      <option name="number" value="00690" />
+      <option name="presentableId" value="LOCAL-00690" />
+      <option name="project" value="LOCAL" />
+      <updated>1534880556621</updated>
+    </task>
+    <option name="localTasksCounter" value="691" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -1056,7 +1056,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Protocol testing. Encountered &quot;bug&quot; while converting phasediff image" />
     <MESSAGE value="Added rec-fmap and rec-topup to EPI images so we can compare recon." />
     <MESSAGE value="Started with CONN scripts for MFC" />
     <MESSAGE value="Updated BPS for debugging." />
@@ -1081,7 +1080,8 @@
     <MESSAGE value="Added a function to check if the IntendedFor files in the json file point&#10;a file that exists." />
     <MESSAGE value="Added alias to list particiant in fmriprep logs. This is helpful for matching up log file to &#10;the participant." />
     <MESSAGE value="Updated fieldmap to have a more descriptive column name." />
-    <option name="LAST_COMMIT_MESSAGE" value="Updated fieldmap to have a more descriptive column name." />
+    <MESSAGE value="Fixed bug in HFPEF and MFC protocols. Series_ids are now appended instead &#10;set equal to info dict." />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixed bug in HFPEF and MFC protocols. Series_ids are now appended instead &#10;set equal to info dict." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1117,20 +1117,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/studies/infinite/aliases.sh">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="697">
-          <caret line="41" column="0" lean-forward="false" selection-start-line="41" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/studies/imove/aliases.sh">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="38" lean-forward="false" selection-start-line="8" selection-start-column="38" selection-end-line="8" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/studies/infinite/scripts/inf_netprep_gi.sh">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
@@ -1283,27 +1269,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
           <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/studies/mfc/aliases.sh">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="0" lean-forward="false" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/studies/mfc/scripts/mfc_fmap_intended_for.sh">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/studies/mfc/scripts/mfc_fmap_intended_for.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="89" lean-forward="false" selection-start-line="2" selection-start-column="89" selection-end-line="2" selection-end-column="89" />
         </state>
       </provider>
     </entry>
@@ -1481,14 +1446,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/studies/hfpef/aliases.sh">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" column="0" lean-forward="false" selection-start-line="14" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/studies/synergy/scripts/synergy_protocol.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="282">
@@ -1509,6 +1466,54 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="464">
           <caret line="319" column="53" lean-forward="false" selection-start-line="319" selection-start-column="53" selection-end-line="319" selection-end-column="53" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/studies/hfpef/scripts/hfpef_clean_bids.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/studies/mfc/scripts/mfc_fmap_intended_for.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="89" lean-forward="false" selection-start-line="2" selection-start-column="89" selection-end-line="2" selection-end-column="89" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/studies/mfc/scripts/mfc_fmap_intended_for.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/studies/hfpef/scripts/hfpef_fmap_intended_for.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/studies/mfc/aliases.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="0" lean-forward="true" selection-start-line="4" selection-start-column="1" selection-end-line="5" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/studies/hfpef/aliases.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="17" column="41" lean-forward="false" selection-start-line="17" selection-start-column="41" selection-end-line="17" selection-end-column="41" />
           <folding />
         </state>
       </provider>
