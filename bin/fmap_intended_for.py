@@ -109,6 +109,7 @@ def _argparse():
 
 def _core(func_files, input_file, output_file,  echo_times, overwrite_flag, fmap_flag,verbose):
 
+    print(func_files)
     func_files = force_input_to_list(func_files, str)
 
     if verbose:
