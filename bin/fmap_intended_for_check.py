@@ -93,6 +93,8 @@ def check_intended_for_files_exist(json_files, verbose= False, display_width=200
 def main():
 
     in_args = _argparse()
+    print(in_args.json_file)
+
     check_intended_for_files_exist(in_args.fmap_json_files, verbose=in_args.verbose, display_width=in_args.display_width)
 
 
