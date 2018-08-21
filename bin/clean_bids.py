@@ -193,7 +193,15 @@ def set_write_permissions(start_directory, lock=True):
 
 
 def _clean_bids(start_directory, lock, unlock):
+    """
 
+    :param start_directory:
+    :param lock:
+    :param unlock:
+    :return:
+    """
+
+    print('__clean_bids__')
     _rename_hdc_item_number_1(start_directory)
     _remove_files(start_directory)
     _list_hdc_item_number_2(start_directory)
@@ -213,6 +221,8 @@ def main():
     # sessions = force_to_list(in_args.session, str)
 
     for ii_subject in in_args.subject:
+
+        print(ii_subject)
 
         if ii_subject is None:
             start_directory = ACTIVE_BIDS_PATH

@@ -148,8 +148,8 @@
       <file leaf-file-name="clean_bids.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/bin/clean_bids.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="471">
-              <caret line="136" column="16" lean-forward="false" selection-start-line="136" selection-start-column="16" selection-end-line="136" selection-end-column="16" />
+            <state relative-caret-position="257">
+              <caret line="196" column="4" lean-forward="false" selection-start-line="196" selection-start-column="4" selection-end-line="196" selection-end-column="4" />
               <folding />
             </state>
           </provider>
@@ -605,13 +605,6 @@
       <option name="presentableId" value="Default" />
       <updated>1517948604886</updated>
     </task>
-    <task id="LOCAL-00643" summary="Moving clean_bids to python. Updated permissions.">
-      <created>1528221370613</created>
-      <option name="number" value="00643" />
-      <option name="presentableId" value="LOCAL-00643" />
-      <option name="project" value="LOCAL" />
-      <updated>1528221370614</updated>
-    </task>
     <task id="LOCAL-00644" summary="Moving clean_bids to python. Updated permissions.">
       <created>1528221526192</created>
       <option name="number" value="00644" />
@@ -948,7 +941,14 @@
       <option name="project" value="LOCAL" />
       <updated>1534881667865</updated>
     </task>
-    <option name="localTasksCounter" value="692" />
+    <task id="LOCAL-00692" summary="Investing clean_bids.py bug. Not replacing .1.">
+      <created>1534884212271</created>
+      <option name="number" value="00692" />
+      <option name="presentableId" value="LOCAL-00692" />
+      <option name="project" value="LOCAL" />
+      <updated>1534884212271</updated>
+    </task>
+    <option name="localTasksCounter" value="693" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -1042,7 +1042,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Started with CONN scripts for MFC" />
     <MESSAGE value="Updated BPS for debugging." />
     <MESSAGE value="Added conn_gather_inputs.py" />
     <MESSAGE value="Updated MFC protocol to include Neutrals." />
@@ -1067,7 +1066,8 @@
     <MESSAGE value="Updated fieldmap to have a more descriptive column name." />
     <MESSAGE value="Fixed bug in HFPEF and MFC protocols. Series_ids are now appended instead &#10;set equal to info dict." />
     <MESSAGE value="Added a hpef_fmap_intended_for.sh script. This still needs to be developed and&#10;tested." />
-    <option name="LAST_COMMIT_MESSAGE" value="Added a hpef_fmap_intended_for.sh script. This still needs to be developed and&#10;tested." />
+    <MESSAGE value="Investing clean_bids.py bug. Not replacing .1." />
+    <option name="LAST_COMMIT_MESSAGE" value="Investing clean_bids.py bug. Not replacing .1." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1499,8 +1499,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/bin/clean_bids.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="471">
-          <caret line="136" column="16" lean-forward="false" selection-start-line="136" selection-start-column="16" selection-end-line="136" selection-end-column="16" />
+        <state relative-caret-position="257">
+          <caret line="196" column="4" lean-forward="false" selection-start-line="196" selection-start-column="4" selection-end-line="196" selection-end-column="4" />
           <folding />
         </state>
       </provider>
