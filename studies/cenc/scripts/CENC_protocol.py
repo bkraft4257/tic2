@@ -42,6 +42,15 @@ def infotodict(seqinfo):
     fmap_mag1 = create_key('sub-{subject}/{session}/fmap/sub-{subject}_{session}_acq-gre_magnitude1.{item:01d}')
     fmap_phdiff = create_key('sub-{subject}/{session}/fmap/sub-{subject}_{session}_acq-gre_phasediff.{item:01d}')
 
+# 36       37-ax_dti_A>>P        *ep_b0         ax_dti_A>>P    84   128    59    68  9.700  100.00 
+    
+    dwi_ap = create_key('sub-{subject}/{session}/dwi/sub-{subject}_{session}_acq-dwi_dwi.{item:01d}')
+    dwi_topup_ap = create_key('sub-{subject}/{session}/fmap/sub-{subject}_{session}_acq-dwitopup_dir-ap_epi.{item:01d}')
+    dwi_topup_pa = create_key('sub-{subject}/{session}/fmap/sub-{subject}_{session}_acq-dwitopup_dir-pa_epi.{item:01d}')
+
+    dki_pa = create_key('sub-{subject}/{session}/dki/sub-{subject}_{session}_acq-dki_dki.{item:01d}')
+    dki_topup_ap = create_key('sub-{subject}/{session}/fmap/sub-{subject}_{session}_acq-dkitopup_dir-ap_epi.{item:01d}')
+    dki_topup_pa = create_key('sub-{subject}/{session}/fmap/sub-{subject}_{session}_acq-dkitopup_dir-pa_epi.{item:01d}')
 
 
 ########################
@@ -60,7 +69,13 @@ def infotodict(seqinfo):
             swi_mip: [],
             swi: [],
             fmap_mag1: [],
-            fmap_phdiff: []
+            fmap_phdiff: [],
+            dwi_ap: [],
+            dwi_topup_ap: [],
+            dwi_topup_pa: [],
+            dki_pa: [],
+            dki_topup_ap: [],
+            dki_topup_pa: [],
             }
 
     # Loop over each sequence. Use if statements to determine which sequences should be linked to which key
@@ -130,7 +145,31 @@ def infotodict(seqinfo):
             (s.TE == 7.65)):
                 info[fmap_phdiff].append(s.series_id)
 
-            
+        if (('ax_dti_A>>P' in s.series_description) and
+            (s.dim4 > 1)):
+                info[dwi_ap].append(s.series_id)
+
+        if ('dti_topup_A>>P' in s.series_description):
+                info[dwi_topup_ap].append(s.series_id)
+
+        if ('dti_topup_P>>A' in s.series_description):
+                info[dwi_topup_pa].append(s.series_id)
+
+# 36       37-ax_dti_A>>P        *ep_b0         ax_dti_A>>P    84   128    59    68  9.700  100.00       False                False
+# 41    42-dti_topup_A>>P   *epse2d1_84      dti_topup_A>>P    84   128    59     1  7.000   63.00       False                False
+# 42    43-dti_topup_P>>A   *epse2d1_84      dti_topup_P>>A    84   128    59     1  7.000   63.00       False                False
+
+        if (('ax_dki_P>>A' in s.series_description) and
+            (s.dim4 > 1)):
+                info[dki_pa].append(s.series_id)
+
+        if ('dki_topup_A>>P' in s.series_description):
+                info[dki_topup_ap].append(s.series_id)
+
+        if ('dki_topup_P>>A' in s.series_description):
+                info[dki_topup_pa].append(s.series_id)
+
+# 10       11-ax_dki_P>>A        *ep_b0         ax_dki_P>>A    84   128    59    68  9.700  100.00             
     return info
 
 
@@ -172,7 +211,6 @@ def infotodict(seqinfo):
 # 33        34-pcasl A>>P   epfid2d1_64              relCBF    64    64    30     1  3.800   13.00        True                 True
 # 34  35-pcasl_topup_P>>A   *epse2d1_64    pcasl_topup_P>>A    64    64    30     1  4.000   54.00       False                False
 # 35  36-pcasl_topup_A>>P   *epse2d1_64    pcasl_topup_A>>P    64    64    30     1  4.000   54.00       False                False
-# 36       37-ax_dti_A>>P        *ep_b0         ax_dti_A>>P    84   128    59    68  9.700  100.00       False                False
 # 37       38-ax_dti_A>>P   *ep_b0_2000     ax_dti_A>>P_ADC    84   128    59     1  9.700  100.00        True                False
 # 38       39-ax_dti_A>>P    *ep_b1000t  ax_dti_A>>P_TRACEW    84   128   118     1  9.700  100.00        True                False
 # 39       40-ax_dti_A>>P   *ep_b0_2000      ax_dti_A>>P_FA    84   128    59     1  9.700  100.00        True                False

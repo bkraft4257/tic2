@@ -1,7 +1,10 @@
-#!/opt/anaconda3-4.4.0/bin/python
+#!/opt/anaconda/bin/python
 # -*- coding: utf-8 -*-
 
 """
+Setup for a new TIC user:
+  - add to .bashrc or .zshrc
+  - create $HOME/.tic directory with study switching files in it
 """
 
 __version__ = "0.0.0"
@@ -16,31 +19,9 @@ def _absjoin(*path):
     return os.path.abspath(os.path.realpath(os.path.join(*path)))
 
 
-TIC_PATH = os.getenv('TIC_PATH')
-HOME_TIC_PATH = _absjoin(os.getenv('HOME'), '.tic')
-
-
-def _link_file(source, target):
-
-    try:
-        os.symlink(source, target)
-
-    except FileExistsError:
-        print('{0} already exists. File was not copied.'.format(target))
-
-    except FileNotFoundError:
-        print('{0} not found. File was not copied.'.format(source))
-
-
-def _link_studies(studies=None):
-
-    if studies is None:
-        studies = ['hfpef', 'infinite', 'synergy']
-
-    for ii in studies:
-        _link_file(_absjoin(TIC_PATH, 'studies', ii, f'{ii}_init.sh'),
-                   _absjoin(HOME_TIC_PATH, f'{ii}_init.sh')
-                   )
+# TIC_PATH = os.getenv('TIC_PATH')
+TIC_PATH = '/home/relito/medeng/crhamilt/py/tic/tic_core'
+DOT_TIC_PATH = _absjoin(os.getenv('HOME'), '.tic')
 
 
 def _copy_file(source, target):
@@ -69,6 +50,7 @@ def _add_timestamp(in_filename):
     return f'{in_filename}.{timestamp}'
 
 
+# backup user's .zshrc or .bashrc
 def _backup_shell(in_filename):
 
     home_path = os.getenv('HOME')
@@ -82,7 +64,7 @@ def _backup_shell(in_filename):
 def copy_tic_init_file(filename):
 
     _copy_file(_absjoin(TIC_PATH, 'init', filename),
-               _absjoin(HOME_TIC_PATH, filename))
+               _absjoin(DOT_TIC_PATH, filename))
 
 
 def _update_shell(in_filename):
@@ -96,14 +78,15 @@ def _update_shell(in_filename):
         file.write(f'\n\n\n')
         file.write(f'## >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>\n')
         file.write(f'## TIC Setup\n\n')
-        file.write(f'#export TIC_PATH=/gandg/tic/\n')
-        file.write(f'#export TIC_INIT_PATH=$HOME/.tic\n')
-        file.write(f'#source $TIC_INIT_PATH/tic_zshrc.sh\n\n')
+        file.write(f'export TIC_PATH=/home/relito/medeng/crhamilt/py/tic/tic_core\n')
+        file.write(f'export DOT_TIC_PATH=$HOME/.tic\n')
+        file.write(f'source $TIC_PATH/init/tic_zshrc.sh\n\n')
         file.write(f'## Add Studies to my environment\n\n')
-        file.write(f'#source $TIC_INIT_PATH/hfpef_init.sh\n')
-        file.write(f'#source $TIC_INIT_PATH/synergy_init.sh\n')
-        file.write(f'#source $TIC_INIT_PATH/infinite_init.sh\n')
-        file.write(f'#source $TIC_INIT_PATH/tic_default_study.sh\n\n')
+        file.write(f'#source $TIC_PATH/studies/hfpef/init.sh\n')
+        file.write(f'#source $TIC_PATH/studies/cenc/init.sh\n')
+        file.write(f'#source $TIC_PATH/studies/synergy/init.sh\n')
+        file.write(f'#source $TIC_PATH/studies/infinite/init.sh\n')
+        file.write(f'source $DOT_TIC_PATH/tic_default_study.sh\n\n')
         file.write(f'#tic_info.sh\n\n')
         file.write(f'## <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<\n')
 
@@ -119,25 +102,29 @@ def _update_shell(in_filename):
 
 _check_shell()
 
-if not os.path.isdir(HOME_TIC_PATH):
-    os.makedirs(HOME_TIC_PATH)
+if not os.path.isdir(DOT_TIC_PATH):
+    os.makedirs(DOT_TIC_PATH)
 
 # Copy files
 
-copy_tic_init_file('tic_zshrc.sh')
-copy_tic_init_file('tic_wake_aging1a_environment.sh')
-copy_tic_init_file('tic_default_study.sh')
+# copy_tic_init_file('tic_zshrc.sh')
+# copy_tic_init_file('tic_wake_aging1a_environment.sh')
+# copy_tic_init_file('tic_default_study.sh')
 
-_link_studies()
+# _link_studies()
 
 _update_shell('.zshrc')
 _update_shell('.bashrc')
 
 print('\n\nTIC Initial Setup Completed. \n')
-print('The next step is to uncomment TIC lines added to your .zshrc/.bashrc file.')
+shell = os.getenv('SHELL')
+if ('zsh' in shell):
+    print('The next step is to uncomment desired TIC lines added to your .zshrc file.')
+if ('bash' in shell):
+    print('The next step is to uncomment desired TIC lines added to your .bashrc file.')
 print('After commenting out the files please logout and log back in again.')
-print('If you have successfully installed TIC on your aging1a account your when')
-print('when you log back your terminal should look something like this:\n')
+print('If you have successfully installed TIC on your account, ')
+print('when you log back in you should see something like this:\n')
 print('   -------- freesurfer-Linux-centos6_x86_64-stable-pub-v5.3.0 --------')
 print('   Setting up environment for FreeSurfer/FS-FAST (and FSL)')
 print('   FREESURFER_HOME   /aging1/software//freesurfer')

@@ -13,27 +13,11 @@ if [ ! -d $TIC_PATH ]; then
 
 fi
 
-export TIC_STUDIES_PATH=$TIC_PATH/studies
-export TIC_PYTHONPATH=$TIC_PATH/:$TIC_PATH/bin
-
-export PYTHONPATH=$TIC_PYTHONPATH:$PYTHONPATH
-
+source $TIC_PATH/init/tic_environment.sh
 source $TIC_PATH/init/tic_aliases.sh
 source $TIC_STUDIES_PATH/active/aliases.sh
-
-export HOME_TIC_PATH=$TIC_INIT_PATH  # Done for backward compatibility.
-
-source ${TIC_INIT_PATH}/tic_environment.sh
-
-# TIC NIPYPE Workflows
-
-PATH=$TIC_PATH/bin/:$TIC_PATH/workflows:$PATH
-
-# Final TIC Python Setup
-
-PYTHONDONTWRITEBYTECODE=1
-
-#umask 0002 # u=rwx,g=rwx,o=rx
+# source $HOME/.tic/tic_default_study.sh
+# umask 0002 # u=rwx,g=rwx,o=rx
 umask 0007 # u=rwx,g=rwx,o=
 
 

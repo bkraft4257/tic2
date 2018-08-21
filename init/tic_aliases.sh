@@ -64,6 +64,8 @@ alias lld='ld -ld'
 alias llr='ls -lrt'
 alias lls='ls -lrS'
 
+alias fslview='fslview_deprecated'
+alias fsleyes='fslview_deprecated'
 alias frv='freeview'
 alias fsv='fslview'
 alias fse='fsleyes'
