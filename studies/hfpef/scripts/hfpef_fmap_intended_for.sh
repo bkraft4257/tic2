@@ -13,11 +13,11 @@
 # sub-hfs075_ses-1_acq-pcasl_dir-lr_epi.json:  "IntendedFor": [ "ses-1/func/sub-hfs075_ses-1_task-rest_acq-pcasl_bold.nii.gz" ],
 # sub-hfs075_ses-1_acq-pcasl_dir-rl_epi.json:  "IntendedFor": [ "ses-1/func/sub-hfs075_ses-1_task-rest_acq-pcasl_bold.nii.gz" ],
 
-if [ ! -d "./fmap" ]; then
+if [[ ! $(basename ${PWD}) == "fmap" ]]; then
     echo
-    echo "You must be in the fmap directory to run this script"
+    echo "NOT You must be in the fmap directory to run this script"
     echo
-    exit 1
+    return
 
 fi
 
