@@ -82,8 +82,6 @@ def check_intended_for_files_exist(json_files, verbose= False, display_width=200
     :return:
     """
 
-    print(len(json_files))
-
     for ii_fmap_json in json_files:
         json_file = json.load(open(ii_fmap_json))
 
