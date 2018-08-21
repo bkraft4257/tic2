@@ -23,7 +23,7 @@ other_parameters=' --no-sub '
 
 # create the output and work directories parallel to BIDS hierarchy, not inside it
 
-datetime_stamp=`date '+d%Y%m%d_%H:%M:%S'`
+datetime_stamp=`date '+d%Y%m%d_%H%M%S'`
 log_file=${ACTIVE_IMAGE_PROCESSING_LOG_PATH}/${study_prefix}_${BIDS_APP}_${datetime_stamp}.log
 
 

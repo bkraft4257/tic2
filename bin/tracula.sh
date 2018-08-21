@@ -16,11 +16,14 @@ study_prefix=$(echo "${ACTIVE_STUDY,,}")
 # -s.
 #
 
-parameters=$(echo $@ | sed -e 's/-s /--participant-label /')
+parameters=$(echo $@ | sed -e 's/-s /--participant_label /')
+
+# tracula wants the freesurfer license
+parameters=$parameters" --license_key /opt/freesurfer/license.txt"
 
 # create the output and work directories parallel to BIDS hierarchy, not inside it
 
-datetime_stamp=`date '+d%Y%m%d_%H:%M:%S'`
+datetime_stamp=`date '+d%Y%m%d_%H%M%S'`
 log_file=${ACTIVE_IMAGE_PROCESSING_LOG_PATH}/${study_prefix}_${BIDS_APP}_${datetime_stamp}.log
 
 
@@ -39,12 +42,12 @@ log_file=${ACTIVE_IMAGE_PROCESSING_LOG_PATH}/${study_prefix}_${BIDS_APP}_${datet
 
 
 # run it in the background so that it continues if user logs out
-export FULL_BIDS_APP_COMMAND="act_full_command=$SINGULARITY_COMMAND \
- $ACTIVE_SINGULARITY_USER_BIND_PATHS \
- $APP_SINGULARITY_IMAGE \
- $ACTIVE_BIDS_PATH \
- $ACTIVE_ACT_OUTPUT_PATH \
- participant $parameters"
+# export FULL_BIDS_APP_COMMAND="act_full_command=$SINGULARITY_COMMAND \
+#  $ACTIVE_SINGULARITY_USER_BIND_PATHS \
+#  $APP_SINGULARITY_IMAGE \
+#  $ACTIVE_BIDS_PATH \
+#  $ACTIVE_ACT_OUTPUT_PATH \
+#  participant $parameters"
 
 # Write information to log file
 source $TIC_PATH/studies/active/scripts/bids_app_status.sh
@@ -52,15 +55,16 @@ source $TIC_PATH/studies/active/scripts/bids_app_status.sh
 
 # Run BIDS App
 
-nohup time $SINGULARITY_COMMAND \
+
+nohup time $SINGULARITY_COMMAND  \
            $ACTIVE_SINGULARITY_USER_BIND_PATHS \
            $APP_SINGULARITY_IMAGE \
            $ACTIVE_BIDS_PATH \
            $ACTIVE_APP_OUTPUT_PATH \
-           participant $parameters > $log_file 2>&1 &
+           participant $parameters  >> $log_file 2>&1 &
 
 echo "Waiting 30 seconds before displaying the log file ..."
-sleep 30
+sleep 3
 
 cat $log_file
 

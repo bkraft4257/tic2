@@ -2,10 +2,10 @@
 # -*- coding: utf-8 -*-
 
 """
-Writes a bash script to TIC_INIT_PATH.  This function is often called with an alias that calls this function
+Writes a bash script to DOT_TIC_PATH.  This function is often called with an alias that calls this function
 and then sources the bash script.  For example,
 
-alias swh='study_switcher.py hfpef; source $TIC_INIT_PATH/tic_study_switcher.sh'
+alias swh='study_switcher.py hfpef; source $DOT_TIC_PATH/tic_study_switcher.sh'
 
 """
 
@@ -15,10 +15,10 @@ import sys
 
 STUDY_CHOICES = ['hfpef', 'synergy', 'infinite', 'cenc', 'imove', 'mfc']
 
-STUDY_SWITCHER_OUTPUT_FILENAME = os.path.abspath(os.path.join(os.getenv('TIC_INIT_PATH'),
+STUDY_SWITCHER_OUTPUT_FILENAME = os.path.abspath(os.path.join(os.getenv('DOT_TIC_PATH'),
                                                               'tic_study_switcher.sh'))
 
-DEFAULT_STUDY_SWITCHER_OUTPUT_FILENAME = os.path.abspath(os.path.join(os.getenv('TIC_INIT_PATH'),
+DEFAULT_STUDY_SWITCHER_OUTPUT_FILENAME = os.path.abspath(os.path.join(os.getenv('DOT_TIC_PATH'),
                                                                       'tic_default_study.sh'))
 
 
