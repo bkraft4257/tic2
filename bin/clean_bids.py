@@ -15,7 +15,7 @@ from collections import Iterable
 
 
 ACTIVE_BIDS_PATH = os.environ['ACTIVE_BIDS_PATH']
-
+EXTENSIONS = ('nii.gz', 'json', 'bvec', 'bval')
 
 def force_to_list(inp, basetype=int):
     """
@@ -78,7 +78,7 @@ def _list_hdc_item_number_2(start_directory=None):
         start_directory = '.'
 
     files = []
-    for ext in ('nii.gz', 'json'):
+    for ext in EXTENSIONS:
         glob_string = os.path.join(f'{start_directory}', '**', '**', f'*.[0-9].{ext}')
         files.extend(glob.glob(glob_string, recursive=True))
 
@@ -104,7 +104,7 @@ def _rename_hdc_item_number_1(start_directory=None):
         start_directory = '.'
 
     files = []
-    for ext in ('nii.gz', 'json', 'bvec', 'bval'):
+    for ext in EXTENSIONS:
         glob_string = os.path.join(f'{start_directory}', '**', f'*.1.{ext}')
         files.extend(glob.glob(glob_string, recursive=True))
 
