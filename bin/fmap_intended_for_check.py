@@ -3,6 +3,7 @@
 
 """
 """
+from collections import Iterable
 
 import argparse
 import json
@@ -15,6 +16,25 @@ from IPython.display import display
 
 columns = ('json_file', 'json_intended_for', 'exists')
 json_intended_for_dataframe = []
+
+
+def force_input_to_list(inp, basetype=int):
+    """
+
+    :param inp:
+    :param basetype:
+    :return:
+
+    https://stackoverflow.com/questions/20095244/how-do-i-check-if-input-is-a-number-in-python
+    """
+
+    if not isinstance(inp, Iterable) or isinstance(inp, basetype):
+        out_list = [inp]  # use just `str` in py3.x
+    else:
+        out_list = [x for x in inp]
+
+    return out_list
+
 
 def _split_json_intended_for(x):
 
@@ -62,11 +82,15 @@ def check_intended_for_files_exist(json_files, verbose= False, display_width=200
     :return:
     """
 
+    print(len(json_files))
+
     for ii_fmap_json in json_files:
         json_file = json.load(open(ii_fmap_json))
 
         try:
             ii_func_intended_for = json_file['IntendedFor']
+
+            ii_func_intended_for = force_input_to_list(ii_func_intended_for, basetype=str)
 
             for ii_func_nii_gz in ii_func_intended_for:
                 ii_func_nii_gz_filename,  json_full_filename,  ii_func_nii_gz_exists = _check_intended_for_files_exist(ii_func_nii_gz)
