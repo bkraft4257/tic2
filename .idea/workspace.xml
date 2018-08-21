@@ -128,8 +128,8 @@
       <file leaf-file-name="hfpef_fmap_intended_for.sh" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/studies/hfpef/scripts/hfpef_fmap_intended_for.sh">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="16" column="8" lean-forward="false" selection-start-line="16" selection-start-column="8" selection-end-line="16" selection-end-column="8" />
+            <state relative-caret-position="609">
+              <caret line="41" column="154" lean-forward="true" selection-start-line="41" selection-start-column="154" selection-end-line="41" selection-end-column="154" />
               <folding />
             </state>
           </provider>
@@ -618,13 +618,6 @@
       <option name="presentableId" value="Default" />
       <updated>1517948604886</updated>
     </task>
-    <task id="LOCAL-00649" summary="Moving clean_bids to python. Updated permissions.">
-      <created>1528227056704</created>
-      <option name="number" value="00649" />
-      <option name="presentableId" value="LOCAL-00649" />
-      <option name="project" value="LOCAL" />
-      <updated>1528227056704</updated>
-    </task>
     <task id="LOCAL-00650" summary="Moving clean_bids to python. Updated permissions.">
       <created>1528227135823</created>
       <option name="number" value="00650" />
@@ -961,7 +954,14 @@
       <option name="project" value="LOCAL" />
       <updated>1534886271548</updated>
     </task>
-    <option name="localTasksCounter" value="698" />
+    <task id="LOCAL-00698" summary="Updated fmap intended for script for hfpef. Testing is still needed.">
+      <created>1534887563096</created>
+      <option name="number" value="00698" />
+      <option name="presentableId" value="LOCAL-00698" />
+      <option name="project" value="LOCAL" />
+      <updated>1534887563096</updated>
+    </task>
+    <option name="localTasksCounter" value="699" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -1510,8 +1510,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/studies/hfpef/scripts/hfpef_fmap_intended_for.sh">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="16" column="8" lean-forward="false" selection-start-line="16" selection-start-column="8" selection-end-line="16" selection-end-column="8" />
+        <state relative-caret-position="609">
+          <caret line="41" column="154" lean-forward="true" selection-start-line="41" selection-start-column="154" selection-end-line="41" selection-end-column="154" />
           <folding />
         </state>
       </provider>

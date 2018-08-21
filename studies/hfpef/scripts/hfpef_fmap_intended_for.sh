@@ -24,22 +24,22 @@ fi
 echo
 echo
 
-find ../func/ -name "*task-rest_acq-mbepi_bold.nii.gz" | sort | xargs fmap_intended_for.py -i *_acq-mbepi_dir-{lr,rl}_epi.json --overwrite -v
+find ../func/ -name "*task-restmbepi_acq-mbepi_bold.nii.gz" | sort | xargs fmap_intended_for.py -i *_acq-mbepi_dir-{lr,rl}_epi.json --overwrite -v
 
 echo
 echo
 
-find ../func/ -name "*task-rest_acq-pcasl_bold.nii.gz" | sort | xargs fmap_intended_for.py -i *_acq-pcasl_dir-{lr,rl}_epi.json --overwrite -v
+find ../func/ -name "*task-restpcasl_acq-pcasl_bold.nii.gz" | sort | xargs fmap_intended_for.py -i *_acq-pcasl_dir-{lr,rl}_epi.json --overwrite -v
 
 echo
 echo
 
-find ../func/ -name "*_task-rest_acq-epi_rec-fmap_bold.nii.gz" | sort | xargs fmap_intended_for.py -i *acq-bold_phasediff.json --overwrite -v -f
+find ../func/ -name "*_task-restfmap_acq-epi_rec-fmap_bold.nii.gz" | sort | xargs fmap_intended_for.py -i *acq-bold_phasediff.json --overwrite -v -f
 
 echo
 echo
 
-find ../func/ -name "*_task-rest_acq-epi_rec-topup_bold.nii.gz" | sort | xargs fmap_intended_for.py -i *_acq-epse_dir-{ap,pa}_epi.json --overwrite -v -f
+find ../func/ -name "*_task-resttopup_acq-epi_rec-topup_bold.nii.gz" | sort | xargs fmap_intended_for.py -i *_acq-epse_dir-{ap,pa}_epi.json --overwrite -v
 
 echo
 echo
