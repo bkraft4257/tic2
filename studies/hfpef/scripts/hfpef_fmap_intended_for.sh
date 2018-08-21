@@ -5,26 +5,47 @@
 #
 # This script does not do any error checking.  It MUST be run in the fmap directory.
 #
+# sub-hfs075_ses-1_acq-bold_phasediff.json:  "IntendedFor": [ "ses-1/func/sub-hfs075_ses-1_task-rest_acq-epi_rec-fmap_bold.nii.gz" ],
+# sub-hfs075_ses-1_acq-epse_dir-ap_epi.json:  "IntendedFor": [ "ses-1/func/sub-hfs075_ses-1_task-rest_acq-epi_rec-topup_bold.nii.gz" ],
+# sub-hfs075_ses-1_acq-epse_dir-pa_epi.json:  "IntendedFor": [ "ses-1/func/sub-hfs075_ses-1_task-rest_acq-epi_rec-topup_bold.nii.gz" ],
+# sub-hfs075_ses-1_acq-mbepi_dir-lr_epi.json:  "IntendedFor": [ "ses-1/func/sub-hfs075_ses-1_task-rest_acq-mbepi_bold.nii.gz" ],
+# sub-hfs075_ses-1_acq-mbepi_dir-rl_epi.json:  "IntendedFor": [ "ses-1/func/sub-hfs075_ses-1_task-rest_acq-mbepi_bold.nii.gz" ],
+# sub-hfs075_ses-1_acq-pcasl_dir-lr_epi.json:  "IntendedFor": [ "ses-1/func/sub-hfs075_ses-1_task-rest_acq-pcasl_bold.nii.gz" ],
+# sub-hfs075_ses-1_acq-pcasl_dir-rl_epi.json:  "IntendedFor": [ "ses-1/func/sub-hfs075_ses-1_task-rest_acq-pcasl_bold.nii.gz" ],
+
+if [ ! -d "./fmap" ]; then
+    echo
+    echo "You must be in the fmap directory to run this script"
+    echo
+    exit 1
+
+fi
 
 echo
 echo
 
-find ../func/ -name "*post*topup*.nii.gz" | sort | xargs fmap_intended_for.py -i *_acq-postEpi_dir-{ap,pa}_epi.json --overwrite -v
+find ../func/ -name "*task-rest_acq-mbepi_bold.nii.gz" | sort | xargs fmap_intended_for.py -i *_acq-mbepi_dir-{lr,rl}_epi.json --overwrite -v
 
 echo
 echo
 
-find ../func/ -name "*pre*topup*.nii.gz"  | sort | xargs fmap_intended_for.py -i *_acq-preEpi_dir-{ap,pa}_epi.json --overwrite -v
+find ../func/ -name "*task-rest_acq-pcasl_bold.nii.gz" | sort | xargs fmap_intended_for.py -i *_acq-pcasl_dir-{lr,rl}_epi.json --overwrite -v
 
 echo
 echo
 
-find ../func/ -name "*fmap*.nii.gz"       | sort | xargs fmap_intended_for.py -i *_acq-pre_phasediff.json --overwrite -v -f
+find ../func/ -name "*_task-rest_acq-epi_rec-fmap_bold.nii.gz" | sort | xargs fmap_intended_for.py -i *acq-bold_phasediff.json --overwrite -v -f
 
 echo
 echo
 
-grep -i \"PhaseEncodingDirection\" *.json
+find ../func/ -name "*_task-rest_acq-epi_rec-topup_bold.nii.gz" | sort | xargs fmap_intended_for.py -i *_acq-epse_dir-{ap,pa}_epi.json --overwrite -v -f
 
 echo
 echo
+
+fmap_intended_for_check.py *.json
+
+echo
+echo
+
