@@ -8,6 +8,7 @@ This template file can be used as an example and starting point for creating you
 
 """
 
+
 def create_key(template, outtype=('nii.gz',), annotation_classes=None):
     """
     Create key for HDC DICOM to NIFTI conversion
@@ -264,58 +265,58 @@ def infotodict(seqinfo):
     for idx, s in enumerate(seqinfo):
 
         if 'pre_Neutral1' in s.series_id:
-                info[pre_neutral1_ap_fmap] = [s.series_id]
-                info[pre_neutral1_ap_topup] = [s.series_id]
+                info[pre_neutral1_ap_fmap].append([s.series_id])
+                info[pre_neutral1_ap_topup].append([s.series_id])
 
         if 'pre+heat1' in s.series_id:
-                info[pre_heat1_ap_fmap] = [s.series_id]
-                info[pre_heat1_ap_topup] = [s.series_id]
+                info[pre_heat1_ap_fmap].append([s.series_id])
+                info[pre_heat1_ap_topup].append([s.series_id])
 
         if 'pre+heat2' in s.series_id:
-                info[pre_heat2_ap_fmap] = [s.series_id]
-                info[pre_heat2_ap_topup] = [s.series_id]
+                info[pre_heat2_ap_fmap].append([s.series_id])
+                info[pre_heat2_ap_topup].append([s.series_id])
 
         if 'pre_Neutral2' in s.series_id:
-                info[pre_neutral2_ap_fmap] = [s.series_id]
-                info[pre_neutral2_ap_topup] = [s.series_id]
+                info[pre_neutral2_ap_fmap].append([s.series_id])
+                info[pre_neutral2_ap_topup].append([s.series_id])
 
         if 'pre_topup_A>>P' in s.series_id:
-            info[pre_topup_ap] = [s.series_id]
+            info[pre_topup_ap].append([s.series_id])
 
         if 'pre_topup_P>>A' in s.series_id:
-            info[pre_topup_pa] = [s.series_id]
+            info[pre_topup_pa].append([s.series_id])
 
         if (('Field_mapping 4X4X4 A>>P' in s.series_id) and
                 (s.TE == 4.92)):
-                info[pre_fmap_magnitude1] = [s.series_id]
+                info[pre_fmap_magnitude1].append([s.series_id])
             
         if (('Field_mapping 4X4X4 A>>P' in s.series_id) and
                 (s.TE == 7.38)):
-                info[pre_fmap_phasediff] = [s.series_id]
+                info[pre_fmap_phasediff].append([s.series_id])
 
         if 'MPRAGE_GRAPPA2' in s.series_id:
-            info[t1w] = [s.series_id]
+            info[t1w].append([s.series_id])
 
         if 'post_Neutral3' in s.series_id:
-                info[post_neutral3_ap_fmap] = [s.series_id]
-                info[post_neutral3_ap_topup] = [s.series_id]
+                info[post_neutral3_ap_fmap].append([s.series_id])
+                info[post_neutral3_ap_topup].append([s.series_id])
 
         if 'post+heat3' in s.series_id:
-                info[post_heat3_ap_fmap] = [s.series_id]
-                info[post_heat3_ap_topup] = [s.series_id]
+                info[post_heat3_ap_fmap].append([s.series_id])
+                info[post_heat3_ap_topup].append([s.series_id])
 
         if 'post+heat4' in s.series_id:
-                info[post_heat4_ap_fmap] = [s.series_id]
-                info[post_heat4_ap_topup] = [s.series_id]
+                info[post_heat4_ap_fmap].append([s.series_id])
+                info[post_heat4_ap_topup].append([s.series_id])
 
         if 'post_Neutral4' in s.series_id:
-                info[post_neutral4_ap_fmap] = [s.series_id]
-                info[post_neutral4_ap_topup] = [s.series_id]
+                info[post_neutral4_ap_fmap].append([s.series_id])
+                info[post_neutral4_ap_topup].append([s.series_id])
 
         if 'post_topup_A>>P' in s.series_id:
-            info[post_topup_ap] = [s.series_id]
+            info[post_topup_ap].append([s.series_id])
 
         if 'post_topup_P>>A' in s.series_id:
-            info[post_topup_pa] = [s.series_id]
+            info[post_topup_pa].append([s.series_id])
 
     return info

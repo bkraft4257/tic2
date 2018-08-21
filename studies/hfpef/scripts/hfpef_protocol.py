@@ -337,80 +337,80 @@ def infotodict(seqinfo):
 
         if (('MPRAGE_GRAPPA2' in s.series_description) and
                 ('tfl3d1_16ns' in s.sequence_name)):
-            info[t1] = [s.series_id]
+            info[t1].append([s.series_id])
 
         if (('T2 FLAIR SPACE' in s.series_description) and
                 ('spcir_192ns' in s.sequence_name)):
-            info[flair] = [s.series_id]
+            info[flair].append([s.series_id])
 
         # Multiband EPI Rest
 
         if (('mbep2d_bold 3mm R>>L' in s.series_description) and
                 ('epfid2d1_64' in s.sequence_name) and
                 (s.dim4 == 500)):
-            info[rest_mbepi] = [s.series_id]
-            info[rest_mbepi_topup_rl] = [s.series_id]
+            info[rest_mbepi].append([s.series_id])
+            info[rest_mbepi_topup_rl].append([s.series_id])
 
         if (('mbep2d_bold 3mm L>>R_SBRef' in s.series_description) and
                 ('epfid2d1_64' in s.sequence_name) and
                 (s.dim4 == 1)):
-            info[rest_mbepi_sbref] = [s.series_id]
+            info[rest_mbepi_sbref].append([s.series_id])
 
         if (('mbep2d_bold 3mm L>>R' in s.series_description) and
                 ('epfid2d1_64' in s.sequence_name) and
                 (s.dim4 == 10)):
-            info[rest_mbepi_topup_lr] = [s.series_id]
+            info[rest_mbepi_topup_lr].append([s.series_id])
 
         # EPI Rest with TOPUP correction
 
         if (('BOLD_resting 4X4X4 A>>P' in s.series_description) and
                 ('epfid2d1_64' in s.sequence_name) and
                 (s.dim4 == 190)):
-            info[rest_epi_topup] = [s.series_id]
+            info[rest_epi_topup].append([s.series_id])
 
         if (('rest_topup_A>>P' in s.series_description) and
                 ('epse2d1_64' in s.sequence_name) and
                 (s.dim3 == 140) and
                 (s.dim4 == 1)):
-            info[rest_epi_topup_ap] = [s.series_id]
+            info[rest_epi_topup_ap].append([s.series_id])
 
         if (('rest_topup_P>>A' in s.series_description) and
                 ('epse2d1_64' in s.sequence_name) and
                 (s.dim3 == 140) and
                 (s.dim4 == 1)):
-            info[rest_epi_topup_pa] = [s.series_id]
+            info[rest_epi_topup_pa].append([s.series_id])
 
         # REST EPI with Field Map correction
 
         if (('BOLD_resting 4X4X4 A>>P' in s.series_description) and
                 ('epfid2d1_64' in s.sequence_name) and
                 (s.dim4 == 190)):
-            info[rest_epi_fmap] = [s.series_id]
+            info[rest_epi_fmap].append([s.series_id])
 
         if (('Field_mapping 4X4X4 A>>P' in s.series_description) and
                 ('fm2d2r' in s.sequence_name) and
                 (s.dim3 == 35) and
                 (s.TE == 4.92)):
-            info[fmap_magnitude1] = [s.series_id]
+            info[fmap_magnitude1].append([s.series_id])
 
         if (('Field_mapping 4X4X4 A>>P' in s.series_description) and
                 ('fm2d2r' in s.sequence_name) and
                 (s.dim3 == 35) and
                 (s.TE == 7.38)):
-            info[fmap_phasediff] = [s.series_id]
+            info[fmap_phasediff].append([s.series_id])
 
         # DTI with TOPUP correction
 
         if (('DTI_30dir_1b0 A>>P' in s.series_description) and
                 ('ep_b0' in s.sequence_name) and
                 (s.dim4 == 31)):
-            info[dti_30dir_ap] = [s.series_id]
-            info[dti_30dir_topup_ap] = [s.series_id]
+            info[dti_30dir_ap].append([s.series_id])
+            info[dti_30dir_topup_ap].append([s.series_id])
 
         if (('DTI_30dir_1b0 P>>A' in s.series_description) and
                 ('ep_b0' in s.sequence_name) and
                 (s.dim4 == 1)):
-            info[dti_30dir_topup_pa] = [s.series_id]
+            info[dti_30dir_topup_pa].append([s.series_id])
 
         # pCASL
 
@@ -418,20 +418,20 @@ def infotodict(seqinfo):
             ('pcasl_wfu_4_0C R>>L EYES OPEN' in s.series_description)) and
                 ('epfid2d1_56' in s.sequence_name) and
                 (s.dim4 == 81)):
-            info[pcasl_rest_rl] = [s.series_id]
-            info[pcasl_rest_topup_rl] = [s.series_id]
+            info[pcasl_rest_rl].append([s.series_id])
+            info[pcasl_rest_topup_rl].append([s.series_id])
 
         if ((('pcasl_wfu_3_1 L>>R' in s.series_description) or
              ('pcasl_wfu_4_0C L>>R' in s.series_description)) and
             ('epfid2d1_56' in s.sequence_name) and
                 (s.dim4 == 3)):
-            info[pcasl_rest_topup_lr] = [s.series_id]
+            info[pcasl_rest_topup_lr].append([s.series_id])
 
         # pCASL with high CO2
 
         if (('pcasl_wfu_4_0C 3min highCO2' in s.series_description) and
                 ('epfid2d1_64' in s.sequence_name) and
                 (s.dim4 == 107)):
-            info[pcasl_high_co2_lr] = [s.series_id]
+            info[pcasl_high_co2_lr].append([s.series_id])
 
     return info
