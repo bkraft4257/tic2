@@ -6,10 +6,12 @@ case $(hostname -s ) in
   aging1a | aging2a )
 	SOFTWARE_PATH=/aging1/software/
 	export FSL509_DIR=$SOFTWARE_PATH/fsl5.09
+	MATLAB_PATH=/aging1/software/matlab/bin
     ;;
   aging3a)
 	SOFTWARE_PATH=/aging1/software/
 	export FSL509_DIR=/opt/fsl5.09
+	MATLAB_PATH=/opt/matlab-R2015a/bin
     ;;
 
   *)
@@ -25,6 +27,8 @@ export DOT_TIC_PATH=$HOME/.tic
 export TIC_PYTHONPATH=$TIC_PATH/:$TIC_PATH/bin
 export PYTHONPATH=$TIC_PYTHONPATH:$PYTHONPATH
 export PYTHONDONTWRITEBYTECODE=1
+
+export TIC_REDCAP_LINK_PATH=$TIC_PATH/../tic_redcap_link
 
 # Templates
 
@@ -102,8 +106,6 @@ fi
 
 # MATLAB and third Party Configuration 
 
-   MATLAB_PATH=/opt/matlab-R2015a/bin
-   # MATLAB_PATH=/aging1/software/R2014b/bin
    export PATH=${MATLAB_PATH}:$PATH
 
    export SPM_PATH=${SOFTWARE_PATH}/SPM12
