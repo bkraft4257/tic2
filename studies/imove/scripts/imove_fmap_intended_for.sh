@@ -24,7 +24,7 @@ fi
 echo
 echo
 
-find ../func/ -name "*task-rest_acq-epi_rec-topup_bold.gz" | sort | xargs fmap_intended_for.py -i *_acq-epse_dir-{ap,pa}_epi.json --overwrite -v
+find ../func/ -name "*task-rest_acq-epi_rec-topup_bold.nii.gz" | sort | xargs fmap_intended_for.py -i *_acq-epse_dir-{ap,pa}_epi.json --overwrite -v
 
 echo
 echo
