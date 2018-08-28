@@ -134,7 +134,6 @@ def _rename_hdc_item_number_1(start_directory=None):
 
     for ii, ii_file in enumerate(files):
 
-        print(ii)
         try:
             os.rename(ii_file,
                       ii_file.replace('.1.', '.')
@@ -143,13 +142,19 @@ def _rename_hdc_item_number_1(start_directory=None):
             pass  # Ignore file not found errors
 
 
-def _remove_files(start_directory=None):
+def _remove_files(start_directory=None, unwanted_glob_pattern=['*~', '*magnitude1.json']):
+    """
+    Removes unwanted files in the BIDS directory.
+    This includes
+    :param start_directory:
+    :return:
+    """
 
     if start_directory is None:
         start_directory = '.'
 
     files = []
-    for ii_glob_pattern in ['*~', '*magnitude1.json']:
+    for ii_glob_pattern in unwanted_glob_pattern:
         glob_string = os.path.join(f'{start_directory}', '**', ii_glob_pattern)
         files.extend(glob.glob(glob_string, recursive=True))
 
@@ -201,9 +206,9 @@ def _clean_bids(start_directory, lock, unlock):
     :return:
     """
 
-    print('__clean_bids__')
     _rename_hdc_item_number_1(start_directory)
     _remove_files(start_directory)
+
     _list_hdc_item_number_2(start_directory)
 
     if lock:
@@ -222,7 +227,8 @@ def main():
 
     for ii_subject in in_args.subject:
 
-        print(ii_subject)
+        print(f'\n=================================================================================')
+        print(f'{ii_subject}\n')
 
         if ii_subject is None:
             start_directory = ACTIVE_BIDS_PATH
