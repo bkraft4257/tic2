@@ -92,6 +92,9 @@ def _list_hdc_item_number_2(start_directory=None):
 
         print('\n')
 
+    else:
+        print('\nNo repeated scans were found.\n\n')
+
 
 def _rename_hdc_item_number_1(start_directory=None):
     """
