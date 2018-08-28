@@ -7,3 +7,5 @@ alias reimove='source $IMOVE_SCRIPTS_PATH/../aliases.sh'
 # name.
 
 alias imove_netprep_gi='$IMOVE_SCRIPTS_PATH/imove_gi_netprep.sh'
+
+alias imove_fif='$IMOVE_SCRIPTS_PATH/imove_fmap_intended_for.sh'

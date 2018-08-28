@@ -151,14 +151,17 @@ always look at the code for each bash shell script wrapper in the $TIC_PATH/bin 
 Clean BIDS directory
 --------------------
 Once the DICOM images have been converted the BIDS directory needs to be cleaned.  The cleaning process
-is specific to each study.  However, cleaning primarily does three things:
+is specific to each study.  However, cleaning primarily does two things:
 
 1. Remove .1. from all filenames.
-1. FSL ROI topup files so the PA/AP or RL/LR have the same number of volumes before starting fmriprep.
 1. Sets the IntendedFor field in the fmap json files to to apply the TOPUP/Field Map to the EPI data.
 
+For DTI studies cleaning may also include
+
+1. truncating DTI B0 image for the TOPUP AP/RL and PA/LR scans to have the same number of volumes.
+
 In earlier studies bash scripts were written to do this cleaning process. While these bash scripts worked well they
-were not easily extended.  For this reason Steps 1 and 3 have been rewritten to generic functions clean_bids.py and
+were not easily extended.  For this reason, BIDS cleaning has been rewritten to generic functions clean_bids.py and
 fmap_intended_for.py.  These two scripts allow one to clean the BIDS directory for fmriprep.
 
 

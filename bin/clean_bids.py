@@ -15,7 +15,7 @@ from collections import Iterable
 
 
 ACTIVE_BIDS_PATH = os.environ['ACTIVE_BIDS_PATH']
-
+EXTENSIONS = ('nii.gz', 'json', 'bvec', 'bval')
 
 def force_to_list(inp, basetype=int):
     """
@@ -78,7 +78,7 @@ def _list_hdc_item_number_2(start_directory=None):
         start_directory = '.'
 
     files = []
-    for ext in ('nii.gz', 'json'):
+    for ext in EXTENSIONS:
         glob_string = os.path.join(f'{start_directory}', '**', '**', f'*.[0-9].{ext}')
         files.extend(glob.glob(glob_string, recursive=True))
 
@@ -92,6 +92,9 @@ def _list_hdc_item_number_2(start_directory=None):
 
         print('\n')
 
+    else:
+        print('\nNo repeated scans were found.\n\n')
+
 
 def _rename_hdc_item_number_1(start_directory=None):
     """
@@ -104,22 +107,51 @@ def _rename_hdc_item_number_1(start_directory=None):
         start_directory = '.'
 
     files = []
-    for ext in ('nii.gz', 'json'):
+    for ext in EXTENSIONS:
         glob_string = os.path.join(f'{start_directory}', '**', f'*.1.{ext}')
         files.extend(glob.glob(glob_string, recursive=True))
 
     for ii, ii_file in enumerate(files):
+        ii_new_file = ii_file.replace('.1.', '.')
+
+        print(f'Renaming {ii_file} to {ii_new_file}')
+
         try:
-            os.rename(ii_file,
-                      ii_file.replace('.1.', '.')
-                      )
+            os.rename(ii_file, ii_new_file,)
+
         except FileNotFoundError:
             pass  # Ignore file not found errors
 
 
-def _rename_hdc_item_number_1(start_directory=None):
-    """
+# def _rename_hdc_item_number_1(start_directory=None):
+#     """
+#
+#     :param start_directory:
+#     :return:
+#     """
+#
+#     if start_directory is None:
+#         start_directory = '.'
+#
+#     files = []
+#     for ext in ('nii.gz', 'json'):
+#         glob_string = os.path.join(f'{start_directory}', '**', '**', f'*.1.{ext}')
+#         files.extend(glob.glob(glob_string, recursive=True))
+#
+#     for ii, ii_file in enumerate(files):
+#
+#         try:
+#             os.rename(ii_file,
+#                       ii_file.replace('.1.', '.')
+#                       )
+#         except FileNotFoundError
+#             pass  # Ignore file not found errors
 
+
+def _remove_files(start_directory=None, unwanted_glob_pattern=['*~', '*magnitude1.json']):
+    """
+    Removes unwanted files in the BIDS directory.
+    This includes
     :param start_directory:
     :return:
     """
@@ -128,26 +160,7 @@ def _rename_hdc_item_number_1(start_directory=None):
         start_directory = '.'
 
     files = []
-    for ext in ('nii.gz', 'json'):
-        glob_string = os.path.join(f'{start_directory}', '**', '**', f'*.1.{ext}')
-        files.extend(glob.glob(glob_string, recursive=True))
-
-    for ii, ii_file in enumerate(files):
-        try:
-            os.rename(ii_file,
-                      ii_file.replace('.1.', '.')
-                      )
-        except FileNotFoundError:
-            pass  # Ignore file not found errors
-
-
-def _remove_files(start_directory=None):
-
-    if start_directory is None:
-        start_directory = '.'
-
-    files = []
-    for ii_glob_pattern in ['*~', '*magnitude1.json']:
+    for ii_glob_pattern in unwanted_glob_pattern:
         glob_string = os.path.join(f'{start_directory}', '**', ii_glob_pattern)
         files.extend(glob.glob(glob_string, recursive=True))
 
@@ -191,9 +204,17 @@ def set_write_permissions(start_directory, lock=True):
 
 
 def _clean_bids(start_directory, lock, unlock):
+    """
+
+    :param start_directory:
+    :param lock:
+    :param unlock:
+    :return:
+    """
 
     _rename_hdc_item_number_1(start_directory)
     _remove_files(start_directory)
+
     _list_hdc_item_number_2(start_directory)
 
     if lock:
@@ -212,12 +233,16 @@ def main():
 
     for ii_subject in in_args.subject:
 
+        print(f'\n=================================================================================')
+
         if ii_subject is None:
             start_directory = ACTIVE_BIDS_PATH
+            print(f'Cleaning {start_directory}\n')
             _clean_bids(start_directory, in_args.lock, in_args.unlock)
 
         else:
             for ii_session in in_args.session:
+                print(f'Cleaning sub-{ii_subject}/ses-{ii_session}\n')
                 start_directory = os.path.abspath(os.path.join(ACTIVE_BIDS_PATH,
                                                                f'sub-{ii_subject}',
                                                                f'ses-{ii_session}'
