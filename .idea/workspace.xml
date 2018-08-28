@@ -1,8 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="6f3e13b3-cd58-4c4d-98f6-1a68f8358bfb" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+    <list default="true" id="6f3e13b3-cd58-4c4d-98f6-1a68f8358bfb" name="Default" comment="Updated fieldmap to have a more descriptive column name.">
+      <change beforePath="" afterPath="$PROJECT_DIR$/studies/hfpef/scripts/hfpef_fmap_intended_for.sh" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/studies/imove/scripts/imove_fmap_intended_for.sh" />
+      <change beforePath="$PROJECT_DIR$/bin/clean_bids.py" afterPath="$PROJECT_DIR$/bin/clean_bids.py" />
+      <change beforePath="$PROJECT_DIR$/bin/fmap_intended_for.py" afterPath="$PROJECT_DIR$/bin/fmap_intended_for.py" />
+      <change beforePath="$PROJECT_DIR$/bin/fmap_intended_for_check.py" afterPath="$PROJECT_DIR$/bin/fmap_intended_for_check.py" />
+      <change beforePath="$PROJECT_DIR$/docs/source/other/quick_reference.rst" afterPath="$PROJECT_DIR$/docs/source/other/quick_reference.rst" />
+      <change beforePath="$PROJECT_DIR$/init/tic_aliases.sh" afterPath="$PROJECT_DIR$/init/tic_aliases.sh" />
+      <change beforePath="$PROJECT_DIR$/studies/active/aliases.sh" afterPath="$PROJECT_DIR$/studies/active/aliases.sh" />
+      <change beforePath="$PROJECT_DIR$/studies/hfpef/aliases.sh" afterPath="$PROJECT_DIR$/studies/hfpef/aliases.sh" />
+      <change beforePath="$PROJECT_DIR$/studies/hfpef/scripts/hfpef_protocol.py" afterPath="$PROJECT_DIR$/studies/hfpef/scripts/hfpef_protocol.py" />
+      <change beforePath="$PROJECT_DIR$/studies/imove/aliases.sh" afterPath="$PROJECT_DIR$/studies/imove/aliases.sh" />
+      <change beforePath="$PROJECT_DIR$/studies/imove/environment.sh" afterPath="$PROJECT_DIR$/studies/imove/environment.sh" />
+      <change beforePath="$PROJECT_DIR$/studies/mfc/scripts/mfc_protocol.py" afterPath="$PROJECT_DIR$/studies/mfc/scripts/mfc_protocol.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -54,63 +66,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="fmap_intended_for.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="fmap_intended_for.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/bin/fmap_intended_for.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="114" column="0" lean-forward="false" selection-start-line="114" selection-start-column="0" selection-end-line="114" selection-end-column="0" />
-              <folding>
-                <element signature="e#108#140#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="hfpef_fmap_intended_for.sh" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/studies/hfpef/scripts/hfpef_fmap_intended_for.sh">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="263">
-              <caret line="46" column="31" lean-forward="false" selection-start-line="46" selection-start-column="31" selection-end-line="46" selection-end-column="31" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="aliases.sh" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/studies/imove/aliases.sh">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="10" column="42" lean-forward="false" selection-start-line="10" selection-start-column="42" selection-end-line="10" selection-end-column="42" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="hfpef_clean_bids.sh" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/studies/hfpef/scripts/hfpef_clean_bids.sh">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-944">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="clean_bids.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/bin/clean_bids.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="70">
-              <caret line="131" column="1" lean-forward="true" selection-start-line="131" selection-start-column="1" selection-end-line="131" selection-end-column="1" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="imove_fmap_intended_for.sh" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/studies/imove/scripts/imove_fmap_intended_for.sh">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="419">
-              <caret line="41" column="31" lean-forward="false" selection-start-line="41" selection-start-column="31" selection-end-line="41" selection-end-column="31" />
+            <state relative-caret-position="1360">
+              <caret line="86" column="0" lean-forward="false" selection-start-line="49" selection-start-column="0" selection-end-line="86" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -119,29 +79,56 @@
       <file leaf-file-name="tic_aliases.sh" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/init/tic_aliases.sh">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="5" column="0" lean-forward="false" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+            <state relative-caret-position="119">
+              <caret line="7" column="9" lean-forward="false" selection-start-line="7" selection-start-column="9" selection-end-line="7" selection-end-column="9" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="aliases.sh" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/studies/active/aliases.sh">
+      <file leaf-file-name="get_dicominfo.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/bin/get_dicominfo.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="51">
-              <caret line="3" column="0" lean-forward="true" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+            <state relative-caret-position="17">
+              <caret line="1" column="23" lean-forward="false" selection-start-line="1" selection-start-column="23" selection-end-line="1" selection-end-column="23" />
+              <folding>
+                <element signature="e#80#95#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="requirements.txt" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/requirements.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="221">
+              <caret line="13" column="16" lean-forward="false" selection-start-line="13" selection-start-column="16" selection-end-line="13" selection-end-column="16" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="clean_bids.sh" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/bin/clean_bids.sh">
+      <file leaf-file-name="tic_processing.rst" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/docs/source/tic_processing.rst">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="289">
-              <caret line="17" column="0" lean-forward="true" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="tic_welcome.md" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/docs/source/tic_welcome.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="0">
+                <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+                <folding />
+              </first_editor>
+              <second_editor>
+                <js_state />
+              </second_editor>
             </state>
           </provider>
         </entry>
@@ -149,8 +136,43 @@
       <file leaf-file-name="quick_reference.rst" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/docs/source/other/quick_reference.rst">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="133">
-              <caret line="163" column="62" lean-forward="false" selection-start-line="163" selection-start-column="62" selection-end-line="163" selection-end-column="62" />
+            <state relative-caret-position="3179">
+              <caret line="187" column="50" lean-forward="true" selection-start-line="187" selection-start-column="50" selection-end-line="187" selection-end-column="50" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="singularity_images.md" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/docs/source/other/singularity_images.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="0">
+                <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+                <folding />
+              </first_editor>
+              <second_editor>
+                <js_state />
+              </second_editor>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="fmriprep.sh" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/bin/fmriprep.sh">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="289">
+              <caret line="17" column="0" lean-forward="false" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="fmap_intended_for_check.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/bin/fmap_intended_for_check.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="364">
+              <caret line="84" column="19" lean-forward="false" selection-start-line="84" selection-start-column="19" selection-end-line="84" selection-end-column="19" />
               <folding />
             </state>
           </provider>
@@ -170,6 +192,8 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
+      <find>_run-{item:02d}</find>
+      <find>clean</find>
       <find>{item:02d}</find>
       <find>MCF_</find>
       <find>mcf</find>
@@ -196,10 +220,8 @@
       <find>HFPEF</find>
       <find>rest</find>
       <find>func_con</find>
-      <find>&quot;</find>
-      <find>= [s.series_id]</find>
       <find>print</find>
-      <find>__clean_</find>
+      <find>&quot;</find>
     </findStrings>
     <replaceStrings>
       <replace>01d</replace>
@@ -223,7 +245,6 @@
       <replace>imove</replace>
       <replace>IMOVE</replace>
       <replace>'</replace>
-      <replace>.append([s.series_id])</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -238,11 +259,15 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
+        <option value="$PROJECT_DIR$/studies/mfc/scripts/conn_gather_inputs.yaml" />
+        <option value="$PROJECT_DIR$/tic_core/fmriprep_support_functions.py" />
         <option value="$PROJECT_DIR$/tic_core/tic_io.py" />
         <option value="$PROJECT_DIR$/bin/conn_gather_inputs.py" />
         <option value="$PROJECT_DIR$/tic_core/operations.py" />
+        <option value="$PROJECT_DIR$/studies/mfc/scripts/mfc_protocol.py" />
         <option value="$PROJECT_DIR$/bin/act_v2.sh" />
         <option value="$PROJECT_DIR$/bin/mriqc_group.sh" />
+        <option value="$PROJECT_DIR$/studies/active/aliases.sh" />
         <option value="$PROJECT_DIR$/tests/test_fmriprep_tools.py" />
         <option value="$PROJECT_DIR$/init/tic_wake_aging1a_environment.sh" />
         <option value="$PROJECT_DIR$/bin/tic_info.sh" />
@@ -260,35 +285,31 @@
         <option value="$PROJECT_DIR$/studies/synergy/scripts/synergy_netprep_gather_inputs.sh" />
         <option value="$PROJECT_DIR$/studies/hfpef/scripts/hfpef_gi_netprep_mbepi.sh" />
         <option value="$PROJECT_DIR$/studies/hfpef/scripts/hfpef_gi_netprep_epi.sh" />
+        <option value="$PROJECT_DIR$/studies/hfpef/aliases.sh" />
+        <option value="$PROJECT_DIR$/studies/imove/aliases.sh" />
         <option value="$PROJECT_DIR$/studies/imove/scripts/imove_gi_netprep.sh" />
         <option value="$PROJECT_DIR$/studies/imove/scripts/imove_gi_netprep_epi.sh" />
         <option value="$PROJECT_DIR$/studies/imove/scripts/imove_gi_netprep_mbepi.sh" />
         <option value="$PROJECT_DIR$/studies/infinite/scripts/inf_netprep_gi.sh" />
+        <option value="$PROJECT_DIR$/studies/hfpef/scripts/hfpef_protocol.py" />
+        <option value="$PROJECT_DIR$/studies/imove/environment.sh" />
+        <option value="$PROJECT_DIR$/bin/clean_bids.py" />
         <option value="$PROJECT_DIR$/bin/active_study_info.sh" />
         <option value="$PROJECT_DIR$/studies/cenc/environment.sh" />
+        <option value="$PROJECT_DIR$/bin/mriqc.sh" />
+        <option value="$PROJECT_DIR$/bin/fmriprep.sh" />
+        <option value="$PROJECT_DIR$/bin/act.sh" />
         <option value="$PROJECT_DIR$/tic_core/fmriprep_tools.py" />
+        <option value="$PROJECT_DIR$/bin/fmap_intended_for.py" />
         <option value="$PROJECT_DIR$/studies/mfc/aliases.sh" />
         <option value="$PROJECT_DIR$/studies/mfc/scripts/mfc_fmap_intended_for.sh" />
         <option value="$PROJECT_DIR$/studies/mfc/scripts/mfc_fmap_intended_for.py" />
         <option value="$PROJECT_DIR$/bin/excel_to_csv.py" />
         <option value="$PROJECT_DIR$/requirements.txt" />
         <option value="$PROJECT_DIR$/bin/get_dicominfo.py" />
-        <option value="$PROJECT_DIR$/bin/mriqc.sh" />
-        <option value="$PROJECT_DIR$/bin/act.sh" />
-        <option value="$PROJECT_DIR$/bin/fmriprep.sh" />
-        <option value="$PROJECT_DIR$/studies/hfpef/scripts/hfpef_protocol.py" />
-        <option value="$PROJECT_DIR$/studies/mfc/scripts/mfc_protocol.py" />
-        <option value="$PROJECT_DIR$/studies/hfpef/aliases.sh" />
-        <option value="$PROJECT_DIR$/bin/fmap_intended_for_check.py" />
-        <option value="$PROJECT_DIR$/studies/imove/environment.sh" />
-        <option value="$PROJECT_DIR$/studies/imove/aliases.sh" />
         <option value="$PROJECT_DIR$/docs/source/other/quick_reference.rst" />
         <option value="$PROJECT_DIR$/init/tic_aliases.sh" />
-        <option value="$PROJECT_DIR$/studies/active/aliases.sh" />
-        <option value="$PROJECT_DIR$/bin/clean_bids.py" />
-        <option value="$PROJECT_DIR$/studies/imove/scripts/imove_fmap_intended_for.sh" />
-        <option value="$PROJECT_DIR$/studies/hfpef/scripts/hfpef_fmap_intended_for.sh" />
-        <option value="$PROJECT_DIR$/bin/fmap_intended_for.py" />
+        <option value="$PROJECT_DIR$/bin/fmap_intended_for_check.py" />
       </list>
     </option>
   </component>
@@ -299,9 +320,9 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="y" value="23" />
+    <option name="y" value="-22" />
     <option name="width" value="1440" />
-    <option name="height" value="877" />
+    <option name="height" value="899" />
   </component>
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
@@ -337,6 +358,17 @@
             <path>
               <item name="tic_core" type="b2602c69:ProjectViewProjectNode" />
               <item name="tic_core" type="462c0819:PsiDirectoryNode" />
+              <item name="docs" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="tic_core" type="b2602c69:ProjectViewProjectNode" />
+              <item name="tic_core" type="462c0819:PsiDirectoryNode" />
+              <item name="docs" type="462c0819:PsiDirectoryNode" />
+              <item name="source" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="tic_core" type="b2602c69:ProjectViewProjectNode" />
+              <item name="tic_core" type="462c0819:PsiDirectoryNode" />
               <item name="init" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -347,34 +379,7 @@
             <path>
               <item name="tic_core" type="b2602c69:ProjectViewProjectNode" />
               <item name="tic_core" type="462c0819:PsiDirectoryNode" />
-              <item name="studies" type="462c0819:PsiDirectoryNode" />
-              <item name="active" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="tic_core" type="b2602c69:ProjectViewProjectNode" />
-              <item name="tic_core" type="462c0819:PsiDirectoryNode" />
-              <item name="studies" type="462c0819:PsiDirectoryNode" />
-              <item name="hfpef" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="tic_core" type="b2602c69:ProjectViewProjectNode" />
-              <item name="tic_core" type="462c0819:PsiDirectoryNode" />
-              <item name="studies" type="462c0819:PsiDirectoryNode" />
-              <item name="hfpef" type="462c0819:PsiDirectoryNode" />
-              <item name="scripts" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="tic_core" type="b2602c69:ProjectViewProjectNode" />
-              <item name="tic_core" type="462c0819:PsiDirectoryNode" />
-              <item name="studies" type="462c0819:PsiDirectoryNode" />
-              <item name="imove" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="tic_core" type="b2602c69:ProjectViewProjectNode" />
-              <item name="tic_core" type="462c0819:PsiDirectoryNode" />
-              <item name="studies" type="462c0819:PsiDirectoryNode" />
-              <item name="imove" type="462c0819:PsiDirectoryNode" />
-              <item name="scripts" type="462c0819:PsiDirectoryNode" />
+              <item name="tests" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="tic_core" type="b2602c69:ProjectViewProjectNode" />
@@ -396,11 +401,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/studies/imove/scripts" />
-      <recent name="$PROJECT_DIR$/studies/hfpef/scripts" />
       <recent name="$PROJECT_DIR$/studies/mfc/scripts" />
+      <recent name="$PROJECT_DIR$/studies/imove/scripts" />
       <recent name="$PROJECT_DIR$/bin" />
       <recent name="$PROJECT_DIR$/tests/data" />
+      <recent name="$PROJECT_DIR$/tests" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/../bin" />
@@ -595,6 +600,209 @@
       <option name="presentableId" value="Default" />
       <updated>1517948604886</updated>
     </task>
+    <task id="LOCAL-00641" summary="Moving clean_bids to python. Updated permissions.">
+      <created>1527364502112</created>
+      <option name="number" value="00641" />
+      <option name="presentableId" value="LOCAL-00641" />
+      <option name="project" value="LOCAL" />
+      <updated>1527364502112</updated>
+    </task>
+    <task id="LOCAL-00642" summary="Moving clean_bids to python. Updated permissions.">
+      <created>1527364734713</created>
+      <option name="number" value="00642" />
+      <option name="presentableId" value="LOCAL-00642" />
+      <option name="project" value="LOCAL" />
+      <updated>1527364734713</updated>
+    </task>
+    <task id="LOCAL-00643" summary="Moving clean_bids to python. Updated permissions.">
+      <created>1528221370613</created>
+      <option name="number" value="00643" />
+      <option name="presentableId" value="LOCAL-00643" />
+      <option name="project" value="LOCAL" />
+      <updated>1528221370614</updated>
+    </task>
+    <task id="LOCAL-00644" summary="Moving clean_bids to python. Updated permissions.">
+      <created>1528221526192</created>
+      <option name="number" value="00644" />
+      <option name="presentableId" value="LOCAL-00644" />
+      <option name="project" value="LOCAL" />
+      <updated>1528221526192</updated>
+    </task>
+    <task id="LOCAL-00645" summary="Moving clean_bids to python. Updated permissions.">
+      <created>1528222124273</created>
+      <option name="number" value="00645" />
+      <option name="presentableId" value="LOCAL-00645" />
+      <option name="project" value="LOCAL" />
+      <updated>1528222124274</updated>
+    </task>
+    <task id="LOCAL-00646" summary="Moving clean_bids to python. Updated permissions.">
+      <created>1528224368409</created>
+      <option name="number" value="00646" />
+      <option name="presentableId" value="LOCAL-00646" />
+      <option name="project" value="LOCAL" />
+      <updated>1528224368409</updated>
+    </task>
+    <task id="LOCAL-00647" summary="Moving clean_bids to python. Updated permissions.">
+      <created>1528225892343</created>
+      <option name="number" value="00647" />
+      <option name="presentableId" value="LOCAL-00647" />
+      <option name="project" value="LOCAL" />
+      <updated>1528225892343</updated>
+    </task>
+    <task id="LOCAL-00648" summary="Moving clean_bids to python. Updated permissions.">
+      <created>1528226182618</created>
+      <option name="number" value="00648" />
+      <option name="presentableId" value="LOCAL-00648" />
+      <option name="project" value="LOCAL" />
+      <updated>1528226182618</updated>
+    </task>
+    <task id="LOCAL-00649" summary="Moving clean_bids to python. Updated permissions.">
+      <created>1528227056704</created>
+      <option name="number" value="00649" />
+      <option name="presentableId" value="LOCAL-00649" />
+      <option name="project" value="LOCAL" />
+      <updated>1528227056704</updated>
+    </task>
+    <task id="LOCAL-00650" summary="Moving clean_bids to python. Updated permissions.">
+      <created>1528227135823</created>
+      <option name="number" value="00650" />
+      <option name="presentableId" value="LOCAL-00650" />
+      <option name="project" value="LOCAL" />
+      <updated>1528227135823</updated>
+    </task>
+    <task id="LOCAL-00651" summary="Moving clean_bids to python. Updated permissions.">
+      <created>1528227209250</created>
+      <option name="number" value="00651" />
+      <option name="presentableId" value="LOCAL-00651" />
+      <option name="project" value="LOCAL" />
+      <updated>1528227209250</updated>
+    </task>
+    <task id="LOCAL-00652" summary="Moving clean_bids to python. Updated permissions.">
+      <created>1528227266594</created>
+      <option name="number" value="00652" />
+      <option name="presentableId" value="LOCAL-00652" />
+      <option name="project" value="LOCAL" />
+      <updated>1528227266594</updated>
+    </task>
+    <task id="LOCAL-00653" summary="Moving clean_bids to python. Updated permissions.">
+      <created>1528227550720</created>
+      <option name="number" value="00653" />
+      <option name="presentableId" value="LOCAL-00653" />
+      <option name="project" value="LOCAL" />
+      <updated>1528227550720</updated>
+    </task>
+    <task id="LOCAL-00654" summary="Moving clean_bids to python. Updated permissions.">
+      <created>1528228101906</created>
+      <option name="number" value="00654" />
+      <option name="presentableId" value="LOCAL-00654" />
+      <option name="project" value="LOCAL" />
+      <updated>1528228101906</updated>
+    </task>
+    <task id="LOCAL-00655" summary="Moving clean_bids to python. Updated permissions.">
+      <created>1528228635326</created>
+      <option name="number" value="00655" />
+      <option name="presentableId" value="LOCAL-00655" />
+      <option name="project" value="LOCAL" />
+      <updated>1528228635327</updated>
+    </task>
+    <task id="LOCAL-00656" summary="Updated intended for to produce a single string to be written to file. &#10;This is just the first step.">
+      <created>1528403169135</created>
+      <option name="number" value="00656" />
+      <option name="presentableId" value="LOCAL-00656" />
+      <option name="project" value="LOCAL" />
+      <updated>1528403169135</updated>
+    </task>
+    <task id="LOCAL-00657" summary="Converted string to a single string to be printed.">
+      <created>1528403744161</created>
+      <option name="number" value="00657" />
+      <option name="presentableId" value="LOCAL-00657" />
+      <option name="project" value="LOCAL" />
+      <updated>1528403744161</updated>
+    </task>
+    <task id="LOCAL-00658" summary="Converted string to a single string to be printed.">
+      <created>1528404615756</created>
+      <option name="number" value="00658" />
+      <option name="presentableId" value="LOCAL-00658" />
+      <option name="project" value="LOCAL" />
+      <updated>1528404615756</updated>
+    </task>
+    <task id="LOCAL-00659" summary="Converted string to a single string to be printed.">
+      <created>1528404660004</created>
+      <option name="number" value="00659" />
+      <option name="presentableId" value="LOCAL-00659" />
+      <option name="project" value="LOCAL" />
+      <updated>1528404660004</updated>
+    </task>
+    <task id="LOCAL-00660" summary="Converted string to a single string to be printed.">
+      <created>1528405296028</created>
+      <option name="number" value="00660" />
+      <option name="presentableId" value="LOCAL-00660" />
+      <option name="project" value="LOCAL" />
+      <updated>1528405296028</updated>
+    </task>
+    <task id="LOCAL-00661" summary="Converted string to a single string to be printed.">
+      <created>1528405319054</created>
+      <option name="number" value="00661" />
+      <option name="presentableId" value="LOCAL-00661" />
+      <option name="project" value="LOCAL" />
+      <updated>1528405319054</updated>
+    </task>
+    <task id="LOCAL-00662" summary="Converted string to a single string to be printed.">
+      <created>1528406168104</created>
+      <option name="number" value="00662" />
+      <option name="presentableId" value="LOCAL-00662" />
+      <option name="project" value="LOCAL" />
+      <updated>1528406168104</updated>
+    </task>
+    <task id="LOCAL-00663" summary="Added ability for multiple input files.">
+      <created>1528406648967</created>
+      <option name="number" value="00663" />
+      <option name="presentableId" value="LOCAL-00663" />
+      <option name="project" value="LOCAL" />
+      <updated>1528406648967</updated>
+    </task>
+    <task id="LOCAL-00664" summary="Added ability for multiple input files.">
+      <created>1528407261135</created>
+      <option name="number" value="00664" />
+      <option name="presentableId" value="LOCAL-00664" />
+      <option name="project" value="LOCAL" />
+      <updated>1528407261135</updated>
+    </task>
+    <task id="LOCAL-00665" summary="Added ability for multiple input files.">
+      <created>1528407514228</created>
+      <option name="number" value="00665" />
+      <option name="presentableId" value="LOCAL-00665" />
+      <option name="project" value="LOCAL" />
+      <updated>1528407514228</updated>
+    </task>
+    <task id="LOCAL-00666" summary="Added ability for multiple input files.">
+      <created>1528407633601</created>
+      <option name="number" value="00666" />
+      <option name="presentableId" value="LOCAL-00666" />
+      <option name="project" value="LOCAL" />
+      <updated>1528407633602</updated>
+    </task>
+    <task id="LOCAL-00667" summary="Added ability for multiple input files.">
+      <created>1528407832626</created>
+      <option name="number" value="00667" />
+      <option name="presentableId" value="LOCAL-00667" />
+      <option name="project" value="LOCAL" />
+      <updated>1528407832626</updated>
+    </task>
+    <task id="LOCAL-00668" summary="Added ability for multiple input files.">
+      <created>1528464262429</created>
+      <option name="number" value="00668" />
+      <option name="presentableId" value="LOCAL-00668" />
+      <option name="project" value="LOCAL" />
+      <updated>1528464262430</updated>
+    </task>
+    <task id="LOCAL-00669" summary="Added script to run intended for MFC.">
+      <created>1528464379908</created>
+      <option name="number" value="00669" />
+      <option name="presentableId" value="LOCAL-00669" />
+      <option name="project" value="LOCAL" />
+      <updated>1528464379908</updated>
+    </task>
     <task id="LOCAL-00670" summary="Added script to run intended for MFC.">
       <created>1528464421460</created>
       <option name="number" value="00670" />
@@ -735,210 +943,7 @@
       <option name="project" value="LOCAL" />
       <updated>1532168680592</updated>
     </task>
-    <task id="LOCAL-00690" summary="Fixed bug in HFPEF and MFC protocols. Series_ids are now appended instead &#10;set equal to info dict.">
-      <created>1534880556621</created>
-      <option name="number" value="00690" />
-      <option name="presentableId" value="LOCAL-00690" />
-      <option name="project" value="LOCAL" />
-      <updated>1534880556621</updated>
-    </task>
-    <task id="LOCAL-00691" summary="Added a hpef_fmap_intended_for.sh script. This still needs to be developed and&#10;tested.">
-      <created>1534881667865</created>
-      <option name="number" value="00691" />
-      <option name="presentableId" value="LOCAL-00691" />
-      <option name="project" value="LOCAL" />
-      <updated>1534881667865</updated>
-    </task>
-    <task id="LOCAL-00692" summary="Investing clean_bids.py bug. Not replacing .1.">
-      <created>1534884212271</created>
-      <option name="number" value="00692" />
-      <option name="presentableId" value="LOCAL-00692" />
-      <option name="project" value="LOCAL" />
-      <updated>1534884212271</updated>
-    </task>
-    <task id="LOCAL-00693" summary="Investing clean_bids.py bug. Not replacing .1.">
-      <created>1534884367529</created>
-      <option name="number" value="00693" />
-      <option name="presentableId" value="LOCAL-00693" />
-      <option name="project" value="LOCAL" />
-      <updated>1534884367529</updated>
-    </task>
-    <task id="LOCAL-00694" summary="Investing clean_bids.py bug. Not replacing .1.">
-      <created>1534884594270</created>
-      <option name="number" value="00694" />
-      <option name="presentableId" value="LOCAL-00694" />
-      <option name="project" value="LOCAL" />
-      <updated>1534884594270</updated>
-    </task>
-    <task id="LOCAL-00695" summary="Updated fmap intended for script for hfpef. Testing is still needed.">
-      <created>1534885999363</created>
-      <option name="number" value="00695" />
-      <option name="presentableId" value="LOCAL-00695" />
-      <option name="project" value="LOCAL" />
-      <updated>1534885999363</updated>
-    </task>
-    <task id="LOCAL-00696" summary="Updated fmap intended for script for hfpef. Testing is still needed.">
-      <created>1534886119294</created>
-      <option name="number" value="00696" />
-      <option name="presentableId" value="LOCAL-00696" />
-      <option name="project" value="LOCAL" />
-      <updated>1534886119294</updated>
-    </task>
-    <task id="LOCAL-00697" summary="Updated fmap intended for script for hfpef. Testing is still needed.">
-      <created>1534886271548</created>
-      <option name="number" value="00697" />
-      <option name="presentableId" value="LOCAL-00697" />
-      <option name="project" value="LOCAL" />
-      <updated>1534886271548</updated>
-    </task>
-    <task id="LOCAL-00698" summary="Updated fmap intended for script for hfpef. Testing is still needed.">
-      <created>1534887563096</created>
-      <option name="number" value="00698" />
-      <option name="presentableId" value="LOCAL-00698" />
-      <option name="project" value="LOCAL" />
-      <updated>1534887563096</updated>
-    </task>
-    <task id="LOCAL-00699" summary="Updated fmap intended for script for hfpef. Testing is still needed.">
-      <created>1534887680406</created>
-      <option name="number" value="00699" />
-      <option name="presentableId" value="LOCAL-00699" />
-      <option name="project" value="LOCAL" />
-      <updated>1534887680406</updated>
-    </task>
-    <task id="LOCAL-00700" summary="Updated fmap intended for script for hfpef. Testing is still needed.">
-      <created>1534887911379</created>
-      <option name="number" value="00700" />
-      <option name="presentableId" value="LOCAL-00700" />
-      <option name="project" value="LOCAL" />
-      <updated>1534887911380</updated>
-    </task>
-    <task id="LOCAL-00701" summary="Updated fmap intended for script for hfpef. Testing is still needed.">
-      <created>1534888001514</created>
-      <option name="number" value="00701" />
-      <option name="presentableId" value="LOCAL-00701" />
-      <option name="project" value="LOCAL" />
-      <updated>1534888001514</updated>
-    </task>
-    <task id="LOCAL-00702" summary="Updated fmap intended for script for hfpef. Testing is still needed.">
-      <created>1534888032316</created>
-      <option name="number" value="00702" />
-      <option name="presentableId" value="LOCAL-00702" />
-      <option name="project" value="LOCAL" />
-      <updated>1534888032316</updated>
-    </task>
-    <task id="LOCAL-00703" summary="Updated fmap intended for script for hfpef. Testing is still needed.">
-      <created>1534888494376</created>
-      <option name="number" value="00703" />
-      <option name="presentableId" value="LOCAL-00703" />
-      <option name="project" value="LOCAL" />
-      <updated>1534888494376</updated>
-    </task>
-    <task id="LOCAL-00704" summary="Updated fmap intended for script for hfpef. Testing is still needed.">
-      <created>1534888543268</created>
-      <option name="number" value="00704" />
-      <option name="presentableId" value="LOCAL-00704" />
-      <option name="project" value="LOCAL" />
-      <updated>1534888543268</updated>
-    </task>
-    <task id="LOCAL-00705" summary="Updated fmap intended for script for hfpef. Testing is still needed.">
-      <created>1534888565992</created>
-      <option name="number" value="00705" />
-      <option name="presentableId" value="LOCAL-00705" />
-      <option name="project" value="LOCAL" />
-      <updated>1534888565992</updated>
-    </task>
-    <task id="LOCAL-00706" summary="Updated fmap intended for script for hfpef. Testing is still needed.">
-      <created>1534888595615</created>
-      <option name="number" value="00706" />
-      <option name="presentableId" value="LOCAL-00706" />
-      <option name="project" value="LOCAL" />
-      <updated>1534888595615</updated>
-    </task>
-    <task id="LOCAL-00707" summary="Updated fmap intended for script for hfpef. Testing is still needed.">
-      <created>1534888966851</created>
-      <option name="number" value="00707" />
-      <option name="presentableId" value="LOCAL-00707" />
-      <option name="project" value="LOCAL" />
-      <updated>1534888966851</updated>
-    </task>
-    <task id="LOCAL-00708" summary="Updated fmap intended for script for hfpef. Testing is still needed.">
-      <created>1534889107034</created>
-      <option name="number" value="00708" />
-      <option name="presentableId" value="LOCAL-00708" />
-      <option name="project" value="LOCAL" />
-      <updated>1534889107034</updated>
-    </task>
-    <task id="LOCAL-00709" summary="Updated fmap intended for script for hfpef. Testing is still needed.">
-      <created>1535388725656</created>
-      <option name="number" value="00709" />
-      <option name="presentableId" value="LOCAL-00709" />
-      <option name="project" value="LOCAL" />
-      <updated>1535388725657</updated>
-    </task>
-    <task id="LOCAL-00710" summary="Changed imove_trial to imove">
-      <created>1535388749636</created>
-      <option name="number" value="00710" />
-      <option name="presentableId" value="LOCAL-00710" />
-      <option name="project" value="LOCAL" />
-      <updated>1535388749636</updated>
-    </task>
-    <task id="LOCAL-00711" summary="Changed imove_trial to imove">
-      <created>1535398472142</created>
-      <option name="number" value="00711" />
-      <option name="presentableId" value="LOCAL-00711" />
-      <option name="project" value="LOCAL" />
-      <updated>1535398472143</updated>
-    </task>
-    <task id="LOCAL-00712" summary="Changed imove_trial to imove">
-      <created>1535399025306</created>
-      <option name="number" value="00712" />
-      <option name="presentableId" value="LOCAL-00712" />
-      <option name="project" value="LOCAL" />
-      <updated>1535399025306</updated>
-    </task>
-    <task id="LOCAL-00713" summary="Changed imove_trial to imove">
-      <created>1535399248536</created>
-      <option name="number" value="00713" />
-      <option name="presentableId" value="LOCAL-00713" />
-      <option name="project" value="LOCAL" />
-      <updated>1535399248536</updated>
-    </task>
-    <task id="LOCAL-00714" summary="Added alias lsb to list BIDS directory.">
-      <created>1535461875002</created>
-      <option name="number" value="00714" />
-      <option name="presentableId" value="LOCAL-00714" />
-      <option name="project" value="LOCAL" />
-      <updated>1535461875002</updated>
-    </task>
-    <task id="LOCAL-00715" summary="Updated clean_bids.py.  Removed print debug.">
-      <created>1535462844618</created>
-      <option name="number" value="00715" />
-      <option name="presentableId" value="LOCAL-00715" />
-      <option name="project" value="LOCAL" />
-      <updated>1535462844618</updated>
-    </task>
-    <task id="LOCAL-00716" summary="Updated clean_bids.py.  Removed print debug.">
-      <created>1535462934602</created>
-      <option name="number" value="00716" />
-      <option name="presentableId" value="LOCAL-00716" />
-      <option name="project" value="LOCAL" />
-      <updated>1535462934602</updated>
-    </task>
-    <task id="LOCAL-00717" summary="Updated clean_bids.py.  Removed print debug.">
-      <created>1535463162769</created>
-      <option name="number" value="00717" />
-      <option name="presentableId" value="LOCAL-00717" />
-      <option name="project" value="LOCAL" />
-      <updated>1535463162769</updated>
-    </task>
-    <task id="LOCAL-00718" summary="Updating IntendedFor functions to streamline the process.">
-      <created>1535464009199</created>
-      <option name="number" value="00718" />
-      <option name="presentableId" value="LOCAL-00718" />
-      <option name="project" value="LOCAL" />
-      <updated>1535464009199</updated>
-    </task>
-    <option name="localTasksCounter" value="719" />
+    <option name="localTasksCounter" value="690" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -983,8 +988,8 @@
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.38877338" sideWeight="0.68318754" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.50287354" sideWeight="0.48106593" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3293461" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.37417656" sideWeight="0.49006623" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21816881" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3768116" sideWeight="0.49006623" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.30686694" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329539" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="SciView" active="false" anchor="right" auto_hide="true" internal_type="DOCKED" type="FLOATING" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1031,6 +1036,14 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
+    <MESSAGE value="Protocol testing. Encountered &quot;bug&quot; while converting phasediff image" />
+    <MESSAGE value="Added rec-fmap and rec-topup to EPI images so we can compare recon." />
+    <MESSAGE value="Started with CONN scripts for MFC" />
+    <MESSAGE value="Updated BPS for debugging." />
+    <MESSAGE value="Added conn_gather_inputs.py" />
+    <MESSAGE value="Updated MFC protocol to include Neutrals." />
+    <MESSAGE value="Debugging item:01d for phasediff field maps." />
+    <MESSAGE value="Updated ACT" />
     <MESSAGE value="Added fmap_intended_for.py to simplify updating fieldmap json files." />
     <MESSAGE value="Updated fmap_intended_for.py to include echo_times and work for a single file." />
     <MESSAGE value="Added Tracula to BIDS Apps." />
@@ -1048,15 +1061,7 @@
     <MESSAGE value="Added a function to check if the IntendedFor files in the json file point&#10;a file that exists." />
     <MESSAGE value="Added alias to list particiant in fmriprep logs. This is helpful for matching up log file to &#10;the participant." />
     <MESSAGE value="Updated fieldmap to have a more descriptive column name." />
-    <MESSAGE value="Fixed bug in HFPEF and MFC protocols. Series_ids are now appended instead &#10;set equal to info dict." />
-    <MESSAGE value="Added a hpef_fmap_intended_for.sh script. This still needs to be developed and&#10;tested." />
-    <MESSAGE value="Investing clean_bids.py bug. Not replacing .1." />
-    <MESSAGE value="Updated fmap intended for script for hfpef. Testing is still needed." />
-    <MESSAGE value="Changed imove_trial to imove" />
-    <MESSAGE value="Added alias lsb to list BIDS directory." />
-    <MESSAGE value="Updated clean_bids.py.  Removed print debug." />
-    <MESSAGE value="Updating IntendedFor functions to streamline the process." />
-    <option name="LAST_COMMIT_MESSAGE" value="Updating IntendedFor functions to streamline the process." />
+    <option name="LAST_COMMIT_MESSAGE" value="Updated fieldmap to have a more descriptive column name." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1073,7 +1078,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/studies/mfc/scripts/mfc_protocol.py</url>
-          <line>198</line>
+          <line>197</line>
           <option name="timeStamp" value="6" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
@@ -1086,21 +1091,122 @@
           <line>17</line>
           <option name="timeStamp" value="9" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/bin/fmap_intended_for_check.py</url>
-          <line>7</line>
-          <option name="timeStamp" value="10" />
-        </line-breakpoint>
       </breakpoints>
-      <option name="time" value="11" />
+      <option name="time" value="10" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/studies/hfpef/scripts/hfpef_gi_netprep_epi.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="680">
+          <caret line="40" column="0" lean-forward="false" selection-start-line="40" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/studies/imove/scripts/imove_netprep_epi.yaml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/studies/imove/scripts/imove_gi_netprep.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="18" column="4" lean-forward="false" selection-start-line="18" selection-start-column="4" selection-end-line="18" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/studies/imove/scripts/imove_gi_netprep_epi.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="21" column="0" lean-forward="false" selection-start-line="20" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/studies/imove/scripts/imove_gi_netprep_mbepi.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="17" column="152" lean-forward="false" selection-start-line="17" selection-start-column="152" selection-end-line="17" selection-end-column="152" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/studies/infinite/aliases.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="697">
+          <caret line="41" column="0" lean-forward="false" selection-start-line="41" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/studies/hfpef/aliases.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="15" column="0" lean-forward="false" selection-start-line="14" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/studies/imove/aliases.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="38" lean-forward="false" selection-start-line="8" selection-start-column="38" selection-end-line="8" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/studies/infinite/scripts/inf_netprep_gi.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="15" column="34" lean-forward="false" selection-start-line="15" selection-start-column="34" selection-end-line="15" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bin/conn_gather_inputs.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3451">
+          <caret line="213" column="0" lean-forward="false" selection-start-line="213" selection-start-column="0" selection-end-line="213" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/studies/hfpef/scripts/hfpef_protocol.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="280" column="99" lean-forward="false" selection-start-line="280" selection-start-column="99" selection-end-line="280" selection-end-column="99" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/studies/mfc/scripts/mfc_protocol.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/studies/hfpef/scripts/hfpef_netprep_epi.yaml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="21" column="0" lean-forward="false" selection-start-line="20" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/studies/hfpef/scripts/hfpef_netprep.yaml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="16" column="17" lean-forward="false" selection-start-line="16" selection-start-column="17" selection-end-line="16" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/studies/hfpef/scripts/hfpef_gi_netprep_mbepi.sh">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="340">
           <caret line="20" column="72" lean-forward="false" selection-start-line="20" selection-start-column="72" selection-end-line="20" selection-end-column="72" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bin/tic_functions.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="16" column="10" lean-forward="false" selection-start-line="16" selection-start-column="10" selection-end-line="16" selection-end-column="10" />
         </state>
       </provider>
     </entry>
@@ -1132,10 +1238,31 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/studies/imove/environment.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="0" lean-forward="true" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bin/clean_bids.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/studies/infinite/scripts/inf_clean_bids.sh">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="3247">
           <caret line="191" column="0" lean-forward="false" selection-start-line="188" selection-start-column="0" selection-end-line="191" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bin/clean_bids.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="177">
+          <caret line="194" column="0" lean-forward="false" selection-start-line="194" selection-start-column="0" selection-end-line="194" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -1146,11 +1273,25 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/studies/hfpef/environment.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="13" column="0" lean-forward="false" selection-start-line="12" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/tic_core/fmriprep_tools.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
           <caret line="11" column="0" lean-forward="false" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bin/mriqc.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1139">
+          <caret line="67" column="62" lean-forward="false" selection-start-line="67" selection-start-column="60" selection-end-line="67" selection-end-column="62" />
         </state>
       </provider>
     </entry>
@@ -1172,6 +1313,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bin/act.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="595">
+          <caret line="35" column="1" lean-forward="false" selection-start-line="35" selection-start-column="1" selection-end-line="35" selection-end-column="1" />
         </state>
       </provider>
     </entry>
@@ -1203,6 +1351,27 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/studies/mfc/aliases.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="0" lean-forward="false" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/studies/mfc/scripts/mfc_fmap_intended_for.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/studies/mfc/scripts/mfc_fmap_intended_for.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="89" lean-forward="false" selection-start-line="2" selection-start-column="89" selection-end-line="2" selection-end-column="89" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/bin/acrostic_list.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="221">
@@ -1221,6 +1390,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="221">
           <caret line="13" column="16" lean-forward="false" selection-start-line="13" selection-start-column="16" selection-end-line="13" selection-end-column="16" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1228,6 +1398,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
           <caret line="1" column="23" lean-forward="false" selection-start-line="1" selection-start-column="23" selection-end-line="1" selection-end-column="23" />
+          <folding>
+            <element signature="e#80#95#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1248,6 +1421,15 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docs/source/other/quick_reference.rst">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3179">
+          <caret line="187" column="50" lean-forward="true" selection-start-line="187" selection-start-column="50" selection-end-line="187" selection-end-column="50" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1256,6 +1438,7 @@
         <state split_layout="SPLIT">
           <first_editor relative-caret-position="0">
             <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <folding />
           </first_editor>
           <second_editor>
             <js_state />
@@ -1263,224 +1446,35 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/bin/hdc_clean.py">
+    <entry file="file://$PROJECT_DIR$/bin/fmap_intended_for.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="1360">
+          <caret line="86" column="0" lean-forward="false" selection-start-line="49" selection-start-column="0" selection-end-line="86" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/bin/fmriprep.sh">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="205">
-          <caret line="22" column="34" lean-forward="false" selection-start-line="22" selection-start-column="34" selection-end-line="22" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bin/ls_participants.sh">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bin/mriqc.sh">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="209">
-          <caret line="21" column="29" lean-forward="true" selection-start-line="21" selection-start-column="29" selection-end-line="21" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bin/hdc.sh">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bin/act.sh">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="244">
-          <caret line="25" column="34" lean-forward="true" selection-start-line="25" selection-start-column="34" selection-end-line="25" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bin/tic_bids_validator.sh">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bin/tic_functions.sh">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="16" column="10" lean-forward="false" selection-start-line="16" selection-start-column="10" selection-end-line="16" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/studies/hfpef/environment.sh">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="13" column="0" lean-forward="false" selection-start-line="12" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/studies/synergy/scripts/synergy_protocol.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="282">
-          <caret line="217" column="46" lean-forward="false" selection-start-line="217" selection-start-column="16" selection-end-line="217" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/studies/hfpef/scripts/hfpef_protocol.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="515">
-          <caret line="437" column="0" lean-forward="false" selection-start-line="437" selection-start-column="0" selection-end-line="437" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/studies/mfc/scripts/mfc_protocol.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="5423">
-          <caret line="319" column="53" lean-forward="false" selection-start-line="319" selection-start-column="53" selection-end-line="319" selection-end-column="53" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/studies/mfc/scripts/mfc_fmap_intended_for.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="89" lean-forward="false" selection-start-line="2" selection-start-column="89" selection-end-line="2" selection-end-column="89" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/studies/mfc/scripts/mfc_fmap_intended_for.sh">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/studies/mfc/aliases.sh">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="0" lean-forward="false" selection-start-line="4" selection-start-column="1" selection-end-line="5" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bin/fmap_intended_for_check.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="0" lean-forward="false" selection-start-line="5" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/studies/imove/init.sh">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/studies/imove/environment.sh">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="30" lean-forward="false" selection-start-line="6" selection-start-column="30" selection-end-line="6" selection-end-column="30" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/studies/hfpef/aliases.sh">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="18" column="0" lean-forward="false" selection-start-line="17" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/studies/imove/aliases.sh">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="42" lean-forward="false" selection-start-line="10" selection-start-column="42" selection-end-line="10" selection-end-column="42" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bin/clean_bids.sh">
-      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="289">
-          <caret line="17" column="0" lean-forward="true" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/studies/hfpef/scripts/hfpef_clean_bids.sh">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-944">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/docs/source/other/quick_reference.rst">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="133">
-          <caret line="163" column="62" lean-forward="false" selection-start-line="163" selection-start-column="62" selection-end-line="163" selection-end-column="62" />
+          <caret line="17" column="0" lean-forward="false" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/init/tic_aliases.sh">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="0" lean-forward="false" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+        <state relative-caret-position="119">
+          <caret line="7" column="9" lean-forward="false" selection-start-line="7" selection-start-column="9" selection-end-line="7" selection-end-column="9" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/studies/active/aliases.sh">
+    <entry file="file://$PROJECT_DIR$/bin/fmap_intended_for_check.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="0" lean-forward="true" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+        <state relative-caret-position="364">
+          <caret line="84" column="19" lean-forward="false" selection-start-line="84" selection-start-column="19" selection-end-line="84" selection-end-column="19" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bin/clean_bids.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="70">
-          <caret line="131" column="1" lean-forward="true" selection-start-line="131" selection-start-column="1" selection-end-line="131" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/studies/hfpef/scripts/hfpef_fmap_intended_for.sh">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="263">
-          <caret line="46" column="31" lean-forward="false" selection-start-line="46" selection-start-column="31" selection-end-line="46" selection-end-column="31" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/studies/imove/scripts/imove_fmap_intended_for.sh">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="419">
-          <caret line="41" column="31" lean-forward="false" selection-start-line="41" selection-start-column="31" selection-end-line="41" selection-end-column="31" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bin/fmap_intended_for.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="114" column="0" lean-forward="false" selection-start-line="114" selection-start-column="0" selection-end-line="114" selection-end-column="0" />
-          <folding>
-            <element signature="e#108#140#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
