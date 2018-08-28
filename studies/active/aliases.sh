@@ -8,6 +8,8 @@ alias bids_f2="find $ACTIVE_BIDS_PATH  -name '*.[2-9].*'"
 alias bids_f1="find $ACTIVE_BIDS_PATH  -name '*.1.*'"
 alias bids_f~="find $ACTIVE_BIDS_PATH  -name '*~'"
 
+alias lsb='ls $ACTIVE_BIDS_PATH; lsreport_function'
+
 alias cdas='cd $ACTIVE_PATH; lsreport_function'
 alias cdb='cd $ACTIVE_BIDS_PATH; lsreport_function'
 alias cdin='cd $ACTIVE_PATH/incoming; lsreport_function'
