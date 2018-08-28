@@ -14,3 +14,5 @@ alias hfpef_bids_clean='$HFPEF_SCRIPTS_PATH/hfpef_clean_bids_2b.sh'
 
 alias hfpef_gi_netprep='$HFPEF_SCRIPTS_PATH/hfpef_gi_netprep.sh'
 alias hfpef_conn='$HFPEF_SCRIPTS_PATH/hfpef_conn_setup.sh'
+
+alias hfpef_fif='$HFPEF_SCRIPTS_PATH/hfpef_fmap_intended_for.sh'

@@ -5,6 +5,8 @@
 Create a list of functional files to be included in
 """
 
+from collections import Iterable
+
 import sys
 import argparse
 import shutil
@@ -12,6 +14,25 @@ import shutil
 from tic_core import fmriprep_tools
 
 OUTPUT_FILE_SUFFIX = '.new'
+
+
+def force_input_to_list(inp, basetype=int):
+    """
+
+    :param inp:
+    :param basetype:
+    :return:
+
+    https://stackoverflow.com/questions/20095244/how-do-i-check-if-input-is-a-number-in-python
+    """
+
+    if not isinstance(inp, Iterable) or isinstance(inp, basetype):
+        out_list = [inp]  # use just `str` in py3.x
+    else:
+        out_list = [x for x in inp]
+
+    return out_list
+
 
 def _write_echo_times(echo_time_string,
                       input_file,
@@ -88,9 +109,13 @@ def _argparse():
 
 def _core(func_files, input_file, output_file,  echo_times, overwrite_flag, fmap_flag,verbose):
 
+    func_files = force_input_to_list(func_files, str)
+
     if verbose:
-        print('\n')
-        print(f'Input file     : {input_file}')
+        for ii_func_file in func_files:
+            print(f'Func files     : {ii_func_file}')
+
+        print(f'\nInput file     : {input_file}')
         print(f'Output file    : {output_file}')
         print(f'fmap_flag      : {fmap_flag}')
         print(f'overwrite_flag : {overwrite_flag}')
@@ -127,6 +152,8 @@ def main():
     in_args = _argparse()
 
     for ii_input_file in in_args.input_file:
+
+        print('\n======================================================================================')
 
         if in_args.output_file is None:
             output_file = ii_input_file + OUTPUT_FILE_SUFFIX

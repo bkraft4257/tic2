@@ -2,12 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6f3e13b3-cd58-4c4d-98f6-1a68f8358bfb" name="Default" comment="Updated fieldmap to have a more descriptive column name.">
-      <change beforePath="" afterPath="$PROJECT_DIR$/bin/hdc_mac.sh" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/studies/cenc/cenc_init.sh" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/studies/cenc/aliases.sh" afterPath="$PROJECT_DIR$/studies/cenc/aliases.sh" />
-      <change beforePath="$PROJECT_DIR$/studies/cenc/scripts/CENC_protocol.py" afterPath="$PROJECT_DIR$/studies/cenc/scripts/CENC_protocol.py" />
-      <change beforePath="$PROJECT_DIR$/studies/cenc/scripts/cenc_clean_bids.sh" afterPath="$PROJECT_DIR$/studies/cenc/scripts/cenc_clean_bids.sh" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/studies/hfpef/scripts/hfpef_fmap_intended_for.sh" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/studies/imove/scripts/imove_fmap_intended_for.sh" />
+      <change beforePath="$PROJECT_DIR$/bin/clean_bids.py" afterPath="$PROJECT_DIR$/bin/clean_bids.py" />
+      <change beforePath="$PROJECT_DIR$/bin/fmap_intended_for.py" afterPath="$PROJECT_DIR$/bin/fmap_intended_for.py" />
+      <change beforePath="$PROJECT_DIR$/bin/fmap_intended_for_check.py" afterPath="$PROJECT_DIR$/bin/fmap_intended_for_check.py" />
+      <change beforePath="$PROJECT_DIR$/docs/source/other/quick_reference.rst" afterPath="$PROJECT_DIR$/docs/source/other/quick_reference.rst" />
+      <change beforePath="$PROJECT_DIR$/init/tic_aliases.sh" afterPath="$PROJECT_DIR$/init/tic_aliases.sh" />
+      <change beforePath="$PROJECT_DIR$/studies/active/aliases.sh" afterPath="$PROJECT_DIR$/studies/active/aliases.sh" />
+      <change beforePath="$PROJECT_DIR$/studies/hfpef/aliases.sh" afterPath="$PROJECT_DIR$/studies/hfpef/aliases.sh" />
+      <change beforePath="$PROJECT_DIR$/studies/hfpef/scripts/hfpef_protocol.py" afterPath="$PROJECT_DIR$/studies/hfpef/scripts/hfpef_protocol.py" />
+      <change beforePath="$PROJECT_DIR$/studies/imove/aliases.sh" afterPath="$PROJECT_DIR$/studies/imove/aliases.sh" />
+      <change beforePath="$PROJECT_DIR$/studies/imove/environment.sh" afterPath="$PROJECT_DIR$/studies/imove/environment.sh" />
+      <change beforePath="$PROJECT_DIR$/studies/mfc/scripts/mfc_protocol.py" afterPath="$PROJECT_DIR$/studies/mfc/scripts/mfc_protocol.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -62,11 +69,9 @@
       <file leaf-file-name="fmap_intended_for.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/bin/fmap_intended_for.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1394">
+            <state relative-caret-position="1360">
               <caret line="86" column="0" lean-forward="false" selection-start-line="49" selection-start-column="0" selection-end-line="86" selection-end-column="0" />
-              <folding>
-                <element signature="e#108#118#0" expanded="true" />
-              </folding>
+              <folding />
             </state>
           </provider>
         </entry>
@@ -132,7 +137,7 @@
         <entry file="file://$PROJECT_DIR$/docs/source/other/quick_reference.rst">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="3179">
-              <caret line="187" column="53" lean-forward="false" selection-start-line="187" selection-start-column="53" selection-end-line="187" selection-end-column="53" />
+              <caret line="187" column="50" lean-forward="true" selection-start-line="187" selection-start-column="50" selection-end-line="187" selection-end-column="50" />
               <folding />
             </state>
           </provider>
@@ -168,9 +173,7 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="364">
               <caret line="84" column="19" lean-forward="false" selection-start-line="84" selection-start-column="19" selection-end-line="84" selection-end-column="19" />
-              <folding>
-                <element signature="e#56#71#0" expanded="true" />
-              </folding>
+              <folding />
             </state>
           </provider>
         </entry>
@@ -316,10 +319,10 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="y" value="23" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="y" value="-22" />
     <option name="width" value="1440" />
-    <option name="height" value="877" />
+    <option name="height" value="899" />
   </component>
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
@@ -339,6 +342,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -386,7 +390,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scratches" />
       <pane id="Scope" />
     </panes>
   </component>
@@ -570,9 +573,9 @@
       <option name="_new_targetType" value="&quot;PATH&quot;" />
     </configuration>
     <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="Python tests.py.test for test_fmriprep_tools.test_print_intended_for" />
-      <item index="1" class="java.lang.String" itemvalue="Python tests.py.test for test_fmriprep_tools.test_write_json_to_file" />
-      <item index="2" class="java.lang.String" itemvalue="Python tests.py.test in test_processing_status.py" />
+      <item index="0" class="java.lang.String" itemvalue="Python tests.py.test in test_fmriprep_tools.py" />
+      <item index="1" class="java.lang.String" itemvalue="Python tests.py.test in test_plot_overlay.py" />
+      <item index="2" class="java.lang.String" itemvalue="Python tests.test_conn_gather_inputs.py" />
       <item index="3" class="java.lang.String" itemvalue="Python tests.py.test for test_conn_gather_inputs.test_conn_gather_inputs_read_yaml_from_main" />
       <item index="4" class="java.lang.String" itemvalue="Python tests.py.test for test_fmriprep_tools.test_print_intended_for_from_list" />
     </list>
@@ -976,7 +979,7 @@
     </history-entry>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1440" height="877" extended-state="0" />
+    <frame x="0" y="23" width="1440" height="877" extended-state="6" />
     <layout>
       <window_info id="Key Promoter X" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3297568" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -986,7 +989,7 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.50287354" sideWeight="0.48106593" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3293461" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3768116" sideWeight="0.49006623" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3025751" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.30686694" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329539" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="SciView" active="false" anchor="right" auto_hide="true" internal_type="DOCKED" type="FLOATING" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1425,7 +1428,7 @@
     <entry file="file://$PROJECT_DIR$/docs/source/other/quick_reference.rst">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="3179">
-          <caret line="187" column="53" lean-forward="false" selection-start-line="187" selection-start-column="53" selection-end-line="187" selection-end-column="53" />
+          <caret line="187" column="50" lean-forward="true" selection-start-line="187" selection-start-column="50" selection-end-line="187" selection-end-column="50" />
           <folding />
         </state>
       </provider>
@@ -1445,11 +1448,9 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/bin/fmap_intended_for.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1394">
+        <state relative-caret-position="1360">
           <caret line="86" column="0" lean-forward="false" selection-start-line="49" selection-start-column="0" selection-end-line="86" selection-end-column="0" />
-          <folding>
-            <element signature="e#108#118#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1473,9 +1474,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="364">
           <caret line="84" column="19" lean-forward="false" selection-start-line="84" selection-start-column="19" selection-end-line="84" selection-end-column="19" />
-          <folding>
-            <element signature="e#56#71#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
