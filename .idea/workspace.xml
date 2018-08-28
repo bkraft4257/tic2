@@ -4,9 +4,6 @@
     <list default="true" id="6f3e13b3-cd58-4c4d-98f6-1a68f8358bfb" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/bin/clean_bids.py" afterPath="$PROJECT_DIR$/bin/clean_bids.py" />
-      <change beforePath="$PROJECT_DIR$/docs/source/other/quick_reference.rst" afterPath="$PROJECT_DIR$/docs/source/other/quick_reference.rst" />
-      <change beforePath="$PROJECT_DIR$/init/tic_aliases.sh" afterPath="$PROJECT_DIR$/init/tic_aliases.sh" />
-      <change beforePath="$PROJECT_DIR$/studies/active/aliases.sh" afterPath="$PROJECT_DIR$/studies/active/aliases.sh" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -101,8 +98,8 @@
       <file leaf-file-name="clean_bids.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/bin/clean_bids.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="116">
-              <caret line="207" column="0" lean-forward="true" selection-start-line="207" selection-start-column="0" selection-end-line="207" selection-end-column="0" />
+            <state relative-caret-position="330">
+              <caret line="96" column="0" lean-forward="true" selection-start-line="96" selection-start-column="0" selection-end-line="96" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -584,13 +581,6 @@
       <option name="presentableId" value="Default" />
       <updated>1517948604886</updated>
     </task>
-    <task id="LOCAL-00666" summary="Added ability for multiple input files.">
-      <created>1528407633601</created>
-      <option name="number" value="00666" />
-      <option name="presentableId" value="LOCAL-00666" />
-      <option name="project" value="LOCAL" />
-      <updated>1528407633602</updated>
-    </task>
     <task id="LOCAL-00667" summary="Added ability for multiple input files.">
       <created>1528407832626</created>
       <option name="number" value="00667" />
@@ -927,7 +917,14 @@
       <option name="project" value="LOCAL" />
       <updated>1535461875002</updated>
     </task>
-    <option name="localTasksCounter" value="715" />
+    <task id="LOCAL-00715" summary="Updated clean_bids.py.  Removed print debug.">
+      <created>1535462844618</created>
+      <option name="number" value="00715" />
+      <option name="presentableId" value="LOCAL-00715" />
+      <option name="project" value="LOCAL" />
+      <updated>1535462844618</updated>
+    </task>
+    <option name="localTasksCounter" value="716" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -1021,7 +1018,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Debugging item:01d for phasediff field maps." />
     <MESSAGE value="Updated ACT" />
     <MESSAGE value="Added fmap_intended_for.py to simplify updating fieldmap json files." />
     <MESSAGE value="Updated fmap_intended_for.py to include echo_times and work for a single file." />
@@ -1046,7 +1042,8 @@
     <MESSAGE value="Updated fmap intended for script for hfpef. Testing is still needed." />
     <MESSAGE value="Changed imove_trial to imove" />
     <MESSAGE value="Added alias lsb to list BIDS directory." />
-    <option name="LAST_COMMIT_MESSAGE" value="Added alias lsb to list BIDS directory." />
+    <MESSAGE value="Updated clean_bids.py.  Removed print debug." />
+    <option name="LAST_COMMIT_MESSAGE" value="Updated clean_bids.py.  Removed print debug." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1468,8 +1465,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/bin/clean_bids.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="116">
-          <caret line="207" column="0" lean-forward="true" selection-start-line="207" selection-start-column="0" selection-end-line="207" selection-end-column="0" />
+        <state relative-caret-position="330">
+          <caret line="96" column="0" lean-forward="true" selection-start-line="96" selection-start-column="0" selection-end-line="96" selection-end-column="0" />
           <folding />
         </state>
       </provider>
