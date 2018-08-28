@@ -39,7 +39,7 @@ find ../func/ -name "*_task-rest_acq-pcasl_bold.nii.gz" | sort | xargs fmap_inte
 echo
 echo
 
-fmap_intended_for_check.py *.json -v
+fmap_intended_for_check.py *epi.json -v
 
 echo
 echo
