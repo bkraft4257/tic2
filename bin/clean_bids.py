@@ -112,37 +112,40 @@ def _rename_hdc_item_number_1(start_directory=None):
         files.extend(glob.glob(glob_string, recursive=True))
 
     for ii, ii_file in enumerate(files):
+        ii_new_file = ii_file.replace('.1.', '.')
+
+        print(f'Renaming {ii_file} to {ii_new_file}')
+
         try:
-            os.rename(ii_file,
-                      ii_file.replace('.1.', '.')
-                      )
+            os.rename(ii_file, ii_new_file,)
+
         except FileNotFoundError:
             pass  # Ignore file not found errors
 
 
-def _rename_hdc_item_number_1(start_directory=None):
-    """
-
-    :param start_directory:
-    :return:
-    """
-
-    if start_directory is None:
-        start_directory = '.'
-
-    files = []
-    for ext in ('nii.gz', 'json'):
-        glob_string = os.path.join(f'{start_directory}', '**', '**', f'*.1.{ext}')
-        files.extend(glob.glob(glob_string, recursive=True))
-
-    for ii, ii_file in enumerate(files):
-
-        try:
-            os.rename(ii_file,
-                      ii_file.replace('.1.', '.')
-                      )
-        except FileNotFoundError:
-            pass  # Ignore file not found errors
+# def _rename_hdc_item_number_1(start_directory=None):
+#     """
+#
+#     :param start_directory:
+#     :return:
+#     """
+#
+#     if start_directory is None:
+#         start_directory = '.'
+#
+#     files = []
+#     for ext in ('nii.gz', 'json'):
+#         glob_string = os.path.join(f'{start_directory}', '**', '**', f'*.1.{ext}')
+#         files.extend(glob.glob(glob_string, recursive=True))
+#
+#     for ii, ii_file in enumerate(files):
+#
+#         try:
+#             os.rename(ii_file,
+#                       ii_file.replace('.1.', '.')
+#                       )
+#         except FileNotFoundError
+#             pass  # Ignore file not found errors
 
 
 def _remove_files(start_directory=None, unwanted_glob_pattern=['*~', '*magnitude1.json']):
@@ -231,14 +234,15 @@ def main():
     for ii_subject in in_args.subject:
 
         print(f'\n=================================================================================')
-        print(f'{ii_subject}\n')
 
         if ii_subject is None:
             start_directory = ACTIVE_BIDS_PATH
+            print(f'Cleaning {start_directory}\n')
             _clean_bids(start_directory, in_args.lock, in_args.unlock)
 
         else:
             for ii_session in in_args.session:
+                print(f'Cleaning sub-{ii_subject}/ses-{ii_session}\n')
                 start_directory = os.path.abspath(os.path.join(ACTIVE_BIDS_PATH,
                                                                f'sub-{ii_subject}',
                                                                f'ses-{ii_session}'
