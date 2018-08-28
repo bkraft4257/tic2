@@ -109,12 +109,9 @@ def _argparse():
 
 def _core(func_files, input_file, output_file,  echo_times, overwrite_flag, fmap_flag,verbose):
 
-    print(func_files)
     func_files = force_input_to_list(func_files, str)
 
     if verbose:
-        print('\n')
-
         for ii_func_file in func_files:
             print(f'Func files     : {ii_func_file}')
 
@@ -155,6 +152,8 @@ def main():
     in_args = _argparse()
 
     for ii_input_file in in_args.input_file:
+
+        print('\n======================================================================================')
 
         if in_args.output_file is None:
             output_file = ii_input_file + OUTPUT_FILE_SUFFIX

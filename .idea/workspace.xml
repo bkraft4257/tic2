@@ -3,7 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="6f3e13b3-cd58-4c4d-98f6-1a68f8358bfb" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/bin/clean_bids.py" afterPath="$PROJECT_DIR$/bin/clean_bids.py" />
+      <change beforePath="$PROJECT_DIR$/bin/fmap_intended_for.py" afterPath="$PROJECT_DIR$/bin/fmap_intended_for.py" />
+      <change beforePath="$PROJECT_DIR$/studies/hfpef/scripts/hfpef_fmap_intended_for.sh" afterPath="$PROJECT_DIR$/studies/hfpef/scripts/hfpef_fmap_intended_for.sh" />
+      <change beforePath="$PROJECT_DIR$/studies/imove/scripts/imove_fmap_intended_for.sh" afterPath="$PROJECT_DIR$/studies/imove/scripts/imove_fmap_intended_for.sh" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -55,12 +57,14 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="aliases.sh" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/studies/hfpef/aliases.sh">
+      <file leaf-file-name="fmap_intended_for.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/bin/fmap_intended_for.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="18" column="0" lean-forward="false" selection-start-line="17" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
-              <folding />
+            <state relative-caret-position="120">
+              <caret line="114" column="0" lean-forward="false" selection-start-line="114" selection-start-column="0" selection-end-line="114" selection-end-column="0" />
+              <folding>
+                <element signature="e#108#140#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -68,8 +72,8 @@
       <file leaf-file-name="hfpef_fmap_intended_for.sh" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/studies/hfpef/scripts/hfpef_fmap_intended_for.sh">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="697">
-              <caret line="41" column="35" lean-forward="false" selection-start-line="41" selection-start-column="35" selection-end-line="41" selection-end-column="35" />
+            <state relative-caret-position="263">
+              <caret line="46" column="31" lean-forward="false" selection-start-line="46" selection-start-column="31" selection-end-line="46" selection-end-column="31" />
               <folding />
             </state>
           </provider>
@@ -95,11 +99,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="clean_bids.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="clean_bids.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/bin/clean_bids.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="342">
-              <caret line="147" column="50" lean-forward="true" selection-start-line="147" selection-start-column="50" selection-end-line="147" selection-end-column="50" />
+            <state relative-caret-position="70">
+              <caret line="131" column="1" lean-forward="true" selection-start-line="131" selection-start-column="1" selection-end-line="131" selection-end-column="1" />
               <folding />
             </state>
           </provider>
@@ -108,8 +112,8 @@
       <file leaf-file-name="imove_fmap_intended_for.sh" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/studies/imove/scripts/imove_fmap_intended_for.sh">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="370">
-              <caret line="35" column="0" lean-forward="false" selection-start-line="35" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
+            <state relative-caret-position="419">
+              <caret line="41" column="31" lean-forward="false" selection-start-line="41" selection-start-column="31" selection-end-line="41" selection-end-column="31" />
               <folding />
             </state>
           </provider>
@@ -169,7 +173,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>clean</find>
       <find>{item:02d}</find>
       <find>MCF_</find>
       <find>mcf</find>
@@ -199,6 +202,7 @@
       <find>&quot;</find>
       <find>= [s.series_id]</find>
       <find>print</find>
+      <find>__clean_</find>
     </findStrings>
     <replaceStrings>
       <replace>01d</replace>
@@ -278,16 +282,16 @@
         <option value="$PROJECT_DIR$/studies/hfpef/scripts/hfpef_protocol.py" />
         <option value="$PROJECT_DIR$/studies/mfc/scripts/mfc_protocol.py" />
         <option value="$PROJECT_DIR$/studies/hfpef/aliases.sh" />
-        <option value="$PROJECT_DIR$/studies/hfpef/scripts/hfpef_fmap_intended_for.sh" />
         <option value="$PROJECT_DIR$/bin/fmap_intended_for_check.py" />
-        <option value="$PROJECT_DIR$/bin/fmap_intended_for.py" />
         <option value="$PROJECT_DIR$/studies/imove/environment.sh" />
         <option value="$PROJECT_DIR$/studies/imove/aliases.sh" />
-        <option value="$PROJECT_DIR$/studies/imove/scripts/imove_fmap_intended_for.sh" />
         <option value="$PROJECT_DIR$/docs/source/other/quick_reference.rst" />
         <option value="$PROJECT_DIR$/init/tic_aliases.sh" />
         <option value="$PROJECT_DIR$/studies/active/aliases.sh" />
         <option value="$PROJECT_DIR$/bin/clean_bids.py" />
+        <option value="$PROJECT_DIR$/studies/imove/scripts/imove_fmap_intended_for.sh" />
+        <option value="$PROJECT_DIR$/studies/hfpef/scripts/hfpef_fmap_intended_for.sh" />
+        <option value="$PROJECT_DIR$/bin/fmap_intended_for.py" />
       </list>
     </option>
   </component>
@@ -360,6 +364,19 @@
               <item name="tic_core" type="462c0819:PsiDirectoryNode" />
               <item name="studies" type="462c0819:PsiDirectoryNode" />
               <item name="hfpef" type="462c0819:PsiDirectoryNode" />
+              <item name="scripts" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="tic_core" type="b2602c69:ProjectViewProjectNode" />
+              <item name="tic_core" type="462c0819:PsiDirectoryNode" />
+              <item name="studies" type="462c0819:PsiDirectoryNode" />
+              <item name="imove" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="tic_core" type="b2602c69:ProjectViewProjectNode" />
+              <item name="tic_core" type="462c0819:PsiDirectoryNode" />
+              <item name="studies" type="462c0819:PsiDirectoryNode" />
+              <item name="imove" type="462c0819:PsiDirectoryNode" />
               <item name="scripts" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -580,13 +597,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1517948604886</updated>
-    </task>
-    <task id="LOCAL-00668" summary="Added ability for multiple input files.">
-      <created>1528464262429</created>
-      <option name="number" value="00668" />
-      <option name="presentableId" value="LOCAL-00668" />
-      <option name="project" value="LOCAL" />
-      <updated>1528464262430</updated>
     </task>
     <task id="LOCAL-00669" summary="Added script to run intended for MFC.">
       <created>1528464379908</created>
@@ -924,7 +934,14 @@
       <option name="project" value="LOCAL" />
       <updated>1535462934602</updated>
     </task>
-    <option name="localTasksCounter" value="717" />
+    <task id="LOCAL-00717" summary="Updated clean_bids.py.  Removed print debug.">
+      <created>1535463162769</created>
+      <option name="number" value="00717" />
+      <option name="presentableId" value="LOCAL-00717" />
+      <option name="project" value="LOCAL" />
+      <updated>1535463162769</updated>
+    </task>
+    <option name="localTasksCounter" value="718" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -1365,16 +1382,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/bin/fmap_intended_for.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2057">
-          <caret line="121" column="48" lean-forward="false" selection-start-line="121" selection-start-column="48" selection-end-line="121" selection-end-column="48" />
-          <folding>
-            <element signature="e#108#140#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/studies/imove/init.sh">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -1391,14 +1398,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/studies/hfpef/scripts/hfpef_fmap_intended_for.sh">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="697">
-          <caret line="41" column="35" lean-forward="false" selection-start-line="41" selection-start-column="35" selection-end-line="41" selection-end-column="35" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/studies/hfpef/aliases.sh">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="306">
@@ -1411,14 +1410,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
           <caret line="10" column="42" lean-forward="false" selection-start-line="10" selection-start-column="42" selection-end-line="10" selection-end-column="42" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/studies/imove/scripts/imove_fmap_intended_for.sh">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="370">
-          <caret line="35" column="0" lean-forward="false" selection-start-line="35" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -1465,9 +1456,35 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/bin/clean_bids.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="342">
-          <caret line="147" column="50" lean-forward="true" selection-start-line="147" selection-start-column="50" selection-end-line="147" selection-end-column="50" />
+        <state relative-caret-position="70">
+          <caret line="131" column="1" lean-forward="true" selection-start-line="131" selection-start-column="1" selection-end-line="131" selection-end-column="1" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/studies/hfpef/scripts/hfpef_fmap_intended_for.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="263">
+          <caret line="46" column="31" lean-forward="false" selection-start-line="46" selection-start-column="31" selection-end-line="46" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/studies/imove/scripts/imove_fmap_intended_for.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="419">
+          <caret line="41" column="31" lean-forward="false" selection-start-line="41" selection-start-column="31" selection-end-line="41" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bin/fmap_intended_for.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="114" column="0" lean-forward="false" selection-start-line="114" selection-start-column="0" selection-end-line="114" selection-end-column="0" />
+          <folding>
+            <element signature="e#108#140#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

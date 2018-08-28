@@ -44,7 +44,7 @@ find ../func/ -name "*_task-restepitopup_acq-epi_rec-topup_bold.nii.gz" | sort |
 echo
 echo
 
-fmap_intended_for_check.py *.json -v
+fmap_intended_for_check.py *epi.json -v
 
 echo
 echo
