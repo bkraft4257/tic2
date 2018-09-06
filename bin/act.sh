@@ -1,5 +1,11 @@
 #!/usr/bin/env bash
 
+if [ $# -ne 2 ]; then
+    echo
+    echo "Usage: act.sh -s <participantID>"
+    echo
+    exit 1
+fi
 
 BIDS_APP=ants_cortical_thickness
 
