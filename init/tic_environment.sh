@@ -7,18 +7,25 @@ case $(hostname -s ) in
 	SOFTWARE_PATH=/aging1/software/
 	export FSL509_DIR=$SOFTWARE_PATH/fsl5.09
 	MATLAB_PATH=/aging1/software/matlab/bin
+	export PYTHON_PATH=/opt/anaconda3-4.4.0/bin
     ;;
   aging3a)
 	SOFTWARE_PATH=/aging1/software/
 	export FSL509_DIR=/opt/fsl5.09
 	MATLAB_PATH=/opt/matlab-R2015a/bin
+	export PYTHON_PATH=/opt/anaconda3-4.4.0/bin
     ;;
-
+  asgard)
+	SOFTWARE_PATH=/usr/local
+	export FSL509_DIR=/usr/local/fsl
+	MATLAB_PATH=/Applications/MATLAB_R2017a.app/bin
+	export PYTHON_PATH=$HOME/anaconda3/bin
+    ;;
   *)
      echo "Unknown HOSTNAME"
 esac
 
-export TIC_SOFTWARE_PATH=/aging1/software/
+export TIC_SOFTWARE_PATH=$SOFTWARE_PATH
 export TIC_STUDIES_PATH=$TIC_PATH/studies
 export TIC_INIT_PATH=$TIC_PATH/init
 export HOME_TIC_PATH=$TIC_INIT_PATH  # Done for backward compatibility.
@@ -39,7 +46,6 @@ export TEMPLATE_INIA19=${TEMPLATES_PATH}/inia19_rhesus_macaque
 
 # Setup Python
 
-export PYTHON_PATH=/opt/anaconda3-4.4.0/bin
 
 export PATH="$PYTHON_PATH:$PATH"
  
