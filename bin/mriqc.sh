@@ -2,6 +2,13 @@
 
 # TODO : Should create the logs directory if it doesn't exist.
 
+if [ $# -ne 2 ]; then
+    echo
+    echo "Usage: mriqc.sh -s <participantID>"
+    echo
+    exit 1
+fi
+
 BIDS_APP='mriqc'
 ACTIVE_APP_WORKING_PATH=$ACTIVE_MRIQC_PATH/_working
 ACTIVE_IMAGE_PROCESSING_LOG_PATH=$ACTIVE_MRIQC_PATH/logs
@@ -47,12 +54,12 @@ log_file=${ACTIVE_IMAGE_PROCESSING_LOG_PATH}/${study_prefix}_${BIDS_APP}_${datet
 # is why I don't use the $SINGULARITY_COMMAND in when running the BIDS_APP
 #
 
-export FULL_BIDS_APP_COMMAND="$SINGULARITY_COMMAND \
- $APP_SINGULARITY_IMAGE \
- $ACTIVE_BIDS_PATH \
- $ACTIVE_APP_OUTPUT_PATH \
- --work-dir $ACTIVE_APP_WORKING_PATH \
- participant ${@} >> $log_file 2>&1 &"
+# export FULL_BIDS_APP_COMMAND="$SINGULARITY_COMMAND \
+# $APP_SINGULARITY_IMAGE \
+# $ACTIVE_BIDS_PATH \
+# $ACTIVE_APP_OUTPUT_PATH \
+# --work-dir $ACTIVE_APP_WORKING_PATH \
+# participant ${@} >> $log_file 2>&1 &"
 
 # Write information to log file
 source $TIC_PATH/studies/active/scripts/bids_app_status.sh

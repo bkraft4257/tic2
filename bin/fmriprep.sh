@@ -1,5 +1,11 @@
 #!/bin/env bash
 
+if [ $# -ne 2 ]; then
+    echo
+    echo "Usage: fmriprep.sh -s <participantID>"
+    echo
+    exit 1
+fi
 
 BIDS_APP=fmriprep
 
