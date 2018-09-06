@@ -1,5 +1,15 @@
 #!/usr/bin/env bash
 
+if [ ! -d $lnDir ]; then
+     mkdir -p $lnDir
+fi
+
+if [ $# -ne 4 ]; then
+    echo
+    echo "Usage: tracula.sh -s <participantID> -ss <sesnum>"
+    echo
+    exit 1
+fi
 
 BIDS_APP=tracula
 
@@ -17,6 +27,8 @@ study_prefix=$(echo "${ACTIVE_STUDY,,}")
 #
 
 parameters=$(echo $@ | sed -e 's/-s /--participant_label /')
+
+parameters=$(echo $parameters | sed -e 's/-ss /--session_label /')
 
 # tracula wants the freesurfer license
 parameters=$parameters" --license_key /opt/freesurfer/license.txt"

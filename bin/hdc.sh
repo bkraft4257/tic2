@@ -9,15 +9,13 @@ echo
 echo 'parameters   = ' $@
 echo
 
-if [ $# -eq 0 ]
-  then
+if [ $# -ne 4 ]; then
     echo
-    echo "No arguments supplied for heudiconv. Displaying heudiconv help."
+    echo "Usage: hdc.sh -s <participantID> -ss <sessionNum>"
     echo
+    exit 1
+fi
 
-    /usr/local/bin/singularity run $HDC_SINGULARITY_IMAGE -h
-
-else
 
     echo
     echo "Running heudiconv for DICOM to NIFTI conversion"
@@ -41,4 +39,4 @@ else
 
     $cmd
 
-fi
+
