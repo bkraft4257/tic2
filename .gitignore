@@ -1,7 +1,7 @@
 *~
 .idea/workspace.xml
 docs/build/
-.idea/
+.idea/*
 _working
 tests/data/
 .cache
