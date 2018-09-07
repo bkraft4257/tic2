@@ -3,6 +3,10 @@
 # Environment variables
 
 export CENC_SCRIPTS_PATH=${TIC_PATH}/studies/cenc/scripts
+export CENC_PYTHON_PATH=${TIC_PATH}/studies/cenc/python
+export PYTHONPATH=$PYTHONPATH:$CENC_PYTHON_PATH
+export CENC_MATLAB_PATH=${TIC_PATH}/studies/cenc/matlab
+
 
 export CENC_PATH=/cenc/new2018/cenc
 export CENC_BIDS_PATH=${CENC_PATH}/bids
