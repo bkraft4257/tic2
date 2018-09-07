@@ -34,12 +34,12 @@ find ../func/ -name "*task-restpcasl_acq-pcasl_bold.nii.gz" | sort | xargs fmap_
 echo
 echo
 
-find ../func/ -name "*_task-restepifmap_acq-epi_rec-fmap_bold.nii.gz" | sort | xargs fmap_intended_for.py -i *acq-bold_phasediff.json --overwrite -v -f
+find ../func/ -name "*_task-restepi_acq-epi_rec-fmap_bold.nii.gz" | sort | xargs fmap_intended_for.py -i *acq-bold_phasediff.json --overwrite -v -f
 
 echo
 echo
 
-find ../func/ -name "*_task-restepitopup_acq-epi_rec-topup_bold.nii.gz" | sort | xargs fmap_intended_for.py -i *_acq-epse_dir-{ap,pa}_epi.json --overwrite -v
+find ../func/ -name "*_task-restepi_acq-epi_rec-topup_bold.nii.gz" | sort | xargs fmap_intended_for.py -i *_acq-epse_dir-{ap,pa}_epi.json --overwrite -v
 
 echo
 echo
