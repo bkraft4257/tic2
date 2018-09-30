@@ -191,6 +191,15 @@ def gather_anat_files(anat_dict, fmriprep_subject_session_path, netprep_input_pa
             print(f'Unknown key {ii}')
 
 
+def _copy_files(source_file, target_file):
+
+    print(source_file)
+    print(target_file)
+
+    shutil.copy(source_file,target_file)
+
+
+
 def main():
 
     in_args = _argparse()
@@ -236,7 +245,7 @@ def main():
 
     # Copy netprep template to input directory.
 
-    shutil.copy(netprep_config['netprep']['template_filename_with_abspath'],
+    _copy_files(netprep_config['netprep']['template_filename_with_abspath'],
                 os.path.join(netprep_input_path, netprep_config['netprep']['output_filename']))
 
     if in_args.verbose:
