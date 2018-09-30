@@ -1,5 +1,6 @@
-netprep_template: mfc_netprep.yaml
-
+netprep:
+  template_filename_with_abspath: /gandg/tic_releases/0.13.3/tic_core/studies/mfc/scripts/mfc_netprep.yaml
+  output_filename: mfc_netprep.yaml
 
 anat:
   t1w:
