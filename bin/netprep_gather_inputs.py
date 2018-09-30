@@ -93,7 +93,7 @@ def _gather_confounds_file(func_dict,
     return
 
 
-def _gather_anat_file(gather,
+def  _gather_anat_file(gather,
                       subject_session_directory,
                       out_filename,
                       ):
@@ -150,11 +150,12 @@ def _gather_func_file(func_dict,
         shutil.copy(func_found_file, _create_full_output_filename(copy_to_directory, subject, session, gather.out_filename, ))
 
 
-def gather_anat_files(anat_dict, fmriprep_subject_session_path, subject, session):
+def gather_anat_files(anat_dict, fmriprep_subject_session_path, output_path, subject, session):
     """
     Search for files matching glob_string and copy to a directory with a different name
     :param anat_dict:
     :param fmriprep_anat_path:
+    :param output_path:
     :param subject:
     :param session:
     :return:
@@ -164,7 +165,7 @@ def gather_anat_files(anat_dict, fmriprep_subject_session_path, subject, session
         try:
             _gather_anat_file(anat_dict[ii],
                               fmriprep_subject_session_path,
-                              _create_full_output_filename(NETPREP_PATH, subject, session, f'{ii}.nii.gz')
+                              _create_full_output_filename(output_path, subject, session, f'{ii}.nii.gz')
                               )
         except ValueError:
             print(f'Unknown key {ii}')
@@ -210,15 +211,15 @@ def gather_confounds_files(func_dict,
 
 
 def main():
-    global SUBJECT_SESSION_PATH, ANAT_PATH, FUNC_PATH
+    global SUBJECT_SESSION_PATH, FMRIPREP_ANAT_PATH, FMRIPREP_FUNC_PATH, NETPREP_SUBJECT_SESSION_INPUT_PATH
 
     in_args = _argparse()
 
     fmriprep_subject_session_path = os.path.join(FMRIPREP_PATH, f'sub-{in_args.subject}', f'ses-{in_args.session}')
     netprep_input_path = os.path.join(NETPREP_PATH, f'sub-{in_args.subject}', f'ses-{in_args.session}')
 
-    ANAT_PATH = os.path.join(fmriprep_subject_session_path, 'anat')
-    FUNC_PATH = os.path.join(fmriprep_subject_session_path, 'func')
+    FMRIPREP_ANAT_PATH = os.path.join(fmriprep_subject_session_path, 'anat')
+    FMRIPREP_FUNC_PATH = os.path.join(fmriprep_subject_session_path, 'func')
 
     SUBJECT_SESSION_PATH = netprep_input_path
 
@@ -226,8 +227,10 @@ def main():
 
     netprep_config = tic_io.read_yaml(in_args.yaml_filename, in_args.verbose)
 
-    for ii in netprep_config['func'].keys():
-        print(ii)
+    for keys, func_config in netprep_config['func'].items():
+        print(keys)
+
+        NETPREP_SUBJECT_SESSION_INPUT_PATH = os.path.join(netprep_input_path, func_config['input_dir'] )
 
         gather_anat_files(netprep_config['anat'], fmriprep_subject_session_path,  in_args.subject, in_args.session)
 
