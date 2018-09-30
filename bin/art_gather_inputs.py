@@ -123,8 +123,7 @@ def main():
         # Copy functional files and apply mask when mask is found
         gather_func_file(func_config,
                          fmriprep_subject_session_path,
-                         netprep_input_path,
-                         verbose=in_args.verbose)
+                         netprep_input_path,)
 
     return
 

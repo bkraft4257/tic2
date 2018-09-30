@@ -1,3 +1,7 @@
+# rec-fmap designates the reconstruction that will be not is.
+#
+# In the BIDS directory rec-fmap == rec-topup.
+
 preheat1:
   input_dir: 'preHeat1/inputs'
   base_glob_string: '/func/*task-preHeat1_acq-epi_rec-fmap_bold*'
