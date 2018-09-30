@@ -166,6 +166,7 @@ def gather_func_file(func_dict,
     else:
         shutil.copy(func_found_file, output_file)
 
+    return func_found_file
 
 def gather_anat_files(anat_dict, fmriprep_subject_session_path, netprep_input_path,):
     """
@@ -199,8 +200,6 @@ def main():
 
     for keys, func_config in netprep_config['func'].items():
 
-        if in_args.verbose:
-            print(f"{in_args.subject},  {in_args.session},  {func_config['base_glob_string']}")
 
         netprep_input_path = os.path.join(netprep_subject_session_path, func_config['input_dir'])
         _make_directory(netprep_input_path)
@@ -213,10 +212,13 @@ def main():
                           netprep_input_path)
 
         # Copy functional files and apply mask when mask is found
-        gather_func_file(func_config,
-                         fmriprep_subject_session_path,
-                         netprep_input_path,
-                         verbose=in_args.verbose)
+        func_file = gather_func_file(func_config,
+                                     fmriprep_subject_session_path,
+                                     netprep_input_path,
+                                     verbose=in_args.verbose)
+
+        if in_args.verbose:
+            print(f"{in_args.subject},  {in_args.session},  {func_file}")
 
         # Extract confounds calculated wth fmriprep and copy to netprep input.
 
