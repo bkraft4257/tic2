@@ -71,23 +71,23 @@ def _create_full_output_filename(copy_to_directory, subject, session, out_filena
     return os.path.join(copy_to_directory, f'sub-{subject}_ses-{session}_{out_filename}')
 
 
-def _extract_confounds(found_file, output_filename, confounds_to_extract):
-    """
-
-    :param found_file:
-    :param output_filename:
-    :param confounds_to_extract:
-    :return:
-    """
-
-    shutil.copy(found_file, output_filename)
-
 
 KEEP_COLUMNS = ['tCompCor00', 'tCompCor01', 'tCompCor02', 'tCompCor03', 'tCompCor04', 'tCompCor05',
                 'X', 'Y', 'Z', 'RotX', 'RotY', 'RotZ']
 
 
 def _extract_confounds(in_filename, out_filename, keep_columns=KEEP_COLUMNS):
+    """
+    Extract confounds from fmriprep confounds.csv
+
+    :param in_filename:
+    :param out_filename:
+    :param keep_columns:
+    :return:
+    """
+    print(in_filename)
+    print(output_filename)
+
     in_df = pandas.read_csv(in_filename, sep='\t')
     out_df = in_df[keep_columns]
     out_df.to_csv(out_filename)
