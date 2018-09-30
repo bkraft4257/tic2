@@ -9,7 +9,7 @@ gm_probmap: t1w_mni_gm_probtissue.nii.gz
 gm_mask_threshold: 0.51
 
 nilearn_nifti_masker:
-        confounds: bold_confound.csv
+        confounds: bold_confounds.csv
         kind: correlation 
         standardize: True
         smoothing_fwhm: 8
