@@ -216,14 +216,14 @@ def main():
     in_args = _argparse()
 
     fmriprep_subject_session_path = os.path.join(FMRIPREP_PATH, f'sub-{in_args.subject}', f'ses-{in_args.session}')
-    netprep_input_path = os.path.join(NETPREP_PATH, f'sub-{in_args.subject}', f'ses-{in_args.session}')
+    netprep_subject_session_path = os.path.join(NETPREP_PATH, f'sub-{in_args.subject}', f'ses-{in_args.session}')
 
     FMRIPREP_ANAT_PATH = os.path.join(fmriprep_subject_session_path, 'anat')
     FMRIPREP_FUNC_PATH = os.path.join(fmriprep_subject_session_path, 'func')
 
-    SUBJECT_SESSION_PATH = netprep_input_path
+    SUBJECT_SESSION_PATH = fmriprep_subject_session_path
 
-    _make_directory(netprep_input_path)
+    _make_directory(netprep_subject_session_path)
 
     netprep_config = tic_io.read_yaml(in_args.yaml_filename, in_args.verbose)
 
@@ -231,8 +231,8 @@ def main():
         print(keys)
         print(func_config)
 
-        netprep_input_path = os.path.join(netprep_input_path, func_config['input_dir'])
-        print(netprep_input_path)
+        netprep_input_path = os.path.join(netprep_subject_session_path, func_config['input_dir'])
+        _make_directory(netprep_input_path)
 
         gather_anat_files(netprep_config['anat'], fmriprep_subject_session_path, netprep_input_path,  in_args.subject, in_args.session)
 
