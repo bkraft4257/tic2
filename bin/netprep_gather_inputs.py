@@ -118,7 +118,6 @@ def  _gather_anat_file(gather,
 def _gather_func_file(func_dict,
                       fmriprep_subject_session_func_path,
                       netprep_input_path,
-                      output_file,
                       ):
     """
 
@@ -166,20 +165,20 @@ def gather_anat_files(anat_dict, fmriprep_subject_session_path, netprep_input_pa
             print(f'Unknown key {ii}')
 
 
-def gather_func_files(func_dict, subject, session, confounds):
+def gather_func_files(func_dict, fmriprep_subject_session_path, netprep_input_path):
     """
 
     :param func_dict:
-    :param subject:
-    :param session:
-    :param confounds:
+    :param fmriprep_subject_session_path:
+    :param netprep_input_path:
     :return:
     """
+
     for ii in func_dict.keys():
         try:
             _gather_func_file(func_dict[ii],
-                              SUBJECT_SESSION_PATH,
-                              _create_full_output_filename(NETPREP_PATH, subject, session, f'{ii}.nii.gz')
+                              fmriprep_subject_session_path,
+                              netprep_input_path
                               )
 
         except ValueError:
@@ -242,7 +241,7 @@ def main():
         # could be replaced with
         gather_anat_files(netprep_config['anat'], fmriprep_subject_session_path, netprep_input_path)
 
-        gather_func_files(func_config, subject, session, confounds)
+        _gather_func_file(func_config, fmriprep_subject_session_path, netprep_input_path)
 
 
     return
