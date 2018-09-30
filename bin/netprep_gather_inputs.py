@@ -150,7 +150,7 @@ def gather_func_file(func_dict,
 
     output_file = os.path.join(netprep_input_path, func_dict['func_out_filename'])
 
-    _copy_filesfunc_found_file, output_file)
+    _copy_files(func_found_file, output_file)
 
     if func_dict['mask_glob_string'] is not None:
 
