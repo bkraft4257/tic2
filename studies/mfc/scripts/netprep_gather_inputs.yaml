@@ -1,3 +1,4 @@
+netprep_template: mfc_netprep.yaml
 
 
 anat:
@@ -9,7 +10,21 @@ anat:
     glob_string: '/anat/*_T1w_space-MNI152NLin2009cAsym_class-GM_probtissue.nii.gz'
     out_filename: t1w_mni_gm_probtissue.nii.gz
 
-func_confounds: ['X', 'Y', 'Z', 'RotX', 'RotY', 'RotZ']
+# Columns in the confounds.tsv created by fmriprep. 
+# You may keep as many or as few as you like for netprep processing.
+#
+#     CSF, WhiteMatter, GlobalSignal,
+#     stdDVARS, non-stdDVARS, vx-wisestdDVARS, FramewiseDisplacement,
+#     tCompCor00, tCompCor01, tCompCor02, tCompCor03, tCompCor04, tCompCor05,
+#     aCompCor00, aCompCor01, aCompCor02, aCompCor03, aCompCor04, aCompCor05,
+#     Cosine00, Cosine01, Cosine02,
+#     NonSteadyStateOutlier00, NonSteadyStateOutlier01,
+#     X, Y, Z, RotX, RotY, RotZ]
+#
+
+func_confounds: [tCompCor00, tCompCor01, tCompCor02, tCompCor03, tCompCor04, tCompCor05,
+                 X, Y, Z, RotX, RotY, RotZ]
+
 
 func:
   preheat1_fmap:
@@ -24,6 +39,7 @@ func:
 
     confounds_glob_string: 'confounds.tsv'
     confounds_out_filename: 'bold_confounds.tsv'
+
 
   preheat2_fmap:
     input_dir: 'fmap/preheat2/inputs'
