@@ -72,7 +72,7 @@ func:
 
   preneutral2:
     input_dir: 'fmap/preNeutral2/inputs'
-    base_glob_string: '/func/*task-preNeutral1_acq-epi_rec-fmap_bold*'
+    base_glob_string: '/func/*task-preNeutral2_acq-epi_rec-fmap_bold*'
 
     func_glob_string: 'space-MNI152NLin2009cAsym_preproc.nii.gz'
     func_out_filename: bold_mni_preproc.nii.gz
