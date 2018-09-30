@@ -230,7 +230,8 @@ def main():
 
         _gather_confounds_file(func_config,
                                fmriprep_subject_session_path,
-                               netprep_input_path, )
+                               netprep_input_path,
+                               netprep_config['confounds'])
 
 
     return

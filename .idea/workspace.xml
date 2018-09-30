@@ -4,7 +4,6 @@
     <list default="true" id="6f3e13b3-cd58-4c4d-98f6-1a68f8358bfb" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/bin/netprep_gather_inputs.py" afterPath="$PROJECT_DIR$/bin/netprep_gather_inputs.py" />
-      <change beforePath="$PROJECT_DIR$/studies/mfc/scripts/netprep_gather_inputs.yaml" afterPath="$PROJECT_DIR$/studies/mfc/scripts/netprep_gather_inputs.yaml" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -69,8 +68,8 @@
       <file leaf-file-name="netprep_gather_inputs.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/bin/netprep_gather_inputs.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="500">
-              <caret line="118" column="0" lean-forward="true" selection-start-line="118" selection-start-column="0" selection-end-line="118" selection-end-column="0" />
+            <state relative-caret-position="31">
+              <caret line="198" column="13" lean-forward="false" selection-start-line="198" selection-start-column="13" selection-end-line="198" selection-end-column="13" />
               <folding />
             </state>
           </provider>
@@ -543,13 +542,6 @@
       <option name="presentableId" value="Default" />
       <updated>1517948604886</updated>
     </task>
-    <task id="LOCAL-00660" summary="Converted string to a single string to be printed.">
-      <created>1528405296028</created>
-      <option name="number" value="00660" />
-      <option name="presentableId" value="LOCAL-00660" />
-      <option name="project" value="LOCAL" />
-      <updated>1528405296028</updated>
-    </task>
     <task id="LOCAL-00661" summary="Converted string to a single string to be printed.">
       <created>1528405319054</created>
       <option name="number" value="00661" />
@@ -886,7 +878,14 @@
       <option name="project" value="LOCAL" />
       <updated>1538327035474</updated>
     </task>
-    <option name="localTasksCounter" value="709" />
+    <task id="LOCAL-00709" summary="Working on MFC netprep_gather_inputs">
+      <created>1538328693524</created>
+      <option name="number" value="00709" />
+      <option name="presentableId" value="LOCAL-00709" />
+      <option name="project" value="LOCAL" />
+      <updated>1538328693524</updated>
+    </task>
+    <option name="localTasksCounter" value="710" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -1421,8 +1420,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/bin/netprep_gather_inputs.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="500">
-          <caret line="118" column="0" lean-forward="true" selection-start-line="118" selection-start-column="0" selection-end-line="118" selection-end-column="0" />
+        <state relative-caret-position="31">
+          <caret line="198" column="13" lean-forward="false" selection-start-line="198" selection-start-column="13" selection-end-line="198" selection-end-column="13" />
           <folding />
         </state>
       </provider>
