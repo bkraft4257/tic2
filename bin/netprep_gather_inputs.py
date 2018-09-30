@@ -107,6 +107,10 @@ def _gather_anat_file(gather,
     """
 
     found_file = _find_file(gather['glob_string'], subject_session_directory)
+
+    print(found_file)
+    print(out_filename)
+
     shutil.copy(found_file, out_filename)
 
 
