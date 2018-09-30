@@ -68,8 +68,8 @@
       <file leaf-file-name="netprep_gather_inputs.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/bin/netprep_gather_inputs.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="143">
-              <caret line="148" column="0" lean-forward="true" selection-start-line="148" selection-start-column="0" selection-end-line="148" selection-end-column="0" />
+            <state relative-caret-position="228">
+              <caret line="232" column="99" lean-forward="false" selection-start-line="232" selection-start-column="99" selection-end-line="232" selection-end-column="99" />
               <folding />
             </state>
           </provider>
@@ -522,13 +522,6 @@
       <option name="presentableId" value="Default" />
       <updated>1517948604886</updated>
     </task>
-    <task id="LOCAL-00655" summary="Moving clean_bids to python. Updated permissions.">
-      <created>1528228635326</created>
-      <option name="number" value="00655" />
-      <option name="presentableId" value="LOCAL-00655" />
-      <option name="project" value="LOCAL" />
-      <updated>1528228635327</updated>
-    </task>
     <task id="LOCAL-00656" summary="Updated intended for to produce a single string to be written to file. &#10;This is just the first step.">
       <created>1528403169135</created>
       <option name="number" value="00656" />
@@ -865,7 +858,14 @@
       <option name="project" value="LOCAL" />
       <updated>1538325641717</updated>
     </task>
-    <option name="localTasksCounter" value="704" />
+    <task id="LOCAL-00704" summary="Working on MFC netprep_gather_inputs">
+      <created>1538325750970</created>
+      <option name="number" value="00704" />
+      <option name="presentableId" value="LOCAL-00704" />
+      <option name="project" value="LOCAL" />
+      <updated>1538325750970</updated>
+    </task>
+    <option name="localTasksCounter" value="705" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -1397,8 +1397,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/bin/netprep_gather_inputs.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="143">
-          <caret line="148" column="0" lean-forward="true" selection-start-line="148" selection-start-column="0" selection-end-line="148" selection-end-column="0" />
+        <state relative-caret-position="228">
+          <caret line="232" column="99" lean-forward="false" selection-start-line="232" selection-start-column="99" selection-end-line="232" selection-end-column="99" />
           <folding />
         </state>
       </provider>
