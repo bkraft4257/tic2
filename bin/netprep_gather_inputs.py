@@ -216,7 +216,6 @@ def main():
 
     for keys, func_config in netprep_config['func'].items():
 
-
         netprep_input_path = os.path.join(netprep_subject_session_path, func_config['input_dir'])
         _make_directory(netprep_input_path)
 
@@ -243,10 +242,10 @@ def main():
                                netprep_input_path,
                                netprep_config['func_confounds'])
 
-    # Copy netprep template to input directory.
+        # Copy netprep template to input directory.
 
-    _copy_files(netprep_config['netprep']['template_filename_with_abspath'],
-                os.path.join(netprep_input_path, netprep_config['netprep']['output_filename']))
+        _copy_files(netprep_config['netprep']['template_filename_with_abspath'],
+                    os.path.join(netprep_input_path, netprep_config['netprep']['output_filename']))
 
     if in_args.verbose:
         print('\n\n')
