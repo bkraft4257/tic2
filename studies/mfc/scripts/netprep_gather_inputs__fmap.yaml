@@ -35,9 +35,9 @@ func:
     func_glob_string: 'space-MNI152NLin2009cAsym_preproc.nii.gz'
     func_out_filename: bold_mni_preproc.nii.gz
 
-    mask_glob_string:  #'space-MNI152NLin2009cAsym_brainmask.nii.gz'
-    mask_out_filename: # brainmask.nii.gz
-    masked_func_filename: # masked_bold_mni_preproc.nii.gz
+    mask_glob_string:  'space-MNI152NLin2009cAsym_brainmask.nii.gz'
+    mask_out_filename:  brainmask.nii.gz
+    masked_func_filename:  masked_bold_mni_preproc.nii.gz
 
     confounds_glob_string: 'confounds.tsv'
     confounds_out_filename: 'bold_confounds.csv'
@@ -50,9 +50,9 @@ func:
     func_glob_string: 'space-MNI152NLin2009cAsym_preproc.nii.gz'
     func_out_filename: bold_mni_preproc.nii.gz
 
-    mask_glob_string: #'space-MNI152NLin2009cAsym_brainmask.nii.gz'
-    mask_out_filename: # brainmask.nii.gz
-    masked_func_filename: # masked_bold_mni_preproc.nii.gz
+    mask_glob_string: 'space-MNI152NLin2009cAsym_brainmask.nii.gz'
+    mask_out_filename:  brainmask.nii.gz
+    masked_func_filename:  masked_bold_mni_preproc.nii.gz
 
     confounds_glob_string: 'confounds.tsv'
     confounds_out_filename: 'bold_confounds.tsv'
@@ -65,9 +65,9 @@ func:
     func_glob_string: 'space-MNI152NLin2009cAsym_preproc.nii.gz'
     func_out_filename: bold_mni_preproc.nii.gz
 
-    mask_glob_string: #'space-MNI152NLin2009cAsym_brainmask.nii.gz'
-    mask_out_filename: # brainmask.nii.gz
-    masked_func_filename: # masked_bold_mni_preproc.nii.gz
+    mask_glob_string: 'space-MNI152NLin2009cAsym_brainmask.nii.gz'
+    mask_out_filename:  brainmask.nii.gz
+    masked_func_filename:  masked_bold_mni_preproc.nii.gz
 
     confounds_glob_string: 'confounds.tsv'
     confounds_out_filename: 'bold_confounds.tsv'
@@ -80,9 +80,9 @@ func:
     func_glob_string: 'space-MNI152NLin2009cAsym_preproc.nii.gz'
     func_out_filename: bold_mni_preproc.nii.gz
 
-    mask_glob_string: #'space-MNI152NLin2009cAsym_brainmask.nii.gz'
-    mask_out_filename: # brainmask.nii.gz
-    masked_func_filename: # masked_bold_mni_preproc.nii.gz
+    mask_glob_string: 'space-MNI152NLin2009cAsym_brainmask.nii.gz'
+    mask_out_filename:  brainmask.nii.gz
+    masked_func_filename:  masked_bold_mni_preproc.nii.gz
 
     confounds_glob_string: 'confounds.tsv'
     confounds_out_filename: 'bold_confounds.tsv'
@@ -95,9 +95,9 @@ func:
     func_glob_string: 'space-MNI152NLin2009cAsym_preproc.nii.gz'
     func_out_filename: bold_mni_preproc.nii.gz
 
-    mask_glob_string: #'space-MNI152NLin2009cAsym_brainmask.nii.gz'
-    mask_out_filename: # brainmask.nii.gz
-    masked_func_filename: # masked_bold_mni_preproc.nii.gz
+    mask_glob_string: 'space-MNI152NLin2009cAsym_brainmask.nii.gz'
+    mask_out_filename:  brainmask.nii.gz
+    masked_func_filename:  masked_bold_mni_preproc.nii.gz
 
     confounds_glob_string: 'confounds.tsv'
     confounds_out_filename: 'bold_confounds.tsv'
@@ -110,9 +110,9 @@ func:
     func_glob_string: 'space-MNI152NLin2009cAsym_preproc.nii.gz'
     func_out_filename: bold_mni_preproc.nii.gz
 
-    mask_glob_string: #'space-MNI152NLin2009cAsym_brainmask.nii.gz'
-    mask_out_filename: # brainmask.nii.gz
-    masked_func_filename: # masked_bold_mni_preproc.nii.gz
+    mask_glob_string: 'space-MNI152NLin2009cAsym_brainmask.nii.gz'
+    mask_out_filename:  brainmask.nii.gz
+    masked_func_filename:  masked_bold_mni_preproc.nii.gz
 
     confounds_glob_string: 'confounds.tsv'
     confounds_out_filename: 'bold_confounds.tsv'
@@ -125,9 +125,9 @@ func:
     func_glob_string: 'space-MNI152NLin2009cAsym_preproc.nii.gz'
     func_out_filename: bold_mni_preproc.nii.gz
 
-    mask_glob_string: #'space-MNI152NLin2009cAsym_brainmask.nii.gz'
-    mask_out_filename: # brainmask.nii.gz
-    masked_func_filename: # masked_bold_mni_preproc.nii.gz
+    mask_glob_string: 'space-MNI152NLin2009cAsym_brainmask.nii.gz'
+    mask_out_filename:  brainmask.nii.gz
+    masked_func_filename:  masked_bold_mni_preproc.nii.gz
 
     confounds_glob_string: 'confounds.tsv'
     confounds_out_filename: 'bold_confounds.tsv'
@@ -140,9 +140,9 @@ func:
     func_glob_string: 'space-MNI152NLin2009cAsym_preproc.nii.gz'
     func_out_filename: bold_mni_preproc.nii.gz
 
-    mask_glob_string: #'space-MNI152NLin2009cAsym_brainmask.nii.gz'
-    mask_out_filename: # brainmask.nii.gz
-    masked_func_filename: # masked_bold_mni_preproc.nii.gz
+    mask_glob_string: 'space-MNI152NLin2009cAsym_brainmask.nii.gz'
+    mask_out_filename:  brainmask.nii.gz
+    masked_func_filename:  masked_bold_mni_preproc.nii.gz
 
     confounds_glob_string: 'confounds.tsv'
     confounds_out_filename: 'bold_confounds.tsv'
