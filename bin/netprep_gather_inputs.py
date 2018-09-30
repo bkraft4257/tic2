@@ -146,10 +146,11 @@ def _gather_func_file(func_dict,
         shutil.copy(func_found_file, _create_full_output_filename(copy_to_directory, subject, session, gather.out_filename, ))
 
 
-def  gather_anat_files(anat_dict, search_directory, subject, session):
+def gather_anat_files(anat_dict, fmriprep_anat_path, subject, session):
     """
     Search for files matching glob_string and copy to a directory with a different name
     :param anat_dict:
+    :param fmriprep_anat_path:
     :param subject:
     :param session:
     :return:
@@ -158,7 +159,7 @@ def  gather_anat_files(anat_dict, search_directory, subject, session):
     for ii in anat_dict.keys():
         try:
             _gather_anat_file(anat_dict[ii],
-                              search_directory,
+                              fmriprep_anat_path,
                               _create_full_output_filename(NETPREP_PATH, subject, session, f'{ii}.nii.gz')
                               )
         except ValueError:
@@ -224,7 +225,7 @@ def main():
     for ii in netprep_config['func'].keys():
         print(ii)
 
-        gather_anat_files(netprep_config['anat'], in_args.subject, in_args.session)
+        gather_anat_files(netprep_config['anat'], ANAT_PATH,  in_args.subject, in_args.session)
 
     return
 
