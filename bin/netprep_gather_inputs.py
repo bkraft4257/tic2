@@ -83,6 +83,18 @@ def _extract_confounds(found_file, output_filename, confounds_to_extract):
     shutil.copy(found_file, output_filename)
 
 
+KEEP_COLUMNS = ['tCompCor00', 'tCompCor01', 'tCompCor02', 'tCompCor03', 'tCompCor04', 'tCompCor05',
+                'X', 'Y', 'Z', 'RotX', 'RotY', 'RotZ']
+
+
+def _extract_confounds(in_filename, out_filename, keep_columns=KEEP_COLUMNS):
+    in_df = pandas.read_csv(in_filename, sep='\t')
+    out_df = in_df[keep_columns]
+    out_df.to_csv(out_filename)
+
+    return out_df
+
+
 def _gather_confounds_file(func_dict,
                            fmriprep_subject_session_path,
                            netprep_input_path,
@@ -176,19 +188,6 @@ def gather_anat_files(anat_dict, fmriprep_subject_session_path, netprep_input_pa
             print(f'Unknown key {ii}')
 
 
-def gather_confounds_files(func_dict,
-                           fmriprep_subject_session_path,
-                           netprep_input_path,):
-
-    for ii in func_dict.keys():
-        try:
-            _gather_confounds_file(func_dict[ii],
-                                   fmriprep_subject_session_path,
-                                   netprep_input_path, )
-
-        except ValueError:
-            print(f'Unknown key {ii}')
-
 
 def main():
     global SUBJECT_SESSION_PATH, FMRIPREP_ANAT_PATH, FMRIPREP_FUNC_PATH, NETPREP_SUBJECT_SESSION_INPUT_PATH
@@ -208,8 +207,6 @@ def main():
     netprep_config = tic_io.read_yaml(in_args.yaml_filename, in_args.verbose)
 
     for keys, func_config in netprep_config['func'].items():
-        print(keys)
-        print(func_config)
 
         netprep_input_path = os.path.join(netprep_subject_session_path, func_config['input_dir'])
         _make_directory(netprep_input_path)
@@ -233,6 +230,12 @@ def main():
                                netprep_input_path,
                                netprep_config['func_confounds'])
 
+
+    # Copy netprep template
+
+    input_file = os.path.join()
+    output_file = os.path.join(netprep_input_path, netprep_config['netprep_template'])
+    shutil.copy(netprep_input_path)
 
     return
 
