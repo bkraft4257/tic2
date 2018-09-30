@@ -12,9 +12,16 @@ anat:
 func_confounds: ['X', 'Y', 'Z', 'RotX', 'RotY', 'RotZ']
 
 func:
-  pre_heat1_fmap:
+  preheat1_fmap:
     input_dir: 'fmap/preheat1/inputs'
     base_glob_string: '/func/*task-preHeat1_acq-epi_rec-fmap_bold*'
+    func_glob_string: 'space-MNI152NLin2009cAsym_preproc.nii.gz'
+    mask_glob_string: 'space-MNI152NLin2009cAsym_brainmask.nii.gz'
+    confounds_glob_string: 'confounds.tsv'
+
+  preheat2_fmap:
+    input_dir: 'fmap/preheat2/inputs'
+    base_glob_string: '/func/*task-preHeat2_acq-epi_rec-fmap_bold*'
     func_glob_string: 'space-MNI152NLin2009cAsym_preproc.nii.gz'
     mask_glob_string: 'space-MNI152NLin2009cAsym_brainmask.nii.gz'
     confounds_glob_string: 'confounds.tsv'
