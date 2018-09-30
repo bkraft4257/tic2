@@ -108,8 +108,8 @@
       <file leaf-file-name="netprep_gather_inputs.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/bin/netprep_gather_inputs.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="268">
-              <caret line="161" column="71" lean-forward="false" selection-start-line="161" selection-start-column="71" selection-end-line="161" selection-end-column="71" />
+            <state relative-caret-position="296">
+              <caret line="152" column="19" lean-forward="true" selection-start-line="152" selection-start-column="19" selection-end-line="152" selection-end-column="19" />
               <folding />
             </state>
           </provider>
@@ -592,13 +592,6 @@
       <option name="presentableId" value="Default" />
       <updated>1517948604886</updated>
     </task>
-    <task id="LOCAL-00643" summary="Moving clean_bids to python. Updated permissions.">
-      <created>1528221370613</created>
-      <option name="number" value="00643" />
-      <option name="presentableId" value="LOCAL-00643" />
-      <option name="project" value="LOCAL" />
-      <updated>1528221370614</updated>
-    </task>
     <task id="LOCAL-00644" summary="Moving clean_bids to python. Updated permissions.">
       <created>1528221526192</created>
       <option name="number" value="00644" />
@@ -935,7 +928,14 @@
       <option name="project" value="LOCAL" />
       <updated>1538322732119</updated>
     </task>
-    <option name="localTasksCounter" value="692" />
+    <task id="LOCAL-00692" summary="Fixed bug in HFPEF. Also started working on netprep_gather yaml for MFC.">
+      <created>1538323359318</created>
+      <option name="number" value="00692" />
+      <option name="presentableId" value="LOCAL-00692" />
+      <option name="project" value="LOCAL" />
+      <updated>1538323359318</updated>
+    </task>
+    <option name="localTasksCounter" value="693" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -1334,6 +1334,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="221">
           <caret line="13" column="16" lean-forward="false" selection-start-line="13" selection-start-column="16" selection-end-line="13" selection-end-column="16" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1466,8 +1467,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/bin/netprep_gather_inputs.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="268">
-          <caret line="161" column="71" lean-forward="false" selection-start-line="161" selection-start-column="71" selection-end-line="161" selection-end-column="71" />
+        <state relative-caret-position="296">
+          <caret line="152" column="19" lean-forward="true" selection-start-line="152" selection-start-column="19" selection-end-line="152" selection-end-column="19" />
           <folding />
         </state>
       </provider>
