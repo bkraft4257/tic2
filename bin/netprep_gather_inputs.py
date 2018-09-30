@@ -85,8 +85,6 @@ def _extract_confounds(in_filename, out_filename, keep_columns=KEEP_COLUMNS):
     :param keep_columns:
     :return:
     """
-    print(in_filename)
-    print(out_filename)
 
     in_df = pandas.read_csv(in_filename, sep='\t')
     out_df = in_df[keep_columns]
@@ -200,6 +198,8 @@ def main():
     netprep_config = tic_io.read_yaml(in_args.yaml_filename, in_args.verbose)
 
     for keys, func_config in netprep_config['func'].items():
+
+        print(func_config['base_glob_string'])
 
         netprep_input_path = os.path.join(netprep_subject_session_path, func_config['input_dir'])
         _make_directory(netprep_input_path)
