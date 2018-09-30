@@ -197,9 +197,13 @@ def main():
 
     netprep_config = tic_io.read_yaml(in_args.yaml_filename, in_args.verbose)
 
+    if in_args.verbose:
+        print('\n\n')
+
     for keys, func_config in netprep_config['func'].items():
 
-        print(func_config['base_glob_string'])
+        if in_args.verbose:
+            print(f"{in_args.subject},  {in_args.session},  {func_config['base_glob_string']}")
 
         netprep_input_path = os.path.join(netprep_subject_session_path, func_config['input_dir'])
         _make_directory(netprep_input_path)
@@ -228,6 +232,9 @@ def main():
 
     shutil.copy(netprep_config['netprep']['template_filename_with_abspath'],
                 os.path.join(netprep_input_path, netprep_config['netprep']['output_filename']))
+
+    if in_args.verbose:
+        print('\n\n')
 
     return
 

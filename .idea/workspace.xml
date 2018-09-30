@@ -2,10 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6f3e13b3-cd58-4c4d-98f6-1a68f8358bfb" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/studies/mfc/scripts/netprep_gather_inputs__topup.yaml" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/studies/mfc/scripts/mfc_fmap_intended_for.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/studies/mfc/scripts/netprep_gather_inputs.yaml" afterPath="$PROJECT_DIR$/studies/mfc/scripts/netprep_gather_inputs__fmap.yaml" />
+      <change beforePath="$PROJECT_DIR$/bin/netprep_gather_inputs.py" afterPath="$PROJECT_DIR$/bin/netprep_gather_inputs.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -67,11 +65,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="netprep_gather_inputs.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="netprep_gather_inputs.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/bin/netprep_gather_inputs.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="231">
-              <caret line="206" column="56" lean-forward="true" selection-start-line="206" selection-start-column="56" selection-end-line="206" selection-end-column="56" />
+            <state relative-caret-position="250">
+              <caret line="206" column="0" lean-forward="true" selection-start-line="206" selection-start-column="0" selection-end-line="206" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -92,16 +90,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="219">
               <caret line="521" column="0" lean-forward="false" selection-start-line="521" selection-start-column="0" selection-end-line="521" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="hfpef_netprep_epi.yaml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/studies/hfpef/scripts/hfpef_netprep_epi.yaml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="357">
-              <caret line="21" column="0" lean-forward="false" selection-start-line="20" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -137,7 +125,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="netprep_gather_inputs__topup.yaml" pinned="false" current-in-tab="true">
+      <file leaf-file-name="netprep_gather_inputs__topup.yaml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/studies/mfc/scripts/netprep_gather_inputs__topup.yaml">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="-1224">
@@ -189,8 +177,8 @@
       <find>'</find>
       <find>print</find>
       <find>display</find>
-      <find>fmap_</find>
       <find>fmap</find>
+      <find>fmap_</find>
     </findStrings>
     <replaceStrings>
       <replace>01d</replace>
@@ -209,11 +197,11 @@
       <replace>TIC_PRIVATE_CONFIG_JSON</replace>
       <replace>post_</replace>
       <replace>heat</replace>
-      <replace>topup</replace>
       <replace>IMOVE_NETPREP_PATH</replace>
       <replace>imove</replace>
       <replace>IMOVE</replace>
       <replace>'</replace>
+      <replace>topup</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -276,9 +264,9 @@
         <option value="$PROJECT_DIR$/studies/hfpef/scripts/hfpef_fmap_intended_for.sh" />
         <option value="$PROJECT_DIR$/studies/hfpef/scripts/hfpef_protocol.py" />
         <option value="$PROJECT_DIR$/studies/mfc/scripts/mfc_netprep.yaml" />
-        <option value="$PROJECT_DIR$/bin/netprep_gather_inputs.py" />
         <option value="$PROJECT_DIR$/studies/mfc/scripts/netprep_gather_inputs.yaml" />
         <option value="$PROJECT_DIR$/studies/mfc/scripts/netprep_gather_inputs__topup.yaml" />
+        <option value="$PROJECT_DIR$/bin/netprep_gather_inputs.py" />
       </list>
     </option>
   </component>
@@ -583,13 +571,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1517948604886</updated>
-    </task>
-    <task id="LOCAL-00674" summary="Added a function to check if the IntendedFor files in the json file point&#10;a file that exists.">
-      <created>1532119076881</created>
-      <option name="number" value="00674" />
-      <option name="presentableId" value="LOCAL-00674" />
-      <option name="project" value="LOCAL" />
-      <updated>1532119076882</updated>
     </task>
     <task id="LOCAL-00675" summary="Added a function to check if the IntendedFor files in the json file point&#10;a file that exists.">
       <created>1532119794330</created>
@@ -927,7 +908,14 @@
       <option name="project" value="LOCAL" />
       <updated>1538333596045</updated>
     </task>
-    <option name="localTasksCounter" value="723" />
+    <task id="LOCAL-00723" summary="Working on MFC netprep_gather_inputs">
+      <created>1538333708819</created>
+      <option name="number" value="00723" />
+      <option name="presentableId" value="LOCAL-00723" />
+      <option name="project" value="LOCAL" />
+      <updated>1538333708819</updated>
+    </task>
+    <option name="localTasksCounter" value="724" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -1424,14 +1412,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/bin/netprep_gather_inputs.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="231">
-          <caret line="206" column="56" lean-forward="true" selection-start-line="206" selection-start-column="56" selection-end-line="206" selection-end-column="56" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/studies/hfpef/scripts/hfpef_gi_netprep_epi.sh">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-422">
@@ -1456,6 +1436,14 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/studies/mfc/scripts/netprep_gather_inputs__topup.yaml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1224">
+          <caret line="32" column="47" lean-forward="true" selection-start-line="32" selection-start-column="47" selection-end-line="32" selection-end-column="47" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/studies/mfc/scripts/netprep_gather_inputs__fmap.yaml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="339">
@@ -1464,10 +1452,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/studies/mfc/scripts/netprep_gather_inputs__topup.yaml">
+    <entry file="file://$PROJECT_DIR$/bin/netprep_gather_inputs.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1224">
-          <caret line="32" column="47" lean-forward="true" selection-start-line="32" selection-start-column="47" selection-end-line="32" selection-end-column="47" />
+        <state relative-caret-position="250">
+          <caret line="206" column="0" lean-forward="true" selection-start-line="206" selection-start-column="0" selection-end-line="206" selection-end-column="0" />
           <folding />
         </state>
       </provider>
