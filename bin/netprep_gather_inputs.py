@@ -215,7 +215,7 @@ def main():
     ANAT_PATH = os.path.join(fmriprep_subject_session_path, 'anat')
     FUNC_PATH = os.path.join(fmriprep_subject_session_path, 'func')
 
-    _make_directory(NETPREP_PATH)
+    _make_directory(netprep_input_path)
 
     netprep_config = tic_io.read_yaml(in_args.yaml_filename, in_args.verbose)
 
