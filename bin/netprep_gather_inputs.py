@@ -159,7 +159,7 @@ def gather_anat_files(anat_dict, subject, session):
         try:
             _gather_anat_file(anat_dict[ii],
                               SUBJECT_SESSION_PATH,
-                              _create_full_output_filename(CONN_PATH, subject, session, f'{ii}.nii.gz')
+                              _create_full_output_filename(NETPREP_PATH, subject, session, f'{ii}.nii.gz')
                               )
         except ValueError:
             print(f'Unknown key {ii}')
@@ -170,7 +170,7 @@ def gather_func_files(func_dict, subject, session, confounds):
         try:
             _gather_func_file(func_dict[ii],
                               SUBJECT_SESSION_PATH,
-                              _create_full_output_filename(CONN_PATH, subject, session, f'{ii}.nii.gz')
+                              _create_full_output_filename(NETPREP_PATH, subject, session, f'{ii}.nii.gz')
                               )
 
         except ValueError:
@@ -180,7 +180,7 @@ def gather_func_files(func_dict, subject, session, confounds):
         try:
             _gather_confounds_file(func_dict[ii],
                                    SUBJECT_SESSION_PATH,
-                                   _create_full_output_filename(CONN_PATH, subject, session, f'{ii}.csv'),
+                                   _create_full_output_filename(NETPREP_PATH, subject, session, f'{ii}.csv'),
                                    confounds
                                    )
 
@@ -221,6 +221,8 @@ def main():
 
     for ii in netprep_config['func'].keys():
         print(ii)
+
+        gather_anat_files(netprep_config['anat'], in_args.subject, in_args.session)
 
     return
 
