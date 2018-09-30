@@ -68,8 +68,8 @@
       <file leaf-file-name="netprep_gather_inputs.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/bin/netprep_gather_inputs.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="389">
-              <caret line="164" column="51" lean-forward="false" selection-start-line="164" selection-start-column="51" selection-end-line="164" selection-end-column="51" />
+            <state relative-caret-position="426">
+              <caret line="222" column="34" lean-forward="true" selection-start-line="222" selection-start-column="34" selection-end-line="222" selection-end-column="34" />
               <folding />
             </state>
           </provider>
@@ -177,8 +177,8 @@
       <find>'</find>
       <find>print</find>
       <find>fmap</find>
-      <find>display</find>
       <find>fmap_</find>
+      <find>display</find>
     </findStrings>
     <replaceStrings>
       <replace>01d</replace>
@@ -572,13 +572,6 @@
       <option name="presentableId" value="Default" />
       <updated>1517948604886</updated>
     </task>
-    <task id="LOCAL-00680" summary="Added a function to check if the IntendedFor files in the json file point&#10;a file that exists.">
-      <created>1532120187255</created>
-      <option name="number" value="00680" />
-      <option name="presentableId" value="LOCAL-00680" />
-      <option name="project" value="LOCAL" />
-      <updated>1532120187255</updated>
-    </task>
     <task id="LOCAL-00681" summary="Added a function to check if the IntendedFor files in the json file point&#10;a file that exists.">
       <created>1532120313754</created>
       <option name="number" value="00681" />
@@ -915,7 +908,14 @@
       <option name="project" value="LOCAL" />
       <updated>1538334470033</updated>
     </task>
-    <option name="localTasksCounter" value="729" />
+    <task id="LOCAL-00729" summary="Working on MFC netprep_gather_inputs">
+      <created>1538334582280</created>
+      <option name="number" value="00729" />
+      <option name="presentableId" value="LOCAL-00729" />
+      <option name="project" value="LOCAL" />
+      <updated>1538334582280</updated>
+    </task>
+    <option name="localTasksCounter" value="730" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -1454,8 +1454,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/bin/netprep_gather_inputs.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="389">
-          <caret line="164" column="51" lean-forward="false" selection-start-line="164" selection-start-column="51" selection-end-line="164" selection-end-column="51" />
+        <state relative-caret-position="426">
+          <caret line="222" column="34" lean-forward="true" selection-start-line="222" selection-start-column="34" selection-end-line="222" selection-end-column="34" />
           <folding />
         </state>
       </provider>

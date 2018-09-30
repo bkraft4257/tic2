@@ -161,17 +161,14 @@ def gather_func_file(func_dict,
                                out_file=output_file,
                                ignore_exception=True)
 
-        if verbose:
-            print(f'\t\tApply mask {mask_found_file}. \n\n')
-
         masker.run()
 
     else:
-        if verbose:
-            print('\t\tNo glob mask specified. Skipping applying mask. \n\n')
+        mask_found_file = 'No mask glob string specified. fmri files not masked.'
         shutil.copy(func_found_file, output_file)
 
-    return func_found_file
+    return func_found_file, mask_found_file
+
 
 def gather_anat_files(anat_dict, fmriprep_subject_session_path, netprep_input_path,):
     """
@@ -217,13 +214,13 @@ def main():
                           netprep_input_path)
 
         # Copy functional files and apply mask when mask is found
-        func_file = gather_func_file(func_config,
+        func_file, mask_file = gather_func_file(func_config,
                                      fmriprep_subject_session_path,
                                      netprep_input_path,
                                      verbose=in_args.verbose)
 
         if in_args.verbose:
-            print(f"{in_args.subject},  {in_args.session},  {func_file}")
+            print(f"{func_file} \n{mask_file} \n\n")
 
         # Extract confounds calculated wth fmriprep and copy to netprep input.
 
