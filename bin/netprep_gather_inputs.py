@@ -161,9 +161,14 @@ def gather_func_file(func_dict,
                                out_file=output_file,
                                ignore_exception=True)
 
+        if verbose:
+            print(f'\t\tApply mask {mask_found_file}. \n\n')
+
         masker.run()
 
     else:
+        if verbose:
+            print('\t\tNo glob mask specified. Skipping applying mask. \n\n')
         shutil.copy(func_found_file, output_file)
 
     return func_found_file
