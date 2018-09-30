@@ -132,9 +132,6 @@ def _gather_anat_file(gather,
     found_file = _find_file(gather['glob_string'], fmriprep_subject_session_anat_path)
     out_file = os.path.join(netprep_input_path, gather['out_filename'])
 
-    print(found_file)
-    print(gather['out_filename'])
-
     shutil.copy(found_file, out_file)
 
 
@@ -231,11 +228,10 @@ def main():
                                netprep_config['func_confounds'])
 
 
-    # Copy netprep template
+    # Copy netprep template to input directory.
 
-    input_file = os.path.join(os.path.dirname(os.path.realpath(__file__)), netprep_config['netprep_template'])
-    output_file = os.path.join(netprep_input_path, netprep_config['netprep_template'])
-    shutil.copy(input_file, output_file)
+    shutil.copy(netprep_config['netprep']['template_filename_with_abspath'],
+                os.path.join(netprep_input_path, netprep_config['netprep']['output_filename']))
 
     return
 
