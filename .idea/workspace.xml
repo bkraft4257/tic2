@@ -55,46 +55,6 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="fmap_intended_for.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/bin/fmap_intended_for.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1360">
-              <caret line="86" column="0" lean-forward="false" selection-start-line="49" selection-start-column="0" selection-end-line="86" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="hfpef_fmap_intended_for.sh" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/studies/hfpef/scripts/hfpef_fmap_intended_for.sh">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="731">
-              <caret line="43" column="4" lean-forward="false" selection-start-line="43" selection-start-column="4" selection-end-line="43" selection-end-column="4" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="tic_aliases.sh" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/init/tic_aliases.sh">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="7" column="9" lean-forward="false" selection-start-line="7" selection-start-column="9" selection-end-line="7" selection-end-column="9" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="fmap_intended_for_check.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/bin/fmap_intended_for_check.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="935">
-              <caret line="63" column="0" lean-forward="false" selection-start-line="63" selection-start-column="0" selection-end-line="63" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="hfpef_protocol.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/studies/hfpef/scripts/hfpef_protocol.py">
           <provider selected="true" editor-type-id="text-editor">
@@ -108,38 +68,8 @@
       <file leaf-file-name="netprep_gather_inputs.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/bin/netprep_gather_inputs.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="330">
-              <caret line="154" column="19" lean-forward="true" selection-start-line="154" selection-start-column="19" selection-end-line="154" selection-end-column="19" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="hfpef_clean_bids.sh" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/studies/hfpef/scripts/hfpef_clean_bids.sh">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="hfpef_netprep_epi.yaml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/studies/hfpef/scripts/hfpef_netprep_epi.yaml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="357">
-              <caret line="21" column="0" lean-forward="false" selection-start-line="20" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="netprep_gather_inputs.yaml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/bin/netprep_gather_inputs.yaml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="11" column="0" lean-forward="false" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+            <state relative-caret-position="449">
+              <caret line="161" column="59" lean-forward="false" selection-start-line="161" selection-start-column="59" selection-end-line="161" selection-end-column="59" />
               <folding />
             </state>
           </provider>
@@ -148,8 +78,8 @@
       <file leaf-file-name="netprep_gather_inputs.yaml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/studies/mfc/scripts/netprep_gather_inputs.yaml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="15" column="67" lean-forward="false" selection-start-line="15" selection-start-column="67" selection-end-line="15" selection-end-column="67" />
+            <state relative-caret-position="170">
+              <caret line="10" column="55" lean-forward="true" selection-start-line="10" selection-start-column="55" selection-end-line="10" selection-end-column="55" />
               <folding />
             </state>
           </provider>
@@ -169,7 +99,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>_run-{item:02d}</find>
       <find>clean</find>
       <find>{item:02d}</find>
       <find>MCF_</find>
@@ -199,6 +128,7 @@
       <find>func_con</find>
       <find>print</find>
       <find>&quot;</find>
+      <find>SUBJECT_SECC</find>
     </findStrings>
     <replaceStrings>
       <replace>01d</replace>
@@ -592,13 +522,6 @@
       <option name="presentableId" value="Default" />
       <updated>1517948604886</updated>
     </task>
-    <task id="LOCAL-00645" summary="Moving clean_bids to python. Updated permissions.">
-      <created>1528222124273</created>
-      <option name="number" value="00645" />
-      <option name="presentableId" value="LOCAL-00645" />
-      <option name="project" value="LOCAL" />
-      <updated>1528222124274</updated>
-    </task>
     <task id="LOCAL-00646" summary="Moving clean_bids to python. Updated permissions.">
       <created>1528224368409</created>
       <option name="number" value="00646" />
@@ -935,7 +858,14 @@
       <option name="project" value="LOCAL" />
       <updated>1538323658687</updated>
     </task>
-    <option name="localTasksCounter" value="694" />
+    <task id="LOCAL-00694" summary="Netprep_gather yaml for MFC.">
+      <created>1538323756424</created>
+      <option name="number" value="00694" />
+      <option name="presentableId" value="LOCAL-00694" />
+      <option name="project" value="LOCAL" />
+      <updated>1538323756424</updated>
+    </task>
+    <option name="localTasksCounter" value="695" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -1029,7 +959,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Added rec-fmap and rec-topup to EPI images so we can compare recon." />
     <MESSAGE value="Started with CONN scripts for MFC" />
     <MESSAGE value="Updated BPS for debugging." />
     <MESSAGE value="Added conn_gather_inputs.py" />
@@ -1054,7 +983,8 @@
     <MESSAGE value="Added alias to list particiant in fmriprep logs. This is helpful for matching up log file to &#10;the participant." />
     <MESSAGE value="Updated fieldmap to have a more descriptive column name." />
     <MESSAGE value="Fixed bug in HFPEF. Also started working on netprep_gather yaml for MFC." />
-    <option name="LAST_COMMIT_MESSAGE" value="Fixed bug in HFPEF. Also started working on netprep_gather yaml for MFC." />
+    <MESSAGE value="Netprep_gather yaml for MFC." />
+    <option name="LAST_COMMIT_MESSAGE" value="Netprep_gather yaml for MFC." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1386,14 +1316,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/bin/fmap_intended_for.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1360">
-          <caret line="86" column="0" lean-forward="false" selection-start-line="49" selection-start-column="0" selection-end-line="86" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/bin/fmriprep.sh">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="289">
@@ -1401,42 +1323,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/init/tic_aliases.sh">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="9" lean-forward="false" selection-start-line="7" selection-start-column="9" selection-end-line="7" selection-end-column="9" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bin/fmap_intended_for_check.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="935">
-          <caret line="63" column="0" lean-forward="false" selection-start-line="63" selection-start-column="0" selection-end-line="63" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/studies/hfpef/scripts/hfpef_fmap_intended_for.sh">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="731">
-          <caret line="43" column="4" lean-forward="false" selection-start-line="43" selection-start-column="4" selection-end-line="43" selection-end-column="4" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/studies/hfpef/scripts/hfpef_clean_bids.sh">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/studies/hfpef/scripts/hfpef_protocol.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="401">
-          <caret line="259" column="43" lean-forward="false" selection-start-line="259" selection-start-column="43" selection-end-line="259" selection-end-column="43" />
           <folding />
         </state>
       </provider>
@@ -1457,18 +1347,58 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/bin/fmap_intended_for_check.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="678">
+          <caret line="63" column="0" lean-forward="false" selection-start-line="63" selection-start-column="0" selection-end-line="63" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/studies/hfpef/scripts/hfpef_fmap_intended_for.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="496">
+          <caret line="43" column="4" lean-forward="false" selection-start-line="43" selection-start-column="4" selection-end-line="43" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bin/fmap_intended_for.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="86" column="0" lean-forward="false" selection-start-line="49" selection-start-column="0" selection-end-line="86" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/init/tic_aliases.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="9" lean-forward="false" selection-start-line="7" selection-start-column="9" selection-end-line="7" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/studies/hfpef/scripts/hfpef_protocol.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="401">
+          <caret line="259" column="43" lean-forward="false" selection-start-line="259" selection-start-column="43" selection-end-line="259" selection-end-column="43" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/studies/mfc/scripts/netprep_gather_inputs.yaml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" column="67" lean-forward="false" selection-start-line="15" selection-start-column="67" selection-end-line="15" selection-end-column="67" />
+        <state relative-caret-position="170">
+          <caret line="10" column="55" lean-forward="true" selection-start-line="10" selection-start-column="55" selection-end-line="10" selection-end-column="55" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/bin/netprep_gather_inputs.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="154" column="19" lean-forward="true" selection-start-line="154" selection-start-column="19" selection-end-line="154" selection-end-column="19" />
+        <state relative-caret-position="449">
+          <caret line="161" column="59" lean-forward="false" selection-start-line="161" selection-start-column="59" selection-end-line="161" selection-end-column="59" />
           <folding />
         </state>
       </provider>
