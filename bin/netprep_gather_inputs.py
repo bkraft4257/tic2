@@ -94,7 +94,8 @@ def _gather_confounds_file(func_dict,
 
 
 def  _gather_anat_file(gather,
-                       subject_session_directory,
+                       fmriprep_subject_session_anat_path,
+                       netprep_input_path
                       ):
     """
 
@@ -105,12 +106,13 @@ def  _gather_anat_file(gather,
     :return:
     """
 
-    found_file = _find_file(gather['glob_string'], subject_session_directory)
+    found_file = _find_file(gather['glob_string'], fmriprep_subject_session_anat_path)
+    out_file = os.path.join(netprep_input_path, gather['out_filename'])
 
     print(found_file)
     print(gather['out_filename'])
 
-    shutil.copy(found_file, gather['out_filename'])
+    shutil.copy(found_file, out_file)
 
 
 def _gather_func_file(func_dict,
@@ -162,7 +164,7 @@ def gather_anat_files(anat_dict, fmriprep_subject_session_path, output_path, sub
 
     for key, value in anat_dict.items():
         try:
-            _gather_anat_file(value,fmriprep_subject_session_path,)
+            _gather_anat_file(value, fmriprep_subject_session_path, netprep_input_path)
         except ValueError:
             print(f'Unknown key {ii}')
 
