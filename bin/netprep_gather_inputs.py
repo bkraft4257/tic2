@@ -94,8 +94,7 @@ def _gather_confounds_file(func_dict,
 
 
 def  _gather_anat_file(gather,
-                      subject_session_directory,
-                      out_filename,
+                       subject_session_directory,
                       ):
     """
 
@@ -109,9 +108,9 @@ def  _gather_anat_file(gather,
     found_file = _find_file(gather['glob_string'], subject_session_directory)
 
     print(found_file)
-    print(out_filename)
+    print(gather['out_filename'])
 
-    shutil.copy(found_file, out_filename)
+    shutil.copy(found_file, gather['out_filename'])
 
 
 def _gather_func_file(func_dict,
@@ -161,12 +160,9 @@ def gather_anat_files(anat_dict, fmriprep_subject_session_path, output_path, sub
     :return:
     """
 
-    for ii in anat_dict.keys():
+    for key, value in anat_dict.items():
         try:
-            _gather_anat_file(anat_dict[ii],
-                              fmriprep_subject_session_path,
-                              _create_full_output_filename(output_path, subject, session, f'{ii}.nii.gz')
-                              )
+            _gather_anat_file(value,fmriprep_subject_session_path,)
         except ValueError:
             print(f'Unknown key {ii}')
 
