@@ -151,7 +151,7 @@ def _gather_func_file(func_dict,
         shutil.copy(func_found_file, _create_full_output_filename(copy_to_directory, subject, session, gather.out_filename, ))
 
 
-def gather_anat_files(anat_dict, fmriprep_subject_session_path, output_path, subject, session):
+def gather_anat_files(anat_dict, fmriprep_subject_session_path, netprep_input_path,):
     """
     Search for files matching glob_string and copy to a directory with a different name
     :param anat_dict:
