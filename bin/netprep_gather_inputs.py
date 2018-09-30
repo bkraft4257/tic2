@@ -233,9 +233,9 @@ def main():
 
     # Copy netprep template
 
-    input_file = os.path.join()
+    input_file = os.path.join(os.path.dirname(os.path.realpath(__file__)), netprep_config['netprep_template'])
     output_file = os.path.join(netprep_input_path, netprep_config['netprep_template'])
-    shutil.copy(netprep_input_path)
+    shutil.copy(input_file, output_file)
 
     return
 
