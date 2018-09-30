@@ -136,9 +136,10 @@ def _gather_anat_file(gather,
 
 
 def gather_func_file(func_dict,
-                      fmriprep_subject_session_func_path,
-                      netprep_input_path,
-                      ):
+                     fmriprep_subject_session_func_path,
+                     netprep_input_path,
+                     verbose=False,
+                     ):
     """
 
     :param func_dict:
@@ -161,7 +162,9 @@ def gather_func_file(func_dict,
                                mask_file=mask_found_file,
                                out_file=output_file,
                                ignore_exception=True)
-        print(masker.cmdline)
+
+        if verbose:
+            print(masker.cmdline)
 
         masker.run()
 
@@ -185,19 +188,12 @@ def gather_anat_files(anat_dict, fmriprep_subject_session_path, netprep_input_pa
             print(f'Unknown key {ii}')
 
 
-
 def main():
-    global SUBJECT_SESSION_PATH, FMRIPREP_ANAT_PATH, FMRIPREP_FUNC_PATH, NETPREP_SUBJECT_SESSION_INPUT_PATH
 
     in_args = _argparse()
 
     fmriprep_subject_session_path = os.path.join(FMRIPREP_PATH, f'sub-{in_args.subject}', f'ses-{in_args.session}')
     netprep_subject_session_path = os.path.join(NETPREP_PATH, f'sub-{in_args.subject}', f'ses-{in_args.session}')
-
-    FMRIPREP_ANAT_PATH = os.path.join(fmriprep_subject_session_path, 'anat')
-    FMRIPREP_FUNC_PATH = os.path.join(fmriprep_subject_session_path, 'func')
-
-    SUBJECT_SESSION_PATH = fmriprep_subject_session_path
 
     _make_directory(netprep_subject_session_path)
 
@@ -218,7 +214,8 @@ def main():
         # Copy functional files and apply mask when mask is found
         gather_func_file(func_config,
                          fmriprep_subject_session_path,
-                         netprep_input_path)
+                         netprep_input_path,
+                         verbose=in_args.verbose)
 
         # Extract confounds calculated wth fmriprep and copy to netprep input.
 
@@ -226,7 +223,6 @@ def main():
                                fmriprep_subject_session_path,
                                netprep_input_path,
                                netprep_config['func_confounds'])
-
 
     # Copy netprep template to input directory.
 
