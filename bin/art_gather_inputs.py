@@ -21,11 +21,11 @@ import nipype.interfaces.fsl as fsl  # fsl
 YAML_CONFIG_FILENAME_DEFAULT = os.path.join(os.path.dirname(os.path.realpath(__file__)), 'netprep_gather_inputs.yaml')
 
 IMAGE_PROCESSING_PATH = os.path.join(os.getenv('ACTIVE_IMAGE_PROCESSING_PATH'))
-FMRIPREP_PATH = os.path.join(os.getenv('ACTIVE_FMRIPREP_PATH'))
-NETPREP_PATH = os.path.join(os.getenv('ACTIVE_NETPREP_PATH'))
+BIDS_PATH = os.path.join(os.getenv('ACTIVE_BIDS_PATH'))
+ART_PATH = os.path.join(IMAGE_PROCESSING_PATH, 'art')
 
 
-def _make_directory(directory=NETPREP_PATH):
+def _make_directory(directory=ART_PATH):
     """
     Make directory if it doesn't exist
 
@@ -43,7 +43,7 @@ def _make_directory(directory=NETPREP_PATH):
             sys.exit(f'Unable to make directory {ii}')
 
 
-def _make_netprep_subject_input_directory(directory=NETPREP_PATH):
+def _make_netprep_subject_input_directory(directory=ART_PATH):
     """
     Make NETPREP directory if it doesn't exist
 
@@ -103,8 +103,8 @@ def main():
 
     in_args = _argparse()
 
-    fmriprep_subject_session_path = os.path.join(FMRIPREP_PATH, f'sub-{in_args.subject}', f'ses-{in_args.session}')
-    art_subject_session_path = os.path.join(NETPREP_PATH, f'sub-{in_args.subject}', f'ses-{in_args.session}')
+    bids_subject_session_path = os.path.join(BIDS_PATH, f'sub-{in_args.subject}', f'ses-{in_args.session}')
+    art_subject_session_path = os.path.join(ART_PATH, f'sub-{in_args.subject}', f'ses-{in_args.session}')
 
     _make_directory(art_subject_session_path)
 
@@ -120,7 +120,7 @@ def main():
 
         # Copy functional files and apply mask when mask is found
         gather_func_file(func_config,
-                         fmriprep_subject_session_path,
+                         bids_subject_session_path,
                          netprep_input_path,)
 
     return
