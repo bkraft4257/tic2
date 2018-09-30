@@ -55,7 +55,7 @@ func:
     masked_func_filename:  masked_bold_mni_preproc.nii.gz
 
     confounds_glob_string: 'confounds.tsv'
-    confounds_out_filename: 'bold_confounds.tsv'
+    confounds_out_filename: 'bold_confounds.csv'
 
 
   preneutral1:
@@ -70,7 +70,7 @@ func:
     masked_func_filename:  masked_bold_mni_preproc.nii.gz
 
     confounds_glob_string: 'confounds.tsv'
-    confounds_out_filename: 'bold_confounds.tsv'
+    confounds_out_filename: 'bold_confounds.csv'
 
 
   preneutral2:
@@ -85,7 +85,7 @@ func:
     masked_func_filename:  masked_bold_mni_preproc.nii.gz
 
     confounds_glob_string: 'confounds.tsv'
-    confounds_out_filename: 'bold_confounds.tsv'
+    confounds_out_filename: 'bold_confounds.csv'
 
 
   postneutral3:
@@ -100,7 +100,7 @@ func:
     masked_func_filename:  masked_bold_mni_preproc.nii.gz
 
     confounds_glob_string: 'confounds.tsv'
-    confounds_out_filename: 'bold_confounds.tsv'
+    confounds_out_filename: 'bold_confounds.csv'
 
 
   postneutral4:
@@ -115,7 +115,7 @@ func:
     masked_func_filename:  masked_bold_mni_preproc.nii.gz
 
     confounds_glob_string: 'confounds.tsv'
-    confounds_out_filename: 'bold_confounds.tsv'
+    confounds_out_filename: 'bold_confounds.csv'
 
 
   postHeat3:
@@ -130,7 +130,7 @@ func:
     masked_func_filename:  masked_bold_mni_preproc.nii.gz
 
     confounds_glob_string: 'confounds.tsv'
-    confounds_out_filename: 'bold_confounds.tsv'
+    confounds_out_filename: 'bold_confounds.csv'
 
 
   postHeat4:
@@ -145,7 +145,7 @@ func:
     masked_func_filename:  masked_bold_mni_preproc.nii.gz
 
     confounds_glob_string: 'confounds.tsv'
-    confounds_out_filename: 'bold_confounds.tsv'
+    confounds_out_filename: 'bold_confounds.csv'
 
 
 #sub-mfcc003_ses-1_task-preHeat1_acq-epi_rec-topup_bold_space-MNI152NLin2009cAsym_brainmask.nii.gz
