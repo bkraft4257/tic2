@@ -155,7 +155,7 @@ def gather_func_file(func_dict,
         mask_glob_string = func_dict['base_glob_string'] + func_dict['mask_glob_string']
 
         mask_found_file = _find_file(mask_glob_string, fmriprep_subject_session_func_path)
-        masked_func_output_file = _find_file(mask_glob_string, func_dict['masked_func_filename'])
+        masked_func_output_file = os.path.join(netprep_input_path, func_dict['masked_func_filename'])
 
         masker = fsl.ApplyMask(in_file=func_found_file,
                                mask_file=mask_found_file,
