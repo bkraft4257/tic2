@@ -161,9 +161,6 @@ def gather_func_file(func_dict,
                                out_file=output_file,
                                ignore_exception=True)
 
-        if verbose:
-            print(masker.cmdline)
-
         masker.run()
 
     else:
@@ -195,7 +192,7 @@ def main():
 
     _make_directory(netprep_subject_session_path)
 
-    netprep_config = tic_io.read_yaml(in_args.yaml_filename, in_args.verbose)
+    netprep_config = tic_io.read_yaml(in_args.yaml_filename)
 
     if in_args.verbose:
         print('\n\n')
