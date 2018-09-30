@@ -150,6 +150,8 @@ def gather_func_file(func_dict,
 
     output_file = os.path.join(netprep_input_path, func_dict['func_out_filename'])
 
+    _copy_filesfunc_found_file, output_file)
+
     if func_dict['mask_glob_string'] is not None:
 
         mask_glob_string = func_dict['base_glob_string'] + func_dict['mask_glob_string']
@@ -169,7 +171,6 @@ def gather_func_file(func_dict,
 
     else:
         mask_found_file = 'No mask glob string specified. fmri files not masked.'
-        shutil.copy(func_found_file, output_file)
 
 
     return func_found_file, mask_found_file
@@ -193,8 +194,8 @@ def gather_anat_files(anat_dict, fmriprep_subject_session_path, netprep_input_pa
 
 def _copy_files(source_file, target_file):
 
-    print(source_file)
-    print(target_file)
+    #print(source_file)
+    #print(target_file)
 
     shutil.copy(source_file,target_file)
 
