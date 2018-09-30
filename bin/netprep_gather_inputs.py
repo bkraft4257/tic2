@@ -154,7 +154,7 @@ def gather_anat_files(anat_dict, fmriprep_subject_session_path, output_path, sub
     """
     Search for files matching glob_string and copy to a directory with a different name
     :param anat_dict:
-    :param fmriprep_anat_path:
+    :param fmriprep_subject_session_path:
     :param output_path:
     :param subject:
     :param session:
@@ -229,10 +229,12 @@ def main():
 
     for keys, func_config in netprep_config['func'].items():
         print(keys)
+        print(func_config)
 
-        NETPREP_SUBJECT_SESSION_INPUT_PATH = os.path.join(netprep_input_path, func_config['input_dir'] )
+        netprep_input_path = os.path.join(netprep_input_path, func_config['input_dir'])
+        print(netprep_input_path)
 
-        gather_anat_files(netprep_config['anat'], fmriprep_subject_session_path,  in_args.subject, in_args.session)
+        gather_anat_files(netprep_config['anat'], fmriprep_subject_session_path, netprep_input_path,  in_args.subject, in_args.session)
 
     return
 
