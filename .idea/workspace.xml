@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="6f3e13b3-cd58-4c4d-98f6-1a68f8358bfb" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/bin/netprep_gather_inputs.py" afterPath="$PROJECT_DIR$/bin/netprep_gather_inputs.py" />
+      <change beforePath="$PROJECT_DIR$/studies/mfc/scripts/netprep_gather_inputs__fmap.yaml" afterPath="$PROJECT_DIR$/studies/mfc/scripts/netprep_gather_inputs__fmap.yaml" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -65,7 +65,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="netprep_gather_inputs.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="netprep_gather_inputs.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/bin/netprep_gather_inputs.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="464">
@@ -75,11 +75,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="netprep_gather_inputs__fmap.yaml" pinned="false" current-in-tab="false">
+      <file leaf-file-name="netprep_gather_inputs__fmap.yaml" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/studies/mfc/scripts/netprep_gather_inputs__fmap.yaml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="339">
-              <caret line="76" column="56" lean-forward="false" selection-start-line="76" selection-start-column="56" selection-end-line="76" selection-end-column="56" />
+            <state relative-caret-position="413">
+              <caret line="38" column="25" lean-forward="false" selection-start-line="38" selection-start-column="25" selection-end-line="38" selection-end-column="25" />
               <folding />
             </state>
           </provider>
@@ -176,9 +176,9 @@
       <find>confounds</find>
       <find>'</find>
       <find>print</find>
-      <find>display</find>
       <find>fmap</find>
       <find>fmap_</find>
+      <find>display</find>
     </findStrings>
     <replaceStrings>
       <replace>01d</replace>
@@ -216,7 +216,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/tic_core/operations.py" />
         <option value="$PROJECT_DIR$/studies/mfc/scripts/mfc_protocol.py" />
         <option value="$PROJECT_DIR$/bin/act_v2.sh" />
         <option value="$PROJECT_DIR$/bin/mriqc_group.sh" />
@@ -267,6 +266,7 @@
         <option value="$PROJECT_DIR$/studies/mfc/scripts/netprep_gather_inputs.yaml" />
         <option value="$PROJECT_DIR$/studies/mfc/scripts/netprep_gather_inputs__topup.yaml" />
         <option value="$PROJECT_DIR$/bin/netprep_gather_inputs.py" />
+        <option value="$PROJECT_DIR$/studies/mfc/scripts/netprep_gather_inputs__fmap.yaml" />
       </list>
     </option>
   </component>
@@ -571,13 +571,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1517948604886</updated>
-    </task>
-    <task id="LOCAL-00677" summary="Added a function to check if the IntendedFor files in the json file point&#10;a file that exists.">
-      <created>1532119872708</created>
-      <option name="number" value="00677" />
-      <option name="presentableId" value="LOCAL-00677" />
-      <option name="project" value="LOCAL" />
-      <updated>1532119872708</updated>
     </task>
     <task id="LOCAL-00678" summary="Added a function to check if the IntendedFor files in the json file point&#10;a file that exists.">
       <created>1532119915384</created>
@@ -915,7 +908,14 @@
       <option name="project" value="LOCAL" />
       <updated>1538334140245</updated>
     </task>
-    <option name="localTasksCounter" value="726" />
+    <task id="LOCAL-00726" summary="Working on MFC netprep_gather_inputs">
+      <created>1538334264881</created>
+      <option name="number" value="00726" />
+      <option name="presentableId" value="LOCAL-00726" />
+      <option name="project" value="LOCAL" />
+      <updated>1538334264881</updated>
+    </task>
+    <option name="localTasksCounter" value="727" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -1444,18 +1444,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/studies/mfc/scripts/netprep_gather_inputs__fmap.yaml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="339">
-          <caret line="76" column="56" lean-forward="false" selection-start-line="76" selection-start-column="56" selection-end-line="76" selection-end-column="56" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/bin/netprep_gather_inputs.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="464">
           <caret line="220" column="71" lean-forward="false" selection-start-line="220" selection-start-column="71" selection-end-line="220" selection-end-column="71" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/studies/mfc/scripts/netprep_gather_inputs__fmap.yaml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="413">
+          <caret line="38" column="25" lean-forward="false" selection-start-line="38" selection-start-column="25" selection-end-line="38" selection-end-column="25" />
           <folding />
         </state>
       </provider>
