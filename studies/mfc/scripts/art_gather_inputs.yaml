@@ -1,0 +1,38 @@
+preheat1:
+  input_dir: 'preHeat1/inputs'
+  base_glob_string: '/func/*task-preHeat1_acq-epi_rec-fmap_bold*'
+
+
+preheat2:
+  input_dir: 'preHeat2/inputs'
+  base_glob_string: '/func/*task-preHeat2_acq-epi_rec-fmap_bold*'
+
+
+preneutral1:
+  input_dir: 'preNeutral1/inputs'
+  base_glob_string: '/func/*task-preNeutral1_acq-epi_rec-fmap_bold*'
+
+
+preneutral2:
+  input_dir: 'preNeutral2/inputs'
+  base_glob_string: '/func/*task-preNeutral2_acq-epi_rec-fmap_bold*'
+
+
+postneutral3:
+  input_dir: 'postNeutral3/inputs'
+  base_glob_string: '/func/*task-postNeutral3_acq-epi_rec-fmap_bold*'
+
+postneutral4:
+  input_dir: 'postNeutral4/inputs'
+  base_glob_string: '/func/*task-postNeutral4_acq-epi_rec-fmap_bold*'
+
+
+postHeat3:
+  input_dir: 'postHeat3/inputs'
+  base_glob_string: '/func/*task-postHeat3_acq-epi_rec-fmap_bold*'
+
+
+postHeat4:
+  input_dir: 'postHeat4/inputs'
+  base_glob_string: '/func/*task-postHeat4_acq-epi_rec-fmap_bold*'
+

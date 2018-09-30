@@ -2,8 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6f3e13b3-cd58-4c4d-98f6-1a68f8358bfb" name="Default" comment="">
+      <change beforePath="" afterPath="$PROJECT_DIR$/bin/art_gather_inputs.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/studies/mfc/scripts/art_gather_inputs.yaml" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/studies/mfc/scripts/mfc_netprep.yaml" afterPath="$PROJECT_DIR$/studies/mfc/scripts/mfc_netprep.yaml" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -95,11 +96,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="mfc_netprep.yaml" pinned="false" current-in-tab="true">
+      <file leaf-file-name="mfc_netprep.yaml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/studies/mfc/scripts/mfc_netprep.yaml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="9" column="0" lean-forward="true" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+            <state relative-caret-position="884">
+              <caret line="52" column="26" lean-forward="false" selection-start-line="52" selection-start-column="26" selection-end-line="52" selection-end-column="26" />
               <folding />
             </state>
           </provider>
@@ -135,6 +136,26 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="art_gather_inputs.yaml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/studies/mfc/scripts/art_gather_inputs.yaml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="85">
+              <caret line="5" column="9" lean-forward="true" selection-start-line="5" selection-start-column="9" selection-end-line="5" selection-end-column="9" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="art_gather_inputs.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/bin/art_gather_inputs.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="485">
+              <caret line="85" column="4" lean-forward="false" selection-start-line="85" selection-start-column="4" selection-end-line="85" selection-end-column="4" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
     </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
@@ -149,7 +170,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>pre_</find>
       <find>fslmaths</find>
       <find>None,</find>
       <find>mask</find>
@@ -178,6 +198,7 @@
       <find>fmap</find>
       <find>#</find>
       <find>confounds</find>
+      <find>fmap/</find>
       <find>bold_confounds.tsv</find>
     </findStrings>
     <replaceStrings>
@@ -203,6 +224,7 @@
       <replace>'</replace>
       <replace>topup</replace>
       <replace>bold_confounds.csv</replace>
+      <replace>art_subject_session_path</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -217,8 +239,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/studies/mfc/scripts/mfc_protocol.py" />
-        <option value="$PROJECT_DIR$/bin/act_v2.sh" />
         <option value="$PROJECT_DIR$/bin/mriqc_group.sh" />
         <option value="$PROJECT_DIR$/studies/active/aliases.sh" />
         <option value="$PROJECT_DIR$/tests/test_fmriprep_tools.py" />
@@ -268,6 +288,8 @@
         <option value="$PROJECT_DIR$/studies/mfc/scripts/netprep_gather_inputs__topup.yaml" />
         <option value="$PROJECT_DIR$/bin/netprep_gather_inputs.py" />
         <option value="$PROJECT_DIR$/studies/mfc/scripts/mfc_netprep.yaml" />
+        <option value="$PROJECT_DIR$/studies/mfc/scripts/art_gather_inputs.yaml" />
+        <option value="$PROJECT_DIR$/bin/art_gather_inputs.py" />
       </list>
     </option>
   </component>
@@ -382,9 +404,9 @@
       <recent name="$PROJECT_DIR$" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/bin" />
       <recent name="$PROJECT_DIR$/studies/mfc/scripts" />
       <recent name="$PROJECT_DIR$/studies/imove/scripts" />
-      <recent name="$PROJECT_DIR$/bin" />
       <recent name="$PROJECT_DIR$/tests/data" />
       <recent name="$PROJECT_DIR$/tests" />
     </key>
@@ -573,13 +595,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1517948604886</updated>
-    </task>
-    <task id="LOCAL-00690" summary="Updated fieldmap to have a more descriptive column name.">
-      <created>1538322703577</created>
-      <option name="number" value="00690" />
-      <option name="presentableId" value="LOCAL-00690" />
-      <option name="project" value="LOCAL" />
-      <updated>1538322703577</updated>
     </task>
     <task id="LOCAL-00691" summary="Fixed bug in HFPEF. Also started working on netprep_gather yaml for MFC.">
       <created>1538322732118</created>
@@ -917,7 +932,14 @@
       <option name="project" value="LOCAL" />
       <updated>1538338587205</updated>
     </task>
-    <option name="localTasksCounter" value="739" />
+    <task id="LOCAL-00739" summary="Working on MFC netprep_gather_inputs">
+      <created>1538339549906</created>
+      <option name="number" value="00739" />
+      <option name="presentableId" value="LOCAL-00739" />
+      <option name="project" value="LOCAL" />
+      <updated>1538339549906</updated>
+    </task>
+    <option name="localTasksCounter" value="740" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -1072,20 +1094,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/studies/imove/aliases.sh">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="38" lean-forward="false" selection-start-line="8" selection-start-column="38" selection-end-line="8" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/studies/infinite/scripts/inf_netprep_gi.sh">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" column="34" lean-forward="false" selection-start-line="15" selection-start-column="34" selection-end-line="15" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/bin/conn_gather_inputs.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="3451">
@@ -1430,6 +1438,14 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/studies/mfc/scripts/mfc_netprep.yaml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="884">
+          <caret line="52" column="26" lean-forward="false" selection-start-line="52" selection-start-column="26" selection-end-line="52" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/studies/mfc/scripts/netprep_gather_inputs__topup.yaml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="774">
@@ -1438,10 +1454,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/bin/netprep_gather_inputs.py">
+    <entry file="file://$PROJECT_DIR$/studies/mfc/scripts/art_gather_inputs.yaml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="849">
-          <caret line="180" column="87" lean-forward="true" selection-start-line="180" selection-start-column="87" selection-end-line="180" selection-end-column="87" />
+        <state relative-caret-position="85">
+          <caret line="5" column="9" lean-forward="true" selection-start-line="5" selection-start-column="9" selection-end-line="5" selection-end-column="9" />
           <folding />
         </state>
       </provider>
@@ -1454,10 +1470,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/studies/mfc/scripts/mfc_netprep.yaml">
+    <entry file="file://$PROJECT_DIR$/bin/netprep_gather_inputs.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="0" lean-forward="true" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+        <state relative-caret-position="849">
+          <caret line="180" column="87" lean-forward="true" selection-start-line="180" selection-start-column="87" selection-end-line="180" selection-end-column="87" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bin/art_gather_inputs.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="485">
+          <caret line="85" column="4" lean-forward="false" selection-start-line="85" selection-start-column="4" selection-end-line="85" selection-end-column="4" />
           <folding />
         </state>
       </provider>
