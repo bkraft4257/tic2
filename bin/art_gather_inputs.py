@@ -83,9 +83,7 @@ def gather_func_file(func_dict,
     :return:
     """
 
-    func_found_file = _find_file(func_dict['base_glob_string'] + func_dict['func_glob_string'],
-                                 fmriprep_subject_session_func_path)
-
+    func_found_file = _find_file(func_dict['func_glob_string'], fmriprep_subject_session_func_path)
     output_file = os.path.join(art_input_path, func_dict['func_out_filename'])
 
     _copy_files(func_found_file, output_file)
