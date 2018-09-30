@@ -31,7 +31,7 @@ def write_confounds( input_file, outliers, output_file ):
      df_out.to_csv(output_file, index=False, header=False)
 
 
-def argparse():
+def get_input_arguments():
     """
     __main__ function definition to run program from command line.
     """
@@ -50,14 +50,14 @@ def main():
     #
     #
 
-    in_args = argparse()
+    in_args = get_input_arguments()
 
     input_file = in_args.input_file
     outliers_file = 'art.filtered_func_data_outliers.txt'
     confound_file = 'art.filtered_func_data_confounds.txt'
 
     ad = ArtifactDetect()
-    ad.inputs.realigned_files = in_args.input_file
+    ad.inputs.realigned_files = in_args.input_file/gandg/tic_releases/0.13.3/tic_core/bin/rapidart.py
     ad.inputs.mask_type = 'thresh'
     ad.inputs.mask_threshold  = in_args.mask_threshold
     ad.inputs.realignment_parameters = in_args.fsl_realigment_parameters
