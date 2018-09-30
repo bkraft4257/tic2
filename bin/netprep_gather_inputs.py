@@ -86,7 +86,7 @@ def _extract_confounds(in_filename, out_filename, keep_columns=KEEP_COLUMNS):
     :return:
     """
     print(in_filename)
-    print(output_filename)
+    print(out_filename)
 
     in_df = pandas.read_csv(in_filename, sep='\t')
     out_df = in_df[keep_columns]
