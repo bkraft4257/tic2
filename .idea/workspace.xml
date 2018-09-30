@@ -118,8 +118,8 @@
       <file leaf-file-name="rapidart.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/bin/rapidart.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="122">
-              <caret line="52" column="33" lean-forward="false" selection-start-line="52" selection-start-column="33" selection-end-line="52" selection-end-column="33" />
+            <state relative-caret-position="285">
+              <caret line="59" column="50" lean-forward="false" selection-start-line="59" selection-start-column="50" selection-end-line="59" selection-end-column="50" />
               <folding>
                 <element signature="e#32#45#0" expanded="true" />
               </folding>
@@ -575,13 +575,6 @@
       <option name="presentableId" value="Default" />
       <updated>1517948604886</updated>
     </task>
-    <task id="LOCAL-00697" summary="Working on MFC netprep_gather_inputs">
-      <created>1538324858432</created>
-      <option name="number" value="00697" />
-      <option name="presentableId" value="LOCAL-00697" />
-      <option name="project" value="LOCAL" />
-      <updated>1538324858432</updated>
-    </task>
     <task id="LOCAL-00698" summary="Working on MFC netprep_gather_inputs">
       <created>1538325043015</created>
       <option name="number" value="00698" />
@@ -918,7 +911,14 @@
       <option name="project" value="LOCAL" />
       <updated>1538342810066</updated>
     </task>
-    <option name="localTasksCounter" value="746" />
+    <task id="LOCAL-00746" summary="Working on MFC art_gather_inputs">
+      <created>1538342936345</created>
+      <option name="number" value="00746" />
+      <option name="presentableId" value="LOCAL-00746" />
+      <option name="project" value="LOCAL" />
+      <updated>1538342936345</updated>
+    </task>
+    <option name="localTasksCounter" value="747" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -1461,8 +1461,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/bin/rapidart.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="122">
-          <caret line="52" column="33" lean-forward="false" selection-start-line="52" selection-start-column="33" selection-end-line="52" selection-end-column="33" />
+        <state relative-caret-position="285">
+          <caret line="59" column="50" lean-forward="false" selection-start-line="59" selection-start-column="50" selection-end-line="59" selection-end-column="50" />
           <folding>
             <element signature="e#32#45#0" expanded="true" />
           </folding>
