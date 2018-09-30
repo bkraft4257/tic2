@@ -90,7 +90,7 @@ def _extract_confounds(in_filename, out_filename, keep_columns=KEEP_COLUMNS):
 
     in_df = pandas.read_csv(in_filename, sep='\t')
     out_df = in_df[keep_columns]
-    out_df.to_csv(out_filename)
+    out_df.to_csv(out_filename, index=False)
 
     return out_df
 
