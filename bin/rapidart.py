@@ -57,7 +57,7 @@ def main():
     confound_file = 'art.filtered_func_data_confounds.txt'
 
     ad = ArtifactDetect()
-    ad.inputs.realigned_files = in_args.input_file/gandg/tic_releases/0.13.3/tic_core/bin/rapidart.py
+    ad.inputs.realigned_files = in_args.input_file
     ad.inputs.mask_type = 'thresh'
     ad.inputs.mask_threshold  = in_args.mask_threshold
     ad.inputs.realignment_parameters = in_args.fsl_realigment_parameters
