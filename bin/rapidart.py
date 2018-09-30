@@ -53,8 +53,8 @@ def main():
     in_args = get_input_arguments()
 
     input_file = in_args.input_file
-    outliers_file = 'art.filtered_func_data_outliers.txt'
-    confound_file = 'art.filtered_func_data_confounds.txt'
+    outliers_file = 'art.bold_mcf_outliers.txt'
+    confound_file = 'art.bold_mcf_confounds.txt'
 
     ad = ArtifactDetect()
     ad.inputs.realigned_files = in_args.input_file
