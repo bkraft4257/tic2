@@ -97,7 +97,42 @@ def cenc_stats(input_dir, in_image, out_json, instrument_prefix='', verbose=Fals
      wm_lesions_label_fraction, 
      wm_lesions_volume) = _calc_volumes_in_tissue_regions( tissue_labels['wm_lesions'], in_image, verbose=False)
 
-    dict_stats = OrderedDict(( ('subject_id', cenc_dirs['cenc']['id']),
+    # CAHMOD:  if in_image contains 'edit', then put _ed at end of key
+
+    if im_image.contains('edit'):
+
+        dict_stats = OrderedDict(( ('subject_id_ed', cenc_dirs['cenc']['id']),
+                               ( instrument_prefix + 'analyst_ed', getpass.getuser()),
+                               ( instrument_prefix + 'datetime_ed', '{:%Y-%b-%d %H:%M:%S}'.format(datetime.datetime.now())),
+                               ( instrument_prefix + 'image_ed', in_image),
+
+                               (instrument_prefix +'lesions_number_ed', '{0:d}'.format(int(label_stats['number_of_lesions']))),
+                               (instrument_prefix +'lesions_total_volume_mm3_ed', '{0:5.1f}'.format(label_stats['total_lesion_volume'])),
+                               (instrument_prefix +'lesions_mean_volume_mm3_ed', '{0:5.1f}'.format(label_stats['mean_lesion_volume'])),
+                               (instrument_prefix +'lesions_std_volume_mm3_ed', '{0:5.1f}'.format(label_stats['std_lesion_volume'])),
+                               (instrument_prefix +'lesions_min_lesion_volume_mm3_ed', '{0:5.1f}'.format(label_stats['min_lesion_volume'])),
+                               (instrument_prefix +'lesions_max_lesion_volume_mm3_ed', '{0:5.1f}'.format(label_stats['max_lesion_volume'])),
+
+                               ( instrument_prefix + 'gm_cortical_volume_mm3_ed', '{0:4.3f}'.format( gm_cortical_volume)),
+                               ( instrument_prefix + 'gm_cortical_label_volume_mm3_ed', '{0:4.3f}'.format( gm_cortical_label_volume)),
+                               ( instrument_prefix + 'gm_cortical_label_fraction_ed', '{0:4.3f}'.format( gm_cortical_label_fraction)),
+
+                               ( instrument_prefix + 'gm_subcortical_volume_mm3_ed', '{0:4.3f}'.format( gm_subcortical_volume)),
+                               ( instrument_prefix + 'gm_subcortical_label_volume_mm3_ed', '{0:4.3f}'.format( gm_subcortical_label_volume)),
+                               ( instrument_prefix + 'gm_subcortical_label_fraction_ed', '{0:4.3f}'.format( gm_subcortical_label_fraction)),
+
+                               ( instrument_prefix + 'wm_cerebral_volume_mm3_ed', '{0:4.3f}'.format( wm_cerebral_volume)),
+                               ( instrument_prefix + 'wm_cerebral_label_volume_mm3_ed', '{0:4.3f}'.format( wm_cerebral_label_volume)),
+                               ( instrument_prefix + 'wm_cerebral_label_fraction_ed', '{0:4.3f}'.format( wm_cerebral_label_fraction)),
+
+                               ( instrument_prefix + 'wm_lesions_volume_mm3_ed', '{0:4.3f}'.format( wm_lesions_volume)),
+                               ( instrument_prefix + 'wm_lesions_label_volume_mm3_ed', '{0:4.3f}'.format( wm_lesions_label_volume)),
+                               ( instrument_prefix + 'wm_lesions_label_fraction_ed', '{0:4.3f}'.format( wm_lesions_label_fraction))
+
+                               )
+                              )
+    else:
+        dict_stats = OrderedDict(( ('subject_id', cenc_dirs['cenc']['id']),
                                ( instrument_prefix + 'analyst', getpass.getuser()),
                                ( instrument_prefix + 'datetime', '{:%Y-%b-%d %H:%M:%S}'.format(datetime.datetime.now())),
                                ( instrument_prefix + 'image', in_image),
@@ -128,6 +163,7 @@ def cenc_stats(input_dir, in_image, out_json, instrument_prefix='', verbose=Fals
                                )
                               )
 
+
     if out_json==None:
          json_stats_filename =  in_image.replace( 'nii.gz', 'json')
     else:
@@ -151,7 +187,7 @@ def main():
 
     usage = "usage: %prog [options] arg1 arg2"
 
-    parser = argparse.ArgumentParser(prog='cenc_mt')
+    parser = argparse.ArgumentParser(prog='cenc_label_volume_tissue_stats')
 
     parser.add_argument("in_image", help="Input image", default=None )
     parser.add_argument("--in_dir", help="Participant directory", default=os.getcwd())
