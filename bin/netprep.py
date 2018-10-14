@@ -428,6 +428,10 @@ def init_netprep_wf(netprep_io, verbose):
 
                         (fslmean, datasink_results, [('out_file', 'results.@fmri_mean')]),
 
+                        (resample_gm_probmap, datasink_results, [('out_file', 'results.@gm_probmap_bold_space')]),
+                        (resample_wm_probmap, datasink_results, [('out_file', 'results.@wm_probmap_bold_space')]),
+                        (resample_csf_probmap, datasink_results, [('out_file', 'results.@csf_probmap_bold_space')]),
+
                         (create_gm_mask, datasink_results, [('out_file', 'results.@gm_mask')]),
 
                         (nilearn_keep_confounds, datasink_results, [('out_filename',
