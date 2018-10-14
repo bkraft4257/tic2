@@ -405,8 +405,12 @@ def init_netprep_wf(netprep_io, verbose):
     netprep_wf.connect([(netprep_inputnode, fslmean, [('fmri', 'in_file')]),
 
                         (fslmean, resample_gm_probmap, [('out_file', 'reference_image')]),
+                        (fslmean, resample_wm_probmap, [('out_file', 'reference_image')]),
+                        (fslmean, resample_csf_probmap, [('out_file', 'reference_image')]),
+
                         (netprep_inputnode, resample_gm_probmap, [('gm_probmap', 'input_image')]),
                         (netprep_inputnode, resample_wm_probmap, [('wm_probmap', 'input_image')]),
+                        (netprep_inputnode, resample_csf_probmap, [('csf_probmap', 'input_image')]),
 
                         (resample_gm_probmap, create_gm_mask, [('output_image', 'in_file')]),
 
@@ -488,13 +492,18 @@ def get_netprep_io(yaml_filename, verbose=False):
     netprep_io['nilearn_nifti_masker']['confounds'] = _add_abs_path_if_necessary(os.getcwd(),
                                                                                  netprep_io['nilearn_nifti_masker'][
                                                                                      'confounds'])
+
     netprep_io['gm_probmap'] = _add_abs_path_if_necessary(os.getcwd(), netprep_io['gm_probmap'])
+    netprep_io['wm_probmap'] = _add_abs_path_if_necessary(os.getcwd(), netprep_io['wm_probmap'])
+    netprep_io['csf_probmap'] = _add_abs_path_if_necessary(os.getcwd(), netprep_io['csf_probmap'])
 
     # === Outputs
 
     netprep_io['netprep_confounds_csv'] = 'bold_confounds.csv'
     netprep_io['fmri_mean'] = 'preproc_mean.nii.gz'
+
     netprep_io['gm_probmap_bold_space'] = 'gm_probmap.nii.gz'
+
     netprep_io['wm_probmap_bold_space'] = 'wm_probmap.nii.gz'
     netprep_io['csf_probmap_bold_space'] = 'csf_probmap.nii.gz'
 
