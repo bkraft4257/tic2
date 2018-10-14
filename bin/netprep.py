@@ -406,6 +406,7 @@ def init_netprep_wf(netprep_io, verbose):
 
                         (fslmean, resample_gm_probmap, [('out_file', 'reference_image')]),
                         (netprep_inputnode, resample_gm_probmap, [('gm_probmap', 'input_image')]),
+                        (netprep_inputnode, resample_wm_probmap, [('wm_probmap', 'input_image')]),
 
                         (resample_gm_probmap, create_gm_mask, [('output_image', 'in_file')]),
 
