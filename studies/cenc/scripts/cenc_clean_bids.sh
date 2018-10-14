@@ -13,11 +13,18 @@
 #    sub-34P1992_ses-1_acq-resttopup_dir-ap.1.nii.gz
 #    sub-34P1992_ses-1_acq-resttopup_dir-pa.1.nii.gz
 
+
+if [ $# -ne 4 ]; then
+    echo
+    echo "Usage: cenc_clean_bids.sh -s <participantID> -ss <sesnum>"
+    echo
+    exit 1
+fi
+
+subject_value=$2
+session_value=$4
+
 start_dir=$PWD
-
-subject_value=$1
-session_value=$2
-
 
 full_subject_session_value=sub-${subject_value}_ses-${session_value}
 
@@ -62,17 +69,17 @@ cd $CENC_BIDS_PATH
 # echo "Reorienting all *.gz files with fslreorient2std"
 #echo "-----------------------------------------------"
 
-for ii in $(find $session_dir -name "*.gz"); do
-    echo "reorienting $ii "
-    fslreorient2std $ii $ii
-done
+# for ii in $(find $session_dir -name "*.gz"); do
+#     echo "reorienting $ii "
+#    fslreorient2std $ii $ii
+# done
 
 #echo 
 #echo
 #echo "Set permission to read only for *.nii.gz and *.json files"
 #echo "--------------------------------------------------------------------------------"
-find $session_dir -type f -name "*.nii.gz" | xargs chmod -w -R 
-find $session_dir -type f -name "*.json"   | xargs chmod -w -R 
+# find $session_dir -type f -name "*.nii.gz" | xargs chmod -w -R 
+# find $session_dir -type f -name "*.json"   | xargs chmod -w -R 
 
 #--- Look for repeat scans -----------------------------------------------------------------------
 echo

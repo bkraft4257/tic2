@@ -69,7 +69,7 @@ function sw()
         echo "$params" | grep -q "\-d"
 
         if [ $? -ne 0 ];then
-            source $TIC_INIT_PATH/tic_study_switcher.sh
+            source $DOT_TIC_PATH/tic_study_switcher.sh
 
             echo
            echo '    ACTIVE_STUDY is now' $ACTIVE_STUDY
