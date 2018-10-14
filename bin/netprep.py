@@ -227,13 +227,11 @@ def init_netprep_wf(netprep_io, verbose):
     """
 
     # --- Input Node
-    netprep_inputnode = pe.Node(interface=niu.IdentityInterface(fields=['fmri', 'gm_probmap',  'wm_probmap',  'csf_probmap', 'fmri_confounds_tsv']),
+    netprep_inputnode = pe.Node(interface=niu.IdentityInterface(fields=['fmri', 'gm_probmap', 'fmri_confounds_tsv']),
                                 name='netprep_inputnode')
 
     netprep_inputnode.inputs.fmri = netprep_io['fmri']
     netprep_inputnode.inputs.gm_probmap = netprep_io['gm_probmap']
-#    netprep_inputnode.inputs.wm_probmap = netprep_io['wm_probmap']
-#    netprep_inputnode.inputs.csf_probmap = netprep_io['csf_probmap']
 
     # --- Calculate mean of fMRI BOLD NIFTI file.
     #
@@ -258,24 +256,6 @@ def init_netprep_wf(netprep_io, verbose):
                                                             invert_transform_flags=[False]
                                                             ),
                                   name='resample_gm_probmap')
-
-    # resample_wm_probmap = pe.Node(interface=ApplyTransforms(dimension=3,
-    #                                                         transforms=[identity_transform],
-    #                                                         output_image=netprep_io['wm_probmap_bold_space'],
-    #                                                         interpolation='Linear',
-    #                                                         default_value=0,
-    #                                                         invert_transform_flags=[False]
-    #                                                         ),
-    #                               name='resample_wm_probmap')
-    #
-    # resample_csf_probmap = pe.Node(interface=ApplyTransforms(dimension=3,
-    #                                                         transforms=[identity_transform],
-    #                                                         output_image=netprep_io['csf_probmap_bold_space'],
-    #                                                         interpolation='Linear',
-    #                                                         default_value=0,
-    #                                                         invert_transform_flags=[False]
-    #                                                         ),
-    #                                name='resample_csf_probmap')
 
     # --- Create GM mask
     #
@@ -403,10 +383,9 @@ def init_netprep_wf(netprep_io, verbose):
     netprep_wf.connect([(netprep_inputnode, fslmean, [('fmri', 'in_file')]),
 
                         (fslmean, resample_gm_probmap, [('out_file', 'reference_image')]),
-
                         (netprep_inputnode, resample_gm_probmap, [('gm_probmap', 'input_image')]),
-#                        (netprep_inputnode, resample_wm_probmap, [('wm_probmap', 'input_image')]),
-#                        (netprep_inputnode, resample_csf_probmap, [('csf_probmap','input_image')]),
+
+                        (resample_gm_probmap, create_gm_mask, [('output_image', 'in_file')]),
 
                         (create_gm_mask, nilearn_remove_confounds, [('out_file', 'mask_file')]),
                         (netprep_inputnode, nilearn_remove_confounds, [('fmri', 'in_file')]),
@@ -493,8 +472,6 @@ def get_netprep_io(yaml_filename, verbose=False):
     netprep_io['netprep_confounds_csv'] = 'bold_confounds.csv'
     netprep_io['fmri_mean'] = 'preproc_mean.nii.gz'
     netprep_io['gm_probmap_bold_space'] = 'gm_probmap.nii.gz'
-#    netprep_io['wm_probmap_bold_space'] = 'wm_probmap.nii.gz'
-#    netprep_io['csf_probmap_bold_space'] = 'csf_probmap.nii.gz'
     netprep_io['gm_mask'] = 'gm_mask.nii.gz'
 
     if verbose:
