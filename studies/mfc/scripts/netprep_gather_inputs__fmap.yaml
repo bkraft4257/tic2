@@ -1,0 +1,161 @@
+netprep:
+  template_filename_with_abspath: /gandg/tic_releases/0.13.3/tic_core/studies/mfc/scripts/mfc_netprep.yaml
+  output_filename: mfc_netprep.yaml
+
+anat:
+  t1w:
+    glob_string: '/anat/*_T1w_space-MNI152NLin2009cAsym_preproc.nii.gz'
+    out_filename: t1w_mni_preproc.nii.gz
+
+  gm:
+    glob_string: '/anat/*_T1w_space-MNI152NLin2009cAsym_class-GM_probtissue.nii.gz'
+    out_filename: t1w_mni_gm_probtissue.nii.gz
+
+# Columns in the confounds.tsv created by fmriprep. 
+# You may keep as many or as few as you like for netprep processing.
+#
+#     CSF, WhiteMatter, GlobalSignal,
+#     stdDVARS, non-stdDVARS, vx-wisestdDVARS, FramewiseDisplacement,
+#     tCompCor00, tCompCor01, tCompCor02, tCompCor03, tCompCor04, tCompCor05,
+#     aCompCor00, aCompCor01, aCompCor02, aCompCor03, aCompCor04, aCompCor05,
+#     Cosine00, Cosine01, Cosine02,
+#     NonSteadyStateOutlier00, NonSteadyStateOutlier01,
+#     X, Y, Z, RotX, RotY, RotZ]
+#
+
+func_confounds: [tCompCor00, tCompCor01, tCompCor02, tCompCor03, tCompCor04, tCompCor05,
+                 X, Y, Z, RotX, RotY, RotZ]
+
+
+func:
+  preheat1:
+    input_dir: 'fmap/preHeat1/inputs'
+    base_glob_string: '/func/*task-preHeat1_acq-epi_rec-fmap_bold*'
+
+    func_glob_string: 'space-MNI152NLin2009cAsym_preproc.nii.gz'
+    func_out_filename: bold_mni_preproc.nii.gz
+
+    mask_glob_string:  'space-MNI152NLin2009cAsym_brainmask.nii.gz'
+    mask_out_filename:  brainmask.nii.gz
+    masked_func_filename:  masked_bold_mni_preproc.nii.gz
+
+    confounds_glob_string: 'confounds.tsv'
+    confounds_out_filename: 'bold_confounds.csv'
+
+
+  preheat2:
+    input_dir: 'fmap/preHeat2/inputs'
+    base_glob_string: '/func/*task-preHeat2_acq-epi_rec-fmap_bold*'
+
+    func_glob_string: 'space-MNI152NLin2009cAsym_preproc.nii.gz'
+    func_out_filename: bold_mni_preproc.nii.gz
+
+    mask_glob_string: 'space-MNI152NLin2009cAsym_brainmask.nii.gz'
+    mask_out_filename:  brainmask.nii.gz
+    masked_func_filename:  masked_bold_mni_preproc.nii.gz
+
+    confounds_glob_string: 'confounds.tsv'
+    confounds_out_filename: 'bold_confounds.csv'
+
+
+  preneutral1:
+    input_dir: 'fmap/preNeutral1/inputs'
+    base_glob_string: '/func/*task-preNeutral1_acq-epi_rec-fmap_bold*'
+
+    func_glob_string: 'space-MNI152NLin2009cAsym_preproc.nii.gz'
+    func_out_filename: bold_mni_preproc.nii.gz
+
+    mask_glob_string: 'space-MNI152NLin2009cAsym_brainmask.nii.gz'
+    mask_out_filename:  brainmask.nii.gz
+    masked_func_filename:  masked_bold_mni_preproc.nii.gz
+
+    confounds_glob_string: 'confounds.tsv'
+    confounds_out_filename: 'bold_confounds.csv'
+
+
+  preneutral2:
+    input_dir: 'fmap/preNeutral2/inputs'
+    base_glob_string: '/func/*task-preNeutral2_acq-epi_rec-fmap_bold*'
+
+    func_glob_string: 'space-MNI152NLin2009cAsym_preproc.nii.gz'
+    func_out_filename: bold_mni_preproc.nii.gz
+
+    mask_glob_string: 'space-MNI152NLin2009cAsym_brainmask.nii.gz'
+    mask_out_filename:  brainmask.nii.gz
+    masked_func_filename:  masked_bold_mni_preproc.nii.gz
+
+    confounds_glob_string: 'confounds.tsv'
+    confounds_out_filename: 'bold_confounds.csv'
+
+
+  postneutral3:
+    input_dir: 'fmap/postNeutral3/inputs'
+    base_glob_string: '/func/*task-postNeutral3_acq-epi_rec-fmap_bold*'
+
+    func_glob_string: 'space-MNI152NLin2009cAsym_preproc.nii.gz'
+    func_out_filename: bold_mni_preproc.nii.gz
+
+    mask_glob_string: 'space-MNI152NLin2009cAsym_brainmask.nii.gz'
+    mask_out_filename:  brainmask.nii.gz
+    masked_func_filename:  masked_bold_mni_preproc.nii.gz
+
+    confounds_glob_string: 'confounds.tsv'
+    confounds_out_filename: 'bold_confounds.csv'
+
+
+  postneutral4:
+    input_dir: 'fmap/postNeutral4/inputs'
+    base_glob_string: '/func/*task-postNeutral4_acq-epi_rec-fmap_bold*'
+
+    func_glob_string: 'space-MNI152NLin2009cAsym_preproc.nii.gz'
+    func_out_filename: bold_mni_preproc.nii.gz
+
+    mask_glob_string: 'space-MNI152NLin2009cAsym_brainmask.nii.gz'
+    mask_out_filename:  brainmask.nii.gz
+    masked_func_filename:  masked_bold_mni_preproc.nii.gz
+
+    confounds_glob_string: 'confounds.tsv'
+    confounds_out_filename: 'bold_confounds.csv'
+
+
+  postHeat3:
+    input_dir: 'fmap/postHeat3/inputs'
+    base_glob_string: '/func/*task-postHeat3_acq-epi_rec-fmap_bold*'
+
+    func_glob_string: 'space-MNI152NLin2009cAsym_preproc.nii.gz'
+    func_out_filename: bold_mni_preproc.nii.gz
+
+    mask_glob_string: 'space-MNI152NLin2009cAsym_brainmask.nii.gz'
+    mask_out_filename:  brainmask.nii.gz
+    masked_func_filename:  masked_bold_mni_preproc.nii.gz
+
+    confounds_glob_string: 'confounds.tsv'
+    confounds_out_filename: 'bold_confounds.csv'
+
+
+  postHeat4:
+    input_dir: 'fmap/postHeat4/inputs'
+    base_glob_string: '/func/*task-postHeat4_acq-epi_rec-fmap_bold*'
+
+    func_glob_string: 'space-MNI152NLin2009cAsym_preproc.nii.gz'
+    func_out_filename: bold_mni_preproc.nii.gz
+
+    mask_glob_string: 'space-MNI152NLin2009cAsym_brainmask.nii.gz'
+    mask_out_filename:  brainmask.nii.gz
+    masked_func_filename:  masked_bold_mni_preproc.nii.gz
+
+    confounds_glob_string: 'confounds.tsv'
+    confounds_out_filename: 'bold_confounds.csv'
+
+
+#sub-mfcc003_ses-1_task-preHeat1_acq-epi_rec-fmap_bold_space-MNI152NLin2009cAsym_brainmask.nii.gz
+#sub-mfcc003_ses-1_task-preHeat2_acq-epi_rec-fmap_bold_space-MNI152NLin2009cAsym_brainmask.nii.gz
+
+#sub-mfcc003_ses-1_task-preNeutral1_acq-epi_rec-fmap_bold_space-MNI152NLin2009cAsym_brainmask.nii.gz
+#sub-mfcc003_ses-1_task-preNeutral2_acq-epi_rec-fmap_bold_space-MNI152NLin2009cAsym_brainmask.nii.gz
+
+#sub-mfcc003_ses-1_task-postNeutral3_acq-epi_rec-fmap_bold_space-MNI152NLin2009cAsym_brainmask.nii.gz
+#sub-mfcc003_ses-1_task-postNeutral4_acq-epi_rec-fmap_bold_space-MNI152NLin2009cAsym_brainmask.nii.gz
+
+#sub-mfcc003_ses-1_task-postHeat3_acq-epi_rec-fmap_bold_space-MNI152NLin2009cAsym_brainmask.nii.gz
+#sub-mfcc003_ses-1_task-postHeat4_acq-epi_rec-fmap_bold_space-MNI152NLin2009cAsym_brainmask.nii.gz
