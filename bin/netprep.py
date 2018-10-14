@@ -257,6 +257,26 @@ def init_netprep_wf(netprep_io, verbose):
                                                             ),
                                   name='resample_gm_probmap')
 
+
+    resample_wm_probmap = pe.Node(interface=ApplyTransforms(dimension=3,
+                                                            transforms=[identity_transform],
+                                                            output_image=netprep_io['wm_probmap_bold_space'],
+                                                            interpolation='Linear',
+                                                            default_value=0,
+                                                            invert_transform_flags=[False]
+                                                            ),
+                                  name='resample_wm_probmap')
+
+
+    resample_csf_probmap = pe.Node(interface=ApplyTransforms(dimension=3,
+                                                            transforms=[identity_transform],
+                                                            output_image=netprep_io['csf_probmap_bold_space'],
+                                                            interpolation='Linear',
+                                                            default_value=0,
+                                                            invert_transform_flags=[False]
+                                                            ),
+                                  name='resample_csf_probmap')
+
     # --- Create GM mask
     #
     #  This node will convert the resampled GM tissue probability map into a simple mask. This GM mask
@@ -383,9 +403,10 @@ def init_netprep_wf(netprep_io, verbose):
     netprep_wf.connect([(netprep_inputnode, fslmean, [('fmri', 'in_file')]),
 
                         (fslmean, resample_gm_probmap, [('out_file', 'reference_image')]),
-                        (netprep_inputnode, resample_gm_probmap, [('gm_probmap', 'input_image')]),
 
-                        (resample_gm_probmap, create_gm_mask, [('output_image', 'in_file')]),
+                        (netprep_inputnode, resample_gm_probmap, [('gm_probmap', 'input_image')]),
+                        (netprep_inputnode, resample_wm_probmap, [('wm_probmap', 'input_image')]),
+                        (netprep_inputnode, resample_csf_probmap, [('csf_probmap','input_image')]),
 
                         (create_gm_mask, nilearn_remove_confounds, [('out_file', 'mask_file')]),
                         (netprep_inputnode, nilearn_remove_confounds, [('fmri', 'in_file')]),
@@ -472,6 +493,8 @@ def get_netprep_io(yaml_filename, verbose=False):
     netprep_io['netprep_confounds_csv'] = 'bold_confounds.csv'
     netprep_io['fmri_mean'] = 'preproc_mean.nii.gz'
     netprep_io['gm_probmap_bold_space'] = 'gm_probmap.nii.gz'
+    netprep_io['wm_probmap_bold_space'] = 'wm_probmap.nii.gz'
+    netprep_io['csf_probmap_bold_space'] = 'csf_probmap.nii.gz'
     netprep_io['gm_mask'] = 'gm_mask.nii.gz'
 
     if verbose:

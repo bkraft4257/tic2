@@ -1,5 +1,5 @@
 netprep:
-  template_filename_with_abspath: /gandg/tic_releases/0.13.3/tic_core/studies/mfc/scripts/mfc_netprep.yaml
+  template_filename_with_abspath: /gandg/tic_releases/latest/tic_core/studies/mfc/scripts/mfc_netprep.yaml
   output_filename: mfc_netprep.yaml
 
 anat:
@@ -10,6 +10,14 @@ anat:
   gm:
     glob_string: '/anat/*_T1w_space-MNI152NLin2009cAsym_class-GM_probtissue.nii.gz'
     out_filename: t1w_mni_gm_probtissue.nii.gz
+
+  wm:
+    glob_string: '/anat/*_T1w_space-MNI152NLin2009cAsym_class-WM_probtissue.nii.gz'
+    out_filename: t1w_mni_wm_probtissue.nii.gz
+
+  csf:
+    glob_string: '/anat/*_T1w_space-MNI152NLin2009cAsym_class-CSF_probtissue.nii.gz'
+    out_filename: t1w_mni_csf_probtissue.nii.gz
 
 # Columns in the confounds.tsv created by fmriprep. 
 # You may keep as many or as few as you like for netprep processing.
