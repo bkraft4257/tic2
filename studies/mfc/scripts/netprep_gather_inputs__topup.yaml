@@ -19,6 +19,7 @@ anat:
     glob_string: '/anat/*_T1w_space-MNI152NLin2009cAsym_class-CSF_probtissue.nii.gz'
     out_filename: t1w_mni_csf_probtissue.nii.gz
 
+
 # Columns in the confounds.tsv created by fmriprep. 
 # You may keep as many or as few as you like for netprep processing.
 #
