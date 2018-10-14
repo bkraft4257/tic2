@@ -405,8 +405,8 @@ def init_netprep_wf(netprep_io, verbose):
                         (fslmean, resample_gm_probmap, [('out_file', 'reference_image')]),
 
                         (netprep_inputnode, resample_gm_probmap, [('gm_probmap', 'input_image')]),
-                        (netprep_inputnode, resample_wm_probmap, [('wm_probmap', 'input_image')]),
-                        (netprep_inputnode, resample_csf_probmap, [('csf_probmap','input_image')]),
+#                        (netprep_inputnode, resample_wm_probmap, [('wm_probmap', 'input_image')]),
+#                        (netprep_inputnode, resample_csf_probmap, [('csf_probmap','input_image')]),
 
                         (create_gm_mask, nilearn_remove_confounds, [('out_file', 'mask_file')]),
                         (netprep_inputnode, nilearn_remove_confounds, [('fmri', 'in_file')]),
