@@ -259,23 +259,23 @@ def init_netprep_wf(netprep_io, verbose):
                                                             ),
                                   name='resample_gm_probmap')
 
-    resample_wm_probmap = pe.Node(interface=ApplyTransforms(dimension=3,
-                                                            transforms=[identity_transform],
-                                                            output_image=netprep_io['wm_probmap_bold_space'],
-                                                            interpolation='Linear',
-                                                            default_value=0,
-                                                            invert_transform_flags=[False]
-                                                            ),
-                                  name='resample_wm_probmap')
-
-    resample_csf_probmap = pe.Node(interface=ApplyTransforms(dimension=3,
-                                                            transforms=[identity_transform],
-                                                            output_image=netprep_io['csf_probmap_bold_space'],
-                                                            interpolation='Linear',
-                                                            default_value=0,
-                                                            invert_transform_flags=[False]
-                                                            ),
-                                   name='resample_csf_probmap')
+    # resample_wm_probmap = pe.Node(interface=ApplyTransforms(dimension=3,
+    #                                                         transforms=[identity_transform],
+    #                                                         output_image=netprep_io['wm_probmap_bold_space'],
+    #                                                         interpolation='Linear',
+    #                                                         default_value=0,
+    #                                                         invert_transform_flags=[False]
+    #                                                         ),
+    #                               name='resample_wm_probmap')
+    #
+    # resample_csf_probmap = pe.Node(interface=ApplyTransforms(dimension=3,
+    #                                                         transforms=[identity_transform],
+    #                                                         output_image=netprep_io['csf_probmap_bold_space'],
+    #                                                         interpolation='Linear',
+    #                                                         default_value=0,
+    #                                                         invert_transform_flags=[False]
+    #                                                         ),
+    #                                name='resample_csf_probmap')
 
     # --- Create GM mask
     #
