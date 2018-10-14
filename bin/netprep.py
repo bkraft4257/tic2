@@ -232,8 +232,8 @@ def init_netprep_wf(netprep_io, verbose):
 
     netprep_inputnode.inputs.fmri = netprep_io['fmri']
     netprep_inputnode.inputs.gm_probmap = netprep_io['gm_probmap']
-    netprep_inputnode.inputs.wm_probmap = netprep_io['wm_probmap']
-    netprep_inputnode.inputs.csf_probmap = netprep_io['csf_probmap']
+#    netprep_inputnode.inputs.wm_probmap = netprep_io['wm_probmap']
+#    netprep_inputnode.inputs.csf_probmap = netprep_io['csf_probmap']
 
     # --- Calculate mean of fMRI BOLD NIFTI file.
     #
@@ -493,8 +493,8 @@ def get_netprep_io(yaml_filename, verbose=False):
     netprep_io['netprep_confounds_csv'] = 'bold_confounds.csv'
     netprep_io['fmri_mean'] = 'preproc_mean.nii.gz'
     netprep_io['gm_probmap_bold_space'] = 'gm_probmap.nii.gz'
-    netprep_io['wm_probmap_bold_space'] = 'wm_probmap.nii.gz'
-    netprep_io['csf_probmap_bold_space'] = 'csf_probmap.nii.gz'
+#    netprep_io['wm_probmap_bold_space'] = 'wm_probmap.nii.gz'
+#    netprep_io['csf_probmap_bold_space'] = 'csf_probmap.nii.gz'
     netprep_io['gm_mask'] = 'gm_mask.nii.gz'
 
     if verbose:
