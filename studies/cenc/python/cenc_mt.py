@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 """
 Magnetization Transfer Workflow.  Registration to T1 and calculation of MT Ratio (mtr.nii.gz) image.
+CAH version.  2 Oct 2018
 """
 import sys
 import os                                               # system functions
@@ -15,189 +16,53 @@ import datetime
 from collections import OrderedDict
 import getpass
 import subprocess
+import nipype.interfaces.fsl as fsl
+import nipype.interfaces.freesurfer as fs 
+import nibabel
+import scipy
+import numpy
+
+# ======================================================================================================================
+def create_mask(in_brainmask, in_aseg, mask ):
+
+     nii_brainmask   = nibabel.load(in_brainmask)
+     array_brainmask = 1. * (nii_brainmask.get_data()>0)
+
+     if True:
+          nii_aseg      = nibabel.load(in_aseg)
 
 
-
-#=======================================================================================================================
-# Prepare
-
-def mt_link_inputs( input_dir, link_to_dir, change_to_dir = True ):
-
-     cenc_dirs = cenc.directories( input_dir )
-
-     util.mkcd_dir( [ link_to_dir ], change_to_dir )
-
-     input_files = cenc_dirs['mt']['inputs']
-     label_files = cenc_dirs['mt']['labels']
-
-     util.link_inputs( input_files + label_files, link_to_dir )
-
-
-
-def prepare( input_dir, verbose=False ):
-
-     if verbose:
-          print('Entering cenc_mt.py prepare')
-
-     cenc_dirs = cenc.directories( input_dir )
-
-     input_files = cenc_dirs['mt']['inputs']
-     label_files = cenc_dirs['mt']['labels']
-
-     mt_link_inputs( input_dir, cenc_dirs['mt']['dirs']['input'] )
-     mt_link_inputs( input_dir, cenc_dirs['mt']['dirs']['input'] )
-
-     return
-
-
-#=======================================================================================================================
-# Methods
-
-def ants_register(input_file):
-
-     # antsRegistration call:
-     #--------------------------------------------------------------------------------------
-     if False:
-
-          # I am having problems callling the interface.  Same problem of bad interface.
-
-          command = ['antsRegistration', '--dimensionality', 3, '--float', 0, 
-                     '--output', '[', 'mt_Affine_nu__' + input_file +'_,', 
-                     'mt_Affine_nu__' + input_file + '_Warped.nii.gz,', 
-                     'mt_Affine_nu__' + input_file + '_InverseWarped.nii.gz', ']', 
-                     '--interpolation', 'Linear', 
-                     '--use-histogram-matching', 0,
-                     '--winsorize-image-intensities', [0.005,0.995],
-                     '--initial-moving-transform', '[', 'nu.nii.gz,' + input_file + '.nii.gz,', 1, ']',
-                     '--transform', 'Rigid[0.1]',
-                     '--metric', 'MI[nu.nii.gz,mt_m1.nii.gz,1,32,Regular,0.25]', 
-                     '--convergence', '[1000x500x250x0,1e-6,10]',
-                     '--shrink-factors', '8x4x2x1',
-                     '--smoothing-sigmas', '3x2x1x0vox', 
-                     '--transform', 'Affine[0.1]',
-                     '--metric', 'MI[nu.nii.gz,' + input_file + '.nii.gz,1,32,Regular,0.25]',
-                     '--convergence', '[1000x500x250x0,1e-6,10]', 
-                     '--shrink-factors', '8x4x2x1', 
-                     '--smoothing-sigmas', '3x2x1x0vox'
-                    ]
-     #--------------------------------------------------------------------------------------
-
-      # I am having problems callling the interface.  Same problem of bad interface.
-     if False:
-          reg = Registration()
-          reg.inputs.fixed_image = 'nu.nii.gz'
-          reg.inputs.moving_image = input_file + '.nii.gz'
-          reg.inputs.output_transform_prefix = "mt_Affine_nu__" + input_file + "_"
-          reg.inputs.transforms = ['Affine']
-          reg.inputs.transform_parameters = [(2.0,), (0.25, 3.0, 0.0)]
-          reg.inputs.number_of_iterations = [[1000,500,200,100]]
-          reg.inputs.dimension = 3
-          reg.inputs.write_composite_transform = False
-          reg.inputs.collapse_output_transforms = False
-          reg.inputs.initialize_transforms_per_stage = False
-          reg.inputs.metric = ['MI']
-          reg.inputs.metric_weight = [1]
-          reg.inputs.radius_or_number_of_bins = [32]
-          reg.inputs.sampling_strategy = ['Random']
-          reg.inputs.sampling_percentage = [0.05]
-          reg.inputs.convergence_threshold = [1.e-10]
-          reg.inputs.convergence_window_size = [10]
-          reg.inputs.smoothing_sigmas = [[3,2,1,0]]
-          reg.inputs.sigma_units = ['vox']
-          reg.inputs.shrink_factors = [[8,4,2,1]]
-          reg.inputs.use_estimate_learning_rate_once = [True]
-          reg.inputs.use_histogram_matching = [True] # This is the default
-          reg.inputs.output_warped_image = 'mt_Affine_nu__' + input_file + '.nii.gz'
-          reg.inputs.terminal_output='stream'
-          print(reg.cmdline)
-          # reg.run()
-
-
-     # This simple command appears to work. 
-     command = ['antsRegistrationSyNQuick.sh', '-d', '3', '-m', input_file + '.nii.gz', '-r', 'nu.nii.gz',
-                '-f', 'nu.nii.gz', '-t', 'a', '-o', 'mt_Affine_nu__' + input_file + '_' 
-                ]
-
-     util.iw_subprocess( command, True, True, False)
-
-
-def methods_01_register( input_dir, verbose=False):
-
-     # Register MT images to nu.nii.gz
-     cenc_dirs = cenc.directories( input_dir )
-     mt_link_inputs( input_dir, cenc_dirs['mt']['dirs']['register'] )
+          array_aseg      = nii_aseg.get_data()
+          
+          array_mask_01     = scipy.ndimage.morphology.binary_erosion( 1.*(array_brainmask>0), numpy.ones( [15,15,15] ) )
+          array_mask_02      = 1.* ((array_mask_01 + array_aseg) > 0)
+          
+          #     out_nifti = nibabel.Nifti1Image( 1.*array_mask_02,  None, nii_brainmask.get_header() )
+          #     nibabel.save( out_nifti,  '02.mask.nii.gz' )
+          
+          array_mask_03     = scipy.ndimage.morphology.binary_fill_holes( 1.*(array_mask_02) )
+          #     out_nifti = nibabel.Nifti1Image( 1.*array_mask_03,  None, nii_brainmask.get_header() )
+          #     nibabel.save( out_nifti,  '03.mask.nii.gz' )
+          
+          array_mask_04     = scipy.ndimage.morphology.binary_closing( array_mask_03, numpy.ones( [5,5,5] ))
+          array_mask_05     = scipy.ndimage.morphology.binary_fill_holes( 1.*(array_mask_04) )
+          array_mask_06     = scipy.ndimage.morphology.binary_opening( array_mask_05, numpy.ones( [5,5,5] ))
+          
  
-     ants_register('mt_m0')
-     ants_register('mt_m1')
+     out_nifti = nibabel.Nifti1Image( array_brainmask,  None, nii_brainmask.get_header() )
+     nibabel.save( out_nifti,  mask )
 
-     # Calculate MTR image
-     command = ['ImageMath', 3, 'mtr.nii.gz', 'MTR', 'mt_Affine_nu__mt_m0_Warped.nii.gz', 
-                'mt_Affine_nu__mt_m1_Warped.nii.gz', 'nu_brain.nii.gz']
-
-     util.iw_subprocess( command, verbose, verbose, False)
-
-     return
-
-
-def methods_02_stats(input_dir, verbose=False):
-
-    # Register MT images to nu.nii.gz
-    cenc_dirs = cenc.directories(input_dir)
-
-    util.mkcd_dir( [ cenc_dirs['mt']['dirs']['02-stats'] ], True)
-
-    methods_write_json_redcap_mt_instrument(input_dir, verbose)
-
-
-    return
-
-#=======================================================================================================================
-# Results
-
-def results( input_dir ):
-    """ Gather results and write the MagTran JSON output file"""
-
-    cenc_dirs = cenc.directories( input_dir )
-
-    mt_input_dir       = cenc_dirs['mt']['dirs']['input']
-    mt_01_register_dir = cenc_dirs['mt']['dirs']['register']
-    mt_results_dir     = cenc_dirs['mt']['dirs']['results']
-
-    util.mkcd_dir( [ mt_results_dir ], True)
-
-    result_files = [ [  os.path.join( cenc_dirs['mt']['dirs']['register'], 'mt_Affine_nu__mt_m0_Warped.nii.gz'),
-    os.path.join( cenc_dirs['mt']['dirs']['results'],  'mt_Affine_nu__mt_m0.nii.gz')],
-
-    [ os.path.join( cenc_dirs['mt']['dirs']['register'], 'mt_Affine_nu__mt_m1_Warped.nii.gz'),
-    os.path.join( cenc_dirs['mt']['dirs']['results'],  'mt_Affine_nu__mt_m1.nii.gz')],
-
-    [ os.path.join( cenc_dirs['mt']['dirs']['02-stats'], 'magtrans.json'),
-    os.path.join( cenc_dirs['mt']['dirs']['results'],  'magtrans.json') ],
-
-    [ os.path.join( cenc_dirs['mt']['dirs']['register'], 'mtr.nii.gz'),
-    os.path.join( cenc_dirs['mt']['dirs']['results'],  'mtr.nii.gz') ],
-
-    [ os.path.join( cenc_dirs['mt']['dirs']['input'],    'nu.nii.gz'),
-    os.path.join( cenc_dirs['mt']['dirs']['results'],  'nu.nii.gz') ],
-
-    [ os.path.join( cenc_dirs['mt']['dirs']['register'], 'mtr.nii.gz'),
-    os.path.join( cenc_dirs['results']['dirs']['images'],  'mtr.nii.gz') ]
-    ]
-
-    for ii in result_files:
-        util.force_hard_link( ii[0], ii[1])
-
-    return
-
-
-def methods_write_json_redcap_mt_instrument(input_dir, verbose):
-    """ Write MagTrans Instrument to JSON output file"""
+# ======================================================================================================================
+def save_to_json(input_dir, verbose):
+    """ Write MagTrans results to JSON output file"""
 
     cenc_dirs = cenc.directories(input_dir)
 
     mtr = os.path.join(cenc_dirs['mt']['dirs']['register'], 'mtr.nii.gz')
 
     pandas.set_option('expand_frame_repr', False)
+
+    # cenc_aseg_labels.sh generates these label files from aseg.nii.gz, which needs to be converted from aseg.mgz
 
     df_stats_gm_cortical = labels.measure(cenc_dirs['results']['labels']['gm.cortical'], mtr)
     df_stats_gm_subcortical = labels.measure(cenc_dirs['results']['labels']['gm.subcortical'], mtr)
@@ -231,235 +96,138 @@ def methods_write_json_redcap_mt_instrument(input_dir, verbose):
 
     return
 
-def redcap(input_dir, verbose=False):
-    pass
-
-def qa_results(in_dir, verbose=False):
-    cenc_dirs = cenc.directories(in_dir)
-
-    cenc.print_json_redcap_instrument( os.path.join(cenc_dirs['mt']['dirs']['results'],'magtrans.json'))
-
-    result_files = [os.path.join(cenc_dirs['mt']['dirs']['results'], 'nu.nii.gz') + ':colormap=grayscale',
-                    os.path.join(cenc_dirs['mt']['dirs']['results'],
-                                 'mt_Affine_nu__mt_m0.nii.gz') + ':colormap=grayscale:visible=0',
-                    os.path.join(cenc_dirs['mt']['dirs']['results'],
-                                 'mt_Affine_nu__mt_m1.nii.gz') + ':colormap=grayscale:visible=0',
-                    os.path.join(cenc_dirs['mt']['dirs']['results'],
-                                 'mtr.nii.gz') + ':colormap=jet:colorscale=0,0.6:opacity=0.5'
-                    ]
-
-    qa_command = ['freeview', '-v'] + result_files
-
-
-
-    if verbose:
-        print('')
-        print(' '.join(qa_command))
-        print('')
-
-    DEVNULL = open(os.devnull, 'wb')
-    pipe = subprocess.Popen([' '.join(qa_command)], shell=True,
-                            stdin=DEVNULL, stdout=DEVNULL, stderr=DEVNULL, close_fds=True)
-
-#=======================================================================================================================
-# Status
-
-def status_methods_01_register(input_dir, verbose=False):
-    cenc_dirs = cenc.directories(input_dir)
-
-    result_files = [os.path.join(cenc_dirs['mt']['dirs']['register'], 'mt_Affine_nu__mt_m0_Warped.nii.gz'),
-                    os.path.join(cenc_dirs['mt']['dirs']['register'], 'mt_Affine_nu__mt_m1_Warped.nii.gz'),
-                    os.path.join(cenc_dirs['mt']['dirs']['register'], 'mtr.nii.gz')
-                    ]
-
-    mt_status = util.check_files(result_files, False)
-
-    if verbose:
-        print(cenc_dirs['cenc']['id'] + ', cenc_mt, ' + 'methods_01_register' + ', ' + str(mt_status))
-
-    return mt_status
-
-
-def status_methods_02_stats( input_dir, verbose=False ):
-
-     cenc_dirs = cenc.directories( input_dir )
-     
-     result_files = [ os.path.join( cenc_dirs['mt']['dirs']['02-stats'], 'magtrans.json') ]
- 
-     mt_status = util.check_files(result_files, False)
-
-     if verbose:
-          print( cenc_dirs['cenc']['id'] + ', cenc_mt, ' + 'methods_02_stats' + ', ' + str(mt_status) )
-
-     return mt_status
-
-
-def status_methods( input_dir, verbose=False ):
-
-    methods_01_register = status_methods_01_register(input_dir, verbose)
-    methods_02_stats = status_methods_02_stats(input_dir, verbose)
-
-    return methods_01_register and methods_02_stats
-
-def status_results( input_dir, verbose=False ):
-
-     cenc_dirs = cenc.directories( input_dir )
-
-     result_files = [ os.path.join( cenc_dirs['mt']['dirs']['results'],  'mt_Affine_nu__mt_m0.nii.gz'),
-                      os.path.join( cenc_dirs['mt']['dirs']['results'],  'mt_Affine_nu__mt_m1.nii.gz'), 
-                      os.path.join( cenc_dirs['mt']['dirs']['results'],  'mtr.nii.gz'),
-                      os.path.join( cenc_dirs['mt']['dirs']['results'],  'nu.nii.gz'),
-                      os.path.join( cenc_dirs['results']['dirs']['images'],  'mtr.nii.gz')
-                      ]
-
-     mt_status = util.check_files(result_files, False)
-
-     if verbose:
-          print( cenc_dirs['cenc']['id'] + ', cenc_mt, ' + 'results' + ', ' + str(mt_status) )
-
-     return mt_status
-
-
-def status_inputs( input_dir, stdout=False, verbose=False ):
-
-     cenc_dirs = cenc.directories( input_dir )
-
-     input_files = cenc_dirs['mt']['inputs']
-     label_files = cenc_dirs['mt']['labels']
-
-     print(input_files)
-     print(label_files)
-
-     mt_status = util.check_files(input_files + label_files, verbose)
-
-     if stdout:
-          print( cenc_dirs['cenc']['id'] + ', cenc_mt, ' + 'input' + ', ' + str(mt_status) )
-
-     return mt_status
-
-
-def status_prepare( input_dir, verbose=False ):
-
-     cenc_dirs = cenc.directories( input_dir )
-
-     input_files = cenc_dirs['mt']['inputs']
-     label_files = cenc_dirs['mt']['labels']
-
-     mt_status = util.check_files(input_files + label_files, False)
-
-     if verbose:
-          print( cenc_dirs['cenc']['id'] + ', cenc_mt, ' + 'prepare' + ', ' + str(mt_status) )
-
-     return mt_status
 
 # ======================================================================================================================
 #  Main
 def main():
-    ## Parsing Arguments
 
-    usage = "usage: %prog [options] arg1 arg2"
-
+    ## Parse Arguments
+    usage = "usage: %prog -s 34Pxxxx [-ss <n> default=1]"
     parser = argparse.ArgumentParser(prog='cenc_mt')
-
-    parser.add_argument('-i', "--in_dir", help="Participant directory", default=os.getcwd())
-
-    parser.add_argument("--cenc_data_dir", help="CENC data directory", default=os.getenv('CENC_MRI_DATA'))
-    parser.add_argument("--cenc_freesurfer_dir", help="CENC data directory", default=os.getenv('CENC_SUBJECTS_DIR'))
-    parser.add_argument("--cenc_results_dir", help="CENC results directory", default='./results/native')
-
-    parser.add_argument("--methods", help="Methods [all, 01_register, 02_stats]", nargs='*', choices=['all', '01_register', '02_stats'], default=[None])
-
-    parser.add_argument("--prepare", help="Gather necessary inputs for MT analysis", action="store_true", default=False)
-    parser.add_argument("--results", help="Gather results", action="store_true", default=False)
-    parser.add_argument("--redcap", help="Calculate RedCap results", action="store_true", default=False)
-
-    parser.add_argument("--status", help="Status check. choices=[all, input, methods, results]", nargs='*',
-                        choices=['all', 'input','methods','results', '01_register', '02_stats'], default=[None])
-
-
-    parser.add_argument("--force", help="Force processing action to run", action="store_true", default=False)
-
-    parser.add_argument("--qa", help="Check if MT has been run on this participant",
-                        choices=['prepare', 'results', 'methods'])
-    parser.add_argument('-v', '--verbose', help="Verbose flag", action="store_true", default=False)
-
+    parser.add_argument('-s', "--subject", help="Subject ID 34Pxxxx", default='34P0000')
+    parser.add_argument('-ss', "--session", help="Session Number", default='1')
+    parser.add_argument('-v', "--verbose", help="Verbose flag", action="store_true", default=False)
     inArgs = parser.parse_args()
 
-    # Prepare
+    if len(sys.argv) == 1:
+         parser.print_help()
+         sys.exit()
 
-    cenc_dirs = cenc.directories(inArgs.in_dir)
+    subject = inArgs.subject
+    if subject == '34P0000':
+         parser.print_help()
+         sys.exit()
 
-    if inArgs.prepare:
+    session = inArgs.session
 
-        if status_inputs(inArgs.in_dir, False):
-            prepare(inArgs.in_dir)
+    print('setting up directories')
+    # setup directories:  image_processing/mt/sub-34Pxxxx/ses-1
+    cenc_improc_dir = os.getenv('CENC_IMAGE_PROCESSING_PATH')
+    os.chdir(cenc_improc_dir)
+    cenc_improc_mt_dir = os.path.join(cenc_improc_dir,'mt')
+    if not os.path.isdir(cenc_improc_mt_dir):
+        os.mkdir(cenc_improc_mt_dir)
 
-        else:
-            if inArgs.verbose:
-                print('cenc_mt.py: Inputs for prepare are not found')
-                status_inputs(inArgs.in_dir, True)
-                exit()
-
-    # Methods
-
-    if '01_register' in inArgs.methods or 'all' in inArgs.methods:
-
-        if (not status_methods_01_register(inArgs.in_dir, False)) or inArgs.force:
-            methods_01_register(inArgs.in_dir, inArgs.verbose)
-        else:
-            print( cenc_dirs['cenc']['id'] + ': cenc_mt.py: run has already been run')
-
-    if '02_stats' in inArgs.methods or 'all' in inArgs.methods:
-
-        if status_methods_01_register(inArgs.in_dir):
-            if (not status_methods_02_stats(inArgs.in_dir)) or inArgs.force:
-                methods_02_stats(inArgs.in_dir, inArgs.verbose)
-            else:
-                print(cenc_dirs['cenc']['id'] + ': cenc_mt.py: methods_02_stats has already been run')
-        else:
-            print(cenc_dirs['cenc']['id'] + ':  cenc_mt.py methods_01_register must be run first')
+    os.chdir(cenc_improc_mt_dir)
+    if not os.path.isdir('sub-'+subject):
+         os.mkdir('sub-'+subject)
+    os.chdir('sub-'+subject)
+    if not os.path.isdir('ses-'+session):
+         os.mkdir('ses-'+session)
+    os.chdir('ses-'+session)
 
 
-    # Results
-    if inArgs.results and ((not status_results(inArgs.in_dir, False)) or inArgs.force):
+    # convert freesurfer output nu.mgz to nu.nii.gz
+    if not os.path.isfile('nu.nii.gz'):
+         print('creating nu.nii.gz')
+         t1mgz = '../../../freesurfer/sub-'+subject+'/mri/nu.mgz'
+         mc = fs.MRIConvert( in_file  = t1mgz,
+                             out_file = 'nu.nii.gz',
+                             out_type = 'niigz')
+         mc.run()
+         reorient = fsl.Reorient2Std( in_file = 'nu.nii.gz', out_file = 'nu.nii.gz')
+         reorient.run()
 
-        if status_methods(inArgs.in_dir, False):
+    # convert freesurfer output brainmask.mgz to brainmask.nii.gz
+    if not os.path.isfile('brainmask.nii.gz'):
+         print('creating brainmask.nii.gz')
+         maskmgz = '../../../freesurfer/sub-'+subject+'/mri/brainmask.mgz'
+         mc = fs.MRIConvert( in_file  = maskmgz,
+                             out_file = 'brainmask.nii.gz',
+                             out_type = 'niigz')
+         mc.run()
+         reorient = fsl.Reorient2Std( in_file = 'brainmask.nii.gz', out_file = 'brainmask.nii.gz')
+         reorient.run()
 
-            if (not status_results(inArgs.in_dir, False)) or inArgs.force:
-                results(inArgs.in_dir)
-            else:
-                if inArgs.verbose:
-                    print('cenc_mt.py: run has already been run')
-        else:
-            print( cenc_dirs['cenc']['id'] + ': cenc_mt.py run must be executed before results')
+    # convert freesurfer output aparc.a2009s+aseg.mgz to aparc.a2009s+aseg.nii.gz
+    if not os.path.isfile('aparc.a2009s+aseg.nii.gz'):
+         print('creating aparc.a2009s+aseg.nii.gz')
+         asegmgz = '../../../freesurfer/sub-'+subject+'/mri/aparc.a2009s+aseg.mgz'
+         mc = fs.MRIConvert( in_file  = asegmgz,
+                             out_file = 'aparc.a2009s+aseg.nii.gz',
+                             out_type = 'niigz')
+         mc.run()
+         reorient = fsl.Reorient2Std( in_file = 'aparc.a2009s+aseg.nii.gz', out_file = 'aparc.a2009s+aseg.nii.gz')
+         reorient.run()
+
+    # Create final brain mask, mask.nii.gz
+    if not os.path.isfile('mask.nii.gz'):
+         print('creating mask.nii.gz')
+         create_mask('brainmask.nii.gz',         
+                     'aparc.a2009s+aseg.nii.gz', 
+                     'mask.nii.gz')
+
+    # use mask to extract brain from nu.nii.gz to produce nu_brain.nii.gz
+    if not os.path.isfile('nu_brain.nii.gz'):
+         print('creating nu_brain.nii.gz')
+         util.iw_subprocess(['fslmaths', 
+                             'nu.nii.gz',
+                             '-mas', 
+                             'mask.nii.gz',
+                             'nu_brain.nii.gz'])
+
+    # register m0 image to T1
+    if not os.path.isfile('mt_Affine_nu_mt_m0_Warped.nii.gz'):
+         print('creating mt_Affine_nu_mt_m0_Warped.nii.gz')
+         input_mt_file = '../../../../bids/sub-'+subject+'/ses-'+session+'/anat/sub-'+subject+'_ses-'+session+'_acq-mt.nii.gz'
+         command = ['antsRegistrationSyNQuick.sh', '-d', '3', '-m', input_mt_file , '-r', 'nu.nii.gz',
+                    '-f', 'nu.nii.gz', '-t', 'a', '-o', 'mt_Affine_nu_mt_m0_']
+         util.iw_subprocess( command, True, True, False)
+
+    # register m1 image to T1
+    if not os.path.isfile('mt_Affine_nu_mt_m1_Warped.nii.gz'):
+         print('creating mt_Affine_nu_mt_m1_Warped.nii.gz')
+         input_mt_file = '../../../../bids/sub-'+subject+'/ses-'+session+'/anat/sub-'+subject+'_ses-'+session+'_acq-mt.2.nii.gz'
+         command = ['antsRegistrationSyNQuick.sh', '-d', '3', '-m', input_mt_file , '-r', 'nu.nii.gz',
+                    '-f', 'nu.nii.gz', '-t', 'a', '-o', 'mt_Affine_nu_mt_m1_']
+         util.iw_subprocess( command, True, True, False)
+
+    # Calculate MTR image
+    print('calculating mtr.nii.gz')
+    command = ['ImageMath', 3, 'mtr.nii.gz', 'MTR', 'mt_Affine_nu_mt_m0_Warped.nii.gz', 
+               'mt_Affine_nu_mt_m1_Warped.nii.gz', 'nu_brain.nii.gz']
+
+    util.iw_subprocess( command, True, True, False)
 
 
-    if inArgs.redcap:
-        redcap(inArgs.in_dir, inArgs.verbose)
+    # ---------------------------------
+    # now measure MT in various labels
+    # ---------------------------------
 
-    # Status
-
-    if 'input' in inArgs.status or 'all' in inArgs.status:
-        status_inputs(inArgs.in_dir, True, inArgs.verbose)
-
-    if '01_register' in inArgs.status or 'all' in inArgs.status:
-        status_methods_01_register(inArgs.in_dir, True)
-
-    if '02_stats' in inArgs.status or 'all' in inArgs.status:
-        status_methods_02_stats(inArgs.in_dir, True)
-
-#    if 'methods' in inArgs.status or 'all' in inArgs.status:
-#        status_methods(inArgs.in_dir, True)
-
-    if 'results' in inArgs.status  or 'all' in inArgs.status:
-        status_results(inArgs.in_dir, True)
+    # convert freesurfer output aseg.mgz to aseg.nii.gz
+    if not os.path.isfile('aseg.nii.gz'):
+         print('creating aseg.nii.gz')
+         asegmgz = '../../../freesurfer/sub-'+subject+'/mri/aseg.mgz'
+         mc = fs.MRIConvert( in_file  = asegmgz,
+                             out_file = 'aseg.nii.gz',
+                             out_type = 'niigz')
+         mc.run()
+         reorient = fsl.Reorient2Std( in_file = 'aseg.nii.gz', out_file = 'aseg.nii.gz')
+         reorient.run()
 
 
-    # QA
-    if inArgs.qa in ['results']:
-        qa_results(inArgs.in_dir)
-
-
+    
+# ======================================================================================================================
 # Main Function
 
 if __name__ == "__main__":
