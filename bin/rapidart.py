@@ -13,6 +13,7 @@ import nibabel
 import pandas
 import numpy
 
+<<<<<<< HEAD
 #  I am not sure if these steps are correct but it is a start.
 #
 #   >> mcflirt -in bold.nii.gz -plots -mats  -report -meanvol
@@ -21,6 +22,8 @@ import numpy
 #
 
 
+=======
+>>>>>>> caa3d72b85aed21f78c0102ada2dbfbb00368684
 def write_confounds( input_file, outliers, output_file ):
 
      nii_fmri = nibabel.load( input_file )

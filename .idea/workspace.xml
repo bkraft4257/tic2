@@ -58,7 +58,11 @@
       <file leaf-file-name="fmap_intended_for.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/bin/fmap_intended_for.py">
           <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
             <state relative-caret-position="1360">
+=======
+            <state relative-caret-position="17">
+>>>>>>> caa3d72b85aed21f78c0102ada2dbfbb00368684
               <caret line="86" column="0" lean-forward="false" selection-start-line="49" selection-start-column="0" selection-end-line="86" selection-end-column="0" />
               <folding />
             </state>
@@ -68,6 +72,7 @@
       <file leaf-file-name="netprep_gather_inputs__fmap.yaml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/studies/mfc/scripts/netprep_gather_inputs__fmap.yaml">
           <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
             <state relative-caret-position="2499">
               <caret line="147" column="47" lean-forward="false" selection-start-line="147" selection-start-column="47" selection-end-line="147" selection-end-column="47" />
               <folding />
@@ -91,15 +96,63 @@
             <state relative-caret-position="1275">
               <caret line="86" column="75" lean-forward="false" selection-start-line="86" selection-start-column="58" selection-end-line="86" selection-end-column="75" />
               <folding />
+=======
+            <state relative-caret-position="1167">
+              <caret line="147" column="47" lean-forward="false" selection-start-line="147" selection-start-column="47" selection-end-line="147" selection-end-column="47" />
+              <folding />
+>>>>>>> caa3d72b85aed21f78c0102ada2dbfbb00368684
             </state>
           </provider>
         </entry>
       </file>
+<<<<<<< HEAD
       <file leaf-file-name="rapidart.py" pinned="false" current-in-tab="false">
         <entry file="file:///Applications/anaconda3/envs/ileap_venv2_py36/lib/python3.6/site-packages/nipype/algorithms/rapidart.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="884">
               <caret line="70" column="18" lean-forward="false" selection-start-line="70" selection-start-column="18" selection-end-line="70" selection-end-column="18" />
+=======
+      <file leaf-file-name="mfc_fmap_intended_for.sh" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/studies/mfc/scripts/mfc_fmap_intended_for.sh">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="119">
+              <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+>>>>>>> caa3d72b85aed21f78c0102ada2dbfbb00368684
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+<<<<<<< HEAD
+      <file leaf-file-name="netprep.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/bin/netprep.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="9741">
+              <caret line="584" column="0" lean-forward="false" selection-start-line="583" selection-start-column="0" selection-end-line="584" selection-end-column="0" />
+=======
+      <file leaf-file-name="art_gather_inputs.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/bin/art_gather_inputs.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="345">
+              <caret line="86" column="75" lean-forward="false" selection-start-line="86" selection-start-column="58" selection-end-line="86" selection-end-column="75" />
+>>>>>>> caa3d72b85aed21f78c0102ada2dbfbb00368684
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+<<<<<<< HEAD
+      <file leaf-file-name="rapidart.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/bin/rapidart.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="357">
+              <caret line="21" column="0" lean-forward="false" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
+=======
+      <file leaf-file-name="rapidart.py" pinned="false" current-in-tab="false">
+        <entry file="file:///Applications/anaconda3/envs/ileap_venv2_py36/lib/python3.6/site-packages/nipype/algorithms/rapidart.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="884">
+              <caret line="70" column="18" lean-forward="true" selection-start-line="70" selection-start-column="18" selection-end-line="70" selection-end-column="18" />
               <folding />
             </state>
           </provider>
@@ -108,8 +161,8 @@
       <file leaf-file-name="netprep.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/bin/netprep.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="9741">
-              <caret line="584" column="0" lean-forward="false" selection-start-line="583" selection-start-column="0" selection-end-line="584" selection-end-column="0" />
+            <state relative-caret-position="667">
+              <caret line="584" column="0" lean-forward="true" selection-start-line="583" selection-start-column="0" selection-end-line="584" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -118,8 +171,9 @@
       <file leaf-file-name="rapidart.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/bin/rapidart.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="357">
-              <caret line="21" column="0" lean-forward="false" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
+            <state relative-caret-position="234">
+              <caret line="56" column="21" lean-forward="true" selection-start-line="56" selection-start-column="21" selection-end-line="56" selection-end-column="21" />
+>>>>>>> caa3d72b85aed21f78c0102ada2dbfbb00368684
               <folding>
                 <element signature="e#32#45#0" expanded="true" />
               </folding>
@@ -273,9 +327,16 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds">
+<<<<<<< HEAD
     <option name="y" value="23" />
     <option name="width" value="1440" />
     <option name="height" value="877" />
+=======
+    <option name="x" value="-293" />
+    <option name="y" value="-1226" />
+    <option name="width" value="1796" />
+    <option name="height" value="1062" />
+>>>>>>> caa3d72b85aed21f78c0102ada2dbfbb00368684
   </component>
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
@@ -295,7 +356,10 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+<<<<<<< HEAD
       <pane id="Scope" />
+=======
+>>>>>>> caa3d72b85aed21f78c0102ada2dbfbb00368684
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -365,6 +429,10 @@
         </subPane>
       </pane>
       <pane id="Scratches" />
+<<<<<<< HEAD
+=======
+      <pane id="Scope" />
+>>>>>>> caa3d72b85aed21f78c0102ada2dbfbb00368684
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -419,6 +487,7 @@
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
     </configuration>
     <configuration name="py.test for test_fmriprep_tools.test_print_intended_for" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
+<<<<<<< HEAD
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs />
@@ -467,6 +536,8 @@
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
     </configuration>
     <configuration name="py.test for test_fmriprep_tools.test_write_json_to_file" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
+=======
+>>>>>>> caa3d72b85aed21f78c0102ada2dbfbb00368684
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs />
@@ -479,6 +550,57 @@
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
       <option name="_new_keywords" value="&quot;&quot;" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
+<<<<<<< HEAD
+=======
+      <option name="_new_target" value="&quot;test_fmriprep_tools.test_print_intended_for&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+    </configuration>
+    <configuration name="py.test for test_fmriprep_tools.test_print_intended_for_from_list" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tests" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="tic_core" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="_new_keywords" value="&quot;&quot;" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;test_fmriprep_tools.test_print_intended_for_from_list&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+    </configuration>
+    <configuration name="py.test for test_fmriprep_tools.test_strip_func_from_string" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tests" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="tic_core" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="_new_keywords" value="&quot;&quot;" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;test_fmriprep_tools.test_strip_func_from_string&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+    </configuration>
+    <configuration name="py.test for test_fmriprep_tools.test_write_json_to_file" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tests" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="tic_core" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="_new_keywords" value="&quot;&quot;" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+>>>>>>> caa3d72b85aed21f78c0102ada2dbfbb00368684
       <option name="_new_target" value="&quot;test_fmriprep_tools.test_write_json_to_file&quot;" />
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
     </configuration>
@@ -496,6 +618,7 @@
       <option name="_new_keywords" value="&quot;&quot;" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
       <option name="_new_target" value="&quot;$PROJECT_DIR$/tests/test_fmriprep_tools.py&quot;" />
+<<<<<<< HEAD
       <option name="_new_targetType" value="&quot;PATH&quot;" />
     </configuration>
     <configuration name="py.test in test_plot_overlay.py" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
@@ -514,6 +637,26 @@
       <option name="_new_target" value="&quot;$PROJECT_DIR$/tests/test_plot_overlay.py&quot;" />
       <option name="_new_targetType" value="&quot;PATH&quot;" />
     </configuration>
+=======
+      <option name="_new_targetType" value="&quot;PATH&quot;" />
+    </configuration>
+    <configuration name="py.test in test_plot_overlay.py" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tests" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="tic_core" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="_new_keywords" value="&quot;&quot;" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;$PROJECT_DIR$/tests/test_plot_overlay.py&quot;" />
+      <option name="_new_targetType" value="&quot;PATH&quot;" />
+    </configuration>
+>>>>>>> caa3d72b85aed21f78c0102ada2dbfbb00368684
     <configuration name="py.test in test_processing_status.py" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -547,9 +690,15 @@
       <option name="_new_targetType" value="&quot;PATH&quot;" />
     </configuration>
     <list size="5">
+<<<<<<< HEAD
       <item index="0" class="java.lang.String" itemvalue="Python tests.py.test in test_fmriprep_tools.py" />
       <item index="1" class="java.lang.String" itemvalue="Python tests.py.test in test_plot_overlay.py" />
       <item index="2" class="java.lang.String" itemvalue="Python tests.test_conn_gather_inputs.py" />
+=======
+      <item index="0" class="java.lang.String" itemvalue="Python tests.py.test for test_fmriprep_tools.test_print_intended_for" />
+      <item index="1" class="java.lang.String" itemvalue="Python tests.py.test for test_fmriprep_tools.test_write_json_to_file" />
+      <item index="2" class="java.lang.String" itemvalue="Python tests.py.test in test_processing_status.py" />
+>>>>>>> caa3d72b85aed21f78c0102ada2dbfbb00368684
       <item index="3" class="java.lang.String" itemvalue="Python tests.py.test for test_conn_gather_inputs.test_conn_gather_inputs_read_yaml_from_main" />
       <item index="4" class="java.lang.String" itemvalue="Python tests.py.test for test_fmriprep_tools.test_print_intended_for_from_list" />
     </list>
@@ -574,6 +723,7 @@
       <option name="presentableId" value="Default" />
       <updated>1517948604886</updated>
     </task>
+<<<<<<< HEAD
     <task id="LOCAL-00700" summary="Working on MFC netprep_gather_inputs">
       <created>1538325136127</created>
       <option name="number" value="00700" />
@@ -918,6 +1068,352 @@
       <updated>1538343124569</updated>
     </task>
     <option name="localTasksCounter" value="749" />
+=======
+    <task id="LOCAL-00699" summary="Working on MFC netprep_gather_inputs">
+      <created>1538325061787</created>
+      <option name="number" value="00699" />
+      <option name="presentableId" value="LOCAL-00699" />
+      <option name="project" value="LOCAL" />
+      <updated>1538325061787</updated>
+    </task>
+    <task id="LOCAL-00700" summary="Working on MFC netprep_gather_inputs">
+      <created>1538325136127</created>
+      <option name="number" value="00700" />
+      <option name="presentableId" value="LOCAL-00700" />
+      <option name="project" value="LOCAL" />
+      <updated>1538325136127</updated>
+    </task>
+    <task id="LOCAL-00701" summary="Working on MFC netprep_gather_inputs">
+      <created>1538325450715</created>
+      <option name="number" value="00701" />
+      <option name="presentableId" value="LOCAL-00701" />
+      <option name="project" value="LOCAL" />
+      <updated>1538325450715</updated>
+    </task>
+    <task id="LOCAL-00702" summary="Working on MFC netprep_gather_inputs">
+      <created>1538325497072</created>
+      <option name="number" value="00702" />
+      <option name="presentableId" value="LOCAL-00702" />
+      <option name="project" value="LOCAL" />
+      <updated>1538325497072</updated>
+    </task>
+    <task id="LOCAL-00703" summary="Working on MFC netprep_gather_inputs">
+      <created>1538325641716</created>
+      <option name="number" value="00703" />
+      <option name="presentableId" value="LOCAL-00703" />
+      <option name="project" value="LOCAL" />
+      <updated>1538325641717</updated>
+    </task>
+    <task id="LOCAL-00704" summary="Working on MFC netprep_gather_inputs">
+      <created>1538325750970</created>
+      <option name="number" value="00704" />
+      <option name="presentableId" value="LOCAL-00704" />
+      <option name="project" value="LOCAL" />
+      <updated>1538325750970</updated>
+    </task>
+    <task id="LOCAL-00705" summary="Working on MFC netprep_gather_inputs">
+      <created>1538325787659</created>
+      <option name="number" value="00705" />
+      <option name="presentableId" value="LOCAL-00705" />
+      <option name="project" value="LOCAL" />
+      <updated>1538325787659</updated>
+    </task>
+    <task id="LOCAL-00706" summary="Working on MFC netprep_gather_inputs">
+      <created>1538325866095</created>
+      <option name="number" value="00706" />
+      <option name="presentableId" value="LOCAL-00706" />
+      <option name="project" value="LOCAL" />
+      <updated>1538325866095</updated>
+    </task>
+    <task id="LOCAL-00707" summary="Working on MFC netprep_gather_inputs">
+      <created>1538326828880</created>
+      <option name="number" value="00707" />
+      <option name="presentableId" value="LOCAL-00707" />
+      <option name="project" value="LOCAL" />
+      <updated>1538326828880</updated>
+    </task>
+    <task id="LOCAL-00708" summary="Working on MFC netprep_gather_inputs">
+      <created>1538327035474</created>
+      <option name="number" value="00708" />
+      <option name="presentableId" value="LOCAL-00708" />
+      <option name="project" value="LOCAL" />
+      <updated>1538327035474</updated>
+    </task>
+    <task id="LOCAL-00709" summary="Working on MFC netprep_gather_inputs">
+      <created>1538328693524</created>
+      <option name="number" value="00709" />
+      <option name="presentableId" value="LOCAL-00709" />
+      <option name="project" value="LOCAL" />
+      <updated>1538328693524</updated>
+    </task>
+    <task id="LOCAL-00710" summary="Working on MFC netprep_gather_inputs">
+      <created>1538328913107</created>
+      <option name="number" value="00710" />
+      <option name="presentableId" value="LOCAL-00710" />
+      <option name="project" value="LOCAL" />
+      <updated>1538328913107</updated>
+    </task>
+    <task id="LOCAL-00711" summary="Working on MFC netprep_gather_inputs">
+      <created>1538328968507</created>
+      <option name="number" value="00711" />
+      <option name="presentableId" value="LOCAL-00711" />
+      <option name="project" value="LOCAL" />
+      <updated>1538328968508</updated>
+    </task>
+    <task id="LOCAL-00712" summary="Working on MFC netprep_gather_inputs">
+      <created>1538331737097</created>
+      <option name="number" value="00712" />
+      <option name="presentableId" value="LOCAL-00712" />
+      <option name="project" value="LOCAL" />
+      <updated>1538331737097</updated>
+    </task>
+    <task id="LOCAL-00713" summary="Working on MFC netprep_gather_inputs">
+      <created>1538331878877</created>
+      <option name="number" value="00713" />
+      <option name="presentableId" value="LOCAL-00713" />
+      <option name="project" value="LOCAL" />
+      <updated>1538331878877</updated>
+    </task>
+    <task id="LOCAL-00714" summary="Working on MFC netprep_gather_inputs">
+      <created>1538332179425</created>
+      <option name="number" value="00714" />
+      <option name="presentableId" value="LOCAL-00714" />
+      <option name="project" value="LOCAL" />
+      <updated>1538332179425</updated>
+    </task>
+    <task id="LOCAL-00715" summary="Working on MFC netprep_gather_inputs">
+      <created>1538332545631</created>
+      <option name="number" value="00715" />
+      <option name="presentableId" value="LOCAL-00715" />
+      <option name="project" value="LOCAL" />
+      <updated>1538332545631</updated>
+    </task>
+    <task id="LOCAL-00716" summary="Working on MFC netprep_gather_inputs">
+      <created>1538332658960</created>
+      <option name="number" value="00716" />
+      <option name="presentableId" value="LOCAL-00716" />
+      <option name="project" value="LOCAL" />
+      <updated>1538332658960</updated>
+    </task>
+    <task id="LOCAL-00717" summary="Working on MFC netprep_gather_inputs">
+      <created>1538332685384</created>
+      <option name="number" value="00717" />
+      <option name="presentableId" value="LOCAL-00717" />
+      <option name="project" value="LOCAL" />
+      <updated>1538332685384</updated>
+    </task>
+    <task id="LOCAL-00718" summary="Working on MFC netprep_gather_inputs">
+      <created>1538332721969</created>
+      <option name="number" value="00718" />
+      <option name="presentableId" value="LOCAL-00718" />
+      <option name="project" value="LOCAL" />
+      <updated>1538332721969</updated>
+    </task>
+    <task id="LOCAL-00719" summary="Working on MFC netprep_gather_inputs">
+      <created>1538332820631</created>
+      <option name="number" value="00719" />
+      <option name="presentableId" value="LOCAL-00719" />
+      <option name="project" value="LOCAL" />
+      <updated>1538332820631</updated>
+    </task>
+    <task id="LOCAL-00720" summary="Working on MFC netprep_gather_inputs">
+      <created>1538332832237</created>
+      <option name="number" value="00720" />
+      <option name="presentableId" value="LOCAL-00720" />
+      <option name="project" value="LOCAL" />
+      <updated>1538332832237</updated>
+    </task>
+    <task id="LOCAL-00721" summary="Working on MFC netprep_gather_inputs">
+      <created>1538333221372</created>
+      <option name="number" value="00721" />
+      <option name="presentableId" value="LOCAL-00721" />
+      <option name="project" value="LOCAL" />
+      <updated>1538333221372</updated>
+    </task>
+    <task id="LOCAL-00722" summary="Working on MFC netprep_gather_inputs">
+      <created>1538333596045</created>
+      <option name="number" value="00722" />
+      <option name="presentableId" value="LOCAL-00722" />
+      <option name="project" value="LOCAL" />
+      <updated>1538333596045</updated>
+    </task>
+    <task id="LOCAL-00723" summary="Working on MFC netprep_gather_inputs">
+      <created>1538333708819</created>
+      <option name="number" value="00723" />
+      <option name="presentableId" value="LOCAL-00723" />
+      <option name="project" value="LOCAL" />
+      <updated>1538333708819</updated>
+    </task>
+    <task id="LOCAL-00724" summary="Working on MFC netprep_gather_inputs">
+      <created>1538333866397</created>
+      <option name="number" value="00724" />
+      <option name="presentableId" value="LOCAL-00724" />
+      <option name="project" value="LOCAL" />
+      <updated>1538333866397</updated>
+    </task>
+    <task id="LOCAL-00725" summary="Working on MFC netprep_gather_inputs">
+      <created>1538334140245</created>
+      <option name="number" value="00725" />
+      <option name="presentableId" value="LOCAL-00725" />
+      <option name="project" value="LOCAL" />
+      <updated>1538334140245</updated>
+    </task>
+    <task id="LOCAL-00726" summary="Working on MFC netprep_gather_inputs">
+      <created>1538334264881</created>
+      <option name="number" value="00726" />
+      <option name="presentableId" value="LOCAL-00726" />
+      <option name="project" value="LOCAL" />
+      <updated>1538334264881</updated>
+    </task>
+    <task id="LOCAL-00727" summary="Working on MFC netprep_gather_inputs">
+      <created>1538334379551</created>
+      <option name="number" value="00727" />
+      <option name="presentableId" value="LOCAL-00727" />
+      <option name="project" value="LOCAL" />
+      <updated>1538334379551</updated>
+    </task>
+    <task id="LOCAL-00728" summary="Working on MFC netprep_gather_inputs">
+      <created>1538334470033</created>
+      <option name="number" value="00728" />
+      <option name="presentableId" value="LOCAL-00728" />
+      <option name="project" value="LOCAL" />
+      <updated>1538334470033</updated>
+    </task>
+    <task id="LOCAL-00729" summary="Working on MFC netprep_gather_inputs">
+      <created>1538334582280</created>
+      <option name="number" value="00729" />
+      <option name="presentableId" value="LOCAL-00729" />
+      <option name="project" value="LOCAL" />
+      <updated>1538334582280</updated>
+    </task>
+    <task id="LOCAL-00730" summary="Working on MFC netprep_gather_inputs">
+      <created>1538334771930</created>
+      <option name="number" value="00730" />
+      <option name="presentableId" value="LOCAL-00730" />
+      <option name="project" value="LOCAL" />
+      <updated>1538334771930</updated>
+    </task>
+    <task id="LOCAL-00731" summary="Working on MFC netprep_gather_inputs">
+      <created>1538335659550</created>
+      <option name="number" value="00731" />
+      <option name="presentableId" value="LOCAL-00731" />
+      <option name="project" value="LOCAL" />
+      <updated>1538335659550</updated>
+    </task>
+    <task id="LOCAL-00732" summary="Working on MFC netprep_gather_inputs">
+      <created>1538337507947</created>
+      <option name="number" value="00732" />
+      <option name="presentableId" value="LOCAL-00732" />
+      <option name="project" value="LOCAL" />
+      <updated>1538337507947</updated>
+    </task>
+    <task id="LOCAL-00733" summary="Working on MFC netprep_gather_inputs">
+      <created>1538337704349</created>
+      <option name="number" value="00733" />
+      <option name="presentableId" value="LOCAL-00733" />
+      <option name="project" value="LOCAL" />
+      <updated>1538337704349</updated>
+    </task>
+    <task id="LOCAL-00734" summary="Working on MFC netprep_gather_inputs">
+      <created>1538338019302</created>
+      <option name="number" value="00734" />
+      <option name="presentableId" value="LOCAL-00734" />
+      <option name="project" value="LOCAL" />
+      <updated>1538338019302</updated>
+    </task>
+    <task id="LOCAL-00735" summary="Working on MFC netprep_gather_inputs">
+      <created>1538338070202</created>
+      <option name="number" value="00735" />
+      <option name="presentableId" value="LOCAL-00735" />
+      <option name="project" value="LOCAL" />
+      <updated>1538338070202</updated>
+    </task>
+    <task id="LOCAL-00736" summary="Working on MFC netprep_gather_inputs">
+      <created>1538338332111</created>
+      <option name="number" value="00736" />
+      <option name="presentableId" value="LOCAL-00736" />
+      <option name="project" value="LOCAL" />
+      <updated>1538338332111</updated>
+    </task>
+    <task id="LOCAL-00737" summary="Working on MFC netprep_gather_inputs">
+      <created>1538338555737</created>
+      <option name="number" value="00737" />
+      <option name="presentableId" value="LOCAL-00737" />
+      <option name="project" value="LOCAL" />
+      <updated>1538338555737</updated>
+    </task>
+    <task id="LOCAL-00738" summary="Working on MFC netprep_gather_inputs">
+      <created>1538338587205</created>
+      <option name="number" value="00738" />
+      <option name="presentableId" value="LOCAL-00738" />
+      <option name="project" value="LOCAL" />
+      <updated>1538338587205</updated>
+    </task>
+    <task id="LOCAL-00739" summary="Working on MFC netprep_gather_inputs">
+      <created>1538339549906</created>
+      <option name="number" value="00739" />
+      <option name="presentableId" value="LOCAL-00739" />
+      <option name="project" value="LOCAL" />
+      <updated>1538339549906</updated>
+    </task>
+    <task id="LOCAL-00740" summary="Working on MFC art_gather_inputs">
+      <created>1538340382695</created>
+      <option name="number" value="00740" />
+      <option name="presentableId" value="LOCAL-00740" />
+      <option name="project" value="LOCAL" />
+      <updated>1538340382695</updated>
+    </task>
+    <task id="LOCAL-00741" summary="Working on MFC art_gather_inputs">
+      <created>1538340498275</created>
+      <option name="number" value="00741" />
+      <option name="presentableId" value="LOCAL-00741" />
+      <option name="project" value="LOCAL" />
+      <updated>1538340498275</updated>
+    </task>
+    <task id="LOCAL-00742" summary="Working on MFC art_gather_inputs">
+      <created>1538340620918</created>
+      <option name="number" value="00742" />
+      <option name="presentableId" value="LOCAL-00742" />
+      <option name="project" value="LOCAL" />
+      <updated>1538340620918</updated>
+    </task>
+    <task id="LOCAL-00743" summary="Working on MFC art_gather_inputs">
+      <created>1538340747899</created>
+      <option name="number" value="00743" />
+      <option name="presentableId" value="LOCAL-00743" />
+      <option name="project" value="LOCAL" />
+      <updated>1538340747899</updated>
+    </task>
+    <task id="LOCAL-00744" summary="Working on MFC art_gather_inputs">
+      <created>1538340850464</created>
+      <option name="number" value="00744" />
+      <option name="presentableId" value="LOCAL-00744" />
+      <option name="project" value="LOCAL" />
+      <updated>1538340850464</updated>
+    </task>
+    <task id="LOCAL-00745" summary="Working on MFC art_gather_inputs">
+      <created>1538342810066</created>
+      <option name="number" value="00745" />
+      <option name="presentableId" value="LOCAL-00745" />
+      <option name="project" value="LOCAL" />
+      <updated>1538342810066</updated>
+    </task>
+    <task id="LOCAL-00746" summary="Working on MFC art_gather_inputs">
+      <created>1538342936345</created>
+      <option name="number" value="00746" />
+      <option name="presentableId" value="LOCAL-00746" />
+      <option name="project" value="LOCAL" />
+      <updated>1538342936345</updated>
+    </task>
+    <task id="LOCAL-00747" summary="Working on MFC art_gather_inputs">
+      <created>1538342996178</created>
+      <option name="number" value="00747" />
+      <option name="presentableId" value="LOCAL-00747" />
+      <option name="project" value="LOCAL" />
+      <updated>1538342996178</updated>
+    </task>
+    <option name="localTasksCounter" value="748" />
+>>>>>>> caa3d72b85aed21f78c0102ada2dbfbb00368684
     <servers />
   </component>
   <component name="TestHistory">
@@ -953,21 +1449,38 @@
     </history-entry>
   </component>
   <component name="ToolWindowManager">
+<<<<<<< HEAD
     <frame x="0" y="23" width="1440" height="877" extended-state="0" />
+=======
+    <frame x="-293" y="-1226" width="1796" height="1062" extended-state="0" />
+    <editor active="true" />
+>>>>>>> caa3d72b85aed21f78c0102ada2dbfbb00368684
     <layout>
       <window_info id="Key Promoter X" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3297568" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Regex Tester" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32968882" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.46640316" sideWeight="0.31681243" order="7" side_tool="true" content_ui="tabs" />
+<<<<<<< HEAD
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.62450594" sideWeight="0.48106593" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3293461" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.38877338" sideWeight="0.68318754" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.7654809" sideWeight="0.49006623" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3111588" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+=======
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.38877338" sideWeight="0.68318754" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.50211865" sideWeight="0.48106593" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3293461" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.7654809" sideWeight="0.49006623" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24458382" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+>>>>>>> caa3d72b85aed21f78c0102ada2dbfbb00368684
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329539" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="SciView" active="false" anchor="right" auto_hide="true" internal_type="DOCKED" type="FLOATING" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+<<<<<<< HEAD
+=======
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39893144" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+>>>>>>> caa3d72b85aed21f78c0102ada2dbfbb00368684
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39893144" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -1147,6 +1660,39 @@
         <state relative-caret-position="1139">
           <caret line="67" column="62" lean-forward="false" selection-start-line="67" selection-start-column="60" selection-end-line="67" selection-end-column="62" />
         </state>
+<<<<<<< HEAD
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/init/tic_wake_aging1a_environment.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1938">
+          <caret line="114" column="81" lean-forward="false" selection-start-line="114" selection-start-column="81" selection-end-line="114" selection-end-column="81" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/studies/cenc/environment.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="12" column="27" lean-forward="false" selection-start-line="12" selection-start-column="27" selection-end-line="12" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/studies/cenc/aliases.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bin/act.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="595">
+          <caret line="35" column="1" lean-forward="false" selection-start-line="35" selection-start-column="1" selection-end-line="35" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bin/mriqc_group.sh">
+=======
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/init/tic_wake_aging1a_environment.sh">
@@ -1185,12 +1731,25 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/studies/active/scripts/bids_app_status.sh">
+>>>>>>> caa3d72b85aed21f78c0102ada2dbfbb00368684
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
+    <entry file="file://$PROJECT_DIR$/studies/active/scripts/bids_app_status.sh">
+=======
+    <entry file="file://$PROJECT_DIR$/studies/mfc/scripts/__init_.py">
+>>>>>>> caa3d72b85aed21f78c0102ada2dbfbb00368684
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/studies/mfc/scripts/__init_.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -1338,6 +1897,158 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
           <caret line="11" column="0" lean-forward="false" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+=======
+    <entry file="file://$PROJECT_DIR$/studies/mfc/scripts/clean_bids.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/studies/mfc/aliases.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="0" lean-forward="false" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bin/acrostic_list.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="17" column="0" lean-forward="false" selection-start-line="17" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bin/excel_to_csv.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="21" column="0" lean-forward="false" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/requirements.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="13" column="16" lean-forward="false" selection-start-line="13" selection-start-column="16" selection-end-line="13" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bin/get_dicominfo.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" column="23" lean-forward="false" selection-start-line="1" selection-start-column="23" selection-end-line="1" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docs/source/tic_welcome.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="0">
+            <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <folding />
+          </first_editor>
+          <second_editor>
+            <js_state />
+          </second_editor>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docs/source/tic_processing.rst">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docs/source/other/quick_reference.rst">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3179">
+          <caret line="187" column="50" lean-forward="false" selection-start-line="187" selection-start-column="50" selection-end-line="187" selection-end-column="50" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docs/source/other/singularity_images.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="0">
+            <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <folding />
+          </first_editor>
+          <second_editor>
+            <js_state />
+          </second_editor>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bin/fmriprep.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="17" column="0" lean-forward="false" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/studies/hfpef/scripts/hfpef_clean_bids.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bin/fmap_intended_for_check.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="678">
+          <caret line="63" column="0" lean-forward="false" selection-start-line="63" selection-start-column="0" selection-end-line="63" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/studies/hfpef/scripts/hfpef_fmap_intended_for.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="496">
+          <caret line="43" column="4" lean-forward="false" selection-start-line="43" selection-start-column="4" selection-end-line="43" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/init/tic_aliases.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="9" lean-forward="false" selection-start-line="7" selection-start-column="9" selection-end-line="7" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/studies/hfpef/scripts/hfpef_protocol.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="401">
+          <caret line="259" column="43" lean-forward="false" selection-start-line="259" selection-start-column="43" selection-end-line="259" selection-end-column="43" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///Applications/anaconda3/envs/ileap_venv2_py36/lib/python3.6/site-packages/nipype/algorithms/confounds.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="19">
+          <caret line="25" column="0" lean-forward="true" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/studies/hfpef/scripts/hfpef_netprep_epi.yaml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="21" column="0" lean-forward="false" selection-start-line="20" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bin/netprep_gather_inputs.yaml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="0" lean-forward="false" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -1346,14 +2057,38 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-422">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+>>>>>>> caa3d72b85aed21f78c0102ada2dbfbb00368684
+          <folding />
+        </state>
+      </provider>
+    </entry>
+<<<<<<< HEAD
+    <entry file="file://$PROJECT_DIR$/studies/hfpef/scripts/hfpef_gi_netprep_epi.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-422">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/studies/mfc/scripts/mfc_fmap_intended_for.py" />
+=======
+    <entry file="file://$PROJECT_DIR$/studies/mfc/scripts/mfc_fmap_intended_for.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="89" lean-forward="false" selection-start-line="2" selection-start-column="89" selection-end-line="2" selection-end-column="89" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+>>>>>>> caa3d72b85aed21f78c0102ada2dbfbb00368684
     <entry file="file://$PROJECT_DIR$/studies/mfc/scripts/mfc_netprep.yaml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="884">
           <caret line="52" column="26" lean-forward="false" selection-start-line="52" selection-start-column="26" selection-end-line="52" selection-end-column="26" />
+<<<<<<< HEAD
+=======
+          <folding />
+>>>>>>> caa3d72b85aed21f78c0102ada2dbfbb00368684
         </state>
       </provider>
     </entry>
@@ -1361,12 +2096,20 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="849">
           <caret line="180" column="87" lean-forward="true" selection-start-line="180" selection-start-column="87" selection-end-line="180" selection-end-column="87" />
+<<<<<<< HEAD
+=======
+          <folding />
+>>>>>>> caa3d72b85aed21f78c0102ada2dbfbb00368684
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/studies/mfc/scripts/netprep_gather_inputs__fmap.yaml">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="2499">
+=======
+        <state relative-caret-position="1167">
+>>>>>>> caa3d72b85aed21f78c0102ada2dbfbb00368684
           <caret line="147" column="47" lean-forward="false" selection-start-line="147" selection-start-column="47" selection-end-line="147" selection-end-column="47" />
           <folding />
         </state>
@@ -1374,7 +2117,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/bin/fmap_intended_for.py">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="1360">
+=======
+        <state relative-caret-position="17">
+>>>>>>> caa3d72b85aed21f78c0102ada2dbfbb00368684
           <caret line="86" column="0" lean-forward="false" selection-start-line="49" selection-start-column="0" selection-end-line="86" selection-end-column="0" />
           <folding />
         </state>
@@ -1382,7 +2129,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/bin/art_gather_inputs.py">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="1275">
+=======
+        <state relative-caret-position="345">
+>>>>>>> caa3d72b85aed21f78c0102ada2dbfbb00368684
           <caret line="86" column="75" lean-forward="false" selection-start-line="86" selection-start-column="58" selection-end-line="86" selection-end-column="75" />
           <folding />
         </state>
@@ -1392,6 +2143,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="774">
           <caret line="161" column="0" lean-forward="true" selection-start-line="161" selection-start-column="0" selection-end-line="161" selection-end-column="0" />
+<<<<<<< HEAD
+=======
+          <folding />
+>>>>>>> caa3d72b85aed21f78c0102ada2dbfbb00368684
         </state>
       </provider>
     </entry>
@@ -1399,6 +2154,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="810">
           <caret line="49" column="0" lean-forward="true" selection-start-line="49" selection-start-column="0" selection-end-line="49" selection-end-column="0" />
+<<<<<<< HEAD
+=======
+          <folding />
+>>>>>>> caa3d72b85aed21f78c0102ada2dbfbb00368684
         </state>
       </provider>
     </entry>
@@ -1414,29 +2173,47 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+<<<<<<< HEAD
+=======
+          <folding />
+>>>>>>> caa3d72b85aed21f78c0102ada2dbfbb00368684
         </state>
       </provider>
     </entry>
     <entry file="file:///Applications/anaconda3/envs/ileap_venv2_py36/lib/python3.6/site-packages/nipype/algorithms/rapidart.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="884">
+<<<<<<< HEAD
           <caret line="70" column="18" lean-forward="false" selection-start-line="70" selection-start-column="18" selection-end-line="70" selection-end-column="18" />
+=======
+          <caret line="70" column="18" lean-forward="true" selection-start-line="70" selection-start-column="18" selection-end-line="70" selection-end-column="18" />
+>>>>>>> caa3d72b85aed21f78c0102ada2dbfbb00368684
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/bin/netprep.py">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="9741">
           <caret line="584" column="0" lean-forward="false" selection-start-line="583" selection-start-column="0" selection-end-line="584" selection-end-column="0" />
+=======
+        <state relative-caret-position="667">
+          <caret line="584" column="0" lean-forward="true" selection-start-line="583" selection-start-column="0" selection-end-line="584" selection-end-column="0" />
+>>>>>>> caa3d72b85aed21f78c0102ada2dbfbb00368684
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/bin/rapidart.py">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="357">
           <caret line="21" column="0" lean-forward="false" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
+=======
+        <state relative-caret-position="234">
+          <caret line="56" column="21" lean-forward="true" selection-start-line="56" selection-start-column="21" selection-end-line="56" selection-end-column="21" />
+>>>>>>> caa3d72b85aed21f78c0102ada2dbfbb00368684
           <folding>
             <element signature="e#32#45#0" expanded="true" />
           </folding>
