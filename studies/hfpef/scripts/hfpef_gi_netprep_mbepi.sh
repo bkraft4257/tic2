@@ -14,8 +14,8 @@ session=ses-${session_id}
 
 netprep_input=${HFPEF_NETPREP_PATH}/${subject}/${session}/mbepi/input
 
-bold_mni_preproc=$HFPEF_FMRIPREP_PATH/${subject}/${session}/func/${subject}_${session}_task-rest_acq-mbepi_bold_space-MNI152NLin2009cAsym_preproc.nii.gz
-bold_confounds_tsv=$HFPEF_FMRIPREP_PATH/${subject}/${session}/func/${subject}_${session}_task-rest_acq-mbepi_bold_confounds.tsv
+bold_mni_preproc=$HFPEF_FMRIPREP_PATH/${subject}/${session}/func/${subject}_${session}_task-restmbepi_acq-mbepi_bold_space-MNI152NLin2009cAsym_preproc.nii.gz
+bold_confounds_tsv=$HFPEF_FMRIPREP_PATH/${subject}/${session}/func/${subject}_${session}_task-restmbepi_acq-mbepi_bold_confounds.tsv
 
 t1w_mni_gm_probtissue=$HFPEF_FMRIPREP_PATH/${subject}/${session}/anat/${subject}_${session}_T1w_space-MNI152NLin2009cAsym_class-GM_probtissue.nii.gz
 t1w_mni=$HFPEF_FMRIPREP_PATH/${subject}/${session}/anat/${subject}_${session}_T1w_space-MNI152NLin2009cAsym_preproc.nii.gz
