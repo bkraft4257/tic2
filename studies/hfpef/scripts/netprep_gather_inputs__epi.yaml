@@ -1,0 +1,102 @@
+netprep:
+  template_filename_with_abspath: /gandg/tic_releases/0.13.4/tic_core/studies/hfpef/scripts/hfpef_netprep.yaml
+  output_filename: hfpef_netprep.yaml
+
+anat:
+  t1w:
+    glob_string: '/anat/*_T1w_space-MNI152NLin2009cAsym_preproc.nii.gz'
+    out_filename: t1w_mni_preproc.nii.gz
+
+  gm:
+    glob_string: '/anat/*_T1w_space-MNI152NLin2009cAsym_class-GM_probtissue.nii.gz'
+    out_filename: t1w_mni_gm_probtissue.nii.gz
+
+  wm:
+    glob_string: '/anat/*_T1w_space-MNI152NLin2009cAsym_class-WM_probtissue.nii.gz'
+    out_filename: t1w_mni_wm_probtissue.nii.gz
+
+  csf:
+    glob_string: '/anat/*_T1w_space-MNI152NLin2009cAsym_class-CSF_probtissue.nii.gz'
+    out_filename: t1w_mni_csf_probtissue.nii.gz
+
+
+# Columns in the confounds.tsv created by fmriprep.
+# You may keep as many or as few as you like for netprep processing.
+#
+#     CSF, WhiteMatter, GlobalSignal,
+#     stdDVARS, non-stdDVARS, vx-wisestdDVARS, FramewiseDisplacement,
+#     tCompCor00, tCompCor01, tCompCor02, tCompCor03, tCompCor04, tCompCor05,
+#     aCompCor00, aCompCor01, aCompCor02, aCompCor03, aCompCor04, aCompCor05,
+#     Cosine00, Cosine01, Cosine02,
+#     NonSteadyStateOutlier00, NonSteadyStateOutlier01,
+#     X, Y, Z, RotX, RotY, RotZ]
+#
+
+func_confounds: [WhiteMatter, GlobalSignal,
+                 aCompCor00, aCompCor02, aCompCor03, aCompCor04, aCompCor05,
+                 X, Y, Z, RotX, RotY, RotZ]
+
+func:
+  epi_fmap:
+    input_dir: 'epi_fmap/inputs'
+    base_glob_string: '/func/*task-restepi_acq-epi_rec-fmap_bold_*'
+
+    func_glob_string: 'space-MNI152NLin2009cAsym_preproc.nii.gz'
+    func_out_filename: bold_mni_preproc.nii.gz
+
+    mask_glob_string:  'space-MNI152NLin2009cAsym_brainmask.nii.gz'
+    mask_out_filename:  brainmask.nii.gz
+    masked_func_filename:  masked_bold_mni_preproc.nii.gz
+
+    confounds_glob_string: 'confounds.tsv'
+    confounds_out_filename: 'bold_confounds.csv'
+
+  epi_topup:
+    input_dir: 'epi_topup/inputs'
+    base_glob_string: '/func/*task-restepi_acq-epi_rec-topup_bold_*'
+
+    func_glob_string: 'space-MNI152NLin2009cAsym_preproc.nii.gz'
+    func_out_filename: bold_mni_preproc.nii.gz
+
+    mask_glob_string:  'space-MNI152NLin2009cAsym_brainmask.nii.gz'
+    mask_out_filename:  brainmask.nii.gz
+    masked_func_filename:  masked_bold_mni_preproc.nii.gz
+
+    confounds_glob_string: 'confounds.tsv'
+    confounds_out_filename: 'bold_confounds.csv'
+
+
+  mbepi:
+    input_dir: 'mbepi/inputs'
+    base_glob_string: '/func/*task-restmbepi_acq-mbepi_bold_*'
+
+    func_glob_string: 'space-MNI152NLin2009cAsym_preproc.nii.gz'
+    func_out_filename: bold_mni_preproc.nii.gz
+
+    mask_glob_string: 'space-MNI152NLin2009cAsym_brainmask.nii.gz'
+    mask_out_filename:  brainmask.nii.gz
+    masked_func_filename:  masked_bold_mni_preproc.nii.gz
+
+    confounds_glob_string: 'confounds.tsv'
+    confounds_out_filename: 'bold_confounds.csv'
+
+
+  pcasl:
+    input_dir: 'pcasl/inputs'
+    base_glob_string: '/func/*task-restpcasl_acq-pcasl_bold_*'
+
+    func_glob_string: 'space-MNI152NLin2009cAsym_preproc.nii.gz'
+    func_out_filename: bold_mni_preproc.nii.gz
+
+    mask_glob_string: 'space-MNI152NLin2009cAsym_brainmask.nii.gz'
+    mask_out_filename:  brainmask.nii.gz
+    masked_func_filename:  masked_bold_mni_preproc.nii.gz
+
+    confounds_glob_string: 'confounds.tsv'
+    confounds_out_filename: 'bold_confounds.csv'
+
+
+#sub-hfs070_ses-1_task-restepi_acq-epi_rec-fmap_bold_space-MNI152NLin2009cAsym_preproc.nii.gz
+#sub-hfs070_ses-1_task-restepi_acq-epi_rec-topup_bold_space-MNI152NLin2009cAsym_preproc.nii.gz
+#sub-hfs070_ses-1_task-restmbepi_acq-mbepi_bold_space-MNI152NLin2009cAsym_preproc.nii.gz
+#sub-hfs070_ses-1_task-restpcasl_acq-pcasl_bold_space-MNI152NLin2009cAsym_preproc.nii.gz
