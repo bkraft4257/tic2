@@ -19,7 +19,7 @@ nilearn_nifti_masker:
         detrend: True
         low_pass:  0.01 # [Hz] discard anything below 0.01 Hz (or 100s)
         high_pass:
-        t_r:  
+        t_r:  2
         subsample: 4
 
 # YAML inputs explained:
@@ -72,7 +72,7 @@ nilearn_nifti_masker:
 #       high_pass: None or float, optional. high cutoff frequency for filtering the
 #                 fMRI bold signal, in Hertz.  
 #
-#       t_r: float, Repetition time, in second (sampling period). This parameter must
+#       t_r: float, Repetition time, in seconds (sampling period). This parameter must
 #                   be defined if lowpass or highpass are defined.
 #
 # netprep.py Outputs explained:
