@@ -4,7 +4,7 @@
 
 export MFC_SCRIPTS_PATH=${TIC_PATH}/studies/mfc/scripts
 
-export MFC_PATH=/bkraft1/studies/mfc
+export MFC_PATH=/cenc/bkraft/mfc
 
 export MFC_BIDS_PATH=${MFC_PATH}/bids
 export MFC_IMAGE_ANALYSIS_PATH=${MFC_PATH}/image_analysis
