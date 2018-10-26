@@ -1,5 +1,5 @@
 netprep:
-  template_filename_with_abspath: /Users/zeidanlab/tic/releases/latest/tic_core/studies/mfc/scripts/mfc_netprep.yaml
+  template_filename_with_abspath: /Users/zeidanlab/tic/releases/latest/tic_core/studies/mfc/scripts/mfc_netprep_6mm.yaml
   output_filename: mfc_netprep.yaml
 
 anat:
