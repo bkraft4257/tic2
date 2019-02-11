@@ -8,6 +8,7 @@ echo $myos
 if [ `uname` = "Darwin" ]; then
     echo "tracula.sh will not run on mac (no singularity command)"
     exit
+fi
 
 if [ $# -ne 4 ]; then
     echo
@@ -93,4 +94,3 @@ echo "Waiting 30 seconds before displaying the log file ..."
 sleep 10
 
 cat $log_file
-
