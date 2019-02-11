@@ -18,7 +18,7 @@ import subprocess
 
 
 
-#====================================================================================================
+#=======================================================================================================================
 # Prepare
 
 def mt_link_inputs( input_dir, link_to_dir, change_to_dir = True ):
@@ -50,7 +50,7 @@ def prepare( input_dir, verbose=False ):
      return
 
 
-#=====================================================================================================
+#=======================================================================================================================
 # Methods
 
 def ants_register(input_file):
@@ -151,7 +151,7 @@ def methods_02_stats(input_dir, verbose=False):
 
     return
 
-#======================================================================================================
+#=======================================================================================================================
 # Results
 
 def results( input_dir ):
@@ -261,7 +261,7 @@ def qa_results(in_dir, verbose=False):
     pipe = subprocess.Popen([' '.join(qa_command)], shell=True,
                             stdin=DEVNULL, stdout=DEVNULL, stderr=DEVNULL, close_fds=True)
 
-#=====================================================================================================
+#=======================================================================================================================
 # Status
 
 def status_methods_01_register(input_dir, verbose=False):
@@ -352,7 +352,7 @@ def status_prepare( input_dir, verbose=False ):
 
      return mt_status
 
-# ====================================================================================================
+# ======================================================================================================================
 #  Main
 def main():
     ## Parsing Arguments
@@ -363,8 +363,8 @@ def main():
 
     parser.add_argument('-i', "--in_dir", help="Participant directory", default=os.getcwd())
 
-    parser.add_argument("--cenc_data_dir", help="CENC data directory", default=os.getenv('CENC_BIDS_PATH'))
-    parser.add_argument("--cenc_freesurfer_dir", help="CENC FS subjects directory", default=os.getenv('CENC_SUBJECTS_DIR'))
+    parser.add_argument("--cenc_data_dir", help="CENC data directory", default=os.getenv('CENC_MRI_DATA'))
+    parser.add_argument("--cenc_freesurfer_dir", help="CENC data directory", default=os.getenv('CENC_SUBJECTS_DIR'))
     parser.add_argument("--cenc_results_dir", help="CENC results directory", default='./results/native')
 
     parser.add_argument("--methods", help="Methods [all, 01_register, 02_stats]", nargs='*', choices=['all', '01_register', '02_stats'], default=[None])
