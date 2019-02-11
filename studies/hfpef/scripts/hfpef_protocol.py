@@ -250,7 +250,7 @@ def infotodict(seqinfo):
 
     # Rest EPI with TOPUP reconstruction
 
-    rest_epi_topup = create_key('sub-{subject}/{session}/func/sub-{subject}_{session}_task-restepitopup'
+    rest_epi_topup = create_key('sub-{subject}/{session}/func/sub-{subject}_{session}_task-restepi'
                                 '_acq-epi_rec-topup_bold.{item:01d}')
 
     rest_epi_topup_ap = create_key('sub-{subject}/{session}/fmap/sub-{subject}_{session}_acq-epse_dir-ap_epi.{item:01d}')
@@ -259,7 +259,7 @@ def infotodict(seqinfo):
 
     # Rest EPI with fieldmap reconstruction
 
-    rest_epi_fmap = create_key('sub-{subject}/{session}/func/sub-{subject}_{session}_task-restepifmap'
+    rest_epi_fmap = create_key('sub-{subject}/{session}/func/sub-{subject}_{session}_task-restepi'
                                '_acq-epi_rec-fmap_bold.{item:01d}')
 
     fmap_magnitude1 = create_key('sub-{subject}/{session}/fmap/sub-{subject}_{session}_acq-bold_magnitude1.{item:01d}')

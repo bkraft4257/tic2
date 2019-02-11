@@ -42,6 +42,7 @@ def _make_directory(directory=NETPREP_PATH):
         except:
             sys.exit(f'Unable to make directory {ii}')
 
+
 def _make_netprep_subject_input_directory(directory=NETPREP_PATH):
     """
     Make NETPREP directory if it doesn't exist
@@ -70,50 +71,73 @@ def _create_full_output_filename(copy_to_directory, subject, session, out_filena
     return os.path.join(copy_to_directory, f'sub-{subject}_ses-{session}_{out_filename}')
 
 
-def _gather_confounds_file(func_dict,
-                           search_directory,
-                           output_filename,
-                           confounds):
+
+KEEP_COLUMNS = ['tCompCor00', 'tCompCor01', 'tCompCor02', 'tCompCor03', 'tCompCor04', 'tCompCor05',
+                'X', 'Y', 'Z', 'RotX', 'RotY', 'RotZ']
+
+
+def _extract_confounds(in_filename, out_filename, keep_columns=KEEP_COLUMNS):
+    """
+    Extract confounds from fmriprep confounds.csv
+
+    :param in_filename:
+    :param out_filename:
+    :param keep_columns:
+    :return:
     """
 
-    :param gather:
-    :param subject:
-    :param session:
-    :param search_directory:
-    :param copy_to_directory:
-    :param confounds:
+    in_df = pandas.read_csv(in_filename, sep='\t')
+    out_df = in_df[keep_columns]
+    out_df.to_csv(out_filename, index=False)
+
+    return out_df
+
+
+def _gather_confounds_file(func_dict,
+                           fmriprep_subject_session_path,
+                           netprep_input_path,
+                           confounds_to_be_extracted):
+    """
+
+    :param func_dict:
+    :param fmriprep_subject_session_path:
+    :param netprep_input_path:
     :return:
     """
 
     found_file = _find_file(func_dict['base_glob_string'] + func_dict['confounds_glob_string'],
-                                 search_directory)
+                            fmriprep_subject_session_path)
 
-    _extract_confounds(found_file, output_filename, confounds)
+    output_filename = os.path.join(netprep_input_path, func_dict['confounds_out_filename'])
+
+    _extract_confounds(found_file, output_filename, confounds_to_be_extracted)
 
     return
 
 
 def _gather_anat_file(gather,
-                      search_directory,
-                      out_filename,
+                       fmriprep_subject_session_anat_path,
+                       netprep_input_path
                       ):
     """
 
     :param gather:
-    :param search_directory:
-    :param copy_to_directory:
-    :param confounds:
+    :param fmriprep_subject_session_anat_path:
+    :param netprep_input_path:
     :return:
     """
 
-    found_file = _find_file(gather['glob_string'], search_directory)
-    shutil.copy(found_file, out_filename)
+    found_file = _find_file(gather['glob_string'], fmriprep_subject_session_anat_path)
+    out_file = os.path.join(netprep_input_path, gather['out_filename'])
+
+    shutil.copy(found_file, out_file)
 
 
-def _gather_func_file(func_dict,
-                      search_directory,
-                      output_file,
-                      ):
+def gather_func_file(func_dict,
+                     fmriprep_subject_session_func_path,
+                     netprep_input_path,
+                     verbose=False,
+                     ):
     """
 
     :param func_dict:
@@ -122,105 +146,110 @@ def _gather_func_file(func_dict,
     :return:
     """
     func_found_file = _find_file(func_dict['base_glob_string'] + func_dict['func_glob_string'],
-                                 search_directory)
+                                 fmriprep_subject_session_func_path)
 
-    func_dict['mask_glob_string']
+    output_file = os.path.join(netprep_input_path, func_dict['func_out_filename'])
+
+    _copy_files(func_found_file, output_file)
 
     if func_dict['mask_glob_string'] is not None:
 
-        func_dict['mask_glob_string']
-
         mask_glob_string = func_dict['base_glob_string'] + func_dict['mask_glob_string']
 
-        mask_found_file = _find_file(mask_glob_string, search_directory)
+        mask_found_file = _find_file(mask_glob_string, fmriprep_subject_session_func_path)
+        masked_func_output_file = os.path.join(netprep_input_path, func_dict['masked_func_filename'])
 
         masker = fsl.ApplyMask(in_file=func_found_file,
                                mask_file=mask_found_file,
-                               out_file=output_file,
+                               out_file=masked_func_output_file,
                                ignore_exception=True)
-        print(masker.cmdline)
+
+        output_mask_file = os.path.join(netprep_input_path, func_dict['mask_out_filename'])
+        shutil.copy(mask_found_file, output_mask_file)
 
         masker.run()
 
     else:
-        shutil.copy(func_found_file, _create_full_output_filename(copy_to_directory, subject, session, gather.out_filename, ))
+        mask_found_file = 'No mask glob string specified. fmri files not masked.'
 
 
-def gather_anat_files(anat_dict, subject, session):
+    return func_found_file, mask_found_file
+
+
+def gather_anat_files(anat_dict, fmriprep_subject_session_path, netprep_input_path,):
     """
     Search for files matching glob_string and copy to a directory with a different name
     :param anat_dict:
-    :param subject:
-    :param session:
+    :param fmriprep_subject_session_path:
+    :param netprep_input_path:
     :return:
     """
 
-    for ii in anat_dict.keys():
+    for key, value in anat_dict.items():
         try:
-            _gather_anat_file(anat_dict[ii],
-                              SUBJECT_SESSION_PATH,
-                              _create_full_output_filename(CONN_PATH, subject, session, f'{ii}.nii.gz')
-                              )
+            _gather_anat_file(value, fmriprep_subject_session_path, netprep_input_path)
         except ValueError:
             print(f'Unknown key {ii}')
 
 
-def gather_func_files(func_dict, subject, session, confounds):
-    for ii in func_dict.keys():
-        try:
-            _gather_func_file(func_dict[ii],
-                              SUBJECT_SESSION_PATH,
-                              _create_full_output_filename(CONN_PATH, subject, session, f'{ii}.nii.gz')
-                              )
+def _copy_files(source_file, target_file):
 
-        except ValueError:
-            print(f'Unknown key {ii}')
+    #print(source_file)
+    #print(target_file)
 
+    shutil.copy(source_file,target_file)
 
-        try:
-            _gather_confounds_file(func_dict[ii],
-                                   SUBJECT_SESSION_PATH,
-                                   _create_full_output_filename(CONN_PATH, subject, session, f'{ii}.csv'),
-                                   confounds
-                                   )
-
-        except ValueError:
-            print(f'Unknown key {ii}')
-
-
-def gather_confounds_files(func_dict,
-                           search_directory,
-                           output_file,
-                           confounds):
-
-    for ii in func_dict.keys():
-        try:
-            _gather_confounds_file(func_dict[ii],
-                                   search_directory,
-                                   output_file,
-                                   confounds,)
-
-        except ValueError:
-            print(f'Unknown key {ii}')
 
 
 def main():
-    global SUBJECT_SESSION_PATH, ANAT_PATH, FUNC_PATH
 
     in_args = _argparse()
 
     fmriprep_subject_session_path = os.path.join(FMRIPREP_PATH, f'sub-{in_args.subject}', f'ses-{in_args.session}')
-    netprep_input_path = os.path.join(NETPREP_PATH, f'sub-{in_args.subject}', f'ses-{in_args.session}')
+    netprep_subject_session_path = os.path.join(NETPREP_PATH, f'sub-{in_args.subject}', f'ses-{in_args.session}')
 
-    ANAT_PATH = os.path.join(fmriprep_subject_session_path, 'anat')
-    FUNC_PATH = os.path.join(fmriprep_subject_session_path, 'func')
+    _make_directory(netprep_subject_session_path)
 
-    _make_directory(NETPREP_PATH)
+    netprep_config = tic_io.read_yaml(in_args.yaml_filename)
 
-    netprep_config = tic_io.read_yaml(in_args.yaml_filename, in_args.verbose)
+    if in_args.verbose:
+        print('\n\n')
 
-    for ii in netprep_config['func'].keys():
-        print(ii)
+    for keys, func_config in netprep_config['func'].items():
+
+        netprep_input_path = os.path.join(netprep_subject_session_path, func_config['input_dir'])
+        _make_directory(netprep_input_path)
+
+        # Copy T1w and MNI GM Tissue Probability to each func input directory.
+        # This is insufficient but provides the greatest flexibility and easiest to program. Thes
+        # could be replaced with
+        gather_anat_files(netprep_config['anat'],
+                          fmriprep_subject_session_path,
+                          netprep_input_path)
+
+        # Copy functional files and apply mask when mask is found
+        func_file, mask_file = gather_func_file(func_config,
+                                     fmriprep_subject_session_path,
+                                     netprep_input_path,
+                                     verbose=in_args.verbose)
+
+        if in_args.verbose:
+            print(f"{func_file} \n{mask_file} \n\n")
+
+        # Extract confounds calculated wth fmriprep and copy to netprep input.
+
+        _gather_confounds_file(func_config,
+                               fmriprep_subject_session_path,
+                               netprep_input_path,
+                               netprep_config['func_confounds'])
+
+        # Copy netprep template to input directory.
+
+        _copy_files(netprep_config['netprep']['template_filename_with_abspath'],
+                    os.path.join(netprep_input_path, netprep_config['netprep']['output_filename']))
+
+    if in_args.verbose:
+        print('\n\n')
 
     return
 
