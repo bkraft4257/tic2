@@ -28,7 +28,7 @@ else
             -B $ACTIVE_SINGULARITY_USER_BIND_PATHS \
             $HDC_SINGULARITY_IMAGE                 \
             -c dcm2niix                            \
-            -b                                     \
+            --bids                                 \
             --minmeta                              \
             -f $ACTIVE_HEUDICONV_PROTOCOL          \
             -o $ACTIVE_BIDS_PATH                   \

@@ -16,8 +16,8 @@ def _absjoin(*path):
     return os.path.abspath(os.path.realpath(os.path.join(*path)))
 
 
-TIC_PATH = os.getenv('TIC_PATH')
-HOME_TIC_PATH = _absjoin(os.getenv('HOME'), '.tic')
+ticpath = os.getenv('TIC_PATH')
+hometicpath = os.path.join(os.getenv('HOME'), '.tic')
 
 
 def _link_file(source, target):
@@ -38,8 +38,8 @@ def _link_studies(studies=None):
         studies = ['hfpef', 'infinite', 'synergy']
 
     for ii in studies:
-        _link_file(_absjoin(TIC_PATH, 'studies', ii, f'{ii}_init.sh'),
-                   _absjoin(HOME_TIC_PATH, f'{ii}_init.sh')
+        _link_file(_absjoin(ticpath, 'studies', ii, f'{ii}_init.sh'),
+                   _absjoin(hometicpath, f'{ii}_init.sh')
                    )
 
 
@@ -81,8 +81,8 @@ def _backup_shell(in_filename):
 
 def copy_tic_init_file(filename):
 
-    _copy_file(_absjoin(TIC_PATH, 'init', filename),
-               _absjoin(HOME_TIC_PATH, filename))
+    _copy_file(os.path.join(ticpath, 'init', filename),
+               os.path.join(hometicpath, filename))
 
 
 def _update_shell(in_filename):
@@ -119,8 +119,8 @@ def _update_shell(in_filename):
 
 _check_shell()
 
-if not os.path.isdir(HOME_TIC_PATH):
-    os.makedirs(HOME_TIC_PATH)
+if not os.path.isdir(hometicpath):
+    os.makedirs(hometicpath)
 
 # Copy files
 

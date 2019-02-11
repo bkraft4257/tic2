@@ -121,8 +121,8 @@ export FMRIPREP_SINGULARITY_IMAGE=$FMRIPREP_PATH/poldracklab_fmriprep_latest-201
 export MRIQC_SINGULARITY_IMAGE=$TIC_SOFTWARE_PATH/mriqc/poldracklab_mriqc_latest-2017-08-30-f54388a6fb57.img
 export HDC_SINGULARITY_IMAGE=$TIC_SOFTWARE_PATH/heudiconv/nipy_heudiconv-2018-03-02-bf4d6e1d4d0e.img
 
-export ANTS_CORTICAL_THICKNESS_SINGULARITY_IMAGE=$TIC_SOFTWARE_PATH/bids_apps/bids_antscorticalthicknes-2017-10-14-95aa110c26f8.img
-export TRACULA_SINGULARITY_IMAGE=/cenc/software/bids_apps/tracula/bids_tracula_latest-2017-08-11-efd6196f92ca.img
+export ANTS_CORTICAL_THICKNESS_SINGULARITY_IMAGE=$TIC_SOFTWARE_PATH/bids_apps/bids_antscorticalthickness-2017-10-14-95aa110c26f8.img
+export TRACULA_SINGULARITY_IMAGE=/cenc/software/bidsapps/bids_tracula_latest-2017-08-11-efd6196f92ca.img
 
 export SINGULARITY_COMMAND='/usr/local/bin/singularity run -w -B'
 

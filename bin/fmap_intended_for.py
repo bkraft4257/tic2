@@ -80,9 +80,9 @@ def _argparse():
 
     parser.add_argument('-e', '--echo_times',
                         nargs='*',
-                        type=float,
+			type=float,
                         help='Echo Times',
-                        default=[0.00492, 0.00738])
+                        default=[0.00519, 0.00765])
 
     parser.add_argument('-i', '--input_file',
                         nargs='*',

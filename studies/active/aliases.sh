@@ -30,7 +30,9 @@ alias bv='tic_bids_validator.sh'
 
 # Common environment variables used for ACTIVE scripts and such.
 
-export ACTIVE_HEUDICONV_PATTERN="{subject}/2*/*/*.DCM"
+# CAHMOD:  make it more general so it will also work with tarballs
+# export ACTIVE_HEUDICONV_PATTERN="{subject}/2*/*/*.DCM"
+export ACTIVE_HEUDICONV_PATTERN="{subject}*"
 
 function bps_fmriprep_t1w()
     {
