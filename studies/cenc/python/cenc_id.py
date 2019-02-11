@@ -38,7 +38,7 @@ def main():
      usage = "usage: %prog"
      parser = argparse.ArgumentParser(prog='cenc_id')
      parser.add_argument("--in_cenc", help="CENC integer, acrostic, or directory", default = os.getcwd() )
-     parser.add_argument("--cenc_dir", help="CENC integer, acrostic, or directory", default = os.getenv('CENC_MRI_DATA') )
+     parser.add_argument("--cenc_dir", help="CENC integer, acrostic, or directory", default = os.getenv('CENC_BIDS_DIR') )
      parser.add_argument("-m", "--method", help="Methods for ID. (list, update)", choices=['list','update','get'], default='get')
      parser.add_argument("--filter", help="Filter IDs", choices=['test','study','all'], default='study')
      parser.add_argument("--id_bitmask", help="1=id, 2=directory, 4=exists, (1)", default=1, type=int)

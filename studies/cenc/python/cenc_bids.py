@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 """
+cenc tools utilizing BIDS format
 """
 
 import sys      
@@ -102,21 +103,22 @@ def directories( input_dir ):
           print
           sys.exit()
 
-     cenc_freesurfer_subjects_dir =  os.getenv('CENC_SUBJECTS_DIR')
-     cenc_results_native_dir = os.path.abspath( os.path.join( cenc_participant_dir, 'results', 'native'))
-     cenc_data_dir = os.path.abspath(os.path.join(cenc_participant_dir, 'data'))
+     cenc_path =  os.getenv('CENC_PATH')
 
+     #  top-level bids, and image_processing directories
 
      cenc_dict = { 'id': cenc_participant_id, 
-                   'root': cenc_participant_dir, 'results': cenc_results_native_dir,
-                   'freesurfer_subjects_dir': cenc_freesurfer_subjects_dir, 
-                   'reorient': util.path_relative_to( cenc_participant_dir, 'reorient'),
-                   'data': cenc_data_dir,
-                   'dicom': util.path_relative_to(cenc_data_dir, 'dicom'),
-                   'nifti': util.path_relative_to(cenc_data_dir, 'nifti'),
-                   'fmri': util.path_relative_to(cenc_data_dir, 'fmri'),
-                   'functional': util.path_relative_to( cenc_participant_dir, 'functional'), 
-                   'structural': util.path_relative_to( cenc_participant_dir, 'structural'),
+                   'root': cenc_path, 
+                   'imgproc': os.path.abspath(os.path.join(cenc_path, 'image_processing')),
+                   'bids: os.path.abspath(os.path.join(cenc_path, 'bids')),
+                   'act': util.path_relative_to( imgproc, 'act'), 
+                   'dki': util.path_relative_to( imgproc, 'dki'), 
+                   'fmriprep': util.path_relative_to( imgproc, 'fmriprep'), 
+                   'freesurfer': os.path.abspath(os.path.join( imgproc, 'freesurfer')),
+                   'mt': util.path_relative_to( imgproc, 'mt'), 
+                   'native': os.path.abspath(os.path.join( imgproc, 'native')),
+                   'tracula': util.path_relative_to( imgproc, 'tracula'), 
+                   'wmlesions': util.path_relative_to( imgproc, 'wmlesions')
                    } 
 
 
@@ -176,7 +178,7 @@ def directories( input_dir ):
 
      # Magnetization Transfer
 
-     mt_dir = util.path_relative_to( cenc_dict['structural'], 'mt' )
+     mt_dir = util.path_relative_to( cenc_dict['imgproc'], 'mt' )
 
      mt_labels = [ os.path.join( results_dict['dirs']['labels'],  'gm.cerebral_cortex.nii.gz'),
                    os.path.join( results_dict['dirs']['labels'],  'gm.subcortical.nii.gz'),
@@ -184,10 +186,10 @@ def directories( input_dir ):
                    os.path.join( results_dict['dirs']['labels'],  'wmlesions_lpa_mask.nii.gz')
                    ]
 
-     mt_inputs = [ os.path.join( cenc_dict['reorient'], 'mt_m0.nii.gz'),
-                   os.path.join( cenc_dict['reorient'], 'mt_m1.nii.gz'),
-                   os.path.join( results_dict['dirs']['images'], 'nu.nii.gz'),
-                   os.path.join( results_dict['dirs']['images'], 'nu_brain.nii.gz')
+     mt_inputs = [ os.path.join( mt_dir, 'input', 'mt_m0.nii.gz'),
+                   os.path.join( mt_dir, 'input', 'mt_m1.nii.gz'),
+                   os.path.join( mt_dir, 'input', 'nu.nii.gz'),
+                   os.path.join( mt_dir, 'input', 'nu_brain.nii.gz')
                    ]
 
      mt_dict = { 'dirs' : {'root': mt_dir, 

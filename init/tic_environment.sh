@@ -8,18 +8,21 @@ case $(hostname -s ) in
 	export FSL509_DIR=$SOFTWARE_PATH/fsl5.09
 	MATLAB_PATH=/aging1/software/matlab/bin
 	export PYTHON_PATH=/opt/anaconda3-4.4.0/bin
+	export ANTS_PATH='/aging1/software/ants/bin/'
     ;;
   aging3a)
 	SOFTWARE_PATH=/aging1/software/
 	export FSL509_DIR=/opt/fsl5.09
 	MATLAB_PATH=/opt/matlab-R2015a/bin
 	export PYTHON_PATH=/opt/anaconda3-4.4.0/bin
+	export ANTS_PATH='/aging1/software/ants/bin/'
     ;;
   asgard)
 	SOFTWARE_PATH=/usr/local
 	export FSL509_DIR=/usr/local/fsl
 	MATLAB_PATH=/Applications/MATLAB_R2017a.app/bin
 	export PYTHON_PATH=$HOME/anaconda3/bin
+	export ANTS_PATH='/usr/local/ANTs/bin'
     ;;
   *)
      echo "Unknown HOSTNAME"
@@ -55,7 +58,6 @@ export PATH="$PYTHON_PATH:$PATH"
      export PATH=${NIPYPE_PYTHON_PATH}:$TIC_PATH/workflows:$PATH
 
 # ANTS Configuration
-    export ANTS_PATH='/aging1/software/ants/bin/'
     export ANTSPATH=$ANTS_PATH
     export PATH=${ANTSPATH}:$PATH
 

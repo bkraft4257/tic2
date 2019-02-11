@@ -1,41 +1,45 @@
 #!/usr/bin/env bash
 
-if [ ! -d $lnDir ]; then
-     mkdir -p $lnDir
-fi
+myos=`uname`
 
-if [ $# -ne 4 ]; then
-    echo
-    echo "Usage: tracula.sh -s <participantID> -ss <sesnum>"
-    echo
-    exit 1
+echo "myos"
+echo $myos
+
+if [ `uname` = "Darwin" ]; then
+    echo "tracula.sh will not run on mac (no singularity command)"
+    exit
 fi
 
 BIDS_APP=tracula
 
 ACTIVE_APP_OUTPUT_PATH=$ACTIVE_IMAGE_PROCESSING_PATH/tracula
 APP_SINGULARITY_IMAGE=$TRACULA_SINGULARITY_IMAGE
+FREESURFER_DATA_DIR=$ACTIVE_IMAGE_PROCESSING_PATH/freesurfer
 
 ACTIVE_APP_WORKING_PATH=$ACTIVE_IMAGE_PROCESSING_PATH/_working
+
+if [ $# -eq 0 ]
+  then
+    echo "No arguments supplied, displaying help."
+    /usr/local/bin/singularity run $APP_SINGULARITY_IMAGE -h
+    exit
+fi
+
 
 # Convert to lower case
 study_prefix=$(echo "${ACTIVE_STUDY,,}")
 
-# mriqc.sh and fmriprep.sh uses --participant-label and hdc.sh uses -s to indicated the subject acrostic.
-# I am using sed as a hack to replace -s with --participant-label.  This allows people to use the shorter
-# -s.
-#
+# bids apps typically use --participant-label or --partipant_label 
+# I am using sed as a hack to replace -s with --participant-label.  
+# This allows people to use the shorter -s.
+#  same for --session_label -> -ss
+parameterstmp=$(echo $@ | sed -e 's/-s /--participant_label /')
 
-parameters=$(echo $@ | sed -e 's/-s /--participant_label /')
-
-parameters=$(echo $parameters | sed -e 's/-ss /--session_label /')
-
-# tracula wants the freesurfer license
-parameters=$parameters" --license_key /opt/freesurfer/license.txt"
+parameters=$(echo $parameterstmp | sed -e 's/-ss /--session_label /')
 
 # create the output and work directories parallel to BIDS hierarchy, not inside it
 
-datetime_stamp=`date '+d%Y%m%d_%H%M%S'`
+datetime_stamp=`date '+d%Y%m%d_%H:%M:%S'`
 log_file=${ACTIVE_IMAGE_PROCESSING_LOG_PATH}/${study_prefix}_${BIDS_APP}_${datetime_stamp}.log
 
 
@@ -55,25 +59,37 @@ log_file=${ACTIVE_IMAGE_PROCESSING_LOG_PATH}/${study_prefix}_${BIDS_APP}_${datet
 
 # run it in the background so that it continues if user logs out
 # export FULL_BIDS_APP_COMMAND="act_full_command=$SINGULARITY_COMMAND \
-#  $ACTIVE_SINGULARITY_USER_BIND_PATHS \
-#  $APP_SINGULARITY_IMAGE \
-#  $ACTIVE_BIDS_PATH \
-#  $ACTIVE_ACT_OUTPUT_PATH \
-#  participant $parameters"
+# $ACTIVE_SINGULARITY_USER_BIND_PATHS \
+# $APP_SINGULARITY_IMAGE \
+# $ACTIVE_BIDS_PATH \
+# $ACTIVE_ACT_OUTPUT_PATH \
+# participant $parameters"
 
 # Write information to log file
 source $TIC_PATH/studies/active/scripts/bids_app_status.sh
 
+echo  $SINGULARITY_COMMAND \
+           $ACTIVE_SINGULARITY_USER_BIND_PATHS \
+           $APP_SINGULARITY_IMAGE \
+           --license_key $FREESURFER_HOME/.license \
+           --freesurfer_dir $FREESURFER_DATA_DIR \
+           $parameters \
+           $ACTIVE_BIDS_PATH \
+           $ACTIVE_APP_OUTPUT_PATH \
+           participant
+
 
 # Run BIDS App
 
-
-nohup time $SINGULARITY_COMMAND  \
+nohup time $SINGULARITY_COMMAND \
            $ACTIVE_SINGULARITY_USER_BIND_PATHS \
            $APP_SINGULARITY_IMAGE \
            $ACTIVE_BIDS_PATH \
            $ACTIVE_APP_OUTPUT_PATH \
-           participant $parameters  >> $log_file 2>&1 &
+           participant \
+           --license_key $FREESURFER_HOME/.license \
+           --freesurfer_dir $FREESURFER_DATA_DIR \
+           $parameters >> $log_file 2>&1 &
 
 echo "Waiting 30 seconds before displaying the log file ..."
 sleep 3
